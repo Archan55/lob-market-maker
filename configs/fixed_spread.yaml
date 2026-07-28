@@ -1,0 +1,88 @@
+instrument:
+  symbol: SYNTH
+  currency: USD
+  tick_size: "0.01"
+  lot_size: 1
+data:
+  input_path: data/processed/synthetic.parquet
+  validation_mode: strict
+  book_depth: 5
+  provenance:
+    source_type: synthetic
+    provider: lobmm deterministic synthetic generator
+    venue: SIMULATED
+    symbol: SYNTH
+    dataset_id: lobmm-synthetic-demo-v1
+    session_start: null
+    session_end: null
+    checksum_sha256: null
+    license_notes: Generated locally by lobmm; Parquet storage does not make it historical data.
+synthetic:
+  event_count: 6000
+  start_timestamp_ns: 0
+  interval_ns: 1000000
+  start_price_ticks: 10000
+  levels: 5
+  base_quantity: 100
+  regime_length: 500
+  reset_interval: 1000
+latency:
+  market_data_ns: 100000
+  order_entry_ns: 150000
+  cancellation_ns: 150000
+  fill_report_ns: 100000
+exchange:
+  validation_mode: lenient
+  rest_unfilled_marketable_quantity: true
+  cancel_orders_on_reset: true
+queue_model:
+  cancellation_allocation: back_of_queue
+  price_through_fills: true
+fees:
+  maker_fee_per_unit: "0"
+  maker_rebate_per_unit: "0.0002"
+  taker_fee_per_unit: "0.0003"
+  proportional_fee_rate: "0"
+strategy:
+  name: fixed_spread
+  strategy_id: fixed-spread
+  order_size: 10
+  base_half_spread_ticks: 1.0
+  minimum_half_spread_ticks: 1.0
+  inventory_penalty_ticks: 2.0
+  imbalance_coefficient_ticks: 1.0
+  volatility_multiplier: 1.0
+  volatility_window: 50
+  refresh_interval_ns: 50000000
+  minimum_quote_lifetime_ns: 5000000
+  stale_after_ns: 250000000
+  price_change_threshold_ticks: 1
+  quantity_change_threshold: 1
+  post_only: true
+risk:
+  max_abs_inventory: 100
+  max_order_size: 25
+  max_total_open_quantity: 100
+  max_open_orders: 4
+  max_loss: "1000"
+  max_drawdown: "1000"
+  max_quote_age_ns: 500000000
+  minimum_spread_ticks: 1
+  max_volatility_ticks: null
+  max_messages_per_second: 500
+  prohibit_new_quotes_last_ns: 100000000
+backtest:
+  warmup_events: 50
+  start_timestamp_ns: null
+  end_timestamp_ns: null
+  event_limit: null
+  timer_interval_ns: 50000000
+  mark_price: midpoint
+  session_end_policy: mark
+metrics:
+  markout_horizons_ns: [100000000, 1000000000, 5000000000]
+  near_limit_fraction: 0.8
+output:
+  runs_directory: runs
+  write_plots: true
+random_seed: 7

@@ -1,0 +1,4 @@
+exchange,symbol,timestamp,local_timestamp,id,side,price,amount
+fixture,ABC-USD,3000,3002,T-1,sell,100.00,2
+fixture,ABC-USD,4000,4002,T-2,buy,101.00,2
+fixture,ABC-USD,5000,5002,T-3,unknown,99.00,1

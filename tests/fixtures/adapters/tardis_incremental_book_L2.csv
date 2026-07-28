@@ -1,0 +1,10 @@
+exchange,symbol,timestamp,local_timestamp,is_snapshot,side,price,amount
+fixture,ABC-USD,1000,1001,false,bid,99.00,3
+fixture,ABC-USD,2000,2001,true,bid,100.00,10
+fixture,ABC-USD,2000,2001,true,ask,101.00,12
+fixture,ABC-USD,3000,3001,false,bid,100.00,7
+fixture,ABC-USD,4000,4001,false,ask,101.00,15
+fixture,ABC-USD,5000,5001,false,bid,99.00,5
+fixture,ABC-USD,6000,6001,false,bid,100.00,0
+fixture,ABC-USD,7000,7001,true,bid,102.00,9
+fixture,ABC-USD,7000,7001,true,ask,103.00,11

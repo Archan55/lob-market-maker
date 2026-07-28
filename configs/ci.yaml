@@ -1,0 +1,34 @@
+synthetic:
+  event_count: 300
+  start_timestamp_ns: 0
+  interval_ns: 1000000
+  start_price_ticks: 10000
+  levels: 5
+  base_quantity: 100
+  regime_length: 50
+  reset_interval: 100
+data:
+  input_path: null
+  book_depth: 5
+  provenance:
+    source_type: synthetic
+    provider: lobmm deterministic synthetic generator
+    venue: SIMULATED
+    symbol: SYNTH
+    dataset_id: lobmm-synthetic-ci-v1
+    session_start: null
+    session_end: null
+    checksum_sha256: null
+    license_notes: Generated locally by lobmm; not historical market data.
+strategy:
+  name: fixed_spread
+  strategy_id: ci
+  order_size: 5
+backtest:
+  warmup_events: 20
+  event_limit: 300
+  timer_interval_ns: 50000000
+output:
+  runs_directory: runs
+  write_plots: false
+random_seed: 7
