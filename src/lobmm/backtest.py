@@ -94,7 +94,7 @@ def run_backtest(
 
     if not run_name or run_name in {".", ".."}:
         raise ValueError("run_name must be a nonempty directory name")
-    if Path(run_name).name != run_name:
+    if "/" in run_name or "\\" in run_name:
         raise ValueError("run_name must not contain a directory separator")
     validation = input_validation or validate_event_stream(
         events,
