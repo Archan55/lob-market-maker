@@ -25,3 +25,7 @@ jobs:
         run: python -m pytest --cov=lobmm --cov-report=term-missing
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Controlled cancellation-policy experiment and audit
+        run: |
+          python -m lobmm.cli experiment --config configs/queue_cancellation.yaml --name queue-cancellation --latency-multipliers 0.5,1,2
+          python -m lobmm.cli audit-queue-study --experiment experiments/queue-cancellation --config configs/queue_cancellation.yaml

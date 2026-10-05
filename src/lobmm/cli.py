@@ -33,6 +33,7 @@ from lobmm.data.loaders import load_events, write_parquet
 from lobmm.enums import QueueAllocation, StrategyName, ValidationMode
 from lobmm.events import MarketEvent
 from lobmm.experiments import ExperimentSpec, StrategyAblation, run_experiment
+from lobmm.queue_study import audit_queue_study, write_queue_study
 from lobmm.report import compare_runs, console_summary, generate_report
 from lobmm.synthetic import generate_synthetic_events
 from lobmm.validation import validate_event_stream, validate_frame
@@ -429,6 +430,25 @@ def benchmark_full_command(
             measure_memory=not no_memory,
         )
         typer.echo(json.dumps(result.as_dict(), indent=2, sort_keys=True))
+    except Exception as exc:
+        _failure(exc)
+
+
+@app.command("audit-queue-study")
+def audit_queue_study_command(
+    experiment_directory: Annotated[
+        Path, typer.Option("--experiment", exists=True, file_okay=False)
+    ],
+    config_path: Annotated[Path, typer.Option("--config", exists=True, readable=True)],
+    output: Annotated[Path | None, typer.Option("--output")] = None,
+) -> None:
+    """Audit the versioned controlled queue fixture against analytical results."""
+
+    try:
+        audit = audit_queue_study(experiment_directory, config_path)
+        destination = output or experiment_directory / "QUEUE_AUDIT.md"
+        write_queue_study(audit, destination)
+        typer.echo(f"Verified {audit['case_count']} cases; audit: {destination}")
     except Exception as exc:
         _failure(exc)
 

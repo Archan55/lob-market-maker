@@ -35,6 +35,10 @@ Across this grid, moving from 0.5x to 2x configured latency changed mean absolut
 
 ![Sensitivity overview](assets/case-study/sensitivity_overview.png)
 
+## Controlled cancellation-policy validation
+
+A separate [controlled end-to-end replay](QUEUE_CANCELLATION.md) uses the canonical own-10/add-50/cancel-60/trade-65 fixture to discriminate the three policies on both sides with positive latency and audited fee/cash accounting. Reproduce and verify that witness using the commands in its report.
+
 ## Reproduce
 
 ```bash

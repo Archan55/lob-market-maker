@@ -140,6 +140,7 @@ def test_publish_case_study_copies_curated_assets_and_writes_honest_page(
     assert "not evidence of expected market profitability" in page
     assert "Mean abs. inventory" in page
     assert "Venue rejects" in page
+    assert "[controlled end-to-end replay](QUEUE_CANCELLATION.md)" in page
     assert len(result.asset_paths) == 6
     assert all(path.is_file() for path in result.asset_paths)
 

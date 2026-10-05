@@ -316,6 +316,7 @@ def _result_row(
         "fill_report_latency_ns": config.latency.fill_report_ns,
         "queue_allocation": case.queue_allocation.value,
         "fee_multiplier": float(case.fee_multiplier),
+        "event_stream_sha256": result.diagnostics["event_stream_sha256"],
         "events_processed": result.diagnostics.get("events_processed"),
         "scheduler_events_processed": result.diagnostics.get(
             "scheduler_events_processed"

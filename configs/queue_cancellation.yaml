@@ -1,0 +1,52 @@
+# Controlled synthetic witness; paths are relative to the repository root.
+instrument:
+  symbol: QUEUE-WITNESS
+  tick_size: "0.01"
+  lot_size: 1
+data:
+  input_path: data/fixtures/queue_cancellation.csv
+  validation_mode: strict
+  provenance:
+    source_type: synthetic
+    provider: lobmm controlled queue fixture
+    venue: SIMULATED
+    symbol: QUEUE-WITNESS
+    dataset_id: queue-cancellation-v1
+    checksum_sha256: 3833652ba3e5781290010be29445b5c0c6762d79adbd212b81ba2e1662439071
+    license_notes: Hand-constructed mechanics witness; not historical market data.
+latency:
+  market_data_ns: 100000
+  order_entry_ns: 150000
+  cancellation_ns: 150000
+  fill_report_ns: 100000
+exchange:
+  validation_mode: strict
+queue_model:
+  cancellation_allocation: back_of_queue
+  price_through_fills: false
+fees:
+  maker_fee_per_unit: "0.002"
+  maker_rebate_per_unit: "0.0005"
+  taker_fee_per_unit: "0.003"
+  proportional_fee_rate: "0.0001"
+strategy:
+  name: fixed_spread
+  strategy_id: queue-witness
+  order_size: 10
+  base_half_spread_ticks: 1.0
+  minimum_quote_lifetime_ns: 100000000
+  refresh_interval_ns: 100000000
+  stale_after_ns: 100000000
+risk:
+  max_abs_inventory: 100
+  max_quote_age_ns: 100000000
+  # Both trades execute at 3 ms before any delayed report. Subsequent wakes
+  # suppress new quotes, preventing full fills from introducing replacements.
+  prohibit_new_quotes_last_ns: 2000000
+backtest:
+  warmup_events: 2
+  timer_interval_ns: 10000000
+  session_end_policy: mark
+output:
+  write_plots: false
+random_seed: 7
