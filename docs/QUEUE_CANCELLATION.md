@@ -2,7 +2,7 @@
 
 **SYNTHETIC MECHANICS VALIDATION.** These results test execution and accounting; they do not establish real-market profitability.
 
-The ordinary experiment workflow replays one nine-event canonical CSV through fixed-spread quoting. Only cancellation allocation and latency change across the nine cases. The artifact audit checks the analytical oracle independently of the matching engine, both sides, maker costs, quote lifecycle, causal timestamps, and matching input hashes.
+The ordinary experiment workflow replays one nine-event canonical CSV through fixed-spread quoting. Only cancellation allocation and latency change across the nine cases. The artifact audit checks the analytical oracle independently of the matching engine, both sides, maker costs, unique execution identifiers, fill/order identity joins, per-order fill conservation, complete quote lifecycle, causal timestamps, every accounting snapshot and inventory projection, and matching input hashes.
 
 ## Tape and analytical oracle
 
@@ -30,7 +30,7 @@ Own fill per side = `min(10, max(0, 65 - ahead))`: **0 / 5 / 10**. The proportio
 
 Base latencies (ns): market data 100000, order entry 150000, cancellation 150000, fill report 100000. Every channel has positive delay in every case, with zero jitter. Fill notifications arrive at 3.05, 3.10, or 3.20 ms. Long quote lifetimes avoid refresh confounding; new quotes are suppressed from 3 ms onward.
 
-With tick size 0.01 and equal buy/sell quantity q, trade cash is `(101 - 99) * q` ticks and end inventory is zero. Gross USD = `0.02 * q`; fees = `2 * q * 0.002 + (99 + 101) * q * 0.01 * 0.0001`; rebates = `2 * q * 0.0005`; net = gross - fees + rebates. The audit also checks each fill's cost and realized/unrealized P&L. Pro rata ends with five unfilled units per order cancelled; front ends fully filled; back cancels the unfilled ten units.
+With tick size 0.01 and equal buy/sell quantity q, trade cash is `(101 - 99) * q` ticks and end inventory is zero. Gross USD = `0.02 * q`; fees = `2 * q * 0.002 + (99 + 101) * q * 0.01 * 0.0001`; rebates = `2 * q * 0.0005`; net = gross - fees + rebates. The bid trade precedes the ask trade at the same timestamp. After the bid fill, inventory is q, trade cash is `-99 * q` ticks, and unrealized P&L is `0.01 * q` USD at the 100-tick mark. The audit preserves this intermediate long position, checks each fill's cost and every realized/unrealized P&L snapshot, and reconciles the inventory table row by row. Pro rata ends with five unfilled units per order cancelled; front ends fully filled; back cancels the unfilled ten units.
 
 ## Reproduce and audit
 
@@ -52,3 +52,5 @@ python -m lobmm.cli audit-queue-study --experiment experiments/queue-cancellatio
 This witness closes the published demo's inability to separate cancellation policies. The original short synthetic path still produces identical policy metrics. Here latency multipliers are deliberately within the pre-add arrival window, so latency does not change fills. This is a cancellation-policy witness, not latency calibration or an empirical estimate of queue position.
 
 L2 cannot identify cancellation ownership. The external tape remains exogenous, while own fills displace historical external volume in the overlay; both trades happen before strategy feedback. Transition rows' queue estimates reflect final order state, so the ahead values above come from the analytical tape, not historical snapshots in those rows. The nine-event session does not support default 100 ms/1 s/5 s markouts or performance claims. Negative-control tests remove cancellations or move quote arrival after the add and require zero fills under every policy. Those controls are separate from this audited grid.
+
+Outside this integral witness, largest-remainder pro-rata rounding can make own fills non-monotonic in cancellation size. [The queue-model notes](queue_model.md#integer-pro-rata-rounding-sensitivity) document a both-side regression where cancelling four external units allows a one-unit fill, while cancelling five allows none.

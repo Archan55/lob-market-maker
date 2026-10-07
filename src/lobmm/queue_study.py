@@ -13,7 +13,7 @@ from typing import Any
 
 import polars as pl
 
-from lobmm.config import dump_config, load_config
+from lobmm.config import AppConfig, dump_config, load_config
 from lobmm.data.fingerprint import event_stream_sha256
 from lobmm.data.loaders import load_events
 from lobmm.data.manifest import sha256_file
@@ -46,7 +46,233 @@ def _require(condition: bool, message: str) -> None:
 def _decimal(value: Any) -> Decimal:
     # Run tables serialize Decimal accounting as floats; recover the printed
     # decimal value and compare with the same 1e-12 accounting tolerance.
-    return Decimal(str(value))
+    result = Decimal(str(value))
+    _require(result.is_finite(), "non-finite accounting value")
+    return result
+
+
+def _audit_order_integrity(
+    orders: list[dict[str, Any]],
+    fills: list[dict[str, Any]],
+    *,
+    quantity: int,
+    config: AppConfig,
+    run_name: str,
+) -> None:
+    """Join executions to exactly two quotes and reconcile their transitions."""
+
+    histories: dict[str, list[dict[str, Any]]] = {}
+    for row in orders:
+        _require(
+            isinstance(row["order_id"], str) and bool(row["order_id"]),
+            f"{run_name}: nonempty order identifiers required",
+        )
+        histories.setdefault(row["order_id"], []).append(row)
+    _require(
+        len(histories) == 2
+        and len({rows[0]["client_order_id"] for rows in histories.values()}) == 2,
+        f"{run_name}: exactly two distinct own orders and client identifiers required",
+    )
+    transition_ids = [row["transition_id"] for row in orders]
+    fill_ids = [fill["fill_id"] for fill in fills]
+    for kind, identifiers in (("transition", transition_ids), ("fill", fill_ids)):
+        _require(
+            all(
+                isinstance(identifier, str) and identifier for identifier in identifiers
+            )
+            and len(set(identifiers)) == len(identifiers),
+            f"{run_name}: duplicate or empty {kind} identifiers",
+        )
+    if fills:
+        _require(
+            [fill["side"] for fill in fills] == [1, -1],
+            f"{run_name}: fill order must follow the canonical bid then ask trades",
+        )
+    fills_by_order: dict[str, list[dict[str, Any]]] = {
+        order_id: [] for order_id in histories
+    }
+    for fill in fills:
+        _require(
+            fill["order_id"] in histories,
+            f"{run_name}: fill references an unknown order",
+        )
+        fills_by_order[fill["order_id"]].append(fill)
+    arrival = config.latency.market_data_ns + config.latency.order_entry_ns
+    states = ["pending_arrival", "live"]
+    timestamps = [arrival, arrival]
+    remaining = [10, 10]
+    reasons = ["created", "accepted"]
+    if quantity:
+        states.append("filled" if quantity == 10 else "partially_filled")
+        timestamps.append(3_000_000)
+        remaining.append(10 - quantity)
+        reasons.append("fill")
+    if quantity < 10:
+        states.append("cancelled")
+        timestamps.append(
+            3_000_000 + config.latency.market_data_ns + config.latency.cancellation_ns
+        )
+        remaining.append(10 - quantity)
+        reasons.append("cancel_arrived")
+    for order_id, history in histories.items():
+        first = history[0]
+        price = 99 if first["side"] == 1 else 101
+        metadata = {
+            "client_order_id": first["client_order_id"],
+            "strategy_id": config.strategy.strategy_id,
+            "side": first["side"],
+            "price_ticks": price,
+            "original_quantity": 10,
+            "creation_timestamp_ns": config.latency.market_data_ns,
+            "send_timestamp_ns": config.latency.market_data_ns,
+            "exchange_arrival_timestamp_ns": arrival,
+        }
+        _require(
+            isinstance(first["client_order_id"], str)
+            and bool(first["client_order_id"])
+            and first["side"] in {-1, 1}
+            and all(
+                all(row[key] == value for key, value in metadata.items())
+                for row in history
+            ),
+            f"{run_name}: inconsistent order identity or immutable metadata",
+        )
+        executions = fills_by_order[order_id]
+        filled = sum(fill["quantity"] for fill in executions)
+        # The producer repeats FINAL cumulative quantity and average price on
+        # every transition row, while remaining quantity is historical.
+        _require(
+            len(executions) == (1 if quantity else 0)
+            and filled == quantity
+            and filled + history[-1]["remaining_quantity"] == 10
+            and all(
+                row["cumulative_filled_quantity"] == filled
+                and row["average_fill_price_ticks"] == (price if filled else None)
+                for row in history
+            ),
+            f"{run_name}: per-order fill sums or final conservation",
+        )
+        for fill in executions:
+            _require(
+                all(
+                    fill[key] == first[key]
+                    for key in (
+                        "client_order_id",
+                        "strategy_id",
+                        "side",
+                        "price_ticks",
+                        "send_timestamp_ns",
+                        "exchange_arrival_timestamp_ns",
+                    )
+                )
+                and fill["decision_timestamp_ns"] == first["creation_timestamp_ns"],
+                f"{run_name}: fill/order identity join mismatch",
+            )
+        _require(
+            [row["new_status"] for row in history] == states
+            and [row["previous_status"] for row in history] == [None, *states[:-1]]
+            and [row["timestamp_ns"] for row in history] == timestamps
+            and [row["remaining_quantity"] for row in history] == remaining
+            and [row["reason"] for row in history] == reasons,
+            f"{run_name}: order transition lifecycle or quantity progression",
+        )
+
+
+def _audit_accounting_path(
+    run: Path,
+    fills: list[dict[str, Any]],
+    *,
+    config: AppConfig,
+    run_name: str,
+) -> None:
+    """Check each causal snapshot against the witness's independent fill ledger.
+
+    Bid and ask trades share a timestamp. Preserve their tape order and both
+    the fill snapshot and market mark, including the intermediate long state.
+    """
+
+    checkpoints = [(0, 0), (1_000_000, 0), (1_000_000, 0)]
+    checkpoints.extend([(2_000_000, 0), (2_000_000, 0)])
+    for count in (1, 2) if fills else (0, 0):
+        if fills:
+            checkpoints.append((3_000_000, count))  # Fill booking.
+        checkpoints.append((3_000_000, count))  # Market mark.
+    checkpoints.append((5_000_000, len(fills)))
+    pnl = pl.read_parquet(run / "pnl.parquet").to_dicts()
+    inventory_rows = pl.read_parquet(run / "inventory.parquet").to_dicts()
+    _require(
+        len(pnl) == len(inventory_rows) == len(checkpoints),
+        f"{run_name}: intermediate accounting snapshot count",
+    )
+    tick = config.instrument.tick_size
+    peak_exposure = Decimal(0)
+    for row, inventory_row, (timestamp, count) in zip(
+        pnl, inventory_rows, checkpoints, strict=True
+    ):
+        prefix = fills[:count]
+        buy = sum(fill["quantity"] for fill in prefix if fill["side"] == 1)
+        sell = sum(fill["quantity"] for fill in prefix if fill["side"] == -1)
+        inventory = buy - sell
+        cash_ticks = sum(
+            -fill["side"] * fill["quantity"] * fill["price_ticks"] for fill in prefix
+        )
+        turnover_ticks = sum(fill["quantity"] * fill["price_ticks"] for fill in prefix)
+        fees = sum((_decimal(fill["fee"]) for fill in prefix), Decimal(0))
+        rebates = sum((_decimal(fill["rebate"]) for fill in prefix), Decimal(0))
+        realized_ticks = 2 * sell
+        unrealized_ticks = inventory  # Long at 99, marked at 100.
+        gross_ticks = cash_ticks + inventory * 100
+        cash = Decimal(cash_ticks) * tick - fees + rebates
+        exposure = Decimal(abs(inventory) * 100) * tick
+        peak_exposure = max(peak_exposure, exposure)
+        expected = {
+            "timestamp_ns": timestamp,
+            "tick_value": tick,
+            "mark_ticks": 100,
+            "inventory": inventory,
+            "trade_cash_ticks": cash_ticks,
+            "trade_cash": Decimal(cash_ticks) * tick,
+            "cash": cash,
+            "realized_pnl_ticks": realized_ticks,
+            "unrealized_pnl_ticks": unrealized_ticks,
+            "gross_pnl_ticks": gross_ticks,
+            "realized_pnl": Decimal(realized_ticks) * tick,
+            "unrealized_pnl": Decimal(unrealized_ticks) * tick,
+            "gross_pnl": Decimal(gross_ticks) * tick,
+            "fees": fees,
+            "rebates": rebates,
+            "net_pnl": cash + Decimal(inventory * 100) * tick,
+            "turnover_ticks": turnover_ticks,
+            "turnover": Decimal(turnover_ticks) * tick,
+            "buy_volume": buy,
+            "sell_volume": sell,
+            "fill_count": count,
+            "current_gross_exposure": exposure,
+            "peak_gross_exposure": peak_exposure,
+        }
+        _require(
+            row["currency"] == config.instrument.currency
+            and row["average_cost_ticks"] == (99 if inventory else None)
+            and all(
+                abs(_decimal(row[key]) - _decimal(value)) <= Decimal("1e-12")
+                for key, value in expected.items()
+            ),
+            f"{run_name}: intermediate accounting P&L identity at snapshot "
+            f"timestamp={timestamp}, fill_count={count}",
+        )
+        _require(
+            all(
+                abs(_decimal(inventory_row[key]) - _decimal(expected[key]))
+                <= Decimal("1e-12")
+                for key in (
+                    "timestamp_ns",
+                    "inventory",
+                    "current_gross_exposure",
+                    "peak_gross_exposure",
+                )
+            ),
+            f"{run_name}: inventory projection differs from accounting snapshots",
+        )
 
 
 def audit_queue_study(
@@ -201,6 +427,14 @@ def audit_queue_study(
             ),
             f"{case.run_name}: final order conservation/lifecycle",
         )
+        _audit_order_integrity(
+            orders,
+            fills,
+            quantity=quantity,
+            config=saved,
+            run_name=case.run_name,
+        )
+        _audit_accounting_path(run, fills, config=saved, run_name=case.run_name)
         final = pl.read_parquet(run / "pnl.parquet").tail(1).to_dicts()[0]
         gross = Decimal(cash_ticks) * config.instrument.tick_size
         net = gross - total_fee + total_rebate
@@ -281,7 +515,10 @@ def write_queue_study(audit: dict[str, Any], output: Path) -> None:
         "through fixed-spread quoting. Only cancellation allocation and latency "
         "change across the nine cases. The artifact audit checks the analytical "
         "oracle independently of the matching engine, both sides, maker costs, "
-        "quote lifecycle, causal timestamps, and matching input hashes.",
+        "unique execution identifiers, fill/order identity joins, per-order "
+        "fill conservation, complete quote lifecycle, causal timestamps, "
+        "every accounting snapshot and inventory projection, and matching "
+        "input hashes.",
         "",
         "## Tape and analytical oracle",
         "",
@@ -328,8 +565,13 @@ def write_queue_study(audit: dict[str, Any], output: Path) -> None:
             "`(101 - 99) * q` ticks and end inventory is zero. Gross USD = "
             "`0.02 * q`; fees = `2 * q * 0.002 + (99 + 101) * q * 0.01 * "
             "0.0001`; rebates = `2 * q * 0.0005`; net = gross - fees + rebates. "
-            "The audit also checks each fill's cost and realized/unrealized "
-            "P&L. Pro rata ends with five unfilled units per order cancelled; "
+            "The bid trade precedes the ask trade at the same timestamp. "
+            "After the bid fill, inventory is q, trade cash is `-99 * q` "
+            "ticks, and unrealized P&L is `0.01 * q` USD at the 100-tick "
+            "mark. The audit preserves this intermediate long position, "
+            "checks each fill's cost and every realized/unrealized P&L "
+            "snapshot, and reconciles the inventory table row by row. "
+            "Pro rata ends with five unfilled units per order cancelled; "
             "front ends fully filled; back cancels the unfilled ten units.",
             "",
             "## Reproduce and audit",
@@ -375,6 +617,12 @@ def write_queue_study(audit: dict[str, Any], output: Path) -> None:
             "claims. Negative-control tests remove cancellations or move "
             "quote arrival after the add and require zero fills under every "
             "policy. Those controls are separate from this audited grid.",
+            "",
+            "Outside this integral witness, largest-remainder pro-rata "
+            "rounding can make own fills non-monotonic in cancellation size. "
+            "[The queue-model notes](queue_model.md#integer-pro-rata-rounding-sensitivity) "
+            "document a both-side regression where cancelling four external "
+            "units allows a one-unit fill, while cancelling five allows none.",
             "",
         ]
     )

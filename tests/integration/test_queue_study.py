@@ -304,3 +304,271 @@ def test_audit_rejects_a_modified_canonical_fixture(
     FIXTURE.write_text((source / FIXTURE).read_text().replace(",65\n", ",64\n"))
     with pytest.raises(QueueStudyError, match="fixture hash"):
         audit_queue_study(grid_directory, CONFIG)
+
+
+def _copy_artifact_for_corruption(
+    grid_directory: Path, tmp_path: Path, artifact: str, allocation: str = "pro_rata"
+) -> tuple[Path, Path, pl.DataFrame]:
+    damaged = tmp_path / "damaged"
+    shutil.copytree(grid_directory, damaged)
+    path = damaged / "runs" / f"fixed_spread__full__lat1__{allocation}__fee1" / artifact
+    return damaged, path, pl.read_parquet(path)
+
+
+def _replace_cell(
+    frame: pl.DataFrame, index: int, column: str, value: int | float | str | None
+) -> pl.DataFrame:
+    values = frame[column].to_list()
+    values[index] = value
+    return frame.with_columns(pl.Series(column, values, dtype=frame.schema[column]))
+
+
+@pytest.mark.parametrize(
+    ("artifact", "column", "value", "index", "message"),
+    [
+        ("fills.parquet", "order_id", "UNKNOWN", 0, "unknown order"),
+        ("fills.parquet", "fill_id", "", 0, "empty fill identifiers"),
+        ("fills.parquet", "fill_id", None, 0, "empty fill identifiers"),
+        ("fills.parquet", "client_order_id", "UNKNOWN", 0, "identity join mismatch"),
+        ("fills.parquet", "strategy_id", "other-strategy", 1, "identity join mismatch"),
+        ("orders.parquet", "client_order_id", "CHANGED", 1, "immutable metadata"),
+        ("orders.parquet", "strategy_id", "other-strategy", 0, "immutable metadata"),
+        ("orders.parquet", "price_ticks", 100, 0, "immutable metadata"),
+        ("orders.parquet", "original_quantity", 11, 0, "immutable metadata"),
+        ("orders.parquet", "creation_timestamp_ns", 0, 0, "immutable metadata"),
+        ("orders.parquet", "cumulative_filled_quantity", 4, 0, "per-order fill sums"),
+        ("orders.parquet", "average_fill_price_ticks", 100.0, 0, "per-order fill sums"),
+        ("orders.parquet", "timestamp_ns", 250_001, 1, "transition lifecycle"),
+        ("orders.parquet", "previous_status", "live", 1, "transition lifecycle"),
+        ("orders.parquet", "remaining_quantity", 9, 0, "quantity progression"),
+        ("orders.parquet", "reason", "cancel_arrived", 0, "transition lifecycle"),
+    ],
+)
+def test_audit_joins_fill_identity_and_checks_historical_order_rows(
+    grid_directory: Path,
+    tmp_path: Path,
+    artifact: str,
+    column: str,
+    value: int | float | str | None,
+    index: int,
+    message: str,
+) -> None:
+    damaged, path, frame = _copy_artifact_for_corruption(
+        grid_directory, tmp_path, artifact
+    )
+    _replace_cell(frame, index, column, value).write_parquet(path)
+    with pytest.raises(QueueStudyError, match=message):
+        audit_queue_study(damaged, CONFIG)
+
+
+@pytest.mark.parametrize(
+    "corruption",
+    [
+        "duplicate_fill_id",
+        "duplicate_transition_id",
+        "empty_transition_id",
+        "same_order_for_both_fills",
+        "swapped_fill_orders",
+        "duplicate_client_identity",
+        "duplicate_order_identity",
+        "reversed_fill_order",
+        "missing_partial_transition",
+        "reordered_creation_and_acceptance",
+    ],
+)
+def test_audit_rejects_broken_identifier_relationships_and_lifecycle(
+    grid_directory: Path, tmp_path: Path, corruption: str
+) -> None:
+    artifact = "fills.parquet" if "fill" in corruption else "orders.parquet"
+    damaged, path, frame = _copy_artifact_for_corruption(
+        grid_directory, tmp_path, artifact
+    )
+    if corruption == "duplicate_fill_id":
+        changed = _replace_cell(frame, 1, "fill_id", frame["fill_id"][0])
+        message = "duplicate or empty fill identifiers"
+    elif corruption == "duplicate_transition_id":
+        changed = _replace_cell(frame, 1, "transition_id", frame["transition_id"][0])
+        message = "duplicate or empty transition identifiers"
+    elif corruption == "empty_transition_id":
+        changed = _replace_cell(frame, 0, "transition_id", "")
+        message = "duplicate or empty transition identifiers"
+    elif corruption == "same_order_for_both_fills":
+        changed = _replace_cell(frame, 1, "order_id", frame["order_id"][0])
+        message = "per-order fill sums"
+    elif corruption == "swapped_fill_orders":
+        changed = frame.with_columns(frame["order_id"].reverse())
+        message = "identity join mismatch"
+    elif corruption in {"duplicate_client_identity", "duplicate_order_identity"}:
+        column = "client_order_id" if "client" in corruption else "order_id"
+        changed = frame.with_columns(pl.lit(frame[column][0]).alias(column))
+        message = "exactly two distinct own orders and client identifiers"
+    elif corruption == "reversed_fill_order":
+        changed = frame.reverse()
+        message = "canonical bid then ask"
+    elif corruption == "missing_partial_transition":
+        changed = frame.filter(pl.col("new_status") != "partially_filled")
+        message = "transition lifecycle"
+    else:
+        changed = pl.concat([frame.slice(1, 1), frame.head(1), frame.slice(2)])
+        message = "transition lifecycle"
+    changed.write_parquet(path)
+    with pytest.raises(QueueStudyError, match=message):
+        audit_queue_study(damaged, CONFIG)
+
+
+@pytest.mark.parametrize(
+    ("column", "value"),
+    [
+        ("timestamp_ns", 3_000_001),
+        ("currency", "EUR"),
+        ("tick_value", 0.02),
+        ("mark_ticks", 101.0),
+        ("inventory", 6),
+        ("average_cost_ticks", 100.0),
+        ("trade_cash_ticks", -494),
+        ("trade_cash", -4.94),
+        ("cash", -4.95),
+        ("realized_pnl_ticks", 1.0),
+        ("unrealized_pnl_ticks", 6.0),
+        ("gross_pnl_ticks", 6.0),
+        ("realized_pnl", 0.01),
+        ("unrealized_pnl", 0.06),
+        ("gross_pnl", 0.06),
+        ("fees", 0.0),
+        ("rebates", 0.0),
+        ("net_pnl", 0.0),
+        ("turnover_ticks", 496),
+        ("turnover", 4.96),
+        ("buy_volume", 6),
+        ("sell_volume", 1),
+        ("fill_count", 2),
+        ("current_gross_exposure", 6.0),
+        ("peak_gross_exposure", 6.0),
+    ],
+)
+def test_audit_rejects_intermediate_accounting_corruption_with_valid_final_state(
+    grid_directory: Path, tmp_path: Path, column: str, value: int | float | str
+) -> None:
+    damaged, path, frame = _copy_artifact_for_corruption(
+        grid_directory, tmp_path, "pnl.parquet"
+    )
+    # Mutate only the first long snapshot. The final flat ledger remains valid.
+    index = frame["fill_count"].to_list().index(1)
+    changed = _replace_cell(frame, index, column, value)
+    assert changed.tail(1).equals(frame.tail(1))
+    changed.write_parquet(path)
+    with pytest.raises(QueueStudyError, match="intermediate accounting P&L identity"):
+        audit_queue_study(damaged, CONFIG)
+
+
+@pytest.mark.parametrize("corruption", ["deleted", "duplicated", "reordered"])
+def test_audit_requires_the_complete_causal_accounting_path(
+    grid_directory: Path, tmp_path: Path, corruption: str
+) -> None:
+    damaged, path, frame = _copy_artifact_for_corruption(
+        grid_directory, tmp_path, "pnl.parquet"
+    )
+    index = frame["fill_count"].to_list().index(1)
+    if corruption == "deleted":
+        changed = frame.filter(pl.col("fill_count") != 1)
+        message = "intermediate accounting snapshot count"
+    elif corruption == "duplicated":
+        changed = pl.concat(
+            [frame.head(index), frame.slice(index, 1), frame.slice(index)]
+        )
+        message = "intermediate accounting snapshot count"
+    else:
+        # Both fills share 3 ms: swapping long and flat states preserves timestamps.
+        changed = pl.concat(
+            [
+                frame.head(index),
+                frame.slice(index + 2, 2),
+                frame.slice(index, 2),
+                frame.slice(index + 4),
+            ]
+        )
+        message = "intermediate accounting P&L identity"
+    assert changed.tail(1).equals(frame.tail(1))
+    changed.write_parquet(path)
+    with pytest.raises(QueueStudyError, match=message):
+        audit_queue_study(damaged, CONFIG)
+
+
+@pytest.mark.parametrize(
+    ("column", "value"),
+    [
+        ("timestamp_ns", 3_000_001),
+        ("inventory", 6),
+        ("current_gross_exposure", 6.0),
+        ("peak_gross_exposure", 6.0),
+    ],
+)
+def test_audit_reconciles_inventory_projection_with_intermediate_accounting(
+    grid_directory: Path, tmp_path: Path, column: str, value: int | float
+) -> None:
+    damaged, path, frame = _copy_artifact_for_corruption(
+        grid_directory, tmp_path, "inventory.parquet"
+    )
+    index = frame["inventory"].to_list().index(5)
+    _replace_cell(frame, index, column, value).write_parquet(path)
+    with pytest.raises(QueueStudyError, match="inventory projection"):
+        audit_queue_study(damaged, CONFIG)
+
+
+@pytest.mark.parametrize("allocation", ["back_of_queue", "front_of_queue"])
+def test_audit_checks_accounting_path_for_unfilled_and_fully_filled_quotes(
+    grid_directory: Path, tmp_path: Path, allocation: str
+) -> None:
+    damaged, path, frame = _copy_artifact_for_corruption(
+        grid_directory, tmp_path, "pnl.parquet", allocation
+    )
+    # A fee booked before either trade must fail even when final balances agree.
+    _replace_cell(frame, 0, "fees", 0.01).write_parquet(path)
+    with pytest.raises(QueueStudyError, match="intermediate accounting P&L identity"):
+        audit_queue_study(damaged, CONFIG)
+
+
+@pytest.mark.parametrize(
+    ("artifact", "column", "value"),
+    [
+        ("pnl.parquet", "cash", float("nan")),
+        ("pnl.parquet", "net_pnl", float("inf")),
+        ("fills.parquet", "fee", float("nan")),
+        ("fills.parquet", "rebate", float("inf")),
+    ],
+)
+def test_audit_rejects_nonfinite_accounting_values(
+    grid_directory: Path, tmp_path: Path, artifact: str, column: str, value: float
+) -> None:
+    damaged, path, frame = _copy_artifact_for_corruption(
+        grid_directory, tmp_path, artifact
+    )
+    _replace_cell(frame, 0, column, value).write_parquet(path)
+    with pytest.raises(QueueStudyError, match="non-finite accounting value"):
+        audit_queue_study(damaged, CONFIG)
+
+
+def test_audit_command_blocks_report_for_orphan_execution(
+    grid_directory: Path, tmp_path: Path
+) -> None:
+    damaged, path, frame = _copy_artifact_for_corruption(
+        grid_directory, tmp_path, "fills.parquet"
+    )
+    _replace_cell(frame, 0, "order_id", "UNKNOWN").write_parquet(path)
+    output = tmp_path / "blocked.md"
+    result = CliRunner().invoke(
+        app,
+        [
+            "audit-queue-study",
+            "--experiment",
+            str(damaged),
+            "--config",
+            str(CONFIG),
+            "--output",
+            str(output),
+        ],
+    )
+    assert result.exit_code == 1
+    assert "unknown order" in result.output
+    assert not output.exists()
+    assert not output.with_suffix(".json").exists()

@@ -61,6 +61,26 @@ an own order:
 None is an observable fact. Results should report/configure the choice and
 include sensitivity runs for material conclusions.
 
+### Integer pro-rata rounding sensitivity
+
+Integer pro-rata allocation also has rounding sensitivity: increasing the
+cancellation quantity need not increase the volume removed ahead of an own
+order. For the same initial queue
+`[external 1] [own 1] [external 5] [external 3]`, independent cancellation
+scenarios give:
+
+| Cancel quantity | External removals, in segment order | External remaining | Own fill from next trade of 1 |
+| --- | --- | --- | --- |
+| 4 | 1, 2, 1 | 0, 3, 2 | 1 |
+| 5 | 0, 3, 2 | 1, 2, 1 | 0 |
+
+These are deterministic largest-remainder results, with total cancellation
+conserved and the own segment untouched by cancellation. The larger
+cancellation leaves one external unit ahead, which consumes the next trade's
+budget. This is expected model sensitivity, not evidence of an allocation bug
+or actual venue behavior. A monotonic relationship between cancellation size
+and own fills must not be assumed for this integer approximation.
+
 ## Adds
 
 Displayed adds after our order append behind it. This assumes ordinary
