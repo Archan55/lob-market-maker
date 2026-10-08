@@ -162,6 +162,19 @@ The auditor is specific to the versioned witness and rejects changed input,
 configuration, or inconsistent artifacts before publishing its Markdown/JSON
 report. See the report for accounting identities and limitations.
 
+The separately versioned [latency-boundary and partial-fill stress suite](docs/LATENCY_STRESS_V1.md)
+holds market-data latency at 100 us while sweeping command arrival 1 ns before,
+at, and after historical events. Fifty scenarios check independent fill/cash
+oracles, event-time snapshots, delayed reports, split fills and residual marks:
+
+```bash
+python -m pytest tests/integration/test_latency_stress_v1.py -q \
+  --latency-study-output experiments/latency-stress-v1
+```
+
+CI retains each tape/config, replay tables, scheduler snapshots and the hashed
+JSON audit as a `latency-stress-v1-<commit>` artifact.
+
 Measure the readable reference book or the complete causal event loop:
 
 ```bash

@@ -39,6 +39,11 @@ Across this grid, moving from 0.5x to 2x configured latency changed mean absolut
 
 A separate [controlled end-to-end replay](QUEUE_CANCELLATION.md) uses the canonical own-10/add-50/cancel-60/trade-65 fixture to discriminate the three policies on both sides with positive latency and audited fee/cash accounting. Reproduce and verify that witness using the commands in its report.
 
+The [version 1 latency-boundary stress suite](LATENCY_STRESS_V1.md) extends this
+witness with actual event-boundary sweeps, an empty-price add/trade discriminator,
+split partial fills, residual marking and delayed-report conservation. It keeps
+the canonical nine-case witness and auditor intact.
+
 ## Reproduce
 
 ```bash
