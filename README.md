@@ -146,6 +146,35 @@ python -m lobmm.cli experiment \
   --name microprice-sensitivity
 ```
 
+The short demo path does not separate cancellation policies. A
+[controlled replay and independent artifact audit](docs/QUEUE_CANCELLATION.md)
+verifies 0/5/10-unit fills per side under back/pro-rata/front cancellation,
+positive latency, and nonzero fees and rebates:
+
+```bash
+python -m lobmm.cli experiment --config configs/queue_cancellation.yaml \
+  --name queue-cancellation --latency-multipliers 0.5,1,2
+python -m lobmm.cli audit-queue-study --experiment experiments/queue-cancellation \
+  --config configs/queue_cancellation.yaml --output docs/QUEUE_CANCELLATION.md
+```
+
+The auditor is specific to the versioned witness and rejects changed input,
+configuration, or inconsistent artifacts before publishing its Markdown/JSON
+report. See the report for accounting identities and limitations.
+
+The separately versioned [latency-boundary and partial-fill stress suite](docs/LATENCY_STRESS_V1.md)
+holds market-data latency at 100 us while sweeping command arrival 1 ns before,
+at, and after historical events. Fifty scenarios check independent fill/cash
+oracles, event-time snapshots, delayed reports, split fills and residual marks:
+
+```bash
+python -m pytest tests/integration/test_latency_stress_v1.py -q \
+  --latency-study-output experiments/latency-stress-v1
+```
+
+CI retains each tape/config, replay tables, scheduler snapshots and the hashed
+JSON audit as a `latency-stress-v1-<commit>` artifact.
+
 Measure the readable reference book or the complete causal event loop:
 
 ```bash
