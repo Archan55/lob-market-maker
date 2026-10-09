@@ -205,12 +205,13 @@ class RiskManager:
         invalid = self._validate_request(request, context)
         if invalid is not None:
             return invalid
-        risk_reducing = self._is_valid_reduce_only(request, context.inventory)
+        risk_reducing = self._is_valid_reduce_only(request, context)
         if request.reduce_only and not risk_reducing:
             return self._reject(
                 request,
                 RiskReason.INVALID_ORDER,
-                "reduce-only order must oppose and not exceed current inventory",
+                "reduce-only order must oppose current inventory and, with "
+                "outstanding same-side orders, not cross zero",
             )
 
         if self.kill_switch_active and not risk_reducing:
@@ -580,13 +581,25 @@ class RiskManager:
         return None
 
     @staticmethod
-    def _is_valid_reduce_only(request: OrderRiskRequest, inventory: int) -> bool:
+    def _is_valid_reduce_only(request: OrderRiskRequest, context: RiskContext) -> bool:
+        inventory = context.inventory
         if not request.reduce_only or inventory == 0:
             return False
         opposes_inventory = (inventory > 0 and request.side is Side.ASK) or (
             inventory < 0 and request.side is Side.BID
         )
-        return opposes_inventory and request.quantity <= abs(inventory)
+        # Accepted, in-flight, and pending-cancel reductions can all fill before
+        # this request. Opposite-side orders cannot supply capacity because they
+        # may remain unfilled. Capacity is released only by authoritative fills
+        # or terminal cancellation/expiry reflected in the caller's context.
+        outstanding_reductions = sum(
+            order.remaining_quantity
+            for order in context.open_orders
+            if order.side is request.side
+        )
+        return opposes_inventory and (
+            outstanding_reductions + request.quantity <= abs(inventory)
+        )
 
     def _session_rejection(
         self, request: OrderRiskRequest, risk_reducing: bool

@@ -23,6 +23,7 @@ from lobmm.channels import (
 from lobmm.config import AppConfig, dump_config
 from lobmm.data.fingerprint import event_stream_sha256
 from lobmm.enums import (
+    MarkPrice,
     OrderStatus,
     ReportType,
     SchedulerPhase,
@@ -242,13 +243,23 @@ def run_backtest(
         row = _dataclass_row(snapshot)
         pnl_rows.append(row)
 
-    def current_mark(fallback: int | None = None) -> Decimal:
+    def current_mark(
+        fallback: int | None = None, *, inventory: int | None = None
+    ) -> Decimal:
         best_bid = exchange.book.best_bid
         best_ask = exchange.book.best_ask
+        marked_inventory = portfolio.inventory if inventory is None else inventory
+        # A conservative position mark needs only its liquidation-side quote.
+        # The opposite side may disappear after a depth-consuming fill.
+        if config.backtest.mark_price is MarkPrice.CONSERVATIVE:
+            if marked_inventory > 0 and best_bid is not None:
+                return Decimal(best_bid)
+            if marked_inventory < 0 and best_ask is not None:
+                return Decimal(best_ask)
         if best_bid is not None and best_ask is not None:
             return select_mark_price(
                 config.backtest.mark_price,
-                inventory=portfolio.inventory,
+                inventory=marked_inventory,
                 best_bid_ticks=best_bid,
                 best_ask_ticks=best_ask,
                 microprice_ticks=exchange.book.microprice,
@@ -274,7 +285,10 @@ def run_backtest(
                 fee=fill.fee,
                 rebate=fill.rebate,
                 liquidity_role=fill.liquidity_role,
-                mark_ticks=current_mark(fill.price_ticks),
+                mark_ticks=current_mark(
+                    fill.price_ticks,
+                    inventory=portfolio.inventory + int(fill.side) * fill.quantity,
+                ),
             )
             append_snapshot(snapshot)
             risk.observe_pnl(
@@ -471,7 +485,16 @@ def run_backtest(
                     "spread_ticks": exchange.book.spread,
                 }
             )
-            if view.best_bid_ticks is not None and view.best_ask_ticks is not None:
+            can_mark = (
+                view.best_bid_ticks is not None and view.best_ask_ticks is not None
+            ) or (
+                config.backtest.mark_price is MarkPrice.CONSERVATIVE
+                and (
+                    (portfolio.inventory > 0 and view.best_bid_ticks is not None)
+                    or (portfolio.inventory < 0 and view.best_ask_ticks is not None)
+                )
+            )
+            if can_mark:
                 snapshot = portfolio.mark_to_market(
                     current_mark(),
                     timestamp_ns=payload.timestamp_ns,
