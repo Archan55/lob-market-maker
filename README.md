@@ -175,6 +175,19 @@ python -m pytest tests/integration/test_latency_stress_v1.py -q \
 CI retains each tape/config, replay tables, scheduler snapshots and the hashed
 JSON audit as a `latency-stress-v1-<commit>` artifact.
 
+The [reservation-to-close exposure study](docs/EXPOSURE_SESSION_STRESS_V1.md)
+audits 27 full replays through partial fills, cancel races, delayed knowledge,
+loss shutdown and partial session liquidation. Independent reservation and
+rational cost-pool oracles accompany minimal conservative-mark and aggregate
+reduce-only admission fixes. It distinguishes hard position caps from loss
+thresholds, residual marks and forced session expiry.
+
+```bash
+python -m pytest tests/integration/test_exposure_session_stress_v1.py -q \
+  --exposure-study-output experiments/exposure-session-stress-v1
+python tools/reproduce_exposure_defects.py
+```
+
 Measure the readable reference book or the complete causal event loop:
 
 ```bash

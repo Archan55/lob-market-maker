@@ -8,3 +8,7 @@ def pytest_addoption(parser: pytest.Parser) -> None:
         "--latency-study-output",
         help="Save latency-stress-v1 tapes, runs, event snapshots and audit here.",
     )
+    parser.addoption(
+        "--exposure-study-output",
+        help="Save exposure-session-stress-v1 inputs, replay tables and audit here.",
+    )
