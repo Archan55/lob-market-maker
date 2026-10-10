@@ -12,3 +12,7 @@ def pytest_addoption(parser: pytest.Parser) -> None:
         "--exposure-study-output",
         help="Save exposure-session-stress-v1 inputs, replay tables and audit here.",
     )
+    parser.addoption(
+        "--client-stop-study-output",
+        help="Save client-stop-v1 tapes, runs, snapshots and independent audit here.",
+    )

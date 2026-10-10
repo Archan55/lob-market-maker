@@ -188,6 +188,18 @@ python -m pytest tests/integration/test_exposure_session_stress_v1.py -q \
 python tools/reproduce_exposure_defects.py
 ```
 
+The opt-in [client-stop study](docs/CLIENT_STOP_STRESS_V1.md) separates stopping
+decisions from venue cancellation, acknowledgments, late fills and remaining
+exposure. It uses a finite observation horizon and reports unresolved entry
+outcomes when their arrivals exceed the tape. The forced-expiry default and
+published earlier studies remain available.
+
+```bash
+python -m pytest tests/integration/test_client_stop_stress_v1.py -q \
+  --client-stop-study-output experiments/client-stop-stress-v1
+python tools/verify_client_stop_baseline.py
+```
+
 Measure the readable reference book or the complete causal event loop:
 
 ```bash

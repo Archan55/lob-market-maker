@@ -173,7 +173,7 @@ class MarketMakingStrategy(ABC):
             quote.pending_cancel = False
             quote.cancel_dispatch_status = None
             self.rejected_cancel_attempts += 1
-            if report.order_status.terminal:
+            if report.order_status.terminal and report.reason != "unknown_order":
                 self._managed.pop(quote.side, None)
             else:
                 self._defer_cancel_retry(
