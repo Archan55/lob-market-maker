@@ -275,6 +275,20 @@ def human_readable_summary(
             f"{_display(_nested(metrics, 'engineering', 'events_processed'))}"
         ),
     ]
+    stop = metrics.get("client_stop")
+    if isinstance(stop, Mapping):
+        lines.extend(
+            [
+                f"Client stop / observation end (ns): {stop.get('stop_timestamp_ns')} / {stop.get('observation_end_timestamp_ns')}",
+                f"Known inventory: {stop.get('known_inventory')}",
+                f"Unresolved venue orders / entries: {len(stop.get('outstanding_orders', []))} / {len(stop.get('in_flight_entries', []))}",
+                f"Reachable inventory: [{stop.get('reachable_inventory_min')}, {stop.get('reachable_inventory_max')}]",
+                f"Unresolved client order acknowledgments: {len(stop.get('unresolved_client_order_ids', []))}",
+                f"Historical mark source / age (ns): {stop.get('mark_source_timestamp_ns')} / {stop.get('mark_age_ns')}",
+                f"Venue observation coverage ends (ns): {stop.get('venue_observation_end_timestamp_ns')}",
+                "Final P&L is covered marked accounting; later uncovered fills remain possible and inventory is retained.",
+            ]
+        )
     disclaimer = metrics.get("research_disclaimer")
     if disclaimer:
         lines.extend(("", f"Research disclaimer: {disclaimer}"))
@@ -952,6 +966,18 @@ def compare_runs(
 def _validate_comparison_identity(artifacts: list[RunArtifacts]) -> None:
     if len(artifacts) < 2:
         return
+    shutdown_identities = {
+        (
+            run.config.get("backtest", {}).get("shutdown_policy", "forced_expiry"),
+            run.config.get("backtest", {}).get("client_stop_timestamp_ns"),
+            run.config.get("backtest", {}).get("observation_end_timestamp_ns"),
+        )
+        for run in artifacts
+    }
+    if len(shutdown_identities) != 1:
+        raise ReportError(
+            "comparison runs must use the same shutdown policy, stop time and observation horizon"
+        )
     hashes = {
         str(value)
         for run in artifacts

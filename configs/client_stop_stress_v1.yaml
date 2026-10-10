@@ -1,0 +1,43 @@
+# Constructed client shutdown cases; timestamps are nanoseconds, not calibration.
+instrument:
+  symbol: CLIENT-STOP
+  tick_size: "0.01"
+data:
+  provenance:
+    symbol: CLIENT-STOP
+    provider: lobmm client stop stress v1
+    dataset_id: client-stop-stress-v1
+    license_notes: Constructed synthetic mechanics; no empirical venue calibration.
+latency:
+  market_data_ns: 0
+  order_entry_ns: 20
+  cancellation_ns: 60
+  fill_report_ns: 20
+queue_model:
+  price_through_fills: false
+fees:
+  maker_fee_per_unit: "0.002"
+  maker_rebate_per_unit: "0.0005"
+  proportional_fee_rate: "0.0001"
+strategy:
+  order_size: 4
+  base_half_spread_ticks: 1.0
+  inventory_penalty_ticks: 0.0
+  imbalance_coefficient_ticks: 0.0
+  volatility_multiplier: 0.0
+  minimum_quote_lifetime_ns: 1000000
+  refresh_interval_ns: 1000000
+  stale_after_ns: 1000000
+risk:
+  max_abs_inventory: 4
+  max_order_size: 4
+  max_total_open_quantity: 8
+  max_quote_age_ns: 1000000
+backtest:
+  warmup_events: 4
+  timer_interval_ns: 1000000
+  shutdown_policy: client_stop
+  client_stop_timestamp_ns: 100
+  observation_end_timestamp_ns: 1100
+output:
+  write_plots: false
