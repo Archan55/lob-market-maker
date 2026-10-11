@@ -147,8 +147,12 @@ from lobmm.transport import TransportFault, TransportFaultPlan
 case = Path("experiments/transport-stress-v1/execution_reports-2-drop__fixed_spread__1")
 raw = json.loads((case / "transport_faults.json").read_text())
 plan = TransportFaultPlan(tuple(TransportFault(**row) for row in raw["faults"]))
-run_backtest(load_config(case / "run_config.yaml"), load_events(case / "tape.csv"),
-             run_name="repeated", transport_faults=plan)
+run_backtest(
+    load_config(case / "run_config.yaml"),
+    load_events(case / "tape.csv"),
+    run_name="repeated",
+    transport_faults=plan,
+)
 ```
 
 The verifier extracts pinned prior PR2 source using local `git archive` and runs
