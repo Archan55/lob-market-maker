@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from typing import Protocol
 
 from lobmm.scheduler import EventPhase, ScheduledEvent, Scheduler
+from lobmm.transport import ResearchTransport
 
 
 class LatencyModel(Protocol):
@@ -81,6 +82,7 @@ class OrderedChannel[MessageT]:
         scheduler: Scheduler,
         phase: EventPhase,
         latency: LatencyModel,
+        transport: ResearchTransport | None = None,
     ) -> None:
         if not name:
             raise ValueError("channel name must not be empty")
@@ -88,6 +90,7 @@ class OrderedChannel[MessageT]:
         self._scheduler = scheduler
         self._phase = phase
         self._latency = latency
+        self._transport = transport
         self._next_sequence = 0
         self._last_send_ns: int | None = None
         self._last_delivery_ns: int | None = None
@@ -105,7 +108,7 @@ class OrderedChannel[MessageT]:
         payload: MessageT,
         *,
         send_timestamp_ns: int,
-    ) -> ScheduledEvent[ChannelDelivery[MessageT]]:
+    ) -> ScheduledEvent[ChannelDelivery[MessageT]] | None:
         if send_timestamp_ns < 0:
             raise ValueError("send_timestamp_ns must be nonnegative")
         if self._last_send_ns is not None and send_timestamp_ns < self._last_send_ns:
@@ -133,12 +136,27 @@ class OrderedChannel[MessageT]:
             sampled_latency_ns=sampled_latency_ns,
             payload=payload,
         )
-        scheduled = self._scheduler.schedule(
-            timestamp_ns=delivery_timestamp_ns,
-            phase=self._phase,
-            source_sequence=channel_sequence,
-            payload=envelope,
+        copies = (
+            self._transport.copies(
+                self._name,
+                channel_sequence,
+                send_timestamp_ns,
+                delivery_timestamp_ns,
+                payload,
+            )
+            if self._transport is not None
+            else 1
         )
+        scheduled = None
+        for _ in range(copies):
+            item = self._scheduler.schedule(
+                timestamp_ns=delivery_timestamp_ns,
+                phase=self._phase,
+                source_sequence=channel_sequence,
+                payload=envelope,
+            )
+            if scheduled is None:
+                scheduled = item
         self._last_send_ns = send_timestamp_ns
         self._last_delivery_ns = delivery_timestamp_ns
         return scheduled

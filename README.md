@@ -3,6 +3,12 @@
 A deterministic, event-driven Level 2 limit-order-book market-making research
 simulator for Python 3.12+.
 
+The opt-in [transport fault study](docs/TRANSPORT_STRESS_V1.md) exercises offline
+dropped and duplicated order/cancel/report messages through finite client stop.
+It separates covered venue accounting from uncertain client knowledge, retains
+reservations across missing responses, and preserves the reliable default and
+all earlier versioned study artifacts.
+
 This repository is an independent portfolio project focused on market
 microstructure, latency, queue-aware fills, accounting, and reproducible
 evaluation. It is a historical research simulator—not a live trading system.

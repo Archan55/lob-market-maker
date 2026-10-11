@@ -47,6 +47,7 @@ from lobmm.scheduler import ScheduledEvent, Scheduler
 from lobmm.strategies import make_strategy
 from lobmm.strategies.base import StrategyAction
 from lobmm.strategy_runtime import StrategyRuntime
+from lobmm.transport import ClientKnowledge, ResearchTransport, TransportFaultPlan
 from lobmm.validation import ValidationResult, validate_event_stream
 
 
@@ -92,6 +93,7 @@ def run_backtest(
     generate_plots: bool | None = None,
     input_validation: ValidationResult | None = None,
     persist_artifacts: bool = True,
+    transport_faults: TransportFaultPlan | None = None,
 ) -> BacktestResult:
     """Run one fully deterministic historical/synthetic replay."""
 
@@ -120,6 +122,12 @@ def run_backtest(
     start_ns = selected[0].timestamp_ns
     end_ns = selected[-1].timestamp_ns
     client_stop_enabled = config.backtest.shutdown_policy is ShutdownPolicy.CLIENT_STOP
+    if transport_faults is not None and not client_stop_enabled:
+        raise ValueError("research transport faults require finite client_stop replay")
+    transport = (
+        ResearchTransport(transport_faults) if transport_faults is not None else None
+    )
+    client_knowledge = ClientKnowledge() if transport is not None else None
     stop_ns = (
         config.backtest.client_stop_timestamp_ns if client_stop_enabled else end_ns
     )
@@ -194,6 +202,7 @@ def run_backtest(
         name="new_orders",
         scheduler=scheduler,
         phase=SchedulerPhase.EXCHANGE_COMMAND,
+        transport=transport,
         latency=_latency(
             config.latency.order_entry_ns,
             config.latency.order_entry_jitter_ns,
@@ -204,6 +213,7 @@ def run_backtest(
         name="cancellations",
         scheduler=scheduler,
         phase=SchedulerPhase.EXCHANGE_COMMAND,
+        transport=transport,
         latency=_latency(
             config.latency.cancellation_ns,
             config.latency.cancellation_jitter_ns,
@@ -214,6 +224,7 @@ def run_backtest(
         name="execution_reports",
         scheduler=scheduler,
         phase=SchedulerPhase.EXECUTION_REPORT_DELIVERY,
+        transport=transport,
         latency=_latency(
             config.latency.fill_report_ns,
             config.latency.fill_report_jitter_ns,
@@ -259,7 +270,7 @@ def run_backtest(
     risk_cancel_request_count = 0
     local_report_counter = 0
     session_ended = False
-    entry_arrivals: dict[str, int] = {}
+    entry_arrivals: dict[str, int | None] = {}
     unobserved_cancel_arrivals: list[dict[str, Any]] = []
     unobserved_expiries: list[dict[str, Any]] = []
     mark_source_ns: int | None = None
@@ -446,7 +457,11 @@ def run_backtest(
             arrival = new_order_channel.send(action, send_timestamp_ns=timestamp_ns)
             if client_stop_enabled:
                 client_stop.sent_entry(action)
-                entry_arrivals[action.client_order_id] = arrival.timestamp_ns
+                entry_arrivals[action.client_order_id] = (
+                    arrival.timestamp_ns if arrival else None
+                )
+                if client_knowledge is not None:
+                    client_knowledge.sent(action)
             runtime.record_action_sent(action, timestamp_ns=timestamp_ns)
 
     def request_risk_cancels(
@@ -494,6 +509,15 @@ def run_backtest(
         nonlocal session_ended, last_market_ns
         timestamp_ns = scheduled.timestamp_ns
         payload = scheduled.payload
+        if (
+            transport is not None
+            and isinstance(payload, ChannelDelivery)
+            and payload.channel_name != "market_data"
+            and not transport.receive(
+                payload.channel_name, payload.channel_sequence, timestamp_ns
+            )
+        ):
+            return
         if scheduled.phase is SchedulerPhase.MARKET:
             assert isinstance(payload, MarketEvent)
             last_market_ns = timestamp_ns
@@ -566,6 +590,8 @@ def run_backtest(
             runtime.deliver_report(report, notification_timestamp_ns=timestamp_ns)
             if client_stop_enabled:
                 client_stop.delivered(report, timestamp_ns)
+            if client_knowledge is not None:
+                client_knowledge.delivered(report)
             if report.fill is not None:
                 fill_notification_ns[report.fill.fill_id] = timestamp_ns
             schedule_wake(
@@ -839,9 +865,10 @@ def run_backtest(
                 "side": int(request.side),
                 "quantity": request.quantity,
                 "scheduled_arrival_timestamp_ns": entry_arrivals[cid],
-                "outcome_unobserved_after_tape": entry_arrivals[cid] > end_ns,
+                "outcome_unobserved_after_tape": arrival_ns > end_ns,
             }
             for cid, request in pending_new.items()
+            if (arrival_ns := entry_arrivals[cid]) is not None
         ]
         min_inv = (
             portfolio.inventory
@@ -909,6 +936,17 @@ def run_backtest(
             "client_knowledge_complete": not client_stop.entries,
             "execution_model_note": "Venue execution and termination are observed only through tape end. Later entries, cancels and expiries retain unresolved reservations because intervening fills lack tape coverage. In-tape-generated reports continue to the inclusive horizon; marks are historical observations, not liquidation proceeds.",
         }
+        if transport is not None:
+            assert client_knowledge is not None
+            knowledge = client_knowledge.artifact()
+            diagnostics["transport_faults"] = transport.artifact()
+            diagnostics["client_stop"]["client_knowledge"] = knowledge
+            diagnostics["client_stop"]["client_knowledge_complete"] = knowledge[
+                "complete"
+            ]
+            diagnostics["client_stop"]["dropped_entries_at_venue"] = [
+                cid for cid in pending_new if entry_arrivals[cid] is None
+            ]
     metrics = build_metrics(
         orders=order_rows,
         fills=fill_rows,
@@ -939,8 +977,16 @@ def run_backtest(
     }
     if client_stop_enabled:
         summary["client_stop"] = diagnostics["client_stop"]
+    if transport is not None:
+        assert transport_faults is not None
+        summary["transport_faults"] = transport_faults.artifact()
 
     if persist_artifacts:
+        if transport is not None:
+            (run_directory / "transport_faults.json").write_text(
+                json.dumps(transport.artifact(), indent=2, sort_keys=True) + "\n",
+                encoding="utf-8",
+            )
         _write_outputs(
             run_directory,
             config=config,

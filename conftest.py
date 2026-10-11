@@ -16,3 +16,7 @@ def pytest_addoption(parser: pytest.Parser) -> None:
         "--client-stop-study-output",
         help="Save client-stop-v1 tapes, runs, snapshots and independent audit here.",
     )
+    parser.addoption(
+        "--transport-study-output",
+        help="Save offline transport fault tapes, plans, snapshots and audit here.",
+    )

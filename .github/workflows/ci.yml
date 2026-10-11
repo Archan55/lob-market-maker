@@ -28,7 +28,9 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1
+      - name: Verify reliable baseline and independent transport repeats offline
+        run: python tools/verify_transport_evidence.py
       - name: Reproduce exposure and mark defects against pinned prior head
         run: python tools/reproduce_exposure_defects.py
       - name: Verify forced-expiry baseline and unknown-cancel correction
@@ -41,6 +43,9 @@ jobs:
           python --version > experiments/client-stop-stress-v1/python-version.txt
           python -m pip freeze > experiments/client-stop-stress-v1/requirements-observed.txt
           git rev-parse HEAD > experiments/client-stop-stress-v1/checkout-sha.txt
+          python --version > experiments/transport-stress-v1/python-version.txt
+          python -m pip freeze > experiments/transport-stress-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/transport-stress-v1/checkout-sha.txt
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
       - name: Controlled cancellation-policy experiment and audit
@@ -68,4 +73,12 @@ jobs:
           path: |
             experiments/exposure-session-stress-v1/
             experiments/exposure-defects-v1/
+          retention-days: 14
+      - name: Save deterministic transport faults and preserved baseline evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: transport-stress-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/transport-stress-v1/
+            experiments/transport-verification-v1/
           retention-days: 14

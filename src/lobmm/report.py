@@ -289,6 +289,16 @@ def human_readable_summary(
                 "Final P&L is covered marked accounting; later uncovered fills remain possible and inventory is retained.",
             ]
         )
+        knowledge = stop.get("client_knowledge")
+        if isinstance(knowledge, Mapping):
+            lines.extend(
+                [
+                    "Research transport: deterministic drops/duplicates; see transport_faults.json.",
+                    f"Client inventory bounds from delivered evidence: [{knowledge.get('inventory_min')}, {knowledge.get('inventory_max')}]",
+                    f"Client execution knowledge complete: {knowledge.get('complete')}",
+                    "Terminal acknowledgments do not substitute for missing fill details.",
+                ]
+            )
     disclaimer = metrics.get("research_disclaimer")
     if disclaimer:
         lines.extend(("", f"Research disclaimer: {disclaimer}"))
@@ -966,6 +976,14 @@ def compare_runs(
 def _validate_comparison_identity(artifacts: list[RunArtifacts]) -> None:
     if len(artifacts) < 2:
         return
+    transport_identities = {
+        json.dumps(run.summary.get("transport_faults"), sort_keys=True)
+        for run in artifacts
+    }
+    if len(transport_identities) != 1:
+        raise ReportError(
+            "comparison runs must use the same research transport fault plan"
+        )
     shutdown_identities = {
         (
             run.config.get("backtest", {}).get("shutdown_policy", "forced_expiry"),
