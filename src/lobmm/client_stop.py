@@ -34,6 +34,9 @@ class ClientStopController:
     def delivered(self, report: ExecutionReport, timestamp_ns: int) -> None:
         self.reports.append((timestamp_ns, report))
         cid = report.client_order_id
+        if cid not in self.entries:
+            # A query can retire the entry before its original acceptance arrives.
+            return
         if report.report_type is ReportType.CANCEL_REJECTED:
             self.pending_cancels.discard(cid)
             if report.reason == "unknown_order":
@@ -55,3 +58,9 @@ class ClientStopController:
         self.pending_cancels.add(cid)
         self.cancel_sends.append(request)
         self._send_cancel(request)
+
+    def reconciled_terminal(self, cid: str) -> None:
+        """Terminal query evidence retires cancellation work without a new send."""
+        self.entries.pop(cid, None)
+        self.accepted.discard(cid)
+        self.pending_cancels.discard(cid)

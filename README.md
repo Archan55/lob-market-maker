@@ -9,6 +9,11 @@ It separates covered venue accounting from uncertain client knowledge, retains
 reservations across missing responses, and preserves the reliable default and
 all earlier versioned study artifacts.
 
+The [finite reconciliation study](docs/RECONCILIATION_STRESS_V1.md) adds bounded
+offline queries with explicit request, snapshot/as-of and delayed response times.
+It recovers available execution detail by stable fill ID, while absent, stale or
+incomplete evidence retains uncertainty. No-recovery runs remain paired baselines.
+
 This repository is an independent portfolio project focused on market
 microstructure, latency, queue-aware fills, accounting, and reproducible
 evaluation. It is a historical research simulator—not a live trading system.

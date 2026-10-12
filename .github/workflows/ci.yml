@@ -28,7 +28,9 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1 --reconciliation-study-output experiments/reconciliation-stress-v1
+      - name: Verify bounded reconciliation repeats and exact prior PR2 baseline offline
+        run: python tools/verify_reconciliation_evidence.py
       - name: Verify reliable baseline and independent transport repeats offline
         run: python tools/verify_transport_evidence.py
       - name: Reproduce exposure and mark defects against pinned prior head
@@ -46,6 +48,9 @@ jobs:
           python --version > experiments/transport-stress-v1/python-version.txt
           python -m pip freeze > experiments/transport-stress-v1/requirements-observed.txt
           git rev-parse HEAD > experiments/transport-stress-v1/checkout-sha.txt
+          python --version > experiments/reconciliation-stress-v1/python-version.txt
+          python -m pip freeze > experiments/reconciliation-stress-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/reconciliation-stress-v1/checkout-sha.txt
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
       - name: Controlled cancellation-policy experiment and audit
@@ -81,4 +86,12 @@ jobs:
           path: |
             experiments/transport-stress-v1/
             experiments/transport-verification-v1/
+          retention-days: 14
+      - name: Save bounded reconciliation queries, client evidence and pinned baseline
+        uses: actions/upload-artifact@v4
+        with:
+          name: reconciliation-stress-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/reconciliation-stress-v1/
+            experiments/reconciliation-verification-v1/
           retention-days: 14

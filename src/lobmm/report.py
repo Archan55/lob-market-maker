@@ -300,6 +300,15 @@ def human_readable_summary(
                 ]
             )
     disclaimer = metrics.get("research_disclaimer")
+    reconciliation = metrics.get("reconciliation")
+    if isinstance(reconciliation, Mapping):
+        lines.extend(
+            [
+                "Finite offline reconciliation: see reconciliation.json for query, snapshot/as-of and response times.",
+                f"Query responses received: {len(reconciliation.get('receipts', []))}",
+                "Recovered fill IDs update client knowledge once; absence does not retire an order.",
+            ]
+        )
     if disclaimer:
         lines.extend(("", f"Research disclaimer: {disclaimer}"))
     return "\n".join(lines)
@@ -984,6 +993,12 @@ def _validate_comparison_identity(artifacts: list[RunArtifacts]) -> None:
         raise ReportError(
             "comparison runs must use the same research transport fault plan"
         )
+    reconciliation_identities = {
+        json.dumps(run.summary.get("reconciliation"), sort_keys=True)
+        for run in artifacts
+    }
+    if len(reconciliation_identities) != 1:
+        raise ReportError("comparison runs must use the same reconciliation plan")
     shutdown_identities = {
         (
             run.config.get("backtest", {}).get("shutdown_policy", "forced_expiry"),

@@ -12,9 +12,15 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 from typing import Any, Literal
 
-from lobmm.orders import ExecutionReport, NewOrderRequest
+from lobmm.orders import ExecutionReport, Fill, NewOrderRequest
 
-ChannelName = Literal["new_orders", "cancellations", "execution_reports"]
+ChannelName = Literal[
+    "new_orders",
+    "cancellations",
+    "execution_reports",
+    "reconciliation_requests",
+    "reconciliation_responses",
+]
 FaultAction = Literal["drop", "duplicate"]
 
 
@@ -25,7 +31,13 @@ class TransportFault:
     action: FaultAction
 
     def __post_init__(self) -> None:
-        if self.channel not in {"new_orders", "cancellations", "execution_reports"}:
+        if self.channel not in {
+            "new_orders",
+            "cancellations",
+            "execution_reports",
+            "reconciliation_requests",
+            "reconciliation_responses",
+        }:
             raise ValueError("unsupported research fault channel")
         if type(self.sequence) is not int or self.sequence < 0:
             raise ValueError("fault sequence must be a nonnegative integer")
@@ -127,6 +139,7 @@ class ClientKnowledge:
         self.terminal: set[str] = set()
         self._reports: set[str] = set()
         self._fills: set[str] = set()
+        self.fill_details: dict[str, Fill] = {}
 
     def sent(self, request: NewOrderRequest) -> None:
         self.entries[request.client_order_id] = request
@@ -140,11 +153,29 @@ class ClientKnowledge:
         cid = report.client_order_id
         if cid not in self.entries or report.reason == "unknown_order":
             return
-        if report.fill is not None and report.fill.fill_id not in self._fills:
-            self._fills.add(report.fill.fill_id)
-            self.filled[cid] += report.fill.quantity
+        if report.fill is not None:
+            self.recovered_fill(report.fill)
         self.remaining[cid] = min(self.remaining[cid], report.remaining_quantity)
         if report.order_status.terminal:
+            self.terminal.add(cid)
+
+    def recovered_fill(self, fill: Fill) -> bool:
+        if fill.fill_id in self._fills:
+            return False
+        cid = fill.client_order_id
+        if cid not in self.entries:
+            return False
+        self._fills.add(fill.fill_id)
+        self.fill_details[fill.fill_id] = fill
+        self.filled[cid] += fill.quantity
+        self.remaining[cid] = min(
+            self.remaining[cid], self.entries[cid].quantity - self.filled[cid]
+        )
+        return True
+
+    def reconciled_state(self, cid: str, remaining: int, *, terminal: bool) -> None:
+        self.remaining[cid] = min(self.remaining[cid], remaining)
+        if terminal:
             self.terminal.add(cid)
 
     def artifact(self) -> dict[str, Any]:

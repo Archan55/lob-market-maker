@@ -42,6 +42,13 @@ from lobmm.orders import (
     NewOrderRequest,
 )
 from lobmm.portfolio import Portfolio, PortfolioSnapshot, select_mark_price
+from lobmm.reconciliation import (
+    QueryTimer,
+    ReconciliationJournal,
+    ReconciliationPlan,
+    ReconciliationRequest,
+    ReconciliationResponse,
+)
 from lobmm.risk import OpenOrderExposure, RiskManager
 from lobmm.scheduler import ScheduledEvent, Scheduler
 from lobmm.strategies import make_strategy
@@ -94,6 +101,7 @@ def run_backtest(
     input_validation: ValidationResult | None = None,
     persist_artifacts: bool = True,
     transport_faults: TransportFaultPlan | None = None,
+    reconciliation: ReconciliationPlan | None = None,
 ) -> BacktestResult:
     """Run one fully deterministic historical/synthetic replay."""
 
@@ -124,8 +132,12 @@ def run_backtest(
     client_stop_enabled = config.backtest.shutdown_policy is ShutdownPolicy.CLIENT_STOP
     if transport_faults is not None and not client_stop_enabled:
         raise ValueError("research transport faults require finite client_stop replay")
+    if reconciliation is not None and not client_stop_enabled:
+        raise ValueError("reconciliation requires finite client_stop replay")
     transport = (
-        ResearchTransport(transport_faults) if transport_faults is not None else None
+        ResearchTransport(transport_faults or TransportFaultPlan())
+        if transport_faults is not None or reconciliation is not None
+        else None
     )
     client_knowledge = ClientKnowledge() if transport is not None else None
     stop_ns = (
@@ -137,6 +149,12 @@ def run_backtest(
     assert stop_ns is not None
     if not start_ns <= stop_ns <= end_ns:
         raise ValueError("client stop must lie within the selected tape")
+    if reconciliation is not None:
+        assert horizon_ns is not None
+        if any(
+            not stop_ns <= t <= horizon_ns for t in reconciliation.query_timestamps_ns
+        ):
+            raise ValueError("queries must lie between client stop and observation end")
     destination_root = (
         Path(output_root) if output_root is not None else config.output.runs_directory
     )
@@ -236,6 +254,34 @@ def run_backtest(
         cancel_channel.send(request, send_timestamp_ns=request.send_timestamp_ns)
 
     client_stop = ClientStopController(send_stop_cancel)
+    journal = (
+        ReconciliationJournal(reconciliation) if reconciliation is not None else None
+    )
+    query_requests: list[dict[str, Any]] = []
+    query_responses: list[dict[str, Any]] = []
+    query_receipts: list[dict[str, Any]] = []
+    if reconciliation is not None:
+        query_channel: OrderedChannel[ReconciliationRequest] = OrderedChannel(
+            name="reconciliation_requests",
+            scheduler=scheduler,
+            phase=SchedulerPhase.EXCHANGE_COMMAND,
+            transport=transport,
+            latency=FixedLatency(reconciliation.request_latency_ns),
+        )
+        response_channel: OrderedChannel[ReconciliationResponse] = OrderedChannel(
+            name="reconciliation_responses",
+            scheduler=scheduler,
+            phase=SchedulerPhase.EXECUTION_REPORT_DELIVERY,
+            transport=transport,
+            latency=FixedLatency(reconciliation.response_latency_ns),
+        )
+        for sequence, timestamp_ns in enumerate(reconciliation.query_timestamps_ns):
+            scheduler.schedule(
+                timestamp_ns=timestamp_ns,
+                phase=SchedulerPhase.TIMER,
+                source_sequence=sequence,
+                payload=QueryTimer(sequence),
+            )
 
     for event in selected:
         scheduler.schedule(
@@ -310,6 +356,8 @@ def run_backtest(
         return Decimal(fallback or 0)
 
     def schedule_reports(result: ExchangeResult) -> None:
+        if journal is not None:
+            journal.record(result.reports)
         for report in result.reports:
             report_channel.send(
                 report,
@@ -585,6 +633,57 @@ def run_backtest(
 
         if scheduled.phase is SchedulerPhase.EXECUTION_REPORT_DELIVERY:
             assert isinstance(payload, ChannelDelivery)
+            if isinstance(payload.payload, ReconciliationResponse):
+                response = payload.payload
+                assert client_knowledge is not None
+                if (
+                    not response.request_timestamp_ns
+                    <= response.exchange_snapshot_timestamp_ns
+                    <= timestamp_ns
+                ):
+                    raise ValueError("noncausal reconciliation response")
+                if response.as_of_timestamp_ns > min(
+                    response.exchange_snapshot_timestamp_ns, end_ns
+                ):
+                    raise ValueError("reconciliation evidence exceeds covered snapshot")
+                recovered = []
+                for evidence in response.orders:
+                    if (
+                        evidence.state_timestamp_ns is not None
+                        and evidence.state_timestamp_ns > response.as_of_timestamp_ns
+                    ):
+                        raise ValueError("reconciliation state exceeds as-of time")
+                    for fill in evidence.fills:
+                        if (
+                            fill.exchange_fill_timestamp_ns
+                            > response.as_of_timestamp_ns
+                        ):
+                            raise ValueError("reconciliation fill exceeds as-of time")
+                        if client_knowledge.recovered_fill(fill):
+                            recovered.append(fill.fill_id)
+                            runtime.deliver_recovered_fill(
+                                fill, notification_timestamp_ns=timestamp_ns
+                            )
+                            fill_notification_ns.setdefault(fill.fill_id, timestamp_ns)
+                    if evidence.status is not None:
+                        assert evidence.remaining_quantity is not None
+                        client_knowledge.reconciled_state(
+                            evidence.client_order_id,
+                            evidence.remaining_quantity,
+                            terminal=evidence.status.terminal,
+                        )
+                        if evidence.status.terminal:
+                            client_stop.reconciled_terminal(evidence.client_order_id)
+                query_receipts.append(
+                    dict(
+                        query_id=response.query_id,
+                        response_timestamp_ns=timestamp_ns,
+                        as_of_timestamp_ns=response.as_of_timestamp_ns,
+                        recovered_fill_ids=recovered,
+                        client_knowledge=client_knowledge.artifact(),
+                    )
+                )
+                return
             assert isinstance(payload.payload, ExecutionReport)
             report = payload.payload
             runtime.deliver_report(report, notification_timestamp_ns=timestamp_ns)
@@ -593,7 +692,7 @@ def run_backtest(
             if client_knowledge is not None:
                 client_knowledge.delivered(report)
             if report.fill is not None:
-                fill_notification_ns[report.fill.fill_id] = timestamp_ns
+                fill_notification_ns.setdefault(report.fill.fill_id, timestamp_ns)
             schedule_wake(
                 scheduler_instance,
                 timestamp_ns=timestamp_ns,
@@ -604,6 +703,12 @@ def run_backtest(
         if scheduled.phase is SchedulerPhase.EXCHANGE_COMMAND:
             assert isinstance(payload, ChannelDelivery)
             command = payload.payload
+            if isinstance(command, ReconciliationRequest):
+                assert journal is not None
+                response = journal.snapshot(command, timestamp_ns, end_ns)
+                query_responses.append(_dataclass_row(response))
+                response_channel.send(response, send_timestamp_ns=timestamp_ns)
+                return
             if client_stop_enabled and timestamp_ns > end_ns:
                 # Without later tape, intervening fills and hence the remaining
                 # quantity at cancellation cannot be established. Preserve the
@@ -671,6 +776,16 @@ def run_backtest(
             return
 
         if scheduled.phase is SchedulerPhase.TIMER:
+            if isinstance(payload, QueryTimer):
+                assert client_knowledge is not None
+                request = ReconciliationRequest(
+                    f"Q{payload.sequence:04d}",
+                    timestamp_ns,
+                    tuple(client_knowledge.entries),
+                )
+                query_requests.append(_dataclass_row(request))
+                query_channel.send(request, send_timestamp_ns=timestamp_ns)
+                return
             assert isinstance(payload, (TimerMessage, QuoteAgeCheck))
             if client_stop_enabled and session_ended:
                 return
@@ -978,10 +1093,35 @@ def run_backtest(
     if client_stop_enabled:
         summary["client_stop"] = diagnostics["client_stop"]
     if transport is not None:
-        assert transport_faults is not None
-        summary["transport_faults"] = transport_faults.artifact()
+        summary["transport_faults"] = transport.plan.artifact()
+
+    if reconciliation is not None:
+        assert client_knowledge is not None
+        details = tuple(client_knowledge.fill_details.values())
+        evidence = dict(
+            **reconciliation.artifact(),
+            requests=query_requests,
+            responses=query_responses,
+            receipts=query_receipts,
+            client_execution_ledger=dict(
+                fills=[_dataclass_row(f) for f in details],
+                known_inventory=sum(f.signed_quantity for f in details),
+                trade_cash_ticks=sum(
+                    -f.signed_quantity * f.price_ticks for f in details
+                ),
+                fees=str(sum((f.fee for f in details), Decimal(0))),
+                rebates=str(sum((f.rebate for f in details), Decimal(0))),
+            ),
+        )
+        diagnostics["reconciliation"] = evidence
+        summary["reconciliation"] = reconciliation.artifact()
+        metrics["reconciliation"] = evidence
 
     if persist_artifacts:
+        if reconciliation is not None:
+            (run_directory / "reconciliation.json").write_text(
+                json.dumps(evidence, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+            )
         if transport is not None:
             (run_directory / "transport_faults.json").write_text(
                 json.dumps(transport.artifact(), indent=2, sort_keys=True) + "\n",

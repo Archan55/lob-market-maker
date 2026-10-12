@@ -5,6 +5,10 @@ import pytest
 
 def pytest_addoption(parser: pytest.Parser) -> None:
     parser.addoption(
+        "--reconciliation-study-output",
+        help="Save offline reconciliation inputs, frozen responses and audit here.",
+    )
+    parser.addoption(
         "--latency-study-output",
         help="Save latency-stress-v1 tapes, runs, event snapshots and audit here.",
     )
