@@ -14,6 +14,12 @@ offline queries with explicit request, snapshot/as-of and delayed response times
 It recovers available execution detail by stable fill ID, while absent, stale or
 incomplete evidence retains uncertainty. No-recovery runs remain paired baselines.
 
+The [out-of-order evidence study](docs/REORDERING_STRESS_V1.md) adds bounded,
+deterministic delays to selected reports and query responses. Independent full
+replays check monotone client evidence, shared fill identity, finite uncertainty
+and a stale partial-report cache correction. A separate volatile checkpoint test
+does not claim durable restart.
+
 This repository is an independent portfolio project focused on market
 microstructure, latency, queue-aware fills, accounting, and reproducible
 evaluation. It is a historical research simulator—not a live trading system.

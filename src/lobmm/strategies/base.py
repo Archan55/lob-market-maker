@@ -164,7 +164,9 @@ class MarketMakingStrategy(ABC):
                 report.fill, notification_timestamp_ns=notification_timestamp_ns
             )
             if quote is not None:
-                quote.remaining_quantity = report.remaining_quantity
+                quote.remaining_quantity = min(
+                    quote.remaining_quantity, report.remaining_quantity
+                )
 
         if quote is None:
             return

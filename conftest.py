@@ -5,6 +5,10 @@ import pytest
 
 def pytest_addoption(parser: pytest.Parser) -> None:
     parser.addoption(
+        "--reordering-study-output",
+        help="Save reordering-stress-v1 replay inputs, trajectories and audit here.",
+    )
+    parser.addoption(
         "--reconciliation-study-output",
         help="Save offline reconciliation inputs, frozen responses and audit here.",
     )

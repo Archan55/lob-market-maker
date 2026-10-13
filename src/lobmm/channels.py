@@ -1,4 +1,4 @@
-"""Deterministic latency models and sequence-preserving message channels."""
+"""Deterministic ordered latency, with opt-in evidence delivery perturbations."""
 
 from __future__ import annotations
 
@@ -73,6 +73,8 @@ class OrderedChannel[MessageT]:
 
     A sampled delivery time is clamped to the previous delivery timestamp.
     Equal-time messages retain channel order through ``source_sequence``.
+    Research evidence delays are applied after that nominal ordering and may
+    invert actual receipt order. They never alter command or market-data timing.
     """
 
     def __init__(
@@ -101,6 +103,7 @@ class OrderedChannel[MessageT]:
 
     @property
     def last_delivery_ns(self) -> int | None:
+        """Last nominal ordered delivery, before selected research delays."""
         return self._last_delivery_ns
 
     def send(
@@ -128,6 +131,11 @@ class OrderedChannel[MessageT]:
 
         channel_sequence = self._next_sequence
         self._next_sequence += 1
+        nominal_delivery_ns = delivery_timestamp_ns
+        if self._transport is not None:
+            delivery_timestamp_ns += self._transport.extra_delay_ns(
+                self._name, channel_sequence
+            )
         envelope = ChannelDelivery(
             channel_name=self._name,
             channel_sequence=channel_sequence,
@@ -141,7 +149,7 @@ class OrderedChannel[MessageT]:
                 self._name,
                 channel_sequence,
                 send_timestamp_ns,
-                delivery_timestamp_ns,
+                nominal_delivery_ns,
                 payload,
             )
             if self._transport is not None
@@ -158,7 +166,9 @@ class OrderedChannel[MessageT]:
             if scheduled is None:
                 scheduled = item
         self._last_send_ns = send_timestamp_ns
-        self._last_delivery_ns = delivery_timestamp_ns
+        # Extra evidence delay does not hold later messages behind this one.
+        # The latency model's nominal ordering remains the default contract.
+        self._last_delivery_ns = nominal_delivery_ns
         return scheduled
 
 

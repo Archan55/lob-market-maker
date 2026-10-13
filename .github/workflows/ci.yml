@@ -28,7 +28,11 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1 --reconciliation-study-output experiments/reconciliation-stress-v1
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1 --reconciliation-study-output experiments/reconciliation-stress-v1 --reordering-study-output experiments/reordering-stress-v1
+      - name: Verify reordered evidence repeats and all prior PR2 studies offline
+        run: python tools/verify_reordering_evidence.py
+      - name: Reproduce stale partial-report regression against pinned strategy
+        run: python tools/reproduce_reordering_defect.py
       - name: Verify bounded reconciliation repeats and exact prior PR2 baseline offline
         run: python tools/verify_reconciliation_evidence.py
       - name: Verify reliable baseline and independent transport repeats offline
@@ -51,6 +55,9 @@ jobs:
           python --version > experiments/reconciliation-stress-v1/python-version.txt
           python -m pip freeze > experiments/reconciliation-stress-v1/requirements-observed.txt
           git rev-parse HEAD > experiments/reconciliation-stress-v1/checkout-sha.txt
+          python --version > experiments/reordering-stress-v1/python-version.txt
+          python -m pip freeze > experiments/reordering-stress-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/reordering-stress-v1/checkout-sha.txt
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
       - name: Controlled cancellation-policy experiment and audit
@@ -94,4 +101,13 @@ jobs:
           path: |
             experiments/reconciliation-stress-v1/
             experiments/reconciliation-verification-v1/
+          retention-days: 14
+      - name: Save out-of-order evidence, pinned defect and preservation comparisons
+        uses: actions/upload-artifact@v4
+        with:
+          name: reordering-stress-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/reordering-stress-v1/
+            experiments/reordering-verification-v1/
+            experiments/reordering-defect-v1/
           retention-days: 14

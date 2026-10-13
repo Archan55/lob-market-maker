@@ -5,6 +5,9 @@ duplicates carry the same identity and arrive together. The injector adds no
 retries, timeouts, networking or recovery queries; the existing stop controller
 can retry an early unknown cancel on delivered acceptance. The plan is simulator truth
 and is never delivered to the strategy or client stop controller.
+At most sixteen selected evidence messages can receive bounded extra delays
+after nominal ordered transport. Delays compose with loss/duplication and never
+change matching, execution timestamps, snapshot content or message identity.
 """
 
 from __future__ import annotations
@@ -22,6 +25,23 @@ ChannelName = Literal[
     "reconciliation_responses",
 ]
 FaultAction = Literal["drop", "duplicate"]
+
+
+@dataclass(frozen=True, slots=True)
+class TransportDelay:
+    """Bounded extra delay after nominal ordered delivery, for evidence only."""
+
+    channel: Literal["execution_reports", "reconciliation_responses"]
+    sequence: int
+    delay_ns: int
+
+    def __post_init__(self) -> None:
+        if self.channel not in {"execution_reports", "reconciliation_responses"}:
+            raise ValueError("delay channel must carry reports or responses")
+        if type(self.sequence) is not int or self.sequence < 0:
+            raise ValueError("delay sequence must be a nonnegative integer")
+        if type(self.delay_ns) is not int or not 1 <= self.delay_ns <= 10**12:
+            raise ValueError("extra delay must be an integer in 1..10**12 ns")
 
 
 @dataclass(frozen=True, slots=True)
@@ -48,6 +68,7 @@ class TransportFault:
 @dataclass(frozen=True, slots=True)
 class TransportFaultPlan:
     faults: tuple[TransportFault, ...] = ()
+    delays: tuple[TransportDelay, ...] = ()
 
     def __post_init__(self) -> None:
         if not isinstance(self.faults, tuple):
@@ -55,11 +76,21 @@ class TransportFaultPlan:
         keys = [(fault.channel, fault.sequence) for fault in self.faults]
         if len(keys) != len(set(keys)):
             raise ValueError("one action per channel sequence is required")
+        if not isinstance(self.delays, tuple) or len(self.delays) > 16:
+            raise ValueError("delays must be an immutable tuple of at most 16 rules")
+        delay_keys = [(delay.channel, delay.sequence) for delay in self.delays]
+        if len(delay_keys) != len(set(delay_keys)):
+            raise ValueError("one extra delay per channel sequence is required")
 
     def artifact(self) -> dict[str, Any]:
-        return dict(
+        result = dict(
             version="transport-faults-v1", faults=[asdict(f) for f in self.faults]
         )
+        if self.delays:
+            result.update(
+                version="transport-faults-v2", delays=[asdict(d) for d in self.delays]
+            )
+        return result
 
 
 class ResearchTransport:
@@ -71,6 +102,16 @@ class ResearchTransport:
         self.sends: list[dict[str, Any]] = []
         self.deliveries: list[dict[str, Any]] = []
         self._seen: set[tuple[str, int]] = set()
+
+    def extra_delay_ns(self, channel: str, sequence: int) -> int:
+        return next(
+            (
+                d.delay_ns
+                for d in self.plan.delays
+                if (d.channel, d.sequence) == (channel, sequence)
+            ),
+            0,
+        )
 
     def copies(
         self,
@@ -94,6 +135,12 @@ class ResearchTransport:
                 report_id=getattr(payload, "report_id", None),
             )
         )
+        if self.plan.delays:
+            extra = self.extra_delay_ns(channel, sequence)
+            self.sends[-1].update(
+                extra_delay_ns=extra,
+                effective_delivery_timestamp_ns=arrival_ns + extra,
+            )
         return copies
 
     def receive(self, channel: str, sequence: int, timestamp_ns: int) -> bool:
@@ -112,7 +159,7 @@ class ResearchTransport:
 
     def artifact(self) -> dict[str, Any]:
         used = {(s["channel"], s["sequence"]) for s in self.sends}
-        return dict(
+        result = dict(
             **self.plan.artifact(),
             sends=self.sends,
             deliveries=self.deliveries,
@@ -122,6 +169,13 @@ class ResearchTransport:
                 if (f.channel, f.sequence) not in used
             ],
         )
+        if self.plan.delays:
+            result["unused_delays"] = [
+                asdict(d)
+                for d in self.plan.delays
+                if (d.channel, d.sequence) not in used
+            ]
+        return result
 
 
 class ClientKnowledge:
