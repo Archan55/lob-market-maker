@@ -33,10 +33,12 @@ delays use `transport-faults-v2`. Run comparisons reject different delay plans.
 ```python
 from lobmm.transport import TransportDelay, TransportFaultPlan
 
-faults = TransportFaultPlan(delays=(
-    TransportDelay("reconciliation_responses", 0, 80),
-    TransportDelay("execution_reports", 2, 120),
-))
+faults = TransportFaultPlan(
+    delays=(
+        TransportDelay("reconciliation_responses", 0, 80),
+        TransportDelay("execution_reports", 2, 120),
+    )
+)
 # Pass faults as transport_faults to run_backtest with finite client_stop.
 # Query plans remain separate, finite ReconciliationPlan instances.
 ```
