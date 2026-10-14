@@ -5,6 +5,10 @@ import pytest
 
 def pytest_addoption(parser: pytest.Parser) -> None:
     parser.addoption(
+        "--durable-study-output",
+        help="Save durable recovery inboxes, prefix witnesses and real process-death evidence here.",
+    )
+    parser.addoption(
         "--reordering-study-output",
         help="Save reordering-stress-v1 replay inputs, trajectories and audit here.",
     )

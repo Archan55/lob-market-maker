@@ -12,7 +12,7 @@ import os
 import tempfile
 from collections.abc import Callable, Sequence
 from dataclasses import asdict, dataclass, fields
-from decimal import Decimal, InvalidOperation
+from decimal import Context, Decimal, InvalidOperation, localcontext
 from enum import Enum
 from pathlib import Path
 from typing import Any, TypeVar
@@ -26,6 +26,7 @@ MAX_BYTES = 4 * 1024 * 1024
 MAX_ORDERS = 256
 MAX_RECEIPTS = 4096
 VERSION = "durable-client-v1"
+_OPEN_VERIFIED = object()
 Hook = Callable[[str], None]
 E = TypeVar("E", bound=Enum)
 
@@ -110,7 +111,7 @@ def _boolean(value: Any) -> bool:
 
 
 def _enum[E: Enum](cls: type[E], value: Any) -> E:
-    if isinstance(value, bool):
+    if type(value) is not (int if cls is Side else str):
         raise RecoveryError("invalid recovery enum")
     try:
         return cls(value)
@@ -125,7 +126,21 @@ def _decimal(value: Any) -> Decimal:
         raise RecoveryError("invalid recovery cost") from exc
     if not result.is_finite() or result < 0:
         raise RecoveryError("invalid recovery cost")
+    parts = result.as_tuple()
+    if (
+        len(parts.digits) > 64
+        or not isinstance(parts.exponent, int)
+        or abs(parts.exponent) > 64
+    ):
+        raise RecoveryError("recovery cost exceeds exact decimal bounds")
     return result
+
+
+def _cost_sum(values: Sequence[Decimal]) -> str:
+    # At most 4 MiB of 64-digit coefficients with exponents in [-64, 64].
+    # 256 digits covers alignment plus carry, independent of ambient context.
+    with localcontext(Context(prec=256)):
+        return str(sum(values, Decimal(0)))
 
 
 def _intent(raw: Any) -> NewOrderRequest:
@@ -248,6 +263,8 @@ class _Fold:
         self.queries: dict[str, Any] = {}
         self.notifications: dict[str, int] = {}
         self.order_ids: dict[str, str] = {}
+        self.terminal_quantities: dict[str, int] = {}
+        self.terminal_times: dict[str, int] = {}
         for intent in intents:
             if intent.client_order_id in self.knowledge.entries:
                 raise RecoveryError("reused intent identity")
@@ -268,7 +285,7 @@ class _Fold:
             <= timestamp
         ):
             raise RecoveryError("fill binding or causality mismatch")
-        _bind(self.order_ids, fill.order_id, fill.client_order_id)
+        self._order(fill.order_id, fill.client_order_id)
         existing = self.knowledge.fill_details.get(fill.fill_id)
         if existing is not None and existing != fill:
             raise RecoveryError("conflicting immutable fill identity")
@@ -277,13 +294,65 @@ class _Fold:
         if self.knowledge.filled[fill.client_order_id] > request.quantity:
             raise RecoveryError("fill quantity exceeds saved intent")
 
-    def _state(self, cid: str, remaining: int, status: OrderStatus) -> None:
+    def _order(self, order_id: str, cid: str) -> None:
+        if any(
+            saved_cid == cid and saved_id != order_id
+            for saved_id, saved_cid in self.order_ids.items()
+        ):
+            raise RecoveryError("multiple venue identities for saved intent")
+        _bind(self.order_ids, order_id, cid)
+
+    def _state(
+        self, cid: str, remaining: int, status: OrderStatus, timestamp: int
+    ) -> None:
         request = self._request(cid)
         if remaining > request.quantity:
             raise RecoveryError("remaining quantity exceeds saved intent")
         if status is OrderStatus.FILLED and remaining != 0:
             raise RecoveryError("filled status has nonzero remaining quantity")
+        if status in {OrderStatus.CANCELLED, OrderStatus.EXPIRED} and remaining == 0:
+            raise RecoveryError("unfilled terminal status has no residual")
+        if (
+            status is OrderStatus.PENDING_ARRIVAL
+            or (
+                status in {OrderStatus.LIVE, OrderStatus.REJECTED}
+                and remaining != request.quantity
+            )
+            or (
+                status is OrderStatus.PARTIALLY_FILLED
+                and not 0 < remaining < request.quantity
+            )
+        ):
+            raise RecoveryError("status contradicts quantity evidence")
+        if status.terminal:
+            _bind(self.terminal_quantities, cid, request.quantity - remaining)
+            self.terminal_times[cid] = min(
+                self.terminal_times.get(cid, timestamp), timestamp
+            )
         self.knowledge.reconciled_state(cid, remaining, terminal=status.terminal)
+
+    def _report_shape(self, report: ExecutionReport) -> None:
+        expected = {
+            ReportType.ACCEPTED: OrderStatus.LIVE,
+            ReportType.REJECTED: OrderStatus.REJECTED,
+            ReportType.PARTIAL_FILL: OrderStatus.PARTIALLY_FILLED,
+            ReportType.FILL: OrderStatus.FILLED,
+            ReportType.CANCELLED: OrderStatus.CANCELLED,
+            ReportType.EXPIRED: OrderStatus.EXPIRED,
+        }
+        is_fill = report.report_type in {ReportType.PARTIAL_FILL, ReportType.FILL}
+        if (
+            is_fill != (report.fill is not None)
+            or (
+                report.report_type in expected
+                and report.order_status is not expected[report.report_type]
+            )
+            or (
+                report.report_type is ReportType.CANCEL_REJECTED
+                and not report.order_status.terminal
+            )
+        ):
+            raise RecoveryError("report type/status/detail mismatch")
 
     def apply(self, receipt: Receipt) -> None:
         payload = receipt.payload
@@ -302,14 +371,17 @@ class _Fold:
                 <= timestamp
             ):
                 raise RecoveryError("noncausal report")
+            self._report_shape(payload)
             if payload.reason == "unknown_order":
                 if (
                     payload.report_type is not ReportType.CANCEL_REJECTED
                     or payload.fill is not None
+                    or payload.order_status is not OrderStatus.REJECTED
+                    or payload.remaining_quantity != 0
                 ):
                     raise RecoveryError("invalid unknown-order evidence")
                 return
-            _bind(self.order_ids, _text(payload.order_id), payload.client_order_id)
+            self._order(_text(payload.order_id), payload.client_order_id)
             if payload.fill is not None:
                 fill = payload.fill
                 if (
@@ -319,10 +391,15 @@ class _Fold:
                 ):
                     raise RecoveryError("report/fill binding mismatch")
                 self._detail(fill, timestamp)
+                if fill.quantity > request.quantity - payload.remaining_quantity:
+                    raise RecoveryError(
+                        "report detail contradicts reported cumulative quantity"
+                    )
             self._state(
                 payload.client_order_id,
                 payload.remaining_quantity,
                 payload.order_status,
+                payload.exchange_timestamp_ns,
             )
         else:
             if not _bind(self.queries, payload.query_id, wire["payload"]):
@@ -366,13 +443,45 @@ class _Fold:
                         <= payload.as_of_timestamp_ns
                     ):
                         raise RecoveryError("noncausal response state")
-                    self._state(cid, evidence.remaining_quantity, evidence.status)
+                    self._state(
+                        cid,
+                        evidence.remaining_quantity,
+                        evidence.status,
+                        evidence.state_timestamp_ns,
+                    )
+                    unique = {f.fill_id: f for f in evidence.fills}
+                    if (
+                        sum(f.quantity for f in unique.values())
+                        > self._request(cid).quantity - evidence.remaining_quantity
+                    ):
+                        raise RecoveryError(
+                            "response detail exceeds reported cumulative quantity"
+                        )
+                    if evidence.execution_detail_complete_as_of and (
+                        sum(f.quantity for f in unique.values())
+                        != self._request(cid).quantity - evidence.remaining_quantity
+                    ):
+                        raise RecoveryError(
+                            "complete response detail contradicts state"
+                        )
         for cid, request in self.knowledge.entries.items():
             if (
                 self.knowledge.filled[cid]
                 > request.quantity - self.knowledge.remaining[cid]
             ):
                 raise RecoveryError("execution detail contradicts quantity evidence")
+            terminal = self.terminal_quantities.get(cid)
+            if (
+                terminal is not None
+                and request.quantity - self.knowledge.remaining[cid] != terminal
+            ):
+                raise RecoveryError("evidence contradicts terminal execution quantity")
+            if cid in self.terminal_times and any(
+                f.client_order_id == cid
+                and f.exchange_fill_timestamp_ns > self.terminal_times[cid]
+                for f in self.knowledge.fill_details.values()
+            ):
+                raise RecoveryError("fill occurred after terminal state")
 
     def snapshot(self) -> dict[str, Any]:
         details = tuple(self.knowledge.fill_details.values())
@@ -384,13 +493,15 @@ class _Fold:
             report_identities=self.reports,
             query_identities=self.queries,
             order_identities=self.order_ids,
+            terminal_quantities=self.terminal_quantities,
+            terminal_times=self.terminal_times,
             ledger=dict(
                 known_inventory=sum(f.signed_quantity for f in details),
                 trade_cash_ticks=sum(
                     -f.signed_quantity * f.price_ticks for f in details
                 ),
-                fees=str(sum((f.fee for f in details), Decimal(0))),
-                rebates=str(sum((f.rebate for f in details), Decimal(0))),
+                fees=_cost_sum([f.fee for f in details]),
+                rebates=_cost_sum([f.rebate for f in details]),
             ),
         )
 
@@ -502,8 +613,16 @@ class DurableClient:
     """
 
     def __init__(
-        self, checkpoint: Path, inbox: Path, session_id: str, inbox_sha256: str
+        self,
+        checkpoint: Path,
+        inbox: Path,
+        session_id: str,
+        inbox_sha256: str,
+        *,
+        _permit: object | None = None,
     ) -> None:
+        if _permit is not _OPEN_VERIFIED:
+            raise RecoveryError("use explicit create or verified open")
         self._checkpoint = checkpoint
         self._session = session_id
         self._inbox_sha = inbox_sha256
@@ -518,7 +637,9 @@ class DurableClient:
     ) -> DurableClient:
         if checkpoint.exists():
             raise RecoveryError("checkpoint already exists")
-        client = cls(checkpoint, inbox, session_id, inbox_sha256)
+        client = cls(
+            checkpoint, inbox, session_id, inbox_sha256, _permit=_OPEN_VERIFIED
+        )
         _atomic(checkpoint, client._encoded())
         return client
 
@@ -541,7 +662,9 @@ class DurableClient:
         )
         if envelope["sha256"] != _hash(_json(document)):
             raise RecoveryError("checkpoint checksum mismatch")
-        client = cls(checkpoint, inbox, session_id, inbox_sha256)
+        client = cls(
+            checkpoint, inbox, session_id, inbox_sha256, _permit=_OPEN_VERIFIED
+        )
         offset = _integer(document["offset"])
         if offset > len(client._receipts):
             raise RecoveryError("checkpoint offset exceeds inbox")
@@ -564,7 +687,8 @@ class DurableClient:
     def snapshot(self) -> dict[str, Any]:
         self._healthy()
         # Detached JSON data; caller mutations cannot alter the durable fold.
-        return json.loads(_json(self._fold.snapshot()))
+        result: dict[str, Any] = json.loads(_json(self._fold.snapshot()))
+        return result
 
     def _encoded(self) -> bytes:
         document = dict(
@@ -590,8 +714,6 @@ class DurableClient:
             self._offset += 1
             _atomic(self._checkpoint, self._encoded(), hook)
             self._poisoned = False
-            if hook is not None:
-                hook("after_ack")
             return True
         except (OSError, ValueError, TypeError) as exc:
             self._poisoned = True
