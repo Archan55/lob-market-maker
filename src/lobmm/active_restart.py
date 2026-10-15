@@ -64,7 +64,7 @@ def _record(action: StrategyAction, timestamp_ns: int) -> dict[str, Any]:
         raise RecoveryError("unsupported command type")
     return dict(
         kind="new" if isinstance(action, NewOrderRequest) else "cancel",
-        payload=_wire(asdict(action)),
+        payload=json.loads(_json(_wire(asdict(action)))),
         dispatch_timestamp_ns=_integer(timestamp_ns),
     )
 
