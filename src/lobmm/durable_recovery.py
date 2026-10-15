@@ -676,6 +676,22 @@ class DurableClient:
         return client
 
     @property
+    def session_id(self) -> str:
+        self._healthy()
+        return self._session
+
+    @property
+    def sent_intents(self) -> tuple[NewOrderRequest, ...]:
+        """Immutable verified intents; does not expose future receipt contents."""
+        self._healthy()
+        return tuple(self._intents)
+
+    @property
+    def inbox_drained(self) -> bool:
+        self._healthy()
+        return self._offset == len(self._receipts)
+
+    @property
     def offset(self) -> int:
         self._healthy()
         return self._offset
