@@ -4,6 +4,7 @@ import pytest
 
 
 def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption("--active-restart-output", action="store", default=None)
     parser.addoption(
         "--durable-study-output",
         help="Save durable recovery inboxes, prefix witnesses and real process-death evidence here.",

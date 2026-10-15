@@ -310,6 +310,25 @@ class GuardedStrategySession:
             raise RecoveryError("evidence must match every reserved new intent exactly")
         evidence = client.snapshot()
         knowledge = evidence["knowledge"]
+        dispatch_times = {
+            record["payload"]["client_order_id"]: record["dispatch_timestamp_ns"]
+            for record in self._commands
+            if record["kind"] == "new"
+        }
+
+        def causal(cid: str, exchange_time: int) -> None:
+            if exchange_time < dispatch_times[cid]:
+                raise RecoveryError("execution evidence predates reserved dispatch")
+
+        for fill in evidence["fills"]:
+            causal(fill["client_order_id"], fill["exchange_fill_timestamp_ns"])
+        for report in evidence["report_identities"].values():
+            if report["reason"] != "unknown_order":
+                causal(report["client_order_id"], report["exchange_timestamp_ns"])
+        for query in evidence["query_identities"].values():
+            for order in query["orders"]:
+                if order["state_timestamp_ns"] is not None:
+                    causal(order["client_order_id"], order["state_timestamp_ns"])
         return dict(
             resume_allowed=False,
             quarantined=self._quarantined,

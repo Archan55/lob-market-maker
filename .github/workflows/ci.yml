@@ -28,7 +28,11 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1 --reconciliation-study-output experiments/reconciliation-stress-v1 --reordering-study-output experiments/reordering-stress-v1 --durable-study-output experiments/durable-recovery-v1
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1 --reconciliation-study-output experiments/reconciliation-stress-v1 --reordering-study-output experiments/reordering-stress-v1 --durable-study-output experiments/durable-recovery-v1 --active-restart-output experiments/active-restart-v1 --junitxml=experiments/active-restart-v1/aggregate-tests.xml
+      - name: Verify guarded active restart repeats and prior durable preservation
+        run: python tools/verify_active_restart.py
+      - name: Reproduce new boundary review defects before and after
+        run: python tools/reproduce_active_restart_defects.py
       - name: Verify durable restart repeats and exact prior head preservation
         run: python tools/verify_durable_recovery.py
       - name: Reproduce independent review defects against initial durable implementation
@@ -62,6 +66,9 @@ jobs:
           python --version > experiments/reordering-stress-v1/python-version.txt
           python -m pip freeze > experiments/reordering-stress-v1/requirements-observed.txt
           git rev-parse HEAD > experiments/reordering-stress-v1/checkout-sha.txt
+          python --version > experiments/active-restart-v1/python-version.txt
+          python -m pip freeze > experiments/active-restart-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/active-restart-v1/checkout-sha.txt
           python --version > experiments/durable-recovery-v1/python-version.txt
           python -m pip freeze > experiments/durable-recovery-v1/requirements-observed.txt
           git rev-parse HEAD > experiments/durable-recovery-v1/checkout-sha.txt
@@ -126,4 +133,13 @@ jobs:
             experiments/durable-recovery-v1/
             experiments/durable-recovery-verification-v1/
             experiments/durable-review-v1/
+          retention-days: 14
+      - name: Save guarded active restart, surviving venue and independent review evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: active-restart-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/active-restart-v1/
+            experiments/active-restart-verification-v1/
+            experiments/active-review-reproduction-v1/
           retention-days: 14

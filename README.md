@@ -20,6 +20,11 @@ replays check monotone client evidence, shared fill identity, finite uncertainty
 and a stale partial-report cache correction. A separate volatile checkpoint test
 does not claim durable restart.
 
+The opt-in [active restart boundary](docs/ACTIVE_RESTART_V1.md) reserves commands
+before synthetic dispatch and permanently quarantines reopened sessions. It
+measures surviving venue exposure while the client is dead; it does not resume
+strategies, cancellation work or a scheduler.
+
 This repository is an independent portfolio project focused on market
 microstructure, latency, queue-aware fills, accounting, and reproducible
 evaluation. It is a historical research simulator—not a live trading system.
