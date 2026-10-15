@@ -69,7 +69,7 @@ def _record(action: StrategyAction, timestamp_ns: int) -> dict[str, Any]:
     )
 
 
-def _unique(records: list[dict[str, Any]]) -> None:
+def _unique(records: list[dict[str, Any]], strategy_id: str) -> None:
     clients: set[str] = set()
     cancellations: set[bytes] = set()
     previous = -1
@@ -80,6 +80,8 @@ def _unique(records: list[dict[str, Any]]) -> None:
             raise RecoveryError("dispatch timestamp moved backward")
         previous = stamp
         if isinstance(action, NewOrderRequest):
+            if action.strategy_id != strategy_id:
+                raise RecoveryError("command strategy differs from session context")
             if action.client_order_id in clients:
                 raise RecoveryError("client order identity already reserved")
             clients.add(action.client_order_id)
@@ -112,6 +114,7 @@ class GuardedStrategySession:
             raise RecoveryError("use explicit create or verified open")
         self._path = path
         self._session = _text(session_id)
+        self._strategy_id = _text(strategy.config.strategy_id)
         self._context = _hash(
             _json(
                 dict(
@@ -178,7 +181,7 @@ class GuardedStrategySession:
         records = doc["commands"]
         if type(records) is not list or len(records) > MAX_COMMANDS:
             raise RecoveryError("session command count exceeds limit")
-        _unique(records)
+        _unique(records, strategy.config.strategy_id)
         result = cls(
             path, session_id, strategy, max_abs_inventory, depth, _permit=_VERIFIED
         )
@@ -198,7 +201,9 @@ class GuardedStrategySession:
     def _active(self) -> None:
         self._healthy()
         if self._quarantined:
-            raise RecoveryError("reopened session quarantined; active restart unsupported")
+            raise RecoveryError(
+                "reopened session quarantined; active restart unsupported"
+            )
 
     def snapshot(self) -> dict[str, Any]:
         self._healthy()
@@ -267,7 +272,7 @@ class GuardedStrategySession:
         records = [*self._commands, record]
         if len(records) > MAX_COMMANDS:
             raise RecoveryError("session command count exceeds limit")
-        _unique(records)
+        _unique(records, self._strategy_id)
         # Poison before mutation; only the complete call clears uncertainty.
         self._poisoned = True
         self._dispatching = True
@@ -297,9 +302,7 @@ class GuardedStrategySession:
         if client.session_id != self._session:
             raise RecoveryError("evidence session mismatch")
         reserved = tuple(
-            _command(record)
-            for record in self._commands
-            if record["kind"] == "new"
+            _command(record) for record in self._commands if record["kind"] == "new"
         )
         expected = {action.client_order_id: action for action in reserved}
         supplied = {action.client_order_id: action for action in client.sent_intents}
@@ -316,7 +319,9 @@ class GuardedStrategySession:
             inventory_min=knowledge["inventory_min"],
             inventory_max=knowledge["inventory_max"],
             potentially_outstanding=[
-                row for row in knowledge["orders"] if not row["terminal_report_received"]
+                row
+                for row in knowledge["orders"]
+                if not row["terminal_report_received"]
             ],
             missing_execution_detail=[
                 row for row in knowledge["orders"] if row["missing_fill_quantity_min"]
