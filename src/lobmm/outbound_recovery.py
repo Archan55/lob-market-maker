@@ -32,7 +32,7 @@ from lobmm.durable_recovery import (
     _receipt_wire,
     _text,
 )
-from lobmm.enums import Side
+from lobmm.enums import OrderStatus, Side
 from lobmm.orders import CancelRequest, ExecutionReport, Fill, NewOrderRequest
 from lobmm.reconciliation import ReconciliationResponse
 
@@ -102,6 +102,7 @@ def _validate(doc: Any) -> _Fold:
         ):
             raise RecoveryError("fill violates reserved order limit")
 
+    states: dict[str, list[tuple[int, OrderStatus]]] = {}
     last = -1
     for raw in receipts:
         receipt = _receipt(raw)
@@ -111,6 +112,10 @@ def _validate(doc: Any) -> _Fold:
         payload = receipt.payload
         if isinstance(payload, ExecutionReport):
             causal(payload.client_order_id, payload.exchange_timestamp_ns)
+            if payload.reason != "unknown_order":
+                states.setdefault(payload.client_order_id, []).append(
+                    (payload.exchange_timestamp_ns, payload.order_status)
+                )
             if payload.fill is not None:
                 detail(payload.fill)
         else:
@@ -122,6 +127,10 @@ def _validate(doc: Any) -> _Fold:
                     detail(fill)
                 if order.state_timestamp_ns is not None:
                     causal(order.client_order_id, order.state_timestamp_ns)
+                    assert order.status is not None
+                    states.setdefault(order.client_order_id, []).append(
+                        (order.state_timestamp_ns, order.status)
+                    )
                 if order.status is not None and order.status.terminal:
                     bound = order.client_order_id in fold.order_ids.values() or any(
                         f.client_order_id == order.client_order_id for f in order.fills
@@ -131,6 +140,15 @@ def _validate(doc: Any) -> _Fold:
                             "terminal query lacks venue identity binding"
                         )
         fold.apply(receipt)
+    for history in states.values():
+        terminal = [(stamp, status) for stamp, status in history if status.terminal]
+        if terminal:
+            first_terminal = min(stamp for stamp, _ in terminal)
+            if len({status for _, status in terminal}) != 1 or any(
+                not status.terminal and stamp > first_terminal
+                for stamp, status in history
+            ):
+                raise RecoveryError("state conflicts with immutable terminal identity")
     return fold
 
 

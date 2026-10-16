@@ -4,6 +4,10 @@ import pytest
 
 
 def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption(
+        "--outbound-recovery-output",
+        help="Save v2 durable outbound real-process-death inputs and independent audit.",
+    )
     parser.addoption("--active-restart-output", action="store", default=None)
     parser.addoption(
         "--durable-study-output",
