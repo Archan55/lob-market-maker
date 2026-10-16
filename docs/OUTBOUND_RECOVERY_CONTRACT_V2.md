@@ -102,3 +102,13 @@ aggregate checks, old evidence preservation, reproducibility and exact-head CI
 reach terminal outcomes. If a stronger property is disproved, retain fail-closed
 uncertainty and publish the counterexample. No calibrated-market, profitability,
 production-readiness or exactly-once venue-effects claims.
+
+## Pre-trial clarification from independent design review
+
+V2 rejects fills outside the saved limit price (price improvement is allowed),
+and terminal reconciliation state without a venue identity bound by a prior
+report or a fill in that response. A terminal report carries that identity
+even when execution detail is absent. The local lock releases by descriptor
+close, never explicit unlock through a forked descriptor. An inherited open
+descriptor can delay lock release after parent death; this is an availability
+failure that continues to exclude writers, not a fencing guarantee.
