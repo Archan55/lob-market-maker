@@ -117,6 +117,7 @@ def _validate(doc: Any) -> _Fold:
             for order in payload.orders:
                 if order.client_order_id not in intents:
                     raise RecoveryError("response references unsaved intent")
+                causal(order.client_order_id, receipt.notification_timestamp_ns)
                 for fill in order.fills:
                     detail(fill)
                 if order.state_timestamp_ns is not None:
@@ -154,6 +155,7 @@ class OutboundRecoverySessionV2:
         self._entry = False
         self._poisoned = False
         self._busy = False
+        self._violation = False
         self._mutex = threading.RLock()
         self._fd = fd
 
@@ -242,10 +244,12 @@ class OutboundRecoverySessionV2:
             raise RecoveryError("outbound authority cannot cross process boundaries")
         if self._fd < 0:
             raise RecoveryError("outbound session is closed")
+        if self._busy:
+            self._violation = True
+            self._poisoned = True
+            raise RecoveryError("reentrant outbound access")
         if self._poisoned:
             raise RecoveryError("uncertain operation: close and reopen recovery-only")
-        if self._busy:
-            raise RecoveryError("reentrant outbound access")
 
     def close(self) -> None:
         with self._mutex:
@@ -254,6 +258,8 @@ class OutboundRecoverySessionV2:
                     "outbound authority cannot cross process boundaries"
                 )
             if self._busy:
+                self._violation = True
+                self._poisoned = True
                 raise RecoveryError("cannot close during outbound operation")
             if self._fd >= 0:
                 fd, self._fd = self._fd, -1
@@ -283,6 +289,14 @@ class OutboundRecoverySessionV2:
         self._fold = fold
         # The enclosing call clears poison only after sink/ack boundary completes.
 
+    def _check_violation(self) -> None:
+        if self._violation:
+            raise RecoveryError("reentrant violation: reopen recovery-only")
+
+    def _finish(self) -> None:
+        self._check_violation()
+        self._poisoned = False
+
     def _latest(self) -> int:
         result: int = max(
             [-1]
@@ -303,12 +317,14 @@ class OutboundRecoverySessionV2:
             raise RecoveryError("dispatch predates client evidence/commands")
         record = _record(action, stamp)
         self._commit(self._doc | {"outbound": [*self._doc["outbound"], record]}, hook)
+        self._check_violation()
         if hook is not None:
             hook("before_sink")
+        self._check_violation()
         sink(action)
         if hook is not None:
             hook("after_sink")
-        self._poisoned = False
+        self._finish()
 
     def submit_new(
         self,
@@ -364,6 +380,23 @@ class OutboundRecoverySessionV2:
                 raise RecoveryError("unsupported receipt type")
             raw = json.loads(_json(_receipt_wire(receipt)))
             parsed = _receipt(raw)
+            # Check redelivery causality before the immutable-ID shortcut. A
+            # duplicate does not get to acknowledge an impossible notification.
+            _Fold(tuple(self._fold.knowledge.entries.values())).apply(parsed)
+            referenced = (
+                [parsed.payload.client_order_id]
+                if isinstance(parsed.payload, ExecutionReport)
+                else [o.client_order_id for o in parsed.payload.orders]
+            )
+            dispatches = {
+                r["payload"]["client_order_id"]: r["dispatch_timestamp_ns"]
+                for r in self._doc["outbound"]
+                if r["kind"] == "new"
+            }
+            if any(
+                parsed.notification_timestamp_ns < dispatches[cid] for cid in referenced
+            ):
+                raise RecoveryError("notification predates reserved dispatch")
             existing = next(
                 (
                     r
@@ -375,12 +408,12 @@ class OutboundRecoverySessionV2:
             if existing is not None:
                 if any(existing[k] != raw[k] for k in ("kind", "payload")):
                     raise RecoveryError("conflicting immutable receipt identity")
-                self._poisoned = False
+                self._finish()
                 return False
             if parsed.notification_timestamp_ns < self._latest():
                 raise RecoveryError("receipt predates client evidence/commands")
             self._commit(self._doc | {"receipts": [*self._doc["receipts"], raw]}, hook)
-            self._poisoned = False
+            self._finish()
             return True
 
     def snapshot(self) -> dict[str, Any]:
