@@ -28,7 +28,11 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1 --reconciliation-study-output experiments/reconciliation-stress-v1 --reordering-study-output experiments/reordering-stress-v1 --durable-study-output experiments/durable-recovery-v1 --active-restart-output experiments/active-restart-v1 --outbound-recovery-output experiments/outbound-recovery-v2 --junitxml=experiments/active-restart-v1/aggregate-tests.xml
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1 --reconciliation-study-output experiments/reconciliation-stress-v1 --reordering-study-output experiments/reordering-stress-v1 --durable-study-output experiments/durable-recovery-v1 --active-restart-output experiments/active-restart-v1 --outbound-recovery-output experiments/outbound-recovery-v2 --account-fence-output experiments/account-fence-v3 --junitxml=experiments/active-restart-v1/aggregate-tests.xml
+      - name: Verify simulated account fence repeats and exact prior v2 preservation
+        run: python tools/verify_account_fence.py
+      - name: Reproduce source-bound account receipt defect before and after
+        run: python tools/reproduce_account_fence_defect.py
       - name: Verify outbound receipts cancellation recovery and prior quarantine preservation
         run: python tools/verify_outbound_recovery.py
       - name: Reproduce independent outbound recovery defects before and after
@@ -55,6 +59,9 @@ jobs:
         run: python tools/verify_client_stop_baseline.py
       - name: Record research environment
         run: |
+          python --version > experiments/account-fence-v3/python-version.txt
+          python -m pip freeze > experiments/account-fence-v3/requirements-observed.txt
+          git rev-parse HEAD > experiments/account-fence-v3/checkout-sha.txt
           python --version > experiments/exposure-session-stress-v1/python-version.txt
           python -m pip freeze > experiments/exposure-session-stress-v1/requirements-observed.txt
           git rev-parse HEAD > experiments/exposure-session-stress-v1/checkout-sha.txt
@@ -158,5 +165,15 @@ jobs:
             experiments/outbound-recovery-v2/
             experiments/outbound-recovery-verification-v2/
             experiments/outbound-review-reproduction-v2/
+            experiments/active-restart-v1/aggregate-tests.xml
+          retention-days: 14
+      - name: Save simulated account authority and independent adversarial evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: account-fence-v3-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/account-fence-v3/
+            experiments/account-fence-verification-v3/
+            experiments/account-fence-review-reproduction-v3/
             experiments/active-restart-v1/aggregate-tests.xml
           retention-days: 14

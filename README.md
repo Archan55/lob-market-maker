@@ -494,3 +494,20 @@ Next research steps:
 
 Live trading and automatic order submission are not roadmap items for this
 research repository.
+
+### Opt-in synthetic account authority v3
+
+The separate `SimulatedAccountAuthorityV3` models an authority that checks the
+current account ownership generation and applies each order effect in one
+transaction. Takeover permanently disables new entry. `FencedRecoverySessionV3`
+adds source-bound receipt capture to the unchanged cancellation-only v2 journal.
+The authority file itself is the simulated venue; this is not a local lock
+claimed to fence a real venue.
+
+[Bounded contract](docs/ACCOUNT_FENCE_CONTRACT_V3.md),
+[findings and reproduction](docs/ACCOUNT_FENCE_V3.md), and
+[independent review](docs/ACCOUNT_FENCE_INDEPENDENT_V3.md) distinguish stale
+commands from pre-existing orders that can still fill. Shared current tokens,
+authority rollback, account aliases and separate authority files have executable
+counterexamples. All scenarios are synthetic and uncalibrated; this supplies no
+live-safety, account exposure cap, process exclusivity or exactly-once guarantee.

@@ -23,10 +23,12 @@ from lobmm.durable_recovery import (
     Hook,
     Receipt,
     RecoveryError,
+    _constant,
     _hash,
     _integer,
     _json,
     _object,
+    _pairs,
     _text,
 )
 from lobmm.enums import LiquidityRole, OrderStatus, ReportType, Side
@@ -197,7 +199,7 @@ def _apply(
             state["orders"].append(order)
             result = _report(order, identity, stamp)
         else:
-            order = next(
+            cancel_order = next(
                 (
                     o
                     for o in state["orders"]
@@ -211,7 +213,7 @@ def _apply(
                 ),
                 None,
             )
-            if order is None:
+            if cancel_order is None:
                 result = dict(
                     kind="report",
                     authority_id=authority,
@@ -227,11 +229,13 @@ def _apply(
                     fill=None,
                 )
             else:
-                if order["remaining_quantity"]:
-                    order["cancelled_quantity"] += order["remaining_quantity"]
-                    order["remaining_quantity"] = 0
-                    order["status"] = "cancelled"
-                result = _report(order, identity, stamp)
+                if cancel_order["remaining_quantity"]:
+                    cancel_order["cancelled_quantity"] += cancel_order[
+                        "remaining_quantity"
+                    ]
+                    cancel_order["remaining_quantity"] = 0
+                    cancel_order["status"] = "cancelled"
+                result = _report(cancel_order, identity, stamp)
         state["commands"].append(
             dict(command_id=cid, token=event["token"], request=record, result=result)
         )
@@ -283,6 +287,7 @@ def _fold(events: Any, authority: str, account: str) -> tuple[dict[str, Any], An
         owners=[],
         orders=[],
         commands=[],
+        reports=[],
         inventory=0,
         cash_ticks=0,
         last_timestamp_ns=-1,
@@ -292,6 +297,10 @@ def _fold(events: Any, authority: str, account: str) -> tuple[dict[str, Any], An
         if type(event) is not dict:
             raise RecoveryError("invalid authority event")
         result = _apply(state, event, authority, account, seq)
+        if event["kind"] == "command":
+            state["reports"].append(result)
+        elif event["kind"] == "trade":
+            state["reports"].extend(result)
     return state, result
 
 
@@ -318,18 +327,22 @@ class SimulatedAccountAuthorityV3:
         self.authority_id = _text(authority_id)
 
     def _connect(self) -> sqlite3.Connection:
-        connection = sqlite3.connect(
-            f"file:{quote(str(self.path), safe='/')}?mode=rw", uri=True, timeout=10
-        )
-        connection.execute("PRAGMA synchronous=FULL")
-        return connection
+        try:
+            connection = sqlite3.connect(
+                f"file:{quote(str(self.path), safe='/')}?mode=rw", uri=True, timeout=10
+            )
+            connection.execute("PRAGMA synchronous=FULL")
+            return connection
+        except sqlite3.Error as exc:
+            raise RecoveryError("simulated authority unavailable") from exc
 
     @classmethod
     def create(cls, path: Path, authority_id: str) -> Self:
         result = cls(path, authority_id)
         fd = os.open(result.path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
         os.close(fd)
-        with result._connect() as connection:
+        connection = result._connect()
+        try:
             connection.execute("PRAGMA journal_mode=DELETE")
             connection.execute(
                 "CREATE TABLE authority (id INTEGER PRIMARY KEY CHECK(id=1), body BLOB NOT NULL, digest TEXT NOT NULL)"
@@ -339,6 +352,9 @@ class SimulatedAccountAuthorityV3:
             connection.execute(
                 "INSERT INTO authority VALUES (1, ?, ?)", (raw, _hash(raw))
             )
+            connection.commit()
+        finally:
+            connection.close()
         return result
 
     @classmethod
@@ -366,7 +382,7 @@ class SimulatedAccountAuthorityV3:
                 or _hash(row[0]) != row[1]
             ):
                 raise RecoveryError("invalid authority state/checksum/size")
-            doc = json.loads(row[0])
+            doc = json.loads(row[0], object_pairs_hook=_pairs, parse_constant=_constant)
             _validate(doc, self.authority_id)
             state: dict[str, Any] = {}
             result: Any = None
@@ -384,6 +400,9 @@ class SimulatedAccountAuthorityV3:
                 state["events"] = [dict(seq=i, **e) for i, e in enumerate(events, 1)]
                 state["account_id"] = account
                 state["authority_id"] = self.authority_id
+                state["scope"] = "single-retained-synthetic-authority-and-exact-account"
+                state["live_safety_claim"] = False
+                state["process_exclusive"] = False
                 if event is not None:
                     doc["accounts"][account] = events
                     raw = _json(doc)
@@ -492,7 +511,11 @@ class SimulatedAccountAuthorityV3:
 
 
 def to_receipt(report: dict[str, Any], notification_timestamp_ns: int) -> Receipt:
-    """Translate retained simulator evidence; old-generation evidence stays valid."""
+    """Untrusted wire conversion, with no provenance guarantee.
+
+    Use FencedRecoverySessionV3.capture for source-bound evidence. Old-generation
+    evidence remains valid when retained by the same modeled authority/account.
+    """
     fill = report["fill"]
     payload = (
         None
@@ -549,6 +572,26 @@ class FencedRecoverySessionV3:
         ):
             raise RecoveryError("adapter account/authority mismatch")
         self.journal, self.authority, self.token = journal, authority, token
+
+    def capture(
+        self,
+        report: dict[str, Any],
+        *,
+        notification_timestamp_ns: int,
+        hook: Hook | None = None,
+    ) -> bool:
+        """Verify retained source/account provenance before local durable capture."""
+        if type(report) is not dict or (
+            report.get("authority_id") != self.authority.authority_id
+            or report.get("account_id") != self.token.account_id
+        ):
+            raise RecoveryError("receipt authority/account provenance mismatch")
+        retained = self.authority.snapshot(self.token.account_id)["reports"]
+        if report not in retained:
+            raise RecoveryError("receipt differs from retained authority evidence")
+        return self.journal.capture(
+            to_receipt(report, notification_timestamp_ns), hook=hook
+        )
 
     def submit_new(
         self,

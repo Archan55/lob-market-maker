@@ -5,6 +5,10 @@ import pytest
 
 def pytest_addoption(parser: pytest.Parser) -> None:
     parser.addoption(
+        "--account-fence-output",
+        help="Save synthetic authoritative fence and independent process evidence.",
+    )
+    parser.addoption(
         "--outbound-recovery-output",
         help="Save v2 durable outbound real-process-death inputs and independent audit.",
     )

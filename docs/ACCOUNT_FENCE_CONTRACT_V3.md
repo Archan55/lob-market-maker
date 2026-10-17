@@ -99,3 +99,25 @@ exact baseline, run aggregate lint/format/mypy/coverage and existing verifiers.
 Publish only on existing draft PR2 and verify exact-head CI to terminal outcome.
 All scenarios are synthetic and uncalibrated; no live safety, profitability,
 exactly-once, hostile-tamper, host power-loss or authority-rollback guarantee.
+
+## Implementation and review clarifications
+
+Tokens name a transferable owner context. Two processes with the identical
+current token are indistinguishable to this authority and can both submit valid
+new orders before takeover. No process exclusivity or account exposure limit is
+promised. Reusing the same configured authority ID on a second database does not
+federate those databases or produce a global identity. Account strings receive
+no alias canonicalization. These stronger properties require separate authority
+and issuance assumptions and have executable counterexamples.
+
+The bounded venue injects explicit side/quantity trade budgets into FIFO retained
+orders at their saved limit prices, with zero fees/rebates. It is separate from
+the historical L2 exchange, with no price discovery or calibration claim. Full
+raw event replay reconstructs authority state; source-bound v3 receipt capture
+checks the exact retained rich report before translating into unchanged v2
+receipt types. Bare conversion followed by direct v2 capture is outside that
+source-bound adapter and cannot authenticate provenance. Old-generation genuine
+fill evidence remains valid after takeover. Free-running races retain their
+actual chronology separately as JSONL; invariant JSON summaries repeat exactly.
+Controlled transaction contention retains complete deterministic chronological
+JSON, including requests, responses and the order of authoritative effects.
