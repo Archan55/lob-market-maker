@@ -114,6 +114,13 @@ These choices are sensitivity cases, not claims about an actual exchange.
   rewrites prior order state.
 - Session end either marks remaining inventory or submits an approximate
   marketable liquidation that may fill only partially.
+- Session end forces venue expiry of live orders before same-time client
+  commands. This does not model a client disconnect with surviving venue orders.
+- A loss kill suppresses future sends and requests delayed live cancellations;
+  already in-flight approved entries can still arrive. Reserved position caps
+  continue to apply, but a loss threshold is not a guaranteed loss ceiling.
+- Caller-side reduce-only admission reserves all outstanding same-side
+  reductions against current inventory. It is not a venue-enforced order flag.
 
 ## Fees, rebates, and accounting
 
@@ -125,6 +132,9 @@ These choices are sensitivity cases, not claims about an actual exchange.
   knowledge remains delayed.
 - Default marking is true midpoint for ex-post accounting. Microprice and
   conservative liquidation marks are sensitivity choices.
+- Conservative fill marks use post-fill inventory and the available
+  liquidation-side quote even if the opposite side is absent. If the required
+  side is absent, last-valid-mark/fill-price fallback can be stale/unrealizable.
 - Realized P&L uses average cost. Gross marked P&L equals trade cash plus marked
   inventory; net P&L equals gross P&L minus fees plus rebates.
 - The simulator does not model funding, borrow, margin interest, taxes, FX

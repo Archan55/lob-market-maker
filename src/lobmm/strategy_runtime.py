@@ -5,7 +5,7 @@ from __future__ import annotations
 from lobmm.book import L2Book
 from lobmm.enums import ValidationMode
 from lobmm.events import BookView, MarketEvent
-from lobmm.orders import ExecutionReport
+from lobmm.orders import ExecutionReport, Fill
 from lobmm.strategies.base import MarketMakingStrategy, StrategyAction
 
 
@@ -80,6 +80,13 @@ class StrategyRuntime:
             timestamp_ns=timestamp_ns,
             max_abs_inventory=self.max_abs_inventory,
             allow_new_quotes=allow_new_quotes,
+        )
+
+    def deliver_recovered_fill(
+        self, fill: Fill, *, notification_timestamp_ns: int
+    ) -> None:
+        self.strategy.on_recovered_fill(
+            fill, notification_timestamp_ns=notification_timestamp_ns
         )
 
     def record_action_sent(self, action: StrategyAction, *, timestamp_ns: int) -> None:

@@ -1,0 +1,21 @@
+{
+  "artifact_sha256": {
+    "cancel-repeated-after-real-death.json": "692676899735b888254f3bf609a1de6c2ec23f1684decf212c5e8b83d133d684",
+    "capture-after_directory_fsync.json": "9386fc6982459e630be01322cdd18ba01756fae7477f12157f00f0f9652e74bc",
+    "capture-after_file_fsync.json": "c212e116ad9514c2528d2a39a89f21bbb9146a6a9049a5a446684b11e1c739d1",
+    "capture-after_replace.json": "66d3802e821e0786a4f2158757108a74302490fd60b4df6e8f97c0d896a1c6f4",
+    "capture-after_return.json": "7fbc99499ce5f99d5168b18036ebb963a881941eac13fde3dda94b25107bb119",
+    "capture-partial_write.json": "908f6409643f6e261ed861f5914bd4a215b9552630e849fab9560acc0cc7f7ad",
+    "new-delayed-False-recovered-False.json": "d62b50be312b472a53c17a1a15332fe6d77d2c97903495f6940331ae7ce9a855",
+    "new-delayed-False-recovered-True.json": "85614a2b760550e7de4c301f6edb1ff62c527e288dab870a4f96a7fad990ed79",
+    "new-delayed-True-recovered-False.json": "0c7c280010051c78dc5cdbf1a1477458a61083cfc1861aa316d9f8ae3edf6c94",
+    "new-delayed-True-recovered-True.json": "4824c684827b1d2eafab54f0b0520057bb37c9c9b7037f2340075762016a419c"
+  },
+  "case_count": 10,
+  "process_deaths": 10,
+  "source_sha256": {
+    "independent_tests": "2c7d11551b29593ae031fb468662003cf69726cb5828acd221232ca39487bd0e"
+  },
+  "synthetic_uncalibrated": true,
+  "version": "independent-outbound-recovery-v2"
+}

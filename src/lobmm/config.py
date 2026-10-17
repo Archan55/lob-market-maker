@@ -16,6 +16,7 @@ from lobmm.enums import (
     MarkPrice,
     QueueAllocation,
     SessionEndPolicy,
+    ShutdownPolicy,
     StrategyName,
     ValidationMode,
 )
@@ -241,6 +242,9 @@ class BacktestConfig(StrictModel):
     timer_interval_ns: int = Field(default=50_000_000, gt=0)
     mark_price: MarkPrice = MarkPrice.MIDPOINT
     session_end_policy: SessionEndPolicy = SessionEndPolicy.MARK
+    shutdown_policy: ShutdownPolicy = ShutdownPolicy.FORCED_EXPIRY
+    client_stop_timestamp_ns: int | None = Field(default=None, ge=0)
+    observation_end_timestamp_ns: int | None = Field(default=None, ge=0)
     track_memory: bool = False
 
     @model_validator(mode="after")
@@ -251,6 +255,27 @@ class BacktestConfig(StrictModel):
             and self.start_timestamp_ns > self.end_timestamp_ns
         ):
             raise ValueError("backtest start must not be after end")
+        if self.shutdown_policy is ShutdownPolicy.CLIENT_STOP:
+            if (
+                self.client_stop_timestamp_ns is None
+                or self.observation_end_timestamp_ns is None
+            ):
+                raise ValueError(
+                    "client_stop requires explicit stop and observation end timestamps"
+                )
+            if self.observation_end_timestamp_ns < self.client_stop_timestamp_ns:
+                raise ValueError("observation end must not precede client stop")
+            if self.session_end_policy is not SessionEndPolicy.MARK:
+                raise ValueError(
+                    "client_stop supports mark accounting only; liquidation needs a separate execution policy"
+                )
+        elif (
+            self.client_stop_timestamp_ns is not None
+            or self.observation_end_timestamp_ns is not None
+        ):
+            raise ValueError(
+                "client stop timestamps require shutdown_policy=client_stop"
+            )
         return self
 
 
@@ -328,4 +353,13 @@ def load_config(path: str | Path) -> AppConfig:
 def dump_config(config: AppConfig) -> dict[str, Any]:
     """Return a JSON/YAML-safe representation."""
 
-    return config.model_dump(mode="json")
+    result = config.model_dump(mode="json")
+    # Keep the historical baseline's serialized configuration and hashes intact.
+    if config.backtest.shutdown_policy is ShutdownPolicy.FORCED_EXPIRY:
+        for name in (
+            "shutdown_policy",
+            "client_stop_timestamp_ns",
+            "observation_end_timestamp_ns",
+        ):
+            result["backtest"].pop(name)
+    return result

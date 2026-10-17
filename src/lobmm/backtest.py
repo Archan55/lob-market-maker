@@ -20,13 +20,16 @@ from lobmm.channels import (
     OrderedChannel,
     UniformJitterLatency,
 )
+from lobmm.client_stop import ClientStopController
 from lobmm.config import AppConfig, dump_config
 from lobmm.data.fingerprint import event_stream_sha256
 from lobmm.enums import (
+    MarkPrice,
     OrderStatus,
     ReportType,
     SchedulerPhase,
     SessionEndPolicy,
+    ShutdownPolicy,
     Side,
 )
 from lobmm.events import MarketEvent
@@ -39,11 +42,19 @@ from lobmm.orders import (
     NewOrderRequest,
 )
 from lobmm.portfolio import Portfolio, PortfolioSnapshot, select_mark_price
+from lobmm.reconciliation import (
+    QueryTimer,
+    ReconciliationJournal,
+    ReconciliationPlan,
+    ReconciliationRequest,
+    ReconciliationResponse,
+)
 from lobmm.risk import OpenOrderExposure, RiskManager
 from lobmm.scheduler import ScheduledEvent, Scheduler
 from lobmm.strategies import make_strategy
 from lobmm.strategies.base import StrategyAction
 from lobmm.strategy_runtime import StrategyRuntime
+from lobmm.transport import ClientKnowledge, ResearchTransport, TransportFaultPlan
 from lobmm.validation import ValidationResult, validate_event_stream
 
 
@@ -89,6 +100,8 @@ def run_backtest(
     generate_plots: bool | None = None,
     input_validation: ValidationResult | None = None,
     persist_artifacts: bool = True,
+    transport_faults: TransportFaultPlan | None = None,
+    reconciliation: ReconciliationPlan | None = None,
 ) -> BacktestResult:
     """Run one fully deterministic historical/synthetic replay."""
 
@@ -116,6 +129,32 @@ def run_backtest(
         raise ValueError("no market events remain after backtest filters")
     start_ns = selected[0].timestamp_ns
     end_ns = selected[-1].timestamp_ns
+    client_stop_enabled = config.backtest.shutdown_policy is ShutdownPolicy.CLIENT_STOP
+    if transport_faults is not None and not client_stop_enabled:
+        raise ValueError("research transport faults require finite client_stop replay")
+    if reconciliation is not None and not client_stop_enabled:
+        raise ValueError("reconciliation requires finite client_stop replay")
+    transport = (
+        ResearchTransport(transport_faults or TransportFaultPlan())
+        if transport_faults is not None or reconciliation is not None
+        else None
+    )
+    client_knowledge = ClientKnowledge() if transport is not None else None
+    stop_ns = (
+        config.backtest.client_stop_timestamp_ns if client_stop_enabled else end_ns
+    )
+    horizon_ns = (
+        config.backtest.observation_end_timestamp_ns if client_stop_enabled else None
+    )
+    assert stop_ns is not None
+    if not start_ns <= stop_ns <= end_ns:
+        raise ValueError("client stop must lie within the selected tape")
+    if reconciliation is not None:
+        assert horizon_ns is not None
+        if any(
+            not stop_ns <= t <= horizon_ns for t in reconciliation.query_timestamps_ns
+        ):
+            raise ValueError("queries must lie between client stop and observation end")
     destination_root = (
         Path(output_root) if output_root is not None else config.output.runs_directory
     )
@@ -137,7 +176,7 @@ def run_backtest(
     risk = RiskManager(
         config.risk,
         session_start_ns=start_ns,
-        session_end_ns=end_ns,
+        session_end_ns=stop_ns,
         session_end_policy=config.backtest.session_end_policy,
     )
     strategy = make_strategy(config.strategy)
@@ -151,7 +190,11 @@ def run_backtest(
     def exchange_session_rejector(
         request: NewOrderRequest, _: tuple[ExchangeOrder, ...]
     ) -> str | None:
-        if session_state["ended"] and request.strategy_id != "session-policy":
+        if (
+            not client_stop_enabled
+            and session_state["ended"]
+            and request.strategy_id != "session-policy"
+        ):
             return "session_ended"
         return None
 
@@ -177,6 +220,7 @@ def run_backtest(
         name="new_orders",
         scheduler=scheduler,
         phase=SchedulerPhase.EXCHANGE_COMMAND,
+        transport=transport,
         latency=_latency(
             config.latency.order_entry_ns,
             config.latency.order_entry_jitter_ns,
@@ -187,6 +231,7 @@ def run_backtest(
         name="cancellations",
         scheduler=scheduler,
         phase=SchedulerPhase.EXCHANGE_COMMAND,
+        transport=transport,
         latency=_latency(
             config.latency.cancellation_ns,
             config.latency.cancellation_jitter_ns,
@@ -197,12 +242,46 @@ def run_backtest(
         name="execution_reports",
         scheduler=scheduler,
         phase=SchedulerPhase.EXECUTION_REPORT_DELIVERY,
+        transport=transport,
         latency=_latency(
             config.latency.fill_report_ns,
             config.latency.fill_report_jitter_ns,
             config.random_seed + 14,
         ),
     )
+
+    def send_stop_cancel(request: CancelRequest) -> None:
+        cancel_channel.send(request, send_timestamp_ns=request.send_timestamp_ns)
+
+    client_stop = ClientStopController(send_stop_cancel)
+    journal = (
+        ReconciliationJournal(reconciliation) if reconciliation is not None else None
+    )
+    query_requests: list[dict[str, Any]] = []
+    query_responses: list[dict[str, Any]] = []
+    query_receipts: list[dict[str, Any]] = []
+    if reconciliation is not None:
+        query_channel: OrderedChannel[ReconciliationRequest] = OrderedChannel(
+            name="reconciliation_requests",
+            scheduler=scheduler,
+            phase=SchedulerPhase.EXCHANGE_COMMAND,
+            transport=transport,
+            latency=FixedLatency(reconciliation.request_latency_ns),
+        )
+        response_channel: OrderedChannel[ReconciliationResponse] = OrderedChannel(
+            name="reconciliation_responses",
+            scheduler=scheduler,
+            phase=SchedulerPhase.EXECUTION_REPORT_DELIVERY,
+            transport=transport,
+            latency=FixedLatency(reconciliation.response_latency_ns),
+        )
+        for sequence, timestamp_ns in enumerate(reconciliation.query_timestamps_ns):
+            scheduler.schedule(
+                timestamp_ns=timestamp_ns,
+                phase=SchedulerPhase.TIMER,
+                source_sequence=sequence,
+                payload=QueryTimer(sequence),
+            )
 
     for event in selected:
         scheduler.schedule(
@@ -213,7 +292,7 @@ def run_backtest(
         )
     timer_sequence = 0
     timer_ns = start_ns
-    while timer_ns <= end_ns:
+    while timer_ns <= stop_ns:
         scheduler.schedule(
             timestamp_ns=timer_ns,
             phase=SchedulerPhase.TIMER,
@@ -223,9 +302,9 @@ def run_backtest(
         timer_sequence += 1
         timer_ns += config.backtest.timer_interval_ns
     scheduler.schedule(
-        timestamp_ns=end_ns,
+        timestamp_ns=stop_ns,
         phase=SchedulerPhase.SESSION,
-        payload=SessionEnd(end_ns),
+        payload=SessionEnd(stop_ns),
     )
 
     market_rows: list[dict[str, Any]] = []
@@ -237,18 +316,37 @@ def run_backtest(
     risk_cancel_request_count = 0
     local_report_counter = 0
     session_ended = False
+    entry_arrivals: dict[str, int | None] = {}
+    unobserved_cancel_arrivals: list[dict[str, Any]] = []
+    unobserved_expiries: list[dict[str, Any]] = []
+    mark_source_ns: int | None = None
+    last_market_ns: int | None = None
 
     def append_snapshot(snapshot: PortfolioSnapshot) -> None:
         row = _dataclass_row(snapshot)
         pnl_rows.append(row)
 
-    def current_mark(fallback: int | None = None) -> Decimal:
+    def current_mark(
+        fallback: int | None = None, *, inventory: int | None = None
+    ) -> Decimal:
+        nonlocal mark_source_ns
         best_bid = exchange.book.best_bid
         best_ask = exchange.book.best_ask
+        marked_inventory = portfolio.inventory if inventory is None else inventory
+        # A conservative position mark needs only its liquidation-side quote.
+        # The opposite side may disappear after a depth-consuming fill.
+        if config.backtest.mark_price is MarkPrice.CONSERVATIVE:
+            if marked_inventory > 0 and best_bid is not None:
+                mark_source_ns = last_market_ns
+                return Decimal(best_bid)
+            if marked_inventory < 0 and best_ask is not None:
+                mark_source_ns = last_market_ns
+                return Decimal(best_ask)
         if best_bid is not None and best_ask is not None:
+            mark_source_ns = last_market_ns
             return select_mark_price(
                 config.backtest.mark_price,
-                inventory=portfolio.inventory,
+                inventory=marked_inventory,
                 best_bid_ticks=best_bid,
                 best_ask_ticks=best_ask,
                 microprice_ticks=exchange.book.microprice,
@@ -258,6 +356,8 @@ def run_backtest(
         return Decimal(fallback or 0)
 
     def schedule_reports(result: ExchangeResult) -> None:
+        if journal is not None:
+            journal.record(result.reports)
         for report in result.reports:
             report_channel.send(
                 report,
@@ -274,7 +374,10 @@ def run_backtest(
                 fee=fill.fee,
                 rebate=fill.rebate,
                 liquidity_role=fill.liquidity_role,
-                mark_ticks=current_mark(fill.price_ticks),
+                mark_ticks=current_mark(
+                    fill.price_ticks,
+                    inventory=portfolio.inventory + int(fill.side) * fill.quantity,
+                ),
             )
             append_snapshot(snapshot)
             risk.observe_pnl(
@@ -282,7 +385,11 @@ def run_backtest(
                 timestamp_ns=fill.exchange_fill_timestamp_ns,
             )
         schedule_reports(result)
-        if risk.kill_switch_active and result.fills:
+        if (
+            risk.kill_switch_active
+            and result.fills
+            and not (client_stop_enabled and session_ended)
+        ):
             request_risk_cancels(
                 {order.order_id for order in exchange.live_orders},
                 timestamp_ns=max(
@@ -395,7 +502,14 @@ def run_backtest(
                 )
                 continue
             pending_new[action.client_order_id] = action
-            new_order_channel.send(action, send_timestamp_ns=timestamp_ns)
+            arrival = new_order_channel.send(action, send_timestamp_ns=timestamp_ns)
+            if client_stop_enabled:
+                client_stop.sent_entry(action)
+                entry_arrivals[action.client_order_id] = (
+                    arrival.timestamp_ns if arrival else None
+                )
+                if client_knowledge is not None:
+                    client_knowledge.sent(action)
             runtime.record_action_sent(action, timestamp_ns=timestamp_ns)
 
     def request_risk_cancels(
@@ -440,11 +554,21 @@ def run_backtest(
         )
 
     def handler(scheduled: ScheduledEvent[Any], scheduler_instance: Scheduler) -> None:
-        nonlocal session_ended
+        nonlocal session_ended, last_market_ns
         timestamp_ns = scheduled.timestamp_ns
         payload = scheduled.payload
+        if (
+            transport is not None
+            and isinstance(payload, ChannelDelivery)
+            and payload.channel_name != "market_data"
+            and not transport.receive(
+                payload.channel_name, payload.channel_sequence, timestamp_ns
+            )
+        ):
+            return
         if scheduled.phase is SchedulerPhase.MARKET:
             assert isinstance(payload, MarketEvent)
+            last_market_ns = timestamp_ns
             result = exchange.handle_market_event(payload)
             apply_exchange_result(result)
             market_channel.send(payload, send_timestamp_ns=payload.timestamp_ns)
@@ -471,14 +595,23 @@ def run_backtest(
                     "spread_ticks": exchange.book.spread,
                 }
             )
-            if view.best_bid_ticks is not None and view.best_ask_ticks is not None:
+            can_mark = (
+                view.best_bid_ticks is not None and view.best_ask_ticks is not None
+            ) or (
+                config.backtest.mark_price is MarkPrice.CONSERVATIVE
+                and (
+                    (portfolio.inventory > 0 and view.best_bid_ticks is not None)
+                    or (portfolio.inventory < 0 and view.best_ask_ticks is not None)
+                )
+            )
+            if can_mark:
                 snapshot = portfolio.mark_to_market(
                     current_mark(),
                     timestamp_ns=payload.timestamp_ns,
                 )
                 append_snapshot(snapshot)
                 risk.observe_pnl(snapshot.net_pnl, timestamp_ns=payload.timestamp_ns)
-            if risk.kill_switch_active:
+            if risk.kill_switch_active and not (client_stop_enabled and session_ended):
                 request_risk_cancels(
                     {order.order_id for order in exchange.live_orders},
                     timestamp_ns=timestamp_ns,
@@ -500,11 +633,66 @@ def run_backtest(
 
         if scheduled.phase is SchedulerPhase.EXECUTION_REPORT_DELIVERY:
             assert isinstance(payload, ChannelDelivery)
+            if isinstance(payload.payload, ReconciliationResponse):
+                response = payload.payload
+                assert client_knowledge is not None
+                if (
+                    not response.request_timestamp_ns
+                    <= response.exchange_snapshot_timestamp_ns
+                    <= timestamp_ns
+                ):
+                    raise ValueError("noncausal reconciliation response")
+                if response.as_of_timestamp_ns > min(
+                    response.exchange_snapshot_timestamp_ns, end_ns
+                ):
+                    raise ValueError("reconciliation evidence exceeds covered snapshot")
+                recovered = []
+                for evidence in response.orders:
+                    if (
+                        evidence.state_timestamp_ns is not None
+                        and evidence.state_timestamp_ns > response.as_of_timestamp_ns
+                    ):
+                        raise ValueError("reconciliation state exceeds as-of time")
+                    for fill in evidence.fills:
+                        if (
+                            fill.exchange_fill_timestamp_ns
+                            > response.as_of_timestamp_ns
+                        ):
+                            raise ValueError("reconciliation fill exceeds as-of time")
+                        if client_knowledge.recovered_fill(fill):
+                            recovered.append(fill.fill_id)
+                            runtime.deliver_recovered_fill(
+                                fill, notification_timestamp_ns=timestamp_ns
+                            )
+                            fill_notification_ns.setdefault(fill.fill_id, timestamp_ns)
+                    if evidence.status is not None:
+                        assert evidence.remaining_quantity is not None
+                        client_knowledge.reconciled_state(
+                            evidence.client_order_id,
+                            evidence.remaining_quantity,
+                            terminal=evidence.status.terminal,
+                        )
+                        if evidence.status.terminal:
+                            client_stop.reconciled_terminal(evidence.client_order_id)
+                query_receipts.append(
+                    dict(
+                        query_id=response.query_id,
+                        response_timestamp_ns=timestamp_ns,
+                        as_of_timestamp_ns=response.as_of_timestamp_ns,
+                        recovered_fill_ids=recovered,
+                        client_knowledge=client_knowledge.artifact(),
+                    )
+                )
+                return
             assert isinstance(payload.payload, ExecutionReport)
             report = payload.payload
             runtime.deliver_report(report, notification_timestamp_ns=timestamp_ns)
+            if client_stop_enabled:
+                client_stop.delivered(report, timestamp_ns)
+            if client_knowledge is not None:
+                client_knowledge.delivered(report)
             if report.fill is not None:
-                fill_notification_ns[report.fill.fill_id] = timestamp_ns
+                fill_notification_ns.setdefault(report.fill.fill_id, timestamp_ns)
             schedule_wake(
                 scheduler_instance,
                 timestamp_ns=timestamp_ns,
@@ -515,9 +703,32 @@ def run_backtest(
         if scheduled.phase is SchedulerPhase.EXCHANGE_COMMAND:
             assert isinstance(payload, ChannelDelivery)
             command = payload.payload
+            if isinstance(command, ReconciliationRequest):
+                assert journal is not None
+                response = journal.snapshot(command, timestamp_ns, end_ns)
+                query_responses.append(_dataclass_row(response))
+                response_channel.send(response, send_timestamp_ns=timestamp_ns)
+                return
+            if client_stop_enabled and timestamp_ns > end_ns:
+                # Without later tape, intervening fills and hence the remaining
+                # quantity at cancellation cannot be established. Preserve the
+                # last covered reservation rather than inventing a terminal ACK.
+                if isinstance(command, CancelRequest):
+                    unobserved_cancel_arrivals.append(
+                        {
+                            "client_order_id": command.client_order_id,
+                            "order_id": command.order_id,
+                            "timestamp_ns": timestamp_ns,
+                        }
+                    )
+                return
             if isinstance(command, NewOrderRequest):
                 pending_new.pop(command.client_order_id, None)
-                if session_ended and command.strategy_id != "session-policy":
+                if (
+                    not client_stop_enabled
+                    and session_ended
+                    and command.strategy_id != "session-policy"
+                ):
                     local_risk_rejection(
                         command,
                         timestamp_ns=timestamp_ns,
@@ -556,7 +767,7 @@ def run_backtest(
                         + config.risk.max_quote_age_ns
                         + 1
                     )
-                    if age_check_ns <= end_ns:
+                    if age_check_ns <= stop_ns:
                         scheduler_instance.schedule(
                             timestamp_ns=age_check_ns,
                             phase=SchedulerPhase.TIMER,
@@ -565,7 +776,19 @@ def run_backtest(
             return
 
         if scheduled.phase is SchedulerPhase.TIMER:
+            if isinstance(payload, QueryTimer):
+                assert client_knowledge is not None
+                request = ReconciliationRequest(
+                    f"Q{payload.sequence:04d}",
+                    timestamp_ns,
+                    tuple(client_knowledge.entries),
+                )
+                query_requests.append(_dataclass_row(request))
+                query_channel.send(request, send_timestamp_ns=timestamp_ns)
+                return
             assert isinstance(payload, (TimerMessage, QuoteAgeCheck))
+            if client_stop_enabled and session_ended:
+                return
             enforce_continuous_risk(timestamp_ns)
             if isinstance(payload, TimerMessage):
                 schedule_wake(
@@ -577,10 +800,12 @@ def run_backtest(
 
         if scheduled.phase is SchedulerPhase.STRATEGY_DECISION:
             pending_wake_times.discard(timestamp_ns)
+            if client_stop_enabled and session_ended:
+                return
             warm = runtime.market_messages_delivered >= config.backtest.warmup_events
             cutoff = max(
                 start_ns,
-                end_ns - config.risk.prohibit_new_quotes_last_ns,
+                stop_ns - config.risk.prohibit_new_quotes_last_ns,
             )
             allow_new = (
                 warm
@@ -596,6 +821,11 @@ def run_backtest(
 
         if scheduled.phase is SchedulerPhase.SESSION:
             if isinstance(payload, ExpireOrder):
+                if client_stop_enabled and timestamp_ns > end_ns:
+                    unobserved_expiries.append(
+                        {"order_id": payload.order_id, "timestamp_ns": timestamp_ns}
+                    )
+                    return
                 result = exchange.expire_order(
                     payload.order_id, timestamp_ns=timestamp_ns
                 )
@@ -604,6 +834,9 @@ def run_backtest(
             assert isinstance(payload, SessionEnd)
             session_ended = True
             session_state["ended"] = True
+            if client_stop_enabled:
+                client_stop.stop(timestamp_ns)
+                return
             for order in tuple(exchange.live_orders):
                 apply_exchange_result(
                     exchange.expire_order(order.order_id, timestamp_ns=timestamp_ns)
@@ -642,14 +875,18 @@ def run_backtest(
         tracemalloc.start()
     started = time.perf_counter()
     try:
-        scheduler.run(handler)
+        scheduler.run(handler, until_ns=horizon_ns)
     finally:
         wall_seconds = time.perf_counter() - started
         if config.backtest.track_memory:
             _, peak_memory = tracemalloc.get_traced_memory()
             tracemalloc.stop()
 
-    if not pnl_rows:
+    last_economic_snapshot_ns = pnl_rows[-1]["timestamp_ns"] if pnl_rows else None
+    if client_stop_enabled:
+        assert horizon_ns is not None
+        append_snapshot(portfolio.snapshot(timestamp_ns=horizon_ns))
+    elif not pnl_rows:
         append_snapshot(portfolio.snapshot(timestamp_ns=end_ns))
     classify_regimes(market_rows)
     order_rows = _order_rows(exchange)
@@ -672,13 +909,18 @@ def run_backtest(
         tick_size=config.instrument.tick_size,
     )
     dataset_provenance = config.data.provenance.artifact()
-    stream_hash = event_stream_sha256(selected)
+    processed_market = [
+        event
+        for event in selected
+        if horizon_ns is None or event.timestamp_ns <= horizon_ns
+    ]
+    stream_hash = event_stream_sha256(processed_market)
     diagnostics: dict[str, Any] = {
-        "events_processed": len(selected),
+        "events_processed": len(processed_market),
         "scheduler_events_processed": scheduler.processed_count,
         "wall_clock_seconds": wall_seconds,
         "events_per_second": (
-            len(selected) / wall_seconds if wall_seconds > 0 else None
+            len(processed_market) / wall_seconds if wall_seconds > 0 else None
         ),
         "peak_memory_bytes": peak_memory,
         "random_seed": config.random_seed,
@@ -722,6 +964,104 @@ def run_backtest(
             "timestamp precision is not a latency-performance claim."
         ),
     }
+    if client_stop_enabled:
+        assert horizon_ns is not None
+        outstanding: list[dict[str, Any]] = [
+            {
+                "client_order_id": order.client_order_id,
+                "side": int(order.side),
+                "remaining_quantity": order.remaining_quantity,
+            }
+            for order in exchange.live_orders
+        ]
+        in_flight: list[dict[str, Any]] = [
+            {
+                "client_order_id": cid,
+                "side": int(request.side),
+                "quantity": request.quantity,
+                "scheduled_arrival_timestamp_ns": entry_arrivals[cid],
+                "outcome_unobserved_after_tape": arrival_ns > end_ns,
+            }
+            for cid, request in pending_new.items()
+            if (arrival_ns := entry_arrivals[cid]) is not None
+        ]
+        min_inv = (
+            portfolio.inventory
+            - sum(
+                order["remaining_quantity"]
+                for order in outstanding
+                if order["side"] == -1
+            )
+            - sum(order["quantity"] for order in in_flight if order["side"] == -1)
+        )
+        max_inv = (
+            portfolio.inventory
+            + sum(
+                order["remaining_quantity"]
+                for order in outstanding
+                if order["side"] == 1
+            )
+            + sum(order["quantity"] for order in in_flight if order["side"] == 1)
+        )
+        pending_channels: dict[str, int] = {}
+        for pending_event in scheduler.pending():
+            if isinstance(pending_event.payload, ChannelDelivery):
+                name = pending_event.payload.channel_name
+                pending_channels[name] = pending_channels.get(name, 0) + 1
+        diagnostics["client_stop"] = {
+            "stop_timestamp_ns": stop_ns,
+            "observation_end_timestamp_ns": horizon_ns,
+            "tape_end_timestamp_ns": end_ns,
+            "venue_observation_end_timestamp_ns": min(end_ns, horizon_ns),
+            "last_observed_market_timestamp_ns": market_rows[-1]["timestamp_ns"],
+            "last_economic_snapshot_ns": last_economic_snapshot_ns,
+            "mark_source_timestamp_ns": mark_source_ns,
+            "mark_age_ns": horizon_ns - mark_source_ns
+            if mark_source_ns is not None
+            else None,
+            "known_inventory": runtime.known_inventory,
+            "outstanding_orders": outstanding,
+            "in_flight_entries": in_flight,
+            "unresolved_client_order_ids": list(client_stop.entries),
+            "cancel_requests": [
+                {
+                    "client_order_id": request.client_order_id,
+                    "send_timestamp_ns": request.send_timestamp_ns,
+                }
+                for request in client_stop.cancel_sends
+            ],
+            "execution_reports": [
+                {
+                    "client_order_id": report.client_order_id,
+                    "type": report.report_type.value,
+                    "status": report.order_status.value,
+                    "reason": report.reason,
+                    "exchange_timestamp_ns": report.exchange_timestamp_ns,
+                    "notification_timestamp_ns": ns,
+                    "fill_id": report.fill.fill_id if report.fill else None,
+                }
+                for ns, report in client_stop.reports
+            ],
+            "unobserved_cancel_arrivals": unobserved_cancel_arrivals,
+            "unobserved_expiries": unobserved_expiries,
+            "pending_channels": pending_channels,
+            "reachable_inventory_min": min_inv,
+            "reachable_inventory_max": max_inv,
+            "accounting_complete": not outstanding and not in_flight,
+            "client_knowledge_complete": not client_stop.entries,
+            "execution_model_note": "Venue execution and termination are observed only through tape end. Later entries, cancels and expiries retain unresolved reservations because intervening fills lack tape coverage. In-tape-generated reports continue to the inclusive horizon; marks are historical observations, not liquidation proceeds.",
+        }
+        if transport is not None:
+            assert client_knowledge is not None
+            knowledge = client_knowledge.artifact()
+            diagnostics["transport_faults"] = transport.artifact()
+            diagnostics["client_stop"]["client_knowledge"] = knowledge
+            diagnostics["client_stop"]["client_knowledge_complete"] = knowledge[
+                "complete"
+            ]
+            diagnostics["client_stop"]["dropped_entries_at_venue"] = [
+                cid for cid in pending_new if entry_arrivals[cid] is None
+            ]
     metrics = build_metrics(
         orders=order_rows,
         fills=fill_rows,
@@ -735,11 +1075,13 @@ def run_backtest(
         tick_size=config.instrument.tick_size,
         near_limit_fraction=config.metrics.near_limit_fraction,
     )
+    if client_stop_enabled:
+        metrics["client_stop"] = diagnostics["client_stop"]
     summary = {
         "run_name": run_name,
         "strategy": config.strategy.name.value,
         "symbol": config.instrument.symbol,
-        "event_count": len(selected),
+        "event_count": len(processed_market),
         "fill_count": len(fill_rows),
         "end_inventory": portfolio.inventory,
         "net_pnl": metrics["pnl"]["net_pnl"],
@@ -748,8 +1090,43 @@ def run_backtest(
         "synthetic_demonstration": diagnostics["synthetic_demonstration"],
         "disclaimer": metrics["research_disclaimer"],
     }
+    if client_stop_enabled:
+        summary["client_stop"] = diagnostics["client_stop"]
+    if transport is not None:
+        summary["transport_faults"] = transport.plan.artifact()
+
+    if reconciliation is not None:
+        assert client_knowledge is not None
+        details = tuple(client_knowledge.fill_details.values())
+        evidence = dict(
+            **reconciliation.artifact(),
+            requests=query_requests,
+            responses=query_responses,
+            receipts=query_receipts,
+            client_execution_ledger=dict(
+                fills=[_dataclass_row(f) for f in details],
+                known_inventory=sum(f.signed_quantity for f in details),
+                trade_cash_ticks=sum(
+                    -f.signed_quantity * f.price_ticks for f in details
+                ),
+                fees=str(sum((f.fee for f in details), Decimal(0))),
+                rebates=str(sum((f.rebate for f in details), Decimal(0))),
+            ),
+        )
+        diagnostics["reconciliation"] = evidence
+        summary["reconciliation"] = reconciliation.artifact()
+        metrics["reconciliation"] = evidence
 
     if persist_artifacts:
+        if reconciliation is not None:
+            (run_directory / "reconciliation.json").write_text(
+                json.dumps(evidence, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+            )
+        if transport is not None:
+            (run_directory / "transport_faults.json").write_text(
+                json.dumps(transport.artifact(), indent=2, sort_keys=True) + "\n",
+                encoding="utf-8",
+            )
         _write_outputs(
             run_directory,
             config=config,

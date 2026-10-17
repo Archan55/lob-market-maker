@@ -91,6 +91,11 @@ class SessionEndPolicy(StrEnum):
     LIQUIDATE = "liquidate"
 
 
+class ShutdownPolicy(StrEnum):
+    FORCED_EXPIRY = "forced_expiry"
+    CLIENT_STOP = "client_stop"
+
+
 class StrategyName(StrEnum):
     FIXED_SPREAD = "fixed_spread"
     INVENTORY_AWARE = "inventory_aware"

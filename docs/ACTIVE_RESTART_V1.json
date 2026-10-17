@@ -1,0 +1,4308 @@
+{
+  "account_cases": [
+    {
+      "final_assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 45,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": "restart-witness-bid",
+              "decision_timestamp_ns": 45,
+              "order_id": null,
+              "send_timestamp_ns": 45
+            }
+          }
+        ],
+        "inventory_max": -2,
+        "inventory_min": -2,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": -2,
+          "rebates": "0.018",
+          "trade_cash_ticks": 216
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": true,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "two-sided-missing-detail",
+      "prefixes": 5
+    },
+    {
+      "final_assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": 0,
+          "rebates": "0.030",
+          "trade_cash_ticks": 20
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": true,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "complete-flat",
+      "prefixes": 4
+    }
+  ],
+  "artifact_sha256": {
+    "cancel--1-after_ack/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-after_ack/death-evidence.json": "1c756621a735a32d3de34086755886d8db3541005daf32d61d1b45683a416ed4",
+    "cancel--1-after_ack/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-after_ack/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-after_ack/scenario.json": "2d9b757daa5fc5a4f70e464762abff7b22b2f3b56203f696833236c439409439",
+    "cancel--1-after_ack/session.json": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+    "cancel--1-after_ack/venue-evidence.json": "13b30cecced750ccab6a36ce8ddf294995b5722c9a3f4290982875a3bad1e579",
+    "cancel--1-after_directory_fsync/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-after_directory_fsync/death-evidence.json": "d22eca5b097a5bb8077076d31d0e698f2be65c60eda36bc85c7fb55e60a2edd1",
+    "cancel--1-after_directory_fsync/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-after_directory_fsync/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-after_directory_fsync/scenario.json": "f467a0eed9ef82372a93f02839bb10bfc7c99da15461f75c117cdcb1d1d9371f",
+    "cancel--1-after_directory_fsync/session.json": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+    "cancel--1-after_directory_fsync/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "cancel--1-after_file_fsync/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-after_file_fsync/death-evidence.json": "beedf05a206d484e84a49768dfa65f4348a6a29b3110dc36bcf016c3e132e61a",
+    "cancel--1-after_file_fsync/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-after_file_fsync/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-after_file_fsync/scenario.json": "85462a3562ddb298a7fdd1baa7b6d47882c8fc36d4267b3d4cec4959422302a1",
+    "cancel--1-after_file_fsync/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "cancel--1-after_file_fsync/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "cancel--1-after_replace/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-after_replace/death-evidence.json": "68d476acb1e74da3282845fc2236cf13b242473c7deb0d07e328eddbbd8be679",
+    "cancel--1-after_replace/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-after_replace/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-after_replace/scenario.json": "553554c49c1827c2762db87f965f5adbebbb6e13f16bddf96551c964ac172f93",
+    "cancel--1-after_replace/session.json": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+    "cancel--1-after_replace/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "cancel--1-after_sink/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-after_sink/death-evidence.json": "a1b031794428a731c800c490ef7eee23703a92e03d71fec0067e5378c6ab01a6",
+    "cancel--1-after_sink/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-after_sink/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-after_sink/scenario.json": "2051797d3ba09de7edf646103f7919a5480d7c502667016c3270f9d3b55ff20b",
+    "cancel--1-after_sink/session.json": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+    "cancel--1-after_sink/venue-evidence.json": "13b30cecced750ccab6a36ce8ddf294995b5722c9a3f4290982875a3bad1e579",
+    "cancel--1-after_write/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-after_write/death-evidence.json": "6d741596afdad4b1be9092fe438880b71c571cbfdb9ff365725448d9cc5bc1d9",
+    "cancel--1-after_write/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-after_write/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-after_write/scenario.json": "abe60b76919908805b5e32e834147b3358f0a1956f7aa67b29442acf502044a3",
+    "cancel--1-after_write/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "cancel--1-after_write/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "cancel--1-before_sink/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-before_sink/death-evidence.json": "dd0a7b3682847eace07b8597256c4aad53bba2550c4cd905c35be70a7abed5af",
+    "cancel--1-before_sink/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-before_sink/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-before_sink/scenario.json": "9c760e8837c22501605e8fc26380aa8d4790052f189eab779917ccf9d7c1e2d2",
+    "cancel--1-before_sink/session.json": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+    "cancel--1-before_sink/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "cancel--1-before_temp/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-before_temp/death-evidence.json": "1f823470b20d68df8e7e9754350f116484745e77a62eebc26286513af0061534",
+    "cancel--1-before_temp/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-before_temp/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-before_temp/scenario.json": "687f9081a3ba596f70041ceed7528b00eb16bb96b5ce9edb808b929fbc878f32",
+    "cancel--1-before_temp/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "cancel--1-before_temp/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "cancel--1-partial_write/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-partial_write/death-evidence.json": "659c2e822c19fdd4338ff96dbc1d25c5938db4259ddfd97fb95be2e2c472df96",
+    "cancel--1-partial_write/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-partial_write/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-partial_write/scenario.json": "1a5841154c5dfe065b10041b177c1790179125e3cfde402ac1ff440c414a98ba",
+    "cancel--1-partial_write/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "cancel--1-partial_write/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "cancel--1-sink_effect/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "cancel--1-sink_effect/death-evidence.json": "77f089406adf72b3c796d1968bc093a4c71f439ce40e0199688a2180ae4b05a5",
+    "cancel--1-sink_effect/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "cancel--1-sink_effect/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "cancel--1-sink_effect/scenario.json": "425fb12b176d1c2cc03a6a32300e5c1eaa43e82b111d4fbdb059e4e73d2ca7f3",
+    "cancel--1-sink_effect/session.json": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+    "cancel--1-sink_effect/venue-evidence.json": "13b30cecced750ccab6a36ce8ddf294995b5722c9a3f4290982875a3bad1e579",
+    "cancel-1-after_ack/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-after_ack/death-evidence.json": "78beb8f17ad7a8781c5a8b0d0f888adf82169b26817f216d48433cf6021ca537",
+    "cancel-1-after_ack/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-after_ack/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-after_ack/scenario.json": "a406733f5f37df1383ed0d895627a552731aa64757287e0e6d421bf122f819ee",
+    "cancel-1-after_ack/session.json": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+    "cancel-1-after_ack/venue-evidence.json": "be79d4f83c72646aa7a494923e95a87a25aef3888a5961c813b809df6ee9e880",
+    "cancel-1-after_directory_fsync/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-after_directory_fsync/death-evidence.json": "e334594999abcb034936347808c42dee3f97b44f2e62ade1a2d040e92fe91195",
+    "cancel-1-after_directory_fsync/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-after_directory_fsync/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-after_directory_fsync/scenario.json": "253ed299f0b6d4d5aa2e1ede898fd84ab19bf9717659498bc02beec866b41d3e",
+    "cancel-1-after_directory_fsync/session.json": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+    "cancel-1-after_directory_fsync/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "cancel-1-after_file_fsync/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-after_file_fsync/death-evidence.json": "10077100827dce3687f532a748cadb51d0f8f6d88c0818fa1fa9726a0da5d6f8",
+    "cancel-1-after_file_fsync/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-after_file_fsync/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-after_file_fsync/scenario.json": "c0982baf9c7642d0942d649e882e83e0a8240d829b5d5ef33f1e65a4d40c047c",
+    "cancel-1-after_file_fsync/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "cancel-1-after_file_fsync/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "cancel-1-after_replace/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-after_replace/death-evidence.json": "37ee28cfb65de1b71fc9a97201091207ad7eec372b7d24731452ed8b86c24c83",
+    "cancel-1-after_replace/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-after_replace/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-after_replace/scenario.json": "9ed9abb072777629a6c786e91a06894096722f2409172cca17b469402e2bb0a5",
+    "cancel-1-after_replace/session.json": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+    "cancel-1-after_replace/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "cancel-1-after_sink/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-after_sink/death-evidence.json": "1bd1fc8424532ab29727dbf181743f0443e3019a91ee1da686ea09c410cb1562",
+    "cancel-1-after_sink/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-after_sink/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-after_sink/scenario.json": "d57fa0ea2404a7fc73a906b0492a56d9d558195585e63a2fa81164529dd1bf7f",
+    "cancel-1-after_sink/session.json": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+    "cancel-1-after_sink/venue-evidence.json": "be79d4f83c72646aa7a494923e95a87a25aef3888a5961c813b809df6ee9e880",
+    "cancel-1-after_write/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-after_write/death-evidence.json": "95e8dc444ece33c1cfd529270876991c9ddad67ab187c392027070e4c39def83",
+    "cancel-1-after_write/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-after_write/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-after_write/scenario.json": "0590f58da05194f2714c7040654eec3ee8703703626b6643cf77a7d91ba748ab",
+    "cancel-1-after_write/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "cancel-1-after_write/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "cancel-1-before_sink/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-before_sink/death-evidence.json": "ff0cf039c7335d3d5a61e7806eac3e44b9bfcc96c4e473db12a9e0f5459e507d",
+    "cancel-1-before_sink/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-before_sink/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-before_sink/scenario.json": "5f33308330bd59c3edc1d99b28bb8da1a2d27b99b14620412f8b977b7e57056e",
+    "cancel-1-before_sink/session.json": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+    "cancel-1-before_sink/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "cancel-1-before_temp/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-before_temp/death-evidence.json": "d30908c35525e6a7054d371d57c49591b763870ad538caaaff688b5ed9ae26c3",
+    "cancel-1-before_temp/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-before_temp/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-before_temp/scenario.json": "9a2258bac40bf301946fc71cf87f4c0d58e809a36302fe78a0c1a182201792b4",
+    "cancel-1-before_temp/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "cancel-1-before_temp/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "cancel-1-partial_write/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-partial_write/death-evidence.json": "a397ad8286d476bdf2ccbecc58a5fc6e94594665a3edab48058c11d7f9daed0b",
+    "cancel-1-partial_write/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-partial_write/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-partial_write/scenario.json": "9b4563f76046c7b144e8d29190912c7fd34164444c23f56d6250be4838cac815",
+    "cancel-1-partial_write/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "cancel-1-partial_write/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "cancel-1-sink_effect/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "cancel-1-sink_effect/death-evidence.json": "ad8c3756870a8b429332221a1748b91ebac9d8a994596fcb64b8e735494134ef",
+    "cancel-1-sink_effect/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "cancel-1-sink_effect/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "cancel-1-sink_effect/scenario.json": "c5b9e77bc15ecf3c673728cf3ef691402dbc2548197fa3877169dcb280948553",
+    "cancel-1-sink_effect/session.json": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+    "cancel-1-sink_effect/venue-evidence.json": "be79d4f83c72646aa7a494923e95a87a25aef3888a5961c813b809df6ee9e880",
+    "flat/checkpoint.json": "a049aa2bd2c462a86f30bbeb9d4aed533d848ca39f0a1eb193cb0b9a6e95ecff",
+    "flat/evidence-identity.json": "c4ac3dbeb66902914bd93678eb92708ddb745a154957945a30fd6d1441c7c2bf",
+    "flat/inbox.json": "3c2491f1e1edb0b255e41c4278fad32fc0ec45d56428a47e7bbab2be63ab2cf8",
+    "flat/prefixes.json": "9e100f923c34b8c5fb3bf5b4a0ef6527d32d6aeb965f76faff6e01add6e9da9f",
+    "flat/scenario.json": "a5e1144a3cff4a6e7f6ae25c2b8fc80afa4ce95d00c07f346eb5cc7dd7ef34d1",
+    "flat/session.json": "f2cac4647870d7102fbcd15ab0b5a33004762f7a9c08b2aa87074eaac12dde06",
+    "flat/venue-evidence.json": "238435a78af91cc0741cbe510dc0cfa7bb97f004b996dde7c44ed2a77cf57695",
+    "naive/naive-restart-witness.json": "ef707717176eebf317e8ba18df78ef1928da8a32ae3fc3eb6c5caef83a9f94f1",
+    "new--1-after_ack/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "new--1-after_ack/death-evidence.json": "3b886a6d110d71ea85a4cb81a0c7265f4b88ecbd220460642f710404b38eddfd",
+    "new--1-after_ack/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "new--1-after_ack/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "new--1-after_ack/scenario.json": "d397826ce4ee831dc9e3832b87c7f9ad6388b767119d5298740de0c5feb00f55",
+    "new--1-after_ack/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "new--1-after_ack/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "new--1-after_directory_fsync/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "new--1-after_directory_fsync/death-evidence.json": "a2743ad883cd3ecaa01abf05eb3a22b082ab5138ca33522e0fe99e7105749021",
+    "new--1-after_directory_fsync/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "new--1-after_directory_fsync/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "new--1-after_directory_fsync/scenario.json": "93e6541c403c9c98a9c63fe562d266fbeb85b7e02e7b5db2da7e67480f7fd9b4",
+    "new--1-after_directory_fsync/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "new--1-after_directory_fsync/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new--1-after_file_fsync/death-evidence.json": "65a1ed20710e38e694603e92e1cec39833c408aa7498cd0f9b00522a094bbd46",
+    "new--1-after_file_fsync/scenario.json": "fc7e0d19adbde09cdc7ae5dee539586672ac3bdab915165a512ec72b72289d65",
+    "new--1-after_file_fsync/session.json": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+    "new--1-after_file_fsync/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new--1-after_replace/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "new--1-after_replace/death-evidence.json": "3ca1fed26dacb284ee594e5450bc846c8a5fd888a01471c41fccf7db3edaf062",
+    "new--1-after_replace/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "new--1-after_replace/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "new--1-after_replace/scenario.json": "8fee33eff235c9e6af928c5b064c5409d6eccce44dcddaf86d4044d0ac969021",
+    "new--1-after_replace/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "new--1-after_replace/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new--1-after_sink/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "new--1-after_sink/death-evidence.json": "9dbd5d4b43fb0c7fa0e464b5812775c2d06c85f54bb3d62070782668b321ed42",
+    "new--1-after_sink/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "new--1-after_sink/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "new--1-after_sink/scenario.json": "794d0f5f5f8725caa4172f3a2f9d3ea0155fe11f08fc29121692c4106970c674",
+    "new--1-after_sink/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "new--1-after_sink/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "new--1-after_write/death-evidence.json": "5cf61da2357e67259dc3a7277ccd30fb9dc6dba05eb6216d156fa0be45a32172",
+    "new--1-after_write/scenario.json": "43147afc412de7f85f07d63b3d08712a9c06b9fd9933ed091c299b2076091caa",
+    "new--1-after_write/session.json": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+    "new--1-after_write/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new--1-before_sink/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "new--1-before_sink/death-evidence.json": "f354140f046aeab676ac35b3e8535d8e9109428f26eab8e8f6b356311fa450ca",
+    "new--1-before_sink/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "new--1-before_sink/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "new--1-before_sink/scenario.json": "b7f361ecb544c6114c3e67f4841c6796c5af73e170ccceec25274393e6f1c64e",
+    "new--1-before_sink/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "new--1-before_sink/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new--1-before_temp/death-evidence.json": "b28a6c3741d4edda7cb4f17fecf0a6e02eeb387a1e6014fbd9981f3a76770427",
+    "new--1-before_temp/scenario.json": "bbc05df45de593f680066cccbe2f95565fb98e11b58b9e38fbf550f30f32cff3",
+    "new--1-before_temp/session.json": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+    "new--1-before_temp/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new--1-partial_write/death-evidence.json": "78505829ca8da2b4d1703aee059c0a00642ffd6dfb5781b3e9466fb80e63ee10",
+    "new--1-partial_write/scenario.json": "c99301f9a462c5ea64a3facb723ca1f3d3bf878e6c4abc19614638c57a59b3b0",
+    "new--1-partial_write/session.json": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+    "new--1-partial_write/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new--1-sink_effect/checkpoint.json": "8d7a13878b83578ab735e1cf36f540c3a692f2464a7bf7827f6da7f2fef87cf7",
+    "new--1-sink_effect/death-evidence.json": "8077a950448ecfc0d1bed89718f9eb529772bbb0c7bad444d90798c4a0235da9",
+    "new--1-sink_effect/evidence-identity.json": "caa8a51aff865feeb95c98de65e6e3daf1c56e51053667f33503642c16216894",
+    "new--1-sink_effect/inbox.json": "c932531cc18de24d68be920efc7e99688815958855c5492bbf1e86af9b3f91f6",
+    "new--1-sink_effect/scenario.json": "a2656ba47b46e432e6614b8fae269226f8421ee2c4aa9c17e5810be69fe9df5e",
+    "new--1-sink_effect/session.json": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+    "new--1-sink_effect/venue-evidence.json": "4cc38cdb73899871b9677b8f0eb1201837c036968da7c6fe38332dbaec5d2520",
+    "new-1-after_ack/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "new-1-after_ack/death-evidence.json": "9ffe197f8eddc6afd232c7c82b0d293d332de640f52fde2e3de3d31e30427642",
+    "new-1-after_ack/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "new-1-after_ack/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "new-1-after_ack/scenario.json": "cc795acafc83233f15e3b170e6c2b61c9dd2aa60695c07014fe113c4bb6345d7",
+    "new-1-after_ack/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "new-1-after_ack/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "new-1-after_directory_fsync/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "new-1-after_directory_fsync/death-evidence.json": "d050a434fc805be602a842b2c798dc8fcfeb9201b2205e5edd636185b90bbd14",
+    "new-1-after_directory_fsync/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "new-1-after_directory_fsync/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "new-1-after_directory_fsync/scenario.json": "d29d6e28038fa39d1beb80c4d240df99849f6a9107ab5bbe25c7f630382315de",
+    "new-1-after_directory_fsync/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "new-1-after_directory_fsync/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new-1-after_file_fsync/death-evidence.json": "edf317ff5d0141abbccf675597812e25781462c6f10671ad24b57800bd19630f",
+    "new-1-after_file_fsync/scenario.json": "ec0bd17bb47b50ad3f628baa853c395ae435133e9e3e49f91db2ba4dd244c7db",
+    "new-1-after_file_fsync/session.json": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+    "new-1-after_file_fsync/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new-1-after_replace/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "new-1-after_replace/death-evidence.json": "433b61a0a728201eae533288776ed00710226c9b9b7182ef7f0867f17ba9306e",
+    "new-1-after_replace/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "new-1-after_replace/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "new-1-after_replace/scenario.json": "abda096460de9656c08ef872993bf70886581748fd5a8106837a93ba346500d0",
+    "new-1-after_replace/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "new-1-after_replace/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new-1-after_sink/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "new-1-after_sink/death-evidence.json": "c8354c78904a46c5e5813c0341e58663fdfac0ccd27b439e56951e099f9b6a98",
+    "new-1-after_sink/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "new-1-after_sink/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "new-1-after_sink/scenario.json": "0e3b055a9fe679f1e0f596af85f88b95416121ce1bf5bb62b7e5dfb76060a1e3",
+    "new-1-after_sink/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "new-1-after_sink/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "new-1-after_write/death-evidence.json": "4e1272e04eac534e0f8b0c770e0075f019a90e81a05f848cc963d64e276fa122",
+    "new-1-after_write/scenario.json": "7f71e117df2d93c9738db9ede5c76a799644db2d53a9537f885707de0abf2906",
+    "new-1-after_write/session.json": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+    "new-1-after_write/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new-1-before_sink/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "new-1-before_sink/death-evidence.json": "d6d3c9045330af74161092392b183e39da488be1e0eda838f9b0cd8f9995eed5",
+    "new-1-before_sink/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "new-1-before_sink/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "new-1-before_sink/scenario.json": "53aaa095a191da585d3fe7e6bd1c9365d8c60ae00f44bc7adb195c661314c902",
+    "new-1-before_sink/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "new-1-before_sink/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new-1-before_temp/death-evidence.json": "3647062016a17d0b8a5246a569bb3d696ccb4117b31a9e54fa9a64b3442f77a9",
+    "new-1-before_temp/scenario.json": "eb665e72de5196d93e1c29a7d898702eb9973af3785d10d9ca8110bf2ce61f70",
+    "new-1-before_temp/session.json": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+    "new-1-before_temp/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new-1-partial_write/death-evidence.json": "133c8dd7a1cd12fd22703d3c4ff6a29139b39def45728693cc0ce43f3da28912",
+    "new-1-partial_write/scenario.json": "50f69d198abbd31ed8e8b460acc5f019ce2253ac7275bb317fcefc2cd8a9950a",
+    "new-1-partial_write/session.json": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+    "new-1-partial_write/venue-evidence.json": "e1846baebc4016fab83abd129c38d7b7859665f7e25314680dd09009828feeeb",
+    "new-1-sink_effect/checkpoint.json": "8bafa1834225052291fbe43703eb7c320e11287a3105b280aa3e2ad7fec6f486",
+    "new-1-sink_effect/death-evidence.json": "40a176586ed8f6db1995676c0a77161702ebcfa6837812138a31421ab6f80e50",
+    "new-1-sink_effect/evidence-identity.json": "da422d30859fe4219173832b97582627cdfff4abbc51ea3b69ced2c348c7b117",
+    "new-1-sink_effect/inbox.json": "0603790ccfd31b75c7e129e7716e25a239f2d5c1a0fd98417c67e80895f8a3ca",
+    "new-1-sink_effect/scenario.json": "4d6b61a96c0d1aaef3e0792b6674833b34050fe1f5dee33fb667fb9bcac01d74",
+    "new-1-sink_effect/session.json": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+    "new-1-sink_effect/venue-evidence.json": "cc52bfedda0ddfaf89b7a257464da12623fe53227dfdf09d96ed211c6242c43d",
+    "risk-cancel-delayed--1/checkpoint.json": "27cb78bf3f1c3527ed23b7a7ab7e3de588db8c01fd1781edbbe9eb8a0399e317",
+    "risk-cancel-delayed--1/evidence-identity.json": "c11d191930d91faee3c4b232ab02de8d8a340861f82a19ecdb97c24187264a72",
+    "risk-cancel-delayed--1/inbox.json": "9f82951ca91fcf9dc0db013e33c500b793f16c29661d927f7b69767f7489f3c9",
+    "risk-cancel-delayed--1/prefixes.json": "53f67507e33924191fa7b07ac65af8917cda5e45a80745fc465865380c69f8f1",
+    "risk-cancel-delayed--1/scenario.json": "faa1101bc77b1b0677d0a1d08846d9400cf2947b10792614b8372215e007d231",
+    "risk-cancel-delayed--1/session.json": "7a98b7db34a907e2864e4d19866f2be5a4b707c9a440baa6cb8b78af18b0bc95",
+    "risk-cancel-delayed--1/venue-evidence.json": "119fbac0b15a9bf1c86069efaca003cfe3afb1b5ae1de3298dfdd9faa21c53e8",
+    "risk-cancel-delayed-1/checkpoint.json": "2ad2df9b446cd5110c707a48f8ffb8c443bf634929400fc2ed13f8a7c214540b",
+    "risk-cancel-delayed-1/evidence-identity.json": "eaf4912df764b60de420363cbed235090b26412d2db980b6540728a41ce5cae2",
+    "risk-cancel-delayed-1/inbox.json": "6c6db745ca9dc51a9e4c47f23dfa577194f2b7e261f30e05ea9757a479115e2e",
+    "risk-cancel-delayed-1/prefixes.json": "85bcbf04868cc424ee8bacfbf9d94b2ca9a2575beb967d3b8e0b840409090917",
+    "risk-cancel-delayed-1/scenario.json": "2038d7c283e550bd90025089a779308f4bd1799bbf75924d0736ae5de20228d6",
+    "risk-cancel-delayed-1/session.json": "dce733a72b57978cd5d9c33a4d6ef374fa00eb615c8e09ab8d3ba10d3b39d7df",
+    "risk-cancel-delayed-1/venue-evidence.json": "fb4a3efc1c96cf4f86b0933703162cf4b7aacd6e5a95f2a6c27995e144df3461",
+    "risk-cancel-lost--1/checkpoint.json": "1c94e8b76d5aa0896ec032e5302fd77d68662227e9fe5ae980f2b9600c4260a4",
+    "risk-cancel-lost--1/evidence-identity.json": "fcc76dfc3b3d1b13e55aabf59c9c50ab189aee8a1753bae7ed615a88466bd230",
+    "risk-cancel-lost--1/inbox.json": "f6081a0818b59c594463db4784fc25d82e8fad54d30539a31c9d9236a0a75d23",
+    "risk-cancel-lost--1/prefixes.json": "885e67d8d61271faa3dddc411d26503736793f850ae9bb8be54aea74839f9289",
+    "risk-cancel-lost--1/scenario.json": "a47efabc87d19b6a8dc72ab599e913dcb3b3756159bf2d85f3a2be65e4ba7518",
+    "risk-cancel-lost--1/session.json": "7a98b7db34a907e2864e4d19866f2be5a4b707c9a440baa6cb8b78af18b0bc95",
+    "risk-cancel-lost--1/venue-evidence.json": "5372b9616134565e9c3aebfa94c80d01262677d36b252a7a0014a6f5dc8c9639",
+    "risk-cancel-lost-1/checkpoint.json": "70e9cf81744a397d1e58e6aea5efa0fdc44417194afffb0fe6877c6c54c4f293",
+    "risk-cancel-lost-1/evidence-identity.json": "aac3ab26458389c10e0167b65d5e7cc60ef8a35b3fa3ddfc35f3ebabde01b449",
+    "risk-cancel-lost-1/inbox.json": "94c854e9ad964db763301897d17dbcffda743a1d0d1e3e504e9571b3e05c6229",
+    "risk-cancel-lost-1/prefixes.json": "002445a77cd45f05bc70446bee9d1a42b49f876f57bb8e0c46399a38a6fa24b1",
+    "risk-cancel-lost-1/scenario.json": "06794bb07961e86e0082cb3850c3cc223b4904d591ab1915ea4e1dda84758338",
+    "risk-cancel-lost-1/session.json": "dce733a72b57978cd5d9c33a4d6ef374fa00eb615c8e09ab8d3ba10d3b39d7df",
+    "risk-cancel-lost-1/venue-evidence.json": "e684a210394e8b8d6ee70b1dbd22fccdd6c2221191d9f4cb4aecec4e9d5ca6cd",
+    "risk-live-residual--1/checkpoint.json": "8d038140b5bd447092c85eb090d8fa26aadadbe4a4030e41ab85d26b0f841a27",
+    "risk-live-residual--1/evidence-identity.json": "b45a4fc74923bbc58751a111752b4ec0e469bb29895c1f19422fb28d6f79d8fd",
+    "risk-live-residual--1/inbox.json": "c66064132a6cfaa43637b58b94b86ea870e2e2e9db849fdb049b1aca654625b2",
+    "risk-live-residual--1/prefixes.json": "7d1474697ba8c20e1b23e1e6bb911de196cb47e57c56e1fa28c736410ac04024",
+    "risk-live-residual--1/scenario.json": "cae72b87baba2b59a3a98db90e8f2b6ee40a1c8982de58470fc39d7a5c3b3661",
+    "risk-live-residual--1/session.json": "766e6e17f7c37ef7fae8be241dea309b15d8c0aa1a43fdea6c7e21c0dc2fd9e8",
+    "risk-live-residual--1/venue-evidence.json": "532f9c7c2c3b84de67f717dad445b3a60ba398fd6d236c1161ab41544d2c46e4",
+    "risk-live-residual-1/checkpoint.json": "e270b156b414ae29c64a20d0b6f2f6a6576b84b70b644055054257238558d375",
+    "risk-live-residual-1/evidence-identity.json": "6144109067c81b09f4cefb33684dd59f77f2e8920f5a34a61fd18569a870aa67",
+    "risk-live-residual-1/inbox.json": "8910efa63a8795a0de853bbd7a4f3fbd58d5cc4e2db709a8d4f6eae1026ec23d",
+    "risk-live-residual-1/prefixes.json": "a8f89aa6b34b848d80fef456f84b9442c003f73bf353cf807636cda066b81a30",
+    "risk-live-residual-1/scenario.json": "abedad634ddfe17dbfbda25bd15dccb6299315f988492a9291d2ecf3b2dea48c",
+    "risk-live-residual-1/session.json": "cf63104bb8fb082c5642b21ca7556101d0ae9e236107b6e33d077087166dfe8d",
+    "risk-live-residual-1/venue-evidence.json": "c11019aea0c830ff902f883ebcd750e982e38a9500b3f26ef7fe160990963cd0",
+    "risk-new-delayed-unknown--1/checkpoint.json": "c07e3c64aeb043bf8251748eec5b79e349a3c31bf252f314b739f76756d64e97",
+    "risk-new-delayed-unknown--1/evidence-identity.json": "8ecb11b2b8852276823f58f5a993f8d5b723b887e421ce0db1d9e279f7e6ecdf",
+    "risk-new-delayed-unknown--1/inbox.json": "4d4becefbcfe989e2797a7fb7df6d670bba78c58419d2366ec6616452a677892",
+    "risk-new-delayed-unknown--1/prefixes.json": "9a78590b75edd78f1199b7c139654c6ee4bb5d9123b1b4b6089cc22bd329d1cb",
+    "risk-new-delayed-unknown--1/scenario.json": "d2d08238986b78092a63e3a988ea5c332b2aa5599a5e49cdc5829f6794af2233",
+    "risk-new-delayed-unknown--1/session.json": "7a98b7db34a907e2864e4d19866f2be5a4b707c9a440baa6cb8b78af18b0bc95",
+    "risk-new-delayed-unknown--1/venue-evidence.json": "5372b9616134565e9c3aebfa94c80d01262677d36b252a7a0014a6f5dc8c9639",
+    "risk-new-delayed-unknown-1/checkpoint.json": "55a08ab7b04f49c9ffb790f44695a7c25ff437fb8aba8952d1aa13656f9983eb",
+    "risk-new-delayed-unknown-1/evidence-identity.json": "2b979173fa1a8e96dd43dd1b0f87963dc06fa8eeddd2f1593d0a26a5cb88fcee",
+    "risk-new-delayed-unknown-1/inbox.json": "682cc622dd164f8b1c2a6f44e5ac0476bfc45d4484eb6de8a8e26d65fefe3be8",
+    "risk-new-delayed-unknown-1/prefixes.json": "5d96d150c3e0601fb06fa7fcb8cdf37eee40c15d349dd0ab7e6864de530929b2",
+    "risk-new-delayed-unknown-1/scenario.json": "7ef2cf4f95f13db7fb7920c076ca39e86fbad716653d0dbd69e87ecbf66483ca",
+    "risk-new-delayed-unknown-1/session.json": "dce733a72b57978cd5d9c33a4d6ef374fa00eb615c8e09ab8d3ba10d3b39d7df",
+    "risk-new-delayed-unknown-1/venue-evidence.json": "e684a210394e8b8d6ee70b1dbd22fccdd6c2221191d9f4cb4aecec4e9d5ca6cd",
+    "two-sided/checkpoint.json": "61a265ae5af497cdc5257d12c0c6ffa8495aa96ed0861bbad612cb3dd8eeb062",
+    "two-sided/evidence-identity.json": "fcea8c8129d37c158772a8299e5b93cefbae84bbf36040278abfce15ea548303",
+    "two-sided/inbox.json": "68774919649de80ae5c8de3deb68bae5bfbddd5602369f71531a0b45777759fa",
+    "two-sided/prefixes.json": "db1237f9b62b575fdf3cb356a3107420c05fce0194133f8caa9913e56a18314a",
+    "two-sided/scenario.json": "e850d2211ce65be854194f0e8fedc129fb9127e831813daa154c9bb94b14c1f7",
+    "two-sided/session.json": "66523feb1b69aeca4457205123e456455b4295c20c67d41066b5baa3e579a2ce",
+    "two-sided/venue-evidence.json": "62bb4629eef3e5f27fcd70bab1bc7e01969fbbb6f85801ed2d752935d08cba97"
+  },
+  "baseline": "ad108ebaad2edca9b2997dab95800080d5fb6802",
+  "contract": "docs/ACTIVE_RESTART_CONTRACT_V1.md",
+  "limitation": "Synthetic surviving parent venue; real client SIGKILL, no power-loss or active resumption claim",
+  "naive_witness": {
+    "duplicate_exchange_fills_claimed": false,
+    "exchange_rejected_reused_id": true,
+    "fresh_inventory_before_late_report": 0,
+    "lost_pending_cancel": true,
+    "reused_client_ids": [
+      "restart-witness-000000000001",
+      "restart-witness-000000000002"
+    ],
+    "scope": "unsupported naive restart; existing durable fold never claimed active restart",
+    "venue_inventory": 2
+  },
+  "process_death_cases": [
+    {
+      "actual_process_death": true,
+      "assessment": null,
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "before_temp",
+      "journal_sha256": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 0,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": null,
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "partial_write",
+      "journal_sha256": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 0,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": null,
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_write",
+      "journal_sha256": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 0,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": null,
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_file_fsync",
+      "journal_sha256": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 0,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_replace",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_directory_fsync",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "before_sink",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "sink_effect",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_sink",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_ack",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": true,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": null,
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "before_temp",
+      "journal_sha256": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 0,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": null,
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "partial_write",
+      "journal_sha256": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 0,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": null,
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_write",
+      "journal_sha256": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 0,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": null,
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_file_fsync",
+      "journal_sha256": "7695ed01c8a8c8683258a43e2131d28a1c020a319a18dcf0d257c1664005fa3c",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 0,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_replace",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_directory_fsync",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "before_sink",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 0,
+      "venue_fill_quantity": 0,
+      "venue_inventory": 0,
+      "venue_trade_cash_ticks": 0
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "sink_effect",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_sink",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_ack",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "new",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": true,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "before_temp",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "partial_write",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_write",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_file_fsync",
+      "journal_sha256": "faebf587d458a31ac4b652d89e16a0f82955138f53b169d07a4697fbdebf3769",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_replace",
+      "journal_sha256": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_directory_fsync",
+      "journal_sha256": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "before_sink",
+      "journal_sha256": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": 6,
+      "venue_trade_cash_ticks": -600
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "sink_effect",
+      "journal_sha256": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 2,
+      "venue_fill_quantity": 2,
+      "venue_inventory": 2,
+      "venue_trade_cash_ticks": -200
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_sink",
+      "journal_sha256": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": 1,
+      "sink_calls": 2,
+      "venue_fill_quantity": 2,
+      "venue_inventory": 2,
+      "venue_trade_cash_ticks": -200
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 6,
+        "inventory_min": 0,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000001",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_ack",
+      "journal_sha256": "f8a9d5513f05a92b514a66953c914afbd26de8b107397e5ef4077a3f4874bbbd",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000001",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 100,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": 1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": true,
+      "side": 1,
+      "sink_calls": 2,
+      "venue_fill_quantity": 2,
+      "venue_inventory": 2,
+      "venue_trade_cash_ticks": -200
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "before_temp",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "partial_write",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_write",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_file_fsync",
+      "journal_sha256": "9da9bb08b770de7dbb6e7f5ee614ce194de7caa32b586313f3be23bc99e1f14f",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 1,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_replace",
+      "journal_sha256": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_directory_fsync",
+      "journal_sha256": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "before_sink",
+      "journal_sha256": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 1,
+      "venue_fill_quantity": 6,
+      "venue_inventory": -6,
+      "venue_trade_cash_ticks": 624
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "sink_effect",
+      "journal_sha256": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 2,
+      "venue_fill_quantity": 2,
+      "venue_inventory": -2,
+      "venue_trade_cash_ticks": 208
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_sink",
+      "journal_sha256": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": false,
+      "side": -1,
+      "sink_calls": 2,
+      "venue_fill_quantity": 2,
+      "venue_inventory": -2,
+      "venue_trade_cash_ticks": 208
+    },
+    {
+      "actual_process_death": true,
+      "assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": null,
+              "decision_timestamp_ns": 30,
+              "order_id": "O000000000001",
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 0,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0",
+          "known_inventory": 0,
+          "rebates": "0",
+          "trade_cash_ticks": 0
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-000000000002",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 0,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 0,
+            "reservation_quantity": 6,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "child_returncode": -9,
+      "fresh_recovery_process": true,
+      "hook": "after_ack",
+      "journal_sha256": "0692e98c694e8dd2389547de2fffae6fd7e2e2293a794662b9df4fe3fc600203",
+      "kind": "cancel",
+      "recovery": {
+        "assessment": null,
+        "blocked": [
+          "decide:True",
+          "decide:False",
+          "NewOrderRequest",
+          "CancelRequest"
+        ],
+        "effects": [],
+        "snapshot": {
+          "commands": [
+            {
+              "dispatch_timestamp_ns": 10,
+              "kind": "new",
+              "payload": {
+                "client_order_id": "restart-witness-000000000002",
+                "decision_timestamp_ns": 10,
+                "expire_timestamp_ns": null,
+                "post_only": true,
+                "price_ticks": 104,
+                "quantity": 6,
+                "rest_unfilled": true,
+                "send_timestamp_ns": 10,
+                "side": -1,
+                "strategy_id": "restart-witness"
+              }
+            },
+            {
+              "dispatch_timestamp_ns": 30,
+              "kind": "cancel",
+              "payload": {
+                "client_order_id": null,
+                "decision_timestamp_ns": 30,
+                "order_id": "O000000000001",
+                "send_timestamp_ns": 30
+              }
+            }
+          ],
+          "quarantined": true,
+          "resume_supported": false,
+          "session_id": "active-witness",
+          "unresolved_runtime": [
+            "strategy_state",
+            "market_history",
+            "scheduler_and_transport",
+            "pending_cancellation_work",
+            "risk_and_stop_state",
+            "complete_account_order_universe"
+          ]
+        }
+      },
+      "reserved_commands": 2,
+      "returned_to_caller": true,
+      "side": -1,
+      "sink_calls": 2,
+      "venue_fill_quantity": 2,
+      "venue_inventory": -2,
+      "venue_trade_cash_ticks": 208
+    }
+  ],
+  "risk_cases": [
+    {
+      "final_assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": "restart-witness-risk",
+              "decision_timestamp_ns": 30,
+              "order_id": null,
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 6,
+        "inventory_min": 6,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": 6,
+          "rebates": "0.018",
+          "trade_cash_ticks": -600
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": true,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "cancel-lost",
+      "prefixes": 8,
+      "side": 1,
+      "true_inventory": 6
+    },
+    {
+      "final_assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": "restart-witness-risk",
+              "decision_timestamp_ns": 30,
+              "order_id": null,
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": -6,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": -6,
+          "rebates": "0.018",
+          "trade_cash_ticks": 624
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": true,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "cancel-lost",
+      "prefixes": 8,
+      "side": -1,
+      "true_inventory": -6
+    },
+    {
+      "final_assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": "restart-witness-risk",
+              "decision_timestamp_ns": 30,
+              "order_id": null,
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 2,
+        "inventory_min": 2,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": 2,
+          "rebates": "0.006",
+          "trade_cash_ticks": -200
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": true,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "cancel-delayed",
+      "prefixes": 6,
+      "side": 1,
+      "true_inventory": 2
+    },
+    {
+      "final_assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": "restart-witness-risk",
+              "decision_timestamp_ns": 30,
+              "order_id": null,
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": -2,
+        "inventory_min": -2,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": -2,
+          "rebates": "0.006",
+          "trade_cash_ticks": 208
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": true,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "cancel-delayed",
+      "prefixes": 6,
+      "side": -1,
+      "true_inventory": -2
+    },
+    {
+      "final_assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": "restart-witness-risk",
+              "decision_timestamp_ns": 30,
+              "order_id": null,
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": 6,
+        "inventory_min": 6,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": 6,
+          "rebates": "0.018",
+          "trade_cash_ticks": -600
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": true,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "new-delayed-unknown",
+      "prefixes": 9,
+      "side": 1,
+      "true_inventory": 6
+    },
+    {
+      "final_assessment": {
+        "cancellation_reservations": [
+          {
+            "dispatch_timestamp_ns": 30,
+            "kind": "cancel",
+            "payload": {
+              "client_order_id": "restart-witness-risk",
+              "decision_timestamp_ns": 30,
+              "order_id": null,
+              "send_timestamp_ns": 30
+            }
+          }
+        ],
+        "inventory_max": -6,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": -6,
+          "rebates": "0.018",
+          "trade_cash_ticks": 624
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": true,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "new-delayed-unknown",
+      "prefixes": 9,
+      "side": -1,
+      "true_inventory": -6
+    },
+    {
+      "final_assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": 6,
+        "inventory_min": 2,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": 2,
+          "rebates": "0.006",
+          "trade_cash_ticks": -200
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-risk",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 2,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 2,
+            "reservation_quantity": 4,
+            "sent_quantity": 6,
+            "side": 1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "live-residual",
+      "prefixes": 6,
+      "side": 1,
+      "true_inventory": 2
+    },
+    {
+      "final_assessment": {
+        "cancellation_reservations": [],
+        "inventory_max": -2,
+        "inventory_min": -6,
+        "known_ledger": {
+          "fees": "0.00",
+          "known_inventory": -2,
+          "rebates": "0.006",
+          "trade_cash_ticks": 208
+        },
+        "missing_execution_detail": [],
+        "potentially_outstanding": [
+          {
+            "client_order_id": "restart-witness-risk",
+            "executed_quantity_max": 6,
+            "executed_quantity_min": 2,
+            "missing_fill_quantity_min": 0,
+            "notified_fill_quantity": 2,
+            "reservation_quantity": 4,
+            "sent_quantity": 6,
+            "side": -1,
+            "terminal_report_received": false
+          }
+        ],
+        "quarantined": true,
+        "resume_allowed": false,
+        "saved_order_evidence_complete": false,
+        "supplied_inbox_drained": true,
+        "unresolved_runtime": [
+          "strategy_state",
+          "market_history",
+          "scheduler_and_transport",
+          "pending_cancellation_work",
+          "risk_and_stop_state",
+          "complete_account_order_universe"
+        ]
+      },
+      "mode": "live-residual",
+      "prefixes": 6,
+      "side": -1,
+      "true_inventory": -2
+    }
+  ],
+  "version": "active-restart-v1"
+}
