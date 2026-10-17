@@ -269,9 +269,18 @@ def test_accepted_before_takeover_still_fills_and_cancel_can_reduce(
         else:
             state_missing_detail = reopened.snapshot()
         prefixes.append(authority.snapshot(ACCOUNT))
+        known = reopened.snapshot()["knowledge"]
+        assert (
+            known["inventory_min"]
+            <= prefixes[-1]["inventory"]
+            <= known["inventory_max"]
+        )
         fills += authority.trade(ACCOUNT, side, 6, timestamp_ns=40)
         for report in reversed(fills):
             recovered.capture(report, notification_timestamp_ns=50)
+            known = reopened.snapshot()["knowledge"]
+            actual = authority.snapshot(ACCOUNT)["inventory"]
+            assert known["inventory_min"] <= actual <= known["inventory_max"]
             assert not recovered.capture(report, notification_timestamp_ns=51)
         final_client = reopened.snapshot()
         assert not final_client["entry_enabled"]

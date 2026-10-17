@@ -8,7 +8,6 @@ full chronological events and repeat byte for byte.
 
 from __future__ import annotations
 
-import hashlib
 import io
 import json
 import os
