@@ -5,6 +5,10 @@ import pytest
 
 def pytest_addoption(parser: pytest.Parser) -> None:
     parser.addoption(
+        "--authority-witness-output",
+        help="Save independently retained authority witness evidence.",
+    )
+    parser.addoption(
         "--account-fence-output",
         help="Save synthetic authoritative fence and independent process evidence.",
     )
