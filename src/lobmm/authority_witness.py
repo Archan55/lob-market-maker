@@ -146,9 +146,14 @@ class WitnessedAccountAuthorityV4:
         if _integer(d["watermark"]) > MAX_MUTATIONS:
             raise RecoveryError("witness mutation bound")
         rows = d["issuances"]
-        if type(rows) is not list or len(rows) > MAX_ISSUANCES:
+        if (
+            type(rows) is not list
+            or len(rows) > MAX_ISSUANCES
+            or len(rows) > d["watermark"]
+        ):
             raise RecoveryError("witness issuance bound")
         identities = set()
+        generations: dict[str, int] = {}
         for row in rows:
             r = _object(row, ("issuance_id", "request", "token"))
             identity = _text(r["issuance_id"])
@@ -172,9 +177,20 @@ class WitnessedAccountAuthorityV4:
                 or token.witness_id != self.witness_id
                 or token.incarnation_id != self.incarnation_id
                 or token.context.authority_id != self.authority.authority_id
+                or any(
+                    getattr(token.context, name) != request[name]
+                    for name in ("account_id", "owner_id", "session_id", "strategy_id")
+                )
+                or token.context.generation != request["expected_generation"] + 1
+                or (
+                    token.context.account_id in generations
+                    and token.context.generation
+                    != generations[token.context.account_id] + 1
+                )
             ):
                 raise RecoveryError("invalid retained issuance identity")
             identities.add(identity)
+            generations[token.context.account_id] = token.context.generation
         if d["pending"] is not None:
             _object(d["pending"], ("watermark", "old_digest", "proposed_digest"))
             # Even an apparently matching pending state is never auto-repaired.

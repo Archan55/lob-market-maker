@@ -393,3 +393,29 @@ def test_v3_bypass_is_concrete_failure(tmp_path, archive):
         facade.snapshot("account")
     assert venue.snapshot("other-account")["orders"][0]["remaining_quantity"] == 6
     save(archive, "direct-v3-bypass", venue, facade, unwitnessed_executable_quantity=6)
+
+
+def test_held_unaccepted_process_after_takeover(tmp_path, archive):
+    venue, facade, accepted = setup(tmp_path)
+    old = issue(facade)
+    held = dict(operation="new", token=asdict(old))
+    with worker(venue, facade, held) as process:
+        current = issue(facade, "next", 2)
+        send(process, "go")
+        reply = receive(process)
+    assert "quarantined" in reply["error"]
+    facade.dispatch(
+        current, "cancel", CancelRequest(2, 2, client_order_id="six"), timestamp_ns=2
+    )
+    state = facade.snapshot("account")
+    assert len(state["orders"]) == 1
+    assert state["orders"][0]["cancelled_quantity"] == 6
+    save(
+        archive,
+        "held-unaccepted",
+        venue,
+        facade,
+        held=held,
+        reply=reply,
+        accepted=accepted,
+    )
