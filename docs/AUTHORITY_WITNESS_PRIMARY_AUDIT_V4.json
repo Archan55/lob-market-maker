@@ -1,0 +1,453 @@
+[
+  {
+    "artifact_sha256": "b86a75c8c6ea809b3ec93db2efbbda5a762ba940c65e19fb12302b4f3fb63316",
+    "case": "rollback-venue",
+    "digest_matches_witness": false,
+    "external_fill_quantity": 2,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": 0,
+        "command_ids": [
+          "accepted"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 2,
+          "owner_id": "recovery",
+          "session_id": "recovery",
+          "strategy_id": "strategy"
+        },
+        "event_count": 3,
+        "fills_from_inputs": [],
+        "generation": 2,
+        "inventory": 0,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 0,
+            "client_order_id": "six",
+            "filled_quantity": 0,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 6,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "original",
+          "recovery"
+        ]
+      }
+    }
+  },
+  {
+    "artifact_sha256": "0e4e5c0a0fca273c5450704e406a8d2309c9d5c54d17d02045695416d2ac927e",
+    "case": "rollback-witness",
+    "digest_matches_witness": false,
+    "external_fill_quantity": 2,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": -202,
+        "command_ids": [
+          "accepted"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 3,
+          "owner_id": "next",
+          "session_id": "next",
+          "strategy_id": "strategy"
+        },
+        "event_count": 5,
+        "fills_from_inputs": [
+          {
+            "client_order_id": "six",
+            "event_sequence": 5,
+            "price_ticks": 101,
+            "quantity": 2,
+            "side": 1
+          }
+        ],
+        "generation": 3,
+        "inventory": 2,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 0,
+            "client_order_id": "six",
+            "filled_quantity": 2,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 4,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "original",
+          "recovery",
+          "next"
+        ]
+      }
+    }
+  },
+  {
+    "artifact_sha256": "9dbf9972aa46b4fd1175986250497c6db97673694f28067b864628733873bb2f",
+    "case": "rollback-client",
+    "digest_matches_witness": true,
+    "external_fill_quantity": 2,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": -202,
+        "command_ids": [
+          "accepted",
+          "cancel"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 3,
+          "owner_id": "next",
+          "session_id": "next",
+          "strategy_id": "strategy"
+        },
+        "event_count": 6,
+        "fills_from_inputs": [
+          {
+            "client_order_id": "six",
+            "event_sequence": 5,
+            "price_ticks": 101,
+            "quantity": 2,
+            "side": 1
+          }
+        ],
+        "generation": 3,
+        "inventory": 2,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 4,
+            "client_order_id": "six",
+            "filled_quantity": 2,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 0,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "original",
+          "recovery",
+          "next"
+        ]
+      }
+    }
+  },
+  {
+    "artifact_sha256": "1288009a0bc411a29c98587573e7efa5f609e47ee40730d337bcd8102390348a",
+    "case": "rollback-both",
+    "digest_matches_witness": true,
+    "external_fill_quantity": 2,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": 0,
+        "command_ids": [
+          "accepted",
+          "cancel"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 2,
+          "owner_id": "recovery",
+          "session_id": "recovery",
+          "strategy_id": "strategy"
+        },
+        "event_count": 4,
+        "fills_from_inputs": [],
+        "generation": 2,
+        "inventory": 0,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 6,
+            "client_order_id": "six",
+            "filled_quantity": 0,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 0,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "original",
+          "recovery"
+        ]
+      }
+    }
+  },
+  {
+    "artifact_sha256": "12915354668cc66959e69a7a13eae66439dd8c0268f5cbaea72bf0fa1c692b8f",
+    "case": "unavailable-namespace-copied-token",
+    "digest_matches_witness": true,
+    "external_fill_quantity": 0,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": 0,
+        "command_ids": [
+          "accepted",
+          "cancel"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 2,
+          "owner_id": "recovery",
+          "session_id": "recovery",
+          "strategy_id": "strategy"
+        },
+        "event_count": 5,
+        "fills_from_inputs": [],
+        "generation": 2,
+        "inventory": 0,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 6,
+            "client_order_id": "six",
+            "filled_quantity": 0,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 0,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "original",
+          "recovery"
+        ]
+      }
+    }
+  },
+  {
+    "artifact_sha256": "a1c09d3e42b43a0dd27f3b7495ae91c8ac717ca3932d2777a8a5f7a5c0157d0f",
+    "case": "direct-v3-bypass",
+    "digest_matches_witness": false,
+    "external_fill_quantity": 0,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": 0,
+        "command_ids": [
+          "accepted"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 1,
+          "owner_id": "original",
+          "session_id": "original",
+          "strategy_id": "strategy"
+        },
+        "event_count": 2,
+        "fills_from_inputs": [],
+        "generation": 1,
+        "inventory": 0,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 0,
+            "client_order_id": "six",
+            "filled_quantity": 0,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 6,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "original"
+        ]
+      },
+      "other-account": {
+        "cash_ticks": 0,
+        "command_ids": [
+          "outside"
+        ],
+        "current_owner": {
+          "account_id": "other-account",
+          "authority_id": "venue",
+          "generation": 1,
+          "owner_id": "bypass",
+          "session_id": "bypass",
+          "strategy_id": "strategy"
+        },
+        "event_count": 2,
+        "fills_from_inputs": [],
+        "generation": 1,
+        "inventory": 0,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 0,
+            "client_order_id": "outside",
+            "filled_quantity": 0,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 6,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "bypass"
+        ]
+      }
+    }
+  },
+  {
+    "artifact_sha256": "ee2a2bab636ca00080395642a61fac05da0e25c27db11b3d8b42eafb7ea039ef",
+    "case": "held-unaccepted",
+    "digest_matches_witness": true,
+    "external_fill_quantity": 0,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": 0,
+        "command_ids": [
+          "accepted",
+          "cancel"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 3,
+          "owner_id": "next",
+          "session_id": "next",
+          "strategy_id": "strategy"
+        },
+        "event_count": 5,
+        "fills_from_inputs": [],
+        "generation": 3,
+        "inventory": 0,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 6,
+            "client_order_id": "six",
+            "filled_quantity": 0,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 0,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "original",
+          "recovery",
+          "next"
+        ]
+      }
+    }
+  },
+  {
+    "artifact_sha256": "db5cb109e2bb0d3f216efcde32e54a18783e79f602baae2d3264f6798851bffd",
+    "case": "exposure-1",
+    "digest_matches_witness": true,
+    "external_fill_quantity": 0,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": -202,
+        "command_ids": [
+          "accepted",
+          "cancel"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 2,
+          "owner_id": "recovery",
+          "session_id": "recovery",
+          "strategy_id": "strategy"
+        },
+        "event_count": 7,
+        "fills_from_inputs": [
+          {
+            "client_order_id": "six",
+            "event_sequence": 4,
+            "price_ticks": 101,
+            "quantity": 2,
+            "side": 1
+          }
+        ],
+        "generation": 2,
+        "inventory": 2,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 4,
+            "client_order_id": "six",
+            "filled_quantity": 2,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 0,
+            "side": 1
+          }
+        ],
+        "retained_owners": [
+          "original",
+          "recovery"
+        ]
+      }
+    }
+  },
+  {
+    "artifact_sha256": "bfc2893d31c477efab1700abe65a8a9b968dd6e8db101ab6af123e7e46f40cac",
+    "case": "exposure--1",
+    "digest_matches_witness": true,
+    "external_fill_quantity": 0,
+    "independent_from_raw_inputs": {
+      "account": {
+        "cash_ticks": 202,
+        "command_ids": [
+          "accepted",
+          "cancel"
+        ],
+        "current_owner": {
+          "account_id": "account",
+          "authority_id": "venue",
+          "generation": 2,
+          "owner_id": "recovery",
+          "session_id": "recovery",
+          "strategy_id": "strategy"
+        },
+        "event_count": 7,
+        "fills_from_inputs": [
+          {
+            "client_order_id": "six",
+            "event_sequence": 4,
+            "price_ticks": 101,
+            "quantity": 2,
+            "side": -1
+          }
+        ],
+        "generation": 2,
+        "inventory": -2,
+        "orders": [
+          {
+            "accepted_generation": 1,
+            "cancelled_quantity": 4,
+            "client_order_id": "six",
+            "filled_quantity": 2,
+            "original_quantity": 6,
+            "price_ticks": 101,
+            "remaining_quantity": 0,
+            "side": -1
+          }
+        ],
+        "retained_owners": [
+          "original",
+          "recovery"
+        ]
+      }
+    }
+  }
+]

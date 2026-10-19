@@ -149,6 +149,10 @@ boundaries with a small documented tolerance for repeating average costs.
 Default marking uses midpoint. Microprice is available; conservative marking
 uses the liquidation-side best quote. Midpoint does not include liquidation
 cost or market impact.
+Fill marks use inventory after that fill. Conservative marking can use its
+required side on a one-sided book; missing required-side liquidity falls back
+to the last valid mark. The [exposure study](EXPOSURE_SESSION_STRESS_V1.md)
+tests these valuation boundaries and separates residual marked from realized P&L.
 
 ## Risk
 
@@ -164,6 +168,11 @@ configured age boundary, independent of the strategy refresh timer. Session
 cutoff actions are audited. The end policy either marks remaining inventory or
 submits a simulated marketable liquidation against remaining true depth, which
 may fill only partially.
+Session expiry is forced venue termination, before same-time client commands.
+Liquidation is a best-price limit delivered after entry latency, so deeper
+liquidity beyond its limit does not guarantee flatness. Terminal metrics follow
+the complete channel drain. In-flight entries may arrive after a loss kill;
+that kill is asynchronous suppression/cancellation, not a maximum-loss guarantee.
 
 ## Strategy equations
 

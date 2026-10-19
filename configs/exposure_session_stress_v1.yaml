@@ -1,0 +1,54 @@
+# Constructed reservation-to-close mechanics study; each case saves its tape.
+instrument:
+  symbol: EXPOSURE-STRESS
+  tick_size: "0.01"
+data:
+  validation_mode: strict
+  provenance:
+    source_type: synthetic
+    provider: lobmm exposure session stress v1
+    venue: SIMULATED
+    symbol: EXPOSURE-STRESS
+    dataset_id: exposure-session-stress-v1
+    license_notes: Constructed conservation tests; no real market calibration.
+latency:
+  market_data_ns: 100000
+  order_entry_ns: 300000
+  cancellation_ns: 1000000
+  fill_report_ns: 100000
+exchange:
+  validation_mode: strict
+queue_model:
+  cancellation_allocation: back_of_queue
+  price_through_fills: false
+fees:
+  maker_fee_per_unit: "0.002"
+  maker_rebate_per_unit: "0.0005"
+  taker_fee_per_unit: "0.003"
+  proportional_fee_rate: "0.0001"
+strategy:
+  name: fixed_spread
+  strategy_id: exposure-session-stress-v1
+  order_size: 4
+  base_half_spread_ticks: 1.0
+  inventory_penalty_ticks: 0.0
+  imbalance_coefficient_ticks: 0.0
+  volatility_multiplier: 0.0
+  minimum_quote_lifetime_ns: 100000000
+  refresh_interval_ns: 100000000
+  stale_after_ns: 100000000
+  quantity_change_threshold: 10
+  rejection_cooldown_ns: 500000
+risk:
+  max_abs_inventory: 6
+  max_order_size: 4
+  max_total_open_quantity: 8
+  max_open_orders: 2
+  max_quote_age_ns: 100000000
+backtest:
+  warmup_events: 2
+  timer_interval_ns: 1000000
+  session_end_policy: mark
+output:
+  write_plots: false
+random_seed: 17

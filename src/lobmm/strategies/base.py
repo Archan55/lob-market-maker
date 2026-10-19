@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from lobmm.config import StrategyConfig
 from lobmm.enums import OrderStatus, ReportType, RiskReason, Side
 from lobmm.events import BookView
-from lobmm.orders import CancelRequest, ExecutionReport, NewOrderRequest
+from lobmm.orders import CancelRequest, ExecutionReport, Fill, NewOrderRequest
 
 type StrategyAction = NewOrderRequest | CancelRequest
 
@@ -83,6 +83,7 @@ class MarketMakingStrategy(ABC):
         self._rejection_backoff: dict[Side, RejectionBackoff] = {}
         self._global_retry_after_ns = 0
         self._seen_reports: set[str] = set()
+        self._seen_fills: set[str] = set()
         self._locally_blocked_client_ids: set[str] = set()
         self._midpoints: deque[float] = deque(
             maxlen=max(config.volatility_window + 1, 3)
@@ -159,9 +160,13 @@ class MarketMakingStrategy(ABC):
                     reason=report.reason or ReportType.REJECTED.value,
                 )
         if report.fill is not None:
-            self.known_inventory += report.fill.signed_quantity
+            self.on_recovered_fill(
+                report.fill, notification_timestamp_ns=notification_timestamp_ns
+            )
             if quote is not None:
-                quote.remaining_quantity = report.remaining_quantity
+                quote.remaining_quantity = min(
+                    quote.remaining_quantity, report.remaining_quantity
+                )
 
         if quote is None:
             return
@@ -173,7 +178,7 @@ class MarketMakingStrategy(ABC):
             quote.pending_cancel = False
             quote.cancel_dispatch_status = None
             self.rejected_cancel_attempts += 1
-            if report.order_status.terminal:
+            if report.order_status.terminal and report.reason != "unknown_order":
                 self._managed.pop(quote.side, None)
             else:
                 self._defer_cancel_retry(
@@ -187,6 +192,14 @@ class MarketMakingStrategy(ABC):
             and report.order_status.terminal
         ):
             self._managed.pop(quote.side, None)
+
+    def on_recovered_fill(self, fill: Fill, *, notification_timestamp_ns: int) -> None:
+        """Share fill identity across original reports and offline query detail."""
+        if notification_timestamp_ns < fill.exchange_fill_timestamp_ns:
+            raise ValueError("fill notification cannot precede execution")
+        if fill.fill_id not in self._seen_fills:
+            self._seen_fills.add(fill.fill_id)
+            self.known_inventory += fill.signed_quantity
 
     def record_action_sent(self, action: StrategyAction, *, timestamp_ns: int) -> None:
         """Record that a strategy action passed local risk and entered a channel."""

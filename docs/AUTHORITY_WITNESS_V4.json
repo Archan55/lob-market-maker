@@ -1,0 +1,43 @@
+{
+  "baseline": "91675f77738dda6940072cdaba565c455ae2f274",
+  "canonical_manifest": {
+    "independent/audit.json": "45fc7ba1dcccacb94441621a10ac2bcc6515c09c9368d6b2c8cbddd99e591a25",
+    "independent/death-after_authority_commit.json": "f3b16d706cc9043ebc282991d0253c078640661d3c94c50b01b731a9a22cf782",
+    "independent/death-after_finalize.json": "be6fdd84ea76c3ddd079c8df38e218443adcba6ef42c849bf053110499310ff8",
+    "independent/death-after_intent.json": "c50a25265567e29f3883349a69c1fe17ad7ef7faeb0558f8ef9941d310a84af0",
+    "independent/death-before_intent.json": "61c04da3892f1a5faba07ace5aa51f5bf771ec81243d8334354b5921d1385c23",
+    "independent/joint-rollback-impossibility.json": "9889f873ca7bbc781aaf4f94852a627b5871a5d83b2cba1a01f4ff2e1624df77",
+    "independent/malformed-issuance-rejected.json": "368542b6ab547ba67f158a221fe625358195e249fba36266ffec24a25d9f257c",
+    "independent/mixed-book-and-issuance.json": "274ebd5f609182399286de49c84ea0dce68508fef6960c87e39f4e5d328aa0c1",
+    "independent/namespace-logical-versus-physical.json": "ef47a96eb5b87cb3c17f95abba1a882e596e19130fba3111c274c5c894efb007",
+    "independent/two-live-issuance-contenders.json": "821e3bc1a2709dc35f07f79dac3fa8f1b9f59d4ef7cca9980cbe90b492b26dfc",
+    "primary/audit.json": "df8153e4de4c5d6ad99c3f37eff39df99e70dd407c4605ac28e7d444cc04733d",
+    "primary/case-after_authority_commit.json": "656104c950cee8ef58b7dadae7676496bbf1740dbf4faaa53dca1f9d0cd8e009",
+    "primary/case-after_finalize.json": "50093c1eb01810d5831fda73a58584789b49def7a5e8e2734613d5e569a37efe",
+    "primary/case-after_intent.json": "ce532225600e9684492fe8e9acd89d906ba3e99acaf30c80970fb1e84db62739",
+    "primary/case-before_intent.json": "a3d27835d4bf1dbc0024209e460062cb312dc93a0dc8a30a6177fbd6da20b980",
+    "primary/case-competing-False.json": "3da84d348fc07bf2c0ef460b3288dc6c3aaad4e899760b6d6dbdb7645c6cd5fb",
+    "primary/case-competing-True.json": "316932daf2eb667604d1ea06474e401ce1c85f7841a26c5b1ef9c03103e26002",
+    "primary/case-direct-v3-bypass.json": "a1c09d3e42b43a0dd27f3b7495ae91c8ac717ca3932d2777a8a5f7a5c0157d0f",
+    "primary/case-duplicate-stale-splice.json": "d90df8cd9fd0bab5f1fb76a10a30533cc1bb92b650c6333cae1c60efae650b1f",
+    "primary/case-exposure--1.json": "bfc2893d31c477efab1700abe65a8a9b968dd6e8db101ab6af123e7e46f40cac",
+    "primary/case-exposure-1.json": "db5cb109e2bb0d3f216efcde32e54a18783e79f602baae2d3264f6798851bffd",
+    "primary/case-held-unaccepted.json": "ee2a2bab636ca00080395642a61fac05da0e25c27db11b3d8b42eafb7ea039ef",
+    "primary/case-rollback-both.json": "1288009a0bc411a29c98587573e7efa5f609e47ee40730d337bcd8102390348a",
+    "primary/case-rollback-client.json": "9dbf9972aa46b4fd1175986250497c6db97673694f28067b864628733873bb2f",
+    "primary/case-rollback-venue.json": "b86a75c8c6ea809b3ec93db2efbbda5a762ba940c65e19fb12302b4f3fb63316",
+    "primary/case-rollback-witness.json": "0e4e5c0a0fca273c5450704e406a8d2309c9d5c54d17d02045695416d2ac927e",
+    "primary/case-unavailable-namespace-copied-token.json": "12915354668cc66959e69a7a13eae66439dd8c0268f5cbaea72bf0fa1c692b8f"
+  },
+  "entry_enabled": false,
+  "limits": "Conditional independently retained witness; pending intent freezes cancellation. Copied current tokens transferable. Joint matching-prefix rollback and identical namespace clones are undetectable. No entry recovery or live claim.",
+  "preserved_v3_json_artifacts": 33,
+  "repeated_json_artifacts": 27,
+  "runtime_chronology": "Free-running race JSONL retained and checked semantically; OS chronology excluded from byte comparison.",
+  "synthetic_uncalibrated": true,
+  "unchanged_prior_files": {
+    "docs": 45,
+    "src": 46
+  },
+  "version": "authority-witness-v4-verification"
+}

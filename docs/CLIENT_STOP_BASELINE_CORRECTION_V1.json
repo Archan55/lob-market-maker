@@ -1,0 +1,23 @@
+{
+  "baseline": "88e9b720de354a83cb7bf8f8537ee6b2c539a29e",
+  "equal_artifacts": 377,
+  "forced_expiry_cases": 27,
+  "knowledge_after_passed": 3,
+  "knowledge_before_failed": 3,
+  "versioned_diagnostic_corrections": [
+    {
+      "artifact": "deterministic_diagnostics.json",
+      "case": "session-pending",
+      "differences": {
+        "exchange_rejected_quote_attempts": [
+          0,
+          2
+        ],
+        "rejected_quote_attempts": [
+          0,
+          2
+        ]
+      }
+    }
+  ]
+}

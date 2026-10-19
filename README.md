@@ -3,6 +3,28 @@
 A deterministic, event-driven Level 2 limit-order-book market-making research
 simulator for Python 3.12+.
 
+The opt-in [transport fault study](docs/TRANSPORT_STRESS_V1.md) exercises offline
+dropped and duplicated order/cancel/report messages through finite client stop.
+It separates covered venue accounting from uncertain client knowledge, retains
+reservations across missing responses, and preserves the reliable default and
+all earlier versioned study artifacts.
+
+The [finite reconciliation study](docs/RECONCILIATION_STRESS_V1.md) adds bounded
+offline queries with explicit request, snapshot/as-of and delayed response times.
+It recovers available execution detail by stable fill ID, while absent, stale or
+incomplete evidence retains uncertainty. No-recovery runs remain paired baselines.
+
+The [out-of-order evidence study](docs/REORDERING_STRESS_V1.md) adds bounded,
+deterministic delays to selected reports and query responses. Independent full
+replays check monotone client evidence, shared fill identity, finite uncertainty
+and a stale partial-report cache correction. A separate volatile checkpoint test
+does not claim durable restart.
+
+The opt-in [active restart boundary](docs/ACTIVE_RESTART_V1.md) reserves commands
+before synthetic dispatch and permanently quarantines reopened sessions. It
+measures surviving venue exposure while the client is dead; it does not resume
+strategies, cancellation work or a scheduler.
+
 This repository is an independent portfolio project focused on market
 microstructure, latency, queue-aware fills, accounting, and reproducible
 evaluation. It is a historical research simulator—not a live trading system.
@@ -174,6 +196,31 @@ python -m pytest tests/integration/test_latency_stress_v1.py -q \
 
 CI retains each tape/config, replay tables, scheduler snapshots and the hashed
 JSON audit as a `latency-stress-v1-<commit>` artifact.
+
+The [reservation-to-close exposure study](docs/EXPOSURE_SESSION_STRESS_V1.md)
+audits 27 full replays through partial fills, cancel races, delayed knowledge,
+loss shutdown and partial session liquidation. Independent reservation and
+rational cost-pool oracles accompany minimal conservative-mark and aggregate
+reduce-only admission fixes. It distinguishes hard position caps from loss
+thresholds, residual marks and forced session expiry.
+
+```bash
+python -m pytest tests/integration/test_exposure_session_stress_v1.py -q \
+  --exposure-study-output experiments/exposure-session-stress-v1
+python tools/reproduce_exposure_defects.py
+```
+
+The opt-in [client-stop study](docs/CLIENT_STOP_STRESS_V1.md) separates stopping
+decisions from venue cancellation, acknowledgments, late fills and remaining
+exposure. It uses a finite observation horizon and reports unresolved entry
+outcomes when their arrivals exceed the tape. The forced-expiry default and
+published earlier studies remain available.
+
+```bash
+python -m pytest tests/integration/test_client_stop_stress_v1.py -q \
+  --client-stop-study-output experiments/client-stop-stress-v1
+python tools/verify_client_stop_baseline.py
+```
 
 Measure the readable reference book or the complete causal event loop:
 
@@ -447,3 +494,20 @@ Next research steps:
 
 Live trading and automatic order submission are not roadmap items for this
 research repository.
+
+### Opt-in synthetic account authority v3
+
+The separate `SimulatedAccountAuthorityV3` models an authority that checks the
+current account ownership generation and applies each order effect in one
+transaction. Takeover permanently disables new entry. `FencedRecoverySessionV3`
+adds source-bound receipt capture to the unchanged cancellation-only v2 journal.
+The authority file itself is the simulated venue; this is not a local lock
+claimed to fence a real venue.
+
+[Bounded contract](docs/ACCOUNT_FENCE_CONTRACT_V3.md),
+[findings and reproduction](docs/ACCOUNT_FENCE_V3.md), and
+[independent review](docs/ACCOUNT_FENCE_INDEPENDENT_V3.md) distinguish stale
+commands from pre-existing orders that can still fill. Shared current tokens,
+authority rollback, account aliases and separate authority files have executable
+counterexamples. All scenarios are synthetic and uncalibrated; this supplies no
+live-safety, account exposure cap, process exclusivity or exactly-once guarantee.

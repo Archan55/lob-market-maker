@@ -9,6 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Record exact checkout
+        id: revision
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -22,7 +28,78 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --latency-study-output experiments/latency-stress-v1 --exposure-study-output experiments/exposure-session-stress-v1 --client-stop-study-output experiments/client-stop-stress-v1 --transport-study-output experiments/transport-stress-v1 --reconciliation-study-output experiments/reconciliation-stress-v1 --reordering-study-output experiments/reordering-stress-v1 --durable-study-output experiments/durable-recovery-v1 --active-restart-output experiments/active-restart-v1 --outbound-recovery-output experiments/outbound-recovery-v2 --account-fence-output experiments/account-fence-v3 --authority-witness-output experiments/authority-witness-v4 --junitxml=experiments/active-restart-v1/aggregate-tests.xml
+      - name: Verify independent authority witness repeats and exact prior preservation
+        run: python tools/verify_authority_witness.py
+      - name: Verify read-only pending cancellation classification and prior preservation
+        run: |
+          python -m tools.pending_intent_experiment experiments/pending-intent-evidence
+          python tools/reproduce_pending_evidence_defect.py
+          python --version > experiments/pending-intent-evidence/python-version.txt
+          python -m pip freeze > experiments/pending-intent-evidence/requirements-observed.txt
+          git rev-parse HEAD > experiments/pending-intent-evidence/checkout-sha.txt
+      - name: Reproduce malformed issuance defect against pinned prototype
+        run: python tools/reproduce_authority_witness_defect.py
+      - name: Verify simulated account fence repeats and exact prior v2 preservation
+        run: python tools/verify_account_fence.py
+      - name: Reproduce source-bound account receipt defect before and after
+        run: python tools/reproduce_account_fence_defect.py
+      - name: Verify outbound receipts cancellation recovery and prior quarantine preservation
+        run: python tools/verify_outbound_recovery.py
+      - name: Reproduce independent outbound recovery defects before and after
+        run: python tools/reproduce_outbound_review_defects.py
+      - name: Verify guarded active restart repeats and prior durable preservation
+        run: python tools/verify_active_restart.py
+      - name: Reproduce new boundary review defects before and after
+        run: python tools/reproduce_active_restart_defects.py
+      - name: Verify durable restart repeats and exact prior head preservation
+        run: python tools/verify_durable_recovery.py
+      - name: Reproduce independent review defects against initial durable implementation
+        run: python tools/reproduce_durable_review_defects.py
+      - name: Verify reordered evidence repeats and all prior PR2 studies offline
+        run: python tools/verify_reordering_evidence.py
+      - name: Reproduce stale partial-report regression against pinned strategy
+        run: python tools/reproduce_reordering_defect.py
+      - name: Verify bounded reconciliation repeats and exact prior PR2 baseline offline
+        run: python tools/verify_reconciliation_evidence.py
+      - name: Verify reliable baseline and independent transport repeats offline
+        run: python tools/verify_transport_evidence.py
+      - name: Reproduce exposure and mark defects against pinned prior head
+        run: python tools/reproduce_exposure_defects.py
+      - name: Verify forced-expiry baseline and unknown-cancel correction
+        run: python tools/verify_client_stop_baseline.py
+      - name: Record research environment
+        run: |
+          python --version > experiments/authority-witness-v4/python-version.txt
+          python -m pip freeze > experiments/authority-witness-v4/requirements-observed.txt
+          git rev-parse HEAD > experiments/authority-witness-v4/checkout-sha.txt
+          python --version > experiments/account-fence-v3/python-version.txt
+          python -m pip freeze > experiments/account-fence-v3/requirements-observed.txt
+          git rev-parse HEAD > experiments/account-fence-v3/checkout-sha.txt
+          python --version > experiments/exposure-session-stress-v1/python-version.txt
+          python -m pip freeze > experiments/exposure-session-stress-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/exposure-session-stress-v1/checkout-sha.txt
+          python --version > experiments/client-stop-stress-v1/python-version.txt
+          python -m pip freeze > experiments/client-stop-stress-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/client-stop-stress-v1/checkout-sha.txt
+          python --version > experiments/transport-stress-v1/python-version.txt
+          python -m pip freeze > experiments/transport-stress-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/transport-stress-v1/checkout-sha.txt
+          python --version > experiments/reconciliation-stress-v1/python-version.txt
+          python -m pip freeze > experiments/reconciliation-stress-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/reconciliation-stress-v1/checkout-sha.txt
+          python --version > experiments/reordering-stress-v1/python-version.txt
+          python -m pip freeze > experiments/reordering-stress-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/reordering-stress-v1/checkout-sha.txt
+          python --version > experiments/active-restart-v1/python-version.txt
+          python -m pip freeze > experiments/active-restart-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/active-restart-v1/checkout-sha.txt
+          python --version > experiments/durable-recovery-v1/python-version.txt
+          python -m pip freeze > experiments/durable-recovery-v1/requirements-observed.txt
+          git rev-parse HEAD > experiments/durable-recovery-v1/checkout-sha.txt
+          python --version > experiments/outbound-recovery-v2/python-version.txt
+          python -m pip freeze > experiments/outbound-recovery-v2/requirements-observed.txt
+          git rev-parse HEAD > experiments/outbound-recovery-v2/checkout-sha.txt
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
       - name: Controlled cancellation-policy experiment and audit
@@ -34,4 +111,100 @@ jobs:
         with:
           name: latency-stress-v1-${{ github.sha }}
           path: experiments/latency-stress-v1/
+          retention-days: 14
+      - name: Save client-stop research and versioned baseline correction
+        uses: actions/upload-artifact@v4
+        with:
+          name: client-stop-stress-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/client-stop-stress-v1/
+            experiments/client-stop-baseline-v1/
+          retention-days: 14
+      - name: Save reservation-to-close research evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: exposure-session-stress-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/exposure-session-stress-v1/
+            experiments/exposure-defects-v1/
+          retention-days: 14
+      - name: Save deterministic transport faults and preserved baseline evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: transport-stress-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/transport-stress-v1/
+            experiments/transport-verification-v1/
+          retention-days: 14
+      - name: Save bounded reconciliation queries, client evidence and pinned baseline
+        uses: actions/upload-artifact@v4
+        with:
+          name: reconciliation-stress-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/reconciliation-stress-v1/
+            experiments/reconciliation-verification-v1/
+          retention-days: 14
+      - name: Save out-of-order evidence, pinned defect and preservation comparisons
+        uses: actions/upload-artifact@v4
+        with:
+          name: reordering-stress-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/reordering-stress-v1/
+            experiments/reordering-verification-v1/
+            experiments/reordering-defect-v1/
+          retention-days: 14
+      - name: Save durable client restart and independent review evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: durable-recovery-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/durable-recovery-v1/
+            experiments/durable-recovery-verification-v1/
+            experiments/durable-review-v1/
+          retention-days: 14
+      - name: Save guarded active restart, surviving venue and independent review evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: active-restart-v1-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/active-restart-v1/
+            experiments/active-restart-verification-v1/
+            experiments/active-review-reproduction-v1/
+          retention-days: 14
+      - name: Save durable outbound receipts and cancellation recovery v2 evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: outbound-recovery-v2-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/outbound-recovery-v2/
+            experiments/outbound-recovery-verification-v2/
+            experiments/outbound-review-reproduction-v2/
+            experiments/active-restart-v1/aggregate-tests.xml
+          retention-days: 14
+      - name: Save simulated account authority and independent adversarial evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: account-fence-v3-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/account-fence-v3/
+            experiments/account-fence-verification-v3/
+            experiments/account-fence-review-reproduction-v3/
+            experiments/active-restart-v1/aggregate-tests.xml
+          retention-days: 14
+      - name: Save independent witness and token issuance rollback evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: authority-witness-v4-${{ steps.revision.outputs.sha }}
+          path: |
+            experiments/authority-witness-v4/
+            experiments/authority-witness-verification-v4/
+            experiments/authority-witness-review-v4/
+            experiments/active-restart-v1/aggregate-tests.xml
+          retention-days: 14
+      - name: Save read-only pending intent and autonomous fill evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pending-intent-evidence-${{ steps.revision.outputs.sha }}
+          path: experiments/pending-intent-evidence/
           retention-days: 14
