@@ -11,6 +11,7 @@ import argparse
 import copy
 import hashlib
 import json
+import subprocess
 import tempfile
 from dataclasses import asdict
 from pathlib import Path
@@ -269,7 +270,9 @@ def run_case(
     )
 
 
-def negative_cases(case: dict[str, Any]) -> dict[str, Any]:
+def negative_cases(
+    case: dict[str, Any], no_commit: dict[str, Any], committed_no_fills: dict[str, Any]
+) -> dict[str, Any]:
     capsule = case["capsule"]
     source = case["archive"]
     closed_cut = case["independently_supplied_cut"]
@@ -311,14 +314,22 @@ def negative_cases(case: dict[str, Any]) -> dict[str, Any]:
     assert restored["disposition"] == "observed_exact_commit"
     assert restored["current_history"] == "retained_prefix_behind_cut"
     outcomes["authority-only-rollback"] = restored
-    # No fills occur in either history. History 1 had cancelled target's seven
-    # units before authority restore; history 0 never committed cancellation.
-    old_archive = copy.deepcopy(source)
-    old_archive["transitions"] = []
-    old_cut = _cut(old_archive, capsule["baseline"])
+    # Actual public-API histories at their pre-market cuts. Restore history 1's
+    # authority observation to its exact baseline, keeping raw before-restore
+    # history separately. Both stopped callers retained the same pending witness.
+    capsule = no_commit["capsule"]
+    assert capsule == committed_no_fills["capsule"]
+    assert no_commit["raw_witness"] == committed_no_fills["raw_witness"]
+    first = _derived(no_commit["raw_at_cut"])
+    second = _derived(committed_no_fills["raw_at_cut"])
+    assert not first["fills_from_inputs"] and not second["fills_from_inputs"]
+    assert first["orders"][0]["cancelled_quantity"] == 0
+    assert second["orders"][0]["cancelled_quantity"] == 7
+    old_archive = no_commit["archive"]
+    old_cut = no_commit["independently_supplied_cut"]
     visible = dict(
         authority=capsule["baseline"],
-        witness=case["raw_witness"],
+        witness=no_commit["raw_witness"],
         fill_only_observation=[],
     )
     identical_decisions = [
@@ -331,8 +342,16 @@ def negative_cases(case: dict[str, Any]) -> dict[str, Any]:
         same_restored_archive=old_archive,
         same_restored_cut=old_cut,
         histories=[
-            dict(target_cancel_committed=False, historical_cancelled_quantity=0),
-            dict(target_cancel_committed=True, historical_cancelled_quantity=7),
+            dict(
+                target_cancel_committed=False,
+                raw_before_restore=no_commit["raw_at_cut"],
+                from_raw_inputs=first,
+            ),
+            dict(
+                target_cancel_committed=True,
+                raw_before_restore=committed_no_fills["raw_at_cut"],
+                from_raw_inputs=second,
+            ),
         ],
         identical_conditional_classifications=identical_decisions,
         assumptions_failed_in_second_history="archive independence and cut freshness",
@@ -340,10 +359,8 @@ def negative_cases(case: dict[str, Any]) -> dict[str, Any]:
     )
     outcomes["fill-only-indistinguishability"] = dict(
         same_visible_evidence=visible,
-        history_without_cancel_commit=dict(historical_cancelled_quantity=0),
-        history_with_cancel_then_authority_restore=dict(
-            historical_cancelled_quantity=7
-        ),
+        history_without_cancel_commit=dict(from_raw_inputs=first),
+        history_with_cancel_then_authority_restore=dict(from_raw_inputs=second),
         independent_complete_fill_stream_in_both=[],
         conclusion="full fill coverage omits cancellation disposition",
     )
@@ -380,18 +397,56 @@ def run(output: Path) -> dict[str, Any]:
                 if c["inputs"] == dict(side=1, committed=True, prefill=0, postfill=1)
             )
             (destination / "negative-cases.json").write_bytes(
-                canonical(negative_cases(positive))
+                canonical(
+                    negative_cases(
+                        positive,
+                        next(
+                            c
+                            for c in cases
+                            if c["inputs"]
+                            == dict(side=1, committed=False, prefill=0, postfill=0)
+                        ),
+                        next(
+                            c
+                            for c in cases
+                            if c["inputs"]
+                            == dict(side=1, committed=True, prefill=0, postfill=0)
+                        ),
+                    )
+                )
             )
         artifacts[label] = {
             p.name: hashlib.sha256(p.read_bytes()).hexdigest()
             for p in sorted(destination.glob("*.json"))
         }
     assert artifacts["repeat-a"] == artifacts["repeat-b"]
+    previous_paths = (
+        subprocess.check_output(
+            [
+                "git",
+                "ls-tree",
+                "-r",
+                "--name-only",
+                BASELINE,
+                "src",
+                "docs",
+                "tests",
+                "tools",
+            ]
+        )
+        .decode()
+        .splitlines()
+    )
+    for name in previous_paths:
+        assert Path(name).read_bytes() == subprocess.check_output(
+            ["git", "show", f"{BASELINE}:{name}"]
+        ), name
     result = dict(
         baseline=BASELINE,
         synthetic_uncalibrated=True,
         cases=24,
         repeated_canonical_artifacts=len(artifacts["repeat-a"]),
+        preserved_prior_files=len(previous_paths),
         canonical_sha256=artifacts["repeat-a"],
         source_sha256={
             name: hashlib.sha256(Path(name).read_bytes()).hexdigest()
@@ -400,12 +455,18 @@ def run(output: Path) -> dict[str, Any]:
                 "tools/pending_intent_experiment.py",
                 "tools/witness_independent_v4.py",
                 "docs/PENDING_INTENT_EVIDENCE_CONTRACT.md",
+                "tests/integration/test_pending_intent_evidence.py",
+                "tests/integration/test_pending_intent_independent.py",
+                "tools/reproduce_pending_evidence_defect.py",
             )
         },
         entry_recovery_enabled=False,
         pending_recovery_enabled=False,
     )
     (output / "results.json").write_bytes(canonical(result))
+    published = Path("docs/PENDING_INTENT_EVIDENCE.json")
+    if published.exists():
+        assert json.loads(published.read_bytes()) == result
     return result
 
 

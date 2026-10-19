@@ -57,6 +57,121 @@ def _lineage(value: Any) -> None:
     )
 
 
+def _text(value: Any) -> None:
+    _require(type(value) is str and bool(value), "invalid raw identity")
+
+
+def _positive(value: Any) -> None:
+    _number(value)
+    _require(value > 0, "nonpositive raw quantity/price")
+
+
+def _raw_event(event: Any) -> None:
+    """Strict independent schema checks before the raw arithmetic auditor.
+
+    The older auditor establishes algebra for already valid inputs; algebra
+    alone also balances some malformed negative and bool-valued inputs.
+    This deliberately supports only the experiment's client-ID cancel subset.
+    """
+    _require(type(event) is dict, "raw event object")
+    kind = event.get("kind")
+    if kind == "claim":
+        _keys(
+            event,
+            ("kind", "owner_id", "session_id", "strategy_id", "expected_generation"),
+        )
+        for name in ("owner_id", "session_id", "strategy_id"):
+            _text(event[name])
+        _number(event["expected_generation"])
+        return
+    _require(kind in ("command", "trade"), "raw event kind")
+    _number(event.get("timestamp_ns"))
+    if kind == "trade":
+        _keys(event, ("kind", "side", "quantity", "timestamp_ns"))
+        _require(
+            type(event["side"]) is int and event["side"] in (-1, 1), "invalid raw side"
+        )
+        _positive(event["quantity"])
+        return
+    _keys(event, ("kind", "token", "command_id", "request", "timestamp_ns"))
+    _text(event["command_id"])
+    token = event["token"]
+    _keys(
+        token,
+        (
+            "authority_id",
+            "account_id",
+            "generation",
+            "owner_id",
+            "session_id",
+            "strategy_id",
+        ),
+    )
+    for name in ("authority_id", "account_id", "owner_id", "session_id", "strategy_id"):
+        _text(token[name])
+    _positive(token["generation"])
+    request = event["request"]
+    _keys(request, ("kind", "payload", "dispatch_timestamp_ns"))
+    _number(request["dispatch_timestamp_ns"])
+    _require(
+        request["dispatch_timestamp_ns"] == event["timestamp_ns"],
+        "dispatch time mismatch",
+    )
+    payload = request["payload"]
+    action = request["kind"]
+    _require(action in ("new", "cancel"), "raw command kind")
+    if action == "new":
+        _keys(
+            payload,
+            (
+                "client_order_id",
+                "side",
+                "price_ticks",
+                "quantity",
+                "strategy_id",
+                "decision_timestamp_ns",
+                "send_timestamp_ns",
+                "post_only",
+                "rest_unfilled",
+                "expire_timestamp_ns",
+            ),
+        )
+        _text(payload["client_order_id"])
+        _text(payload["strategy_id"])
+        _require(
+            type(payload["side"]) is int and payload["side"] in (-1, 1),
+            "invalid raw side",
+        )
+        _positive(payload["price_ticks"])
+        _positive(payload["quantity"])
+        _require(
+            payload["post_only"] is False
+            and payload["rest_unfilled"] is True
+            and payload["expire_timestamp_ns"] is None,
+            "unsupported raw order options",
+        )
+    else:
+        _keys(
+            payload,
+            (
+                "decision_timestamp_ns",
+                "send_timestamp_ns",
+                "order_id",
+                "client_order_id",
+            ),
+        )
+        _require(payload["order_id"] is None, "client-ID cancellation subset only")
+        _text(payload["client_order_id"])
+    for name in ("decision_timestamp_ns", "send_timestamp_ns"):
+        _number(payload[name])
+    _require(
+        payload["decision_timestamp_ns"]
+        <= payload["send_timestamp_ns"]
+        <= event["timestamp_ns"],
+        "raw command chronology",
+    )
+
+
 def _append(document: dict[str, Any], account: str, event: dict[str, Any]) -> None:
     _require(
         type(account) is str and account in document["accounts"],
@@ -78,6 +193,17 @@ def _document(value: Any, authority: str) -> None:
         all(type(v) is list and len(v) <= 1024 for v in value["accounts"].values()),
         "authority event bound",
     )
+    for account, events in value["accounts"].items():
+        _text(account)
+        for event in events:
+            _raw_event(event)
+        _require(sum(e["kind"] == "claim" for e in events) <= 64, "claim bound")
+        commands = [e for e in events if e["kind"] == "command"]
+        _require(len({e["command_id"] for e in commands}) <= 256, "command bound")
+        _require(
+            sum(e["request"]["kind"] == "new" for e in commands) <= 64,
+            "order bound",
+        )
     # This is the prior independently authored integer raw-input auditor, not
     # the venue's _fold/_apply/snapshot. Scope remains its client-ID cancel subset.
     reconstruct(value)
