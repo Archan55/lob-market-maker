@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Record exact checkout
+        run: git rev-parse HEAD
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -25,3 +30,15 @@ jobs:
         run: python -m pytest --cov=lobmm --cov-report=term-missing
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Reproduce exact accounting defect before and after
+        run: |
+          python tools/reproduce_exact_accounting.py
+          python -m pip freeze > experiments/exact-accounting-review/requirements-observed.txt
+          git rev-parse HEAD > experiments/exact-accounting-review/checkout-sha.txt
+      - name: Save original synthetic accounting regression evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: exact-accounting-${{ github.event.pull_request.head.sha || github.sha }}
+          path: experiments/exact-accounting-review/
+          retention-days: 14
