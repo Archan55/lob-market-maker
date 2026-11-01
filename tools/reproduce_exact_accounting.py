@@ -86,8 +86,10 @@ def run(
     cases = list(xml.iter("testcase"))
     errors = [case for case in cases if case.find("error") is not None]
     failures = [case for case in cases if case.find("failure") is not None]
-    if errors:
-        raise RuntimeError(f"{label}: test collection/runtime setup errors")
+    if errors or any(case.find("skipped") is not None for case in cases):
+        raise RuntimeError(f"{label}: test setup errors or skipped regressions")
+    if label in ("before", "after") and len(cases) != 39:
+        raise RuntimeError(f"{label}: did not execute all 39 original regressions")
     if label == "before":
         required = [
             case

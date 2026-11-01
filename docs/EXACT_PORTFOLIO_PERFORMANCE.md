@@ -124,6 +124,14 @@ It is deliberately an explicit diagnostic rather than a CI timing gate.
 The local complete gate passes 309 tests with 90.60% branch-aware package
 coverage, Ruff lint/format and strict mypy on Python 3.12.14. These checks support
 the implementation's correctness; their count is not an empirical trading result.
+The clean local reproduction at `29fbf189a7554fb3989e476b9b133d36e56b9288`
+records 25 failures / 14 passes on main versus 39 passes after, and separately
+three specified guard failures / 13 passes on old PR3 versus 16 passes after.
+The ordinary 300-event smoke run also completes. Independent review verifies the
+exact factor logic, unchanged view-check units, all 17 retained evidence hashes,
+sample matching and the reported timing ratios. The archive-based worker's
+import/source/harness/input/behavior checks were validated separately; that extra
+validation timing is excluded from the research samples.
 
 The observed measurements used the original harness preserved byte-for-byte as
 `.py.txt` files in [the evidence directory](evidence/exact-accounting-20261101/),
