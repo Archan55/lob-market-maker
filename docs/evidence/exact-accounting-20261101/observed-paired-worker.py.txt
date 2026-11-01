@@ -1,0 +1,68 @@
+from __future__ import annotations
+import cProfile
+import gc
+import hashlib
+import json
+import os
+from pathlib import Path
+import pstats
+import resource
+import sys
+import tempfile
+import time
+
+root, expected, output, mode = Path(sys.argv[1]), sys.argv[2], Path(sys.argv[3]), sys.argv[4]
+sys.path.insert(0, str(root / 'src'))
+from lobmm.backtest import run_backtest
+from lobmm.config import load_config
+from lobmm.data import event_stream_sha256
+from lobmm.synthetic import generate_synthetic_events
+from lobmm.validation import validate_event_stream
+import lobmm.portfolio as portfolio_module
+
+source = Path(portfolio_module.__file__).resolve()
+assert source == (root / 'src/lobmm/portfolio.py').resolve()
+config = load_config(root / 'configs/benchmark.yaml')
+config = config.model_copy(update={
+    'synthetic': config.synthetic.model_copy(update={'event_count':20000}),
+    'backtest': config.backtest.model_copy(update={'track_memory':False}),
+    'output':config.output.model_copy(update={'write_plots':False})})
+config_text=json.dumps(config.model_dump(mode='json'),sort_keys=True,separators=(',',':'))
+events = generate_synthetic_events(config)
+validation = validate_event_stream(events, mode=config.data.validation_mode)
+
+def checks(result):
+    d=result.diagnostics
+    a=result.metrics['trading_activity']
+    return {'event_count':d['events_processed'],'scheduler_count':d['scheduler_events_processed'],
+            'fill_events':a['fill_events'],'buy_volume':a['buy_volume'],'sell_volume':a['sell_volume'],
+            'end_inventory':d['end_inventory'],'pnl':{k:result.metrics['pnl'][k]
+                for k in ('net_pnl','gross_pnl','fees','rebates')}}
+
+with tempfile.TemporaryDirectory(prefix='lob-paired-bench-') as temporary:
+    options={'output_root':temporary,'generate_plots':False,
+             'input_validation':validation,'persist_artifacts':False}
+    warm=run_backtest(config,events,run_name='warmup',**options)
+    expected_checks=checks(warm)
+    del warm
+    gc.collect()
+    profile=cProfile.Profile() if mode=='profile' else None
+    if profile is not None:profile.enable()
+    result=run_backtest(config,events,run_name='timed',**options)
+    if profile is not None:
+        profile.disable()
+        profile.dump_stats(str(output.with_suffix('.prof')))
+        with output.with_suffix('.profile.txt').open('w') as stream:
+            pstats.Stats(profile,stream=stream).strip_dirs().sort_stats('cumulative').print_stats(35)
+    assert checks(result)==expected_checks
+report={'expected_revision':expected,'portfolio_source':str(source),
+        'portfolio_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
+        'effective_config_sha256':hashlib.sha256(config_text.encode()).hexdigest(),
+        'event_stream_sha256':event_stream_sha256(events),
+        'elapsed_seconds':result.diagnostics['wall_clock_seconds'],
+        'mode':mode,'checks':checks(result),'python':sys.version,
+        'max_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+        'timing_scope':'unprofiled scheduler.run only; one prior full warmup, no tracing/serialization/plots',
+        'config':json.loads(config_text)}
+output.write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps({k:report[k] for k in ('expected_revision','elapsed_seconds','mode','checks')}))

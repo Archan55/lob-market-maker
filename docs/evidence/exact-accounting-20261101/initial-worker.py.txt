@@ -1,0 +1,94 @@
+from __future__ import annotations
+import hashlib
+import json
+from pathlib import Path
+import resource
+import sys
+import time
+from decimal import Decimal, getcontext
+from fractions import Fraction
+
+root, label, kind, output = Path(sys.argv[1]), sys.argv[2], sys.argv[3], Path(sys.argv[4])
+sys.path.insert(0, str(root / 'src'))
+import lobmm.portfolio as module
+from lobmm.enums import Side
+
+source = Path(module.__file__).resolve()
+assert source == (root / 'src/lobmm/portfolio.py').resolve()
+assert getcontext().prec == 28
+report = {'label': label, 'workload': kind, 'source': str(source),
+          'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
+          'python': sys.version, 'int_max_str_digits': sys.get_int_max_str_digits(),
+          'checkpoints': []}
+started = time.perf_counter()
+
+def save():
+    report['elapsed_seconds'] = time.perf_counter() - started
+    report['max_rss_kib'] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    output.write_text(json.dumps(report, indent=2) + '\n')
+
+if kind == 'direct':
+    render = getattr(module, '_fraction_decimal', None)
+    if render is None:
+        report['status'] = 'not_applicable_no_baseline_helper'
+    else:
+        value = Fraction(101) - Fraction(3, 4) ** 2149
+        report['fraction_denominator_bits'] = value.denominator.bit_length()
+        try:
+            rendered = render(value)
+            assert Fraction(rendered) == value
+            report['status'] = 'completed_exact'
+        except Exception as exc:
+            report.update(status='exception', exception_type=type(exc).__name__, exception=str(exc))
+    save()
+    raise SystemExit(0)
+
+ledger = module.Portfolio(tick_value='0.01', identity_tolerance='1e-12')
+reference_inventory = reference_cash = 0
+operations = 0
+cycle = 0
+last_operation = ''
+def fill(side, quantity, price):
+    global reference_inventory, reference_cash, operations, last_operation
+    old = vars(ledger).copy()
+    try:
+        snapshot = ledger.record_fill(side=side, quantity=quantity, price_ticks=price,
+                                      timestamp_ns=operations + 1, fee=0, rebate=0,
+                                      mark_ticks=100)
+    except Exception:
+        report['rejected_operation_atomic'] = vars(ledger) == old
+        raise
+    reference_inventory += int(side) * quantity
+    reference_cash -= int(side) * quantity * price
+    operations += 1
+    assert snapshot.inventory == reference_inventory
+    assert snapshot.trade_cash_ticks == reference_cash
+    assert snapshot.fill_count == operations
+    assert Fraction(snapshot.gross_pnl_ticks) == reference_cash + reference_inventory * 100
+
+try:
+    if kind == 'growth':
+        last_operation = 'initial_buy'
+        fill(Side.BID, 3, 100)
+    for cycle in range(1, 2305):
+        last_operation = 'buy'
+        fill(Side.BID, 1, 101)
+        last_operation = 'sell'
+        fill(Side.ASK, 1, 100)
+        if cycle in (128, 512, 1024, 2048, 2304):
+            pool = getattr(ledger, '_cost_basis_ticks', None)
+            report['checkpoints'].append({
+                'cycles': cycle, 'operations': operations,
+                'elapsed_seconds': time.perf_counter() - started,
+                'inventory': ledger.inventory, 'cash_ticks': ledger.trade_cash_ticks,
+                'basis_denominator_bits': pool.denominator.bit_length() if pool is not None else None,
+                'average_decimal_digits': len(ledger.average_cost_ticks.as_tuple().digits)
+                    if ledger.average_cost_ticks is not None else None})
+            save()
+    report['status'] = 'completed'
+except Exception as exc:
+    report.update(status='exception', exception_type=type(exc).__name__, exception=str(exc))
+report.update(cycle=cycle, operation=last_operation, successful_operations=operations,
+              inventory=ledger.inventory, cash_ticks=ledger.trade_cash_ticks,
+              fill_count=ledger.fill_count, exact_integer_oracle_passed=True)
+save()
