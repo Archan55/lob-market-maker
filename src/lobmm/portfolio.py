@@ -560,6 +560,8 @@ class Portfolio:
         if self.inventory != self.buy_volume - self.sell_volume:
             raise AccountingError("inventory/fill volume identity failed")
         tolerance = Fraction(_decimal(self.identity_tolerance))
+        if tolerance < 0:
+            raise AccountingError("identity_tolerance must be nonnegative")
         if self.average_cost_ticks is not None:
             average = _decimal(self.average_cost_ticks)
             if self._average_cost_view is None or (
