@@ -225,7 +225,7 @@ def _fraction_decimal(value: Fraction) -> Decimal:
     if denominator == 1:
         scale = max(twos, fives)
         coefficient = value.numerator * 2 ** (scale - twos) * 5 ** (scale - fives)
-        digits = tuple(int(char) for char in str(abs(coefficient)))
+        digits = Decimal(abs(coefficient)).as_tuple().digits
         return Decimal((int(coefficient < 0), digits, -scale))
     try:
         with localcontext():
