@@ -215,13 +215,31 @@ def _fraction_decimal(value: Fraction) -> Decimal:
     """
 
     denominator = value.denominator
-    twos = fives = 0
-    while denominator % 2 == 0:
-        denominator //= 2
-        twos += 1
-    while denominator % 5 == 0:
-        denominator //= 5
-        fives += 1
+    if denominator == 1:
+        return Decimal(value.numerator)
+    # Count powers of two in one exact bit operation. Remove powers of five
+    # in exponentially growing chunks, then consume the remaining valuation
+    # in descending chunks. Long, valid partial-close histories can otherwise
+    # require thousands of big-integer divisions for every displayed field.
+    twos = (denominator & -denominator).bit_length() - 1
+    denominator >>= twos
+    fives = 0
+    chunks: list[tuple[int, int]] = []
+    power, exponent = 5, 1
+    while True:
+        quotient, remainder = divmod(denominator, power)
+        if remainder:
+            break
+        denominator = quotient
+        fives += exponent
+        chunks.append((power, exponent))
+        power *= power
+        exponent *= 2
+    for power, exponent in reversed(chunks):
+        quotient, remainder = divmod(denominator, power)
+        if not remainder:
+            denominator = quotient
+            fives += exponent
     if denominator == 1:
         scale = max(twos, fives)
         coefficient = value.numerator * 2 ** (scale - twos) * 5 ** (scale - fives)
@@ -542,22 +560,20 @@ class Portfolio:
         if self.inventory != self.buy_volume - self.sell_volume:
             raise AccountingError("inventory/fill volume identity failed")
         tolerance = Fraction(_decimal(self.identity_tolerance))
-        if self.average_cost_ticks is not None and (
-            self._average_cost_view is None
-            or abs(self.inventory)
-            * abs(
-                Fraction(_decimal(self.average_cost_ticks))
-                - Fraction(self._average_cost_view)
-            )
-            > tolerance
-        ):
-            raise AccountingError("average-cost identity failed: average view changed")
-        if (
-            abs(
-                Fraction(_decimal(self.realized_pnl_ticks))
-                - Fraction(self._realized_view)
-            )
-            > tolerance
+        if self.average_cost_ticks is not None:
+            average = _decimal(self.average_cost_ticks)
+            if self._average_cost_view is None or (
+                average != self._average_cost_view
+                and abs(self.inventory)
+                * abs(Fraction(average) - Fraction(self._average_cost_view))
+                > tolerance
+            ):
+                raise AccountingError(
+                    "average-cost identity failed: average view changed"
+                )
+        realized = _decimal(self.realized_pnl_ticks)
+        if realized != self._realized_view and (
+            abs(Fraction(realized) - Fraction(self._realized_view)) > tolerance
         ):
             raise AccountingError("average-cost identity failed: realized view changed")
         if (self.inventory == 0 and self._cost_basis_ticks != 0) or (
