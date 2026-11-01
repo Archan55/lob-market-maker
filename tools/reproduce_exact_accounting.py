@@ -21,6 +21,10 @@ TESTS = {
     "tests/integration/test_exact_portfolio_backtest.py": "c146b47b6b7c68643d9b733cb90776995a5b35dfc5aadebc62125bdebcfd6b17",
     "tests/unit/test_portfolio_presentation_guard_independent.py": "809cb6917a3ac5a1bc4b2d8d60a83dfabe75430e7ff2e9e3388bdb127b0487a6",
 }
+RENDER_BASELINE = "116a8618e4fe5157597015e3bf08f793ac7b720b"
+RENDER_TESTS = {
+    "tests/unit/test_portfolio_decimal_growth_independent.py": "84f49ec867b9f71c5882500654355adc0d64bfd6d32590c7c3299e5b84567430",
+}
 
 # Import identity is recorded in the very process that executes the tests.
 RUNNER = """
@@ -42,7 +46,12 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def run(root: Path, output: Path, label: str) -> dict[str, object]:
+def run(
+    root: Path,
+    output: Path,
+    label: str,
+    tests: dict[str, str] = TESTS,
+) -> dict[str, object]:
     env = dict(os.environ, PYTHONPATH=str(root / "src"))
     command = [
         sys.executable,
@@ -51,12 +60,27 @@ def run(root: Path, output: Path, label: str) -> dict[str, object]:
         str(root),
         str(output),
         label,
-        *TESTS,
+        *tests,
         "-q",
         "--tb=short",
         f"--junitxml={output / (label + '.xml')}",
     ]
-    result = subprocess.run(command, cwd=root, env=env, capture_output=True, text=True)
+    try:
+        result = subprocess.run(
+            command,
+            cwd=root,
+            env=env,
+            capture_output=True,
+            text=True,
+            timeout=180 if label.startswith("growth-") else None,
+        )
+    except subprocess.TimeoutExpired as exc:
+        captured = "".join(
+            value.decode(errors="replace") if isinstance(value, bytes) else value or ""
+            for value in (exc.stdout, exc.stderr)
+        )
+        (output / (label + ".log")).write_text(captured + "\nTimed out after 180s.\n")
+        raise RuntimeError(f"{label}: bounded rendering regression timed out") from exc
     (output / (label + ".log")).write_text(result.stdout + result.stderr)
     xml = ET.parse(output / (label + ".xml"))
     cases = list(xml.iter("testcase"))
@@ -85,8 +109,29 @@ def run(root: Path, output: Path, label: str) -> dict[str, object]:
             raise RuntimeError(
                 "pinned source did not reproduce the declared accounting failures"
             )
+    elif label == "growth-before":
+        required = {
+            "test_public_small_fill_cycles_survive_terminating_decimal_growth",
+            "test_reachable_4301_digit_decimal_renders_exactly_without_guard_override[1]",
+            "test_reachable_4301_digit_decimal_renders_exactly_without_guard_override[-1]",
+        }
+        if (
+            result.returncode != 1
+            or len(cases) != 16
+            or {case.attrib["name"] for case in failures} != required
+            or any(
+                "ValueError: Exceeds the limit (4300 digits) for integer string conversion"
+                not in str(case.find("failure").text)
+                for case in failures  # type: ignore[union-attr]
+            )
+        ):
+            raise RuntimeError(
+                "pinned PR3 source did not reproduce the declared integer-string guard failures"
+            )
     elif result.returncode != 0 or failures:
         raise RuntimeError("corrected source failed the unchanged regressions")
+    if label == "growth-after" and len(cases) != 16:
+        raise RuntimeError("corrected source did not execute all rendering regressions")
     return {
         "exit_code": result.returncode,
         "tests": len(cases),
@@ -94,6 +139,55 @@ def run(root: Path, output: Path, label: str) -> dict[str, object]:
         "passed": len(cases) - len(failures),
         "failed_cases": [case.attrib["name"] for case in failures],
     }
+
+
+def reproduce_rendering(output: Path, head: str, dirty: bool) -> dict[str, object]:
+    """Retain the separate PR3 regression without replacing the main comparison."""
+
+    output = output / "decimal-growth"
+    output.mkdir(parents=True, exist_ok=True)
+    for name, expected in RENDER_TESTS.items():
+        if digest(ROOT / name) != expected:
+            raise RuntimeError(f"independent rendering test hash changed: {name}")
+    archive = subprocess.check_output(["git", "archive", RENDER_BASELINE], cwd=ROOT)
+    with tempfile.TemporaryDirectory(prefix="lob-decimal-growth-") as directory:
+        baseline = Path(directory)
+        with tarfile.open(fileobj=io.BytesIO(archive)) as bundle:
+            bundle.extractall(baseline, filter="data")
+        for name in RENDER_TESTS:
+            shutil.copy2(ROOT / name, baseline / name)
+        before = run(baseline, output, "growth-before", RENDER_TESTS)
+        for name in ("portfolio.py", "exchange.py"):
+            shutil.copy2(
+                baseline / "src/lobmm" / name, output / ("growth-before-" + name)
+            )
+    after = run(ROOT, output, "growth-after", RENDER_TESTS)
+    for name in ("portfolio.py", "exchange.py"):
+        shutil.copy2(ROOT / "src/lobmm" / name, output / ("growth-after-" + name))
+    for name in RENDER_TESTS:
+        shutil.copy2(ROOT / name, output / Path(name).name)
+    source_hashes = {}
+    for label in ("growth-before", "growth-after"):
+        imports = json.loads((output / (label + "-imports.json")).read_text())
+        for name in ("portfolio.py", "exchange.py"):
+            saved = label + "-" + name
+            source_hashes[saved] = digest(output / saved)
+            if imports[name]["sha256"] != source_hashes[saved]:
+                raise RuntimeError(f"source changed during {label} tests: {name}")
+    report = {
+        "baseline": RENDER_BASELINE,
+        "checkout": head,
+        "working_tree_dirty": dirty,
+        "python": sys.version,
+        "tests_sha256": RENDER_TESTS,
+        "source_sha256": source_hashes,
+        "subprocess_timeout_seconds": 180,
+        "before": before,
+        "after": after,
+        "scope": "Fixed synthetic partial-close sequence and exact rendering; no market-data or profitability claim.",
+    }
+    (output / "report.json").write_text(json.dumps(report, indent=2) + "\n")
+    return report
 
 
 def main() -> None:
@@ -125,14 +219,15 @@ def main() -> None:
     head = subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
     ).strip()
+    dirty = bool(
+        subprocess.check_output(
+            ["git", "status", "--porcelain"], cwd=ROOT, text=True
+        ).strip()
+    )
     report = {
         "baseline": BASELINE,
         "checkout": head,
-        "working_tree_dirty": bool(
-            subprocess.check_output(
-                ["git", "status", "--porcelain"], cwd=ROOT, text=True
-            ).strip()
-        ),
+        "working_tree_dirty": dirty,
         "python": sys.version,
         "tests_sha256": TESTS,
         "source_sha256": {
@@ -149,7 +244,12 @@ def main() -> None:
         "scope": "Original synthetic regressions only; no market-data or profitability claim.",
     }
     (output / "report.json").write_text(json.dumps(report, indent=2) + "\n")
-    print(json.dumps({"before": before, "after": after}, indent=2))
+    rendering = reproduce_rendering(output, head, dirty)
+    print(
+        json.dumps(
+            {"before": before, "after": after, "decimal_growth": rendering}, indent=2
+        )
+    )
 
 
 if __name__ == "__main__":

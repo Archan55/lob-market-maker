@@ -1,0 +1,43 @@
+         28465793 function calls (28415962 primitive calls) in 13.915 seconds
+
+   Ordered by: cumulative time
+   List reduced from 318 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.045    0.045   14.504   14.504 backtest.py:83(run_backtest)
+        1    0.036    0.036   13.765   13.765 scheduler.py:224(run)
+    80651    0.131    0.000   13.729    0.000 scheduler.py:205(run_one)
+    80651    0.308    0.000   13.116    0.000 backtest.py:442(handler)
+    20772    0.117    0.000    6.718    0.000 portfolio.py:483(_mark_to_market)
+    19992    0.032    0.000    6.710    0.000 portfolio.py:470(mark_to_market)
+    25025    0.525    0.000    3.986    0.000 portfolio.py:531(assert_invariants)
+    24245    0.362    0.000    3.415    0.000 portfolio.py:594(_snapshot)
+  1094556    0.999    0.000    2.134    0.000 fractions.py:186(__new__)
+   722717    0.424    0.000    1.936    0.000 fractions.py:613(forward)
+    36779    0.280    0.000    1.463    0.000 backtest.py:852(_dataclass_row)
+   320427    0.965    0.000    1.452    0.000 portfolio.py:208(_fraction_decimal)
+     3473    0.011    0.000    1.289    0.000 backtest.py:429(enforce_continuous_risk)
+  4969205    0.813    0.000    1.276    0.000 {built-in method builtins.isinstance}
+    49270    0.154    0.000    1.169    0.000 portfolio.py:305(cash)
+     3473    0.022    0.000    1.169    0.000 portfolio.py:503(snapshot)
+    20772    0.016    0.000    1.135    0.000 backtest.py:241(append_snapshot)
+   645651    0.490    0.000    0.872    0.000 backtest.py:860(_serializable)
+   421687    0.380    0.000    0.739    0.000 fractions.py:742(_mul)
+   172619    0.167    0.000    0.724    0.000 fractions.py:627(reverse)
+    40000    0.176    0.000    0.612    0.000 book.py:212(view)
+    25532    0.019    0.000    0.590    0.000 backtest.py:267(apply_exchange_result)
+    80651    0.145    0.000    0.557    0.000 scheduler.py:109(schedule)
+   945167    0.416    0.000    0.540    0.000 fractions.py:317(_from_coprime_ints)
+    20000    0.034    0.000    0.499    0.000 strategy_runtime.py:51(deliver_market)
+    80651    0.207    0.000    0.482    0.000 {built-in method _heapq.heappop}
+  1070253    0.250    0.000    0.463    0.000 <frozen abc>:117(__instancecheck__)
+  1790379    0.448    0.000    0.448    0.000 <string>:2(__lt__)
+    20000    0.065    0.000    0.447    0.000 exchange.py:91(handle_market_event)
+   226391    0.249    0.000    0.436    0.000 fractions.py:710(_add)
+      780    0.002    0.000    0.430    0.001 portfolio.py:331(record_fill)
+    25210    0.024    0.000    0.424    0.000 strategy_runtime.py:76(decide)
+      780    0.011    0.000    0.419    0.001 portfolio.py:359(_record_fill)
+    31967    0.089    0.000    0.404    0.000 channels.py:103(send)
+    25210    0.095    0.000    0.400    0.000 base.py:267(decide)
+
+

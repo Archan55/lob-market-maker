@@ -1,0 +1,22 @@
+{
+  "scope": "Original synthetic engineering evidence only; no market data or private quant-study outputs.",
+  "files": {
+    "failure-contract.json": "84f20f48d8ec2dbf1f54b69e85d7ffe64e287a114d4a821665fea376825d1694",
+    "initial-diagnostic.json": "270ede0646116b6064390cc0639241e600b0b3ec8a628569c7f53d37f73a8ffa",
+    "initial-runner.py.txt": "93823557c0b338b535bfdc8f49dd55b7c9f2daecadd8f07351437adf6867eeae",
+    "initial-worker.py.txt": "234babda608ed93d3b378485671f99e4a4a86ad2ff172981cf04ccbb29d8b416",
+    "numeric-repair-comparison.json": "8d35b7a01909b5d17af726c4d8fb1cc6f8619834ccf42f8b9262abbdbae2a447",
+    "numeric-repair-growth.json": "917574ce0ce33ad1e5e231a6513edc1f60f96ffc7b749762d12ea3c3095d2979",
+    "numeric-repair-profile.json": "564332a15cf9d23880c5886447c90e290576a131b65952e42f7edcb80fc3277e",
+    "numeric-repair-profile.txt": "b733e61c247c43bd0308ba013b563b12983d56655a0ce8498d407c4f56e8b751",
+    "observed-dependencies.txt": "501aa2668a59d4e4a01d912af0927356abfe0b91631d71850122526f267b894e",
+    "observed-paired-runner.py.txt": "44b554fd8d0c0be434648463f0d9e5c40e02b65c6fef8624d4522bc81c3876f4",
+    "observed-paired-worker.py.txt": "26796534eee175c47be15c10c601aebf79af47f0a5da537458142442ff0e38ac",
+    "optimized-growth-overlapped.json": "906e69d68406f13f49a68e7774a3c9f46a69f17fe1a35e0a010af41a3c923437",
+    "optimized-interrupted-comparison.json": "b7e4a69b151657250256d9b1576de0e8f24cdccf80c02af6539544d8f5e8ef51",
+    "optimized-reviewed-comparison.json": "9406b3fab12fd72a940128b4c31c309300173e789662b6c559caf9bebb0e6b4f",
+    "optimized-reviewed-growth.json": "bb0dada5fe92d33e811b549b033ce153afd3cd10b37bd5991ef1156756cf2027",
+    "original-pr3-growth.json": "646ce1a038c2ac5fa7d9faf567ca4270e810e0dfcb9eeea6dc29bbd0b998f510",
+    "performance-contract.json": "6419e13bad0599e47555ae61d680968a1bf24915b76c5e83f0f42cc256462d6d"
+  }
+}

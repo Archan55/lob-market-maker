@@ -1,0 +1,41 @@
+from pathlib import Path
+import hashlib
+import json
+import subprocess
+import sys
+import time
+
+root = Path(__file__).resolve().parent
+contract = json.loads((root / 'contract.json').read_text())
+sources = {'baseline': Path('/tmp/lob-performance-baseline-20261101'),
+           'candidate': Path('/workspace/lob-market-maker-accounting-fix')}
+order = [('baseline','flat'),('candidate','flat'),('baseline','growth'),
+         ('candidate','growth'),('baseline','direct'),('candidate','direct')]
+results = []
+started = time.monotonic()
+for label, kind in order:
+    path = root / (label + '-' + kind + '.json')
+    command = [sys.executable, str(root / 'worker.py'), str(sources[label]),
+               label, kind, str(path)]
+    remaining = 240 - (time.monotonic() - started)
+    if remaining <= 0:
+        results.append({'label':label,'workload':kind,'status':'total_deadline'})
+        break
+    try:
+        result = subprocess.run(command, capture_output=True, text=True,
+                                timeout=min(90, remaining))
+        (root / (label+'-'+kind+'.log')).write_text(result.stdout+result.stderr)
+        if result.returncode:
+            results.append({'label':label,'workload':kind,'status':'worker_setup_failure',
+                            'returncode':result.returncode})
+            break
+        observation = json.loads(path.read_text())
+    except subprocess.TimeoutExpired:
+        observation = json.loads(path.read_text()) if path.exists() else {}
+        observation.update(label=label,workload=kind,status='timeout')
+    results.append(observation)
+    print(json.dumps({k:observation.get(k) for k in ('label','workload','status','elapsed_seconds','cycle','exception_type')}), flush=True)
+    (root/'results.json').write_text(json.dumps({
+        'contract_sha256':hashlib.sha256((root/'contract.json').read_bytes()).hexdigest(),
+        'observations':results,
+        'normal_benchmark':'deferred if material correctness failure, per contract'},indent=2)+'\n')

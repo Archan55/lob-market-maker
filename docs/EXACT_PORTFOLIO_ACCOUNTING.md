@@ -82,6 +82,13 @@ produces all eight Parquet replay tables byte-identically before and after.
 This checks the unchanged normal witness; it does not promise byte identity for
 other histories or dependency environments.
 
+The November 1 continuation found and repaired PR3's integer-string rendering
+failure on a reachable long partial-close history. The original 39 cases remain
+frozen. See [the rendering and performance review](EXACT_PORTFOLIO_PERFORMANCE.md)
+for its separate before/after regression, predefined paired benchmark, complete
+trial disclosure and material remaining execution cost. The 289-test validation
+above describes the original October 31 head, not the final continuation head.
+
 ## Scope and compatibility
 
 This standalone fix targets unchanged main. The affected original Portfolio is

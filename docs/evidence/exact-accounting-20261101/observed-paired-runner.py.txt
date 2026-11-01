@@ -1,0 +1,60 @@
+from pathlib import Path
+import hashlib
+import json
+import subprocess
+import sys
+import time
+from statistics import median
+
+root=Path(__file__).resolve().parent
+candidate=sys.argv[1]
+folder=root/sys.argv[2];folder.mkdir(exist_ok=True)
+sources={'baseline':('/tmp/lob-performance-baseline-20261101','1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f'),
+         'candidate':('/workspace/lob-market-maker-accounting-fix',candidate)}
+order=[('baseline','candidate'),('candidate','baseline'),('baseline','candidate'),
+       ('candidate','baseline'),('baseline','candidate')]
+results=[];started=time.monotonic();status='complete';reference=None
+for pair,labels in enumerate(order):
+    for label in labels:
+        source,revision=sources[label]
+        observed=subprocess.check_output(['git','rev-parse','HEAD'],cwd=source,text=True).strip()
+        assert observed==revision,(observed,revision)
+        current=Path(source)/'src/lobmm/portfolio.py'
+        pinned=subprocess.check_output(['git','show',revision+':src/lobmm/portfolio.py'],cwd=source)
+        assert current.read_bytes()==pinned
+        output=folder/f'{pair}-{label}.json'
+        remaining=600-(time.monotonic()-started)
+        if remaining<=0:status='total_deadline';break
+        try:
+            process=subprocess.run([sys.executable,str(root/'perf_worker.py'),source,revision,str(output),'normal'],
+                capture_output=True,text=True,timeout=min(90,remaining))
+            output.with_suffix('.log').write_text(process.stdout+process.stderr)
+            if process.returncode:
+                status='worker_failure';break
+            row=json.loads(output.read_text());row.update(pair=pair,label=label)
+            if reference is None:reference=row
+            for key in ('effective_config_sha256','event_stream_sha256'):
+                assert row[key]==reference[key],key
+            for key in ('event_count','scheduler_count','fill_events','buy_volume','sell_volume','end_inventory'):
+                assert row['checks'][key]==reference['checks'][key],key
+            for key in ('net_pnl','gross_pnl','fees','rebates'):
+                assert abs(row['checks']['pnl'][key]-reference['checks']['pnl'][key])<=1e-9,key
+            results.append(row)
+            print(json.dumps({'pair':pair,'label':label,'seconds':row['elapsed_seconds']}),flush=True)
+        except subprocess.TimeoutExpired:
+            status='timeout';break
+        except Exception as exc:
+            status='mismatch_or_error:'+str(exc);break
+    partial={'status':status,'candidate':candidate,'observations':results,
+             'contract_sha256':hashlib.sha256((root/'performance-contract.json').read_bytes()).hexdigest()}
+    (folder/'report.json').write_text(json.dumps(partial,indent=2)+'\n')
+    if status!='complete':break
+ratios=[]
+if status=='complete' and len(results)==10:
+    for pair in range(5):
+        rows={r['label']:r for r in results if r['pair']==pair}
+        ratios.append(rows['candidate']['elapsed_seconds']/rows['baseline']['elapsed_seconds'])
+partial.update(paired_ratios=ratios,median_ratio=median(ratios) if ratios else None,
+               investigation_trigger=bool(ratios and median(ratios)>=1.5 and min(ratios)>=1.2))
+(folder/'report.json').write_text(json.dumps(partial,indent=2)+'\n')
+print(json.dumps({k:partial[k] for k in ('status','paired_ratios','median_ratio','investigation_trigger')}),flush=True)

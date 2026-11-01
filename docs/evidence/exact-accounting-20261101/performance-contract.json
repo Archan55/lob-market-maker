@@ -1,0 +1,64 @@
+{
+  "source_failure_contract_sha256": "84f20f48d8ec2dbf1f54b69e85d7ffe64e287a114d4a821665fea376825d1694",
+  "source_failure_head": "116a8618e4fe5157597015e3bf08f793ac7b720b",
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "trial1_numeric_repair": "7f767e126a9336b216f68ca8c73b183ed8c09723",
+  "trial2_policy": "Only a principled exact-arithmetic optimization justified by material measured regression/profiling; record its source hash/head and use the SAME frozen benchmark. No parameter search.",
+  "normal_workload": {
+    "config": "configs/benchmark.yaml",
+    "overrides": {
+      "synthetic.event_count": 20000,
+      "backtest.track_memory": false,
+      "output.write_plots": false
+    },
+    "seed": 7,
+    "source": "already inspected original synthetic engineering workload, not fresh market evidence"
+  },
+  "normal_timing": {
+    "pairs": 5,
+    "pair_order": [
+      [
+        "baseline",
+        "candidate"
+      ],
+      [
+        "candidate",
+        "baseline"
+      ],
+      [
+        "baseline",
+        "candidate"
+      ],
+      [
+        "candidate",
+        "baseline"
+      ],
+      [
+        "baseline",
+        "candidate"
+      ]
+    ],
+    "per_source_process": "one untimed warmup plus one timed full run on identical events",
+    "timer": "run_backtest diagnostics.wall_clock_seconds scheduler.run only",
+    "persist_artifacts": false,
+    "generate_plots": false,
+    "tracing": false,
+    "profiling": false,
+    "per_process_timeout_seconds": 90,
+    "total_per_trial_seconds": 600
+  },
+  "normal_checks": {
+    "identical": "effective config hash, event stream hash, market event count, scheduler count, fill event count, filled quantity, end inventory",
+    "numeric": "net/gross fees rebates within absolute1e-9; all samples retained"
+  },
+  "investigation_trigger": "median paired candidate/baseline elapsed>=1.5 AND all five ratios>=1.2; engineering investigation threshold, not trading SLO or universal throughput claim",
+  "growth_regression": {
+    "public_sequence": "BID3@100 then2304 cycles BID1@101/ASK1@100, mark100, explicitzero costs, defaultguardunchanged",
+    "oracle": "inventory3,cash-2604,fill_count4609; exact average101-(3/4)^2304",
+    "maximum_per_run_seconds": 90,
+    "purpose": "correctness and bounded growth diagnostic, no completed-work ratio for failed oldPR3"
+  },
+  "profiling_policy": "Only after trigger, one separate cProfile pass on the SAME workload; never mix profile timings into normal samples.",
+  "stopping": "Any source/config/event/behavior mismatch, accounting error or timeout stops and retains partial results; do not shorten or replace workload. After at most two implementation candidates report remaining exact-arithmetic limits rather than weaken accounting or chase timing.",
+  "forbidden": "No global integer-string guard or Decimal context changes, market acquisition, E1 data, oldstudy reopening, fee/strategy/risk tuning, or remote writes until correctness/review passes."
+}
