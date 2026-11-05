@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-05",
+  "phase": "Frozen before executing numeric witnesses, tests or implementation results",
+  "question": "Do ambient Decimal unary negation and subtraction change continuous max-loss/drawdown decisions, event evidence or failure atomicity for exact finite inputs?",
+  "hypothesis": "Current main and PR3 can produce threshold decisions inconsistent with the exact rational values, including at default precision28. This is a static prediction until reproduced.",
+  "baselines": {
+    "main": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+    "pr3": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+    "identity": "risk.py and relevant config code are byte-identical; verify imports and source SHA256 per worker, do not attribute a shared defect to PR3."
+  },
+  "branch": "fix/exact-risk-thresholds; standalone from main because defect, if confirmed, predates PR3; all earlier draft heads and stopped local branches preserved.",
+  "oracle": "Construct Decimal literals before entering test context. Convert finite exact inputs to Fraction and compute H'=max(H,P), loss iff P<=-L, otherwise drawdown iff H'-P>=D. Rational oracle uses no production risk/conversion helper or ambient Decimal arithmetic.",
+  "priority_and_compatibility": "Inclusive equality; max-loss first. Preserve existing sticky kill flag/first reason/one event and cancellation requests. Preserve current observe_pnl approved=True on a later within-limit observation even if already killed; no unrelated semantic cleanup.",
+  "core_cases": [
+    {
+      "id": "loss-safe-lead",
+      "H": "0",
+      "L": "1.2345",
+      "D": "100",
+      "P": "-1.232"
+    },
+    {
+      "id": "loss-boundary-0",
+      "H": "0",
+      "L": "1.2345",
+      "D": "100",
+      "P": "-1.2344"
+    },
+    {
+      "id": "loss-boundary-1",
+      "H": "0",
+      "L": "1.2345",
+      "D": "100",
+      "P": "-1.2345"
+    },
+    {
+      "id": "loss-boundary-2",
+      "H": "0",
+      "L": "1.2345",
+      "D": "100",
+      "P": "-1.2346"
+    },
+    {
+      "id": "drawdown-boundary-0",
+      "H": "10",
+      "L": "100",
+      "D": "1.2345",
+      "P": "8.7656"
+    },
+    {
+      "id": "drawdown-boundary-1",
+      "H": "10",
+      "L": "100",
+      "D": "1.2345",
+      "P": "8.7655"
+    },
+    {
+      "id": "drawdown-boundary-2",
+      "H": "10",
+      "L": "100",
+      "D": "1.2345",
+      "P": "8.7654"
+    },
+    {
+      "id": "drawdown-default-below",
+      "H": "0",
+      "L": "100000",
+      "D": "1000",
+      "P": "-999.99999999999999999999999999"
+    },
+    {
+      "id": "drawdown-default-equal",
+      "H": "0",
+      "L": "100000",
+      "D": "1000",
+      "P": "-1000"
+    },
+    {
+      "id": "drawdown-default-above",
+      "H": "0",
+      "L": "100000",
+      "D": "1000",
+      "P": "-1000.00000000000000000000000001"
+    },
+    {
+      "id": "loss-default-equal",
+      "H": "0",
+      "L": "999.99999999999999999999999999",
+      "D": "100000",
+      "P": "-999.99999999999999999999999999"
+    },
+    {
+      "id": "both-priority",
+      "H": "10",
+      "L": "1.2345",
+      "D": "1.2345",
+      "P": "-1.2345"
+    },
+    {
+      "id": "large-finite-equal",
+      "H": "1e40",
+      "L": "1e50",
+      "D": "1e39",
+      "P": "9e39"
+    },
+    {
+      "id": "tiny-finite-equal",
+      "H": "1.2345e-20",
+      "L": "1",
+      "D": "1e-24",
+      "P": "1.2344e-20"
+    },
+    {
+      "id": "negative-zero",
+      "H": "0",
+      "L": "1",
+      "D": "1",
+      "P": "-0.000"
+    }
+  ],
+  "contexts": [
+    {
+      "precision": 28,
+      "rounding": "ROUND_HALF_EVEN",
+      "exponents": "default",
+      "flags": "clear"
+    },
+    {
+      "precision": 3,
+      "rounding": "ROUND_HALF_EVEN",
+      "exponents": "default",
+      "flags": "clear"
+    },
+    {
+      "precision": 3,
+      "rounding": "ROUND_UP",
+      "exponents": "default",
+      "flags": "clear"
+    },
+    {
+      "precision": 3,
+      "rounding": "ROUND_HALF_EVEN",
+      "traps": [
+        "Inexact",
+        "Rounded"
+      ],
+      "flags": "clear"
+    },
+    {
+      "precision": 3,
+      "rounding": "ROUND_HALF_EVEN",
+      "Emin": -2,
+      "Emax": 2,
+      "clamp": 1,
+      "traps": [
+        "Inexact",
+        "Rounded",
+        "Underflow",
+        "Overflow",
+        "Subnormal",
+        "Clamped"
+      ],
+      "flags": "pre-set selected flags and require unchanged"
+    }
+  ],
+  "additional_cases": "Input Decimal/string/int/float conversion policy; first-event stickiness through peak/loss/recovery sequence; continuous_check cancellation and pretrade kill behavior at safe/exact boundaries; negative timestamp; NaN/sNaN/+Infinity/-Infinity/invalid string P&L rejection; invalid high watermark/config limits via explicit corruption witnesses; event/decision constructor injected failures.",
+  "observation_and_equivalence": "Compare exact reason/approval/cancel flags, H Decimal.as_tuple, first event timestamp/order/reason/observed/limit (Fraction equality plus exact Decimal representation controls), all owned state via deep snapshots, complete caller context/flags/traps and integer-string guard. Below/equal/above thresholds must match exact oracle; changed decisions are permitted only where baseline violates that oracle. No timing or economic claim.",
+  "atomicity": "For ordinary RiskManager observe_pnl validation, exact arithmetic and ordinary event/decision construction failure: H, kill flag, kill reason and event list unchanged. Does not assert whole continuous_check/exchange/concurrency/process/resource/custom-hook transaction. Validate/prepare before state commit.",
+  "conditional_implementation": "Only after at least one frozen witness reproduces an oracle mismatch or non-atomic context failure on pinned source AND independent design GO. One principled exact-threshold repair, no tolerance widening/global precision or guard changes. Copy-negate exact loss threshold; exact finite difference with sufficient isolated local precision/exponent range or equally principled exact construction; render exact event evidence. Keep public API and ordinary nonthreshold behavior.",
+  "trial_budget": "One fixed baseline diagnostic per main and PR3 using the same frozen independent test file; retain every failure/exception/state/context result. If justified, one candidate with at most two independent correctness-only repair rounds. No adaptive parameter sweep, performance optimization, changed input labels or dropped test outcomes. Unexpected counterexamples retained as review repairs; no silent corpus replacement.",
+  "end_to_end": "After correctness, one untimed baseline/candidate artifact comparison each for existing configs/ci.yaml 300 events and configs/benchmark.yaml 20000 seed7 events (track_memoryFalse,write_plotsFalse). All8Parquetbytes, config/event hashes, ordered exact risk input traces and activity/terminal metrics must match on these already exposed nonboundary runs; any changed decision needs explicit oracle evidence or stop. These are engineering integration controls, not fresh market data or economics.",
+  "checks": "Unchanged existing tests; focused independent regression file pinned before baseline execution; full pytest coverage, Ruff lint/format, strictmypy, ordinary smoke and reproducible before/after archive workers. Verify source imports/hashes and dependency metadata. Exact-head terminal CI required if publishing.",
+  "stopping": "Stop if no frozen mismatch exists, design fails independent review, unresolved oracle/atomicity/context/artifact mismatch remains after two repair rounds, or one-candidate validation completes. No re-opening Nov2 reuse, Nov4 receipts or earlier recovery studies; no timing-driven search. Preserve negative findings.",
+  "publication": "Only independently reviewed substantive confirmed correction; standalone draft PR against main under existing authorization. Verify final remote SHA and exact-head CI. No merge/deploy/trade.",
+  "restrictions": "Saved matching cloud only; no E1 licensed/private material, new data acquisition, denied action retry, purchases, credentials/access/security changes, desktop, unrelated repositories."
+}
