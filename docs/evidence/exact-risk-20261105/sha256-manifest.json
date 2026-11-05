@@ -1,0 +1,83 @@
+{
+  "scope": "Committed exact-risk evidence/report hashes; excludes manifest itself. Raw150-file savedcloud manifest is separate.",
+  "files": {
+    "compatibility.json": {
+      "size_bytes": 243,
+      "sha256": "65b9bb987c3ea0eef1b0599873499e740f8ec982eff2af627c31e3a2c15c4a3e"
+    },
+    "contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "design-review.json": {
+      "size_bytes": 1467,
+      "sha256": "1469911605941d72c1a163c12be367a438c04b376b60b07ce6c5daf88e5412f0"
+    },
+    "final-independent-review.json": {
+      "size_bytes": 2155,
+      "sha256": "08d7b048db0e40301bc47d61d7424e43823d32a75f206bc8e185bc7d6abce2bc"
+    },
+    "full-suite-imports.json": {
+      "size_bytes": 6922,
+      "sha256": "44c011ddf6741a807738735e89fd1bf0a37c39b1b598c6dd941081d0a3ae2c64"
+    },
+    "full-suite.txt": {
+      "size_bytes": 6986,
+      "sha256": "817b85c9828c71fa55f7a330c8e47a031957edecc9b816350d184eba3ec3a80d"
+    },
+    "initial-focused.txt": {
+      "size_bytes": 180,
+      "sha256": "081a5134aeb6a02260c2680eafeffbce7bfc02b31e51d32263a154ca0e27e595"
+    },
+    "integration-final-environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "integration-final-report.json": {
+      "size_bytes": 40253,
+      "sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c"
+    },
+    "local-verification.json": {
+      "size_bytes": 1232,
+      "sha256": "5c93b37020576adf63b63ec5e9c188eaa6db6ece262ca89033e6b16966c5c983"
+    },
+    "regression-final-environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "regression-final-report.json": {
+      "size_bytes": 587476,
+      "sha256": "ede7705ad5f1dc29b464b46fed59cda662b2ee76cef876c6fc3ee734256c574b"
+    },
+    "retained-workspace-manifest.json": {
+      "size_bytes": 27126,
+      "sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5"
+    },
+    "source-review.json": {
+      "size_bytes": 1899,
+      "sha256": "108592b6fdb8441f1025b0aedcf743f6fa577ec3c819838bc83e0f4ebba7fa02"
+    },
+    "triage-environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "triage-report.json": {
+      "size_bytes": 477104,
+      "sha256": "c2e34112a4771ff4008f23215ffb7811ab4f67d00abc327c40b62bad5550ac0e"
+    },
+    "triage-reproducer.py.txt": {
+      "size_bytes": 23657,
+      "sha256": "cae265165f026313cb31fd0dce33f681df2cb3fd7aa60be9a1cf5c1b8b5b1f98"
+    }
+  },
+  "report": {
+    "path": "docs/EXACT_RISK_THRESHOLDS.md",
+    "size_bytes": 11682,
+    "sha256": "522ef20f6f3f46f06ce14ef3a96210388251fe7344e65c7ebc184c0738abec4e"
+  },
+  "source_sha256": {
+    "src/lobmm/risk.py": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+    "tests/unit/test_risk_exact_thresholds_independent.py": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc",
+    "tools/reproduce_exact_risk.py": "d9b5697453f665477b424e106f663103ac07171acf92e86d0b5b685369aa3caf"
+  }
+}

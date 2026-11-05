@@ -38,4 +38,32 @@ The corpus includes 15 fixed boundary cases in five contexts (ordinary precision
 
 Initial triage used harness SHA256 `cae265165f026313cb31fd0dce33f681df2cb3fd7aa60be9a1cf5c1b8b5b1f98`. A formatting check caught one long line added by root; that format-only correction was made after triage, with the original harness bytes retained. No tests, thresholds or baseline results were replaced. Integration instrumentation was reviewed before its first run to distinguish per-risk-call context preservation from pre-existing Decimal flag changes elsewhere in the legacy engine. Final reproduction and CI use the retained final harness, with both versions identified in their reports.
 
-Final before/after and integration evidence, reproduction commands, independent audit and verified remote CI are recorded below when validation completes. Previously exposed synthetic controls remain labeled as such; no market tape, execution calibration or profitability evidence is introduced.
+The final three-source archive reproduction at `1aa9d9593c65645a077cf097922a911f5b78fbc2` again records main and PR3 at 88 failures / 25 passes each, and the candidate at **113 passes / zero failures**, with no skipped or setup-error nodes. All source, test, contract and imported-module identities match; the frozen file was never edited after execution. The first candidate needed no source repair round. Final harness SHA256 is `d9b5697453f665477b424e106f663103ac07171acf92e86d0b5b685369aa3caf`.
+
+| Untimed exposed control | Matching Parquet pairs | Exact ordered risk inputs per source | Market / scheduler events | Fills / end inventory |
+| --- | --- | --- | --- | --- |
+| Existing CI input, 300 events | 8 | 320 | 300 / 1,148 | 27 / -15 |
+| Existing benchmark, 20k seed 7 | 8 | 24,245 | 20,000 / 80,651 | 780 / -96 |
+
+Both controls match in all eight Parquet byte hashes, exact ordered risk-input trace hashes, config/event hashes, selected activity/inventory/risk/P&L metrics and event counts. Candidate per-observation context/flag/guard changes are zero across both workloads. Guard changes are zero on every source. The 20k event hash is `8a845f3b206876f8f0769d9e051d7016436355c605297f4d14fda6df2cc04237`; effective configuration hash is `3f898e5cefc4c731d1f2056d8a7f9dd491b7d3ce0772af80ba0cee227468cdbc`. These controls intentionally avoid the new boundary counterexamples; identical controls are integration evidence, not evidence that the old boundary decisions were correct.
+
+## Evidence, reproduction and publication scope
+
+Complete [triage](evidence/exact-risk-20261105/triage-report.json), [final regression](evidence/exact-risk-20261105/regression-final-report.json), [integration](evidence/exact-risk-20261105/integration-final-report.json) and [local verification](evidence/exact-risk-20261105/local-verification.json) records are retained with observed dependencies and source/import identity. The evidence manifest includes the complete original local file set. Raw source copies, failed-node logs/JUnit, exact risk traces and all 32 actual Parquet files remain at `/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/` in this saved cloud. CI independently reproduces the same frozen assertions and integration controls and uploads the originals; its archive retention is finite, not permanent preservation.
+
+Two independent reviewers approve the [final evidence and report](evidence/exact-risk-20261105/final-independent-review.json). They rehashed the actual 32 Parquet files, four risk traces and four boundary audits, checked raw regression/JUnit counts and source/archive pins, and reviewed the precise correction and CI scope without rerunning the engine or changing files. Local publication gates pass; remote head and terminal CI must still be verified after publication.
+
+Use Python 3.12 with the recorded dependencies and empty output directories. The existing cloud interpreter is `/workspace/lob-market-maker-accounting-fix/.venv/bin/python`; direct pytest commands need `PYTHONPATH=/workspace/lob-market-maker-risk-fix/src` because that environment's editable metadata names the older worktree. Archive workers verify actual imports independently.
+
+```bash
+python tools/reproduce_exact_risk.py --stage triage --output /tmp/risk-triage-new
+python tools/reproduce_exact_risk.py --stage regression --candidate 1aa9d9593c65645a077cf097922a911f5b78fbc2 --output /tmp/risk-regression-new
+python tools/reproduce_exact_risk.py --stage integration --candidate 1aa9d9593c65645a077cf097922a911f5b78fbc2 --output /tmp/risk-integration-new
+python -m pytest --cov=lobmm --cov-report=term-missing
+```
+
+The initial triage, first focused run, full suite and final reproduction are separate disclosed verification purposes, not repeated selection trials. CI supplies another explicitly planned replication. Workers have a 120-second cap and refuse evidence-directory overwrites; no cap fired, input was replaced or run was retried. A worker killed by the process cap cannot guarantee durable in-memory prefixes. No performance comparison was made; incidental elapsed diagnostics are excluded from conclusions.
+
+The workflow explicitly checks out `pull_request.head.sha` (or the push SHA), prints the actual Git head, runs all ordinary gates, and repeats the source-verified regression/control stages. The draft PR description and completion response identify its verified terminal run and remote head; local test results alone are not CI verification. No merge, deployment or trading is part of this correction.
+
+The November 2 valuation-reuse and November 4 receipt candidates remain closed, local and unchanged, as do PR1, PR2 and PR3. This result resolves a concrete risk-decision correctness issue. It does not resolve exact-accounting overhead/output growth, identify passive fill behavior, calibrate latency/queue/costs or establish economic advantage. No market tape, licensed/private E1 data or new acquisition is included.
