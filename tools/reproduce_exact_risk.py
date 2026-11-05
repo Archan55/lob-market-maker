@@ -162,14 +162,51 @@ def integration(
     from lobmm.validation import validate_event_stream
 
     trace: list[Any] = []
+    boundary_audit: dict[str, Any] = {
+        "calls": 0,
+        "context_changes": 0,
+        "guard_changes": 0,
+        "first_context_change": None,
+        "first_guard_change": None,
+    }
     manager = modules["risk.py"].RiskManager
     original = manager.observe_pnl
+
+    def boundary_state() -> dict[str, Any]:
+        context = getcontext()
+        return {
+            "context": repr(context),
+            "flags": {
+                signal.__name__: enabled for signal, enabled in context.flags.items()
+            },
+            "integer_string_guard": sys.get_int_max_str_digits(),
+        }
 
     def observe(self: Any, net_pnl: Any, *, timestamp_ns: int) -> Any:
         if type(net_pnl) is not Decimal:
             raise TypeError("risk input was not an exact builtin Decimal")
         trace.append([timestamp_ns, list(net_pnl.as_tuple())])
-        return original(self, net_pnl, timestamp_ns=timestamp_ns)
+        before = boundary_state()
+        try:
+            return original(self, net_pnl, timestamp_ns=timestamp_ns)
+        finally:
+            after = boundary_state()
+            boundary_audit["calls"] += 1
+            sample = {
+                "call": boundary_audit["calls"],
+                "timestamp_ns": timestamp_ns,
+                "net_pnl": list(net_pnl.as_tuple()),
+                "before": before,
+                "after": after,
+            }
+            if before["context"] != after["context"]:
+                boundary_audit["context_changes"] += 1
+                if boundary_audit["first_context_change"] is None:
+                    boundary_audit["first_context_change"] = sample
+            if before["integer_string_guard"] != after["integer_string_guard"]:
+                boundary_audit["guard_changes"] += 1
+                if boundary_audit["first_guard_change"] is None:
+                    boundary_audit["first_guard_change"] = sample
 
     manager.observe_pnl = observe
     config_path = (
@@ -207,6 +244,7 @@ def integration(
     )
     dump(output, partial)
     trace_path = output.with_suffix(".risk-trace.json")
+    audit_path = output.with_suffix(".risk-boundary-audit.json")
     try:
         result = modules["backtest.py"].run_backtest(
             config,
@@ -221,6 +259,7 @@ def integration(
         trace_path.write_text(
             json.dumps(trace, separators=(",", ":"), allow_nan=False) + "\n"
         )
+        dump(audit_path, boundary_audit)
     tables = {
         path.name: digest(path) for path in result.run_directory.glob("*.parquet")
     }
@@ -239,6 +278,8 @@ def integration(
         "parquet_sha256": tables,
         "risk_trace_sha256": digest(trace_path),
         "risk_trace_count": len(trace),
+        "observe_boundary_audit": boundary_audit,
+        "observe_boundary_audit_sha256": digest(audit_path),
         "selected_metrics": {
             name: result.metrics[name]
             for name in ("pnl", "trading_activity", "inventory", "risk")
@@ -483,12 +524,18 @@ def reproduce(stage: str, candidate: str | None, output: Path) -> int:
                                 raise RuntimeError(
                                     f"{workload} integration mismatch: {key}"
                                 )
-                        if (
-                            not sample["context_unchanged"]
-                            or not sample["guard_unchanged"]
-                        ):
+                        audit = sample["observe_boundary_audit"]
+                        if audit["calls"] != sample["risk_trace_count"]:
                             raise RuntimeError(
-                                "integration changed caller context or integer-string guard"
+                                "risk boundary audit missed an observation"
+                            )
+                        if not sample["guard_unchanged"] or audit["guard_changes"]:
+                            raise RuntimeError(
+                                "integration changed the integer-string guard"
+                            )
+                        if label == "candidate" and audit["context_changes"]:
+                            raise RuntimeError(
+                                "candidate observe_pnl changed its caller context"
                             )
                     else:
                         validate_regression(sample, label == "candidate")
