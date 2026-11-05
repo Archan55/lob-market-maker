@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-05",
+  "phase": "Independent design review before numeric results/implementation",
+  "reviewer": "independent_feasibility",
+  "decision": "GO conditional on at least one frozen oracle/atomicity failure reproduced",
+  "contract_reviewed": "6bc22f1193eb14d9565758b4132c1e36b601230d; this preexecution clarification records run accounting and disclosed compatibility scope",
+  "mechanism": "Context-free copy_negate for loss; exact finite drawdown with aligned-digit precision plus carry in isolated full exponent context. Explicit internal trap/flag policy and Etiny representability. Prepare event/decision before activation mutation; update H only after successful return.",
+  "oracle": "H=max(H,P); inclusive max-loss first then drawdown; exact rational arithmetic independent of production helper",
+  "atomicity_scope": "Ordinary RiskManager validation/arithmetic/construction failures; no whole continuous_check/exchange/concurrency/resource/custom-hook transaction.",
+  "requirements": [
+    "Parse invalid strings in isolated context and translate to RiskError; preserve finite Decimal tuples and Decimal(str(float)) policy.",
+    "Preserve first-event/reason stickiness and existing approvedTrue-on-later-safe-observation quirk.",
+    "Explicitly disclose finite-limit validation and overridden-hook H visibility change."
+  ],
+  "execution": "No tests, arithmetic experiments, implementation or timing by this reviewer before design GO."
+}

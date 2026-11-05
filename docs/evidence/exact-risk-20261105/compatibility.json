@@ -1,0 +1,10 @@
+{
+  "max_loss": {
+    "positive_infinity_accepted_by_unchanged_config": false,
+    "error_type": "ValidationError"
+  },
+  "max_drawdown": {
+    "positive_infinity_accepted_by_unchanged_config": false,
+    "error_type": "ValidationError"
+  }
+}

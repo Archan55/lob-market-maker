@@ -1,0 +1,25 @@
+{
+  "measured_source_commit": "1aa9d9593c65645a077cf097922a911f5b78fbc2",
+  "reviewed_risk_source_commit": "3766a21",
+  "risk_sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+  "frozen_independent_test_sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc",
+  "harness_sha256": "d9b5697453f665477b424e106f663103ac07171acf92e86d0b5b685369aa3caf",
+  "full_suite": {
+    "passed": 363,
+    "coverage_percent": 90.64,
+    "import_identity_file": "full-suite-imports.json"
+  },
+  "quality": "Ruff lint and format passed; strict mypy passed37sourcefiles; diff whitespace check passed.",
+  "source_repairs_after_first_candidate": 0,
+  "performance_measurements": "None; timingdiagnostics incidentalonly, not compared or claimed.",
+  "stage_accounting": {
+    "initial_triage_workers": 2,
+    "initial_candidate_focused_runs": 1,
+    "full_local_suites": 1,
+    "final_regression_workers": 3,
+    "untimed_integration_workers": 4,
+    "integration_workloads": "Exposed ci300 and benchmark20000seed7 only; no newdata."
+  },
+  "criterion_passed": true,
+  "scope": "Boundary risk correctness and unchanged exposed integration controls; no wholepipeline atomicity/economics/throughput claim."
+}

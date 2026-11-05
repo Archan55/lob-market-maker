@@ -1,0 +1,606 @@
+{
+  "root": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105",
+  "scope": "Local original artifacts retained in savedcloud; no claim of remoteZIPdownload/preservation.",
+  "files": {
+    "candidate-initial/focused.txt": {
+      "size_bytes": 180,
+      "sha256": "081a5134aeb6a02260c2680eafeffbce7bfc02b31e51d32263a154ca0e27e595"
+    },
+    "candidate-initial/focused.xml": {
+      "size_bytes": 20228,
+      "sha256": "0d898d791e57df360d7386e12ebbdc24d76c12e19ad371287df2e6cebf5b9465"
+    },
+    "full-suite/__pycache__/import_identity.cpython-312-pytest-9.2.0.pyc": {
+      "size_bytes": 2663,
+      "sha256": "1c305ea90403caf3e26e5d45e2534f00092eba70adc52b4dd66a0f5a42b2647e"
+    },
+    "full-suite/full.txt": {
+      "size_bytes": 6986,
+      "sha256": "817b85c9828c71fa55f7a330c8e47a031957edecc9b816350d184eba3ec3a80d"
+    },
+    "full-suite/full.xml": {
+      "size_bytes": 54574,
+      "sha256": "92a1f95c72bc0ff3747579ba2f5936ba85db87a3b13cc9409c2c9868457a484a"
+    },
+    "full-suite/import_identity.py": {
+      "size_bytes": 599,
+      "sha256": "6333455c6c7d58183efafec7feb426364cfe4fb141dbd9282a001e7fdf11d114"
+    },
+    "full-suite/imports.json": {
+      "size_bytes": 6922,
+      "sha256": "44c011ddf6741a807738735e89fd1bf0a37c39b1b598c6dd941081d0a3ae2c64"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/diagnostics.json": {
+      "size_bytes": 1896,
+      "sha256": "69c32a70b9d0898adf13ecf45d03612fc3ac6d37f75ac1f8e3c0a0f9a1c58cfd"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/fills.parquet": {
+      "size_bytes": 26501,
+      "sha256": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/inventory.parquet": {
+      "size_bytes": 80167,
+      "sha256": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/market.parquet": {
+      "size_bytes": 281058,
+      "sha256": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/markouts.parquet": {
+      "size_bytes": 56415,
+      "sha256": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/metrics.json": {
+      "size_bytes": 2542,
+      "sha256": "3c705ad8ab34d1ec786eb51e62cb36b43e7d53b188e312c2d546a8f5181ecf6c"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/orders.parquet": {
+      "size_bytes": 163048,
+      "sha256": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/pnl.parquet": {
+      "size_bytes": 229239,
+      "sha256": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/quotes.parquet": {
+      "size_bytes": 57476,
+      "sha256": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/risk_events.parquet": {
+      "size_bytes": 3415,
+      "sha256": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/run_config.yaml": {
+      "size_bytes": 2450,
+      "sha256": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a"
+    },
+    "integration-final/benchmark-candidate-artifacts-bdltwuyh/exact-risk-benchmark/summary.json": {
+      "size_bytes": 842,
+      "sha256": "e6f2f69b5bf08c7bf28211a436cfd398d8ebe228c86409cbe2c8fc74ebe96c63"
+    },
+    "integration-final/benchmark-candidate.json": {
+      "size_bytes": 8523,
+      "sha256": "05c1ee00457242408abac79d88a3a366d82f79fd7fffefac1ffe009eda49ee3b"
+    },
+    "integration-final/benchmark-candidate.log": {
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "integration-final/benchmark-candidate.risk-boundary-audit.json": {
+      "size_bytes": 129,
+      "sha256": "2a2378efbc9029e75125e96cb81114fbf52fb58a32318d5c75aa532f443857dc"
+    },
+    "integration-final/benchmark-candidate.risk-trace.json": {
+      "size_bytes": 833214,
+      "sha256": "b1b8d6d121c680bb6fb8418f179ba4d203ef63d1f9fc2f4784fa67ebe7216b13"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/diagnostics.json": {
+      "size_bytes": 1895,
+      "sha256": "960dacd9702c50a57daf983faa37ca3685e6dfa20e6a9063d63ba9856ea50ccb"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/fills.parquet": {
+      "size_bytes": 26501,
+      "sha256": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/inventory.parquet": {
+      "size_bytes": 80167,
+      "sha256": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/market.parquet": {
+      "size_bytes": 281058,
+      "sha256": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/markouts.parquet": {
+      "size_bytes": 56415,
+      "sha256": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/metrics.json": {
+      "size_bytes": 2541,
+      "sha256": "952a72f78f2fb0fcf3afa8721d9ecb4a965ac92f7ef9daf56c191ce0badc9ee4"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/orders.parquet": {
+      "size_bytes": 163048,
+      "sha256": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/pnl.parquet": {
+      "size_bytes": 229239,
+      "sha256": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/quotes.parquet": {
+      "size_bytes": 57476,
+      "sha256": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/risk_events.parquet": {
+      "size_bytes": 3415,
+      "sha256": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/run_config.yaml": {
+      "size_bytes": 2450,
+      "sha256": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a"
+    },
+    "integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark/summary.json": {
+      "size_bytes": 842,
+      "sha256": "e6f2f69b5bf08c7bf28211a436cfd398d8ebe228c86409cbe2c8fc74ebe96c63"
+    },
+    "integration-final/benchmark-main.json": {
+      "size_bytes": 8488,
+      "sha256": "7ded4064f27d13205d8ecb621fb180f058e1e2ce33d483002a3f05c76e6de2c0"
+    },
+    "integration-final/benchmark-main.log": {
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "integration-final/benchmark-main.risk-boundary-audit.json": {
+      "size_bytes": 129,
+      "sha256": "2a2378efbc9029e75125e96cb81114fbf52fb58a32318d5c75aa532f443857dc"
+    },
+    "integration-final/benchmark-main.risk-trace.json": {
+      "size_bytes": 833214,
+      "sha256": "b1b8d6d121c680bb6fb8418f179ba4d203ef63d1f9fc2f4784fa67ebe7216b13"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/diagnostics.json": {
+      "size_bytes": 1864,
+      "sha256": "ce24b107395683c4415bca4c961ab978f47e5ff5036cbcec9abbf5b58a8a922c"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/fills.parquet": {
+      "size_bytes": 7545,
+      "sha256": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/inventory.parquet": {
+      "size_bytes": 2847,
+      "sha256": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/market.parquet": {
+      "size_bytes": 11621,
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/markouts.parquet": {
+      "size_bytes": 6174,
+      "sha256": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/metrics.json": {
+      "size_bytes": 2397,
+      "sha256": "2b8731b7f197e4bc5dd43c22918aeafc0fb8a0e841c96a833bec56f8cb045d50"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/orders.parquet": {
+      "size_bytes": 10998,
+      "sha256": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/pnl.parquet": {
+      "size_bytes": 13044,
+      "sha256": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/quotes.parquet": {
+      "size_bytes": 4705,
+      "sha256": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/risk_events.parquet": {
+      "size_bytes": 506,
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/run_config.yaml": {
+      "size_bytes": 2425,
+      "sha256": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5"
+    },
+    "integration-final/ci-candidate-artifacts-qbo7iv83/exact-risk-ci/summary.json": {
+      "size_bytes": 824,
+      "sha256": "c8a4d35dbe60b2066f9e645afc31d9bdbf4945f7efd6b80eb252de2b5aa4330b"
+    },
+    "integration-final/ci-candidate.json": {
+      "size_bytes": 8421,
+      "sha256": "e96a3121f4434c2e200db122404e5cc89c2717f93cc0a29343cd011475cb0920"
+    },
+    "integration-final/ci-candidate.log": {
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "integration-final/ci-candidate.risk-boundary-audit.json": {
+      "size_bytes": 127,
+      "sha256": "73c5d5514d785e1cf90ef195f9701645e07a324530f766158a596b4367ee6ef4"
+    },
+    "integration-final/ci-candidate.risk-trace.json": {
+      "size_bytes": 8989,
+      "sha256": "7f1bd3f9182df6f508b6ac46a467f491468e427bb37f7870115b197c3e1790fd"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/diagnostics.json": {
+      "size_bytes": 1862,
+      "sha256": "6347052a58cfd02a6c1fbb5c8c28f9d29428710e38e4923c971c8e4adf249103"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/fills.parquet": {
+      "size_bytes": 7545,
+      "sha256": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/inventory.parquet": {
+      "size_bytes": 2847,
+      "sha256": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/market.parquet": {
+      "size_bytes": 11621,
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/markouts.parquet": {
+      "size_bytes": 6174,
+      "sha256": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/metrics.json": {
+      "size_bytes": 2395,
+      "sha256": "4583d8f66c1c8901b10d1e57644ce122163ae397bd8600fcca02ad83b70e1b7c"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/orders.parquet": {
+      "size_bytes": 10998,
+      "sha256": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/pnl.parquet": {
+      "size_bytes": 13044,
+      "sha256": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/quotes.parquet": {
+      "size_bytes": 4705,
+      "sha256": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/risk_events.parquet": {
+      "size_bytes": 506,
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/run_config.yaml": {
+      "size_bytes": 2425,
+      "sha256": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5"
+    },
+    "integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci/summary.json": {
+      "size_bytes": 824,
+      "sha256": "c8a4d35dbe60b2066f9e645afc31d9bdbf4945f7efd6b80eb252de2b5aa4330b"
+    },
+    "integration-final/ci-main.json": {
+      "size_bytes": 8386,
+      "sha256": "560daef56146c41a7c70afe03f5c5673b56483d2b950e3b3e71a361508ebcfc5"
+    },
+    "integration-final/ci-main.log": {
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "integration-final/ci-main.risk-boundary-audit.json": {
+      "size_bytes": 127,
+      "sha256": "73c5d5514d785e1cf90ef195f9701645e07a324530f766158a596b4367ee6ef4"
+    },
+    "integration-final/ci-main.risk-trace.json": {
+      "size_bytes": 8989,
+      "sha256": "7f1bd3f9182df6f508b6ac46a467f491468e427bb37f7870115b197c3e1790fd"
+    },
+    "integration-final/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "integration-final/environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "integration-final/report.json": {
+      "size_bytes": 40253,
+      "sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c"
+    },
+    "integration-final/reproducer.py": {
+      "size_bytes": 25753,
+      "sha256": "d9b5697453f665477b424e106f663103ac07171acf92e86d0b5b685369aa3caf"
+    },
+    "integration-final/sources/candidate/backtest.py": {
+      "size_bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "integration-final/sources/candidate/config.py": {
+      "size_bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "integration-final/sources/candidate/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "integration-final/sources/candidate/exchange.py": {
+      "size_bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "integration-final/sources/candidate/portfolio.py": {
+      "size_bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "integration-final/sources/candidate/risk.py": {
+      "size_bytes": 27098,
+      "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413"
+    },
+    "integration-final/sources/candidate/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "integration-final/sources/main/backtest.py": {
+      "size_bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "integration-final/sources/main/config.py": {
+      "size_bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "integration-final/sources/main/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "integration-final/sources/main/exchange.py": {
+      "size_bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "integration-final/sources/main/portfolio.py": {
+      "size_bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "integration-final/sources/main/risk.py": {
+      "size_bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "integration-final/sources/main/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "integration-final/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "regression-final/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "regression-final/environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "regression-final/report.json": {
+      "size_bytes": 587476,
+      "sha256": "ede7705ad5f1dc29b464b46fed59cda662b2ee76cef876c6fc3ee734256c574b"
+    },
+    "regression-final/reproducer.py": {
+      "size_bytes": 25753,
+      "sha256": "d9b5697453f665477b424e106f663103ac07171acf92e86d0b5b685369aa3caf"
+    },
+    "regression-final/sources/candidate/backtest.py": {
+      "size_bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "regression-final/sources/candidate/config.py": {
+      "size_bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "regression-final/sources/candidate/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "regression-final/sources/candidate/exchange.py": {
+      "size_bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "regression-final/sources/candidate/portfolio.py": {
+      "size_bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "regression-final/sources/candidate/risk.py": {
+      "size_bytes": 27098,
+      "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413"
+    },
+    "regression-final/sources/candidate/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "regression-final/sources/main/backtest.py": {
+      "size_bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "regression-final/sources/main/config.py": {
+      "size_bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "regression-final/sources/main/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "regression-final/sources/main/exchange.py": {
+      "size_bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "regression-final/sources/main/portfolio.py": {
+      "size_bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "regression-final/sources/main/risk.py": {
+      "size_bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "regression-final/sources/main/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "regression-final/sources/pr3/backtest.py": {
+      "size_bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "regression-final/sources/pr3/config.py": {
+      "size_bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "regression-final/sources/pr3/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "regression-final/sources/pr3/exchange.py": {
+      "size_bytes": 16269,
+      "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e"
+    },
+    "regression-final/sources/pr3/portfolio.py": {
+      "size_bytes": 24748,
+      "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35"
+    },
+    "regression-final/sources/pr3/risk.py": {
+      "size_bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "regression-final/sources/pr3/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "regression-final/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "regression-final/tests-candidate.json": {
+      "size_bytes": 100638,
+      "sha256": "8400ea3b3186ce3b418dc7ec0acf1ed3cf67f0f4e1fa21932deeece2987fa065"
+    },
+    "regression-final/tests-candidate.log": {
+      "size_bytes": 180,
+      "sha256": "beb1cbd123fab3ec3801a84b8d53705dc06c3d724fcf95ed5e82784648859172"
+    },
+    "regression-final/tests-candidate.xml": {
+      "size_bytes": 20228,
+      "sha256": "1a66dc53406e4c48364beedc467ed8e71d897feee92e570af6511effe81cf6e6"
+    },
+    "regression-final/tests-main.json": {
+      "size_bytes": 228101,
+      "sha256": "87244860a936db089aa4033e577cfb9d6c35413b756285d1b8b84397c8d074e3"
+    },
+    "regression-final/tests-main.log": {
+      "size_bytes": 134151,
+      "sha256": "f0216160130d35206ab2a6f38f5c5b92451cf2b19bf02ee2389dbe8acd8f4a0c"
+    },
+    "regression-final/tests-main.xml": {
+      "size_bytes": 167832,
+      "sha256": "3ae21cf3ba518488ccf8753b3d7b291e203b0f4c944b7f700f46ded43e08000d"
+    },
+    "regression-final/tests-pr3.json": {
+      "size_bytes": 228095,
+      "sha256": "44ac4551761ee2358c6bac216f7a9b0d139e5b8b70959afd5bb0b0fd59445a29"
+    },
+    "regression-final/tests-pr3.log": {
+      "size_bytes": 134151,
+      "sha256": "f22dc77752ffd1a1e8e932dde12a4e742fff5cfa91c2ea7257bb9c7f632f9f92"
+    },
+    "regression-final/tests-pr3.xml": {
+      "size_bytes": 167832,
+      "sha256": "2cd3770b2988e2de621f8631a419da7e88f01a929a5e2d59f735c9ca12f62070"
+    },
+    "triage/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "triage/environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "triage/report.json": {
+      "size_bytes": 477104,
+      "sha256": "c2e34112a4771ff4008f23215ffb7811ab4f67d00abc327c40b62bad5550ac0e"
+    },
+    "triage/reproducer.py": {
+      "size_bytes": 23657,
+      "sha256": "cae265165f026313cb31fd0dce33f681df2cb3fd7aa60be9a1cf5c1b8b5b1f98"
+    },
+    "triage/sources/main/backtest.py": {
+      "size_bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "triage/sources/main/config.py": {
+      "size_bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "triage/sources/main/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "triage/sources/main/exchange.py": {
+      "size_bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "triage/sources/main/portfolio.py": {
+      "size_bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "triage/sources/main/risk.py": {
+      "size_bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "triage/sources/main/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "triage/sources/pr3/backtest.py": {
+      "size_bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "triage/sources/pr3/config.py": {
+      "size_bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "triage/sources/pr3/contract.json": {
+      "size_bytes": 9035,
+      "sha256": "16bcd80f4b714df925d14a25a0455f6e55c0488d79477214f3e090e594e12fa9"
+    },
+    "triage/sources/pr3/exchange.py": {
+      "size_bytes": 16269,
+      "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e"
+    },
+    "triage/sources/pr3/portfolio.py": {
+      "size_bytes": 24748,
+      "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35"
+    },
+    "triage/sources/pr3/risk.py": {
+      "size_bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "triage/sources/pr3/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "triage/test_risk_exact_thresholds_independent.py": {
+      "size_bytes": 16406,
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    "triage/tests-main.json": {
+      "size_bytes": 228097,
+      "sha256": "b7c5a8726a99e7164c8a901bd3319cda8cf0fe0eb53aede791b99fcecb63e427"
+    },
+    "triage/tests-main.log": {
+      "size_bytes": 134151,
+      "sha256": "8fb63a4bc7e9fac74a274972b89ac2b183a340ce78d8f81505d95d29ccb31a72"
+    },
+    "triage/tests-main.xml": {
+      "size_bytes": 167832,
+      "sha256": "04789d5c572223c7f3ddc1db84b51a6d2bea47aa05d8f8758f559108e261a815"
+    },
+    "triage/tests-pr3.json": {
+      "size_bytes": 228091,
+      "sha256": "b52d3358c91a94d2e7aff91589b0ce19e0d23fef5da0b3177dab2988bc6653ef"
+    },
+    "triage/tests-pr3.log": {
+      "size_bytes": 134151,
+      "sha256": "b40ec76efae4ef64d16b4e30629aa112973427c937ebcd714939b9de9b26fb28"
+    },
+    "triage/tests-pr3.xml": {
+      "size_bytes": 167832,
+      "sha256": "2386fa3e81c10238f75002aae2e03795f48b7fcba89f3801b9c4a3d2cddef182"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "reviewed_commit": "3766a21",
+  "risk_sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+  "reviewers": [
+    "independent_feasibility",
+    "data_execution_audit"
+  ],
+  "decision": "GO within frozen ordinary-base scope; no correctness repair round needed",
+  "confirmed_baselines": "Main and PR3 each113collected,88regressionfailures,25passes,0errors/skips; source risk/config and failed nodes identical.",
+  "selected_causes": [
+    "default28 false drawdown activation below1000",
+    "default28 missed inclusive loss equality",
+    "precision3 false loss activation",
+    "rounded drawdown event evidence and caller flags"
+  ],
+  "proof": "Aligned coefficient digits plus carry bound exact subtraction; MIN_EMIN-exponent+1 ensuresEtiny<=quantum; MAX_PREC guard before mutation; explicit isolated traps and finite parse preserve caller context.",
+  "atomicity": "Event and Decision constructors precede event append/kill flags; H commits after successful public activation. Deep snapshots avoid mutable aliasing.",
+  "scope_limits": [
+    "No wholecontinuous_check/exchange/concurrency/resource/customhook atomicity claim",
+    "Observe validates even deliberately bypassed invalid configuration. Normal Pydantic RiskConfig already rejects Infinity; direct compatibility check corrected the earlier static assumption. Overridden activation hooks now see prior H.",
+    "No accounting-overhead/output-growth or economic improvement claim"
+  ],
+  "execution": "Reviewers inspected source and retained triage/focusedlogs only; no reruns/newengine/tests/edits.",
+  "static_assumption_correction": "Historical preregistration/design-review statement that normal RiskConfig accepts positive Infinity was disproved by unchanged-config construction check; contract/test criteria remain unchanged and cover explicit model_copy bypass, not normal validated configuration."
+}
