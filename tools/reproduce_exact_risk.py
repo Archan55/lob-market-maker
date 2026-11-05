@@ -334,7 +334,9 @@ def validate_regression(sample: dict[str, Any], candidate: bool) -> None:
 
 def reproduce(stage: str, candidate: str | None, output: Path) -> int:
     if not __debug__:
-        raise RuntimeError("assertion-enabled Python is required for regression evidence")
+        raise RuntimeError(
+            "assertion-enabled Python is required for regression evidence"
+        )
     if output.exists() and (not output.is_dir() or any(output.iterdir())):
         raise RuntimeError(f"refusing to overwrite retained evidence: {output}")
     frozen_inputs(ROOT)
