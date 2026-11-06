@@ -9,12 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
       - name: Install
         run: python -m pip install -e ".[dev]"
+      - name: Record exact source head
+        id: source
+        run: |
+          task_source_sha=$(git rev-parse HEAD)
+          echo "head_sha=$task_source_sha" >> "$GITHUB_OUTPUT"
+          git log -1 --format=%H
+          mkdir -p experiments/inventory-duration-ci
+          git rev-parse HEAD > experiments/inventory-duration-ci/checkout.txt
       - name: Ruff lint
         run: python -m ruff check .
       - name: Ruff format
@@ -22,6 +33,25 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --junitxml=experiments/inventory-duration-ci/full.xml
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Reproduce inventory duration before and after
+        run: python tools/reproduce_inventory_duration.py --stage regression --candidate "$(git rev-parse HEAD)" --output experiments/inventory-duration-ci/regression
+      - name: Compare 300-event window wiring
+        run: python tools/reproduce_inventory_duration.py --stage wiring --candidate "$(git rev-parse HEAD)" --output experiments/inventory-duration-ci/wiring
+      - name: Retain inventory-duration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: inventory-duration-${{ steps.source.outputs.head_sha }}
+          path: |
+            experiments/inventory-duration-ci/
+            docs/evidence/inventory-duration-20261106/
+            tests/unit/test_inventory_duration_independent.py
+            tools/reproduce_inventory_duration.py
+            src/lobmm/metrics.py
+            src/lobmm/backtest.py
+            src/lobmm/case_study.py
+          retention-days: 14
+          if-no-files-found: error
