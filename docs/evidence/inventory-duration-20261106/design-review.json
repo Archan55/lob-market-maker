@@ -1,0 +1,7 @@
+{
+  "phase": "Before any numericalresult or implementation",
+  "decision": "Independent_feasibility GO; data_execution_audit static support",
+  "key_design": "Explicit[S,E), intns, stableasof/ties/zeroorigin/prewindowcarry/postendclip; unknown/zerodurationNone; keep existingbandpredicate and oldestimatorunderobservationname.",
+  "bounded_scope": "Onlyinventoryduration; savedNov5ci300/20k reanalysis plusone300wiringpair; no DD/fillmidpointstudy or new20kbenchmark.",
+  "execution": "Sourceonlyread; no numericoutputs/Pythonexperiments/tests/edits byreviewers."
+}
