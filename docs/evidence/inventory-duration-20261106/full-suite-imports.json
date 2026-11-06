@@ -1,0 +1,150 @@
+{
+  "lobmm": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/__init__.py",
+    "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+  },
+  "lobmm.backtest": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/backtest.py",
+    "sha256": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77"
+  },
+  "lobmm.benchmark": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/benchmark.py",
+    "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+  },
+  "lobmm.book": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/book.py",
+    "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+  },
+  "lobmm.case_study": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/case_study.py",
+    "sha256": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4"
+  },
+  "lobmm.channels": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/channels.py",
+    "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+  },
+  "lobmm.cli": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/cli.py",
+    "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+  },
+  "lobmm.config": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/config.py",
+    "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+  },
+  "lobmm.data": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/__init__.py",
+    "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+  },
+  "lobmm.data._adapter_utils": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/_adapter_utils.py",
+    "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+  },
+  "lobmm.data.adapters": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/adapters.py",
+    "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+  },
+  "lobmm.data.fingerprint": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/fingerprint.py",
+    "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+  },
+  "lobmm.data.loaders": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/loaders.py",
+    "sha256": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a"
+  },
+  "lobmm.data.lobster": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/lobster.py",
+    "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+  },
+  "lobmm.data.manifest": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/manifest.py",
+    "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+  },
+  "lobmm.data.schema": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/schema.py",
+    "sha256": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9"
+  },
+  "lobmm.data.tardis": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/data/tardis.py",
+    "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+  },
+  "lobmm.enums": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/enums.py",
+    "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+  },
+  "lobmm.events": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/events.py",
+    "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+  },
+  "lobmm.exchange": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/exchange.py",
+    "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+  },
+  "lobmm.experiments": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/experiments.py",
+    "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+  },
+  "lobmm.metrics": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/metrics.py",
+    "sha256": "21cc8cc5d02f66899acc7169d6678f32c3e2f9c2037dd4724f78f7b623cd8cce"
+  },
+  "lobmm.orders": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/orders.py",
+    "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+  },
+  "lobmm.portfolio": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/portfolio.py",
+    "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+  },
+  "lobmm.queue_model": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/queue_model.py",
+    "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+  },
+  "lobmm.report": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/report.py",
+    "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+  },
+  "lobmm.risk": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/risk.py",
+    "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+  },
+  "lobmm.scheduler": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/scheduler.py",
+    "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+  },
+  "lobmm.strategies": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/strategies/__init__.py",
+    "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+  },
+  "lobmm.strategies.base": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/strategies/base.py",
+    "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+  },
+  "lobmm.strategies.fixed_spread": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/strategies/fixed_spread.py",
+    "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+  },
+  "lobmm.strategies.inventory_aware": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/strategies/inventory_aware.py",
+    "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+  },
+  "lobmm.strategies.microprice": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/strategies/microprice.py",
+    "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+  },
+  "lobmm.strategy_runtime": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/strategy_runtime.py",
+    "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+  },
+  "lobmm.synthetic": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/synthetic.py",
+    "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+  },
+  "lobmm.types": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/types.py",
+    "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+  },
+  "lobmm.validation": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/validation.py",
+    "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+  }
+}

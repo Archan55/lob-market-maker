@@ -1,0 +1,10 @@
+{
+  "metrics": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/metrics.py",
+    "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+  },
+  "case_study": {
+    "path": "/workspace/lob-market-maker-duration-fix/src/lobmm/case_study.py",
+    "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+  }
+}

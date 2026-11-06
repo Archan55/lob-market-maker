@@ -1,0 +1,1681 @@
+{
+  "status": "complete",
+  "stage": "regression",
+  "harness_sha256": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+  "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+  "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471",
+  "process_cap_seconds": 120,
+  "attempts": [
+    {
+      "role": "main",
+      "workload": "tests",
+      "status": "complete"
+    },
+    {
+      "role": "candidate",
+      "workload": "tests",
+      "status": "complete"
+    }
+  ],
+  "observations": [
+    {
+      "status": "complete",
+      "stage": "regression",
+      "role": "main",
+      "workload": "tests",
+      "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "source_sha256": {
+        "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "case_study": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      },
+      "imported_sources": {
+        "metrics": "/tmp/lob-inventory-duration-r88nqnjr/main/src/lobmm/metrics.py",
+        "backtest": "/tmp/lob-inventory-duration-r88nqnjr/main/src/lobmm/backtest.py",
+        "case_study": "/tmp/lob-inventory-duration-r88nqnjr/main/src/lobmm/case_study.py",
+        "report": "/tmp/lob-inventory-duration-r88nqnjr/main/src/lobmm/report.py",
+        "config": "/tmp/lob-inventory-duration-r88nqnjr/main/src/lobmm/config.py"
+      },
+      "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+      "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471",
+      "harness_sha256": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "integer_string_guard": 4300,
+      "pytest_exit_code": 1,
+      "collected_nodeids": [
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+        "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+        "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+        "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+        "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+        "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+        "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+        "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+        "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]",
+        "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[true-zero-percent]"
+      ],
+      "reports": [
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle\n    assert type(inventory[\"near_limit_duration_ns\"]) is int\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:178: in test_spacing_contrast_and_same_timestamp_duplicate_invariance\n    assert [result[\"time_near_limits_fraction\"] for result in results] == [\nE   assert [0.5, 0.5, 0.6666666666666666] == [0.1, 0.9, 0.1]\nE     \nE     At index 0 diff: 0.5 != 0.1\nE     Use -v to get more diff"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:200: in test_both_signs_are_included_at_the_unchanged_near_limit_boundary\n    assert result[\"near_limit_duration_ns\"] == 8\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'near_limit_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:214: in test_missing_window_has_no_duration_metadata_or_silent_row_fallback\n    assert {name: result[name] for name in _TIME_FIELDS} == dict.fromkeys(_TIME_FIELDS)\n                  ^^^^^^^^^^^^\nE   KeyError: 'observation_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:214: in test_missing_window_has_no_duration_metadata_or_silent_row_fallback\n    assert {name: result[name] for name in _TIME_FIELDS} == dict.fromkeys(_TIME_FIELDS)\n                  ^^^^^^^^^^^^\nE   KeyError: 'observation_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:222: in test_zero_duration_has_zero_integer_durations_and_undefined_fraction\n    assert result[\"observation_duration_ns\"] == 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'observation_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:235: in test_unknown_position_limit_retains_window_but_has_no_near_duration\n    assert result[\"observation_duration_ns\"] == 10\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'observation_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:235: in test_unknown_position_limit_retains_window_but_has_no_near_duration\n    assert result[\"observation_duration_ns\"] == 10\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'observation_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:235: in test_unknown_position_limit_retains_window_but_has_no_near_duration\n    assert result[\"observation_duration_ns\"] == 10\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: 'observation_duration_ns'"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:324: in test_undefined_fraction_does_not_skip_explicit_timestamp_validation\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:324: in test_undefined_fraction_does_not_skip_explicit_timestamp_validation\n    with pytest.raises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:332: in test_malformed_window_is_reported_before_invalid_row_timestamps\n    with pytest.raises(ValueError, match=\"(?i)window|session|bound|start|end\"):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE ValueError"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]",
+          "when": "call",
+          "outcome": "failed",
+          "longrepr": "tests/unit/test_inventory_duration_independent.py:363: in test_case_table_distinguishes_missing_time_from_zero\n    assert cells[4].lower() == (\"0.0%\" if known_window else \"n/a\")\nE   AssertionError: assert '0.0%' == 'n/a'\nE     \nE     - n/a\nE     + 0.0%"
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[true-zero-percent]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[true-zero-percent]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[true-zero-percent]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        }
+      ],
+      "failed_nodeids": [
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+        "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+        "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+        "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+        "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+        "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+        "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+        "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+        "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]"
+      ],
+      "passed": 1,
+      "failed": 39,
+      "errors": 0,
+      "skipped": 0,
+      "junit_sha256": "f2924655ec80def3e481b05ece2a2311e409923f9a0997f1f43c47fa585a6796"
+    },
+    {
+      "status": "complete",
+      "stage": "regression",
+      "role": "candidate",
+      "workload": "tests",
+      "resolved_revision": "d517b4aae2a282ac89143626fe1ae49d8587ab55",
+      "source_sha256": {
+        "metrics": "21cc8cc5d02f66899acc7169d6678f32c3e2f9c2037dd4724f78f7b623cd8cce",
+        "backtest": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+        "case_study": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      },
+      "imported_sources": {
+        "metrics": "/tmp/lob-inventory-duration-r88nqnjr/candidate/src/lobmm/metrics.py",
+        "backtest": "/tmp/lob-inventory-duration-r88nqnjr/candidate/src/lobmm/backtest.py",
+        "case_study": "/tmp/lob-inventory-duration-r88nqnjr/candidate/src/lobmm/case_study.py",
+        "report": "/tmp/lob-inventory-duration-r88nqnjr/candidate/src/lobmm/report.py",
+        "config": "/tmp/lob-inventory-duration-r88nqnjr/candidate/src/lobmm/config.py"
+      },
+      "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+      "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471",
+      "harness_sha256": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "integer_string_guard": 4300,
+      "pytest_exit_code": 0,
+      "collected_nodeids": [
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+        "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+        "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+        "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+        "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+        "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+        "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+        "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+        "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+        "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+        "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+        "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+        "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]",
+        "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[true-zero-percent]"
+      ],
+      "reports": [
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[true-zero-percent]",
+          "when": "setup",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[true-zero-percent]",
+          "when": "call",
+          "outcome": "passed",
+          "longrepr": null
+        },
+        {
+          "nodeid": "tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[true-zero-percent]",
+          "when": "teardown",
+          "outcome": "passed",
+          "longrepr": null
+        }
+      ],
+      "failed_nodeids": [],
+      "passed": 40,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_sha256": "f7ebb05de595a5338ea74f28704c11836e57ec26b1f039567f99a387b90d07f2"
+    }
+  ],
+  "sources": {
+    "main": {
+      "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "git_archive_sha256": "45da6c2f4d117a08cf94b8af38d51392014e5c5553790b96bdaf0a148958837e",
+      "source_sha256": {
+        "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "case_study": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      }
+    },
+    "candidate": {
+      "resolved_revision": "d517b4aae2a282ac89143626fe1ae49d8587ab55",
+      "git_archive_sha256": "4a38b4aed234eb76ffe86a84662873bf6bd613d26bde8ebeab5f4899b4fa2a35",
+      "source_sha256": {
+        "metrics": "21cc8cc5d02f66899acc7169d6678f32c3e2f9c2037dd4724f78f7b623cd8cce",
+        "backtest": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+        "case_study": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      }
+    }
+  },
+  "criterion_passed": true
+}

@@ -1,0 +1,12 @@
+{
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "checkout": "4c05d72dd646c9afa0d64d7482aa396c700f2ed3",
+  "source_sha256": {
+    "src/lobmm/metrics.py": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+    "src/lobmm/backtest.py": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+    "src/lobmm/case_study.py": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+    "src/lobmm/report.py": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+  },
+  "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+  "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471"
+}

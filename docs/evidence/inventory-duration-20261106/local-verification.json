@@ -1,0 +1,32 @@
+{
+  "reviewed_core": "6ee19a6",
+  "regression_and_retained_source": "d517b4aae2a282ac89143626fe1ae49d8587ab55",
+  "wiring_source": "21073746964abaf2b7dd893ba86fecd6aa5ac469",
+  "source_sha256": {
+    "src/lobmm/metrics.py": "21cc8cc5d02f66899acc7169d6678f32c3e2f9c2037dd4724f78f7b623cd8cce",
+    "src/lobmm/backtest.py": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+    "src/lobmm/case_study.py": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+    "tests/unit/test_inventory_duration_independent.py": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+    "tools/reproduce_inventory_duration.py": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd"
+  },
+  "full_suite": {
+    "passed": 290,
+    "coverage_percent": 90.72,
+    "strict_mypy_source_files": 37,
+    "ruff": "full lint/format pass after explicitly reviewed exact-fixture RUF043 exception"
+  },
+  "core_correctness_repairs": 0,
+  "stage_accounting": {
+    "initial_manual_main_focused": 1,
+    "initial_candidate_focused": 1,
+    "full_local_suite": 1,
+    "final_regression_workers": 2,
+    "retained_reanalysis_workers": 4,
+    "fresh_ci300_wiring_workers": 2,
+    "new20k_engine_runs": 0,
+    "performance_comparisons": 0
+  },
+  "CI_scope": "Planned frozen regression and CI300 wiring only; retainedreanalysis LOCALONLY because originalNov5cloudpaths not available GitHubrunner. Do not claim retained stage ran inCI.",
+  "gates_passed": true,
+  "scope": "Inventorytime measurement and provenance; no economic/executioncalibration/performance result."
+}
