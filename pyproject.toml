@@ -61,6 +61,8 @@ ignore = ["E501"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**/*.py" = ["S101"]
+# Preserve the preregistered fixture bytes; its match expression is intentional regex.
+"tests/unit/test_inventory_duration_independent.py" = ["RUF043"]
 
 [tool.mypy]
 python_version = "3.12"
