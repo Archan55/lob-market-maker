@@ -1,0 +1,224 @@
+{
+  "date": "2026-11-06",
+  "phase": "Frozen before numerical witnesses, artifact reanalysis or implementation outcomes",
+  "question": "Does time_near_limits_fraction incorrectly substitute snapshot frequency for elapsed inventory exposure, and can a bounded duration definition correct it without changing replay execution?",
+  "hypotheses": [
+    "On fixed irregular snapshots, current row fraction disagrees with an independently derived elapsed-time fraction.",
+    "Duplicating an unchanged same-time snapshot can change the current reportedtime while leaving the physical state path and duration fraction unchanged.",
+    "A single duration repair can match exact integer-time oracle and leave all execution/audit tablebytes unchanged."
+  ],
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "baseline_source_sha256": {
+    "src/lobmm/metrics.py": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+    "src/lobmm/backtest.py": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+    "src/lobmm/case_study.py": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+    "src/lobmm/report.py": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+  },
+  "preserved_drafts": {
+    "PR1": "d4104b70660976c6d59fe8915a75ac5616bdecd3",
+    "PR2": "a190758c1d60fff0c9526aa4201dc4759d234639",
+    "PR3": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+    "PR4": "f5a86c5d18dc9d63634fdea95bbb60db3c5f8eec"
+  },
+  "definition": "Right-continuous inventory state over explicit actual selected-market [S,E), integer nanosecond arithmetic until final ratio. Initialinventory0 beforefirstrecord; lastrecordat/beforeS carries into window; stable original input order amongequal timestamps, laststate governsfollowinginterval; q atE orafterE haszeroduration; carrylastinwindowstate toE. Inventoryquantity/bandpredicate otherwise unchanged. Backtest records the actual selectedfirst/last markettimestamps inthose diagnosticfields; no second boundschannel.",
+  "membership": "Keep existing abs(int(inventory)) >= near_limit_fraction*max_abs_inventory predicate unchanged; do not include unrelated float-threshold redesign. Primaryoraclefixtures use exact integer threshold10*.5=5.",
+  "api_and_undefined": "Use only the existing diagnostics mapping keys session_start_timestamp_ns/session_end_timestamp_ns; preserve build_metrics public signature. Both absent=>timeNone; exactlyonebound, non-int/bool/negativebound, orE<S=>ValueError. E==S=>timeNone. Unknown/missing/nonpositive configured positionlimit=>timeNone. Explicitpositive window requires all inventorytimestamps builtin nonnegativeint and nondecreasing; reject missing/invalid/decreasing timestamps. No silent rowcount fallback.",
+  "outputs": "Preserve former all-row estimator exactly as observations_near_limits_fraction. Existing time_near_limits_fraction becomes durationratio/None. Retain integer near_limit_duration_ns, observation_duration_ns and explicitwindowbounds metadata. Mean/std/endinventory and other metrics remain legacyrowstatistics. Missingtime must rendern/a ratherthan0 in generatedcase_table. Do not rewrite frozenhistoricalstudy reports.",
+  "core_fixtures": [
+    {
+      "id": "short-near",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [
+        [
+          100,
+          5
+        ],
+        [
+          101,
+          0
+        ]
+      ],
+      "expected_near_ns": 1
+    },
+    {
+      "id": "long-near",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [
+        [
+          100,
+          5
+        ],
+        [
+          109,
+          0
+        ]
+      ],
+      "expected_near_ns": 9
+    },
+    {
+      "id": "duplicate-near",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [
+        [
+          100,
+          5
+        ],
+        [
+          100,
+          5
+        ],
+        [
+          101,
+          0
+        ]
+      ],
+      "expected_near_ns": 1
+    },
+    {
+      "id": "same-time-final-far",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [
+        [
+          100,
+          5
+        ],
+        [
+          100,
+          0
+        ],
+        [
+          109,
+          -5
+        ]
+      ],
+      "expected_near_ns": 1
+    },
+    {
+      "id": "delayed-first",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [
+        [
+          103,
+          -5
+        ],
+        [
+          108,
+          0
+        ]
+      ],
+      "expected_near_ns": 5
+    },
+    {
+      "id": "pre-window-carry",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [
+        [
+          90,
+          5
+        ],
+        [
+          105,
+          0
+        ]
+      ],
+      "expected_near_ns": 5
+    },
+    {
+      "id": "endpoint-postend",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [
+        [
+          100,
+          5
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          112,
+          5
+        ]
+      ],
+      "expected_near_ns": 10
+    },
+    {
+      "id": "carry-no-final",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [
+        [
+          102,
+          5
+        ]
+      ],
+      "expected_near_ns": 8
+    },
+    {
+      "id": "empty",
+      "window": [
+        100,
+        110
+      ],
+      "rows": [],
+      "expected_near_ns": 0
+    },
+    {
+      "id": "large-epoch",
+      "window": [
+        1000000000000000100,
+        1000000000000000110
+      ],
+      "rows": [
+        [
+          1000000000000000100,
+          5
+        ],
+        [
+          1000000000000000101,
+          0
+        ]
+      ],
+      "expected_near_ns": 1
+    }
+  ],
+  "additional_witnesses": "Short/longtimecontrast andduplicateinvariance; zero-duration/missingwindow/unknownlimitundefinedpolicy; badwindow orunordered/missing/noninteger timestamp rejection; inclusive +/-bandmembership; generatedcase_table n/a; oldobservationestimator retained onidenticalinput; no mutation ofinputrows.",
+  "oracle": "Independent integer duration partition at unique clippedtimestamps and asof last originalstate, not productionhelper. Rational near_ns/(E-S) converted once for numericcomparison; also compare exact integer durations/bounds and inputimmutability. For matchingoriginalinput all non-time/new-observation/metadata fields equalbaseline.",
+  "budget": "Oneinitial baseline diagnostic using independently authored and Git-pinnedfixtures; onecandidate with atmostone independent correctness-only repairround; onefinalbeforeafterreproduction; one reanalysis ofeach fixedretained ci300/benchmark20k pair on unchangedoriginalbytes; one300eventmain/candidateenginewiringcontrol. Fullqualitychecks/CI repeat fixedassertions as verification, not newselectiontrials. No timing comparison, market acquisition, new20kengine, parametersweep or minimumtestcount.",
+  "retained_inputs": {
+    "ci": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci",
+    "benchmark": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark",
+    "original_provenance_report": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/report.json",
+    "original_provenance_manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+    "exposure": "Both previously inspected synthetic seed7 inputs, not freshholdouts. Former benchmark rowfraction0.4904679376083189 was alreadyvisible in priorresults; no elapsed-durationresult hasbeen computed for thisstudy."
+  },
+  "end_to_end": "300CI inputmain/candidateoneeach, eightParquetbytes/configeventhash/activityPnl/terminalinventoryequal. Onlynewactualwindowdiagnostics and inventorytime/newobservation/durationmetadata changes permitted inmetrics; no strategicbehavior change. Fixedretainedartifacts reanalysis validates originalhashes/sourceprovenance, recomputes metricswithfrozenwindows fromactualmarketendpoints and sameconfig, checks independentdurationoracle and allotherfields. No binaryartifactrewrites.",
+  "decision": "Implement onlyif fixedbaseline reproduces sourcepredicted mismatch and independentdesignGO. PublishstandaloneDraftagainstmain onlyif alloracle/equivalence/presentation/fullquality gatespass and independentactualresult/artifactreviewGO; exactremotehead and terminalexact-headCI required.",
+  "stopping": "Stopif no fixed mismatch, unexplained duration/input/state/artifact mismatch, orafteronecandidate/onecorrectnessrepairbudget completes. Preserve allfailuresandundefinedcases; do not retuneinputs/thresholds/gates or reopenNov2/4stoppedstudies. Defer drawdown andfillmidpointleads.",
+  "limits": "Corrects a synthetic/research measurementdefinition only. No economicadvantage, passivefill/queue/latency calibration, exactaccountingoverhead improvement, freshmarketdata or wholeengineatomicity claim.",
+  "restrictions": "Onlysavedmatchingcloud; no E1/private/licensedoutputs, purchases, access/securitychanges, deniedactionretry, desktop, merge/deploy/trade, unrelatedrepos.",
+  "preexecution_amendment": "Diagnostics-only channel replaced proposed optionalkwargs before anytestfilefreeze,numericalwitness,reanalysisorimplementationresult; independent_feasibility GO. Hypotheses, semantics, fixtures, budget and gates unchanged. Historical initial7ac444c retained."
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-06",
+  "reviewed_core": "6ee19a6",
+  "independent_feasibility": {
+    "source": "GO for clipped interval fold, stabletie/prewindow/postwindow behavior, nullablemetadataandunchangedmembership.",
+    "baseline": "Verifiedactualcontrast[.5,.5,2/3] vs[.1,.9,.1], source/import/test/contractpins;39aggregatefailuresarenot39distinctbugs.",
+    "regression_audit": "Actualrawreport/JUnitand40nodeidentitiesverified;main39fail1pass,candidate40pass,0errors/skips;5source/import/Gitarchivehashesandretainedharness741cc/testa857/contractb265pinsmatch.",
+    "report_CI": "GO withwordingprecisionapplied: onlydeclaredinventorytime/observation/metadataandboundsdiagnosticschange;CIrunsregressionandCI300wiringonly, notsavedcloudretainedstage.",
+    "style_exception": "GO exact-fileRUF043ignorepreservingfrozenfixtures;runtime/numericalgatesunchanged.",
+    "execution": "Read-onlysource/result/report/workflowreview;noengines/tests/reruns/edits."
+  },
+  "publication": "IndependentlocalgatesGO; finalpublishedremoteSHAandterminalexact-headCIstillmustbeverified.",
+  "data_execution_audit": {
+    "decision": "ACTUAL ARTIFACT AUDIT GO",
+    "checks": [
+      "Rehashed24originalinputfiles againstNov5frozenmanifest plusoriginalreport/config/sourcepins.",
+      "IndependentlyintegratedFULL315/20772rawinventoryrows withintegerpartitions/asofbisect,notproductionfold/compressionassumption:0/239000000and9920000000/19959000000.",
+      "Originalrowfraction0.4904679376083189 retained;allotherretainedmetricsstrictlyunchanged; rawrowhashesandcompressioncounts1/158match.",
+      "Rehashed16actualwiringParquetsplus8metadatafiles,eightpairsidentical;onlydeclaredmetric/diagnosticdifferences;actualCIwindow[0,239000000]and315rows.",
+      "Five importedmodule/source/Gitarchive/retainedcopy pins plus741cc17eharness,a85759test,b265a1contract agree; coreunchanged6ee/d517/210.",
+      "ActualJUnit40nodes:main39fail1pass,candidate40pass,0errors/skips."
+    ],
+    "exposure": "AlreadyinspectedNov5SYNTHinputs;nofreshholdout,new20kengineorperformanceclaim.",
+    "execution": "Read-only actualbytes/independentarithmetic audit;noengine/tests/reruns/edits."
+  }
+}

@@ -1,0 +1,242 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.                                 [100%]
+=================================== FAILURES ===================================
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[short-near] _
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[long-near] __
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near] _
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far] _
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first] _
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry] _
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend] _
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final] _
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+___ test_frozen_duration_fixtures_match_independent_partition_oracle[empty] ____
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch] _
+tests/unit/test_inventory_duration_independent.py:154: in test_frozen_duration_fixtures_match_independent_partition_oracle
+    assert type(inventory["near_limit_duration_ns"]) is int
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+________ test_spacing_contrast_and_same_timestamp_duplicate_invariance _________
+tests/unit/test_inventory_duration_independent.py:178: in test_spacing_contrast_and_same_timestamp_duplicate_invariance
+    assert [result["time_near_limits_fraction"] for result in results] == [
+E   assert [0.5, 0.5, 0.6666666666666666] == [0.1, 0.9, 0.1]
+E     
+E     At index 0 diff: 0.5 != 0.1
+E     Use -v to get more diff
+______ test_both_signs_are_included_at_the_unchanged_near_limit_boundary _______
+tests/unit/test_inventory_duration_independent.py:200: in test_both_signs_are_included_at_the_unchanged_near_limit_boundary
+    assert result["near_limit_duration_ns"] == 8
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+__ test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None] ___
+tests/unit/test_inventory_duration_independent.py:214: in test_missing_window_has_no_duration_metadata_or_silent_row_fallback
+    assert {name: result[name] for name in _TIME_FIELDS} == dict.fromkeys(_TIME_FIELDS)
+                  ^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_ test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1] _
+tests/unit/test_inventory_duration_independent.py:214: in test_missing_window_has_no_duration_metadata_or_silent_row_fallback
+    assert {name: result[name] for name in _TIME_FIELDS} == dict.fromkeys(_TIME_FIELDS)
+                  ^^^^^^^^^^^^
+E   KeyError: 'near_limit_duration_ns'
+_____ test_zero_duration_has_zero_integer_durations_and_undefined_fraction _____
+tests/unit/test_inventory_duration_independent.py:222: in test_zero_duration_has_zero_integer_durations_and_undefined_fraction
+    assert result["observation_duration_ns"] == 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'observation_duration_ns'
+_ test_unknown_position_limit_retains_window_but_has_no_near_duration[missing] _
+tests/unit/test_inventory_duration_independent.py:235: in test_unknown_position_limit_retains_window_but_has_no_near_duration
+    assert result["observation_duration_ns"] == 10
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'observation_duration_ns'
+__ test_unknown_position_limit_retains_window_but_has_no_near_duration[zero] ___
+tests/unit/test_inventory_duration_independent.py:235: in test_unknown_position_limit_retains_window_but_has_no_near_duration
+    assert result["observation_duration_ns"] == 10
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'observation_duration_ns'
+_ test_unknown_position_limit_retains_window_but_has_no_near_duration[negative] _
+tests/unit/test_inventory_duration_independent.py:235: in test_unknown_position_limit_retains_window_but_has_no_near_duration
+    assert result["observation_duration_ns"] == 10
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'observation_duration_ns'
+____ test_malformed_window_is_rejected_without_mutating_input[missing-end] _____
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+___ test_malformed_window_is_rejected_without_mutating_input[missing-start] ____
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_____ test_malformed_window_is_rejected_without_mutating_input[none-start] _____
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+___ test_malformed_window_is_rejected_without_mutating_input[boolean-start] ____
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+____ test_malformed_window_is_rejected_without_mutating_input[boolean-end] _____
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+____ test_malformed_window_is_rejected_without_mutating_input[float-start] _____
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_____ test_malformed_window_is_rejected_without_mutating_input[string-end] _____
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+___ test_malformed_window_is_rejected_without_mutating_input[negative-start] ___
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+______ test_malformed_window_is_rejected_without_mutating_input[reversed] ______
+tests/unit/test_inventory_duration_independent.py:276: in test_malformed_window_is_rejected_without_mutating_input
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing] _
+tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+__ test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none] __
+tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean] _
+tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float] __
+tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string] _
+tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative] _
+tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing] _
+tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend] _
+tests/unit/test_inventory_duration_independent.py:311: in test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration] _
+tests/unit/test_inventory_duration_independent.py:324: in test_undefined_fraction_does_not_skip_explicit_timestamp_validation
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit] _
+tests/unit/test_inventory_duration_independent.py:324: in test_undefined_fraction_does_not_skip_explicit_timestamp_validation
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_______ test_malformed_window_is_reported_before_invalid_row_timestamps ________
+tests/unit/test_inventory_duration_independent.py:332: in test_malformed_window_is_reported_before_invalid_row_timestamps
+    with pytest.raises(ValueError, match="(?i)window|session|bound|start|end"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_____ test_case_table_distinguishes_missing_time_from_zero[undefined-n-a] ______
+tests/unit/test_inventory_duration_independent.py:363: in test_case_table_distinguishes_missing_time_from_zero
+    assert cells[4].lower() == ("0.0%" if known_window else "n/a")
+E   AssertionError: assert '0.0%' == 'n/a'
+E     
+E     - n/a
+E     + 0.0%
+=========================== short test summary info ============================
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[short-near]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[long-near]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[duplicate-near]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[same-time-final-far]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[delayed-first]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[pre-window-carry]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[endpoint-postend]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[carry-no-final]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[empty]
+FAILED tests/unit/test_inventory_duration_independent.py::test_frozen_duration_fixtures_match_independent_partition_oracle[large-epoch]
+FAILED tests/unit/test_inventory_duration_independent.py::test_spacing_contrast_and_same_timestamp_duplicate_invariance
+FAILED tests/unit/test_inventory_duration_independent.py::test_both_signs_are_included_at_the_unchanged_near_limit_boundary
+FAILED tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[None]
+FAILED tests/unit/test_inventory_duration_independent.py::test_missing_window_has_no_duration_metadata_or_silent_row_fallback[bounds1]
+FAILED tests/unit/test_inventory_duration_independent.py::test_zero_duration_has_zero_integer_durations_and_undefined_fraction
+FAILED tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[missing]
+FAILED tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[zero]
+FAILED tests/unit/test_inventory_duration_independent.py::test_unknown_position_limit_retains_window_but_has_no_near_duration[negative]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-end]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[missing-start]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[none-start]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-start]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[boolean-end]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[float-start]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[string-end]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[negative-start]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_rejected_without_mutating_input[reversed]
+FAILED tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[missing]
+FAILED tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[none]
+FAILED tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[boolean]
+FAILED tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[float]
+FAILED tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[string]
+FAILED tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[negative]
+FAILED tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[decreasing]
+FAILED tests/unit/test_inventory_duration_independent.py::test_explicit_window_requires_all_timestamps_to_be_valid_and_ordered[invalid-postend]
+FAILED tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[zero-duration]
+FAILED tests/unit/test_inventory_duration_independent.py::test_undefined_fraction_does_not_skip_explicit_timestamp_validation[unknown-limit]
+FAILED tests/unit/test_inventory_duration_independent.py::test_malformed_window_is_reported_before_invalid_row_timestamps
+FAILED tests/unit/test_inventory_duration_independent.py::test_case_table_distinguishes_missing_time_from_zero[undefined-n-a]
+39 failed, 1 passed in 2.32s

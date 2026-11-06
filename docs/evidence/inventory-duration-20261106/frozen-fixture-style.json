@@ -1,0 +1,8 @@
+{
+  "initial_full_lint": "RUF043 at frozen test line332: intentional match=\"(?i)window|session|bound|start|end\" is not a raw string.",
+  "resolution": "Exact-file RUF043 ignore with provenance comment, independently reviewed; no runtime/numerical assertion or source fixture byte changed.",
+  "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+  "review": "independent_feasibility GO",
+  "final_full_ruff": "lint and format passed",
+  "scope": "Style-only fixture exception; no source correctness repair, corpus/gate change, ignored runtime failure or repeated research trial."
+}

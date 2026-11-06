@@ -1,0 +1,89 @@
+{
+  "scope": "Committed study evidence/report; excludesmanifest itself. Originalrawcloudfilesindexedseparately.",
+  "files": {
+    "contract.json": {
+      "size_bytes": 9455,
+      "sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471"
+    },
+    "design-review.json": {
+      "size_bytes": 741,
+      "sha256": "691122ee7eace30a257640f6b14253636176a5e2f5d9830e3eefa744f57cef3b"
+    },
+    "frozen-fixture-style.json": {
+      "size_bytes": 614,
+      "sha256": "2033de72ee02ec329a98f5266988b4bd5577f83c115f859d9cd7cf5433cc8ca7"
+    },
+    "full-suite-imports.json": {
+      "size_bytes": 7070,
+      "sha256": "d9d107b878654f6e2f9671ad8eb09b443b864e1b522955d080a4537fd1e955ce"
+    },
+    "full-suite.txt": {
+      "size_bytes": 6899,
+      "sha256": "c3fa12d39ab155976845dd645c0b7577176a5c65bd3fe79bc43e228ba34309c9"
+    },
+    "independent-review.json": {
+      "size_bytes": 2164,
+      "sha256": "ae3535db1c45390d0b304f2ce50c5b8baa2c53366ea1cd987cdc3f3ca7a613d6"
+    },
+    "initial-focused.txt": {
+      "size_bytes": 99,
+      "sha256": "7de45ab8d6c1dd6c29f73edd2dbd111ee15d9b765402b2e6a863bd5e8e3acbff"
+    },
+    "local-verification.json": {
+      "size_bytes": 1593,
+      "sha256": "5c2ccffcf82f11ccb5de5f51ccdb1f62b4d14b96fe2a9316820b6154c18cf8ab"
+    },
+    "regression-final-environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "regression-final-report.json": {
+      "size_bytes": 93195,
+      "sha256": "a6524eb1d7f35c61b028567444d4b0a09a6b490596f46c2648a6d4011c5b9d41"
+    },
+    "retained-final-environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "retained-final-report.json": {
+      "size_bytes": 41878,
+      "sha256": "15d4feb7cf17a54a6ee7acfbd8cfce7e45ec9c81a862f34679719e20334cc8c1"
+    },
+    "retained-workspace-manifest.json": {
+      "size_bytes": 19608,
+      "sha256": "1d95f7a36bde9d3451dd5960593173971c9acbe04788ef0c493412f56ec55fe0"
+    },
+    "triage-imports.json": {
+      "size_bytes": 365,
+      "sha256": "083e99848f7972bf2b38e7df54d75d9feef064b2f5c797753bc79709e21ad7d2"
+    },
+    "triage-prerun.json": {
+      "size_bytes": 705,
+      "sha256": "d20baca08967ab930b734afd4b9e5e56612e4b85b2bd7bd61f61b479f0370ac2"
+    },
+    "triage.txt": {
+      "size_bytes": 18555,
+      "sha256": "cb329d0d838c10acd74256931a140bd7a14479a0dccedbb4737cdce5a68dada5"
+    },
+    "wiring-final-environment.json": {
+      "size_bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "wiring-final-report.json": {
+      "size_bytes": 23121,
+      "sha256": "de6e159a159ccce8f300bb1716ded5488e1bbfa478e7a383dcbf35ed85c08ec7"
+    }
+  },
+  "report": {
+    "path": "docs/INVENTORY_DURATION_METRIC.md",
+    "sha256": "399648df6b2db7b01a348f38f7005b487fcfd36a7f598fed8eae63c503fc30dd",
+    "size_bytes": 10819
+  },
+  "source_sha256": {
+    "src/lobmm/metrics.py": "21cc8cc5d02f66899acc7169d6678f32c3e2f9c2037dd4724f78f7b623cd8cce",
+    "src/lobmm/backtest.py": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+    "src/lobmm/case_study.py": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+    "tools/reproduce_inventory_duration.py": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+    "tests/unit/test_inventory_duration_independent.py": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252"
+  }
+}

@@ -248,6 +248,10 @@ that Python code or a deployment operates at nanosecond speed.
 Historical price-through fills are a queue-model rule, not an exchange toggle.
 `backtest.mark_price` chooses midpoint, microprice, or conservative marking;
 `metrics.near_limit_fraction` defines the reported near-inventory-limit band.
+`inventory.time_near_limits_fraction` weights that band by elapsed nanoseconds
+over the selected market window. The former snapshot-count statistic is retained
+as `inventory.observations_near_limits_fraction`; missing time windows produce
+an unavailable time fraction rather than a count-based substitute.
 The session-end policy is either `mark` or `liquidate`.
 
 ## Queue and fill model

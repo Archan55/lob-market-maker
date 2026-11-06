@@ -1,0 +1,951 @@
+{
+  "status": "complete",
+  "stage": "retained",
+  "harness_sha256": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+  "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+  "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471",
+  "process_cap_seconds": 120,
+  "attempts": [
+    {
+      "role": "main",
+      "workload": "ci",
+      "status": "complete"
+    },
+    {
+      "role": "candidate",
+      "workload": "ci",
+      "status": "complete"
+    },
+    {
+      "role": "main",
+      "workload": "benchmark",
+      "status": "complete"
+    },
+    {
+      "role": "candidate",
+      "workload": "benchmark",
+      "status": "complete"
+    }
+  ],
+  "observations": [
+    {
+      "status": "complete",
+      "stage": "retained",
+      "role": "main",
+      "workload": "ci",
+      "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "source_sha256": {
+        "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "case_study": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      },
+      "imported_sources": {
+        "metrics": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/metrics.py",
+        "backtest": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/backtest.py",
+        "case_study": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/case_study.py",
+        "report": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/report.py",
+        "config": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/config.py"
+      },
+      "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+      "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471",
+      "harness_sha256": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "integer_string_guard": 4300,
+      "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci",
+      "input_sha256": {
+        "fills.parquet": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228",
+        "inventory.parquet": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2",
+        "market.parquet": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb",
+        "markouts.parquet": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a",
+        "orders.parquet": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0",
+        "pnl.parquet": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a",
+        "quotes.parquet": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c",
+        "risk_events.parquet": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+        "run_config.yaml": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5",
+        "metrics.json": "4583d8f66c1c8901b10d1e57644ce122163ae397bd8600fcca02ad83b70e1b7c",
+        "diagnostics.json": "6347052a58cfd02a6c1fbb5c8c28f9d29428710e38e4923c971c8e4adf249103",
+        "summary.json": "c8a4d35dbe60b2066f9e645afc31d9bdbf4945f7efd6b80eb252de2b5aa4330b"
+      },
+      "original_provenance_report_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+      "original_manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+      "event_stream_sha256": "1d94fa3e581b757d7d8b6fb3e8994cb0cc7ea3519144d380c67d15c709d5f218",
+      "effective_config_sha256": "d01eb904dba8af8d20af30e8e9986ed9b01b210b89aebbd2b16ba3d073ec81d8",
+      "metrics": {
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "trading_activity": {
+          "submitted_orders": 64,
+          "cancelled_orders": 25,
+          "rejected_orders": 0,
+          "partial_fills": 0,
+          "completed_fills": 27,
+          "fill_events": 27,
+          "buy_volume": 60,
+          "sell_volume": 75,
+          "turnover": 13507.300000000001,
+          "maker_volume": 135,
+          "taker_volume": 0,
+          "order_to_fill_ratio": 2.3703703703703702,
+          "cancel_to_fill_ratio": 0.9259259259259259,
+          "fill_rate": 0.421875,
+          "quote_messages": 89
+        },
+        "pnl": {
+          "gross_pnl": 2.85,
+          "fees": 0.0,
+          "rebates": 0.027,
+          "net_pnl": 2.877,
+          "realized_pnl": 2.7,
+          "unrealized_pnl": 0.15,
+          "maximum_drawdown": 0.09899999999999998,
+          "pnl_per_traded_unit": 0.02131111111111111,
+          "pnl_per_fill": 0.10655555555555554,
+          "pnl_per_unit_turnover": 0.00021299593553115718,
+          "annualized_sharpe": null,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization."
+        },
+        "inventory": {
+          "mean": 2.2698412698412698,
+          "standard_deviation": 6.412305504229087,
+          "maximum_long": 20,
+          "maximum_short": -15,
+          "mean_absolute": 4.142857142857143,
+          "time_near_limits_fraction": 0.0,
+          "end_of_session": -15
+        },
+        "execution_quality": {
+          "realized_spread_ticks": 0.9074074074074074,
+          "effective_spread_ticks": 1.8148148148148149,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 3.03125,
+            "1000000000": null,
+            "5000000000": null
+          },
+          "markout_ticks_by_side": {
+            "bid": 3.125,
+            "ask": 2.9375
+          }
+        },
+        "market_conditions": {
+          "average_market_spread_ticks": 2.892361111111111,
+          "average_displayed_top_depth": 134.03
+        },
+        "risk": {
+          "event_count": 0,
+          "kill_switch_active": false
+        },
+        "attribution": {
+          "spread_capture": 1.2249999999999999,
+          "inventory_mark_to_market": 1.625,
+          "fees": -0.0,
+          "rebates": 0.027,
+          "adverse_selection_markout": 4.0921875,
+          "reconciliation_residual": 0.0,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual."
+        },
+        "engineering": {
+          "events_processed": 300,
+          "scheduler_events_processed": 1148,
+          "wall_clock_seconds": 0.040075275999925,
+          "events_per_second": 7485.912261728689,
+          "peak_memory_bytes": null
+        }
+      },
+      "original_metrics": {
+        "attribution": {
+          "adverse_selection_markout": 4.0921875,
+          "fees": -0.0,
+          "inventory_mark_to_market": 1.625,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+          "rebates": 0.027,
+          "reconciliation_residual": 0.0,
+          "spread_capture": 1.2249999999999999
+        },
+        "engineering": {
+          "events_per_second": 7485.912261728689,
+          "events_processed": 300,
+          "peak_memory_bytes": null,
+          "scheduler_events_processed": 1148,
+          "wall_clock_seconds": 0.040075275999925
+        },
+        "execution_quality": {
+          "effective_spread_ticks": 1.8148148148148149,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 3.03125,
+            "1000000000": null,
+            "5000000000": null
+          },
+          "markout_ticks_by_side": {
+            "ask": 2.9375,
+            "bid": 3.125
+          },
+          "realized_spread_ticks": 0.9074074074074074
+        },
+        "inventory": {
+          "end_of_session": -15,
+          "maximum_long": 20,
+          "maximum_short": -15,
+          "mean": 2.2698412698412698,
+          "mean_absolute": 4.142857142857143,
+          "standard_deviation": 6.412305504229087,
+          "time_near_limits_fraction": 0.0
+        },
+        "market_conditions": {
+          "average_displayed_top_depth": 134.03,
+          "average_market_spread_ticks": 2.892361111111111
+        },
+        "pnl": {
+          "annualized_sharpe": null,
+          "fees": 0.0,
+          "gross_pnl": 2.85,
+          "maximum_drawdown": 0.09899999999999998,
+          "net_pnl": 2.877,
+          "pnl_per_fill": 0.10655555555555554,
+          "pnl_per_traded_unit": 0.02131111111111111,
+          "pnl_per_unit_turnover": 0.00021299593553115718,
+          "realized_pnl": 2.7,
+          "rebates": 0.027,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+          "unrealized_pnl": 0.15
+        },
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "risk": {
+          "event_count": 0,
+          "kill_switch_active": false
+        },
+        "trading_activity": {
+          "buy_volume": 60,
+          "cancel_to_fill_ratio": 0.9259259259259259,
+          "cancelled_orders": 25,
+          "completed_fills": 27,
+          "fill_events": 27,
+          "fill_rate": 0.421875,
+          "maker_volume": 135,
+          "order_to_fill_ratio": 2.3703703703703702,
+          "partial_fills": 0,
+          "quote_messages": 89,
+          "rejected_orders": 0,
+          "sell_volume": 75,
+          "submitted_orders": 64,
+          "taker_volume": 0,
+          "turnover": 13507.300000000001
+        }
+      },
+      "oracle": {
+        "near_limit_duration_ns": 0,
+        "observation_duration_ns": 239000000,
+        "time_near_limits_fraction": 0.0,
+        "time_window_start_ns": 0,
+        "time_window_end_ns": 239000000,
+        "original_rows": 315,
+        "oracle_compressed_rows": 1,
+        "original_rows_sha256": "b4424f678a667e39cfe041af7ce6a37ed6dd233c26bc8a2c38aff6ffb38ae89f"
+      },
+      "actual_window": [
+        0,
+        239000000
+      ],
+      "old_observations_fraction": 0.0,
+      "exposure": "Exact previously inspected Nov5 synthetic main bytes; no fresh holdout or engine regeneration."
+    },
+    {
+      "status": "complete",
+      "stage": "retained",
+      "role": "candidate",
+      "workload": "ci",
+      "resolved_revision": "d517b4aae2a282ac89143626fe1ae49d8587ab55",
+      "source_sha256": {
+        "metrics": "21cc8cc5d02f66899acc7169d6678f32c3e2f9c2037dd4724f78f7b623cd8cce",
+        "backtest": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+        "case_study": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      },
+      "imported_sources": {
+        "metrics": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/metrics.py",
+        "backtest": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/backtest.py",
+        "case_study": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/case_study.py",
+        "report": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/report.py",
+        "config": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/config.py"
+      },
+      "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+      "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471",
+      "harness_sha256": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "integer_string_guard": 4300,
+      "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci",
+      "input_sha256": {
+        "fills.parquet": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228",
+        "inventory.parquet": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2",
+        "market.parquet": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb",
+        "markouts.parquet": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a",
+        "orders.parquet": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0",
+        "pnl.parquet": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a",
+        "quotes.parquet": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c",
+        "risk_events.parquet": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+        "run_config.yaml": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5",
+        "metrics.json": "4583d8f66c1c8901b10d1e57644ce122163ae397bd8600fcca02ad83b70e1b7c",
+        "diagnostics.json": "6347052a58cfd02a6c1fbb5c8c28f9d29428710e38e4923c971c8e4adf249103",
+        "summary.json": "c8a4d35dbe60b2066f9e645afc31d9bdbf4945f7efd6b80eb252de2b5aa4330b"
+      },
+      "original_provenance_report_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+      "original_manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+      "event_stream_sha256": "1d94fa3e581b757d7d8b6fb3e8994cb0cc7ea3519144d380c67d15c709d5f218",
+      "effective_config_sha256": "d01eb904dba8af8d20af30e8e9986ed9b01b210b89aebbd2b16ba3d073ec81d8",
+      "metrics": {
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "trading_activity": {
+          "submitted_orders": 64,
+          "cancelled_orders": 25,
+          "rejected_orders": 0,
+          "partial_fills": 0,
+          "completed_fills": 27,
+          "fill_events": 27,
+          "buy_volume": 60,
+          "sell_volume": 75,
+          "turnover": 13507.300000000001,
+          "maker_volume": 135,
+          "taker_volume": 0,
+          "order_to_fill_ratio": 2.3703703703703702,
+          "cancel_to_fill_ratio": 0.9259259259259259,
+          "fill_rate": 0.421875,
+          "quote_messages": 89
+        },
+        "pnl": {
+          "gross_pnl": 2.85,
+          "fees": 0.0,
+          "rebates": 0.027,
+          "net_pnl": 2.877,
+          "realized_pnl": 2.7,
+          "unrealized_pnl": 0.15,
+          "maximum_drawdown": 0.09899999999999998,
+          "pnl_per_traded_unit": 0.02131111111111111,
+          "pnl_per_fill": 0.10655555555555554,
+          "pnl_per_unit_turnover": 0.00021299593553115718,
+          "annualized_sharpe": null,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization."
+        },
+        "inventory": {
+          "mean": 2.2698412698412698,
+          "standard_deviation": 6.412305504229087,
+          "maximum_long": 20,
+          "maximum_short": -15,
+          "mean_absolute": 4.142857142857143,
+          "observations_near_limits_fraction": 0.0,
+          "time_near_limits_fraction": 0.0,
+          "near_limit_duration_ns": 0,
+          "observation_duration_ns": 239000000,
+          "time_window_start_ns": 0,
+          "time_window_end_ns": 239000000,
+          "end_of_session": -15
+        },
+        "execution_quality": {
+          "realized_spread_ticks": 0.9074074074074074,
+          "effective_spread_ticks": 1.8148148148148149,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 3.03125,
+            "1000000000": null,
+            "5000000000": null
+          },
+          "markout_ticks_by_side": {
+            "bid": 3.125,
+            "ask": 2.9375
+          }
+        },
+        "market_conditions": {
+          "average_market_spread_ticks": 2.892361111111111,
+          "average_displayed_top_depth": 134.03
+        },
+        "risk": {
+          "event_count": 0,
+          "kill_switch_active": false
+        },
+        "attribution": {
+          "spread_capture": 1.2249999999999999,
+          "inventory_mark_to_market": 1.625,
+          "fees": -0.0,
+          "rebates": 0.027,
+          "adverse_selection_markout": 4.0921875,
+          "reconciliation_residual": 0.0,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual."
+        },
+        "engineering": {
+          "events_processed": 300,
+          "scheduler_events_processed": 1148,
+          "wall_clock_seconds": 0.040075275999925,
+          "events_per_second": 7485.912261728689,
+          "peak_memory_bytes": null
+        }
+      },
+      "original_metrics": {
+        "attribution": {
+          "adverse_selection_markout": 4.0921875,
+          "fees": -0.0,
+          "inventory_mark_to_market": 1.625,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+          "rebates": 0.027,
+          "reconciliation_residual": 0.0,
+          "spread_capture": 1.2249999999999999
+        },
+        "engineering": {
+          "events_per_second": 7485.912261728689,
+          "events_processed": 300,
+          "peak_memory_bytes": null,
+          "scheduler_events_processed": 1148,
+          "wall_clock_seconds": 0.040075275999925
+        },
+        "execution_quality": {
+          "effective_spread_ticks": 1.8148148148148149,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 3.03125,
+            "1000000000": null,
+            "5000000000": null
+          },
+          "markout_ticks_by_side": {
+            "ask": 2.9375,
+            "bid": 3.125
+          },
+          "realized_spread_ticks": 0.9074074074074074
+        },
+        "inventory": {
+          "end_of_session": -15,
+          "maximum_long": 20,
+          "maximum_short": -15,
+          "mean": 2.2698412698412698,
+          "mean_absolute": 4.142857142857143,
+          "standard_deviation": 6.412305504229087,
+          "time_near_limits_fraction": 0.0
+        },
+        "market_conditions": {
+          "average_displayed_top_depth": 134.03,
+          "average_market_spread_ticks": 2.892361111111111
+        },
+        "pnl": {
+          "annualized_sharpe": null,
+          "fees": 0.0,
+          "gross_pnl": 2.85,
+          "maximum_drawdown": 0.09899999999999998,
+          "net_pnl": 2.877,
+          "pnl_per_fill": 0.10655555555555554,
+          "pnl_per_traded_unit": 0.02131111111111111,
+          "pnl_per_unit_turnover": 0.00021299593553115718,
+          "realized_pnl": 2.7,
+          "rebates": 0.027,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+          "unrealized_pnl": 0.15
+        },
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "risk": {
+          "event_count": 0,
+          "kill_switch_active": false
+        },
+        "trading_activity": {
+          "buy_volume": 60,
+          "cancel_to_fill_ratio": 0.9259259259259259,
+          "cancelled_orders": 25,
+          "completed_fills": 27,
+          "fill_events": 27,
+          "fill_rate": 0.421875,
+          "maker_volume": 135,
+          "order_to_fill_ratio": 2.3703703703703702,
+          "partial_fills": 0,
+          "quote_messages": 89,
+          "rejected_orders": 0,
+          "sell_volume": 75,
+          "submitted_orders": 64,
+          "taker_volume": 0,
+          "turnover": 13507.300000000001
+        }
+      },
+      "oracle": {
+        "near_limit_duration_ns": 0,
+        "observation_duration_ns": 239000000,
+        "time_near_limits_fraction": 0.0,
+        "time_window_start_ns": 0,
+        "time_window_end_ns": 239000000,
+        "original_rows": 315,
+        "oracle_compressed_rows": 1,
+        "original_rows_sha256": "b4424f678a667e39cfe041af7ce6a37ed6dd233c26bc8a2c38aff6ffb38ae89f"
+      },
+      "actual_window": [
+        0,
+        239000000
+      ],
+      "old_observations_fraction": 0.0,
+      "exposure": "Exact previously inspected Nov5 synthetic main bytes; no fresh holdout or engine regeneration."
+    },
+    {
+      "status": "complete",
+      "stage": "retained",
+      "role": "main",
+      "workload": "benchmark",
+      "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "source_sha256": {
+        "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "case_study": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      },
+      "imported_sources": {
+        "metrics": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/metrics.py",
+        "backtest": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/backtest.py",
+        "case_study": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/case_study.py",
+        "report": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/report.py",
+        "config": "/tmp/lob-inventory-duration-luvq_11o/main/src/lobmm/config.py"
+      },
+      "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+      "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471",
+      "harness_sha256": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "integer_string_guard": 4300,
+      "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark",
+      "input_sha256": {
+        "fills.parquet": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+        "inventory.parquet": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba",
+        "market.parquet": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3",
+        "markouts.parquet": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+        "orders.parquet": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0",
+        "pnl.parquet": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178",
+        "quotes.parquet": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b",
+        "risk_events.parquet": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4",
+        "run_config.yaml": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a",
+        "metrics.json": "952a72f78f2fb0fcf3afa8721d9ecb4a965ac92f7ef9daf56c191ce0badc9ee4",
+        "diagnostics.json": "960dacd9702c50a57daf983faa37ca3685e6dfa20e6a9063d63ba9856ea50ccb",
+        "summary.json": "e6f2f69b5bf08c7bf28211a436cfd398d8ebe228c86409cbe2c8fc74ebe96c63"
+      },
+      "original_provenance_report_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+      "original_manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+      "event_stream_sha256": "8a845f3b206876f8f0769d9e051d7016436355c605297f4d14fda6df2cc04237",
+      "effective_config_sha256": "3f898e5cefc4c731d1f2056d8a7f9dd491b7d3ce0772af80ba0cee227468cdbc",
+      "metrics": {
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "trading_activity": {
+          "submitted_orders": 3140,
+          "cancelled_orders": 2391,
+          "rejected_orders": 16,
+          "partial_fills": 52,
+          "completed_fills": 728,
+          "fill_events": 780,
+          "buy_volume": 3712,
+          "sell_volume": 3808,
+          "turnover": 757616.72,
+          "maker_volume": 7520,
+          "taker_volume": 0,
+          "order_to_fill_ratio": 4.0256410256410255,
+          "cancel_to_fill_ratio": 3.0653846153846156,
+          "fill_rate": 0.2318471337579618,
+          "quote_messages": 5651
+        },
+        "pnl": {
+          "gross_pnl": 87.36,
+          "fees": 0.0,
+          "rebates": 1.504,
+          "net_pnl": 88.864,
+          "realized_pnl": 98.45571998924397,
+          "unrealized_pnl": -11.095719989243976,
+          "maximum_drawdown": 274.4416,
+          "pnl_per_traded_unit": 0.011817021276595745,
+          "pnl_per_fill": 0.11392820512820513,
+          "pnl_per_unit_turnover": 0.00011729413785904832,
+          "annualized_sharpe": null,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization."
+        },
+        "inventory": {
+          "mean": -15.233824378971693,
+          "standard_deviation": 70.8535167883451,
+          "maximum_long": 100,
+          "maximum_short": -100,
+          "mean_absolute": 65.92398420951281,
+          "time_near_limits_fraction": 0.4904679376083189,
+          "end_of_session": -96
+        },
+        "execution_quality": {
+          "realized_spread_ticks": 0.7352564102564103,
+          "effective_spread_ticks": 1.4705128205128206,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 0.7826923076923077,
+            "1000000000": 3.0367268041237114,
+            "5000000000": -1.3013793103448277
+          },
+          "markout_ticks_by_side": {
+            "bid": -4.850132625994695,
+            "ask": 6.529565217391304
+          }
+        },
+        "market_conditions": {
+          "average_market_spread_ticks": 2.583033213285314,
+          "average_displayed_top_depth": 105.1461
+        },
+        "risk": {
+          "event_count": 120,
+          "kill_switch_active": false
+        },
+        "attribution": {
+          "spread_capture": 54.41500000000007,
+          "inventory_mark_to_market": 32.944999999999936,
+          "fees": -0.0,
+          "rebates": 1.504,
+          "adverse_selection_markout": 66.71074090311268,
+          "reconciliation_residual": 0.0,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual."
+        },
+        "engineering": {
+          "events_processed": 20000,
+          "scheduler_events_processed": 80651,
+          "wall_clock_seconds": 1.9520131760000368,
+          "events_per_second": 10245.83247997483,
+          "peak_memory_bytes": null
+        }
+      },
+      "original_metrics": {
+        "attribution": {
+          "adverse_selection_markout": 66.71074090311268,
+          "fees": -0.0,
+          "inventory_mark_to_market": 32.944999999999936,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+          "rebates": 1.504,
+          "reconciliation_residual": 0.0,
+          "spread_capture": 54.41500000000007
+        },
+        "engineering": {
+          "events_per_second": 10245.83247997483,
+          "events_processed": 20000,
+          "peak_memory_bytes": null,
+          "scheduler_events_processed": 80651,
+          "wall_clock_seconds": 1.9520131760000368
+        },
+        "execution_quality": {
+          "effective_spread_ticks": 1.4705128205128206,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 0.7826923076923077,
+            "1000000000": 3.0367268041237114,
+            "5000000000": -1.3013793103448277
+          },
+          "markout_ticks_by_side": {
+            "ask": 6.529565217391304,
+            "bid": -4.850132625994695
+          },
+          "realized_spread_ticks": 0.7352564102564103
+        },
+        "inventory": {
+          "end_of_session": -96,
+          "maximum_long": 100,
+          "maximum_short": -100,
+          "mean": -15.233824378971693,
+          "mean_absolute": 65.92398420951281,
+          "standard_deviation": 70.8535167883451,
+          "time_near_limits_fraction": 0.4904679376083189
+        },
+        "market_conditions": {
+          "average_displayed_top_depth": 105.1461,
+          "average_market_spread_ticks": 2.583033213285314
+        },
+        "pnl": {
+          "annualized_sharpe": null,
+          "fees": 0.0,
+          "gross_pnl": 87.36,
+          "maximum_drawdown": 274.4416,
+          "net_pnl": 88.864,
+          "pnl_per_fill": 0.11392820512820513,
+          "pnl_per_traded_unit": 0.011817021276595745,
+          "pnl_per_unit_turnover": 0.00011729413785904832,
+          "realized_pnl": 98.45571998924397,
+          "rebates": 1.504,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+          "unrealized_pnl": -11.095719989243976
+        },
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "risk": {
+          "event_count": 120,
+          "kill_switch_active": false
+        },
+        "trading_activity": {
+          "buy_volume": 3712,
+          "cancel_to_fill_ratio": 3.0653846153846156,
+          "cancelled_orders": 2391,
+          "completed_fills": 728,
+          "fill_events": 780,
+          "fill_rate": 0.2318471337579618,
+          "maker_volume": 7520,
+          "order_to_fill_ratio": 4.0256410256410255,
+          "partial_fills": 52,
+          "quote_messages": 5651,
+          "rejected_orders": 16,
+          "sell_volume": 3808,
+          "submitted_orders": 3140,
+          "taker_volume": 0,
+          "turnover": 757616.72
+        }
+      },
+      "oracle": {
+        "near_limit_duration_ns": 9920000000,
+        "observation_duration_ns": 19959000000,
+        "time_near_limits_fraction": 0.4970188887218799,
+        "time_window_start_ns": 0,
+        "time_window_end_ns": 19959000000,
+        "original_rows": 20772,
+        "oracle_compressed_rows": 158,
+        "original_rows_sha256": "6121af0a4ee42c0b222fc6cc8a242fe3c18ef21e7169062342af681ae19f1a75"
+      },
+      "actual_window": [
+        0,
+        19959000000
+      ],
+      "old_observations_fraction": 0.4904679376083189,
+      "exposure": "Exact previously inspected Nov5 synthetic main bytes; no fresh holdout or engine regeneration."
+    },
+    {
+      "status": "complete",
+      "stage": "retained",
+      "role": "candidate",
+      "workload": "benchmark",
+      "resolved_revision": "d517b4aae2a282ac89143626fe1ae49d8587ab55",
+      "source_sha256": {
+        "metrics": "21cc8cc5d02f66899acc7169d6678f32c3e2f9c2037dd4724f78f7b623cd8cce",
+        "backtest": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+        "case_study": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      },
+      "imported_sources": {
+        "metrics": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/metrics.py",
+        "backtest": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/backtest.py",
+        "case_study": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/case_study.py",
+        "report": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/report.py",
+        "config": "/tmp/lob-inventory-duration-luvq_11o/candidate/src/lobmm/config.py"
+      },
+      "test_sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252",
+      "contract_sha256": "b265a1d9afbb87e28be36e321ad1164e62b05757c709a02bbf4534d433217471",
+      "harness_sha256": "741cc17e1b811b5a89f47cc7c2605fd82d105b4c4ce6b332e7c46518a2ff49bd",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "integer_string_guard": 4300,
+      "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark",
+      "input_sha256": {
+        "fills.parquet": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+        "inventory.parquet": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba",
+        "market.parquet": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3",
+        "markouts.parquet": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+        "orders.parquet": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0",
+        "pnl.parquet": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178",
+        "quotes.parquet": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b",
+        "risk_events.parquet": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4",
+        "run_config.yaml": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a",
+        "metrics.json": "952a72f78f2fb0fcf3afa8721d9ecb4a965ac92f7ef9daf56c191ce0badc9ee4",
+        "diagnostics.json": "960dacd9702c50a57daf983faa37ca3685e6dfa20e6a9063d63ba9856ea50ccb",
+        "summary.json": "e6f2f69b5bf08c7bf28211a436cfd398d8ebe228c86409cbe2c8fc74ebe96c63"
+      },
+      "original_provenance_report_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+      "original_manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+      "event_stream_sha256": "8a845f3b206876f8f0769d9e051d7016436355c605297f4d14fda6df2cc04237",
+      "effective_config_sha256": "3f898e5cefc4c731d1f2056d8a7f9dd491b7d3ce0772af80ba0cee227468cdbc",
+      "metrics": {
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "trading_activity": {
+          "submitted_orders": 3140,
+          "cancelled_orders": 2391,
+          "rejected_orders": 16,
+          "partial_fills": 52,
+          "completed_fills": 728,
+          "fill_events": 780,
+          "buy_volume": 3712,
+          "sell_volume": 3808,
+          "turnover": 757616.72,
+          "maker_volume": 7520,
+          "taker_volume": 0,
+          "order_to_fill_ratio": 4.0256410256410255,
+          "cancel_to_fill_ratio": 3.0653846153846156,
+          "fill_rate": 0.2318471337579618,
+          "quote_messages": 5651
+        },
+        "pnl": {
+          "gross_pnl": 87.36,
+          "fees": 0.0,
+          "rebates": 1.504,
+          "net_pnl": 88.864,
+          "realized_pnl": 98.45571998924397,
+          "unrealized_pnl": -11.095719989243976,
+          "maximum_drawdown": 274.4416,
+          "pnl_per_traded_unit": 0.011817021276595745,
+          "pnl_per_fill": 0.11392820512820513,
+          "pnl_per_unit_turnover": 0.00011729413785904832,
+          "annualized_sharpe": null,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization."
+        },
+        "inventory": {
+          "mean": -15.233824378971693,
+          "standard_deviation": 70.8535167883451,
+          "maximum_long": 100,
+          "maximum_short": -100,
+          "mean_absolute": 65.92398420951281,
+          "observations_near_limits_fraction": 0.4904679376083189,
+          "time_near_limits_fraction": 0.4970188887218799,
+          "near_limit_duration_ns": 9920000000,
+          "observation_duration_ns": 19959000000,
+          "time_window_start_ns": 0,
+          "time_window_end_ns": 19959000000,
+          "end_of_session": -96
+        },
+        "execution_quality": {
+          "realized_spread_ticks": 0.7352564102564103,
+          "effective_spread_ticks": 1.4705128205128206,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 0.7826923076923077,
+            "1000000000": 3.0367268041237114,
+            "5000000000": -1.3013793103448277
+          },
+          "markout_ticks_by_side": {
+            "bid": -4.850132625994695,
+            "ask": 6.529565217391304
+          }
+        },
+        "market_conditions": {
+          "average_market_spread_ticks": 2.583033213285314,
+          "average_displayed_top_depth": 105.1461
+        },
+        "risk": {
+          "event_count": 120,
+          "kill_switch_active": false
+        },
+        "attribution": {
+          "spread_capture": 54.41500000000007,
+          "inventory_mark_to_market": 32.944999999999936,
+          "fees": -0.0,
+          "rebates": 1.504,
+          "adverse_selection_markout": 66.71074090311268,
+          "reconciliation_residual": 0.0,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual."
+        },
+        "engineering": {
+          "events_processed": 20000,
+          "scheduler_events_processed": 80651,
+          "wall_clock_seconds": 1.9520131760000368,
+          "events_per_second": 10245.83247997483,
+          "peak_memory_bytes": null
+        }
+      },
+      "original_metrics": {
+        "attribution": {
+          "adverse_selection_markout": 66.71074090311268,
+          "fees": -0.0,
+          "inventory_mark_to_market": 32.944999999999936,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+          "rebates": 1.504,
+          "reconciliation_residual": 0.0,
+          "spread_capture": 54.41500000000007
+        },
+        "engineering": {
+          "events_per_second": 10245.83247997483,
+          "events_processed": 20000,
+          "peak_memory_bytes": null,
+          "scheduler_events_processed": 80651,
+          "wall_clock_seconds": 1.9520131760000368
+        },
+        "execution_quality": {
+          "effective_spread_ticks": 1.4705128205128206,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 0.7826923076923077,
+            "1000000000": 3.0367268041237114,
+            "5000000000": -1.3013793103448277
+          },
+          "markout_ticks_by_side": {
+            "ask": 6.529565217391304,
+            "bid": -4.850132625994695
+          },
+          "realized_spread_ticks": 0.7352564102564103
+        },
+        "inventory": {
+          "end_of_session": -96,
+          "maximum_long": 100,
+          "maximum_short": -100,
+          "mean": -15.233824378971693,
+          "mean_absolute": 65.92398420951281,
+          "standard_deviation": 70.8535167883451,
+          "time_near_limits_fraction": 0.4904679376083189
+        },
+        "market_conditions": {
+          "average_displayed_top_depth": 105.1461,
+          "average_market_spread_ticks": 2.583033213285314
+        },
+        "pnl": {
+          "annualized_sharpe": null,
+          "fees": 0.0,
+          "gross_pnl": 87.36,
+          "maximum_drawdown": 274.4416,
+          "net_pnl": 88.864,
+          "pnl_per_fill": 0.11392820512820513,
+          "pnl_per_traded_unit": 0.011817021276595745,
+          "pnl_per_unit_turnover": 0.00011729413785904832,
+          "realized_pnl": 98.45571998924397,
+          "rebates": 1.504,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+          "unrealized_pnl": -11.095719989243976
+        },
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "risk": {
+          "event_count": 120,
+          "kill_switch_active": false
+        },
+        "trading_activity": {
+          "buy_volume": 3712,
+          "cancel_to_fill_ratio": 3.0653846153846156,
+          "cancelled_orders": 2391,
+          "completed_fills": 728,
+          "fill_events": 780,
+          "fill_rate": 0.2318471337579618,
+          "maker_volume": 7520,
+          "order_to_fill_ratio": 4.0256410256410255,
+          "partial_fills": 52,
+          "quote_messages": 5651,
+          "rejected_orders": 16,
+          "sell_volume": 3808,
+          "submitted_orders": 3140,
+          "taker_volume": 0,
+          "turnover": 757616.72
+        }
+      },
+      "oracle": {
+        "near_limit_duration_ns": 9920000000,
+        "observation_duration_ns": 19959000000,
+        "time_near_limits_fraction": 0.4970188887218799,
+        "time_window_start_ns": 0,
+        "time_window_end_ns": 19959000000,
+        "original_rows": 20772,
+        "oracle_compressed_rows": 158,
+        "original_rows_sha256": "6121af0a4ee42c0b222fc6cc8a242fe3c18ef21e7169062342af681ae19f1a75"
+      },
+      "actual_window": [
+        0,
+        19959000000
+      ],
+      "old_observations_fraction": 0.4904679376083189,
+      "exposure": "Exact previously inspected Nov5 synthetic main bytes; no fresh holdout or engine regeneration."
+    }
+  ],
+  "sources": {
+    "main": {
+      "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "git_archive_sha256": "45da6c2f4d117a08cf94b8af38d51392014e5c5553790b96bdaf0a148958837e",
+      "source_sha256": {
+        "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "case_study": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      }
+    },
+    "candidate": {
+      "resolved_revision": "d517b4aae2a282ac89143626fe1ae49d8587ab55",
+      "git_archive_sha256": "4a38b4aed234eb76ffe86a84662873bf6bd613d26bde8ebeab5f4899b4fa2a35",
+      "source_sha256": {
+        "metrics": "21cc8cc5d02f66899acc7169d6678f32c3e2f9c2037dd4724f78f7b623cd8cce",
+        "backtest": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+        "case_study": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      }
+    }
+  },
+  "criterion_passed": true
+}

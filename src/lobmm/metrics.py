@@ -20,6 +20,66 @@ def _finite_mean(values: Iterable[float]) -> float | None:
     return fmean(clean) if clean else None
 
 
+def _inventory_duration(
+    rows: Sequence[Row],
+    quantities: Sequence[int],
+    diagnostics: Mapping[str, Any],
+    *,
+    maximum_limit: int,
+    threshold: float,
+) -> dict[str, Any]:
+    """Integrate the recorded state over the selected market window [S, E).
+
+    A new portfolio starts flat. Each row changes the state at its timestamp;
+    original order resolves ties. Clipping intervals excludes delayed terminal
+    fills while carrying the last in-window state through the endpoint.
+    """
+
+    start = diagnostics.get("session_start_timestamp_ns")
+    end = diagnostics.get("session_end_timestamp_ns")
+    if start is None and end is None:
+        return dict.fromkeys(
+            (
+                "time_near_limits_fraction",
+                "near_limit_duration_ns",
+                "observation_duration_ns",
+                "time_window_start_ns",
+                "time_window_end_ns",
+            )
+        )
+    if type(start) is not int or type(end) is not int or start < 0 or end < start:
+        raise ValueError("session window bounds must be ordered nonnegative integers")
+    cursor = start
+    quantity = 0
+    near_duration = 0
+    previous_timestamp: int | None = None
+    for row, next_quantity in zip(rows, quantities, strict=True):
+        timestamp = row.get("timestamp_ns")
+        if type(timestamp) is not int or timestamp < 0:
+            raise ValueError("inventory timestamps must be nonnegative integers")
+        if previous_timestamp is not None and timestamp < previous_timestamp:
+            raise ValueError("inventory timestamps must be nondecreasing")
+        previous_timestamp = timestamp
+        boundary = max(start, min(timestamp, end))
+        if maximum_limit > 0 and abs(quantity) >= threshold:
+            near_duration += boundary - cursor
+        cursor = boundary
+        if timestamp < end:
+            quantity = next_quantity
+    if maximum_limit > 0 and abs(quantity) >= threshold:
+        near_duration += end - cursor
+    duration = end - start
+    return {
+        "time_near_limits_fraction": (
+            near_duration / duration if duration and maximum_limit > 0 else None
+        ),
+        "near_limit_duration_ns": near_duration if maximum_limit > 0 else None,
+        "observation_duration_ns": duration,
+        "time_window_start_ns": start,
+        "time_window_end_ns": end,
+    }
+
+
 def compute_markouts(
     fills: Sequence[Row],
     market_states: Sequence[Row],
@@ -188,11 +248,18 @@ def build_metrics(
     inventory_values = [int(row.get("inventory", 0)) for row in inventory]
     maximum_limit = int(diagnostics.get("max_abs_inventory", 0) or 0)
     near_threshold = near_limit_fraction * maximum_limit
-    near_fraction = (
+    observation_fraction = (
         sum(abs(value) >= near_threshold for value in inventory_values)
         / len(inventory_values)
         if inventory_values and maximum_limit
         else 0.0
+    )
+    inventory_duration = _inventory_duration(
+        inventory,
+        inventory_values,
+        diagnostics,
+        maximum_limit=maximum_limit,
+        threshold=near_threshold,
     )
 
     spreads = [
@@ -296,7 +363,8 @@ def build_metrics(
             "mean_absolute": _finite_mean(
                 float(abs(value)) for value in inventory_values
             ),
-            "time_near_limits_fraction": near_fraction,
+            "observations_near_limits_fraction": observation_fraction,
+            **inventory_duration,
             "end_of_session": inventory_values[-1] if inventory_values else 0,
         },
         "execution_quality": {

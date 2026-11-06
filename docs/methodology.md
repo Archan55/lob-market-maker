@@ -215,6 +215,27 @@ markouts, and measured throughput are derived from audit artifacts.
 “Near limit” means absolute inventory at or above the configurable
 `metrics.near_limit_fraction` of the position limit.
 
+`inventory.time_near_limits_fraction` is qualifying elapsed time divided by the
+actual selected market interval `[session_start_timestamp_ns,
+session_end_timestamp_ns)`, recorded in diagnostics. The portfolio starts flat;
+the last recorded state at or before each time governs the following interval.
+Original row order resolves equal timestamps, whose transitions have zero
+duration. Pre-window state carries into the interval, the final state carries to
+its endpoint, and delayed post-session liquidation contributes no extra time.
+Integer nanosecond differences are used before the final fraction conversion.
+
+Both diagnostic bound values `None` mean unavailable. A missing counterpart to
+a supplied bound, invalid bounds or invalid/nonmonotone inventory timestamps
+raise an error. Missing windows, zero-duration windows and unknown/nonpositive
+position limits produce an unavailable time fraction; generated case tables show
+`n/a`. Integer duration and window metadata accompany the estimate.
+`observations_near_limits_fraction` retains the old statistic over all supplied
+snapshot rows, including post-session rows. Inventory mean/dispersion remain
+observation statistics. Historical frozen reports used that snapshot fraction
+under the former time label and are not retroactively rewritten or relabeled as
+new results. The duration estimate assumes the replay's complete inventory-change
+history; it is not a calibrated venue-execution measure.
+
 Every selected canonical stream is fingerprinted from its exact event fields.
 Reports store that SHA-256, and multi-run comparison refuses different hashes,
 symbols, event counts, or provenance.
