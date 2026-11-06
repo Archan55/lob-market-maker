@@ -344,11 +344,15 @@ def _case_study_markdown(
         processed = float(diagnostics.get("events_processed", 0) or 0)
         scheduled = float(diagnostics.get("scheduler_events_processed", 0) or 0)
         ratio = scheduled / processed if processed else 0.0
+        near_fraction = inventory.get("time_near_limits_fraction")
+        near_text = (
+            "n/a" if near_fraction is None else f"{100 * float(near_fraction):.1f}%"
+        )
         lines.append(
             f"| {run.strategy} | {int(activity.get('fill_events', 0) or 0):,} | "
             f"{float(activity.get('fill_rate', 0) or 0):.3f} | "
             f"{float(inventory.get('mean_absolute', 0) or 0):.2f} | "
-            f"{100 * float(inventory.get('time_near_limits_fraction', 0) or 0):.1f}% | "
+            f"{near_text} | "
             f"{float(pnl.get('maximum_drawdown', 0) or 0):.2f} | "
             f"{int(risk.get('event_count', 0) or 0):,} | "
             f"{int(diagnostics.get('exchange_rejected_quote_attempts', 0) or 0):,} | "
