@@ -37,15 +37,23 @@ jobs:
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
       - name: Archived main and exact-head report regression
-        run: >-
-          python tools/reproduce_same_time_reporting.py --stage regression
-          --candidate "$(git rev-parse HEAD)"
-          --output experiments/same-time-reporting-ci/regression
+        run: |
+          python tools/reproduce_same_time_reporting.py --stage regression \
+            --candidate "$(git rev-parse HEAD)" \
+            --output experiments/same-time-reporting-ci/regression
+          cat experiments/same-time-reporting-ci/regression/tests-main.log
+          cat experiments/same-time-reporting-ci/regression/tests-candidate.log
       - name: Fixed main and exact-head execution witnesses
-        run: >-
-          python tools/reproduce_same_time_reporting.py --stage study
-          --candidate "$(git rev-parse HEAD)"
-          --output experiments/same-time-reporting-ci/study
+        run: |
+          python tools/reproduce_same_time_reporting.py --stage study \
+            --candidate "$(git rev-parse HEAD)" \
+            --output experiments/same-time-reporting-ci/study
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path("experiments/same-time-reporting-ci/study/report.json").read_text())
+          print(json.dumps({key: report[key] for key in ("status", "stage", "sources", "criterion_passed", "attempts")}, sort_keys=True))
+          PY
       - name: Retain source and numerical evidence
         if: always()
         uses: actions/upload-artifact@v4

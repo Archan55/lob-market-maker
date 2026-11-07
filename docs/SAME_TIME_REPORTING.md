@@ -167,6 +167,13 @@ per source. The runner records Python and
 dependency identities. Different dependency versions may change PNG bytes;
 the numerical artists and scalar oracles are the decision criteria.
 
+After the initial draft publication, a CI-only visibility follow-up prints the
+already retained regression worker logs in the job log. This permits verification
+of the exact baseline failures/counts through supported log reads without an
+artifact ZIP transfer. It also prints the study's source identities, completion
+status and case ledger. It changes no source, test, fixture, runner or criterion;
+the earlier head's CI is not used as evidence for the final head.
+
 Original local sequence, with no discarded attempts:
 
 1. Frozen baseline unit execution: three expected failures, four passes.

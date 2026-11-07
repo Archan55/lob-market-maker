@@ -2,12 +2,12 @@
   "scope": "Final committed source, frozen inputs, documentation and curated local synthetic evidence; manifest excludes itself. Original cloud raw files separately pinned by workspace-manifest.",
   "files": {
     ".github/workflows/ci.yml": {
-      "bytes": 2387,
-      "sha256": "af9a0ca5185c1ee6a4d8654557df7651f8168eecddf1faa00f1c5db397be45fb"
+      "bytes": 2894,
+      "sha256": "255270a82f6f0b291d2fbf914339c710e2461a41ddd8d994c5487de7d75ba483"
     },
     "docs/SAME_TIME_REPORTING.md": {
-      "bytes": 13068,
-      "sha256": "20548213d1fe46c7c3cd370f4e9773fca92962fad688da439fc8a743732be807"
+      "bytes": 13535,
+      "sha256": "9be0001cc4ff42bf4ee116c61625f5e73b13bd553b883e7e851e4ef8774cd8ab"
     },
     "docs/evidence/same-time-reporting-20261107/contract.json": {
       "bytes": 8364,
