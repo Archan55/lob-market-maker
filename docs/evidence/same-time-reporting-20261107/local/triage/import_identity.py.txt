@@ -1,0 +1,7 @@
+import hashlib,json,pathlib
+def pytest_collection_finish(session):
+ import lobmm.report as m
+ root=pathlib.Path('/workspace/lob-market-maker-ordering-fix').resolve()
+ p=pathlib.Path(m.__file__).resolve()
+ assert p==root/'src/lobmm/report.py',str(p)
+ (root/'experiments/same-time-reporting-20261107/triage/imports.json').write_text(json.dumps({'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()},indent=2)+'\n')

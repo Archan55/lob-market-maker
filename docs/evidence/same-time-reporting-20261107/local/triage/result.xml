@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="7" time="2.700" timestamp="2026-11-07T14:34:56.276537+00:00" hostname="0bd5944b62a5"><testcase classname="tests.unit.test_same_time_report_order_independent" name="test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[descending_tie]" time="0.108"><failure message="assert [0.0, 0.0, 0.0, 0.0] == [0.0, 0.0, 1.0, 0.0]&#10;  &#10;  At index 2 diff: 0.0 != 1.0&#10;  Use -v to get more diff">tests/unit/test_same_time_report_order_independent.py:268: in test_frozen_drawdown_artist_keeps_audit_order_and_relative_time
+    _assert_drawdown_capture(captured, oracle)
+tests/unit/test_same_time_report_order_independent.py:251: in _assert_drawdown_capture
+    assert lines[0]["y"] == oracle["y"]
+E   assert [0.0, 0.0, 0.0, 0.0] == [0.0, 0.0, 1.0, 0.0]
+E     
+E     At index 2 diff: 0.0 != 1.0
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.unit.test_same_time_report_order_independent" name="test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[rising_tie]" time="0.081" /><testcase classname="tests.unit.test_same_time_report_order_independent" name="test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[unique_time]" time="0.084" /><testcase classname="tests.unit.test_same_time_report_order_independent" name="test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[flat_duplicate]" time="0.087" /><testcase classname="tests.unit.test_same_time_report_order_independent" name="test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[epoch_distinct]" time="0.068"><failure message="assert [0.0, 0.0, 0.0, 0.0] == [0.0, 1e-09, 2e-09, 3e-09]&#10;  &#10;  At index 1 diff: 0.0 != 1e-09&#10;  Use -v to get more diff">tests/unit/test_same_time_report_order_independent.py:268: in test_frozen_drawdown_artist_keeps_audit_order_and_relative_time
+    _assert_drawdown_capture(captured, oracle)
+tests/unit/test_same_time_report_order_independent.py:250: in _assert_drawdown_capture
+    assert lines[0]["x"] == oracle["x"]
+E   assert [0.0, 0.0, 0.0, 0.0] == [0.0, 1e-09, 2e-09, 3e-09]
+E     
+E     At index 1 diff: 0.0 != 1e-09
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.unit.test_same_time_report_order_independent" name="test_frozen_regime_increments_preserve_tied_audit_order" time="0.069"><failure message="AssertionError: assert {'spread_regi...nitial': 0.0}} == {'spread_regi...nitial': 0.0}}&#10;  &#10;  Differing items:&#10;  {'spread_regime': {'A': 2.0, 'B': 0.0, 'initial': 0.0}} != {'spread_regime': {'A': 1.0, 'B': 1.0, 'initial': 0.0}}&#10;  Use -v to get more diff">tests/unit/test_same_time_report_order_independent.py:287: in test_frozen_regime_increments_preserve_tied_audit_order
+    assert actual == expected
+E   AssertionError: assert {'spread_regi...nitial': 0.0}} == {'spread_regi...nitial': 0.0}}
+E     
+E     Differing items:
+E     {'spread_regime': {'A': 2.0, 'B': 0.0, 'initial': 0.0}} != {'spread_regime': {'A': 1.0, 'B': 1.0, 'initial': 0.0}}
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.unit.test_same_time_report_order_independent" name="test_default_numeric_pairs_and_finite_filtering_stay_unchanged" time="0.091" /></testsuite></testsuites>

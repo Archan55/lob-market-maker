@@ -1,0 +1,5506 @@
+{
+  "status": "complete",
+  "stage": "study",
+  "role": "candidate",
+  "case": "maker_prefix",
+  "resolved_revision": "ae12338686ae6553b0f1306691705653bb375c96",
+  "source_sha256": {
+    "report": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+    "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+    "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+    "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+    "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+    "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+    "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+  },
+  "imported_sources": {
+    "report": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/report.py",
+    "metrics": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/metrics.py",
+    "backtest": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/backtest.py",
+    "exchange": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/exchange.py",
+    "orders": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/orders.py",
+    "scheduler": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/scheduler.py",
+    "config": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/config.py"
+  },
+  "harness_sha256": "f9ec929c99c363a6b6dfd71417b29c3bb13c30dad0c096e19018b99d15ee7577",
+  "test_sha256": "adab87cdf49969106ca8d745615000feb7779c001211014238a92aee29606915",
+  "provider_sha256": "3c65bbc24249de7ed6894f65617fc28d516e04f323ab774cf1d29dbe512d21fb",
+  "contract_sha256": "26b51977ca815629bb386333e824cd956384c1d0f15e06025f61ce995dca8685",
+  "fixtures_sha256": "01f3229ca7d5ddfeec646cbaaead2f5088360556d8c861e51a5107586acbdefc",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "integer_string_guard": 4300,
+  "witness": {
+    "case": "maker_prefix",
+    "kind": "full_backtest",
+    "artifact_directory": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/study-final/maker_prefix-candidate/maker_prefix",
+    "parquet_sha256": {
+      "orders.parquet": "50b3008023090ff66ccb9d9d1910865e7c3a7f83d512e1bf6ae46f409f0c0649",
+      "fills.parquet": "0f30322b0eae9d7b9275cf9c017788c680e523775bcdf35b3f750662df7a7000",
+      "inventory.parquet": "604dbc9dd8d7ea49723426981d23d332c6eb143f2dc228aca2b98eba34247afa",
+      "pnl.parquet": "12ddaa5f88d3bbec3f67108b5802bc9d19fffc8b3563d06ac6be79a047f2ec67",
+      "quotes.parquet": "d9a3b47ef27b2b378d404759965fd2bf8bea3031e999f9a08c7439e5df2e6651",
+      "risk_events.parquet": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+      "market.parquet": "88f5bef562ab259a39d82bbb5a864475dc47d4f7a7f1e11c5334fe942ab1abc1",
+      "markouts.parquet": "159780e1a84ddf47eaee5a80cbd8967d650fddb7cbb2b86585b067bdec70451e"
+    },
+    "tables": {
+      "orders": [
+        {
+          "transition_id": "T000000000001",
+          "order_id": "O000000000001",
+          "previous_status": null,
+          "new_status": "pending_arrival",
+          "timestamp_ns": 2,
+          "remaining_quantity": 1,
+          "reason": "created",
+          "client_order_id": "market-maker-000000000001",
+          "strategy_id": "market-maker",
+          "side": 1,
+          "price_ticks": 99,
+          "original_quantity": 1,
+          "cumulative_filled_quantity": 1,
+          "creation_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "exchange_arrival_timestamp_ns": 2,
+          "average_fill_price_ticks": 99.0,
+          "queue_ahead_estimate": 1,
+          "external_behind_estimate": 2
+        },
+        {
+          "transition_id": "T000000000002",
+          "order_id": "O000000000001",
+          "previous_status": "pending_arrival",
+          "new_status": "live",
+          "timestamp_ns": 2,
+          "remaining_quantity": 1,
+          "reason": "accepted",
+          "client_order_id": "market-maker-000000000001",
+          "strategy_id": "market-maker",
+          "side": 1,
+          "price_ticks": 99,
+          "original_quantity": 1,
+          "cumulative_filled_quantity": 1,
+          "creation_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "exchange_arrival_timestamp_ns": 2,
+          "average_fill_price_ticks": 99.0,
+          "queue_ahead_estimate": 1,
+          "external_behind_estimate": 2
+        },
+        {
+          "transition_id": "T000000000003",
+          "order_id": "O000000000002",
+          "previous_status": null,
+          "new_status": "pending_arrival",
+          "timestamp_ns": 2,
+          "remaining_quantity": 1,
+          "reason": "created",
+          "client_order_id": "market-maker-000000000002",
+          "strategy_id": "market-maker",
+          "side": -1,
+          "price_ticks": 101,
+          "original_quantity": 1,
+          "cumulative_filled_quantity": 0,
+          "creation_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "exchange_arrival_timestamp_ns": 2,
+          "average_fill_price_ticks": null,
+          "queue_ahead_estimate": 1,
+          "external_behind_estimate": 0
+        },
+        {
+          "transition_id": "T000000000004",
+          "order_id": "O000000000002",
+          "previous_status": "pending_arrival",
+          "new_status": "live",
+          "timestamp_ns": 2,
+          "remaining_quantity": 1,
+          "reason": "accepted",
+          "client_order_id": "market-maker-000000000002",
+          "strategy_id": "market-maker",
+          "side": -1,
+          "price_ticks": 101,
+          "original_quantity": 1,
+          "cumulative_filled_quantity": 0,
+          "creation_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "exchange_arrival_timestamp_ns": 2,
+          "average_fill_price_ticks": null,
+          "queue_ahead_estimate": 1,
+          "external_behind_estimate": 0
+        },
+        {
+          "transition_id": "T000000000005",
+          "order_id": "O000000000001",
+          "previous_status": "live",
+          "new_status": "filled",
+          "timestamp_ns": 10,
+          "remaining_quantity": 0,
+          "reason": "fill",
+          "client_order_id": "market-maker-000000000001",
+          "strategy_id": "market-maker",
+          "side": 1,
+          "price_ticks": 99,
+          "original_quantity": 1,
+          "cumulative_filled_quantity": 1,
+          "creation_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "exchange_arrival_timestamp_ns": 2,
+          "average_fill_price_ticks": 99.0,
+          "queue_ahead_estimate": 1,
+          "external_behind_estimate": 2
+        },
+        {
+          "transition_id": "T000000000006",
+          "order_id": "O000000000002",
+          "previous_status": "live",
+          "new_status": "expired",
+          "timestamp_ns": 10,
+          "remaining_quantity": 1,
+          "reason": "time_in_force",
+          "client_order_id": "market-maker-000000000002",
+          "strategy_id": "market-maker",
+          "side": -1,
+          "price_ticks": 101,
+          "original_quantity": 1,
+          "cumulative_filled_quantity": 0,
+          "creation_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "exchange_arrival_timestamp_ns": 2,
+          "average_fill_price_ticks": null,
+          "queue_ahead_estimate": 1,
+          "external_behind_estimate": 0
+        }
+      ],
+      "fills": [
+        {
+          "fill_id": "F000000000001",
+          "order_id": "O000000000001",
+          "client_order_id": "market-maker-000000000001",
+          "strategy_id": "market-maker",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 99,
+          "liquidity_role": "maker",
+          "exchange_fill_timestamp_ns": 10,
+          "fee": 0.0,
+          "rebate": 0.0,
+          "decision_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "exchange_arrival_timestamp_ns": 2,
+          "strategy_notification_timestamp_ns": 11,
+          "queue_ahead_estimate": 1
+        }
+      ],
+      "inventory": [
+        {
+          "timestamp_ns": 0,
+          "inventory": 0,
+          "current_gross_exposure": 0.0,
+          "peak_gross_exposure": 0.0
+        },
+        {
+          "timestamp_ns": 0,
+          "inventory": 0,
+          "current_gross_exposure": 0.0,
+          "peak_gross_exposure": 0.0
+        },
+        {
+          "timestamp_ns": 5,
+          "inventory": 0,
+          "current_gross_exposure": 0.0,
+          "peak_gross_exposure": 0.0
+        },
+        {
+          "timestamp_ns": 10,
+          "inventory": 1,
+          "current_gross_exposure": 100.0,
+          "peak_gross_exposure": 100.0
+        },
+        {
+          "timestamp_ns": 10,
+          "inventory": 1,
+          "current_gross_exposure": 100.0,
+          "peak_gross_exposure": 100.0
+        }
+      ],
+      "pnl": [
+        {
+          "timestamp_ns": 0,
+          "currency": "USD",
+          "tick_value": 1.0,
+          "mark_ticks": 100.0,
+          "inventory": 0,
+          "average_cost_ticks": null,
+          "trade_cash_ticks": 0,
+          "trade_cash": 0.0,
+          "cash": 0.0,
+          "realized_pnl_ticks": 0.0,
+          "unrealized_pnl_ticks": 0.0,
+          "gross_pnl_ticks": 0.0,
+          "realized_pnl": 0.0,
+          "unrealized_pnl": 0.0,
+          "gross_pnl": 0.0,
+          "fees": 0.0,
+          "rebates": 0.0,
+          "net_pnl": 0.0,
+          "turnover_ticks": 0,
+          "turnover": 0.0,
+          "buy_volume": 0,
+          "sell_volume": 0,
+          "fill_count": 0,
+          "current_gross_exposure": 0.0,
+          "peak_gross_exposure": 0.0
+        },
+        {
+          "timestamp_ns": 0,
+          "currency": "USD",
+          "tick_value": 1.0,
+          "mark_ticks": 100.0,
+          "inventory": 0,
+          "average_cost_ticks": null,
+          "trade_cash_ticks": 0,
+          "trade_cash": 0.0,
+          "cash": 0.0,
+          "realized_pnl_ticks": 0.0,
+          "unrealized_pnl_ticks": 0.0,
+          "gross_pnl_ticks": 0.0,
+          "realized_pnl": 0.0,
+          "unrealized_pnl": 0.0,
+          "gross_pnl": 0.0,
+          "fees": 0.0,
+          "rebates": 0.0,
+          "net_pnl": 0.0,
+          "turnover_ticks": 0,
+          "turnover": 0.0,
+          "buy_volume": 0,
+          "sell_volume": 0,
+          "fill_count": 0,
+          "current_gross_exposure": 0.0,
+          "peak_gross_exposure": 0.0
+        },
+        {
+          "timestamp_ns": 5,
+          "currency": "USD",
+          "tick_value": 1.0,
+          "mark_ticks": 100.0,
+          "inventory": 0,
+          "average_cost_ticks": null,
+          "trade_cash_ticks": 0,
+          "trade_cash": 0.0,
+          "cash": 0.0,
+          "realized_pnl_ticks": 0.0,
+          "unrealized_pnl_ticks": 0.0,
+          "gross_pnl_ticks": 0.0,
+          "realized_pnl": 0.0,
+          "unrealized_pnl": 0.0,
+          "gross_pnl": 0.0,
+          "fees": 0.0,
+          "rebates": 0.0,
+          "net_pnl": 0.0,
+          "turnover_ticks": 0,
+          "turnover": 0.0,
+          "buy_volume": 0,
+          "sell_volume": 0,
+          "fill_count": 0,
+          "current_gross_exposure": 0.0,
+          "peak_gross_exposure": 0.0
+        },
+        {
+          "timestamp_ns": 10,
+          "currency": "USD",
+          "tick_value": 1.0,
+          "mark_ticks": 100.0,
+          "inventory": 1,
+          "average_cost_ticks": 99.0,
+          "trade_cash_ticks": -99,
+          "trade_cash": -99.0,
+          "cash": -99.0,
+          "realized_pnl_ticks": 0.0,
+          "unrealized_pnl_ticks": 1.0,
+          "gross_pnl_ticks": 1.0,
+          "realized_pnl": 0.0,
+          "unrealized_pnl": 1.0,
+          "gross_pnl": 1.0,
+          "fees": 0.0,
+          "rebates": 0.0,
+          "net_pnl": 1.0,
+          "turnover_ticks": 99,
+          "turnover": 99.0,
+          "buy_volume": 1,
+          "sell_volume": 0,
+          "fill_count": 1,
+          "current_gross_exposure": 100.0,
+          "peak_gross_exposure": 100.0
+        },
+        {
+          "timestamp_ns": 10,
+          "currency": "USD",
+          "tick_value": 1.0,
+          "mark_ticks": 100.0,
+          "inventory": 1,
+          "average_cost_ticks": 99.0,
+          "trade_cash_ticks": -99,
+          "trade_cash": -99.0,
+          "cash": -99.0,
+          "realized_pnl_ticks": 0.0,
+          "unrealized_pnl_ticks": 1.0,
+          "gross_pnl_ticks": 1.0,
+          "realized_pnl": 0.0,
+          "unrealized_pnl": 1.0,
+          "gross_pnl": 1.0,
+          "fees": 0.0,
+          "rebates": 0.0,
+          "net_pnl": 1.0,
+          "turnover_ticks": 99,
+          "turnover": 99.0,
+          "buy_volume": 1,
+          "sell_volume": 0,
+          "fill_count": 1,
+          "current_gross_exposure": 100.0,
+          "peak_gross_exposure": 100.0
+        }
+      ],
+      "quotes": [
+        {
+          "timestamp_ns": 1,
+          "observed_sequence": 3,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000001",
+          "order_id": null,
+          "price_ticks": 99,
+          "quantity": 1,
+          "reason": "desired_quote"
+        },
+        {
+          "timestamp_ns": 1,
+          "observed_sequence": 3,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000002",
+          "order_id": null,
+          "price_ticks": 101,
+          "quantity": 1,
+          "reason": "desired_quote"
+        }
+      ],
+      "risk_events": [],
+      "market": [
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 1,
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 0,
+          "midpoint_ticks": null,
+          "microprice_ticks": null,
+          "imbalance": null,
+          "spread_ticks": null,
+          "spread_regime": "tight",
+          "liquidity_regime": "thin",
+          "volatility_regime": "low"
+        },
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 2,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1,
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": 100.0,
+          "microprice_ticks": 100.0,
+          "imbalance": 0.0,
+          "spread_ticks": 2,
+          "spread_regime": "tight",
+          "liquidity_regime": "thin",
+          "volatility_regime": "low"
+        },
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 105,
+          "quantity": 2,
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": 100.0,
+          "microprice_ticks": 100.0,
+          "imbalance": 0.0,
+          "spread_ticks": 2,
+          "spread_regime": "tight",
+          "liquidity_regime": "thin",
+          "volatility_regime": "low"
+        },
+        {
+          "timestamp_ns": 5,
+          "sequence_number": 4,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2,
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "best_bid_quantity": 3,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": 100.0,
+          "microprice_ticks": 100.5,
+          "imbalance": 0.5,
+          "spread_ticks": 2,
+          "spread_regime": "tight",
+          "liquidity_regime": "deep",
+          "volatility_regime": "low"
+        },
+        {
+          "timestamp_ns": 10,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2,
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": 100.0,
+          "microprice_ticks": 100.0,
+          "imbalance": 0.0,
+          "spread_ticks": 2,
+          "spread_regime": "tight",
+          "liquidity_regime": "thin",
+          "volatility_regime": "low"
+        }
+      ],
+      "markouts": [
+        {
+          "fill_id": "F000000000001",
+          "side": 1,
+          "fill_timestamp_ns": 10,
+          "fill_price_ticks": 99.0,
+          "horizon_ns": 100000000,
+          "target_timestamp_ns": 100000010,
+          "future_timestamp_ns": null,
+          "future_midpoint_ticks": null,
+          "markout_ticks": null,
+          "markout_value": null,
+          "markout_bps": null,
+          "asof_convention": "first_true_midpoint_at_or_after_horizon"
+        },
+        {
+          "fill_id": "F000000000001",
+          "side": 1,
+          "fill_timestamp_ns": 10,
+          "fill_price_ticks": 99.0,
+          "horizon_ns": 1000000000,
+          "target_timestamp_ns": 1000000010,
+          "future_timestamp_ns": null,
+          "future_midpoint_ticks": null,
+          "markout_ticks": null,
+          "markout_value": null,
+          "markout_bps": null,
+          "asof_convention": "first_true_midpoint_at_or_after_horizon"
+        },
+        {
+          "fill_id": "F000000000001",
+          "side": 1,
+          "fill_timestamp_ns": 10,
+          "fill_price_ticks": 99.0,
+          "horizon_ns": 5000000000,
+          "target_timestamp_ns": 5000000010,
+          "future_timestamp_ns": null,
+          "future_midpoint_ticks": null,
+          "markout_ticks": null,
+          "markout_value": null,
+          "markout_bps": null,
+          "asof_convention": "first_true_midpoint_at_or_after_horizon"
+        }
+      ]
+    },
+    "metrics": {
+      "attribution": {
+        "adverse_selection_markout": 0.0,
+        "fees": -0.0,
+        "inventory_mark_to_market": 0.0,
+        "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+        "rebates": 0.0,
+        "reconciliation_residual": 0.0,
+        "spread_capture": 1.0
+      },
+      "engineering": {
+        "events_per_second": 3752.018585641644,
+        "events_processed": 5,
+        "peak_memory_bytes": null,
+        "scheduler_events_processed": 23,
+        "wall_clock_seconds": 0.0013326160001270182
+      },
+      "execution_quality": {
+        "effective_spread_ticks": 2.0,
+        "markout_ticks_by_horizon_ns": {
+          "100000000": null,
+          "1000000000": null,
+          "5000000000": null
+        },
+        "markout_ticks_by_side": {
+          "ask": null,
+          "bid": null
+        },
+        "realized_spread_ticks": 1.0
+      },
+      "inventory": {
+        "end_of_session": 1,
+        "maximum_long": 1,
+        "maximum_short": 0,
+        "mean": 0.4,
+        "mean_absolute": 0.4,
+        "standard_deviation": 0.4898979485566356,
+        "time_near_limits_fraction": 0.0
+      },
+      "market_conditions": {
+        "average_displayed_top_depth": 2.2,
+        "average_market_spread_ticks": 2.0
+      },
+      "pnl": {
+        "annualized_sharpe": null,
+        "fees": 0.0,
+        "gross_pnl": 1.0,
+        "maximum_drawdown": 0.0,
+        "net_pnl": 1.0,
+        "pnl_per_fill": 1.0,
+        "pnl_per_traded_unit": 1.0,
+        "pnl_per_unit_turnover": 0.010101010101010102,
+        "realized_pnl": 0.0,
+        "rebates": 0.0,
+        "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+        "unrealized_pnl": 1.0
+      },
+      "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+      "risk": {
+        "event_count": 0,
+        "kill_switch_active": false
+      },
+      "trading_activity": {
+        "buy_volume": 1,
+        "cancel_to_fill_ratio": 0.0,
+        "cancelled_orders": 0,
+        "completed_fills": 1,
+        "fill_events": 1,
+        "fill_rate": 0.5,
+        "maker_volume": 1,
+        "order_to_fill_ratio": 2.0,
+        "partial_fills": 0,
+        "quote_messages": 2,
+        "rejected_orders": 0,
+        "sell_volume": 0,
+        "submitted_orders": 2,
+        "taker_volume": 0,
+        "turnover": 99.0
+      }
+    },
+    "diagnostics": {
+      "cancel_attempts": 0,
+      "cancel_request_messages": 0,
+      "dataset_provenance": {
+        "checksum_sha256": null,
+        "dataset_id": "lobmm-same-time-reporting-v1",
+        "license_notes": "Owned fictional mechanics inputs, not historical market data.",
+        "provider": "lobmm hand-constructed ordering witness",
+        "session_end": null,
+        "session_start": null,
+        "source_type": "synthetic",
+        "symbol": "SYNTH-ORDER",
+        "synthetic_demonstration": true,
+        "venue": "SIMULATED"
+      },
+      "desired_quote_attempts": 2,
+      "end_inventory": 1,
+      "event_stream_sha256": "39b00f14a1c86126e1ad370bc318ae370071e6c13899c81a5a2995a7f5f65f18",
+      "events_per_second": 3752.018585641644,
+      "events_processed": 5,
+      "exchange_rejected_cancel_attempts": 0,
+      "exchange_rejected_quote_attempts": 0,
+      "execution_reports_delivered": 4,
+      "input_validation_certificate": {
+        "event_count": 5,
+        "event_stream_sha256": "39b00f14a1c86126e1ad370bc318ae370071e6c13899c81a5a2995a7f5f65f18",
+        "mode": "strict",
+        "reconstructed_book": true,
+        "required_nonempty": true
+      },
+      "input_validation_diagnostics": {},
+      "input_validation_issue_count": 0,
+      "kill_switch_active": false,
+      "market_data_messages_delivered": 5,
+      "max_abs_inventory": 10,
+      "observed_book_diagnostics": {},
+      "open_orders_end": 0,
+      "peak_memory_bytes": null,
+      "performance_note": "Measured unprofiled Python wall-clock throughput; timestamp precision is not a latency-performance claim.",
+      "queue_levels_remaining": 1,
+      "random_seed": 7,
+      "rejected_quote_attempts": 0,
+      "retry_suppressed_quote_attempts": 0,
+      "risk_blocked_cancel_attempts": 0,
+      "risk_blocked_quote_attempts": 0,
+      "risk_cancel_request_messages": 0,
+      "scheduler_events_processed": 23,
+      "submitted_order_messages": 2,
+      "synthetic_demonstration": true,
+      "true_book_diagnostics": {},
+      "wall_clock_seconds": 0.0013326160001270182
+    },
+    "summary": {
+      "dataset_provenance": {
+        "checksum_sha256": null,
+        "dataset_id": "lobmm-same-time-reporting-v1",
+        "license_notes": "Owned fictional mechanics inputs, not historical market data.",
+        "provider": "lobmm hand-constructed ordering witness",
+        "session_end": null,
+        "session_start": null,
+        "source_type": "synthetic",
+        "symbol": "SYNTH-ORDER",
+        "synthetic_demonstration": true,
+        "venue": "SIMULATED"
+      },
+      "disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+      "end_inventory": 1,
+      "event_count": 5,
+      "event_stream_sha256": "39b00f14a1c86126e1ad370bc318ae370071e6c13899c81a5a2995a7f5f65f18",
+      "fill_count": 1,
+      "net_pnl": 1.0,
+      "run_name": "maker_prefix",
+      "strategy": "fixed_spread",
+      "symbol": "SYNTH-ORDER",
+      "synthetic_demonstration": true
+    },
+    "config": {
+      "instrument": {
+        "symbol": "SYNTH-ORDER",
+        "currency": "USD",
+        "tick_size": "1",
+        "lot_size": 1
+      },
+      "data": {
+        "input_path": null,
+        "validation_mode": "strict",
+        "book_depth": 5,
+        "provenance": {
+          "source_type": "synthetic",
+          "provider": "lobmm hand-constructed ordering witness",
+          "venue": "SIMULATED",
+          "symbol": "SYNTH-ORDER",
+          "dataset_id": "lobmm-same-time-reporting-v1",
+          "session_start": null,
+          "session_end": null,
+          "checksum_sha256": null,
+          "license_notes": "Owned fictional mechanics inputs, not historical market data."
+        }
+      },
+      "synthetic": {
+        "event_count": 10,
+        "start_timestamp_ns": 0,
+        "interval_ns": 1000000,
+        "start_price_ticks": 10000,
+        "levels": 5,
+        "base_quantity": 100,
+        "regime_length": 250,
+        "reset_interval": 400
+      },
+      "latency": {
+        "market_data_ns": 1,
+        "order_entry_ns": 1,
+        "cancellation_ns": 1,
+        "fill_report_ns": 1,
+        "market_data_jitter_ns": 0,
+        "order_entry_jitter_ns": 0,
+        "cancellation_jitter_ns": 0,
+        "fill_report_jitter_ns": 0
+      },
+      "exchange": {
+        "validation_mode": "strict",
+        "rest_unfilled_marketable_quantity": true,
+        "cancel_orders_on_reset": true
+      },
+      "queue_model": {
+        "cancellation_allocation": "back_of_queue",
+        "price_through_fills": true
+      },
+      "fees": {
+        "maker_fee_per_unit": "0",
+        "maker_rebate_per_unit": "0",
+        "taker_fee_per_unit": "0",
+        "proportional_fee_rate": "0"
+      },
+      "strategy": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 1,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 1000,
+        "minimum_quote_lifetime_ns": 1000,
+        "stale_after_ns": 1000000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "risk": {
+        "max_abs_inventory": 10,
+        "max_order_size": 1,
+        "max_total_open_quantity": 10,
+        "max_open_orders": 10,
+        "max_loss": "1000",
+        "max_drawdown": "1000",
+        "max_quote_age_ns": 1000000000,
+        "minimum_spread_ticks": 1,
+        "max_volatility_ticks": null,
+        "max_messages_per_second": null,
+        "prohibit_new_quotes_last_ns": 0
+      },
+      "backtest": {
+        "warmup_events": 0,
+        "start_timestamp_ns": null,
+        "end_timestamp_ns": null,
+        "event_limit": null,
+        "timer_interval_ns": 1000,
+        "mark_price": "midpoint",
+        "session_end_policy": "mark",
+        "track_memory": false
+      },
+      "metrics": {
+        "markout_horizons_ns": [
+          100000000,
+          1000000000,
+          5000000000
+        ],
+        "near_limit_fraction": 0.8
+      },
+      "output": {
+        "runs_directory": "runs",
+        "write_plots": false
+      },
+      "random_seed": 7
+    },
+    "config_sha256": "ac79676ba5304b91b1b9a24912bde7e0b3df7328fd2c8ab9becb6293b20c7f1d",
+    "event_stream_sha256": "39b00f14a1c86126e1ad370bc318ae370071e6c13899c81a5a2995a7f5f65f18",
+    "source_identities": {
+      "config": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/config.py",
+        "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      },
+      "enums": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/enums.py",
+        "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+      },
+      "events": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/events.py",
+        "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+      },
+      "exchange": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/exchange.py",
+        "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+      },
+      "orders": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/orders.py",
+        "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+      },
+      "scheduler": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/scheduler.py",
+        "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+      },
+      "backtest": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/backtest.py",
+        "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+      },
+      "risk": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/risk.py",
+        "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+      },
+      "metrics": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/metrics.py",
+        "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+      },
+      "report": {
+        "path": "/tmp/lob-same-time-reporting-fxs8a3f_/candidate/src/lobmm/report.py",
+        "sha256": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4"
+      }
+    },
+    "fixtures_sha256": "01f3229ca7d5ddfeec646cbaaead2f5088360556d8c861e51a5107586acbdefc",
+    "contract_sha256": "26b51977ca815629bb386333e824cd956384c1d0f15e06025f61ce995dca8685",
+    "dictionary_book_oracle": [
+      {
+        "event": [
+          0,
+          1,
+          "ADD",
+          1,
+          99,
+          1
+        ],
+        "pre": {
+          "best_bid_ticks": null,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [],
+          "asks": []
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": []
+        }
+      },
+      {
+        "event": [
+          0,
+          2,
+          "ADD",
+          -1,
+          101,
+          1
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": []
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "event": [
+          0,
+          3,
+          "ADD",
+          -1,
+          105,
+          2
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "event": [
+          5,
+          4,
+          "ADD",
+          1,
+          99,
+          2
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "event": [
+          10,
+          5,
+          "TRADE",
+          1,
+          99,
+          2
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        }
+      }
+    ],
+    "hand_queue_oracle": {
+      "ahead": 1,
+      "own": 1,
+      "external_behind_added": 2,
+      "trade_budget": 2,
+      "expected_maker_quantity": 1
+    },
+    "scheduler": [
+      {
+        "key": [
+          0,
+          0,
+          10,
+          1,
+          0
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 1
+        }
+      },
+      {
+        "key": [
+          0,
+          0,
+          10,
+          2,
+          1
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 0,
+          "sequence_number": 2,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1
+        }
+      },
+      {
+        "key": [
+          0,
+          0,
+          10,
+          3,
+          2
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 105,
+          "quantity": 2
+        }
+      },
+      {
+        "key": [
+          0,
+          0,
+          32,
+          0,
+          5
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "TimerMessage",
+        "payload": {
+          "timer_sequence": 0
+        }
+      },
+      {
+        "key": [
+          0,
+          0,
+          40,
+          0,
+          10
+        ],
+        "parent_schedule_id": 5,
+        "payload_type": "StrategyWake",
+        "payload": {
+          "reason": "timer"
+        }
+      },
+      {
+        "key": [
+          1,
+          0,
+          30,
+          0,
+          7
+        ],
+        "parent_schedule_id": 0,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "market_data",
+          "channel_sequence": 0,
+          "send_timestamp_ns": 0,
+          "delivery_timestamp_ns": 1,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 1,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 1
+          }
+        }
+      },
+      {
+        "key": [
+          1,
+          0,
+          30,
+          1,
+          8
+        ],
+        "parent_schedule_id": 1,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "market_data",
+          "channel_sequence": 1,
+          "send_timestamp_ns": 0,
+          "delivery_timestamp_ns": 1,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 2,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1
+          }
+        }
+      },
+      {
+        "key": [
+          1,
+          0,
+          30,
+          2,
+          9
+        ],
+        "parent_schedule_id": 2,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "market_data",
+          "channel_sequence": 2,
+          "send_timestamp_ns": 0,
+          "delivery_timestamp_ns": 1,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 3,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 105,
+            "quantity": 2
+          }
+        }
+      },
+      {
+        "key": [
+          1,
+          0,
+          40,
+          0,
+          11
+        ],
+        "parent_schedule_id": 7,
+        "payload_type": "StrategyWake",
+        "payload": {
+          "reason": "market_data"
+        }
+      },
+      {
+        "key": [
+          2,
+          0,
+          20,
+          0,
+          12
+        ],
+        "parent_schedule_id": 11,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "new_orders",
+          "channel_sequence": 0,
+          "send_timestamp_ns": 1,
+          "delivery_timestamp_ns": 2,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "client_order_id": "market-maker-000000000001",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 1,
+            "strategy_id": "market-maker",
+            "decision_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "post_only": true,
+            "rest_unfilled": true,
+            "expire_timestamp_ns": null
+          }
+        }
+      },
+      {
+        "key": [
+          2,
+          0,
+          20,
+          1,
+          13
+        ],
+        "parent_schedule_id": 11,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "new_orders",
+          "channel_sequence": 1,
+          "send_timestamp_ns": 1,
+          "delivery_timestamp_ns": 2,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "client_order_id": "market-maker-000000000002",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1,
+            "strategy_id": "market-maker",
+            "decision_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "post_only": true,
+            "rest_unfilled": true,
+            "expire_timestamp_ns": null
+          }
+        }
+      },
+      {
+        "key": [
+          3,
+          0,
+          31,
+          0,
+          14
+        ],
+        "parent_schedule_id": 12,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "execution_reports",
+          "channel_sequence": 0,
+          "send_timestamp_ns": 2,
+          "delivery_timestamp_ns": 3,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "report_id": "R000000000001",
+            "report_type": "accepted",
+            "exchange_timestamp_ns": 2,
+            "order_id": "O000000000001",
+            "client_order_id": "market-maker-000000000001",
+            "order_status": "live",
+            "remaining_quantity": 1,
+            "fill": null,
+            "reason": null
+          }
+        }
+      },
+      {
+        "key": [
+          3,
+          0,
+          31,
+          1,
+          15
+        ],
+        "parent_schedule_id": 13,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "execution_reports",
+          "channel_sequence": 1,
+          "send_timestamp_ns": 2,
+          "delivery_timestamp_ns": 3,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "report_id": "R000000000002",
+            "report_type": "accepted",
+            "exchange_timestamp_ns": 2,
+            "order_id": "O000000000002",
+            "client_order_id": "market-maker-000000000002",
+            "order_status": "live",
+            "remaining_quantity": 1,
+            "fill": null,
+            "reason": null
+          }
+        }
+      },
+      {
+        "key": [
+          3,
+          0,
+          40,
+          0,
+          16
+        ],
+        "parent_schedule_id": 14,
+        "payload_type": "StrategyWake",
+        "payload": {
+          "reason": "execution_report"
+        }
+      },
+      {
+        "key": [
+          5,
+          0,
+          10,
+          4,
+          3
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 5,
+          "sequence_number": 4,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        }
+      },
+      {
+        "key": [
+          6,
+          0,
+          30,
+          3,
+          17
+        ],
+        "parent_schedule_id": 3,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "market_data",
+          "channel_sequence": 3,
+          "send_timestamp_ns": 5,
+          "delivery_timestamp_ns": 6,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "timestamp_ns": 5,
+            "sequence_number": 4,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          }
+        }
+      },
+      {
+        "key": [
+          6,
+          0,
+          40,
+          0,
+          18
+        ],
+        "parent_schedule_id": 17,
+        "payload_type": "StrategyWake",
+        "payload": {
+          "reason": "market_data"
+        }
+      },
+      {
+        "key": [
+          10,
+          0,
+          10,
+          5,
+          4
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 10,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        }
+      },
+      {
+        "key": [
+          10,
+          0,
+          15,
+          0,
+          6
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "SessionEnd",
+        "payload": {
+          "timestamp_ns": 10
+        }
+      },
+      {
+        "key": [
+          11,
+          0,
+          30,
+          4,
+          20
+        ],
+        "parent_schedule_id": 4,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "market_data",
+          "channel_sequence": 4,
+          "send_timestamp_ns": 10,
+          "delivery_timestamp_ns": 11,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "timestamp_ns": 10,
+            "sequence_number": 5,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          }
+        }
+      },
+      {
+        "key": [
+          11,
+          0,
+          31,
+          2,
+          19
+        ],
+        "parent_schedule_id": 4,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "execution_reports",
+          "channel_sequence": 2,
+          "send_timestamp_ns": 10,
+          "delivery_timestamp_ns": 11,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "report_id": "R000000000003",
+            "report_type": "fill",
+            "exchange_timestamp_ns": 10,
+            "order_id": "O000000000001",
+            "client_order_id": "market-maker-000000000001",
+            "order_status": "filled",
+            "remaining_quantity": 0,
+            "fill": {
+              "fill_id": "F000000000001",
+              "order_id": "O000000000001",
+              "client_order_id": "market-maker-000000000001",
+              "strategy_id": "market-maker",
+              "side": 1,
+              "quantity": 1,
+              "price_ticks": 99,
+              "liquidity_role": "maker",
+              "exchange_fill_timestamp_ns": 10,
+              "fee": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              },
+              "rebate": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              }
+            },
+            "reason": null
+          }
+        }
+      },
+      {
+        "key": [
+          11,
+          0,
+          31,
+          3,
+          21
+        ],
+        "parent_schedule_id": 6,
+        "payload_type": "ChannelDelivery",
+        "payload": {
+          "channel_name": "execution_reports",
+          "channel_sequence": 3,
+          "send_timestamp_ns": 10,
+          "delivery_timestamp_ns": 11,
+          "sampled_latency_ns": 1,
+          "payload": {
+            "report_id": "R000000000004",
+            "report_type": "expired",
+            "exchange_timestamp_ns": 10,
+            "order_id": "O000000000002",
+            "client_order_id": "market-maker-000000000002",
+            "order_status": "expired",
+            "remaining_quantity": 1,
+            "fill": null,
+            "reason": "time_in_force"
+          }
+        }
+      },
+      {
+        "key": [
+          11,
+          0,
+          40,
+          0,
+          22
+        ],
+        "parent_schedule_id": 20,
+        "payload_type": "StrategyWake",
+        "payload": {
+          "reason": "market_data"
+        }
+      }
+    ],
+    "exchange": [
+      {
+        "kind": "market",
+        "scheduler_key": [
+          0,
+          0,
+          10,
+          1,
+          0
+        ],
+        "event": {
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 1
+        },
+        "pre": {
+          "best_bid_ticks": null,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [],
+          "asks": []
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": []
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          0,
+          0,
+          10,
+          2,
+          1
+        ],
+        "event": {
+          "timestamp_ns": 0,
+          "sequence_number": 2,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": []
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          0,
+          0,
+          10,
+          3,
+          2
+        ],
+        "event": {
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 105,
+          "quantity": 2
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "command",
+        "scheduler_key": [
+          2,
+          0,
+          20,
+          0,
+          12
+        ],
+        "command": {
+          "client_order_id": "market-maker-000000000001",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 1,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        "arrival_timestamp_ns": 2,
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": [
+          {
+            "report_id": "R000000000001",
+            "report_type": "accepted",
+            "exchange_timestamp_ns": 2,
+            "order_id": "O000000000001",
+            "client_order_id": "market-maker-000000000001",
+            "order_status": "live",
+            "remaining_quantity": 1,
+            "fill": null,
+            "reason": null
+          }
+        ]
+      },
+      {
+        "kind": "command",
+        "scheduler_key": [
+          2,
+          0,
+          20,
+          1,
+          13
+        ],
+        "command": {
+          "client_order_id": "market-maker-000000000002",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        "arrival_timestamp_ns": 2,
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": [
+          {
+            "report_id": "R000000000002",
+            "report_type": "accepted",
+            "exchange_timestamp_ns": 2,
+            "order_id": "O000000000002",
+            "client_order_id": "market-maker-000000000002",
+            "order_status": "live",
+            "remaining_quantity": 1,
+            "fill": null,
+            "reason": null
+          }
+        ]
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          5,
+          0,
+          10,
+          4,
+          3
+        ],
+        "event": {
+          "timestamp_ns": 5,
+          "sequence_number": 4,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          10,
+          0,
+          10,
+          5,
+          4
+        ],
+        "event": {
+          "timestamp_ns": 10,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [
+          {
+            "fill_id": "F000000000001",
+            "order_id": "O000000000001",
+            "client_order_id": "market-maker-000000000001",
+            "strategy_id": "market-maker",
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 99,
+            "liquidity_role": "maker",
+            "exchange_fill_timestamp_ns": 10,
+            "fee": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "rebate": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            }
+          }
+        ],
+        "reports": [
+          {
+            "report_id": "R000000000003",
+            "report_type": "fill",
+            "exchange_timestamp_ns": 10,
+            "order_id": "O000000000001",
+            "client_order_id": "market-maker-000000000001",
+            "order_status": "filled",
+            "remaining_quantity": 0,
+            "fill": {
+              "fill_id": "F000000000001",
+              "order_id": "O000000000001",
+              "client_order_id": "market-maker-000000000001",
+              "strategy_id": "market-maker",
+              "side": 1,
+              "quantity": 1,
+              "price_ticks": 99,
+              "liquidity_role": "maker",
+              "exchange_fill_timestamp_ns": 10,
+              "fee": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              },
+              "rebate": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              }
+            },
+            "reason": null
+          }
+        ]
+      }
+    ],
+    "risk": [
+      {
+        "scheduler_key": [
+          0,
+          0,
+          10,
+          2,
+          1
+        ],
+        "timestamp_ns": 0,
+        "net_pnl": {
+          "decimal": [
+            0,
+            [
+              0
+            ],
+            0
+          ]
+        },
+        "before": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        },
+        "decision": {
+          "approved": true,
+          "reason": null,
+          "detail": "continuous P&L checks passed",
+          "cancel_open_orders": false,
+          "risk_reducing": false
+        },
+        "after": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        }
+      },
+      {
+        "scheduler_key": [
+          0,
+          0,
+          10,
+          3,
+          2
+        ],
+        "timestamp_ns": 0,
+        "net_pnl": {
+          "decimal": [
+            0,
+            [
+              0
+            ],
+            0
+          ]
+        },
+        "before": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        },
+        "decision": {
+          "approved": true,
+          "reason": null,
+          "detail": "continuous P&L checks passed",
+          "cancel_open_orders": false,
+          "risk_reducing": false
+        },
+        "after": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        }
+      },
+      {
+        "scheduler_key": [
+          0,
+          0,
+          32,
+          0,
+          5
+        ],
+        "timestamp_ns": 0,
+        "net_pnl": {
+          "decimal": [
+            0,
+            [
+              0
+            ],
+            0
+          ]
+        },
+        "before": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        },
+        "decision": {
+          "approved": true,
+          "reason": null,
+          "detail": "continuous P&L checks passed",
+          "cancel_open_orders": false,
+          "risk_reducing": false
+        },
+        "after": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        }
+      },
+      {
+        "scheduler_key": [
+          5,
+          0,
+          10,
+          4,
+          3
+        ],
+        "timestamp_ns": 5,
+        "net_pnl": {
+          "decimal": [
+            0,
+            [
+              0
+            ],
+            0
+          ]
+        },
+        "before": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        },
+        "decision": {
+          "approved": true,
+          "reason": null,
+          "detail": "continuous P&L checks passed",
+          "cancel_open_orders": false,
+          "risk_reducing": false
+        },
+        "after": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        }
+      },
+      {
+        "scheduler_key": [
+          10,
+          0,
+          10,
+          5,
+          4
+        ],
+        "timestamp_ns": 10,
+        "net_pnl": {
+          "decimal": [
+            0,
+            [
+              1
+            ],
+            0
+          ]
+        },
+        "before": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        },
+        "decision": {
+          "approved": true,
+          "reason": null,
+          "detail": "continuous P&L checks passed",
+          "cancel_open_orders": false,
+          "risk_reducing": false
+        },
+        "after": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                1
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        }
+      },
+      {
+        "scheduler_key": [
+          10,
+          0,
+          10,
+          5,
+          4
+        ],
+        "timestamp_ns": 10,
+        "net_pnl": {
+          "decimal": [
+            0,
+            [
+              1
+            ],
+            0
+          ]
+        },
+        "before": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                1
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        },
+        "decision": {
+          "approved": true,
+          "reason": null,
+          "detail": "continuous P&L checks passed",
+          "cancel_open_orders": false,
+          "risk_reducing": false
+        },
+        "after": {
+          "high_watermark": {
+            "decimal": [
+              0,
+              [
+                1
+              ],
+              0
+            ]
+          },
+          "kill": false,
+          "reason": null,
+          "events": []
+        }
+      }
+    ],
+    "physical_checks": {
+      "external_book_matches_dictionary_oracle": true,
+      "one_maker_99_quantity1": true,
+      "initial_pnl_zero": true,
+      "held_inventory_one": true,
+      "maker_cause_pre_post_midpoint100": true
+    },
+    "physical_observations": {
+      "time20_net_pnl": [],
+      "first_net_pnl": 0.0,
+      "terminal_net_pnl": 1.0,
+      "fills": [
+        {
+          "fill_id": "F000000000001",
+          "order_id": "O000000000001",
+          "client_order_id": "market-maker-000000000001",
+          "strategy_id": "market-maker",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 99,
+          "liquidity_role": "maker",
+          "exchange_fill_timestamp_ns": 10,
+          "fee": 0.0,
+          "rebate": 0.0,
+          "decision_timestamp_ns": 1,
+          "send_timestamp_ns": 1,
+          "exchange_arrival_timestamp_ns": 2,
+          "strategy_notification_timestamp_ns": 11,
+          "queue_ahead_estimate": 1
+        }
+      ],
+      "risk_events": [],
+      "causing_market": {
+        "kind": "market",
+        "scheduler_key": [
+          10,
+          0,
+          10,
+          5,
+          4
+        ],
+        "event": {
+          "timestamp_ns": 10,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [
+          {
+            "fill_id": "F000000000001",
+            "order_id": "O000000000001",
+            "client_order_id": "market-maker-000000000001",
+            "strategy_id": "market-maker",
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 99,
+            "liquidity_role": "maker",
+            "exchange_fill_timestamp_ns": 10,
+            "fee": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "rebate": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            }
+          }
+        ],
+        "reports": [
+          {
+            "report_id": "R000000000003",
+            "report_type": "fill",
+            "exchange_timestamp_ns": 10,
+            "order_id": "O000000000001",
+            "client_order_id": "market-maker-000000000001",
+            "order_status": "filled",
+            "remaining_quantity": 0,
+            "fill": {
+              "fill_id": "F000000000001",
+              "order_id": "O000000000001",
+              "client_order_id": "market-maker-000000000001",
+              "strategy_id": "market-maker",
+              "side": 1,
+              "quantity": 1,
+              "price_ticks": 99,
+              "liquidity_role": "maker",
+              "exchange_fill_timestamp_ns": 10,
+              "fee": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              },
+              "rebate": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              }
+            },
+            "reason": null
+          }
+        ]
+      }
+    },
+    "canonical_effect": {
+      "case": "maker_prefix",
+      "config": {
+        "instrument": {
+          "symbol": "SYNTH-ORDER",
+          "currency": "USD",
+          "tick_size": "1",
+          "lot_size": 1
+        },
+        "data": {
+          "input_path": null,
+          "validation_mode": "strict",
+          "book_depth": 5,
+          "provenance": {
+            "source_type": "synthetic",
+            "provider": "lobmm hand-constructed ordering witness",
+            "venue": "SIMULATED",
+            "symbol": "SYNTH-ORDER",
+            "dataset_id": "lobmm-same-time-reporting-v1",
+            "session_start": null,
+            "session_end": null,
+            "checksum_sha256": null,
+            "license_notes": "Owned fictional mechanics inputs, not historical market data."
+          }
+        },
+        "synthetic": {
+          "event_count": 10,
+          "start_timestamp_ns": 0,
+          "interval_ns": 1000000,
+          "start_price_ticks": 10000,
+          "levels": 5,
+          "base_quantity": 100,
+          "regime_length": 250,
+          "reset_interval": 400
+        },
+        "latency": {
+          "market_data_ns": 1,
+          "order_entry_ns": 1,
+          "cancellation_ns": 1,
+          "fill_report_ns": 1,
+          "market_data_jitter_ns": 0,
+          "order_entry_jitter_ns": 0,
+          "cancellation_jitter_ns": 0,
+          "fill_report_jitter_ns": 0
+        },
+        "exchange": {
+          "validation_mode": "strict",
+          "rest_unfilled_marketable_quantity": true,
+          "cancel_orders_on_reset": true
+        },
+        "queue_model": {
+          "cancellation_allocation": "back_of_queue",
+          "price_through_fills": true
+        },
+        "fees": {
+          "maker_fee_per_unit": "0",
+          "maker_rebate_per_unit": "0",
+          "taker_fee_per_unit": "0",
+          "proportional_fee_rate": "0"
+        },
+        "strategy": {
+          "name": "fixed_spread",
+          "strategy_id": "market-maker",
+          "order_size": 1,
+          "base_half_spread_ticks": {
+            "binary64": "3ff0000000000000"
+          },
+          "minimum_half_spread_ticks": {
+            "binary64": "3ff0000000000000"
+          },
+          "inventory_penalty_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance_coefficient_ticks": {
+            "binary64": "3ff0000000000000"
+          },
+          "volatility_multiplier": {
+            "binary64": "3ff0000000000000"
+          },
+          "volatility_window": 50,
+          "refresh_interval_ns": 1000,
+          "minimum_quote_lifetime_ns": 1000,
+          "stale_after_ns": 1000000000,
+          "price_change_threshold_ticks": 1,
+          "quantity_change_threshold": 1,
+          "rejection_cooldown_ns": 50000000,
+          "rejection_backoff_multiplier": {
+            "binary64": "4000000000000000"
+          },
+          "rejection_max_cooldown_ns": 1000000000,
+          "message_rate_cooldown_ns": 1000000000,
+          "post_only": true
+        },
+        "risk": {
+          "max_abs_inventory": 10,
+          "max_order_size": 1,
+          "max_total_open_quantity": 10,
+          "max_open_orders": 10,
+          "max_loss": "1000",
+          "max_drawdown": "1000",
+          "max_quote_age_ns": 1000000000,
+          "minimum_spread_ticks": 1,
+          "max_volatility_ticks": null,
+          "max_messages_per_second": null,
+          "prohibit_new_quotes_last_ns": 0
+        },
+        "backtest": {
+          "warmup_events": 0,
+          "start_timestamp_ns": null,
+          "end_timestamp_ns": null,
+          "event_limit": null,
+          "timer_interval_ns": 1000,
+          "mark_price": "midpoint",
+          "session_end_policy": "mark",
+          "track_memory": false
+        },
+        "metrics": {
+          "markout_horizons_ns": [
+            100000000,
+            1000000000,
+            5000000000
+          ],
+          "near_limit_fraction": {
+            "binary64": "3fe999999999999a"
+          }
+        },
+        "output": {
+          "runs_directory": "runs",
+          "write_plots": false
+        },
+        "random_seed": 7
+      },
+      "events": [
+        [
+          0,
+          1,
+          "ADD",
+          1,
+          99,
+          1
+        ],
+        [
+          0,
+          2,
+          "ADD",
+          -1,
+          101,
+          1
+        ],
+        [
+          0,
+          3,
+          "ADD",
+          -1,
+          105,
+          2
+        ],
+        [
+          5,
+          4,
+          "ADD",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          5,
+          "TRADE",
+          1,
+          99,
+          2
+        ]
+      ],
+      "tables": {
+        "orders": [
+          {
+            "transition_id": "T000000000001",
+            "order_id": "O000000000001",
+            "previous_status": null,
+            "new_status": "pending_arrival",
+            "timestamp_ns": 2,
+            "remaining_quantity": 1,
+            "reason": "created",
+            "client_order_id": "market-maker-000000000001",
+            "strategy_id": "market-maker",
+            "side": 1,
+            "price_ticks": 99,
+            "original_quantity": 1,
+            "cumulative_filled_quantity": 1,
+            "creation_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "exchange_arrival_timestamp_ns": 2,
+            "average_fill_price_ticks": {
+              "binary64": "4058c00000000000"
+            },
+            "queue_ahead_estimate": 1,
+            "external_behind_estimate": 2
+          },
+          {
+            "transition_id": "T000000000002",
+            "order_id": "O000000000001",
+            "previous_status": "pending_arrival",
+            "new_status": "live",
+            "timestamp_ns": 2,
+            "remaining_quantity": 1,
+            "reason": "accepted",
+            "client_order_id": "market-maker-000000000001",
+            "strategy_id": "market-maker",
+            "side": 1,
+            "price_ticks": 99,
+            "original_quantity": 1,
+            "cumulative_filled_quantity": 1,
+            "creation_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "exchange_arrival_timestamp_ns": 2,
+            "average_fill_price_ticks": {
+              "binary64": "4058c00000000000"
+            },
+            "queue_ahead_estimate": 1,
+            "external_behind_estimate": 2
+          },
+          {
+            "transition_id": "T000000000003",
+            "order_id": "O000000000002",
+            "previous_status": null,
+            "new_status": "pending_arrival",
+            "timestamp_ns": 2,
+            "remaining_quantity": 1,
+            "reason": "created",
+            "client_order_id": "market-maker-000000000002",
+            "strategy_id": "market-maker",
+            "side": -1,
+            "price_ticks": 101,
+            "original_quantity": 1,
+            "cumulative_filled_quantity": 0,
+            "creation_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "exchange_arrival_timestamp_ns": 2,
+            "average_fill_price_ticks": null,
+            "queue_ahead_estimate": 1,
+            "external_behind_estimate": 0
+          },
+          {
+            "transition_id": "T000000000004",
+            "order_id": "O000000000002",
+            "previous_status": "pending_arrival",
+            "new_status": "live",
+            "timestamp_ns": 2,
+            "remaining_quantity": 1,
+            "reason": "accepted",
+            "client_order_id": "market-maker-000000000002",
+            "strategy_id": "market-maker",
+            "side": -1,
+            "price_ticks": 101,
+            "original_quantity": 1,
+            "cumulative_filled_quantity": 0,
+            "creation_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "exchange_arrival_timestamp_ns": 2,
+            "average_fill_price_ticks": null,
+            "queue_ahead_estimate": 1,
+            "external_behind_estimate": 0
+          },
+          {
+            "transition_id": "T000000000005",
+            "order_id": "O000000000001",
+            "previous_status": "live",
+            "new_status": "filled",
+            "timestamp_ns": 10,
+            "remaining_quantity": 0,
+            "reason": "fill",
+            "client_order_id": "market-maker-000000000001",
+            "strategy_id": "market-maker",
+            "side": 1,
+            "price_ticks": 99,
+            "original_quantity": 1,
+            "cumulative_filled_quantity": 1,
+            "creation_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "exchange_arrival_timestamp_ns": 2,
+            "average_fill_price_ticks": {
+              "binary64": "4058c00000000000"
+            },
+            "queue_ahead_estimate": 1,
+            "external_behind_estimate": 2
+          },
+          {
+            "transition_id": "T000000000006",
+            "order_id": "O000000000002",
+            "previous_status": "live",
+            "new_status": "expired",
+            "timestamp_ns": 10,
+            "remaining_quantity": 1,
+            "reason": "time_in_force",
+            "client_order_id": "market-maker-000000000002",
+            "strategy_id": "market-maker",
+            "side": -1,
+            "price_ticks": 101,
+            "original_quantity": 1,
+            "cumulative_filled_quantity": 0,
+            "creation_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "exchange_arrival_timestamp_ns": 2,
+            "average_fill_price_ticks": null,
+            "queue_ahead_estimate": 1,
+            "external_behind_estimate": 0
+          }
+        ],
+        "fills": [
+          {
+            "fill_id": "F000000000001",
+            "order_id": "O000000000001",
+            "client_order_id": "market-maker-000000000001",
+            "strategy_id": "market-maker",
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 99,
+            "liquidity_role": "maker",
+            "exchange_fill_timestamp_ns": 10,
+            "fee": {
+              "binary64": "0000000000000000"
+            },
+            "rebate": {
+              "binary64": "0000000000000000"
+            },
+            "decision_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "exchange_arrival_timestamp_ns": 2,
+            "strategy_notification_timestamp_ns": 11,
+            "queue_ahead_estimate": 1
+          }
+        ],
+        "inventory": [
+          {
+            "timestamp_ns": 0,
+            "inventory": 0,
+            "current_gross_exposure": {
+              "binary64": "0000000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "0000000000000000"
+            }
+          },
+          {
+            "timestamp_ns": 0,
+            "inventory": 0,
+            "current_gross_exposure": {
+              "binary64": "0000000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "0000000000000000"
+            }
+          },
+          {
+            "timestamp_ns": 5,
+            "inventory": 0,
+            "current_gross_exposure": {
+              "binary64": "0000000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "0000000000000000"
+            }
+          },
+          {
+            "timestamp_ns": 10,
+            "inventory": 1,
+            "current_gross_exposure": {
+              "binary64": "4059000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "4059000000000000"
+            }
+          },
+          {
+            "timestamp_ns": 10,
+            "inventory": 1,
+            "current_gross_exposure": {
+              "binary64": "4059000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "4059000000000000"
+            }
+          }
+        ],
+        "pnl": [
+          {
+            "timestamp_ns": 0,
+            "currency": "USD",
+            "tick_value": {
+              "binary64": "3ff0000000000000"
+            },
+            "mark_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "inventory": 0,
+            "average_cost_ticks": null,
+            "trade_cash_ticks": 0,
+            "trade_cash": {
+              "binary64": "0000000000000000"
+            },
+            "cash": {
+              "binary64": "0000000000000000"
+            },
+            "realized_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "gross_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "realized_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "gross_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "fees": {
+              "binary64": "0000000000000000"
+            },
+            "rebates": {
+              "binary64": "0000000000000000"
+            },
+            "net_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "turnover_ticks": 0,
+            "turnover": {
+              "binary64": "0000000000000000"
+            },
+            "buy_volume": 0,
+            "sell_volume": 0,
+            "fill_count": 0,
+            "current_gross_exposure": {
+              "binary64": "0000000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "0000000000000000"
+            }
+          },
+          {
+            "timestamp_ns": 0,
+            "currency": "USD",
+            "tick_value": {
+              "binary64": "3ff0000000000000"
+            },
+            "mark_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "inventory": 0,
+            "average_cost_ticks": null,
+            "trade_cash_ticks": 0,
+            "trade_cash": {
+              "binary64": "0000000000000000"
+            },
+            "cash": {
+              "binary64": "0000000000000000"
+            },
+            "realized_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "gross_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "realized_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "gross_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "fees": {
+              "binary64": "0000000000000000"
+            },
+            "rebates": {
+              "binary64": "0000000000000000"
+            },
+            "net_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "turnover_ticks": 0,
+            "turnover": {
+              "binary64": "0000000000000000"
+            },
+            "buy_volume": 0,
+            "sell_volume": 0,
+            "fill_count": 0,
+            "current_gross_exposure": {
+              "binary64": "0000000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "0000000000000000"
+            }
+          },
+          {
+            "timestamp_ns": 5,
+            "currency": "USD",
+            "tick_value": {
+              "binary64": "3ff0000000000000"
+            },
+            "mark_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "inventory": 0,
+            "average_cost_ticks": null,
+            "trade_cash_ticks": 0,
+            "trade_cash": {
+              "binary64": "0000000000000000"
+            },
+            "cash": {
+              "binary64": "0000000000000000"
+            },
+            "realized_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "gross_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "realized_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "gross_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "fees": {
+              "binary64": "0000000000000000"
+            },
+            "rebates": {
+              "binary64": "0000000000000000"
+            },
+            "net_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "turnover_ticks": 0,
+            "turnover": {
+              "binary64": "0000000000000000"
+            },
+            "buy_volume": 0,
+            "sell_volume": 0,
+            "fill_count": 0,
+            "current_gross_exposure": {
+              "binary64": "0000000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "0000000000000000"
+            }
+          },
+          {
+            "timestamp_ns": 10,
+            "currency": "USD",
+            "tick_value": {
+              "binary64": "3ff0000000000000"
+            },
+            "mark_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "inventory": 1,
+            "average_cost_ticks": {
+              "binary64": "4058c00000000000"
+            },
+            "trade_cash_ticks": -99,
+            "trade_cash": {
+              "binary64": "c058c00000000000"
+            },
+            "cash": {
+              "binary64": "c058c00000000000"
+            },
+            "realized_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl_ticks": {
+              "binary64": "3ff0000000000000"
+            },
+            "gross_pnl_ticks": {
+              "binary64": "3ff0000000000000"
+            },
+            "realized_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl": {
+              "binary64": "3ff0000000000000"
+            },
+            "gross_pnl": {
+              "binary64": "3ff0000000000000"
+            },
+            "fees": {
+              "binary64": "0000000000000000"
+            },
+            "rebates": {
+              "binary64": "0000000000000000"
+            },
+            "net_pnl": {
+              "binary64": "3ff0000000000000"
+            },
+            "turnover_ticks": 99,
+            "turnover": {
+              "binary64": "4058c00000000000"
+            },
+            "buy_volume": 1,
+            "sell_volume": 0,
+            "fill_count": 1,
+            "current_gross_exposure": {
+              "binary64": "4059000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "4059000000000000"
+            }
+          },
+          {
+            "timestamp_ns": 10,
+            "currency": "USD",
+            "tick_value": {
+              "binary64": "3ff0000000000000"
+            },
+            "mark_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "inventory": 1,
+            "average_cost_ticks": {
+              "binary64": "4058c00000000000"
+            },
+            "trade_cash_ticks": -99,
+            "trade_cash": {
+              "binary64": "c058c00000000000"
+            },
+            "cash": {
+              "binary64": "c058c00000000000"
+            },
+            "realized_pnl_ticks": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl_ticks": {
+              "binary64": "3ff0000000000000"
+            },
+            "gross_pnl_ticks": {
+              "binary64": "3ff0000000000000"
+            },
+            "realized_pnl": {
+              "binary64": "0000000000000000"
+            },
+            "unrealized_pnl": {
+              "binary64": "3ff0000000000000"
+            },
+            "gross_pnl": {
+              "binary64": "3ff0000000000000"
+            },
+            "fees": {
+              "binary64": "0000000000000000"
+            },
+            "rebates": {
+              "binary64": "0000000000000000"
+            },
+            "net_pnl": {
+              "binary64": "3ff0000000000000"
+            },
+            "turnover_ticks": 99,
+            "turnover": {
+              "binary64": "4058c00000000000"
+            },
+            "buy_volume": 1,
+            "sell_volume": 0,
+            "fill_count": 1,
+            "current_gross_exposure": {
+              "binary64": "4059000000000000"
+            },
+            "peak_gross_exposure": {
+              "binary64": "4059000000000000"
+            }
+          }
+        ],
+        "quotes": [
+          {
+            "timestamp_ns": 1,
+            "observed_sequence": 3,
+            "side": 1,
+            "action": "submit",
+            "client_order_id": "market-maker-000000000001",
+            "order_id": null,
+            "price_ticks": 99,
+            "quantity": 1,
+            "reason": "desired_quote"
+          },
+          {
+            "timestamp_ns": 1,
+            "observed_sequence": 3,
+            "side": -1,
+            "action": "submit",
+            "client_order_id": "market-maker-000000000002",
+            "order_id": null,
+            "price_ticks": 101,
+            "quantity": 1,
+            "reason": "desired_quote"
+          }
+        ],
+        "risk_events": [],
+        "market": [
+          {
+            "timestamp_ns": 0,
+            "sequence_number": 1,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 1,
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 0,
+            "midpoint_ticks": null,
+            "microprice_ticks": null,
+            "imbalance": null,
+            "spread_ticks": null,
+            "spread_regime": "tight",
+            "liquidity_regime": "thin",
+            "volatility_regime": "low"
+          },
+          {
+            "timestamp_ns": 0,
+            "sequence_number": 2,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1,
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 1,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "microprice_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "imbalance": {
+              "binary64": "0000000000000000"
+            },
+            "spread_ticks": 2,
+            "spread_regime": "tight",
+            "liquidity_regime": "thin",
+            "volatility_regime": "low"
+          },
+          {
+            "timestamp_ns": 0,
+            "sequence_number": 3,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 105,
+            "quantity": 2,
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 1,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "microprice_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "imbalance": {
+              "binary64": "0000000000000000"
+            },
+            "spread_ticks": 2,
+            "spread_regime": "tight",
+            "liquidity_regime": "thin",
+            "volatility_regime": "low"
+          },
+          {
+            "timestamp_ns": 5,
+            "sequence_number": 4,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2,
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "best_bid_quantity": 3,
+            "best_ask_quantity": 1,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "microprice_ticks": {
+              "binary64": "4059200000000000"
+            },
+            "imbalance": {
+              "binary64": "3fe0000000000000"
+            },
+            "spread_ticks": 2,
+            "spread_regime": "tight",
+            "liquidity_regime": "deep",
+            "volatility_regime": "low"
+          },
+          {
+            "timestamp_ns": 10,
+            "sequence_number": 5,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2,
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 1,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "microprice_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "imbalance": {
+              "binary64": "0000000000000000"
+            },
+            "spread_ticks": 2,
+            "spread_regime": "tight",
+            "liquidity_regime": "thin",
+            "volatility_regime": "low"
+          }
+        ],
+        "markouts": [
+          {
+            "fill_id": "F000000000001",
+            "side": 1,
+            "fill_timestamp_ns": 10,
+            "fill_price_ticks": {
+              "binary64": "4058c00000000000"
+            },
+            "horizon_ns": 100000000,
+            "target_timestamp_ns": 100000010,
+            "future_timestamp_ns": null,
+            "future_midpoint_ticks": null,
+            "markout_ticks": null,
+            "markout_value": null,
+            "markout_bps": null,
+            "asof_convention": "first_true_midpoint_at_or_after_horizon"
+          },
+          {
+            "fill_id": "F000000000001",
+            "side": 1,
+            "fill_timestamp_ns": 10,
+            "fill_price_ticks": {
+              "binary64": "4058c00000000000"
+            },
+            "horizon_ns": 1000000000,
+            "target_timestamp_ns": 1000000010,
+            "future_timestamp_ns": null,
+            "future_midpoint_ticks": null,
+            "markout_ticks": null,
+            "markout_value": null,
+            "markout_bps": null,
+            "asof_convention": "first_true_midpoint_at_or_after_horizon"
+          },
+          {
+            "fill_id": "F000000000001",
+            "side": 1,
+            "fill_timestamp_ns": 10,
+            "fill_price_ticks": {
+              "binary64": "4058c00000000000"
+            },
+            "horizon_ns": 5000000000,
+            "target_timestamp_ns": 5000000010,
+            "future_timestamp_ns": null,
+            "future_midpoint_ticks": null,
+            "markout_ticks": null,
+            "markout_value": null,
+            "markout_bps": null,
+            "asof_convention": "first_true_midpoint_at_or_after_horizon"
+          }
+        ]
+      },
+      "metrics": {
+        "attribution": {
+          "adverse_selection_markout": {
+            "binary64": "0000000000000000"
+          },
+          "fees": {
+            "binary64": "8000000000000000"
+          },
+          "inventory_mark_to_market": {
+            "binary64": "0000000000000000"
+          },
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+          "rebates": {
+            "binary64": "0000000000000000"
+          },
+          "reconciliation_residual": {
+            "binary64": "0000000000000000"
+          },
+          "spread_capture": {
+            "binary64": "3ff0000000000000"
+          }
+        },
+        "engineering": {
+          "events_processed": 5,
+          "scheduler_events_processed": 23
+        },
+        "execution_quality": {
+          "effective_spread_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "markout_ticks_by_horizon_ns": {
+            "100000000": null,
+            "1000000000": null,
+            "5000000000": null
+          },
+          "markout_ticks_by_side": {
+            "ask": null,
+            "bid": null
+          },
+          "realized_spread_ticks": {
+            "binary64": "3ff0000000000000"
+          }
+        },
+        "inventory": {
+          "end_of_session": 1,
+          "maximum_long": 1,
+          "maximum_short": 0,
+          "mean": {
+            "binary64": "3fd999999999999a"
+          },
+          "mean_absolute": {
+            "binary64": "3fd999999999999a"
+          },
+          "standard_deviation": {
+            "binary64": "3fdf5a7cecdb684a"
+          },
+          "time_near_limits_fraction": {
+            "binary64": "0000000000000000"
+          }
+        },
+        "market_conditions": {
+          "average_displayed_top_depth": {
+            "binary64": "400199999999999a"
+          },
+          "average_market_spread_ticks": {
+            "binary64": "4000000000000000"
+          }
+        },
+        "pnl": {
+          "annualized_sharpe": null,
+          "fees": {
+            "binary64": "0000000000000000"
+          },
+          "gross_pnl": {
+            "binary64": "3ff0000000000000"
+          },
+          "maximum_drawdown": {
+            "binary64": "0000000000000000"
+          },
+          "net_pnl": {
+            "binary64": "3ff0000000000000"
+          },
+          "pnl_per_fill": {
+            "binary64": "3ff0000000000000"
+          },
+          "pnl_per_traded_unit": {
+            "binary64": "3ff0000000000000"
+          },
+          "pnl_per_unit_turnover": {
+            "binary64": "3f84afd6a052bf5b"
+          },
+          "realized_pnl": {
+            "binary64": "0000000000000000"
+          },
+          "rebates": {
+            "binary64": "0000000000000000"
+          },
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+          "unrealized_pnl": {
+            "binary64": "3ff0000000000000"
+          }
+        },
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "risk": {
+          "event_count": 0,
+          "kill_switch_active": false
+        },
+        "trading_activity": {
+          "buy_volume": 1,
+          "cancel_to_fill_ratio": {
+            "binary64": "0000000000000000"
+          },
+          "cancelled_orders": 0,
+          "completed_fills": 1,
+          "fill_events": 1,
+          "fill_rate": {
+            "binary64": "3fe0000000000000"
+          },
+          "maker_volume": 1,
+          "order_to_fill_ratio": {
+            "binary64": "4000000000000000"
+          },
+          "partial_fills": 0,
+          "quote_messages": 2,
+          "rejected_orders": 0,
+          "sell_volume": 0,
+          "submitted_orders": 2,
+          "taker_volume": 0,
+          "turnover": {
+            "binary64": "4058c00000000000"
+          }
+        }
+      },
+      "diagnostics": {
+        "cancel_attempts": 0,
+        "cancel_request_messages": 0,
+        "dataset_provenance": {
+          "checksum_sha256": null,
+          "dataset_id": "lobmm-same-time-reporting-v1",
+          "license_notes": "Owned fictional mechanics inputs, not historical market data.",
+          "provider": "lobmm hand-constructed ordering witness",
+          "session_end": null,
+          "session_start": null,
+          "source_type": "synthetic",
+          "symbol": "SYNTH-ORDER",
+          "synthetic_demonstration": true,
+          "venue": "SIMULATED"
+        },
+        "desired_quote_attempts": 2,
+        "end_inventory": 1,
+        "event_stream_sha256": "39b00f14a1c86126e1ad370bc318ae370071e6c13899c81a5a2995a7f5f65f18",
+        "events_processed": 5,
+        "exchange_rejected_cancel_attempts": 0,
+        "exchange_rejected_quote_attempts": 0,
+        "execution_reports_delivered": 4,
+        "input_validation_certificate": {
+          "event_count": 5,
+          "event_stream_sha256": "39b00f14a1c86126e1ad370bc318ae370071e6c13899c81a5a2995a7f5f65f18",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true
+        },
+        "input_validation_diagnostics": {},
+        "input_validation_issue_count": 0,
+        "kill_switch_active": false,
+        "market_data_messages_delivered": 5,
+        "max_abs_inventory": 10,
+        "observed_book_diagnostics": {},
+        "open_orders_end": 0,
+        "performance_note": "Measured unprofiled Python wall-clock throughput; timestamp precision is not a latency-performance claim.",
+        "queue_levels_remaining": 1,
+        "random_seed": 7,
+        "rejected_quote_attempts": 0,
+        "retry_suppressed_quote_attempts": 0,
+        "risk_blocked_cancel_attempts": 0,
+        "risk_blocked_quote_attempts": 0,
+        "risk_cancel_request_messages": 0,
+        "scheduler_events_processed": 23,
+        "submitted_order_messages": 2,
+        "synthetic_demonstration": true,
+        "true_book_diagnostics": {}
+      },
+      "summary": {
+        "dataset_provenance": {
+          "checksum_sha256": null,
+          "dataset_id": "lobmm-same-time-reporting-v1",
+          "license_notes": "Owned fictional mechanics inputs, not historical market data.",
+          "provider": "lobmm hand-constructed ordering witness",
+          "session_end": null,
+          "session_start": null,
+          "source_type": "synthetic",
+          "symbol": "SYNTH-ORDER",
+          "synthetic_demonstration": true,
+          "venue": "SIMULATED"
+        },
+        "disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "end_inventory": 1,
+        "event_count": 5,
+        "event_stream_sha256": "39b00f14a1c86126e1ad370bc318ae370071e6c13899c81a5a2995a7f5f65f18",
+        "fill_count": 1,
+        "net_pnl": {
+          "binary64": "3ff0000000000000"
+        },
+        "run_name": "maker_prefix",
+        "strategy": "fixed_spread",
+        "symbol": "SYNTH-ORDER",
+        "synthetic_demonstration": true
+      },
+      "scheduler": [
+        {
+          "key": [
+            0,
+            0,
+            10,
+            1,
+            0
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 1,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 1
+          }
+        },
+        {
+          "key": [
+            0,
+            0,
+            10,
+            2,
+            1
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 2,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1
+          }
+        },
+        {
+          "key": [
+            0,
+            0,
+            10,
+            3,
+            2
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 3,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 105,
+            "quantity": 2
+          }
+        },
+        {
+          "key": [
+            0,
+            0,
+            32,
+            0,
+            5
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "TimerMessage",
+          "payload": {
+            "timer_sequence": 0
+          }
+        },
+        {
+          "key": [
+            0,
+            0,
+            40,
+            0,
+            10
+          ],
+          "parent_schedule_id": 5,
+          "payload_type": "StrategyWake",
+          "payload": {
+            "reason": "timer"
+          }
+        },
+        {
+          "key": [
+            1,
+            0,
+            30,
+            0,
+            7
+          ],
+          "parent_schedule_id": 0,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "market_data",
+            "channel_sequence": 0,
+            "send_timestamp_ns": 0,
+            "delivery_timestamp_ns": 1,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "timestamp_ns": 0,
+              "sequence_number": 1,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 1
+            }
+          }
+        },
+        {
+          "key": [
+            1,
+            0,
+            30,
+            1,
+            8
+          ],
+          "parent_schedule_id": 1,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "market_data",
+            "channel_sequence": 1,
+            "send_timestamp_ns": 0,
+            "delivery_timestamp_ns": 1,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "timestamp_ns": 0,
+              "sequence_number": 2,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 101,
+              "quantity": 1
+            }
+          }
+        },
+        {
+          "key": [
+            1,
+            0,
+            30,
+            2,
+            9
+          ],
+          "parent_schedule_id": 2,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "market_data",
+            "channel_sequence": 2,
+            "send_timestamp_ns": 0,
+            "delivery_timestamp_ns": 1,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "timestamp_ns": 0,
+              "sequence_number": 3,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 105,
+              "quantity": 2
+            }
+          }
+        },
+        {
+          "key": [
+            1,
+            0,
+            40,
+            0,
+            11
+          ],
+          "parent_schedule_id": 7,
+          "payload_type": "StrategyWake",
+          "payload": {
+            "reason": "market_data"
+          }
+        },
+        {
+          "key": [
+            2,
+            0,
+            20,
+            0,
+            12
+          ],
+          "parent_schedule_id": 11,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "new_orders",
+            "channel_sequence": 0,
+            "send_timestamp_ns": 1,
+            "delivery_timestamp_ns": 2,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "client_order_id": "market-maker-000000000001",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 1,
+              "strategy_id": "market-maker",
+              "decision_timestamp_ns": 1,
+              "send_timestamp_ns": 1,
+              "post_only": true,
+              "rest_unfilled": true,
+              "expire_timestamp_ns": null
+            }
+          }
+        },
+        {
+          "key": [
+            2,
+            0,
+            20,
+            1,
+            13
+          ],
+          "parent_schedule_id": 11,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "new_orders",
+            "channel_sequence": 1,
+            "send_timestamp_ns": 1,
+            "delivery_timestamp_ns": 2,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "client_order_id": "market-maker-000000000002",
+              "side": -1,
+              "price_ticks": 101,
+              "quantity": 1,
+              "strategy_id": "market-maker",
+              "decision_timestamp_ns": 1,
+              "send_timestamp_ns": 1,
+              "post_only": true,
+              "rest_unfilled": true,
+              "expire_timestamp_ns": null
+            }
+          }
+        },
+        {
+          "key": [
+            3,
+            0,
+            31,
+            0,
+            14
+          ],
+          "parent_schedule_id": 12,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "execution_reports",
+            "channel_sequence": 0,
+            "send_timestamp_ns": 2,
+            "delivery_timestamp_ns": 3,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "report_id": "R000000000001",
+              "report_type": "accepted",
+              "exchange_timestamp_ns": 2,
+              "order_id": "O000000000001",
+              "client_order_id": "market-maker-000000000001",
+              "order_status": "live",
+              "remaining_quantity": 1,
+              "fill": null,
+              "reason": null
+            }
+          }
+        },
+        {
+          "key": [
+            3,
+            0,
+            31,
+            1,
+            15
+          ],
+          "parent_schedule_id": 13,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "execution_reports",
+            "channel_sequence": 1,
+            "send_timestamp_ns": 2,
+            "delivery_timestamp_ns": 3,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "report_id": "R000000000002",
+              "report_type": "accepted",
+              "exchange_timestamp_ns": 2,
+              "order_id": "O000000000002",
+              "client_order_id": "market-maker-000000000002",
+              "order_status": "live",
+              "remaining_quantity": 1,
+              "fill": null,
+              "reason": null
+            }
+          }
+        },
+        {
+          "key": [
+            3,
+            0,
+            40,
+            0,
+            16
+          ],
+          "parent_schedule_id": 14,
+          "payload_type": "StrategyWake",
+          "payload": {
+            "reason": "execution_report"
+          }
+        },
+        {
+          "key": [
+            5,
+            0,
+            10,
+            4,
+            3
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 5,
+            "sequence_number": 4,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          }
+        },
+        {
+          "key": [
+            6,
+            0,
+            30,
+            3,
+            17
+          ],
+          "parent_schedule_id": 3,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "market_data",
+            "channel_sequence": 3,
+            "send_timestamp_ns": 5,
+            "delivery_timestamp_ns": 6,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "timestamp_ns": 5,
+              "sequence_number": 4,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 2
+            }
+          }
+        },
+        {
+          "key": [
+            6,
+            0,
+            40,
+            0,
+            18
+          ],
+          "parent_schedule_id": 17,
+          "payload_type": "StrategyWake",
+          "payload": {
+            "reason": "market_data"
+          }
+        },
+        {
+          "key": [
+            10,
+            0,
+            10,
+            5,
+            4
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 10,
+            "sequence_number": 5,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          }
+        },
+        {
+          "key": [
+            10,
+            0,
+            15,
+            0,
+            6
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "SessionEnd",
+          "payload": {
+            "timestamp_ns": 10
+          }
+        },
+        {
+          "key": [
+            11,
+            0,
+            30,
+            4,
+            20
+          ],
+          "parent_schedule_id": 4,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "market_data",
+            "channel_sequence": 4,
+            "send_timestamp_ns": 10,
+            "delivery_timestamp_ns": 11,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "timestamp_ns": 10,
+              "sequence_number": 5,
+              "event_type": "TRADE",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 2
+            }
+          }
+        },
+        {
+          "key": [
+            11,
+            0,
+            31,
+            2,
+            19
+          ],
+          "parent_schedule_id": 4,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "execution_reports",
+            "channel_sequence": 2,
+            "send_timestamp_ns": 10,
+            "delivery_timestamp_ns": 11,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "report_id": "R000000000003",
+              "report_type": "fill",
+              "exchange_timestamp_ns": 10,
+              "order_id": "O000000000001",
+              "client_order_id": "market-maker-000000000001",
+              "order_status": "filled",
+              "remaining_quantity": 0,
+              "fill": {
+                "fill_id": "F000000000001",
+                "order_id": "O000000000001",
+                "client_order_id": "market-maker-000000000001",
+                "strategy_id": "market-maker",
+                "side": 1,
+                "quantity": 1,
+                "price_ticks": 99,
+                "liquidity_role": "maker",
+                "exchange_fill_timestamp_ns": 10,
+                "fee": {
+                  "decimal": [
+                    0,
+                    [
+                      0
+                    ],
+                    0
+                  ]
+                },
+                "rebate": {
+                  "decimal": [
+                    0,
+                    [
+                      0
+                    ],
+                    0
+                  ]
+                }
+              },
+              "reason": null
+            }
+          }
+        },
+        {
+          "key": [
+            11,
+            0,
+            31,
+            3,
+            21
+          ],
+          "parent_schedule_id": 6,
+          "payload_type": "ChannelDelivery",
+          "payload": {
+            "channel_name": "execution_reports",
+            "channel_sequence": 3,
+            "send_timestamp_ns": 10,
+            "delivery_timestamp_ns": 11,
+            "sampled_latency_ns": 1,
+            "payload": {
+              "report_id": "R000000000004",
+              "report_type": "expired",
+              "exchange_timestamp_ns": 10,
+              "order_id": "O000000000002",
+              "client_order_id": "market-maker-000000000002",
+              "order_status": "expired",
+              "remaining_quantity": 1,
+              "fill": null,
+              "reason": "time_in_force"
+            }
+          }
+        },
+        {
+          "key": [
+            11,
+            0,
+            40,
+            0,
+            22
+          ],
+          "parent_schedule_id": 20,
+          "payload_type": "StrategyWake",
+          "payload": {
+            "reason": "market_data"
+          }
+        }
+      ],
+      "exchange": [
+        {
+          "kind": "market",
+          "scheduler_key": [
+            0,
+            0,
+            10,
+            1,
+            0
+          ],
+          "event": {
+            "timestamp_ns": 0,
+            "sequence_number": 1,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 1
+          },
+          "pre": {
+            "best_bid_ticks": null,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [],
+            "asks": []
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": []
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            0,
+            0,
+            10,
+            2,
+            1
+          ],
+          "event": {
+            "timestamp_ns": 0,
+            "sequence_number": 2,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": []
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            0,
+            0,
+            10,
+            3,
+            2
+          ],
+          "event": {
+            "timestamp_ns": 0,
+            "sequence_number": 3,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 105,
+            "quantity": 2
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "command",
+          "scheduler_key": [
+            2,
+            0,
+            20,
+            0,
+            12
+          ],
+          "command": {
+            "client_order_id": "market-maker-000000000001",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 1,
+            "strategy_id": "market-maker",
+            "decision_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "post_only": true,
+            "rest_unfilled": true,
+            "expire_timestamp_ns": null
+          },
+          "arrival_timestamp_ns": 2,
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": [
+            {
+              "report_id": "R000000000001",
+              "report_type": "accepted",
+              "exchange_timestamp_ns": 2,
+              "order_id": "O000000000001",
+              "client_order_id": "market-maker-000000000001",
+              "order_status": "live",
+              "remaining_quantity": 1,
+              "fill": null,
+              "reason": null
+            }
+          ]
+        },
+        {
+          "kind": "command",
+          "scheduler_key": [
+            2,
+            0,
+            20,
+            1,
+            13
+          ],
+          "command": {
+            "client_order_id": "market-maker-000000000002",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1,
+            "strategy_id": "market-maker",
+            "decision_timestamp_ns": 1,
+            "send_timestamp_ns": 1,
+            "post_only": true,
+            "rest_unfilled": true,
+            "expire_timestamp_ns": null
+          },
+          "arrival_timestamp_ns": 2,
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": [
+            {
+              "report_id": "R000000000002",
+              "report_type": "accepted",
+              "exchange_timestamp_ns": 2,
+              "order_id": "O000000000002",
+              "client_order_id": "market-maker-000000000002",
+              "order_status": "live",
+              "remaining_quantity": 1,
+              "fill": null,
+              "reason": null
+            }
+          ]
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            5,
+            0,
+            10,
+            4,
+            3
+          ],
+          "event": {
+            "timestamp_ns": 5,
+            "sequence_number": 4,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                3
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            10,
+            0,
+            10,
+            5,
+            4
+          ],
+          "event": {
+            "timestamp_ns": 10,
+            "sequence_number": 5,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                3
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [
+            {
+              "fill_id": "F000000000001",
+              "order_id": "O000000000001",
+              "client_order_id": "market-maker-000000000001",
+              "strategy_id": "market-maker",
+              "side": 1,
+              "quantity": 1,
+              "price_ticks": 99,
+              "liquidity_role": "maker",
+              "exchange_fill_timestamp_ns": 10,
+              "fee": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              },
+              "rebate": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              }
+            }
+          ],
+          "reports": [
+            {
+              "report_id": "R000000000003",
+              "report_type": "fill",
+              "exchange_timestamp_ns": 10,
+              "order_id": "O000000000001",
+              "client_order_id": "market-maker-000000000001",
+              "order_status": "filled",
+              "remaining_quantity": 0,
+              "fill": {
+                "fill_id": "F000000000001",
+                "order_id": "O000000000001",
+                "client_order_id": "market-maker-000000000001",
+                "strategy_id": "market-maker",
+                "side": 1,
+                "quantity": 1,
+                "price_ticks": 99,
+                "liquidity_role": "maker",
+                "exchange_fill_timestamp_ns": 10,
+                "fee": {
+                  "decimal": [
+                    0,
+                    [
+                      0
+                    ],
+                    0
+                  ]
+                },
+                "rebate": {
+                  "decimal": [
+                    0,
+                    [
+                      0
+                    ],
+                    0
+                  ]
+                }
+              },
+              "reason": null
+            }
+          ]
+        }
+      ],
+      "risk": [
+        {
+          "scheduler_key": [
+            0,
+            0,
+            10,
+            2,
+            1
+          ],
+          "timestamp_ns": 0,
+          "net_pnl": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "before": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          },
+          "decision": {
+            "approved": true,
+            "reason": null,
+            "detail": "continuous P&L checks passed",
+            "cancel_open_orders": false,
+            "risk_reducing": false
+          },
+          "after": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          }
+        },
+        {
+          "scheduler_key": [
+            0,
+            0,
+            10,
+            3,
+            2
+          ],
+          "timestamp_ns": 0,
+          "net_pnl": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "before": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          },
+          "decision": {
+            "approved": true,
+            "reason": null,
+            "detail": "continuous P&L checks passed",
+            "cancel_open_orders": false,
+            "risk_reducing": false
+          },
+          "after": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          }
+        },
+        {
+          "scheduler_key": [
+            0,
+            0,
+            32,
+            0,
+            5
+          ],
+          "timestamp_ns": 0,
+          "net_pnl": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "before": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          },
+          "decision": {
+            "approved": true,
+            "reason": null,
+            "detail": "continuous P&L checks passed",
+            "cancel_open_orders": false,
+            "risk_reducing": false
+          },
+          "after": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          }
+        },
+        {
+          "scheduler_key": [
+            5,
+            0,
+            10,
+            4,
+            3
+          ],
+          "timestamp_ns": 5,
+          "net_pnl": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "before": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          },
+          "decision": {
+            "approved": true,
+            "reason": null,
+            "detail": "continuous P&L checks passed",
+            "cancel_open_orders": false,
+            "risk_reducing": false
+          },
+          "after": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          }
+        },
+        {
+          "scheduler_key": [
+            10,
+            0,
+            10,
+            5,
+            4
+          ],
+          "timestamp_ns": 10,
+          "net_pnl": {
+            "decimal": [
+              0,
+              [
+                1
+              ],
+              0
+            ]
+          },
+          "before": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          },
+          "decision": {
+            "approved": true,
+            "reason": null,
+            "detail": "continuous P&L checks passed",
+            "cancel_open_orders": false,
+            "risk_reducing": false
+          },
+          "after": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  1
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          }
+        },
+        {
+          "scheduler_key": [
+            10,
+            0,
+            10,
+            5,
+            4
+          ],
+          "timestamp_ns": 10,
+          "net_pnl": {
+            "decimal": [
+              0,
+              [
+                1
+              ],
+              0
+            ]
+          },
+          "before": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  1
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          },
+          "decision": {
+            "approved": true,
+            "reason": null,
+            "detail": "continuous P&L checks passed",
+            "cancel_open_orders": false,
+            "risk_reducing": false
+          },
+          "after": {
+            "high_watermark": {
+              "decimal": [
+                0,
+                [
+                  1
+                ],
+                0
+              ]
+            },
+            "kill": false,
+            "reason": null,
+            "events": []
+          }
+        }
+      ],
+      "dictionary_book_oracle": [
+        {
+          "event": [
+            0,
+            1,
+            "ADD",
+            1,
+            99,
+            1
+          ],
+          "pre": {
+            "best_bid_ticks": null,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [],
+            "asks": []
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": []
+          }
+        },
+        {
+          "event": [
+            0,
+            2,
+            "ADD",
+            -1,
+            101,
+            1
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": []
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "event": [
+            0,
+            3,
+            "ADD",
+            -1,
+            105,
+            2
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "event": [
+            5,
+            4,
+            "ADD",
+            1,
+            99,
+            2
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                3
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "event": [
+            10,
+            5,
+            "TRADE",
+            1,
+            99,
+            2
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                3
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "canonical_effect_sha256": "d3f8a0d3897c1d457fab348f1d60bde9220cb3fde6379112597cf2528910c140"
+  },
+  "raw_study_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/study-final/maker_prefix-candidate/raw-study.json",
+  "raw_study_sha256": "15478c8792734eaf31feff4fd4e1bcaeb00274dddf8e818d33644b2a7040d592",
+  "plots": {
+    "drawdown": {
+      "axes": [
+        {
+          "title": "Net P&L drawdown",
+          "lines": [
+            {
+              "label": "_child1",
+              "x": [
+                0.0,
+                0.0,
+                5e-09,
+                1e-08,
+                1e-08
+              ],
+              "y": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "bars": [],
+          "x_tick_labels": [
+            "\u22120.2",
+            "0.0",
+            "0.2",
+            "0.4",
+            "0.6",
+            "0.8",
+            "1.0",
+            "1.2"
+          ]
+        }
+      ],
+      "figure_closed": true,
+      "png_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/study-final/maker_prefix-candidate/plots/drawdown.png",
+      "png_sha256": "25e81f1575631aee876a97bb2a2e72dda00cd688bbdd4b4128f9f223988f978d",
+      "png_bytes": 23631
+    },
+    "drawdown_oracle": {
+      "timestamps_ns": [
+        0,
+        0,
+        5,
+        10,
+        10
+      ],
+      "net_pnl": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "origin_ns": 0,
+      "x": [
+        0.0,
+        0.0,
+        5e-09,
+        1e-08,
+        1e-08
+      ],
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_count": 5,
+      "maximum": 0.0,
+      "terminal": 0.0
+    },
+    "curve_matches": true,
+    "regime": {
+      "axes": [
+        {
+          "title": "Spread Regime",
+          "lines": [
+            {
+              "label": "_child1",
+              "x": [
+                0.0,
+                1.0
+              ],
+              "y": [
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "bars": [
+            {
+              "x": -0.4,
+              "width": 0.8,
+              "height": 1.0
+            }
+          ],
+          "x_tick_labels": [
+            "tight"
+          ]
+        },
+        {
+          "title": "Volatility Regime",
+          "lines": [
+            {
+              "label": "_child1",
+              "x": [
+                0.0,
+                1.0
+              ],
+              "y": [
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "bars": [
+            {
+              "x": -0.4,
+              "width": 0.8,
+              "height": 1.0
+            }
+          ],
+          "x_tick_labels": [
+            "low"
+          ]
+        },
+        {
+          "title": "Liquidity Regime",
+          "lines": [
+            {
+              "label": "_child2",
+              "x": [
+                0.0,
+                1.0
+              ],
+              "y": [
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "bars": [
+            {
+              "x": -0.4,
+              "width": 0.8,
+              "height": 0.0
+            },
+            {
+              "x": 0.6,
+              "width": 0.8,
+              "height": 1.0
+            }
+          ],
+          "x_tick_labels": [
+            "deep",
+            "thin"
+          ]
+        }
+      ],
+      "figure_closed": true,
+      "png_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/study-final/maker_prefix-candidate/plots/regimes.png",
+      "png_sha256": "db2bd40a92f3263fcea34488b7a773e1116c21db43ae3827bac05d5df45c2955",
+      "png_bytes": 38916
+    },
+    "regime_actual": {
+      "spread_regime": {
+        "tight": 1.0
+      },
+      "volatility_regime": {
+        "low": 1.0
+      },
+      "liquidity_regime": {
+        "deep": 0.0,
+        "thin": 1.0
+      }
+    },
+    "regime_oracle": {
+      "spread_regime": {
+        "tight": 1.0
+      },
+      "volatility_regime": {
+        "low": 1.0
+      },
+      "liquidity_regime": {
+        "deep": 0.0,
+        "thin": 1.0
+      }
+    },
+    "regime_matches": true,
+    "png_sha256": {
+      "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/study-final/maker_prefix-candidate/plots/regimes.png": "db2bd40a92f3263fcea34488b7a773e1116c21db43ae3827bac05d5df45c2955",
+      "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/study-final/maker_prefix-candidate/plots/drawdown.png": "25e81f1575631aee876a97bb2a2e72dda00cd688bbdd4b4128f9f223988f978d"
+    }
+  }
+}

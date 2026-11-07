@@ -9,6 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Record executed source
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/same-time-reporting-ci
+          git rev-parse HEAD | tee experiments/same-time-reporting-ci/checkout.txt
+          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -22,6 +33,32 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --junitxml=experiments/same-time-reporting-ci/full-suite.xml
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Archived main and exact-head report regression
+        run: >-
+          python tools/reproduce_same_time_reporting.py --stage regression
+          --candidate "$(git rev-parse HEAD)"
+          --output experiments/same-time-reporting-ci/regression
+      - name: Fixed main and exact-head execution witnesses
+        run: >-
+          python tools/reproduce_same_time_reporting.py --stage study
+          --candidate "$(git rev-parse HEAD)"
+          --output experiments/same-time-reporting-ci/study
+      - name: Retain source and numerical evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: same-time-reporting-${{ steps.source.outputs.head_sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            experiments/same-time-reporting-ci/
+            runs/ci-smoke/
+            docs/evidence/same-time-reporting-20261107/
+            docs/SAME_TIME_REPORTING.md
+            tools/reproduce_same_time_reporting.py
+            tools/same_time_witnesses.py
+            tests/unit/test_same_time_report_order_independent.py
+            src/lobmm/report.py

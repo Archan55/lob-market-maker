@@ -1,0 +1,434 @@
+{
+  "common_config": {
+    "random_seed": 7,
+    "instrument": {
+      "tick_size": "1",
+      "symbol": "SYNTH-ORDER"
+    },
+    "data": {
+      "validation_mode": "strict",
+      "provenance": {
+        "source_type": "synthetic",
+        "provider": "lobmm hand-constructed ordering witness",
+        "dataset_id": "lobmm-same-time-reporting-v1",
+        "venue": "SIMULATED",
+        "symbol": "SYNTH-ORDER",
+        "license_notes": "Owned fictional mechanics inputs, not historical market data."
+      }
+    },
+    "synthetic": {
+      "event_count": 10
+    },
+    "exchange": {
+      "validation_mode": "strict"
+    },
+    "queue_model": {
+      "cancellation_allocation": "back_of_queue",
+      "price_through_fills": true
+    },
+    "fees": {
+      "maker_fee_per_unit": "0",
+      "maker_rebate_per_unit": "0",
+      "taker_fee_per_unit": "0",
+      "proportional_fee_rate": "0"
+    },
+    "strategy": {
+      "name": "fixed_spread",
+      "order_size": 1,
+      "base_half_spread_ticks": 1.0,
+      "minimum_half_spread_ticks": 1.0,
+      "refresh_interval_ns": 1000,
+      "minimum_quote_lifetime_ns": 1000,
+      "stale_after_ns": 1000000000
+    },
+    "latency": {
+      "market_data_ns": 1,
+      "order_entry_ns": 1,
+      "cancellation_ns": 1,
+      "fill_report_ns": 1,
+      "market_data_jitter_ns": 0,
+      "order_entry_jitter_ns": 0,
+      "cancellation_jitter_ns": 0,
+      "fill_report_jitter_ns": 0
+    },
+    "risk": {
+      "max_abs_inventory": 10,
+      "max_order_size": 1,
+      "max_total_open_quantity": 10,
+      "max_open_orders": 10,
+      "max_loss": "1000",
+      "max_drawdown": "1000",
+      "max_quote_age_ns": 1000000000
+    },
+    "backtest": {
+      "warmup_events": 0,
+      "timer_interval_ns": 1000,
+      "mark_price": "midpoint",
+      "session_end_policy": "mark",
+      "track_memory": false
+    },
+    "output": {
+      "write_plots": false
+    }
+  },
+  "plot_vectors": {
+    "descending_tie": [
+      [
+        0,
+        0
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        20,
+        2
+      ]
+    ],
+    "rising_tie": [
+      [
+        0,
+        0
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        20,
+        2
+      ]
+    ],
+    "unique_time": [
+      [
+        0,
+        0
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        30,
+        2
+      ]
+    ],
+    "flat_duplicate": [
+      [
+        0,
+        0
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        20,
+        1
+      ]
+    ],
+    "epoch_distinct": [
+      [
+        1700000000000000000,
+        0
+      ],
+      [
+        1700000000000000001,
+        2
+      ],
+      [
+        1700000000000000002,
+        1
+      ],
+      [
+        1700000000000000003,
+        2
+      ]
+    ]
+  },
+  "cases": {
+    "maker_prefix": {
+      "events": [
+        [
+          0,
+          1,
+          "ADD",
+          1,
+          99,
+          1
+        ],
+        [
+          0,
+          2,
+          "ADD",
+          -1,
+          101,
+          1
+        ],
+        [
+          0,
+          3,
+          "ADD",
+          -1,
+          105,
+          2
+        ],
+        [
+          5,
+          4,
+          "ADD",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          5,
+          "TRADE",
+          1,
+          99,
+          2
+        ]
+      ],
+      "kind": "full_backtest"
+    },
+    "maker_late_tail": {
+      "events": [
+        [
+          0,
+          1,
+          "ADD",
+          1,
+          99,
+          1
+        ],
+        [
+          0,
+          2,
+          "ADD",
+          -1,
+          101,
+          1
+        ],
+        [
+          0,
+          3,
+          "ADD",
+          -1,
+          105,
+          2
+        ],
+        [
+          5,
+          4,
+          "ADD",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          5,
+          "TRADE",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          6,
+          "CANCEL",
+          -1,
+          101,
+          1
+        ]
+      ],
+      "kind": "full_backtest"
+    },
+    "drawdown_order": {
+      "events": [
+        [
+          0,
+          1,
+          "ADD",
+          1,
+          99,
+          1
+        ],
+        [
+          0,
+          2,
+          "ADD",
+          -1,
+          101,
+          1
+        ],
+        [
+          0,
+          3,
+          "ADD",
+          -1,
+          105,
+          2
+        ],
+        [
+          5,
+          4,
+          "ADD",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          5,
+          "TRADE",
+          1,
+          99,
+          2
+        ],
+        [
+          20,
+          6,
+          "CANCEL",
+          -1,
+          101,
+          1
+        ],
+        [
+          20,
+          7,
+          "ADD",
+          -1,
+          101,
+          1
+        ]
+      ],
+      "kind": "full_backtest",
+      "risk_max_drawdown": "1.5"
+    },
+    "taker_phase_control": {
+      "events": [
+        [
+          0,
+          1,
+          "ADD",
+          1,
+          99,
+          1
+        ],
+        [
+          0,
+          2,
+          "ADD",
+          -1,
+          101,
+          1
+        ],
+        [
+          0,
+          3,
+          "ADD",
+          -1,
+          105,
+          2
+        ],
+        [
+          5,
+          4,
+          "ADD",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          5,
+          "TRADE",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          6,
+          "CANCEL",
+          -1,
+          101,
+          1
+        ]
+      ],
+      "kind": "exchange_scheduler_control",
+      "command": {
+        "timestamp_ns": 10,
+        "side": 1,
+        "price_ticks": 105,
+        "quantity": 1,
+        "post_only": false,
+        "rest_unfilled": false
+      },
+      "own_maker_before_trade": false
+    }
+  },
+  "regime_vector": {
+    "pnl": [
+      [
+        0,
+        0
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        20,
+        2
+      ]
+    ],
+    "market": [
+      [
+        0,
+        "initial"
+      ],
+      [
+        10,
+        "A"
+      ],
+      [
+        20,
+        "B"
+      ]
+    ],
+    "expected": {
+      "initial": 0,
+      "A": 1,
+      "B": 1
+    },
+    "old_expected": {
+      "initial": 0,
+      "A": 2,
+      "B": 0
+    }
+  }
+}
