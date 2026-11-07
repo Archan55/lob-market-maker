@@ -3,5 +3,6 @@
   "decision": "independent_feasibility andperformance_reproducer GO forprimaryplotcontract;data_execution_audit supportssecondaryreachabilitywithlegacyidentifiabilitylimits",
   "required_refinements": "FullcurveANDmax;stabletimestampsortonly;enginevectorDD2separateunitvectorDD1;fillprefixonlyequivalenceacrosslate-tailvariants;endtimestampjoinnotgenericcausalref;nonewattributionfields;retainedinputsremainexposed.",
   "data_feasibility": "growth_reproducer metadataauditfoundnofree/authorizedrealL2/trades/calibration inmatchingworkspace;allretainedinputsand4adapterCSVsfictional/synthetic. Noeconomicstudysupported.",
-  "execution": "No reviewerengine/tests/numericaloutcomeinspection/edits beforeGO."
+  "execution": "No reviewerengine/tests/numericaloutcomeinspection/edits beforeGO.",
+  "preexecution_amendment_GO": "TwoindependentreviewersGO: preserveintthroughsort/originsubtractiondrawdownonly, stablePNLregimesortwithoutchanginglabels, epoch/regimefixedvectors;sameenginebudget,nooutcomesinspected."
 }
