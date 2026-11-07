@@ -1,0 +1,80 @@
+{
+  "attribution": {
+    "adverse_selection_markout": 0.0,
+    "fees": -0.0,
+    "inventory_mark_to_market": 0.0,
+    "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+    "rebates": 0.0,
+    "reconciliation_residual": 0.0,
+    "spread_capture": 1.0
+  },
+  "engineering": {
+    "events_per_second": 774.4252906954357,
+    "events_processed": 7,
+    "peak_memory_bytes": null,
+    "scheduler_events_processed": 37,
+    "wall_clock_seconds": 0.009038960999987466
+  },
+  "execution_quality": {
+    "effective_spread_ticks": 2.0,
+    "markout_ticks_by_horizon_ns": {
+      "100000000": null,
+      "1000000000": null,
+      "5000000000": null
+    },
+    "markout_ticks_by_side": {
+      "ask": null,
+      "bid": null
+    },
+    "realized_spread_ticks": 1.0
+  },
+  "inventory": {
+    "end_of_session": 1,
+    "maximum_long": 1,
+    "maximum_short": 0,
+    "mean": 0.5714285714285714,
+    "mean_absolute": 0.5714285714285714,
+    "standard_deviation": 0.4948716593053935,
+    "time_near_limits_fraction": 0.0
+  },
+  "market_conditions": {
+    "average_displayed_top_depth": 2.2857142857142856,
+    "average_market_spread_ticks": 2.6666666666666665
+  },
+  "pnl": {
+    "annualized_sharpe": null,
+    "fees": 0.0,
+    "gross_pnl": 1.0,
+    "maximum_drawdown": 2.0,
+    "net_pnl": 1.0,
+    "pnl_per_fill": 1.0,
+    "pnl_per_traded_unit": 1.0,
+    "pnl_per_unit_turnover": 0.010101010101010102,
+    "realized_pnl": 0.0,
+    "rebates": 0.0,
+    "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+    "unrealized_pnl": 1.0
+  },
+  "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+  "risk": {
+    "event_count": 1,
+    "kill_switch_active": true
+  },
+  "trading_activity": {
+    "buy_volume": 1,
+    "cancel_to_fill_ratio": 0.0,
+    "cancelled_orders": 0,
+    "completed_fills": 1,
+    "fill_events": 1,
+    "fill_rate": 0.3333333333333333,
+    "maker_volume": 1,
+    "order_to_fill_ratio": 3.0,
+    "partial_fills": 0,
+    "quote_messages": 3,
+    "rejected_orders": 0,
+    "sell_volume": 0,
+    "submitted_orders": 3,
+    "taker_volume": 0,
+    "turnover": 99.0
+  }
+}

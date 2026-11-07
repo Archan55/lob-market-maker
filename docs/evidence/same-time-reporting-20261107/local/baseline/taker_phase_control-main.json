@@ -1,0 +1,2338 @@
+{
+  "status": "complete",
+  "stage": "baseline",
+  "role": "main",
+  "case": "taker_phase_control",
+  "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "source_sha256": {
+    "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+    "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+    "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+    "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+    "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+    "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+    "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+  },
+  "imported_sources": {
+    "report": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/report.py",
+    "metrics": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/metrics.py",
+    "backtest": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/backtest.py",
+    "exchange": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/exchange.py",
+    "orders": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/orders.py",
+    "scheduler": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/scheduler.py",
+    "config": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/config.py"
+  },
+  "harness_sha256": "f9ec929c99c363a6b6dfd71417b29c3bb13c30dad0c096e19018b99d15ee7577",
+  "test_sha256": "adab87cdf49969106ca8d745615000feb7779c001211014238a92aee29606915",
+  "provider_sha256": "3c65bbc24249de7ed6894f65617fc28d516e04f323ab774cf1d29dbe512d21fb",
+  "contract_sha256": "26b51977ca815629bb386333e824cd956384c1d0f15e06025f61ce995dca8685",
+  "fixtures_sha256": "01f3229ca7d5ddfeec646cbaaead2f5088360556d8c861e51a5107586acbdefc",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "integer_string_guard": 4300,
+  "witness": {
+    "case": "taker_phase_control",
+    "kind": "exchange_scheduler_control",
+    "artifact_directory": null,
+    "parquet_sha256": {},
+    "tables": {
+      "fills": [
+        {
+          "fill_id": "F000000000001",
+          "order_id": "O000000000001",
+          "client_order_id": "frozen-taker",
+          "strategy_id": "frozen-taker",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 105,
+          "liquidity_role": "taker",
+          "exchange_fill_timestamp_ns": 10,
+          "fee": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "rebate": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          }
+        }
+      ]
+    },
+    "metrics": {},
+    "diagnostics": {},
+    "summary": {},
+    "config": {
+      "instrument": {
+        "symbol": "SYNTH-ORDER",
+        "currency": "USD",
+        "tick_size": "1",
+        "lot_size": 1
+      },
+      "data": {
+        "input_path": null,
+        "validation_mode": "strict",
+        "book_depth": 5,
+        "provenance": {
+          "source_type": "synthetic",
+          "provider": "lobmm hand-constructed ordering witness",
+          "venue": "SIMULATED",
+          "symbol": "SYNTH-ORDER",
+          "dataset_id": "lobmm-same-time-reporting-v1",
+          "session_start": null,
+          "session_end": null,
+          "checksum_sha256": null,
+          "license_notes": "Owned fictional mechanics inputs, not historical market data."
+        }
+      },
+      "synthetic": {
+        "event_count": 10,
+        "start_timestamp_ns": 0,
+        "interval_ns": 1000000,
+        "start_price_ticks": 10000,
+        "levels": 5,
+        "base_quantity": 100,
+        "regime_length": 250,
+        "reset_interval": 400
+      },
+      "latency": {
+        "market_data_ns": 1,
+        "order_entry_ns": 1,
+        "cancellation_ns": 1,
+        "fill_report_ns": 1,
+        "market_data_jitter_ns": 0,
+        "order_entry_jitter_ns": 0,
+        "cancellation_jitter_ns": 0,
+        "fill_report_jitter_ns": 0
+      },
+      "exchange": {
+        "validation_mode": "strict",
+        "rest_unfilled_marketable_quantity": true,
+        "cancel_orders_on_reset": true
+      },
+      "queue_model": {
+        "cancellation_allocation": "back_of_queue",
+        "price_through_fills": true
+      },
+      "fees": {
+        "maker_fee_per_unit": "0",
+        "maker_rebate_per_unit": "0",
+        "taker_fee_per_unit": "0",
+        "proportional_fee_rate": "0"
+      },
+      "strategy": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 1,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 1000,
+        "minimum_quote_lifetime_ns": 1000,
+        "stale_after_ns": 1000000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "risk": {
+        "max_abs_inventory": 10,
+        "max_order_size": 1,
+        "max_total_open_quantity": 10,
+        "max_open_orders": 10,
+        "max_loss": "1000",
+        "max_drawdown": "1000",
+        "max_quote_age_ns": 1000000000,
+        "minimum_spread_ticks": 1,
+        "max_volatility_ticks": null,
+        "max_messages_per_second": null,
+        "prohibit_new_quotes_last_ns": 0
+      },
+      "backtest": {
+        "warmup_events": 0,
+        "start_timestamp_ns": null,
+        "end_timestamp_ns": null,
+        "event_limit": null,
+        "timer_interval_ns": 1000,
+        "mark_price": "midpoint",
+        "session_end_policy": "mark",
+        "track_memory": false
+      },
+      "metrics": {
+        "markout_horizons_ns": [
+          100000000,
+          1000000000,
+          5000000000
+        ],
+        "near_limit_fraction": 0.8
+      },
+      "output": {
+        "runs_directory": "runs",
+        "write_plots": false
+      },
+      "random_seed": 7
+    },
+    "config_sha256": "ac79676ba5304b91b1b9a24912bde7e0b3df7328fd2c8ab9becb6293b20c7f1d",
+    "event_stream_sha256": "823f103818e85be9bcf483eaf42dbcaf5b9615a38173a2e997d3aee1487e8c64",
+    "source_identities": {
+      "config": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/config.py",
+        "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      },
+      "enums": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/enums.py",
+        "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+      },
+      "events": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/events.py",
+        "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+      },
+      "exchange": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/exchange.py",
+        "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+      },
+      "orders": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/orders.py",
+        "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+      },
+      "scheduler": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/scheduler.py",
+        "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+      },
+      "backtest": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/backtest.py",
+        "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+      },
+      "risk": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/risk.py",
+        "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+      },
+      "metrics": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/metrics.py",
+        "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+      },
+      "report": {
+        "path": "/tmp/lob-same-time-reporting-4adua0l8/main/src/lobmm/report.py",
+        "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+      }
+    },
+    "fixtures_sha256": "01f3229ca7d5ddfeec646cbaaead2f5088360556d8c861e51a5107586acbdefc",
+    "contract_sha256": "26b51977ca815629bb386333e824cd956384c1d0f15e06025f61ce995dca8685",
+    "dictionary_book_oracle": [
+      {
+        "event": [
+          0,
+          1,
+          "ADD",
+          1,
+          99,
+          1
+        ],
+        "pre": {
+          "best_bid_ticks": null,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [],
+          "asks": []
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": []
+        }
+      },
+      {
+        "event": [
+          0,
+          2,
+          "ADD",
+          -1,
+          101,
+          1
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": []
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "event": [
+          0,
+          3,
+          "ADD",
+          -1,
+          105,
+          2
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "event": [
+          5,
+          4,
+          "ADD",
+          1,
+          99,
+          2
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "event": [
+          10,
+          5,
+          "TRADE",
+          1,
+          99,
+          2
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "event": [
+          10,
+          6,
+          "CANCEL",
+          -1,
+          101,
+          1
+        ],
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 105,
+          "midpoint_ticks": 102.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              105,
+              2
+            ]
+          ]
+        }
+      }
+    ],
+    "hand_queue_oracle": {
+      "ahead": 1,
+      "own": 1,
+      "external_behind_added": 2,
+      "trade_budget": 2,
+      "expected_maker_quantity": 1
+    },
+    "scheduler": [
+      {
+        "key": [
+          0,
+          0,
+          10,
+          1,
+          0
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 1
+        }
+      },
+      {
+        "key": [
+          0,
+          0,
+          10,
+          2,
+          1
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 0,
+          "sequence_number": 2,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1
+        }
+      },
+      {
+        "key": [
+          0,
+          0,
+          10,
+          3,
+          2
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 105,
+          "quantity": 2
+        }
+      },
+      {
+        "key": [
+          5,
+          0,
+          10,
+          4,
+          3
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 5,
+          "sequence_number": 4,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        }
+      },
+      {
+        "key": [
+          10,
+          0,
+          10,
+          5,
+          4
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 10,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        }
+      },
+      {
+        "key": [
+          10,
+          0,
+          10,
+          6,
+          5
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "MarketEvent",
+        "payload": {
+          "timestamp_ns": 10,
+          "sequence_number": 6,
+          "event_type": "CANCEL",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1
+        }
+      },
+      {
+        "key": [
+          10,
+          0,
+          20,
+          0,
+          6
+        ],
+        "parent_schedule_id": null,
+        "payload_type": "NewOrderRequest",
+        "payload": {
+          "client_order_id": "frozen-taker",
+          "side": 1,
+          "price_ticks": 105,
+          "quantity": 1,
+          "strategy_id": "frozen-taker",
+          "decision_timestamp_ns": 10,
+          "send_timestamp_ns": 10,
+          "post_only": false,
+          "rest_unfilled": false,
+          "expire_timestamp_ns": null
+        }
+      }
+    ],
+    "exchange": [
+      {
+        "kind": "market",
+        "scheduler_key": [
+          0,
+          0,
+          10,
+          1,
+          0
+        ],
+        "event": {
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 1
+        },
+        "pre": {
+          "best_bid_ticks": null,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [],
+          "asks": []
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": []
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          0,
+          0,
+          10,
+          2,
+          1
+        ],
+        "event": {
+          "timestamp_ns": 0,
+          "sequence_number": 2,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": null,
+          "midpoint_ticks": null,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": []
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          0,
+          0,
+          10,
+          3,
+          2
+        ],
+        "event": {
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 105,
+          "quantity": 2
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          5,
+          0,
+          10,
+          4,
+          3
+        ],
+        "event": {
+          "timestamp_ns": 5,
+          "sequence_number": 4,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          10,
+          0,
+          10,
+          5,
+          4
+        ],
+        "event": {
+          "timestamp_ns": 10,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 2
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              3
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "market",
+        "scheduler_key": [
+          10,
+          0,
+          10,
+          6,
+          5
+        ],
+        "event": {
+          "timestamp_ns": 10,
+          "sequence_number": 6,
+          "event_type": "CANCEL",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1
+        },
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 101,
+          "midpoint_ticks": 100.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              101,
+              1
+            ],
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 105,
+          "midpoint_ticks": 102.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "fills": [],
+        "reports": []
+      },
+      {
+        "kind": "command",
+        "scheduler_key": [
+          10,
+          0,
+          20,
+          0,
+          6
+        ],
+        "command": {
+          "client_order_id": "frozen-taker",
+          "side": 1,
+          "price_ticks": 105,
+          "quantity": 1,
+          "strategy_id": "frozen-taker",
+          "decision_timestamp_ns": 10,
+          "send_timestamp_ns": 10,
+          "post_only": false,
+          "rest_unfilled": false,
+          "expire_timestamp_ns": null
+        },
+        "arrival_timestamp_ns": 10,
+        "pre": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 105,
+          "midpoint_ticks": 102.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              105,
+              2
+            ]
+          ]
+        },
+        "post": {
+          "best_bid_ticks": 99,
+          "best_ask_ticks": 105,
+          "midpoint_ticks": 102.0,
+          "bids": [
+            [
+              99,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              105,
+              1
+            ]
+          ]
+        },
+        "fills": [
+          {
+            "fill_id": "F000000000001",
+            "order_id": "O000000000001",
+            "client_order_id": "frozen-taker",
+            "strategy_id": "frozen-taker",
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 105,
+            "liquidity_role": "taker",
+            "exchange_fill_timestamp_ns": 10,
+            "fee": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "rebate": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            }
+          }
+        ],
+        "reports": [
+          {
+            "report_id": "R000000000001",
+            "report_type": "accepted",
+            "exchange_timestamp_ns": 10,
+            "order_id": "O000000000001",
+            "client_order_id": "frozen-taker",
+            "order_status": "live",
+            "remaining_quantity": 1,
+            "fill": null,
+            "reason": null
+          },
+          {
+            "report_id": "R000000000002",
+            "report_type": "fill",
+            "exchange_timestamp_ns": 10,
+            "order_id": "O000000000001",
+            "client_order_id": "frozen-taker",
+            "order_status": "filled",
+            "remaining_quantity": 0,
+            "fill": {
+              "fill_id": "F000000000001",
+              "order_id": "O000000000001",
+              "client_order_id": "frozen-taker",
+              "strategy_id": "frozen-taker",
+              "side": 1,
+              "quantity": 1,
+              "price_ticks": 105,
+              "liquidity_role": "taker",
+              "exchange_fill_timestamp_ns": 10,
+              "fee": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              },
+              "rebate": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              }
+            },
+            "reason": null
+          }
+        ]
+      }
+    ],
+    "risk": [],
+    "physical_checks": {
+      "external_book_matches_dictionary_oracle": true,
+      "one_taker_105_quantity1": true,
+      "entry_and_post_midpoint102": true,
+      "command_phase_after_all_same_time_market": true
+    },
+    "physical_observations": {
+      "entry_book": {
+        "best_bid_ticks": 99,
+        "best_ask_ticks": 105,
+        "midpoint_ticks": 102.0,
+        "bids": [
+          [
+            99,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            105,
+            2
+          ]
+        ]
+      },
+      "post_book": {
+        "best_bid_ticks": 99,
+        "best_ask_ticks": 105,
+        "midpoint_ticks": 102.0,
+        "bids": [
+          [
+            99,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            105,
+            1
+          ]
+        ]
+      },
+      "fills": [
+        {
+          "fill_id": "F000000000001",
+          "order_id": "O000000000001",
+          "client_order_id": "frozen-taker",
+          "strategy_id": "frozen-taker",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 105,
+          "liquidity_role": "taker",
+          "exchange_fill_timestamp_ns": 10,
+          "fee": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "rebate": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          }
+        }
+      ]
+    },
+    "canonical_effect": {
+      "case": "taker_phase_control",
+      "config": {
+        "instrument": {
+          "symbol": "SYNTH-ORDER",
+          "currency": "USD",
+          "tick_size": "1",
+          "lot_size": 1
+        },
+        "data": {
+          "input_path": null,
+          "validation_mode": "strict",
+          "book_depth": 5,
+          "provenance": {
+            "source_type": "synthetic",
+            "provider": "lobmm hand-constructed ordering witness",
+            "venue": "SIMULATED",
+            "symbol": "SYNTH-ORDER",
+            "dataset_id": "lobmm-same-time-reporting-v1",
+            "session_start": null,
+            "session_end": null,
+            "checksum_sha256": null,
+            "license_notes": "Owned fictional mechanics inputs, not historical market data."
+          }
+        },
+        "synthetic": {
+          "event_count": 10,
+          "start_timestamp_ns": 0,
+          "interval_ns": 1000000,
+          "start_price_ticks": 10000,
+          "levels": 5,
+          "base_quantity": 100,
+          "regime_length": 250,
+          "reset_interval": 400
+        },
+        "latency": {
+          "market_data_ns": 1,
+          "order_entry_ns": 1,
+          "cancellation_ns": 1,
+          "fill_report_ns": 1,
+          "market_data_jitter_ns": 0,
+          "order_entry_jitter_ns": 0,
+          "cancellation_jitter_ns": 0,
+          "fill_report_jitter_ns": 0
+        },
+        "exchange": {
+          "validation_mode": "strict",
+          "rest_unfilled_marketable_quantity": true,
+          "cancel_orders_on_reset": true
+        },
+        "queue_model": {
+          "cancellation_allocation": "back_of_queue",
+          "price_through_fills": true
+        },
+        "fees": {
+          "maker_fee_per_unit": "0",
+          "maker_rebate_per_unit": "0",
+          "taker_fee_per_unit": "0",
+          "proportional_fee_rate": "0"
+        },
+        "strategy": {
+          "name": "fixed_spread",
+          "strategy_id": "market-maker",
+          "order_size": 1,
+          "base_half_spread_ticks": {
+            "binary64": "3ff0000000000000"
+          },
+          "minimum_half_spread_ticks": {
+            "binary64": "3ff0000000000000"
+          },
+          "inventory_penalty_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance_coefficient_ticks": {
+            "binary64": "3ff0000000000000"
+          },
+          "volatility_multiplier": {
+            "binary64": "3ff0000000000000"
+          },
+          "volatility_window": 50,
+          "refresh_interval_ns": 1000,
+          "minimum_quote_lifetime_ns": 1000,
+          "stale_after_ns": 1000000000,
+          "price_change_threshold_ticks": 1,
+          "quantity_change_threshold": 1,
+          "rejection_cooldown_ns": 50000000,
+          "rejection_backoff_multiplier": {
+            "binary64": "4000000000000000"
+          },
+          "rejection_max_cooldown_ns": 1000000000,
+          "message_rate_cooldown_ns": 1000000000,
+          "post_only": true
+        },
+        "risk": {
+          "max_abs_inventory": 10,
+          "max_order_size": 1,
+          "max_total_open_quantity": 10,
+          "max_open_orders": 10,
+          "max_loss": "1000",
+          "max_drawdown": "1000",
+          "max_quote_age_ns": 1000000000,
+          "minimum_spread_ticks": 1,
+          "max_volatility_ticks": null,
+          "max_messages_per_second": null,
+          "prohibit_new_quotes_last_ns": 0
+        },
+        "backtest": {
+          "warmup_events": 0,
+          "start_timestamp_ns": null,
+          "end_timestamp_ns": null,
+          "event_limit": null,
+          "timer_interval_ns": 1000,
+          "mark_price": "midpoint",
+          "session_end_policy": "mark",
+          "track_memory": false
+        },
+        "metrics": {
+          "markout_horizons_ns": [
+            100000000,
+            1000000000,
+            5000000000
+          ],
+          "near_limit_fraction": {
+            "binary64": "3fe999999999999a"
+          }
+        },
+        "output": {
+          "runs_directory": "runs",
+          "write_plots": false
+        },
+        "random_seed": 7
+      },
+      "events": [
+        [
+          0,
+          1,
+          "ADD",
+          1,
+          99,
+          1
+        ],
+        [
+          0,
+          2,
+          "ADD",
+          -1,
+          101,
+          1
+        ],
+        [
+          0,
+          3,
+          "ADD",
+          -1,
+          105,
+          2
+        ],
+        [
+          5,
+          4,
+          "ADD",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          5,
+          "TRADE",
+          1,
+          99,
+          2
+        ],
+        [
+          10,
+          6,
+          "CANCEL",
+          -1,
+          101,
+          1
+        ]
+      ],
+      "tables": {
+        "fills": [
+          {
+            "fill_id": "F000000000001",
+            "order_id": "O000000000001",
+            "client_order_id": "frozen-taker",
+            "strategy_id": "frozen-taker",
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 105,
+            "liquidity_role": "taker",
+            "exchange_fill_timestamp_ns": 10,
+            "fee": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "rebate": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "metrics": {},
+      "diagnostics": {},
+      "summary": {},
+      "scheduler": [
+        {
+          "key": [
+            0,
+            0,
+            10,
+            1,
+            0
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 1,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 1
+          }
+        },
+        {
+          "key": [
+            0,
+            0,
+            10,
+            2,
+            1
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 2,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1
+          }
+        },
+        {
+          "key": [
+            0,
+            0,
+            10,
+            3,
+            2
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 0,
+            "sequence_number": 3,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 105,
+            "quantity": 2
+          }
+        },
+        {
+          "key": [
+            5,
+            0,
+            10,
+            4,
+            3
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 5,
+            "sequence_number": 4,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          }
+        },
+        {
+          "key": [
+            10,
+            0,
+            10,
+            5,
+            4
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 10,
+            "sequence_number": 5,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          }
+        },
+        {
+          "key": [
+            10,
+            0,
+            10,
+            6,
+            5
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "MarketEvent",
+          "payload": {
+            "timestamp_ns": 10,
+            "sequence_number": 6,
+            "event_type": "CANCEL",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1
+          }
+        },
+        {
+          "key": [
+            10,
+            0,
+            20,
+            0,
+            6
+          ],
+          "parent_schedule_id": null,
+          "payload_type": "NewOrderRequest",
+          "payload": {
+            "client_order_id": "frozen-taker",
+            "side": 1,
+            "price_ticks": 105,
+            "quantity": 1,
+            "strategy_id": "frozen-taker",
+            "decision_timestamp_ns": 10,
+            "send_timestamp_ns": 10,
+            "post_only": false,
+            "rest_unfilled": false,
+            "expire_timestamp_ns": null
+          }
+        }
+      ],
+      "exchange": [
+        {
+          "kind": "market",
+          "scheduler_key": [
+            0,
+            0,
+            10,
+            1,
+            0
+          ],
+          "event": {
+            "timestamp_ns": 0,
+            "sequence_number": 1,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 1
+          },
+          "pre": {
+            "best_bid_ticks": null,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [],
+            "asks": []
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": []
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            0,
+            0,
+            10,
+            2,
+            1
+          ],
+          "event": {
+            "timestamp_ns": 0,
+            "sequence_number": 2,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": []
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            0,
+            0,
+            10,
+            3,
+            2
+          ],
+          "event": {
+            "timestamp_ns": 0,
+            "sequence_number": 3,
+            "event_type": "ADD",
+            "side": -1,
+            "price_ticks": 105,
+            "quantity": 2
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            5,
+            0,
+            10,
+            4,
+            3
+          ],
+          "event": {
+            "timestamp_ns": 5,
+            "sequence_number": 4,
+            "event_type": "ADD",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                3
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            10,
+            0,
+            10,
+            5,
+            4
+          ],
+          "event": {
+            "timestamp_ns": 10,
+            "sequence_number": 5,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 99,
+            "quantity": 2
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                3
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "market",
+          "scheduler_key": [
+            10,
+            0,
+            10,
+            6,
+            5
+          ],
+          "event": {
+            "timestamp_ns": 10,
+            "sequence_number": 6,
+            "event_type": "CANCEL",
+            "side": -1,
+            "price_ticks": 101,
+            "quantity": 1
+          },
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 105,
+            "midpoint_ticks": {
+              "binary64": "4059800000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "fills": [],
+          "reports": []
+        },
+        {
+          "kind": "command",
+          "scheduler_key": [
+            10,
+            0,
+            20,
+            0,
+            6
+          ],
+          "command": {
+            "client_order_id": "frozen-taker",
+            "side": 1,
+            "price_ticks": 105,
+            "quantity": 1,
+            "strategy_id": "frozen-taker",
+            "decision_timestamp_ns": 10,
+            "send_timestamp_ns": 10,
+            "post_only": false,
+            "rest_unfilled": false,
+            "expire_timestamp_ns": null
+          },
+          "arrival_timestamp_ns": 10,
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 105,
+            "midpoint_ticks": {
+              "binary64": "4059800000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 105,
+            "midpoint_ticks": {
+              "binary64": "4059800000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                105,
+                1
+              ]
+            ]
+          },
+          "fills": [
+            {
+              "fill_id": "F000000000001",
+              "order_id": "O000000000001",
+              "client_order_id": "frozen-taker",
+              "strategy_id": "frozen-taker",
+              "side": 1,
+              "quantity": 1,
+              "price_ticks": 105,
+              "liquidity_role": "taker",
+              "exchange_fill_timestamp_ns": 10,
+              "fee": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              },
+              "rebate": {
+                "decimal": [
+                  0,
+                  [
+                    0
+                  ],
+                  0
+                ]
+              }
+            }
+          ],
+          "reports": [
+            {
+              "report_id": "R000000000001",
+              "report_type": "accepted",
+              "exchange_timestamp_ns": 10,
+              "order_id": "O000000000001",
+              "client_order_id": "frozen-taker",
+              "order_status": "live",
+              "remaining_quantity": 1,
+              "fill": null,
+              "reason": null
+            },
+            {
+              "report_id": "R000000000002",
+              "report_type": "fill",
+              "exchange_timestamp_ns": 10,
+              "order_id": "O000000000001",
+              "client_order_id": "frozen-taker",
+              "order_status": "filled",
+              "remaining_quantity": 0,
+              "fill": {
+                "fill_id": "F000000000001",
+                "order_id": "O000000000001",
+                "client_order_id": "frozen-taker",
+                "strategy_id": "frozen-taker",
+                "side": 1,
+                "quantity": 1,
+                "price_ticks": 105,
+                "liquidity_role": "taker",
+                "exchange_fill_timestamp_ns": 10,
+                "fee": {
+                  "decimal": [
+                    0,
+                    [
+                      0
+                    ],
+                    0
+                  ]
+                },
+                "rebate": {
+                  "decimal": [
+                    0,
+                    [
+                      0
+                    ],
+                    0
+                  ]
+                }
+              },
+              "reason": null
+            }
+          ]
+        }
+      ],
+      "risk": [],
+      "dictionary_book_oracle": [
+        {
+          "event": [
+            0,
+            1,
+            "ADD",
+            1,
+            99,
+            1
+          ],
+          "pre": {
+            "best_bid_ticks": null,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [],
+            "asks": []
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": []
+          }
+        },
+        {
+          "event": [
+            0,
+            2,
+            "ADD",
+            -1,
+            101,
+            1
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": null,
+            "midpoint_ticks": null,
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": []
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "event": [
+            0,
+            3,
+            "ADD",
+            -1,
+            105,
+            2
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "event": [
+            5,
+            4,
+            "ADD",
+            1,
+            99,
+            2
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                3
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "event": [
+            10,
+            5,
+            "TRADE",
+            1,
+            99,
+            2
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                3
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "event": [
+            10,
+            6,
+            "CANCEL",
+            -1,
+            101,
+            1
+          ],
+          "pre": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 101,
+            "midpoint_ticks": {
+              "binary64": "4059000000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                101,
+                1
+              ],
+              [
+                105,
+                2
+              ]
+            ]
+          },
+          "post": {
+            "best_bid_ticks": 99,
+            "best_ask_ticks": 105,
+            "midpoint_ticks": {
+              "binary64": "4059800000000000"
+            },
+            "bids": [
+              [
+                99,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                105,
+                2
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "canonical_effect_sha256": "f7a35590732ee90774db6171507b2bc2c86a1bcf3d66ece3707ec42f8d9f6c8c"
+  },
+  "raw_study_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/baseline/taker_phase_control-main/raw-study.json",
+  "raw_study_sha256": "3ef8670162f64a4d167be7b8d9012f73738cea157b9fb96aa6188ded11f88ca5"
+}

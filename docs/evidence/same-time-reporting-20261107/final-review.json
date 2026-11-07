@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-07",
+  "source_and_artifact_review": "GO",
+  "reviewers": {
+    "independent_feasibility": {
+      "scope": "Frozen design, production source, frozen tests/observer/runner, actual main/candidate numerical evidence and final report/CI without reruns.",
+      "source": "ae12338686ae6553b0f1306691705653bb375c96",
+      "finding": "GO. Default-off integer flag used only in drawdown; stable key sorts; filters, execution sources and market as-of semantics unchanged. Actual baseline 3 fail/4 pass, candidate 7 pass; identical same-case effects. One final report wording correction: regression automation enforces any baseline failures, not exact three IDs; wording corrected, no harness change."
+    },
+    "data_execution_audit": {
+      "scope": "Independent rehash and decoding of actual controlled and retained raw artifacts; no reruns or edits.",
+      "finding": "GO. All 48 Parquets checked; all eight table pairs identical in each of three full cases; four canonical/raw scheduler/Exchange/book/risk effects equal. Every candidate drawdown point and regime bar matches scalar oracle; primary plot max 0 to 2, regime totals 3 to 1. Twenty actual PNGs checked; 24 original retained inputs match frozen Nov5 manifest. Complete 315/20772 row curves and regime dictionaries and PNG bytes identical across sources."
+    }
+  },
+  "limitations": [
+    "Local verdicts do not imply remote publication or CI success.",
+    "Exact baseline failure IDs require manual CI result/log verification.",
+    "Retained stage not run in CI; no independent workflow artifact ZIP byte audit.",
+    "Synthetic mechanics only; no economic advantage or calibrated fills."
+  ],
+  "repairs_used": 0,
+  "curation": "Original raw workspace files unchanged. Executed import-audit plugin bytes copied as .py.txt solely to preserve verbatim evidence without treating archived scripts as new runnable project code. Raw original names and hashes remain in workspace-manifest."
+}

@@ -1,0 +1,33 @@
+F...FF.                                                                  [100%]
+=================================== FAILURES ===================================
+_ test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[descending_tie] _
+tests/unit/test_same_time_report_order_independent.py:268: in test_frozen_drawdown_artist_keeps_audit_order_and_relative_time
+    _assert_drawdown_capture(captured, oracle)
+tests/unit/test_same_time_report_order_independent.py:251: in _assert_drawdown_capture
+    assert lines[0]["y"] == oracle["y"]
+E   assert [0.0, 0.0, 0.0, 0.0] == [0.0, 0.0, 1.0, 0.0]
+E     
+E     At index 2 diff: 0.0 != 1.0
+E     Use -v to get more diff
+_ test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[epoch_distinct] _
+tests/unit/test_same_time_report_order_independent.py:268: in test_frozen_drawdown_artist_keeps_audit_order_and_relative_time
+    _assert_drawdown_capture(captured, oracle)
+tests/unit/test_same_time_report_order_independent.py:250: in _assert_drawdown_capture
+    assert lines[0]["x"] == oracle["x"]
+E   assert [0.0, 0.0, 0.0, 0.0] == [0.0, 1e-09, 2e-09, 3e-09]
+E     
+E     At index 1 diff: 0.0 != 1e-09
+E     Use -v to get more diff
+___________ test_frozen_regime_increments_preserve_tied_audit_order ____________
+tests/unit/test_same_time_report_order_independent.py:287: in test_frozen_regime_increments_preserve_tied_audit_order
+    assert actual == expected
+E   AssertionError: assert {'spread_regi...nitial': 0.0}} == {'spread_regi...nitial': 0.0}}
+E     
+E     Differing items:
+E     {'spread_regime': {'A': 2.0, 'B': 0.0, 'initial': 0.0}} != {'spread_regime': {'A': 1.0, 'B': 1.0, 'initial': 0.0}}
+E     Use -v to get more diff
+=========================== short test summary info ============================
+FAILED tests/unit/test_same_time_report_order_independent.py::test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[descending_tie]
+FAILED tests/unit/test_same_time_report_order_independent.py::test_frozen_drawdown_artist_keeps_audit_order_and_relative_time[epoch_distinct]
+FAILED tests/unit/test_same_time_report_order_independent.py::test_frozen_regime_increments_preserve_tied_audit_order
+3 failed, 4 passed in 2.79s

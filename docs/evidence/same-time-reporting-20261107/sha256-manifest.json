@@ -1,0 +1,601 @@
+{
+  "scope": "Final committed source, frozen inputs, documentation and curated local synthetic evidence; manifest excludes itself. Original cloud raw files separately pinned by workspace-manifest.",
+  "files": {
+    ".github/workflows/ci.yml": {
+      "bytes": 2894,
+      "sha256": "255270a82f6f0b291d2fbf914339c710e2461a41ddd8d994c5487de7d75ba483"
+    },
+    "docs/SAME_TIME_REPORTING.md": {
+      "bytes": 13535,
+      "sha256": "9be0001cc4ff42bf4ee116c61625f5e73b13bd553b883e7e851e4ef8774cd8ab"
+    },
+    "docs/evidence/same-time-reporting-20261107/contract.json": {
+      "bytes": 8364,
+      "sha256": "26b51977ca815629bb386333e824cd956384c1d0f15e06025f61ce995dca8685"
+    },
+    "docs/evidence/same-time-reporting-20261107/data-feasibility.json": {
+      "bytes": 984,
+      "sha256": "439bd4341f41f9e123dae3a1801dc6fab943a340f62f3af6063d63f0d4eedf2b"
+    },
+    "docs/evidence/same-time-reporting-20261107/design-review.json": {
+      "bytes": 983,
+      "sha256": "9d8e713449df35a55ada6759b707b857b10585fe3227711e2e81f7b6c95f1a9a"
+    },
+    "docs/evidence/same-time-reporting-20261107/final-review.json": {
+      "bytes": 1972,
+      "sha256": "d79fd52b7c9988326e77ced025d75a386784ec5d755f1a882bb1b9ee4e8a25be"
+    },
+    "docs/evidence/same-time-reporting-20261107/fixtures.json": {
+      "bytes": 6573,
+      "sha256": "01f3229ca7d5ddfeec646cbaaead2f5088360556d8c861e51a5107586acbdefc"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/contract.json": {
+      "bytes": 8364,
+      "sha256": "26b51977ca815629bb386333e824cd956384c1d0f15e06025f61ce995dca8685"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/diagnostics.json": {
+      "bytes": 1866,
+      "sha256": "abc8dd7c3eaeb82fbb6bfb22083a419368622c0057f9ed6e5d1f3ed7a18bd384"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/fills.parquet": {
+      "bytes": 6544,
+      "sha256": "0f30322b0eae9d7b9275cf9c017788c680e523775bcdf35b3f750662df7a7000"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/inventory.parquet": {
+      "bytes": 1767,
+      "sha256": "90ca292ba9f35939f6c02f3580004ee1dc9b8c8b74bb45cf193456482c9809fa"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/market.parquet": {
+      "bytes": 6588,
+      "sha256": "1ba450de03109cc1db91c9a8d9a7b13a84cf60d0fccea05fd96072ce89b32d2b"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/markouts.parquet": {
+      "bytes": 4496,
+      "sha256": "159780e1a84ddf47eaee5a80cbd8967d650fddb7cbb2b86585b067bdec70451e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/metrics.json": {
+      "bytes": 2243,
+      "sha256": "63209253e24788c793d255e60481d9ce576262f784f7bf7a00c94ef3d55b8b92"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/orders.parquet": {
+      "bytes": 8196,
+      "sha256": "6a26d697a9175d5bc5930a052eedb697894b6d39d5f6acd596a73f55b23293dc"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/pnl.parquet": {
+      "bytes": 9027,
+      "sha256": "79623d89a61109dfef00e502c2d0b8192088fdb8c91b2a1d38b2d620b6c01a3e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/quotes.parquet": {
+      "bytes": 3598,
+      "sha256": "1c2d8ee7e4f55d5fbf5af79c34d15dade33ec2b80f60cf3ffa8356c884b7654b"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/risk_events.parquet": {
+      "bytes": 2477,
+      "sha256": "69df96b77824acd2e67aaa84bbc56c7f2728a9a1318af2707c73fb91150944ca"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/run_config.yaml": {
+      "bytes": 2414,
+      "sha256": "c1dca24f9eab7a728d4fea5153a81b107c3eca0c968efcf7e7c605640e3b0f3b"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/drawdown_order/summary.json": {
+      "bytes": 843,
+      "sha256": "5fbd8d5356cae0ed0a4d4ea32e504c9060f58c1f9b95f42443510b28e8130d6c"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/plots/drawdown.png": {
+      "bytes": 25816,
+      "sha256": "f6ce6d0b77543b10d128c2977141c1d27b3a201b291d4b1af6585019d60f88c1"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/plots/regimes.png": {
+      "bytes": 56895,
+      "sha256": "66e0def717a20e7c89d841b5cc48555aa53179452f37e2589e0b822ed6ef4563"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/raw-study.json": {
+      "bytes": 177401,
+      "sha256": "8f2325e4d49376e196a1a09758c9ea183d2c71a39dd533408ae9bbb0047a94c5"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main/witness.json": {
+      "bytes": 177401,
+      "sha256": "8f2325e4d49376e196a1a09758c9ea183d2c71a39dd533408ae9bbb0047a94c5"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main.json": {
+      "bytes": 199635,
+      "sha256": "061368ef009e5d58ce403afa0a572aef4c5d574e63e647c18141fd1df4d8f28f"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/drawdown_order-main.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/environment.json": {
+      "bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/fixtures.json": {
+      "bytes": 6573,
+      "sha256": "01f3229ca7d5ddfeec646cbaaead2f5088360556d8c861e51a5107586acbdefc"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/diagnostics.json": {
+      "bytes": 1868,
+      "sha256": "ce624d279f5f64d5db582da470de224b48e68b39bda2ab28aeec1035db72183f"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/fills.parquet": {
+      "bytes": 6544,
+      "sha256": "0f30322b0eae9d7b9275cf9c017788c680e523775bcdf35b3f750662df7a7000"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/inventory.parquet": {
+      "bytes": 1763,
+      "sha256": "da49f919c636baaa03cc0265c7ccf5f0b403c30df9abc63bf7bbd2223f61a76a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/market.parquet": {
+      "bytes": 6575,
+      "sha256": "bfc0e43570bd6f9592398e8a567a947a2c2568dfb14c11640f419931fb871797"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/markouts.parquet": {
+      "bytes": 4496,
+      "sha256": "159780e1a84ddf47eaee5a80cbd8967d650fddb7cbb2b86585b067bdec70451e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/metrics.json": {
+      "bytes": 2170,
+      "sha256": "1054dbe169776ddc8a80c5adc5234fe9cdb53e235f84b5dab13391e8788625a1"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/orders.parquet": {
+      "bytes": 8109,
+      "sha256": "a14a49afce8c5a58dcc799e9eedfebaef55114253f3f874ed7f27b6bfca60caa"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/pnl.parquet": {
+      "bytes": 9001,
+      "sha256": "df91624d7ce5e8a25129f85f2b98728a96e14714ff73bdf4f33b01a387e99c08"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/quotes.parquet": {
+      "bytes": 3575,
+      "sha256": "d9a3b47ef27b2b378d404759965fd2bf8bea3031e999f9a08c7439e5df2e6651"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/risk_events.parquet": {
+      "bytes": 506,
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/run_config.yaml": {
+      "bytes": 2415,
+      "sha256": "2d6ff786ad1d23559417b29aab9ab38e70c0972eda776767a22da02624a2878a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/maker_late_tail/summary.json": {
+      "bytes": 844,
+      "sha256": "9d5eef763c9794d01a8f9842d24646f90b646da17fed78157271fe3f3eaf4a09"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/plots/drawdown.png": {
+      "bytes": 23631,
+      "sha256": "25e81f1575631aee876a97bb2a2e72dda00cd688bbdd4b4128f9f223988f978d"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/plots/regimes.png": {
+      "bytes": 41991,
+      "sha256": "4d94e1a43e5e781aa967e6ccc32f172578f8b3b62713afee8d90872db7369b9a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/raw-study.json": {
+      "bytes": 137100,
+      "sha256": "ec9ef5fd2bc8f7cf56445c1a10e4a08f798c9f133d8e8545966d9d8d3e699a21"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main/witness.json": {
+      "bytes": 137100,
+      "sha256": "ec9ef5fd2bc8f7cf56445c1a10e4a08f798c9f133d8e8545966d9d8d3e699a21"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main.json": {
+      "bytes": 155852,
+      "sha256": "5aa8c6d2cb47ca99aa8eb8e11abeef10d43403dd32dd7a821e135cf215bb588d"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_late_tail-main.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/diagnostics.json": {
+      "bytes": 1869,
+      "sha256": "34f0254eeacf76a744f3b668449c135319f3973c1d90883f81b216de77b19b37"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/fills.parquet": {
+      "bytes": 6544,
+      "sha256": "0f30322b0eae9d7b9275cf9c017788c680e523775bcdf35b3f750662df7a7000"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/inventory.parquet": {
+      "bytes": 1763,
+      "sha256": "604dbc9dd8d7ea49723426981d23d332c6eb143f2dc228aca2b98eba34247afa"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/market.parquet": {
+      "bytes": 6510,
+      "sha256": "88f5bef562ab259a39d82bbb5a864475dc47d4f7a7f1e11c5334fe942ab1abc1"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/markouts.parquet": {
+      "bytes": 4496,
+      "sha256": "159780e1a84ddf47eaee5a80cbd8967d650fddb7cbb2b86585b067bdec70451e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/metrics.json": {
+      "bytes": 2171,
+      "sha256": "e0147cb1a8f063ab82071fd02eb2061de7e3b35f1db0ca573f4fa023a10e4800"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/orders.parquet": {
+      "bytes": 8100,
+      "sha256": "50b3008023090ff66ccb9d9d1910865e7c3a7f83d512e1bf6ae46f409f0c0649"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/pnl.parquet": {
+      "bytes": 9011,
+      "sha256": "12ddaa5f88d3bbec3f67108b5802bc9d19fffc8b3563d06ac6be79a047f2ec67"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/quotes.parquet": {
+      "bytes": 3575,
+      "sha256": "d9a3b47ef27b2b378d404759965fd2bf8bea3031e999f9a08c7439e5df2e6651"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/risk_events.parquet": {
+      "bytes": 506,
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/run_config.yaml": {
+      "bytes": 2415,
+      "sha256": "2d6ff786ad1d23559417b29aab9ab38e70c0972eda776767a22da02624a2878a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/maker_prefix/summary.json": {
+      "bytes": 841,
+      "sha256": "127b812ccf1f1800a6f35ea4611ecbe6ee32ed89d3a132456125092ee3ed93cd"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/plots/drawdown.png": {
+      "bytes": 23631,
+      "sha256": "25e81f1575631aee876a97bb2a2e72dda00cd688bbdd4b4128f9f223988f978d"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/plots/regimes.png": {
+      "bytes": 38916,
+      "sha256": "db2bd40a92f3263fcea34488b7a773e1116c21db43ae3827bac05d5df45c2955"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/raw-study.json": {
+      "bytes": 125135,
+      "sha256": "cf194bd1db30bff183878061351614328d772e11d94100d0c05e5e21d760cee8"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main/witness.json": {
+      "bytes": 125135,
+      "sha256": "cf194bd1db30bff183878061351614328d772e11d94100d0c05e5e21d760cee8"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main.json": {
+      "bytes": 142282,
+      "sha256": "226e6532fdf4b04849390358b8a1056a9bf90e3f95b7bc618bb199b3e59a9a5f"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/maker_prefix-main.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/report.json": {
+      "bytes": 641760,
+      "sha256": "b4e3d0fd978e3314059ff47456ac58be3e9cf86c7b786db22dd86746dec9374d"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/secondary-summary.json": {
+      "bytes": 925,
+      "sha256": "0841a0b79f32ce4cfe0b108137593fd62101f5f2d47df65cac7e0ccf3424e080"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/taker_phase_control-main/raw-study.json": {
+      "bytes": 47098,
+      "sha256": "3ef8670162f64a4d167be7b8d9012f73738cea157b9fb96aa6188ded11f88ca5"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/taker_phase_control-main/witness.json": {
+      "bytes": 47098,
+      "sha256": "3ef8670162f64a4d167be7b8d9012f73738cea157b9fb96aa6188ded11f88ca5"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/taker_phase_control-main.json": {
+      "bytes": 53882,
+      "sha256": "c4c26eb9d0f97b2be86c2773ee056513c35f8598192e40a45f2988b87f9fccb8"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/baseline/taker_phase_control-main.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/candidate-initial/result.txt": {
+      "bytes": 98,
+      "sha256": "2fe879bc0eba6b00d42db627ee5661e57fb1a87ee5031e83258c5bb23a7fc368"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/candidate-initial/result.xml": {
+      "bytes": 1425,
+      "sha256": "71b597ee278933c2887ea2950c4ddc829aeaeab99580f6b161ffee69ee40c891"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/full-suite/import_identity.py.txt": {
+      "bytes": 576,
+      "sha256": "e0e2e123c2faf03aedb0cc6c2913d083bc32930d792beb6b09c3a59222b234bd"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/full-suite/imports.json": {
+      "bytes": 7070,
+      "sha256": "0dd70468a14285340128edd2a060c9aaa488e05f3125f7c900d792f19be07fe5"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/full-suite/result.txt": {
+      "bytes": 6812,
+      "sha256": "47c5753c10e50e1e364707e694fde00d236f2cee836f27b1d150bcf894db2e95"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/full-suite/result.xml": {
+      "bytes": 35773,
+      "sha256": "50f4e3f9345e5043910b483a65a208cf70f858b4d5c75c4fc9195092f0cf4ae6"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/contract.json": {
+      "bytes": 8364,
+      "sha256": "26b51977ca815629bb386333e824cd956384c1d0f15e06025f61ce995dca8685"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/diagnostics.json": {
+      "bytes": 1867,
+      "sha256": "7ac506c99ae71122963eee7b56be2946dadc8461eb4938964bf4356604f779c2"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/fills.parquet": {
+      "bytes": 6544,
+      "sha256": "0f30322b0eae9d7b9275cf9c017788c680e523775bcdf35b3f750662df7a7000"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/inventory.parquet": {
+      "bytes": 1767,
+      "sha256": "90ca292ba9f35939f6c02f3580004ee1dc9b8c8b74bb45cf193456482c9809fa"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/market.parquet": {
+      "bytes": 6588,
+      "sha256": "1ba450de03109cc1db91c9a8d9a7b13a84cf60d0fccea05fd96072ce89b32d2b"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/markouts.parquet": {
+      "bytes": 4496,
+      "sha256": "159780e1a84ddf47eaee5a80cbd8967d650fddb7cbb2b86585b067bdec70451e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/metrics.json": {
+      "bytes": 2244,
+      "sha256": "8b39a9ef8e4ad5b40db0271e35c06f996de62e87d175331985c38abc4f48f91a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/orders.parquet": {
+      "bytes": 8196,
+      "sha256": "6a26d697a9175d5bc5930a052eedb697894b6d39d5f6acd596a73f55b23293dc"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/pnl.parquet": {
+      "bytes": 9027,
+      "sha256": "79623d89a61109dfef00e502c2d0b8192088fdb8c91b2a1d38b2d620b6c01a3e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/quotes.parquet": {
+      "bytes": 3598,
+      "sha256": "1c2d8ee7e4f55d5fbf5af79c34d15dade33ec2b80f60cf3ffa8356c884b7654b"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/risk_events.parquet": {
+      "bytes": 2477,
+      "sha256": "69df96b77824acd2e67aaa84bbc56c7f2728a9a1318af2707c73fb91150944ca"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/run_config.yaml": {
+      "bytes": 2414,
+      "sha256": "c1dca24f9eab7a728d4fea5153a81b107c3eca0c968efcf7e7c605640e3b0f3b"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/drawdown_order/summary.json": {
+      "bytes": 843,
+      "sha256": "5fbd8d5356cae0ed0a4d4ea32e504c9060f58c1f9b95f42443510b28e8130d6c"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/plots/drawdown.png": {
+      "bytes": 30156,
+      "sha256": "58773be73ff8ac2b571a5f23e8de4987bb9db0489d834c841fe5408c7d9ad581"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/plots/regimes.png": {
+      "bytes": 40218,
+      "sha256": "9aac7e98eb63e083fdd305d7c1369e302bcd93b6aef3321aab82bbb3e5140da9"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/raw-study.json": {
+      "bytes": 177461,
+      "sha256": "730d398497fa2527f162670828f79cd7c453b09c1e2fcd516473fe11eeecfee8"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate/witness.json": {
+      "bytes": 177461,
+      "sha256": "730d398497fa2527f162670828f79cd7c453b09c1e2fcd516473fe11eeecfee8"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate.json": {
+      "bytes": 199770,
+      "sha256": "10417e74de2c3e7362b07a954480ae26d0397bda546850900b9d86a1fcefa2ff"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/drawdown_order-candidate.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/environment.json": {
+      "bytes": 2227,
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/fixtures.json": {
+      "bytes": 6573,
+      "sha256": "01f3229ca7d5ddfeec646cbaaead2f5088360556d8c861e51a5107586acbdefc"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/diagnostics.json": {
+      "bytes": 1868,
+      "sha256": "d37efcb62950ea4b7f6a5812c02aea73db3db286e0d2e56e6fd9bacdc592ea69"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/fills.parquet": {
+      "bytes": 6544,
+      "sha256": "0f30322b0eae9d7b9275cf9c017788c680e523775bcdf35b3f750662df7a7000"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/inventory.parquet": {
+      "bytes": 1763,
+      "sha256": "da49f919c636baaa03cc0265c7ccf5f0b403c30df9abc63bf7bbd2223f61a76a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/market.parquet": {
+      "bytes": 6575,
+      "sha256": "bfc0e43570bd6f9592398e8a567a947a2c2568dfb14c11640f419931fb871797"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/markouts.parquet": {
+      "bytes": 4496,
+      "sha256": "159780e1a84ddf47eaee5a80cbd8967d650fddb7cbb2b86585b067bdec70451e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/metrics.json": {
+      "bytes": 2170,
+      "sha256": "28035dc8a026c7785fc55bd28efea709e82790a4cf27da43f8baf1eacceeb03f"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/orders.parquet": {
+      "bytes": 8109,
+      "sha256": "a14a49afce8c5a58dcc799e9eedfebaef55114253f3f874ed7f27b6bfca60caa"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/pnl.parquet": {
+      "bytes": 9001,
+      "sha256": "df91624d7ce5e8a25129f85f2b98728a96e14714ff73bdf4f33b01a387e99c08"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/quotes.parquet": {
+      "bytes": 3575,
+      "sha256": "d9a3b47ef27b2b378d404759965fd2bf8bea3031e999f9a08c7439e5df2e6651"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/risk_events.parquet": {
+      "bytes": 506,
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/run_config.yaml": {
+      "bytes": 2415,
+      "sha256": "2d6ff786ad1d23559417b29aab9ab38e70c0972eda776767a22da02624a2878a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/maker_late_tail/summary.json": {
+      "bytes": 844,
+      "sha256": "9d5eef763c9794d01a8f9842d24646f90b646da17fed78157271fe3f3eaf4a09"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/plots/drawdown.png": {
+      "bytes": 23631,
+      "sha256": "25e81f1575631aee876a97bb2a2e72dda00cd688bbdd4b4128f9f223988f978d"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/plots/regimes.png": {
+      "bytes": 41991,
+      "sha256": "4d94e1a43e5e781aa967e6ccc32f172578f8b3b62713afee8d90872db7369b9a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/raw-study.json": {
+      "bytes": 137158,
+      "sha256": "5e2728d77e6f49674008115410532a73382c03aab5b2f77765e2bdada2221085"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate/witness.json": {
+      "bytes": 137158,
+      "sha256": "5e2728d77e6f49674008115410532a73382c03aab5b2f77765e2bdada2221085"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate.json": {
+      "bytes": 155987,
+      "sha256": "c35b96d2988806f28ff3620db7529f476500c62006e12d958a24cb35906e4c19"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_late_tail-candidate.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/diagnostics.json": {
+      "bytes": 1868,
+      "sha256": "3b29ff4e46dfbd751205fd3552fb5b5a4efbe27a1fb1bc2662f5b348e63eb355"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/fills.parquet": {
+      "bytes": 6544,
+      "sha256": "0f30322b0eae9d7b9275cf9c017788c680e523775bcdf35b3f750662df7a7000"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/inventory.parquet": {
+      "bytes": 1763,
+      "sha256": "604dbc9dd8d7ea49723426981d23d332c6eb143f2dc228aca2b98eba34247afa"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/market.parquet": {
+      "bytes": 6510,
+      "sha256": "88f5bef562ab259a39d82bbb5a864475dc47d4f7a7f1e11c5334fe942ab1abc1"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/markouts.parquet": {
+      "bytes": 4496,
+      "sha256": "159780e1a84ddf47eaee5a80cbd8967d650fddb7cbb2b86585b067bdec70451e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/metrics.json": {
+      "bytes": 2170,
+      "sha256": "77789aa725b2cff3b033a8cdf46de4a199ee5cb23c3ac2f16ef4380b157abd2c"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/orders.parquet": {
+      "bytes": 8100,
+      "sha256": "50b3008023090ff66ccb9d9d1910865e7c3a7f83d512e1bf6ae46f409f0c0649"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/pnl.parquet": {
+      "bytes": 9011,
+      "sha256": "12ddaa5f88d3bbec3f67108b5802bc9d19fffc8b3563d06ac6be79a047f2ec67"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/quotes.parquet": {
+      "bytes": 3575,
+      "sha256": "d9a3b47ef27b2b378d404759965fd2bf8bea3031e999f9a08c7439e5df2e6651"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/risk_events.parquet": {
+      "bytes": 506,
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/run_config.yaml": {
+      "bytes": 2415,
+      "sha256": "2d6ff786ad1d23559417b29aab9ab38e70c0972eda776767a22da02624a2878a"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/maker_prefix/summary.json": {
+      "bytes": 841,
+      "sha256": "127b812ccf1f1800a6f35ea4611ecbe6ee32ed89d3a132456125092ee3ed93cd"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/plots/drawdown.png": {
+      "bytes": 23631,
+      "sha256": "25e81f1575631aee876a97bb2a2e72dda00cd688bbdd4b4128f9f223988f978d"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/plots/regimes.png": {
+      "bytes": 38916,
+      "sha256": "db2bd40a92f3263fcea34488b7a773e1116c21db43ae3827bac05d5df45c2955"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/raw-study.json": {
+      "bytes": 125191,
+      "sha256": "15478c8792734eaf31feff4fd4e1bcaeb00274dddf8e818d33644b2a7040d592"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate/witness.json": {
+      "bytes": 125191,
+      "sha256": "15478c8792734eaf31feff4fd4e1bcaeb00274dddf8e818d33644b2a7040d592"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate.json": {
+      "bytes": 142415,
+      "sha256": "770fbaa1d9c7b2edc073ba1ffb2f646bf1526477ae830c2f1e26d31701a8fb66"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/maker_prefix-candidate.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/report.json": {
+      "bytes": 643266,
+      "sha256": "09d480a601e8fcb7185aeb0f87c46c0137f5b98cdc9d95c02784550ae1f0abae"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/taker_phase_control-candidate/raw-study.json": {
+      "bytes": 47148,
+      "sha256": "dfc3d756f05fd201055a5b51c299e7659677594b0c88ca34ae01f04f10379db6"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/taker_phase_control-candidate/witness.json": {
+      "bytes": 47148,
+      "sha256": "dfc3d756f05fd201055a5b51c299e7659677594b0c88ca34ae01f04f10379db6"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/taker_phase_control-candidate.json": {
+      "bytes": 53977,
+      "sha256": "3f886a6e8d72ffb02ebaad6c22b2171099eb2b034c5207b9b8a62a4bc44b844f"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/study-final/taker_phase_control-candidate.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/triage/import_identity.py.txt": {
+      "bytes": 426,
+      "sha256": "cb843f8c547d49f435323101fa4079b325018da6e42c7b623b81641269fe8120"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/triage/imports.json": {
+      "bytes": 157,
+      "sha256": "5ebfad217805df9907d13bd759fc8e3fc962f86a11f5219086912e3571d71caa"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/triage/prerun.json": {
+      "bytes": 900,
+      "sha256": "c48b74b2faf6ba1d2ecf982e7d790ec8b50f3ce42cda1fd45b4e51dbfdc7162f"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/triage/result.txt": {
+      "bytes": 2204,
+      "sha256": "dc5a27748cf9af8c1098633fbdda67ba685ee56ec39701caca4013abb5895bbc"
+    },
+    "docs/evidence/same-time-reporting-20261107/local/triage/result.xml": {
+      "bytes": 3342,
+      "sha256": "cb8a18ef66b1f51d07c55ea8ef0d3bbb0260d83a8351175aa5f702687c38a083"
+    },
+    "docs/evidence/same-time-reporting-20261107/retained-summary.json": {
+      "bytes": 19020,
+      "sha256": "1a83bc0bb3325cdd71f5607879982a37c0f9f441429d76b45a91f86c7c74409e"
+    },
+    "docs/evidence/same-time-reporting-20261107/workspace-manifest.json": {
+      "bytes": 38231,
+      "sha256": "719325dfd17eff3f838924545a47e4452bd18b8b193f126c6da4270d3a5f547a"
+    },
+    "src/lobmm/report.py": {
+      "bytes": 35929,
+      "sha256": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4"
+    },
+    "tests/unit/test_same_time_report_order_independent.py": {
+      "bytes": 11407,
+      "sha256": "adab87cdf49969106ca8d745615000feb7779c001211014238a92aee29606915"
+    },
+    "tools/reproduce_same_time_reporting.py": {
+      "bytes": 27103,
+      "sha256": "f9ec929c99c363a6b6dfd71417b29c3bb13c30dad0c096e19018b99d15ee7577"
+    },
+    "tools/same_time_witnesses.py": {
+      "bytes": 22747,
+      "sha256": "3c65bbc24249de7ed6894f65617fc28d516e04f323ab774cf1d29dbe512d21fb"
+    }
+  }
+}

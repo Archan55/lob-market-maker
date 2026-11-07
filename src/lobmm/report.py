@@ -303,6 +303,7 @@ def _numeric_pairs(
     *,
     x_columns: Sequence[str],
     y_columns: Sequence[str],
+    preserve_integer_x: bool = False,
 ) -> list[tuple[float, float]]:
     x_column = _first_column(frame, x_columns)
     y_column = _first_column(frame, y_columns)
@@ -313,7 +314,12 @@ def _numeric_pairs(
         x_value = _number(x_raw)
         y_value = _number(y_raw)
         if x_value is not None and y_value is not None:
-            output.append((x_value, y_value))
+            output.append(
+                (
+                    x_raw if preserve_integer_x and type(x_raw) is int else x_value,
+                    y_value,
+                )
+            )
     return output
 
 
@@ -477,9 +483,10 @@ def _plot_drawdown(artifacts: RunArtifacts, path: Path) -> Path:
         artifacts.table("pnl"),
         x_columns=("timestamp_ns",),
         y_columns=("net_pnl",),
+        preserve_integer_x=True,
     )
     if pairs:
-        pairs.sort()
+        pairs.sort(key=lambda item: item[0])
         high = -math.inf
         drawdowns: list[tuple[float, float]] = []
         for timestamp, value in pairs:
@@ -636,11 +643,13 @@ def _pnl_by_regime(
     previous: float | None = None
     pnl_rows = sorted(
         (
-            int(timestamp),
-            value,
-        )
-        for timestamp, raw_value in pnl.select("timestamp_ns", "net_pnl").iter_rows()
-        if timestamp is not None and (value := _number(raw_value)) is not None
+            (int(timestamp), value)
+            for timestamp, raw_value in pnl.select(
+                "timestamp_ns", "net_pnl"
+            ).iter_rows()
+            if timestamp is not None and (value := _number(raw_value)) is not None
+        ),
+        key=lambda item: item[0],
     )
     for timestamp, value in pnl_rows:
         change = 0.0 if previous is None else value - previous

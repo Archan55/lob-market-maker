@@ -1,0 +1,45 @@
+{
+  "metrics_source_sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+  "same_maker_fills": true,
+  "same_first_fill_snapshot": true,
+  "causing_input_sequence": 5,
+  "maker_pre_post_reference": [
+    [
+      100.0,
+      100.0
+    ],
+    [
+      100.0,
+      100.0
+    ]
+  ],
+  "existing_end_timestamp_references": [
+    [
+      100.0
+    ],
+    [
+      102.0
+    ]
+  ],
+  "existing_spread_capture": [
+    1.0,
+    3.0
+  ],
+  "existing_realized_spread_ticks": [
+    1.0,
+    3.0
+  ],
+  "terminal_PnL": [
+    1.0,
+    3.0
+  ],
+  "taker_existing_reference": [
+    102.0
+  ],
+  "taker_entry_and_post_midpoint": [
+    102.0,
+    102.0
+  ],
+  "strictly_prior_time_control_midpoint": 100.0,
+  "interpretation": "End-of-timestamp convention sensitivity, not a bookedPnl error or genericcausalarchive repair. Later inventory mark/terminalPnL legitimately changes. No new engine runs or economic claim."
+}

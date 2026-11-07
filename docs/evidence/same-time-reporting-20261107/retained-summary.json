@@ -1,0 +1,304 @@
+{
+  "status": "complete",
+  "stage": "retained",
+  "harness_sha256": "f9ec929c99c363a6b6dfd71417b29c3bb13c30dad0c096e19018b99d15ee7577",
+  "test_sha256": "adab87cdf49969106ca8d745615000feb7779c001211014238a92aee29606915",
+  "provider_sha256": "3c65bbc24249de7ed6894f65617fc28d516e04f323ab774cf1d29dbe512d21fb",
+  "contract_sha256": "26b51977ca815629bb386333e824cd956384c1d0f15e06025f61ce995dca8685",
+  "fixtures_sha256": "01f3229ca7d5ddfeec646cbaaead2f5088360556d8c861e51a5107586acbdefc",
+  "process_cap_seconds": 120,
+  "attempts": [
+    {
+      "role": "main",
+      "case": "ci",
+      "status": "complete"
+    },
+    {
+      "role": "candidate",
+      "case": "ci",
+      "status": "complete"
+    },
+    {
+      "role": "main",
+      "case": "benchmark",
+      "status": "complete"
+    },
+    {
+      "role": "candidate",
+      "case": "benchmark",
+      "status": "complete"
+    }
+  ],
+  "sources": {
+    "main": {
+      "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "git_archive_sha256": "45da6c2f4d117a08cf94b8af38d51392014e5c5553790b96bdaf0a148958837e",
+      "source_sha256": {
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+        "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+        "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      }
+    },
+    "candidate": {
+      "resolved_revision": "ae12338686ae6553b0f1306691705653bb375c96",
+      "git_archive_sha256": "0007d6cc98403b0f5863d644deda09ebaf33a024bff9bb70b15adf25353717ab",
+      "source_sha256": {
+        "report": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+        "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+        "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+        "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      }
+    }
+  },
+  "criterion_passed": true,
+  "scope": "Read-only exact Nov5 synthetic inputs, already exposed; no new engine, timing, economic inference or fresh holdout. Full original raw arrays/logs preserved in saved cloud, not duplicated here.",
+  "raw_report_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/report.json",
+  "raw_report_sha256": "994d088fb12b3b50a631a80b03bef1782444931ed89885407e61008410546647",
+  "cohorts": {
+    "ci": {
+      "row_count": 315,
+      "maximum_drawdown": 0.09899999999999998,
+      "terminal_drawdown": 0.07500000000000018,
+      "changed_x_points": 0,
+      "changed_y_points": 0,
+      "complete_curves_equal": true,
+      "regime_allocations_equal": true,
+      "sources": {
+        "main": {
+          "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+          "source_sha256": {
+            "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+            "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+            "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+            "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+            "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+            "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+            "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci",
+          "input_sha256": {
+            "orders.parquet": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0",
+            "fills.parquet": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228",
+            "inventory.parquet": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2",
+            "pnl.parquet": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a",
+            "market.parquet": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb",
+            "markouts.parquet": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a",
+            "risk_events.parquet": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+            "quotes.parquet": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c",
+            "metrics.json": "4583d8f66c1c8901b10d1e57644ce122163ae397bd8600fcca02ad83b70e1b7c",
+            "diagnostics.json": "6347052a58cfd02a6c1fbb5c8c28f9d29428710e38e4923c971c8e4adf249103",
+            "summary.json": "c8a4d35dbe60b2066f9e645afc31d9bdbf4945f7efd6b80eb252de2b5aa4330b",
+            "run_config.yaml": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5"
+          },
+          "provenance_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+          "manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+          "event_stream_sha256": "1d94fa3e581b757d7d8b6fb3e8994cb0cc7ea3519144d380c67d15c709d5f218",
+          "result_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/ci-main.json",
+          "result_sha256": "508a91535fea3ee7196a5562b7011165f58d08f5c6e9572f8cb430893a6751b0",
+          "x_json_sha256": "2bcfcfe675a66d14e1dfce842cff56d60d9ff378c9ba7718d7b6d5ce2844a90e",
+          "y_json_sha256": "6fb234e0d6c3dcf400ce6fb434eb9ec83a7b7e5de0f5ac2d4c95c3974db339f2",
+          "regime_actual": {
+            "spread_regime": {
+              "tight": 2.7755575615628914e-16,
+              "wide": 2.8769999999999993
+            },
+            "volatility_regime": {
+              "high": 0.3620000000000004,
+              "low": 2.5149999999999997
+            },
+            "liquidity_regime": {
+              "deep": 2.315,
+              "thin": 0.562
+            }
+          },
+          "curve_matches": true,
+          "regime_matches": true,
+          "png_sha256": {
+            "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/ci-main/plots/regimes.png": "0a4d8c266035efd79afef15ea76bdbc13a1f290caab2e8cf9e9bd5d96cc1a1ba",
+            "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/ci-main/plots/drawdown.png": "f03b66d3300d060651706954890b03ef0243bfb3c43987f8723cf00ee0518add"
+          }
+        },
+        "candidate": {
+          "resolved_revision": "ae12338686ae6553b0f1306691705653bb375c96",
+          "source_sha256": {
+            "report": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+            "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+            "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+            "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+            "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+            "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+            "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci",
+          "input_sha256": {
+            "orders.parquet": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0",
+            "fills.parquet": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228",
+            "inventory.parquet": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2",
+            "pnl.parquet": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a",
+            "market.parquet": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb",
+            "markouts.parquet": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a",
+            "risk_events.parquet": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+            "quotes.parquet": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c",
+            "metrics.json": "4583d8f66c1c8901b10d1e57644ce122163ae397bd8600fcca02ad83b70e1b7c",
+            "diagnostics.json": "6347052a58cfd02a6c1fbb5c8c28f9d29428710e38e4923c971c8e4adf249103",
+            "summary.json": "c8a4d35dbe60b2066f9e645afc31d9bdbf4945f7efd6b80eb252de2b5aa4330b",
+            "run_config.yaml": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5"
+          },
+          "provenance_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+          "manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+          "event_stream_sha256": "1d94fa3e581b757d7d8b6fb3e8994cb0cc7ea3519144d380c67d15c709d5f218",
+          "result_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/ci-candidate.json",
+          "result_sha256": "884f80c0e1549c3059b421aaee44f09e6577734140c9650d5594321328686ccf",
+          "x_json_sha256": "2bcfcfe675a66d14e1dfce842cff56d60d9ff378c9ba7718d7b6d5ce2844a90e",
+          "y_json_sha256": "6fb234e0d6c3dcf400ce6fb434eb9ec83a7b7e5de0f5ac2d4c95c3974db339f2",
+          "regime_actual": {
+            "spread_regime": {
+              "tight": 2.7755575615628914e-16,
+              "wide": 2.8769999999999993
+            },
+            "volatility_regime": {
+              "high": 0.3620000000000004,
+              "low": 2.5149999999999997
+            },
+            "liquidity_regime": {
+              "deep": 2.315,
+              "thin": 0.562
+            }
+          },
+          "curve_matches": true,
+          "regime_matches": true,
+          "png_sha256": {
+            "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/ci-candidate/plots/regimes.png": "0a4d8c266035efd79afef15ea76bdbc13a1f290caab2e8cf9e9bd5d96cc1a1ba",
+            "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/ci-candidate/plots/drawdown.png": "f03b66d3300d060651706954890b03ef0243bfb3c43987f8723cf00ee0518add"
+          }
+        }
+      }
+    },
+    "benchmark": {
+      "row_count": 20772,
+      "maximum_drawdown": 274.4416,
+      "terminal_drawdown": 86.2312,
+      "changed_x_points": 0,
+      "changed_y_points": 0,
+      "complete_curves_equal": true,
+      "regime_allocations_equal": true,
+      "sources": {
+        "main": {
+          "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+          "source_sha256": {
+            "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+            "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+            "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+            "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+            "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+            "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+            "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark",
+          "input_sha256": {
+            "orders.parquet": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0",
+            "fills.parquet": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+            "inventory.parquet": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba",
+            "pnl.parquet": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178",
+            "market.parquet": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3",
+            "markouts.parquet": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+            "risk_events.parquet": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4",
+            "quotes.parquet": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b",
+            "metrics.json": "952a72f78f2fb0fcf3afa8721d9ecb4a965ac92f7ef9daf56c191ce0badc9ee4",
+            "diagnostics.json": "960dacd9702c50a57daf983faa37ca3685e6dfa20e6a9063d63ba9856ea50ccb",
+            "summary.json": "e6f2f69b5bf08c7bf28211a436cfd398d8ebe228c86409cbe2c8fc74ebe96c63",
+            "run_config.yaml": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a"
+          },
+          "provenance_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+          "manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+          "event_stream_sha256": "8a845f3b206876f8f0769d9e051d7016436355c605297f4d14fda6df2cc04237",
+          "result_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/benchmark-main.json",
+          "result_sha256": "47b45e1dd9353f38f081702bff9ec57d8efff23da883285ffcd47ec0bd7e1df6",
+          "x_json_sha256": "fe1b8e82082035585bf6719accbb1b9bb8d06ceda030a846878a3faa87a57704",
+          "y_json_sha256": "9db7cd8903e7f28aa70b6da605d33f8e2a97640e86248f5e844680572fa0a6a2",
+          "regime_actual": {
+            "spread_regime": {
+              "tight": 54.71199999999995,
+              "wide": 34.151999999999504
+            },
+            "volatility_regime": {
+              "high": -616.867000000002,
+              "low": 705.7309999999951
+            },
+            "liquidity_regime": {
+              "deep": 146.4750000000001,
+              "thin": -57.61100000000005
+            }
+          },
+          "curve_matches": true,
+          "regime_matches": true,
+          "png_sha256": {
+            "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/benchmark-main/plots/regimes.png": "b6116455845605cd045d2d75b5bfa6c12ded637a390c25398c876b725b258939",
+            "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/benchmark-main/plots/drawdown.png": "61e51fec2c6010e82b9c590cda3e43fd2299a2e2df305556f80aedf32708150e"
+          }
+        },
+        "candidate": {
+          "resolved_revision": "ae12338686ae6553b0f1306691705653bb375c96",
+          "source_sha256": {
+            "report": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+            "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+            "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+            "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+            "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+            "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+            "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark",
+          "input_sha256": {
+            "orders.parquet": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0",
+            "fills.parquet": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+            "inventory.parquet": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba",
+            "pnl.parquet": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178",
+            "market.parquet": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3",
+            "markouts.parquet": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+            "risk_events.parquet": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4",
+            "quotes.parquet": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b",
+            "metrics.json": "952a72f78f2fb0fcf3afa8721d9ecb4a965ac92f7ef9daf56c191ce0badc9ee4",
+            "diagnostics.json": "960dacd9702c50a57daf983faa37ca3685e6dfa20e6a9063d63ba9856ea50ccb",
+            "summary.json": "e6f2f69b5bf08c7bf28211a436cfd398d8ebe228c86409cbe2c8fc74ebe96c63",
+            "run_config.yaml": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a"
+          },
+          "provenance_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+          "manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+          "event_stream_sha256": "8a845f3b206876f8f0769d9e051d7016436355c605297f4d14fda6df2cc04237",
+          "result_path": "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/benchmark-candidate.json",
+          "result_sha256": "b96818193a1eece1a97848a6bde8f4fd2c394dca973bbe7e5e9c9db8b7ba01c7",
+          "x_json_sha256": "fe1b8e82082035585bf6719accbb1b9bb8d06ceda030a846878a3faa87a57704",
+          "y_json_sha256": "9db7cd8903e7f28aa70b6da605d33f8e2a97640e86248f5e844680572fa0a6a2",
+          "regime_actual": {
+            "spread_regime": {
+              "tight": 54.71199999999995,
+              "wide": 34.151999999999504
+            },
+            "volatility_regime": {
+              "high": -616.867000000002,
+              "low": 705.7309999999951
+            },
+            "liquidity_regime": {
+              "deep": 146.4750000000001,
+              "thin": -57.61100000000005
+            }
+          },
+          "curve_matches": true,
+          "regime_matches": true,
+          "png_sha256": {
+            "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/benchmark-candidate/plots/regimes.png": "b6116455845605cd045d2d75b5bfa6c12ded637a390c25398c876b725b258939",
+            "/workspace/lob-market-maker-ordering-fix/experiments/same-time-reporting-20261107/retained-final/benchmark-candidate/plots/drawdown.png": "61e51fec2c6010e82b9c590cda3e43fd2299a2e2df305556f80aedf32708150e"
+          }
+        }
+      }
+    }
+  }
+}
