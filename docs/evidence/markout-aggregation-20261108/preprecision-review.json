@@ -1,0 +1,12 @@
+{
+  "phase": "Before prototype precision execution or repair",
+  "reviewer": "independent_feasibility",
+  "verdict": "GO",
+  "prototype": "d6d9e6a2b1a4a2dd3a7b718cb0ce1acac2f18e1b",
+  "prototype_metrics_sha256": "022f60f4f2bb7edd4d7fb9aa0ef780be01f344d8e97ae90ded82b6a7b2d5ae5b",
+  "supplement_sha256": "c695fa3fa8c1e22d045c02b21e2b32aa3d7cba371535a9544f86884f0c50625a",
+  "controller_sha256": "d73cf0f977c237b8a5a201b998f55bf201ddaddccdca8d36abafa71e5115338f",
+  "requirement": "One exact node; before AssertionError must reproduce normalized [0.0,0.25]==[0.25,0.25] amount pair, after mustpass with noerrors/skips/exceptions. Seven imported source paths/hashes checked aftercollection, archive/test/source identities pinned; no engines.",
+  "original_study": "Original fd0 controller/f25 corpus/main baseline unchanged; original primary witnesses/criteria preserved. One repair allocated only after before reproduction, then after-only supplement plus originally budgeted candidate study.",
+  "timing_and_selection": "New issue arose from independent static review of introduced code after main baseline but before candidate/supplement outcomes. Prototype/amendment preserved before supplement freeze; not a historicalmain effect or parameter search."
+}

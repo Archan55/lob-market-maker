@@ -47,6 +47,11 @@ jobs:
           report = json.loads(Path("experiments/markout-aggregation-ci/verify/report.json").read_text())
           print(json.dumps({key: report[key] for key in ("status", "stage", "sources", "criterion_passed", "attempts")}, sort_keys=True))
           PY
+      - name: Introduced quantity-precision regression before and after
+        run: >-
+          python tools/reproduce_markout_precision.py --stage verify
+          --candidate "$(git rev-parse HEAD)"
+          --output experiments/markout-aggregation-ci/precision
       - name: Retain source and numerical evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -60,5 +65,7 @@ jobs:
             docs/evidence/markout-aggregation-20261108/
             docs/MARKOUT_AGGREGATION.md
             tools/reproduce_markout_aggregation.py
+            tools/reproduce_markout_precision.py
             tests/unit/test_markout_aggregation_independent.py
+            tests/unit/test_markout_quantity_precision_independent.py
             src/lobmm/metrics.py
