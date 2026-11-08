@@ -9,6 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Record executed source
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/markout-aggregation-ci
+          git rev-parse HEAD | tee experiments/markout-aggregation-ci/checkout.txt
+          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -22,6 +33,39 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --junitxml=experiments/markout-aggregation-ci/full-suite.xml
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Archived main and exact-head markout verification
+        run: |
+          python tools/reproduce_markout_aggregation.py --stage verify \
+            --candidate "$(git rev-parse HEAD)" \
+            --output experiments/markout-aggregation-ci/verify
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path("experiments/markout-aggregation-ci/verify/report.json").read_text())
+          print(json.dumps({key: report[key] for key in ("status", "stage", "sources", "criterion_passed", "attempts")}, sort_keys=True))
+          PY
+      - name: Introduced quantity-precision regression before and after
+        run: >-
+          python tools/reproduce_markout_precision.py --stage verify
+          --candidate "$(git rev-parse HEAD)"
+          --output experiments/markout-aggregation-ci/precision
+      - name: Retain source and numerical evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: markout-aggregation-${{ steps.source.outputs.head_sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            experiments/markout-aggregation-ci/
+            runs/ci-smoke/
+            docs/evidence/markout-aggregation-20261108/
+            docs/MARKOUT_AGGREGATION.md
+            tools/reproduce_markout_aggregation.py
+            tools/reproduce_markout_precision.py
+            tests/unit/test_markout_aggregation_independent.py
+            tests/unit/test_markout_quantity_precision_independent.py
+            src/lobmm/metrics.py

@@ -7,12 +7,14 @@ import math
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from decimal import Decimal
+from fractions import Fraction
 from statistics import fmean, pstdev
 from typing import Any
 
 from lobmm.enums import LiquidityRole, Side
 
 type Row = Mapping[str, Any]
+type _MarkoutSummary = dict[str, dict[str, dict[str, int | float | None]]]
 
 
 def _finite_mean(values: Iterable[float]) -> float | None:
@@ -124,6 +126,147 @@ def classify_regimes(market_states: list[dict[str, Any]]) -> None:
         row["volatility_regime"] = "high" if change > volatility_cut else "low"
 
 
+def _finite_markout(value: Any) -> float | None:
+    if value is None:
+        return None
+    number = float(value)
+    return number if math.isfinite(number) else None
+
+
+def _markout_reference(value: Any) -> Any:
+    """Compare missing/nonfinite reference metadata without NaN inequality."""
+
+    if isinstance(value, float) and not math.isfinite(value):
+        return (
+            "nonfinite",
+            "nan" if math.isnan(value) else "+inf" if value > 0 else "-inf",
+        )
+    if isinstance(value, Decimal):
+        return ("Decimal", value.as_tuple())
+    return value
+
+
+def _quantity_markout_summary(
+    fills: Sequence[Row], markouts: Sequence[Row]
+) -> _MarkoutSummary:
+    """Observed per-horizon amounts and support from unique authoritative fills.
+
+    Raw rows and their event means remain independent of this deduplicated
+    view. An outcome is observed only when both supplied per-unit measures are
+    finite; unavailable quantity is counted but never extrapolated.
+    """
+
+    # No horizon can be inferred here. Preserve legacy callers that do not
+    # supply join identifiers when requesting no markout observations.
+    if not markouts:
+        return {}
+    catalog: dict[str, Row] = {}
+    for fill in fills:
+        identifier = fill.get("fill_id")
+        if not isinstance(identifier, str) or not identifier or identifier in catalog:
+            raise ValueError("authoritative fill IDs must be unique and nonempty")
+        quantity = fill.get("quantity")
+        if type(quantity) is not int or quantity <= 0:
+            raise ValueError(
+                "authoritative quantity must be a positive builtin integer"
+            )
+        if isinstance(fill.get("side"), bool) or fill.get("side") not in (1, -1):
+            raise ValueError("authoritative side must be bid or ask")
+        catalog[identifier] = fill
+
+    outcomes: dict[tuple[str, int], tuple[float | None, float | None]] = {}
+    signatures: dict[tuple[str, int], tuple[Any, ...]] = {}
+    for row in markouts:
+        identifier = row.get("fill_id")
+        if not isinstance(identifier, str) or identifier not in catalog:
+            raise ValueError("markout fill ID is unknown")
+        fill = catalog[identifier]
+        horizon = row.get("horizon_ns")
+        if type(horizon) is not int or horizon <= 0:
+            raise ValueError("horizon must be a positive builtin integer")
+        if isinstance(row.get("side"), bool) or row.get("side") != fill["side"]:
+            raise ValueError("markout side differs from authoritative fill")
+        timestamp = int(fill["exchange_fill_timestamp_ns"])
+        price = float(fill["price_ticks"])
+        if "fill_timestamp_ns" in row and row["fill_timestamp_ns"] != timestamp:
+            raise ValueError("markout fill timestamp differs")
+        if "fill_price_ticks" in row and row["fill_price_ticks"] != price:
+            raise ValueError("markout fill price differs")
+        ticks = _finite_markout(row.get("markout_ticks"))
+        value = _finite_markout(row.get("markout_value"))
+        signature = (
+            int(row["side"]),
+            _markout_reference(row.get("fill_timestamp_ns", timestamp)),
+            float(row.get("fill_price_ticks", price)),
+            ticks,
+            value,
+            *(
+                _markout_reference(row.get(name))
+                for name in (
+                    "target_timestamp_ns",
+                    "future_timestamp_ns",
+                    "future_midpoint_ticks",
+                    "markout_bps",
+                    "asof_convention",
+                )
+            ),
+        )
+        key = (identifier, horizon)
+        if key in signatures and signatures[key] != signature:
+            raise ValueError("duplicate fill/horizon outcomes conflict")
+        signatures[key] = signature
+        outcomes[key] = (ticks, value)
+
+    result: _MarkoutSummary = {}
+    for horizon in sorted({horizon for _, horizon in outcomes}):
+        groups: dict[str, dict[str, int | float | None]] = {}
+        for name, side in (("all", None), ("bid", 1), ("ask", -1)):
+            universe = [
+                fill
+                for fill in catalog.values()
+                if side is None or fill["side"] == side
+            ]
+            total_quantity = sum(int(fill["quantity"]) for fill in universe)
+            observed_quantity = observed_events = 0
+            tick_total = Fraction(0)
+            value_total = Fraction(0)
+            for fill in universe:
+                ticks, value = outcomes.get((fill["fill_id"], horizon), (None, None))
+                if ticks is None or value is None:
+                    continue
+                quantity = int(fill["quantity"])
+                observed_quantity += quantity
+                observed_events += 1
+                # Preserve integer quantity before cancellation; float products
+                # can lose valid units even when the exact final amount is small.
+                tick_total += quantity * Fraction.from_float(ticks)
+                value_total += quantity * Fraction.from_float(value)
+            groups[name] = {
+                "total_fill_quantity": total_quantity,
+                "observed_quantity": observed_quantity,
+                "missing_quantity": total_quantity - observed_quantity,
+                "quantity_coverage": observed_quantity / total_quantity
+                if total_quantity
+                else None,
+                "total_fill_events": len(universe),
+                "observed_fill_events": observed_events,
+                "missing_fill_events": len(universe) - observed_events,
+                "quantity_weighted_markout_ticks": float(tick_total / observed_quantity)
+                if observed_quantity
+                else None,
+                "quantity_weighted_markout_value": float(
+                    value_total / observed_quantity
+                )
+                if observed_quantity
+                else None,
+                "observed_markout_value": float(value_total)
+                if observed_quantity
+                else None,
+            }
+        result[str(horizon)] = groups
+    return result
+
+
 def build_metrics(
     *,
     orders: Sequence[Row],
@@ -142,6 +285,7 @@ def build_metrics(
 
     if not 0 < near_limit_fraction <= 1:
         raise ValueError("near_limit_fraction must be in (0, 1]")
+    markout_summary = _quantity_markout_summary(fills, markouts)
     submitted_orders = len(
         {
             str(row["order_id"])
@@ -306,6 +450,15 @@ def build_metrics(
             ),
             "markout_ticks_by_horizon_ns": markout_by_horizon,
             "markout_ticks_by_side": markout_by_side,
+            "markout_summary_by_horizon_ns": markout_summary,
+            "markout_aggregation_note": (
+                "Quantity-weighted summaries are separate gross observed fill-to-future-midpoint "
+                "diagnostics for each horizon, with both supplied per-unit outcomes finite. "
+                "They include entry spread, are not net P&L, and do not isolate adverse drift. "
+                "Missing quantity is not extrapolated; no observations gives null amounts/means. "
+                "Coverage can differ by horizon. Legacy horizon means are event-row means; "
+                "legacy side means pool horizon rows, including duplicate requests."
+            ),
         },
         "market_conditions": {
             "average_market_spread_ticks": _finite_mean(spreads),
@@ -320,7 +473,14 @@ def build_metrics(
             "inventory_mark_to_market": attribution_residual,
             "fees": -fees,
             "rebates": rebates,
-            "adverse_selection_markout": (
+            "adverse_selection_markout": None,
+            "adverse_selection_markout_note": (
+                "Unidentified: pooled forward markouts do not isolate adverse selection "
+                "or form an additive P&L decomposition. legacy_pooled_markout_proxy retains "
+                "the former numeric expression for compatibility only; use the separate "
+                "per-horizon observed-quantity diagnostics."
+            ),
+            "legacy_pooled_markout_proxy": (
                 (
                     _finite_mean(
                         float(row["markout_value"])

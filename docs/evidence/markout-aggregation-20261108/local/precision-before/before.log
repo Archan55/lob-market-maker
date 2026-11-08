@@ -1,0 +1,12 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_ test_large_quantity_split_preserves_exact_observed_markout_amount_and_means __
+tests/unit/test_markout_quantity_precision_independent.py:82: in test_large_quantity_split_preserves_exact_observed_markout_amount_and_means
+    assert amounts == [0.25, 0.25]
+E   assert [0.0, 0.25] == [0.25, 0.25]
+E     
+E     At index 0 diff: 0.0 != 0.25
+E     Use -v to get more diff
+=========================== short test summary info ============================
+FAILED tests/unit/test_markout_quantity_precision_independent.py::test_large_quantity_split_preserves_exact_observed_markout_amount_and_means
+1 failed in 0.81s

@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-08",
+  "reviewer": "growth_reproducer",
+  "method": "Metadata/filename/config-provenance labels only; no new market outcomes or execution/timing runs.",
+  "checkouts": 7,
+  "new_real_data_or_calibration": false,
+  "raw_processed": "Only .gitkeep in each checkout.",
+  "configured_retained_inputs": "Synthetic/SIMULATED demo, CI, benchmark. Nov7 saved Parquets labeled lobmm hand-constructed ordering witness, lobmm-same-time-reporting-v1.",
+  "adapter_fixtures": "Four LOBSTER/Tardis fixture CSVs explicitly fictional.",
+  "closed_heads": {
+    "Nov2": "b1ebc0c32036a1bfcafa051b12e9239b629b4a59",
+    "Nov4": "816538cc3c01dfb1c9d60a8645ba3828a44751cf"
+  },
+  "remaining_prerequisites": [
+    "Legally usable multi-session L2 and trades, snapshots/gaps/sequence/source and collector clocks, checksums/inspection history",
+    "Dated instrument tick/lot/fee/rebate schedules, terminal depth, funding/borrow where applicable",
+    "Empirical queue/priority and order/cancel/ack/fill/report latency calibration or defensible identified bounds"
+  ],
+  "instructions": "No checkout AGENTS/SKILL files found; /workspace/.agents empty. Runtime skill and same executor/config22 running/connected/enforced verified.",
+  "restrictions_observed": "No new acquisition, E1/private/licensed outputs, other executor, purchases, access/security changes, denied retries, merge/deployment/trading."
+}

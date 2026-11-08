@@ -1,0 +1,53 @@
+{
+  "phase": "Static source-audit correctness amendment before ANY numerical candidate execution or precision-witness outcomes; original main baseline already completed and retained unchanged.",
+  "trigger": "Independent reviewer found prototype022f60f4f2bb7edd4d7fb9aa0ef780be01f344d8e97ae90ded82b6a7b2d5ae5b multiplies each finite float by integer quantity before fsum; valid int64 quantities may round before the sum.",
+  "hypothesis": "At h10 two BIDfills qA=2**53+1 andqB=2**53 with supplied perunit outcomes+1/-1tick and+.25/-.25currency must have observedamount+.25 and ticktotal1. Prototype is predicted to report0 for unsplitA but+.25 whenA is split into2**53 and1 with identicalside/time/price/outcomes.",
+  "fixed_inputs": {
+    "tick_size": "0.25",
+    "horizons_ns": [
+      10
+    ],
+    "fills": [
+      {
+        "fill_id": "A",
+        "side": 1,
+        "quantity": 9007199254740993,
+        "price_ticks": 100,
+        "exchange_fill_timestamp_ns": 0,
+        "liquidity_role": "maker"
+      },
+      {
+        "fill_id": "B",
+        "side": 1,
+        "quantity": 9007199254740992,
+        "price_ticks": 100,
+        "exchange_fill_timestamp_ns": 20,
+        "liquidity_role": "maker"
+      }
+    ],
+    "market_states": [
+      {
+        "timestamp_ns": 0,
+        "midpoint_ticks": 100
+      },
+      {
+        "timestamp_ns": 10,
+        "midpoint_ticks": 101
+      },
+      {
+        "timestamp_ns": 20,
+        "midpoint_ticks": 100
+      },
+      {
+        "timestamp_ns": 30,
+        "midpoint_ticks": 99
+      }
+    ],
+    "split": "Replace A with A-big qty9007199254740992 andA-unit qty1; allotherAfieldsidentical."
+  },
+  "criterion": "Independent exact rational oracle: totalq18014398509481985, observedamount.25bothrepresentations, mean_ticks=float(1/Q), mean_value=float(1/(4Q)); preserve oldmeans/proxy/rawproducer/othermetrics. No tolerance relaxation.",
+  "scope": "Pure audit-row representation counterexample, not physical market tape, economic advantage or a throughput bound. Quantities fit the canonical int64 schema.",
+  "repair_budget": "Preserve prototype commit/source and frozen supplementary test before outcomes. One before-only prototype regression, then ONE existing allowed independently reviewed correctness repair. Use exact finite-binary64 dyadic weighted accumulation, then float once for amount and exact-division means; no rawmarkout/oldlegacy formula changes. Original43testSHAf25de34f65497fef3df68306f81206737e520421b43804faa268a6a02b9eca29 and originalrunnerfd0c9f0309541f5f579bffb55a9156f886fd998c28c4bd010175e280fac92fbf remain unchanged; reuse original mainbaseline, no re-execution. One after-only supplemental regression, original candidate study remains onefixture+CI300worker. CI deterministic before/after replication disclosed separately.",
+  "selection_disclosure": "Audit-driven introduced-code correctness counterexample selected after main results but before candidate/precision outcomes, not a new optimization candidate, parameter sweep, replacement primary input, economic sample or criterion. If repair/exactness/ordinary quality gates fail, stop within original budget.",
+  "rationale": "Finite binary64 values are dyadic rationals; their weighted sum uses bounded powers-of-two denominators, separate from the closed Portfolio average-cost growth/performance studies. Do not claim performance or all-range output guarantees."
+}

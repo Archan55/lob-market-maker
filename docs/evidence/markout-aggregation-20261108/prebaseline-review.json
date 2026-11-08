@@ -1,0 +1,18 @@
+{
+  "phase": "Independent final source/controller/oracle review before first numerical execution",
+  "verdict": "GO",
+  "reviewer": "independent_feasibility",
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "test_sha256": "f25de34f65497fef3df68306f81206737e520421b43804faa268a6a02b9eca29",
+  "runner_sha256": "fd0c9f0309541f5f579bffb55a9156f886fd998c28c4bd010175e280fac92fbf",
+  "coverage": [
+    "Rational per-horizon/side oracle, paired finite eligibility, every field/type/null and exact legacy formulas",
+    "Source archive/import identity and frozen hashes",
+    "Candidate-only local study reusing exact2 source-bound baseline workers with raw/embedded/ledger/JUnit/12file rehash checks",
+    "Rawmarkouts/eightParquet/config/event/nonclock and narrowly inverted metric equivalence",
+    "Read-only original retained cohorts, no new20k and local-only CI omission",
+    "Actual head workflow checkout, logged failures/counts/source/case ledger and evidence upload"
+  ],
+  "production_unchanged": true,
+  "executions_so_far": "No numerical fixture tests, engine runs or new retained outcomes. Ruff lint/format and CLI help only."
+}

@@ -1,0 +1,805 @@
+{
+  "status": "complete",
+  "stage": "retained",
+  "harness_sha256": "fd0c9f0309541f5f579bffb55a9156f886fd998c28c4bd010175e280fac92fbf",
+  "test_sha256": "f25de34f65497fef3df68306f81206737e520421b43804faa268a6a02b9eca29",
+  "contract_sha256": "f01dfc365c4784b363c856dc2895d55609cd8249d140759eb159cf3336bd7ddf",
+  "fixtures_sha256": "06999812efaab9357948bf3dd1de463f3dc2166b6d4786115f9d578a9446c5a5",
+  "process_cap_seconds": 120,
+  "attempts": [
+    {
+      "role": "main",
+      "kind": "retained",
+      "cohort": "ci",
+      "status": "complete"
+    },
+    {
+      "role": "candidate",
+      "kind": "retained",
+      "cohort": "ci",
+      "status": "complete"
+    },
+    {
+      "role": "main",
+      "kind": "retained",
+      "cohort": "benchmark",
+      "status": "complete"
+    },
+    {
+      "role": "candidate",
+      "kind": "retained",
+      "cohort": "benchmark",
+      "status": "complete"
+    }
+  ],
+  "sources": {
+    "main": {
+      "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "git_archive_sha256": "45da6c2f4d117a08cf94b8af38d51392014e5c5553790b96bdaf0a148958837e",
+      "source_sha256": {
+        "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+        "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+        "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      }
+    },
+    "candidate": {
+      "resolved_revision": "789af1a89f863051b71130b93629d9829fbef324",
+      "git_archive_sha256": "12e6550fbf137448ff4642cf91959862481069367a7c2be716b6190deefa64fd",
+      "source_sha256": {
+        "metrics": "90ceb80020de292c5e85e39be07188da5feac141a19887005c9e1037988fc809",
+        "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+        "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+        "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+        "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+      }
+    }
+  },
+  "criterion_passed": true,
+  "scope": "Exact original exposed Nov5 synthetic cohorts. Full raw source/worker records remain in saved cloud; portable fill/markout/config byte subset sufficient for independent target-summary reproduction is committed, not a full original replay archive. No new20kengine/freshholdout/economic result.",
+  "raw_report_path": "/workspace/lob-market-maker-markout-review/experiments/markout-aggregation-20261108/retained-final/report.json",
+  "raw_report_sha256": "9003aa46b888e5a01da492eef6b94bf275fa191937ece1aa32b74540191e4ba5",
+  "cohorts": {
+    "ci": {
+      "original_metrics": {
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "trading_activity": {
+          "submitted_orders": 64,
+          "cancelled_orders": 25,
+          "rejected_orders": 0,
+          "partial_fills": 0,
+          "completed_fills": 27,
+          "fill_events": 27,
+          "buy_volume": 60,
+          "sell_volume": 75,
+          "turnover": 13507.300000000001,
+          "maker_volume": 135,
+          "taker_volume": 0,
+          "order_to_fill_ratio": 2.3703703703703702,
+          "cancel_to_fill_ratio": 0.9259259259259259,
+          "fill_rate": 0.421875,
+          "quote_messages": 89
+        },
+        "pnl": {
+          "gross_pnl": 2.85,
+          "fees": 0.0,
+          "rebates": 0.027,
+          "net_pnl": 2.877,
+          "realized_pnl": 2.7,
+          "unrealized_pnl": 0.15,
+          "maximum_drawdown": 0.09899999999999998,
+          "pnl_per_traded_unit": 0.02131111111111111,
+          "pnl_per_fill": 0.10655555555555554,
+          "pnl_per_unit_turnover": 0.00021299593553115718,
+          "annualized_sharpe": null,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization."
+        },
+        "inventory": {
+          "mean": 2.2698412698412698,
+          "standard_deviation": 6.412305504229087,
+          "maximum_long": 20,
+          "maximum_short": -15,
+          "mean_absolute": 4.142857142857143,
+          "time_near_limits_fraction": 0.0,
+          "end_of_session": -15
+        },
+        "execution_quality": {
+          "realized_spread_ticks": 0.9074074074074074,
+          "effective_spread_ticks": 1.8148148148148149,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 3.03125,
+            "1000000000": null,
+            "5000000000": null
+          },
+          "markout_ticks_by_side": {
+            "bid": 3.125,
+            "ask": 2.9375
+          }
+        },
+        "market_conditions": {
+          "average_market_spread_ticks": 2.892361111111111,
+          "average_displayed_top_depth": 134.03
+        },
+        "risk": {
+          "event_count": 0,
+          "kill_switch_active": false
+        },
+        "attribution": {
+          "spread_capture": 1.2249999999999999,
+          "inventory_mark_to_market": 1.625,
+          "fees": -0.0,
+          "rebates": 0.027,
+          "adverse_selection_markout": 4.0921875,
+          "reconciliation_residual": 0.0,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual."
+        },
+        "engineering": {
+          "events_processed": 300,
+          "scheduler_events_processed": 1148,
+          "wall_clock_seconds": 0.040075275999925,
+          "events_per_second": 7485.912261728689,
+          "peak_memory_bytes": null
+        }
+      },
+      "candidate_metrics": {
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "trading_activity": {
+          "submitted_orders": 64,
+          "cancelled_orders": 25,
+          "rejected_orders": 0,
+          "partial_fills": 0,
+          "completed_fills": 27,
+          "fill_events": 27,
+          "buy_volume": 60,
+          "sell_volume": 75,
+          "turnover": 13507.300000000001,
+          "maker_volume": 135,
+          "taker_volume": 0,
+          "order_to_fill_ratio": 2.3703703703703702,
+          "cancel_to_fill_ratio": 0.9259259259259259,
+          "fill_rate": 0.421875,
+          "quote_messages": 89
+        },
+        "pnl": {
+          "gross_pnl": 2.85,
+          "fees": 0.0,
+          "rebates": 0.027,
+          "net_pnl": 2.877,
+          "realized_pnl": 2.7,
+          "unrealized_pnl": 0.15,
+          "maximum_drawdown": 0.09899999999999998,
+          "pnl_per_traded_unit": 0.02131111111111111,
+          "pnl_per_fill": 0.10655555555555554,
+          "pnl_per_unit_turnover": 0.00021299593553115718,
+          "annualized_sharpe": null,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization."
+        },
+        "inventory": {
+          "mean": 2.2698412698412698,
+          "standard_deviation": 6.412305504229087,
+          "maximum_long": 20,
+          "maximum_short": -15,
+          "mean_absolute": 4.142857142857143,
+          "time_near_limits_fraction": 0.0,
+          "end_of_session": -15
+        },
+        "execution_quality": {
+          "realized_spread_ticks": 0.9074074074074074,
+          "effective_spread_ticks": 1.8148148148148149,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 3.03125,
+            "1000000000": null,
+            "5000000000": null
+          },
+          "markout_ticks_by_side": {
+            "bid": 3.125,
+            "ask": 2.9375
+          },
+          "markout_summary_by_horizon_ns": {
+            "100000000": {
+              "all": {
+                "total_fill_quantity": 135,
+                "observed_quantity": 80,
+                "missing_quantity": 55,
+                "quantity_coverage": 0.5925925925925926,
+                "total_fill_events": 27,
+                "observed_fill_events": 16,
+                "missing_fill_events": 11,
+                "quantity_weighted_markout_ticks": 3.03125,
+                "quantity_weighted_markout_value": 0.0303125,
+                "observed_markout_value": 2.4250000000000003
+              },
+              "bid": {
+                "total_fill_quantity": 60,
+                "observed_quantity": 40,
+                "missing_quantity": 20,
+                "quantity_coverage": 0.6666666666666666,
+                "total_fill_events": 12,
+                "observed_fill_events": 8,
+                "missing_fill_events": 4,
+                "quantity_weighted_markout_ticks": 3.125,
+                "quantity_weighted_markout_value": 0.03125,
+                "observed_markout_value": 1.25
+              },
+              "ask": {
+                "total_fill_quantity": 75,
+                "observed_quantity": 40,
+                "missing_quantity": 35,
+                "quantity_coverage": 0.5333333333333333,
+                "total_fill_events": 15,
+                "observed_fill_events": 8,
+                "missing_fill_events": 7,
+                "quantity_weighted_markout_ticks": 2.9375,
+                "quantity_weighted_markout_value": 0.029375000000000002,
+                "observed_markout_value": 1.175
+              }
+            },
+            "1000000000": {
+              "all": {
+                "total_fill_quantity": 135,
+                "observed_quantity": 0,
+                "missing_quantity": 135,
+                "quantity_coverage": 0.0,
+                "total_fill_events": 27,
+                "observed_fill_events": 0,
+                "missing_fill_events": 27,
+                "quantity_weighted_markout_ticks": null,
+                "quantity_weighted_markout_value": null,
+                "observed_markout_value": null
+              },
+              "bid": {
+                "total_fill_quantity": 60,
+                "observed_quantity": 0,
+                "missing_quantity": 60,
+                "quantity_coverage": 0.0,
+                "total_fill_events": 12,
+                "observed_fill_events": 0,
+                "missing_fill_events": 12,
+                "quantity_weighted_markout_ticks": null,
+                "quantity_weighted_markout_value": null,
+                "observed_markout_value": null
+              },
+              "ask": {
+                "total_fill_quantity": 75,
+                "observed_quantity": 0,
+                "missing_quantity": 75,
+                "quantity_coverage": 0.0,
+                "total_fill_events": 15,
+                "observed_fill_events": 0,
+                "missing_fill_events": 15,
+                "quantity_weighted_markout_ticks": null,
+                "quantity_weighted_markout_value": null,
+                "observed_markout_value": null
+              }
+            },
+            "5000000000": {
+              "all": {
+                "total_fill_quantity": 135,
+                "observed_quantity": 0,
+                "missing_quantity": 135,
+                "quantity_coverage": 0.0,
+                "total_fill_events": 27,
+                "observed_fill_events": 0,
+                "missing_fill_events": 27,
+                "quantity_weighted_markout_ticks": null,
+                "quantity_weighted_markout_value": null,
+                "observed_markout_value": null
+              },
+              "bid": {
+                "total_fill_quantity": 60,
+                "observed_quantity": 0,
+                "missing_quantity": 60,
+                "quantity_coverage": 0.0,
+                "total_fill_events": 12,
+                "observed_fill_events": 0,
+                "missing_fill_events": 12,
+                "quantity_weighted_markout_ticks": null,
+                "quantity_weighted_markout_value": null,
+                "observed_markout_value": null
+              },
+              "ask": {
+                "total_fill_quantity": 75,
+                "observed_quantity": 0,
+                "missing_quantity": 75,
+                "quantity_coverage": 0.0,
+                "total_fill_events": 15,
+                "observed_fill_events": 0,
+                "missing_fill_events": 15,
+                "quantity_weighted_markout_ticks": null,
+                "quantity_weighted_markout_value": null,
+                "observed_markout_value": null
+              }
+            }
+          },
+          "markout_aggregation_note": "Quantity-weighted summaries are separate gross observed fill-to-future-midpoint diagnostics for each horizon, with both supplied per-unit outcomes finite. They include entry spread, are not net P&L, and do not isolate adverse drift. Missing quantity is not extrapolated; no observations gives null amounts/means. Coverage can differ by horizon. Legacy horizon means are event-row means; legacy side means pool horizon rows, including duplicate requests."
+        },
+        "market_conditions": {
+          "average_market_spread_ticks": 2.892361111111111,
+          "average_displayed_top_depth": 134.03
+        },
+        "risk": {
+          "event_count": 0,
+          "kill_switch_active": false
+        },
+        "attribution": {
+          "spread_capture": 1.2249999999999999,
+          "inventory_mark_to_market": 1.625,
+          "fees": -0.0,
+          "rebates": 0.027,
+          "adverse_selection_markout": null,
+          "adverse_selection_markout_note": "Unidentified: pooled forward markouts do not isolate adverse selection or form an additive P&L decomposition. legacy_pooled_markout_proxy retains the former numeric expression for compatibility only; use the separate per-horizon observed-quantity diagnostics.",
+          "legacy_pooled_markout_proxy": 4.0921875,
+          "reconciliation_residual": 0.0,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual."
+        },
+        "engineering": {
+          "events_processed": 300,
+          "scheduler_events_processed": 1148,
+          "wall_clock_seconds": 0.040075275999925,
+          "events_per_second": 7485.912261728689,
+          "peak_memory_bytes": null
+        }
+      },
+      "raw_fill_sha256": "1ad04650f3e0b7b543989fdd3e4acbe54249f2655c21574bdc3d289fef340312",
+      "raw_markouts_sha256": "f9ffe30cba0a07915892c320eda87c38706fe89a2206558130482cc4b8a0ce5a",
+      "portable_target_inputs": {
+        "fills.parquet": {
+          "path": "docs/evidence/markout-aggregation-20261108/retained-inputs/ci/fills.parquet",
+          "sha256": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228",
+          "bytes": 7545
+        },
+        "markouts.parquet": {
+          "path": "docs/evidence/markout-aggregation-20261108/retained-inputs/ci/markouts.parquet",
+          "sha256": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a",
+          "bytes": 6174
+        },
+        "run_config.yaml": {
+          "path": "docs/evidence/markout-aggregation-20261108/retained-inputs/ci/run_config.yaml",
+          "sha256": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5",
+          "bytes": 2425
+        }
+      },
+      "sources": {
+        "main": {
+          "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+          "source_sha256": {
+            "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+            "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+            "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+            "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+            "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+            "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+            "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci",
+          "input_sha256": {
+            "fills.parquet": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228",
+            "inventory.parquet": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2",
+            "market.parquet": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb",
+            "markouts.parquet": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a",
+            "orders.parquet": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0",
+            "pnl.parquet": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a",
+            "quotes.parquet": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c",
+            "risk_events.parquet": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+            "run_config.yaml": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5",
+            "metrics.json": "4583d8f66c1c8901b10d1e57644ce122163ae397bd8600fcca02ad83b70e1b7c",
+            "diagnostics.json": "6347052a58cfd02a6c1fbb5c8c28f9d29428710e38e4923c971c8e4adf249103",
+            "summary.json": "c8a4d35dbe60b2066f9e645afc31d9bdbf4945f7efd6b80eb252de2b5aa4330b"
+          },
+          "provenance_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+          "manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+          "effective_config_sha256": "d01eb904dba8af8d20af30e8e9986ed9b01b210b89aebbd2b16ba3d073ec81d8",
+          "event_stream_sha256": "1d94fa3e581b757d7d8b6fb3e8994cb0cc7ea3519144d380c67d15c709d5f218",
+          "result_path": "/workspace/lob-market-maker-markout-review/experiments/markout-aggregation-20261108/retained-final/retained-ci-main.json",
+          "result_sha256": "53e87d4f67ebeefed819fd655191d377dfa87d3a23c5c69d402c851423ca095d"
+        },
+        "candidate": {
+          "resolved_revision": "789af1a89f863051b71130b93629d9829fbef324",
+          "source_sha256": {
+            "metrics": "90ceb80020de292c5e85e39be07188da5feac141a19887005c9e1037988fc809",
+            "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+            "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+            "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+            "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+            "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+            "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/ci-main-artifacts-2myvcr2p/exact-risk-ci",
+          "input_sha256": {
+            "fills.parquet": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228",
+            "inventory.parquet": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2",
+            "market.parquet": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb",
+            "markouts.parquet": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a",
+            "orders.parquet": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0",
+            "pnl.parquet": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a",
+            "quotes.parquet": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c",
+            "risk_events.parquet": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+            "run_config.yaml": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5",
+            "metrics.json": "4583d8f66c1c8901b10d1e57644ce122163ae397bd8600fcca02ad83b70e1b7c",
+            "diagnostics.json": "6347052a58cfd02a6c1fbb5c8c28f9d29428710e38e4923c971c8e4adf249103",
+            "summary.json": "c8a4d35dbe60b2066f9e645afc31d9bdbf4945f7efd6b80eb252de2b5aa4330b"
+          },
+          "provenance_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+          "manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+          "effective_config_sha256": "d01eb904dba8af8d20af30e8e9986ed9b01b210b89aebbd2b16ba3d073ec81d8",
+          "event_stream_sha256": "1d94fa3e581b757d7d8b6fb3e8994cb0cc7ea3519144d380c67d15c709d5f218",
+          "result_path": "/workspace/lob-market-maker-markout-review/experiments/markout-aggregation-20261108/retained-final/retained-ci-candidate.json",
+          "result_sha256": "7c95eab805550a423d396055b88cbf9066597409a9142f59f85a7ead9987e22c"
+        }
+      }
+    },
+    "benchmark": {
+      "original_metrics": {
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "trading_activity": {
+          "submitted_orders": 3140,
+          "cancelled_orders": 2391,
+          "rejected_orders": 16,
+          "partial_fills": 52,
+          "completed_fills": 728,
+          "fill_events": 780,
+          "buy_volume": 3712,
+          "sell_volume": 3808,
+          "turnover": 757616.72,
+          "maker_volume": 7520,
+          "taker_volume": 0,
+          "order_to_fill_ratio": 4.0256410256410255,
+          "cancel_to_fill_ratio": 3.0653846153846156,
+          "fill_rate": 0.2318471337579618,
+          "quote_messages": 5651
+        },
+        "pnl": {
+          "gross_pnl": 87.36,
+          "fees": 0.0,
+          "rebates": 1.504,
+          "net_pnl": 88.864,
+          "realized_pnl": 98.45571998924397,
+          "unrealized_pnl": -11.095719989243976,
+          "maximum_drawdown": 274.4416,
+          "pnl_per_traded_unit": 0.011817021276595745,
+          "pnl_per_fill": 0.11392820512820513,
+          "pnl_per_unit_turnover": 0.00011729413785904832,
+          "annualized_sharpe": null,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization."
+        },
+        "inventory": {
+          "mean": -15.233824378971693,
+          "standard_deviation": 70.8535167883451,
+          "maximum_long": 100,
+          "maximum_short": -100,
+          "mean_absolute": 65.92398420951281,
+          "time_near_limits_fraction": 0.4904679376083189,
+          "end_of_session": -96
+        },
+        "execution_quality": {
+          "realized_spread_ticks": 0.7352564102564103,
+          "effective_spread_ticks": 1.4705128205128206,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 0.7826923076923077,
+            "1000000000": 3.0367268041237114,
+            "5000000000": -1.3013793103448277
+          },
+          "markout_ticks_by_side": {
+            "bid": -4.850132625994695,
+            "ask": 6.529565217391304
+          }
+        },
+        "market_conditions": {
+          "average_market_spread_ticks": 2.583033213285314,
+          "average_displayed_top_depth": 105.1461
+        },
+        "risk": {
+          "event_count": 120,
+          "kill_switch_active": false
+        },
+        "attribution": {
+          "spread_capture": 54.41500000000007,
+          "inventory_mark_to_market": 32.944999999999936,
+          "fees": -0.0,
+          "rebates": 1.504,
+          "adverse_selection_markout": 66.71074090311268,
+          "reconciliation_residual": 0.0,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual."
+        },
+        "engineering": {
+          "events_processed": 20000,
+          "scheduler_events_processed": 80651,
+          "wall_clock_seconds": 1.9520131760000368,
+          "events_per_second": 10245.83247997483,
+          "peak_memory_bytes": null
+        }
+      },
+      "candidate_metrics": {
+        "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+        "trading_activity": {
+          "submitted_orders": 3140,
+          "cancelled_orders": 2391,
+          "rejected_orders": 16,
+          "partial_fills": 52,
+          "completed_fills": 728,
+          "fill_events": 780,
+          "buy_volume": 3712,
+          "sell_volume": 3808,
+          "turnover": 757616.72,
+          "maker_volume": 7520,
+          "taker_volume": 0,
+          "order_to_fill_ratio": 4.0256410256410255,
+          "cancel_to_fill_ratio": 3.0653846153846156,
+          "fill_rate": 0.2318471337579618,
+          "quote_messages": 5651
+        },
+        "pnl": {
+          "gross_pnl": 87.36,
+          "fees": 0.0,
+          "rebates": 1.504,
+          "net_pnl": 88.864,
+          "realized_pnl": 98.45571998924397,
+          "unrealized_pnl": -11.095719989243976,
+          "maximum_drawdown": 274.4416,
+          "pnl_per_traded_unit": 0.011817021276595745,
+          "pnl_per_fill": 0.11392820512820513,
+          "pnl_per_unit_turnover": 0.00011729413785904832,
+          "annualized_sharpe": null,
+          "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization."
+        },
+        "inventory": {
+          "mean": -15.233824378971693,
+          "standard_deviation": 70.8535167883451,
+          "maximum_long": 100,
+          "maximum_short": -100,
+          "mean_absolute": 65.92398420951281,
+          "time_near_limits_fraction": 0.4904679376083189,
+          "end_of_session": -96
+        },
+        "execution_quality": {
+          "realized_spread_ticks": 0.7352564102564103,
+          "effective_spread_ticks": 1.4705128205128206,
+          "markout_ticks_by_horizon_ns": {
+            "100000000": 0.7826923076923077,
+            "1000000000": 3.0367268041237114,
+            "5000000000": -1.3013793103448277
+          },
+          "markout_ticks_by_side": {
+            "bid": -4.850132625994695,
+            "ask": 6.529565217391304
+          },
+          "markout_summary_by_horizon_ns": {
+            "100000000": {
+              "all": {
+                "total_fill_quantity": 7520,
+                "observed_quantity": 7520,
+                "missing_quantity": 0,
+                "quantity_coverage": 1.0,
+                "total_fill_events": 780,
+                "observed_fill_events": 780,
+                "missing_fill_events": 0,
+                "quantity_weighted_markout_ticks": 1.026529255319149,
+                "quantity_weighted_markout_value": 0.01026529255319149,
+                "observed_markout_value": 77.195
+              },
+              "bid": {
+                "total_fill_quantity": 3712,
+                "observed_quantity": 3712,
+                "missing_quantity": 0,
+                "quantity_coverage": 1.0,
+                "total_fill_events": 387,
+                "observed_fill_events": 387,
+                "missing_fill_events": 0,
+                "quantity_weighted_markout_ticks": 3.1070851293103448,
+                "quantity_weighted_markout_value": 0.031070851293103448,
+                "observed_markout_value": 115.33500000000001
+              },
+              "ask": {
+                "total_fill_quantity": 3808,
+                "observed_quantity": 3808,
+                "missing_quantity": 0,
+                "quantity_coverage": 1.0,
+                "total_fill_events": 393,
+                "observed_fill_events": 393,
+                "missing_fill_events": 0,
+                "quantity_weighted_markout_ticks": -1.0015756302521008,
+                "quantity_weighted_markout_value": -0.010015756302521009,
+                "observed_markout_value": -38.14
+              }
+            },
+            "1000000000": {
+              "all": {
+                "total_fill_quantity": 7520,
+                "observed_quantity": 7480,
+                "missing_quantity": 40,
+                "quantity_coverage": 0.9946808510638298,
+                "total_fill_events": 780,
+                "observed_fill_events": 776,
+                "missing_fill_events": 4,
+                "quantity_weighted_markout_ticks": 3.467446524064171,
+                "quantity_weighted_markout_value": 0.034674465240641716,
+                "observed_markout_value": 259.365
+              },
+              "bid": {
+                "total_fill_quantity": 3712,
+                "observed_quantity": 3692,
+                "missing_quantity": 20,
+                "quantity_coverage": 0.9946120689655172,
+                "total_fill_events": 387,
+                "observed_fill_events": 385,
+                "missing_fill_events": 2,
+                "quantity_weighted_markout_ticks": 1.7314463705308776,
+                "quantity_weighted_markout_value": 0.01731446370530878,
+                "observed_markout_value": 63.92500000000001
+              },
+              "ask": {
+                "total_fill_quantity": 3808,
+                "observed_quantity": 3788,
+                "missing_quantity": 20,
+                "quantity_coverage": 0.9947478991596639,
+                "total_fill_events": 393,
+                "observed_fill_events": 391,
+                "missing_fill_events": 2,
+                "quantity_weighted_markout_ticks": 5.159450897571277,
+                "quantity_weighted_markout_value": 0.05159450897571278,
+                "observed_markout_value": 195.44
+              }
+            },
+            "5000000000": {
+              "all": {
+                "total_fill_quantity": 7520,
+                "observed_quantity": 7026,
+                "missing_quantity": 494,
+                "quantity_coverage": 0.9343085106382979,
+                "total_fill_events": 780,
+                "observed_fill_events": 725,
+                "missing_fill_events": 55,
+                "quantity_weighted_markout_ticks": 1.449971534301167,
+                "quantity_weighted_markout_value": 0.014499715343011673,
+                "observed_markout_value": 101.87500000000001
+              },
+              "bid": {
+                "total_fill_quantity": 3712,
+                "observed_quantity": 3466,
+                "missing_quantity": 246,
+                "quantity_coverage": 0.9337284482758621,
+                "total_fill_events": 387,
+                "observed_fill_events": 359,
+                "missing_fill_events": 28,
+                "quantity_weighted_markout_ticks": -17.24870167339873,
+                "quantity_weighted_markout_value": -0.1724870167339873,
+                "observed_markout_value": -597.84
+              },
+              "ask": {
+                "total_fill_quantity": 3808,
+                "observed_quantity": 3560,
+                "missing_quantity": 248,
+                "quantity_coverage": 0.9348739495798319,
+                "total_fill_events": 393,
+                "observed_fill_events": 366,
+                "missing_fill_events": 27,
+                "quantity_weighted_markout_ticks": 19.654915730337077,
+                "quantity_weighted_markout_value": 0.1965491573033708,
+                "observed_markout_value": 699.715
+              }
+            }
+          },
+          "markout_aggregation_note": "Quantity-weighted summaries are separate gross observed fill-to-future-midpoint diagnostics for each horizon, with both supplied per-unit outcomes finite. They include entry spread, are not net P&L, and do not isolate adverse drift. Missing quantity is not extrapolated; no observations gives null amounts/means. Coverage can differ by horizon. Legacy horizon means are event-row means; legacy side means pool horizon rows, including duplicate requests."
+        },
+        "market_conditions": {
+          "average_market_spread_ticks": 2.583033213285314,
+          "average_displayed_top_depth": 105.1461
+        },
+        "risk": {
+          "event_count": 120,
+          "kill_switch_active": false
+        },
+        "attribution": {
+          "spread_capture": 54.41500000000007,
+          "inventory_mark_to_market": 32.944999999999936,
+          "fees": -0.0,
+          "rebates": 1.504,
+          "adverse_selection_markout": null,
+          "adverse_selection_markout_note": "Unidentified: pooled forward markouts do not isolate adverse selection or form an additive P&L decomposition. legacy_pooled_markout_proxy retains the former numeric expression for compatibility only; use the separate per-horizon observed-quantity diagnostics.",
+          "legacy_pooled_markout_proxy": 66.71074090311268,
+          "reconciliation_residual": 0.0,
+          "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual."
+        },
+        "engineering": {
+          "events_processed": 20000,
+          "scheduler_events_processed": 80651,
+          "wall_clock_seconds": 1.9520131760000368,
+          "events_per_second": 10245.83247997483,
+          "peak_memory_bytes": null
+        }
+      },
+      "raw_fill_sha256": "125020184bb98c25474d290b55f7d2483ecce8148c2482049b33c2c32b7e96b1",
+      "raw_markouts_sha256": "b7d5d115d1189ed4507a63318e2c79d243f01ea2f25ebc879af36afb21167e07",
+      "portable_target_inputs": {
+        "fills.parquet": {
+          "path": "docs/evidence/markout-aggregation-20261108/retained-inputs/benchmark/fills.parquet",
+          "sha256": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+          "bytes": 26501
+        },
+        "markouts.parquet": {
+          "path": "docs/evidence/markout-aggregation-20261108/retained-inputs/benchmark/markouts.parquet",
+          "sha256": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+          "bytes": 56415
+        },
+        "run_config.yaml": {
+          "path": "docs/evidence/markout-aggregation-20261108/retained-inputs/benchmark/run_config.yaml",
+          "sha256": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a",
+          "bytes": 2450
+        }
+      },
+      "sources": {
+        "main": {
+          "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+          "source_sha256": {
+            "metrics": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+            "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+            "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+            "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+            "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+            "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+            "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark",
+          "input_sha256": {
+            "fills.parquet": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+            "inventory.parquet": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba",
+            "market.parquet": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3",
+            "markouts.parquet": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+            "orders.parquet": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0",
+            "pnl.parquet": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178",
+            "quotes.parquet": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b",
+            "risk_events.parquet": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4",
+            "run_config.yaml": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a",
+            "metrics.json": "952a72f78f2fb0fcf3afa8721d9ecb4a965ac92f7ef9daf56c191ce0badc9ee4",
+            "diagnostics.json": "960dacd9702c50a57daf983faa37ca3685e6dfa20e6a9063d63ba9856ea50ccb",
+            "summary.json": "e6f2f69b5bf08c7bf28211a436cfd398d8ebe228c86409cbe2c8fc74ebe96c63"
+          },
+          "provenance_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+          "manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+          "effective_config_sha256": "3f898e5cefc4c731d1f2056d8a7f9dd491b7d3ce0772af80ba0cee227468cdbc",
+          "event_stream_sha256": "8a845f3b206876f8f0769d9e051d7016436355c605297f4d14fda6df2cc04237",
+          "result_path": "/workspace/lob-market-maker-markout-review/experiments/markout-aggregation-20261108/retained-final/retained-benchmark-main.json",
+          "result_sha256": "7349a0f319be446158dc397b38e2b1acafce15f4d88bfea8e21bf7aafeb0098c"
+        },
+        "candidate": {
+          "resolved_revision": "789af1a89f863051b71130b93629d9829fbef324",
+          "source_sha256": {
+            "metrics": "90ceb80020de292c5e85e39be07188da5feac141a19887005c9e1037988fc809",
+            "backtest": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+            "report": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+            "exchange": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+            "orders": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+            "scheduler": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+            "config": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "input_path": "/workspace/lob-market-maker-risk-fix/experiments/exact-risk-20261105/integration-final/benchmark-main-artifacts-wp1qss3n/exact-risk-benchmark",
+          "input_sha256": {
+            "fills.parquet": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+            "inventory.parquet": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba",
+            "market.parquet": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3",
+            "markouts.parquet": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+            "orders.parquet": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0",
+            "pnl.parquet": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178",
+            "quotes.parquet": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b",
+            "risk_events.parquet": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4",
+            "run_config.yaml": "285b131773cef4b168149dbf5fe0684bdc671c1994a6b51a08f7ca069320d46a",
+            "metrics.json": "952a72f78f2fb0fcf3afa8721d9ecb4a965ac92f7ef9daf56c191ce0badc9ee4",
+            "diagnostics.json": "960dacd9702c50a57daf983faa37ca3685e6dfa20e6a9063d63ba9856ea50ccb",
+            "summary.json": "e6f2f69b5bf08c7bf28211a436cfd398d8ebe228c86409cbe2c8fc74ebe96c63"
+          },
+          "provenance_sha256": "3c62800f4b12a6bb800031efd814cd5c382b865983618fcfb5bfb32148a4646c",
+          "manifest_sha256": "87c21423e25e0d986a942d2123746db6313e1df73c2272a4d1231d1f468311e5",
+          "effective_config_sha256": "3f898e5cefc4c731d1f2056d8a7f9dd491b7d3ce0772af80ba0cee227468cdbc",
+          "event_stream_sha256": "8a845f3b206876f8f0769d9e051d7016436355c605297f4d14fda6df2cc04237",
+          "result_path": "/workspace/lob-market-maker-markout-review/experiments/markout-aggregation-20261108/retained-final/retained-benchmark-candidate.json",
+          "result_sha256": "f59e6b73eddbe35c7df572261d99395cb804140a08b286d34d0baf64b9206cd1"
+        }
+      }
+    }
+  }
+}

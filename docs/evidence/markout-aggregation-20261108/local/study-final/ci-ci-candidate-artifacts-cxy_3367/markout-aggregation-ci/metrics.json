@@ -1,0 +1,199 @@
+{
+  "attribution": {
+    "adverse_selection_markout": null,
+    "adverse_selection_markout_note": "Unidentified: pooled forward markouts do not isolate adverse selection or form an additive P&L decomposition. legacy_pooled_markout_proxy retains the former numeric expression for compatibility only; use the separate per-horizon observed-quantity diagnostics.",
+    "fees": -0.0,
+    "inventory_mark_to_market": 1.625,
+    "legacy_pooled_markout_proxy": 4.0921875,
+    "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+    "rebates": 0.027,
+    "reconciliation_residual": 0.0,
+    "spread_capture": 1.2249999999999999
+  },
+  "engineering": {
+    "events_per_second": 10000.515359831956,
+    "events_processed": 300,
+    "peak_memory_bytes": null,
+    "scheduler_events_processed": 1148,
+    "wall_clock_seconds": 0.029998454000178754
+  },
+  "execution_quality": {
+    "effective_spread_ticks": 1.8148148148148149,
+    "markout_aggregation_note": "Quantity-weighted summaries are separate gross observed fill-to-future-midpoint diagnostics for each horizon, with both supplied per-unit outcomes finite. They include entry spread, are not net P&L, and do not isolate adverse drift. Missing quantity is not extrapolated; no observations gives null amounts/means. Coverage can differ by horizon. Legacy horizon means are event-row means; legacy side means pool horizon rows, including duplicate requests.",
+    "markout_summary_by_horizon_ns": {
+      "100000000": {
+        "all": {
+          "missing_fill_events": 11,
+          "missing_quantity": 55,
+          "observed_fill_events": 16,
+          "observed_markout_value": 2.4250000000000003,
+          "observed_quantity": 80,
+          "quantity_coverage": 0.5925925925925926,
+          "quantity_weighted_markout_ticks": 3.03125,
+          "quantity_weighted_markout_value": 0.0303125,
+          "total_fill_events": 27,
+          "total_fill_quantity": 135
+        },
+        "ask": {
+          "missing_fill_events": 7,
+          "missing_quantity": 35,
+          "observed_fill_events": 8,
+          "observed_markout_value": 1.175,
+          "observed_quantity": 40,
+          "quantity_coverage": 0.5333333333333333,
+          "quantity_weighted_markout_ticks": 2.9375,
+          "quantity_weighted_markout_value": 0.029375000000000002,
+          "total_fill_events": 15,
+          "total_fill_quantity": 75
+        },
+        "bid": {
+          "missing_fill_events": 4,
+          "missing_quantity": 20,
+          "observed_fill_events": 8,
+          "observed_markout_value": 1.25,
+          "observed_quantity": 40,
+          "quantity_coverage": 0.6666666666666666,
+          "quantity_weighted_markout_ticks": 3.125,
+          "quantity_weighted_markout_value": 0.03125,
+          "total_fill_events": 12,
+          "total_fill_quantity": 60
+        }
+      },
+      "1000000000": {
+        "all": {
+          "missing_fill_events": 27,
+          "missing_quantity": 135,
+          "observed_fill_events": 0,
+          "observed_markout_value": null,
+          "observed_quantity": 0,
+          "quantity_coverage": 0.0,
+          "quantity_weighted_markout_ticks": null,
+          "quantity_weighted_markout_value": null,
+          "total_fill_events": 27,
+          "total_fill_quantity": 135
+        },
+        "ask": {
+          "missing_fill_events": 15,
+          "missing_quantity": 75,
+          "observed_fill_events": 0,
+          "observed_markout_value": null,
+          "observed_quantity": 0,
+          "quantity_coverage": 0.0,
+          "quantity_weighted_markout_ticks": null,
+          "quantity_weighted_markout_value": null,
+          "total_fill_events": 15,
+          "total_fill_quantity": 75
+        },
+        "bid": {
+          "missing_fill_events": 12,
+          "missing_quantity": 60,
+          "observed_fill_events": 0,
+          "observed_markout_value": null,
+          "observed_quantity": 0,
+          "quantity_coverage": 0.0,
+          "quantity_weighted_markout_ticks": null,
+          "quantity_weighted_markout_value": null,
+          "total_fill_events": 12,
+          "total_fill_quantity": 60
+        }
+      },
+      "5000000000": {
+        "all": {
+          "missing_fill_events": 27,
+          "missing_quantity": 135,
+          "observed_fill_events": 0,
+          "observed_markout_value": null,
+          "observed_quantity": 0,
+          "quantity_coverage": 0.0,
+          "quantity_weighted_markout_ticks": null,
+          "quantity_weighted_markout_value": null,
+          "total_fill_events": 27,
+          "total_fill_quantity": 135
+        },
+        "ask": {
+          "missing_fill_events": 15,
+          "missing_quantity": 75,
+          "observed_fill_events": 0,
+          "observed_markout_value": null,
+          "observed_quantity": 0,
+          "quantity_coverage": 0.0,
+          "quantity_weighted_markout_ticks": null,
+          "quantity_weighted_markout_value": null,
+          "total_fill_events": 15,
+          "total_fill_quantity": 75
+        },
+        "bid": {
+          "missing_fill_events": 12,
+          "missing_quantity": 60,
+          "observed_fill_events": 0,
+          "observed_markout_value": null,
+          "observed_quantity": 0,
+          "quantity_coverage": 0.0,
+          "quantity_weighted_markout_ticks": null,
+          "quantity_weighted_markout_value": null,
+          "total_fill_events": 12,
+          "total_fill_quantity": 60
+        }
+      }
+    },
+    "markout_ticks_by_horizon_ns": {
+      "100000000": 3.03125,
+      "1000000000": null,
+      "5000000000": null
+    },
+    "markout_ticks_by_side": {
+      "ask": 2.9375,
+      "bid": 3.125
+    },
+    "realized_spread_ticks": 0.9074074074074074
+  },
+  "inventory": {
+    "end_of_session": -15,
+    "maximum_long": 20,
+    "maximum_short": -15,
+    "mean": 2.2698412698412698,
+    "mean_absolute": 4.142857142857143,
+    "standard_deviation": 6.412305504229087,
+    "time_near_limits_fraction": 0.0
+  },
+  "market_conditions": {
+    "average_displayed_top_depth": 134.03,
+    "average_market_spread_ticks": 2.892361111111111
+  },
+  "pnl": {
+    "annualized_sharpe": null,
+    "fees": 0.0,
+    "gross_pnl": 2.85,
+    "maximum_drawdown": 0.09899999999999998,
+    "net_pnl": 2.877,
+    "pnl_per_fill": 0.10655555555555554,
+    "pnl_per_traded_unit": 0.02131111111111111,
+    "pnl_per_unit_turnover": 0.00021299593553115718,
+    "realized_pnl": 2.7,
+    "rebates": 0.027,
+    "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+    "unrealized_pnl": 0.15
+  },
+  "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+  "risk": {
+    "event_count": 0,
+    "kill_switch_active": false
+  },
+  "trading_activity": {
+    "buy_volume": 60,
+    "cancel_to_fill_ratio": 0.9259259259259259,
+    "cancelled_orders": 25,
+    "completed_fills": 27,
+    "fill_events": 27,
+    "fill_rate": 0.421875,
+    "maker_volume": 135,
+    "order_to_fill_ratio": 2.3703703703703702,
+    "partial_fills": 0,
+    "quote_messages": 89,
+    "rejected_orders": 0,
+    "sell_volume": 75,
+    "submitted_orders": 64,
+    "taker_volume": 0,
+    "turnover": 13507.300000000001
+  }
+}
