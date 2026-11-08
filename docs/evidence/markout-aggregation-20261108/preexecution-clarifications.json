@@ -1,0 +1,14 @@
+{
+  "phase": "Pre-execution clarification after original prereg34fdabc, before independent tests/runner freeze or any numerical outcomes.",
+  "scope": "No hypothesis, candidate budget, criterion or retained input changes. Exact metadata names and existing raw-API representation compatibility.",
+  "new_metadata_keys": [
+    "execution_quality.markout_aggregation_note",
+    "attribution.adverse_selection_markout_note"
+  ],
+  "existing_attribution_note": "Unchanged. New table and exact legacy proxy names remain as in original contract. Strict comparison removes only these four new keys/table/proxy and restores old scalar from legacy proxy.",
+  "join_representation": "compute_markouts serializes fill_price_ticks as float(authoritative price_ticks); compare optional price identity to the same float representation, preserving currently valid >2^53 price input behavior. Timestamps compare to original int(fill exchange timestamp). No promise of recovering prior float price precision.",
+  "duplicate_normalization": "Normalize each nonfinite/missing outcome field individually to missing; preserve finite counterpart and future-reference fields. Thus ticks1/valueNone and ticks2/valueNone conflict, as do different future references. Consistent duplicate requests are counted once in new summaries only.",
+  "additional_preexecution_compatibility_control": "One independent large-price >2^53 join control and missing-field-counterpart conflict control. They protect original source API semantics within the already preregistered join/duplicate contract, not a numerical search.",
+  "review": "Static source compatibility lead from performance_reproducer, accepted by root before outcomes and communicated to independent test/oracle author.",
+  "empty_row_compatibility": "New join/catalog validation applies only when markout rows identify a horizon. With no markout rows, return empty new table without imposing new fill-ID restrictions on legacy metrics callers; no observed/weighted result is claimed."
+}
