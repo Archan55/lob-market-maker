@@ -1,0 +1,31 @@
+{
+  "verdict": "GO",
+  "measured_candidate": "789af1a89f863051b71130b93629d9829fbef324",
+  "metrics_sha256": "90ceb80020de292c5e85e39be07188da5feac141a19887005c9e1037988fc809",
+  "reviewers": {
+    "independent_feasibility": {
+      "scope": "Protocol, frozen oracle/controllers, initial/repair source, actual JUnit/import/source/provenance/metric evidence and full quality, final report/curation/CI source. Remote CI verification separately pending.",
+      "finding": "Original43fail =29missingnewsummary+14missingjoin/conflict rejection, not43distinctbugs. Repaired43pass, same frozen corpus. Precisionbeforeexact[0,.25] vs[.25,.25] then1pass after. Alloldfields inverse-map exactly; retained mainreproducesoriginalmetrics; allnewtablefields match independentoracle. Full294pass/90.70%coverage source-bound. WrongSHAattempt stopped beforearchive/test."
+    },
+    "data_execution_audit": {
+      "scope": "Actual bytes/raw row decode and independently written integer as_integer_ratio/commonpower2 reweighting, without candidateFractionhelper reuse.",
+      "finding": "All16actualCIParquets rehashed/decoded, eightpairs exact. All24original retained files match Nov5 manifest/provenance. Every fixedfixture andretained horizon/all/bid/ask field matches independentintegeroracle includingfloatbits/counts/nulls/coverage. Rawproducer/legacy/othermetrics unchanged. Precisionbefore/after source/JUnit artifacts verified. No engine/test reruns/edits."
+    }
+  },
+  "repair_count": 1,
+  "repair_budget_exhausted": true,
+  "execution_deviation": "One after-repair command used incorrect nonexistentSHA845885...; stopped atgitrev-parse beforearchive/source/test. Preserved precision-after/report.json; corrected using verifiedHEAD in separate precision-after-final. No additional numericaltrial, denied action or uncertain outcome.",
+  "limitations": [
+    "Synthetic/exposed inputs only; no market advantage or calibrated passivefills.",
+    "No causal adverse-drift decomposition, no cross-horizonamount pooling/extrapolation.",
+    "Exact weighting of suppliedbinary64 observations, finaloutputbinary64 precision/range remains.",
+    "Retainedreanalysis local-only, notremoteCI.",
+    "Publication remotehead/terminalexact-headCI/artifactmetadata verification are separately pending; final source/report/artifact reviews GO."
+  ],
+  "report_and_curation_review": {
+    "reviewer": "independent_feasibility",
+    "verdict": "GO",
+    "finding": "Final report accurately distinguishes row/unit estimands, null/zero/censoring support, oldnullableAPI and exactlegacyproxy, one introducedprecisionrepair and wrongSHApretesterror; no economic/performanceoverclaim. All12reportlinksresolve; all90manifestentries/65curatedcopies/sixportableoriginalinputfiles matchrecordedhashes. CIexacthead/fullhistory/verification+precision/logupload scope sound; retained omitted.",
+    "remaining_gates": "Final remote SHA, terminal exact-head CI and artifact metadata/upload verification. NoZIP-byteaudit claimed."
+  }
+}

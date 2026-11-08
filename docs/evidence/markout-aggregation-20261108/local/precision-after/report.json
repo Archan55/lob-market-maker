@@ -1,0 +1,25 @@
+{
+  "status": "stopped",
+  "stage": "after",
+  "harness_sha256": "d73cf0f977c237b8a5a201b998f55bf201ddaddccdca8d36abafa71e5115338f",
+  "pins": {
+    "tests/unit/test_markout_quantity_precision_independent.py": "c695fa3fa8c1e22d045c02b21e2b32aa3d7cba371535a9544f86884f0c50625a",
+    "docs/evidence/markout-aggregation-20261108/contract.json": "f01dfc365c4784b363c856dc2895d55609cd8249d140759eb159cf3336bd7ddf",
+    "docs/evidence/markout-aggregation-20261108/quantity-precision-amendment.json": "b52c49842c488ee13fe50288871350b9c314df1c50c52f6280aa003c34e1c5bc",
+    "tools/reproduce_markout_aggregation.py": "fd0c9f0309541f5f579bffb55a9156f886fd998c28c4bd010175e280fac92fbf",
+    "tests/unit/test_markout_aggregation_independent.py": "f25de34f65497fef3df68306f81206737e520421b43804faa268a6a02b9eca29"
+  },
+  "prototype": "d6d9e6a2b1a4a2dd3a7b718cb0ce1acac2f18e1b",
+  "prototype_metrics_sha256": "022f60f4f2bb7edd4d7fb9aa0ef780be01f344d8e97ae90ded82b6a7b2d5ae5b",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "process_cap_seconds": 120,
+  "observations": [
+    {
+      "label": "after",
+      "revision": "84588542243582c15e34c9ec507cf1783af172e1",
+      "status": "in_progress"
+    }
+  ],
+  "error_type": "CalledProcessError",
+  "error": "Command '['git', 'rev-parse', '--verify', '84588542243582c15e34c9ec507cf1783af172e1^{commit}']' returned non-zero exit status 128."
+}

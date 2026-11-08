@@ -1,0 +1,75 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.2.0, pluggy-1.7.0
+rootdir: /workspace/lob-market-maker-markout-review
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0, hypothesis-6.170.14
+collected 294 items
+
+tests/integration/test_backtest.py ..                                    [  0%]
+tests/integration/test_backtest_edges.py ...............                 [  5%]
+tests/integration/test_cli_ingestion.py ..                               [  6%]
+tests/integration/test_golden_path.py .                                  [  6%]
+tests/integration/test_no_lookahead.py ...                               [  7%]
+tests/property/test_book_properties.py ...                               [  8%]
+tests/unit/test_additional_coverage.py ......................            [ 16%]
+tests/unit/test_benchmark.py .....                                       [ 18%]
+tests/unit/test_book.py ............                                     [ 22%]
+tests/unit/test_case_study.py ......                                     [ 24%]
+tests/unit/test_cli.py ..                                                [ 24%]
+tests/unit/test_data_adapters.py ............                            [ 28%]
+tests/unit/test_dataset_manifest.py ...                                  [ 29%]
+tests/unit/test_events_types_config.py .........................         [ 38%]
+tests/unit/test_exchange.py ......                                       [ 40%]
+tests/unit/test_experiments.py ..........                                [ 43%]
+tests/unit/test_markout_aggregation_independent.py ..................... [ 51%]
+......................                                                   [ 58%]
+tests/unit/test_markout_quantity_precision_independent.py .              [ 58%]
+tests/unit/test_metrics.py .....                                         [ 60%]
+tests/unit/test_orders.py ....                                           [ 61%]
+tests/unit/test_portfolio.py ................................            [ 72%]
+tests/unit/test_queue_model.py .......                                   [ 75%]
+tests/unit/test_quote_rejection_backoff.py ....                          [ 76%]
+tests/unit/test_report.py .........                                      [ 79%]
+tests/unit/test_risk.py ..............................                   [ 89%]
+tests/unit/test_scheduler.py .....                                       [ 91%]
+tests/unit/test_strategies.py ......                                     [ 93%]
+tests/unit/test_strategy_runtime.py ...                                  [ 94%]
+tests/unit/test_synthetic.py ......                                      [ 96%]
+tests/unit/test_validation.py ..........                                 [100%]
+
+- generated xml file: /workspace/lob-market-maker-markout-review/experiments/markout-aggregation-20261108/full-suite/result.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.14-final-0 _______________
+
+Name                               Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------------------
+src/lobmm/backtest.py                338     17    124     11    94%   127, 155, 256-258, 286, 357-366, 482, 528, 536-537, 544, 599-603, 621->634, 636
+src/lobmm/benchmark.py               152      1     34      3    98%   229->236, 264, 278->284
+src/lobmm/book.py                    227      3     76      3    98%   83, 96, 265
+src/lobmm/case_study.py              206     20     84     18    87%   85, 92, 103, 125, 134, 236-237, 241, 249, 257, 266, 283, 288, 295, 298, 388, 389->399, 424, 458->466, 494, 514-515
+src/lobmm/channels.py                 78     12     18      7    80%   44, 46, 53, 86, 97, 101, 110, 112, 118, 153, 167, 181
+src/lobmm/cli.py                     174     25     24      8    83%   116, 126, 145-146, 194, 199, 225-226, 283-284, 319-323, 339-340, 380-381, 393-394, 432-433, 613->624, 625->633, 650-651
+src/lobmm/config.py                  221      2     42      2    98%   76, 99
+src/lobmm/data/_adapter_utils.py      78     18     26      9    74%   40-41, 55, 58-59, 63, 81, 86, 104-105, 117, 134, 139-140, 148-149, 151, 184
+src/lobmm/data/lobster.py            255     27     90     21    86%   72, 86-87, 95, 113, 143, 154, 178->183, 195-197, 229, 234, 240, 250, 255, 300, 304, 345, 364->369, 384, 403-404, 422-423, 434, 594, 599-600
+src/lobmm/data/manifest.py            52      7     18      7    80%   33, 58, 60, 64, 66, 68, 119
+src/lobmm/data/schema.py              55      2      6      0    97%   62-63
+src/lobmm/data/tardis.py             258     19     90     21    89%   124, 128, 154, 197->181, 224, 234, 274, 289, 346, 364, 388, 426, 447, 462, 478, 542, 546->538, 561, 563, 575, 586
+src/lobmm/exchange.py                177     20     68     18    84%   106, 111, 128, 148, 174, 179, 191, 218-219, 263, 267, 321, 368, 370, 374, 376, 393, 397, 401, 428
+src/lobmm/experiments.py             183     13     50     12    89%   58, 64, 66, 70, 134, 181, 183, 211, 213, 227, 418->426, 500, 522-523
+src/lobmm/metrics.py                 211      4     76      4    97%   140, 145, 174, 287
+src/lobmm/orders.py                  260     32     76     31    81%   47, 49, 51, 53, 55, 57, 59, 64, 82, 84, 111, 144, 146, 148, 152, 154, 156, 157->159, 175, 180, 203, 205, 207, 209, 211, 303, 305, 335-336, 365, 396, 398, 402
+src/lobmm/portfolio.py               287      2    112      2    99%   439, 481
+src/lobmm/queue_model.py             302     23    122     27    88%   138, 140, 142, 144, 178, 193->184, 222, 239, 255, 262, 264, 293, 299, 314, 332->342, 353, 356, 357->359, 381, 395->400, 408, 433, 454, 543, 558, 568, 580
+src/lobmm/report.py                  520     51    178     29    87%   108-113, 120-125, 147, 150-151, 162-163, 165, 167, 221, 223, 228, 230, 246-256, 279->281, 296-297, 315->312, 385, 389->374, 512->526, 519, 523->513, 584->579, 604, 619, 650, 654->652, 762, 779, 829-830, 922, 945-946, 974, 985, 989, 999
+src/lobmm/risk.py                    285      0    126      1    99%   148->159
+src/lobmm/scheduler.py               120     31     46     10    67%   39, 75, 87, 93-97, 104, 107, 125, 127, 144-152, 155, 184-188, 196, 201-203, 209, 212, 234, 236, 241
+src/lobmm/strategies/base.py         323     25    136     23    89%   179, 195, 198, 201, 210, 212, 214, 228, 230, 234, 237, 239, 253, 255, 257, 309->311, 426, 457, 462-468, 476, 516, 534->exit, 548
+src/lobmm/synthetic.py               221     11     66      8    93%   250, 252, 274, 282, 346-347, 361, 363-364, 383-384
+------------------------------------------------------------------------------
+TOTAL                               5442    365   1766    275    91%
+
+14 files skipped due to complete coverage.
+Required test coverage of 90.0% reached. Total coverage: 90.70%
+============================= 294 passed in 11.85s =============================

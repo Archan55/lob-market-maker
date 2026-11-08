@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.688" timestamp="2026-11-08T15:24:37.096866+00:00" hostname="4729e00852da"><testcase classname="tests.unit.test_markout_quantity_precision_independent" name="test_large_quantity_split_preserves_exact_observed_markout_amount_and_means" time="0.001"><failure message="assert [0.0, 0.25] == [0.25, 0.25]&#10;  &#10;  At index 0 diff: 0.0 != 0.25&#10;  Use -v to get more diff">tests/unit/test_markout_quantity_precision_independent.py:82: in test_large_quantity_split_preserves_exact_observed_markout_amount_and_means
+    assert amounts == [0.25, 0.25]
+E   assert [0.0, 0.25] == [0.25, 0.25]
+E     
+E     At index 0 diff: 0.0 != 0.25
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>
