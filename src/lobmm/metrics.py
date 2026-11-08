@@ -7,6 +7,7 @@ import math
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from decimal import Decimal
+from fractions import Fraction
 from statistics import fmean, pstdev
 from typing import Any
 
@@ -227,8 +228,8 @@ def _quantity_markout_summary(
             ]
             total_quantity = sum(int(fill["quantity"]) for fill in universe)
             observed_quantity = observed_events = 0
-            tick_terms: list[float] = []
-            value_terms: list[float] = []
+            tick_total = Fraction(0)
+            value_total = Fraction(0)
             for fill in universe:
                 ticks, value = outcomes.get((fill["fill_id"], horizon), (None, None))
                 if ticks is None or value is None:
@@ -236,10 +237,10 @@ def _quantity_markout_summary(
                 quantity = int(fill["quantity"])
                 observed_quantity += quantity
                 observed_events += 1
-                tick_terms.append(quantity * ticks)
-                value_terms.append(quantity * value)
-            tick_total = math.fsum(tick_terms)
-            value_total = math.fsum(value_terms)
+                # Preserve integer quantity before cancellation; float products
+                # can lose valid units even when the exact final amount is small.
+                tick_total += quantity * Fraction.from_float(ticks)
+                value_total += quantity * Fraction.from_float(value)
             groups[name] = {
                 "total_fill_quantity": total_quantity,
                 "observed_quantity": observed_quantity,
@@ -250,13 +251,17 @@ def _quantity_markout_summary(
                 "total_fill_events": len(universe),
                 "observed_fill_events": observed_events,
                 "missing_fill_events": len(universe) - observed_events,
-                "quantity_weighted_markout_ticks": tick_total / observed_quantity
+                "quantity_weighted_markout_ticks": float(tick_total / observed_quantity)
                 if observed_quantity
                 else None,
-                "quantity_weighted_markout_value": value_total / observed_quantity
+                "quantity_weighted_markout_value": float(
+                    value_total / observed_quantity
+                )
                 if observed_quantity
                 else None,
-                "observed_markout_value": value_total if observed_quantity else None,
+                "observed_markout_value": float(value_total)
+                if observed_quantity
+                else None,
             }
         result[str(horizon)] = groups
     return result

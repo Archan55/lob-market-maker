@@ -1,0 +1,17 @@
+{
+  "phase": "After actual frozen prototype failure, before first repaired candidate numerical execution",
+  "verdict": "GO",
+  "reviewers": [
+    "independent_feasibility",
+    "performance_reproducer/fraction_float_static"
+  ],
+  "repair_count": 1,
+  "repair_budget_exhausted": true,
+  "prototype_commit": "d6d9e6a2b1a4a2dd3a7b718cb0ce1acac2f18e1b",
+  "prototype_metrics_sha256": "022f60f4f2bb7edd4d7fb9aa0ef780be01f344d8e97ae90ded82b6a7b2d5ae5b",
+  "actual_before": "One exact frozen node, AssertionError amountpair [0.0,0.25] vs[0.25,0.25], noerrors/skips; rawsource/JUnit/importpins independently checked.",
+  "repaired_metrics_sha256": "90ceb80020de292c5e85e39be07188da5feac141a19887005c9e1037988fc809",
+  "scope": "Exact integer quantity times Fraction.from_float supplied finite outcomes, sums and division exact before final float; no joins/masks/rawproducer/count/null/metadata/legacyformula changes. No Decimal context or prior Portfolio studies altered.",
+  "remaining_gates": "One after-only supplement, original candidate fixturecorpus+oneCI300 using originalmainbaseline, fixedlocal retainedcohortsreadonly, fullquality and final actualartifact review/remote exact-headCI. If remaining gates fail, stop; no secondrepair/inputselection/tolerance relaxation.",
+  "representation_limit": "Exact weighting of supplied binary64 perunit data; original observations/output floats retain their precision/range, not unlimitedexactcurrency or economicclaim. Added post-run arithmetic costs unmeasured as performance."
+}
