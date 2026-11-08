@@ -1,0 +1,424 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                              [100%]
+=================================== FAILURES ===================================
+_ test_frozen_cases_match_every_horizon_side_and_legacy_field[single_horizon] __
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_frozen_cases_match_every_horizon_side_and_legacy_field[mixed_horizons] __
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+__ test_frozen_cases_match_every_horizon_side_and_legacy_field[split_single] ___
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+___ test_frozen_cases_match_every_horizon_side_and_legacy_field[split_mixed] ___
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+___ test_frozen_cases_match_every_horizon_side_and_legacy_field[ask_mirror] ____
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+___ test_frozen_cases_match_every_horizon_side_and_legacy_field[mixed_sides] ___
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+__ test_frozen_cases_match_every_horizon_side_and_legacy_field[censored_late] __
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_frozen_cases_match_every_horizon_side_and_legacy_field[horizon_censoring] _
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+___ test_frozen_cases_match_every_horizon_side_and_legacy_field[all_missing] ___
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_frozen_cases_match_every_horizon_side_and_legacy_field[duplicate_horizon] _
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+______ test_frozen_cases_match_every_horizon_side_and_legacy_field[empty] ______
+tests/unit/test_markout_aggregation_independent.py:347: in test_frozen_cases_match_every_horizon_side_and_legacy_field
+    _assert_case(build_case(name))
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_____ test_hand_expected_single_horizon_and_split_expose_proxy_instability _____
+tests/unit/test_markout_aggregation_independent.py:352: in test_hand_expected_single_horizon_and_split_expose_proxy_instability
+    original, children = _assert_case(base), _assert_case(split)
+                         ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_identical_fill_splitting_preserves_quantity_estimands_not_event_counts[single_horizon-split_single] _
+tests/unit/test_markout_aggregation_independent.py:375: in test_identical_fill_splitting_preserves_quantity_estimands_not_event_counts
+    a, b = _assert_case(base), _assert_case(split)
+           ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_identical_fill_splitting_preserves_quantity_estimands_not_event_counts[mixed_horizons-split_mixed] _
+tests/unit/test_markout_aggregation_independent.py:375: in test_identical_fill_splitting_preserves_quantity_estimands_not_event_counts
+    a, b = _assert_case(base), _assert_case(split)
+           ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_horizon_addition_and_duplicate_requests_leave_each_identified_summary_unchanged _
+tests/unit/test_markout_aggregation_independent.py:396: in test_horizon_addition_and_duplicate_requests_leave_each_identified_summary_unchanged
+    results = [_assert_case(case) for case in (single, mixed, duplicate)]
+               ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+____ test_mirrored_sell_signs_match_buy_estimands_in_the_corresponding_side ____
+tests/unit/test_markout_aggregation_independent.py:410: in test_mirrored_sell_signs_match_buy_estimands_in_the_corresponding_side
+    _assert_case(build_case(name))["execution_quality"][
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_censored_quantity_lowers_coverage_without_extrapolating_observed_amount _
+tests/unit/test_markout_aggregation_independent.py:425: in test_censored_quantity_lowers_coverage_without_extrapolating_observed_amount
+    _assert_case(build_case(name)) for name in ("mixed_horizons", "censored_late")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+___ test_horizons_report_different_observation_support_without_pooled_amount ___
+tests/unit/test_markout_aggregation_independent.py:439: in test_horizons_report_different_observation_support_without_pooled_amount
+    summary = _assert_case(build_case("horizon_censoring"))["execution_quality"][
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+____ test_zero_observed_amount_is_distinct_from_all_missing_and_empty_group ____
+tests/unit/test_markout_aggregation_independent.py:449: in test_zero_observed_amount_is_distinct_from_all_missing_and_empty_group
+    zero = _assert_case(build_case("mixed_sides"))["execution_quality"][
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_____ test_missing_markout_row_is_unobserved_within_an_identified_horizon ______
+tests/unit/test_markout_aggregation_independent.py:471: in test_missing_markout_row_is_unobserved_within_an_identified_horizon
+    summary = _assert_case(case)["execution_quality"]["markout_summary_by_horizon_ns"][
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_____ test_normalized_nonfinite_paired_outcome_is_missing_not_imputed[nan] _____
+tests/unit/test_markout_aggregation_independent.py:486: in test_normalized_nonfinite_paired_outcome_is_missing_not_imputed
+    summary = _assert_case(case)["execution_quality"]["markout_summary_by_horizon_ns"][
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_____ test_normalized_nonfinite_paired_outcome_is_missing_not_imputed[inf] _____
+tests/unit/test_markout_aggregation_independent.py:486: in test_normalized_nonfinite_paired_outcome_is_missing_not_imputed
+    summary = _assert_case(case)["execution_quality"]["markout_summary_by_horizon_ns"][
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+____ test_normalized_nonfinite_paired_outcome_is_missing_not_imputed[none] _____
+tests/unit/test_markout_aggregation_independent.py:486: in test_normalized_nonfinite_paired_outcome_is_missing_not_imputed
+    summary = _assert_case(case)["execution_quality"]["markout_summary_by_horizon_ns"][
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_asymmetric_missingness_requires_both_fields_but_preserves_legacy_masks[markout_ticks] _
+tests/unit/test_markout_aggregation_independent.py:501: in test_asymmetric_missingness_requires_both_fields_but_preserves_legacy_masks
+    summary = _assert_case(case)["execution_quality"]["markout_summary_by_horizon_ns"][
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_ test_asymmetric_missingness_requires_both_fields_but_preserves_legacy_masks[markout_value] _
+tests/unit/test_markout_aggregation_independent.py:501: in test_asymmetric_missingness_requires_both_fields_but_preserves_legacy_masks
+    summary = _assert_case(case)["execution_quality"]["markout_summary_by_horizon_ns"][
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_____ test_provided_per_unit_currency_is_not_recomputed_from_tick_outcome ______
+tests/unit/test_markout_aggregation_independent.py:512: in test_provided_per_unit_currency_is_not_recomputed_from_tick_outcome
+    summary = _assert_case(case)["execution_quality"]["markout_summary_by_horizon_ns"][
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+______ test_consistent_normalized_missing_duplicate_requests_are_accepted ______
+tests/unit/test_markout_aggregation_independent.py:525: in test_consistent_normalized_missing_duplicate_requests_are_accepted
+    summary = _assert_case(case)["execution_quality"]["markout_summary_by_horizon_ns"][
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+_____ test_conflicting_duplicate_outcome_or_reference_is_rejected[outcome] _____
+tests/unit/test_markout_aggregation_independent.py:547: in test_conflicting_duplicate_outcome_or_reference_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_conflicting_duplicate_outcome_or_reference_is_rejected[future-reference] _
+tests/unit/test_markout_aggregation_independent.py:547: in test_conflicting_duplicate_outcome_or_reference_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_ test_conflicting_duplicate_outcome_or_reference_is_rejected[finite-counterpart] _
+tests/unit/test_markout_aggregation_independent.py:547: in test_conflicting_duplicate_outcome_or_reference_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+____ test_predefined_invalid_authoritative_join_is_rejected[duplicate-fill] ____
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_____ test_predefined_invalid_authoritative_join_is_rejected[unknown-fill] _____
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_________ test_predefined_invalid_authoritative_join_is_rejected[side] _________
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+______ test_predefined_invalid_authoritative_join_is_rejected[fill-time] _______
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+______ test_predefined_invalid_authoritative_join_is_rejected[fill-price] ______
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+____ test_predefined_invalid_authoritative_join_is_rejected[zero-quantity] _____
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+__ test_predefined_invalid_authoritative_join_is_rejected[negative-quantity] ___
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+___ test_predefined_invalid_authoritative_join_is_rejected[boolean-quantity] ___
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_____ test_predefined_invalid_authoritative_join_is_rejected[zero-horizon] _____
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+___ test_predefined_invalid_authoritative_join_is_rejected[negative-horizon] ___
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+___ test_predefined_invalid_authoritative_join_is_rejected[boolean-horizon] ____
+tests/unit/test_markout_aggregation_independent.py:593: in test_predefined_invalid_authoritative_join_is_rejected
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+__ test_unknown_horizon_does_not_add_fill_join_restrictions_to_legacy_metrics __
+tests/unit/test_markout_aggregation_independent.py:605: in test_unknown_horizon_does_not_add_fill_join_restrictions_to_legacy_metrics
+    metrics = _assert_case(case)
+              ^^^^^^^^^^^^^^^^^^
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+______ test_large_integer_fill_price_uses_the_existing_raw_float_identity ______
+tests/unit/test_markout_aggregation_independent.py:636: in test_large_integer_fill_price_uses_the_existing_raw_float_identity
+    _assert_case(case)
+tests/unit/test_markout_aggregation_independent.py:336: in _assert_case
+    assert_metrics_match(case["fills"], case["markouts"], metrics)
+tests/unit/test_markout_aggregation_independent.py:299: in assert_metrics_match
+    actual = metrics["execution_quality"]["markout_summary_by_horizon_ns"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'markout_summary_by_horizon_ns'
+=========================== short test summary info ============================
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[single_horizon]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[mixed_horizons]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[split_single]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[split_mixed]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[ask_mirror]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[mixed_sides]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[censored_late]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[horizon_censoring]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[all_missing]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[duplicate_horizon]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_frozen_cases_match_every_horizon_side_and_legacy_field[empty]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_hand_expected_single_horizon_and_split_expose_proxy_instability
+FAILED tests/unit/test_markout_aggregation_independent.py::test_identical_fill_splitting_preserves_quantity_estimands_not_event_counts[single_horizon-split_single]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_identical_fill_splitting_preserves_quantity_estimands_not_event_counts[mixed_horizons-split_mixed]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_horizon_addition_and_duplicate_requests_leave_each_identified_summary_unchanged
+FAILED tests/unit/test_markout_aggregation_independent.py::test_mirrored_sell_signs_match_buy_estimands_in_the_corresponding_side
+FAILED tests/unit/test_markout_aggregation_independent.py::test_censored_quantity_lowers_coverage_without_extrapolating_observed_amount
+FAILED tests/unit/test_markout_aggregation_independent.py::test_horizons_report_different_observation_support_without_pooled_amount
+FAILED tests/unit/test_markout_aggregation_independent.py::test_zero_observed_amount_is_distinct_from_all_missing_and_empty_group
+FAILED tests/unit/test_markout_aggregation_independent.py::test_missing_markout_row_is_unobserved_within_an_identified_horizon
+FAILED tests/unit/test_markout_aggregation_independent.py::test_normalized_nonfinite_paired_outcome_is_missing_not_imputed[nan]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_normalized_nonfinite_paired_outcome_is_missing_not_imputed[inf]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_normalized_nonfinite_paired_outcome_is_missing_not_imputed[none]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_asymmetric_missingness_requires_both_fields_but_preserves_legacy_masks[markout_ticks]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_asymmetric_missingness_requires_both_fields_but_preserves_legacy_masks[markout_value]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_provided_per_unit_currency_is_not_recomputed_from_tick_outcome
+FAILED tests/unit/test_markout_aggregation_independent.py::test_consistent_normalized_missing_duplicate_requests_are_accepted
+FAILED tests/unit/test_markout_aggregation_independent.py::test_conflicting_duplicate_outcome_or_reference_is_rejected[outcome]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_conflicting_duplicate_outcome_or_reference_is_rejected[future-reference]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_conflicting_duplicate_outcome_or_reference_is_rejected[finite-counterpart]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[duplicate-fill]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[unknown-fill]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[side]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[fill-time]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[fill-price]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[zero-quantity]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[negative-quantity]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[boolean-quantity]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[zero-horizon]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[negative-horizon]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_predefined_invalid_authoritative_join_is_rejected[boolean-horizon]
+FAILED tests/unit/test_markout_aggregation_independent.py::test_unknown_horizon_does_not_add_fill_join_restrictions_to_legacy_metrics
+FAILED tests/unit/test_markout_aggregation_independent.py::test_large_integer_fill_price_uses_the_existing_raw_float_identity
+43 failed in 0.58s
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
