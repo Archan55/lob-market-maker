@@ -1,0 +1,911 @@
+{
+  "scope": "Fictional pure completed-audit-row fixtures, not a reconstructed tape or calibrated fills. Market/fill timing enters only ex-post compute_markouts. No outcome evaluation has occurred.",
+  "common_build_metrics": {
+    "orders": [],
+    "inventory": [],
+    "pnl": [
+      {
+        "timestamp_ns": 0,
+        "gross_pnl": 10.0,
+        "net_pnl": 9.0,
+        "fees": 1.0,
+        "rebates": 0.0,
+        "realized_pnl": 10.0,
+        "unrealized_pnl": 0.0
+      }
+    ],
+    "risk_events": [],
+    "quote_messages": [],
+    "diagnostics": {
+      "max_abs_inventory": 1000
+    }
+  },
+  "cases": {
+    "single_horizon": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B",
+          "side": 1,
+          "quantity": 9,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "mixed_horizons": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B",
+          "side": 1,
+          "quantity": 9,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10,
+        30
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "split_single": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B1",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B2",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B3",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B4",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B5",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B6",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B7",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B8",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B9",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "split_mixed": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B1",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B2",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B3",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B4",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B5",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B6",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B7",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B8",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B9",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10,
+        30
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "ask_mirror": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": -1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B",
+          "side": -1,
+          "quantity": 9,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10,
+        30
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 90,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 102,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 96,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "mixed_sides": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B",
+          "side": 1,
+          "quantity": 9,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "S",
+          "side": -1,
+          "quantity": 2,
+          "price_ticks": 102,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10,
+        30
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "censored_late": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B",
+          "side": 1,
+          "quantity": 9,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "L",
+          "side": 1,
+          "quantity": 100,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 100,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10,
+        30
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "horizon_censoring": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B",
+          "side": 1,
+          "quantity": 9,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "C",
+          "side": 1,
+          "quantity": 4,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 40,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10,
+        30
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "all_missing": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B",
+          "side": 1,
+          "quantity": 9,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        1000
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "duplicate_horizon": {
+      "fills": [
+        {
+          "fill_id": "A",
+          "side": 1,
+          "quantity": 1,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 0,
+          "liquidity_role": "maker"
+        },
+        {
+          "fill_id": "B",
+          "side": 1,
+          "quantity": 9,
+          "price_ticks": 100,
+          "exchange_fill_timestamp_ns": 20,
+          "liquidity_role": "maker"
+        }
+      ],
+      "horizons_ns": [
+        10,
+        30,
+        30
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    },
+    "empty": {
+      "fills": [],
+      "horizons_ns": [
+        10,
+        30
+      ],
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 10,
+          "midpoint_ticks": 110,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 20,
+          "midpoint_ticks": 100,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 30,
+          "midpoint_ticks": 98,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        },
+        {
+          "timestamp_ns": 50,
+          "midpoint_ticks": 104,
+          "spread_ticks": 2,
+          "best_bid_quantity": 100,
+          "best_ask_quantity": 100
+        }
+      ],
+      "tick_size": "0.25"
+    }
+  },
+  "predefined_row_mutations": {
+    "missing_row": "Drop B,h30 from mixed_horizons: H30 observedq1,totalq10,value-.5,cov.1; missing row not zero.",
+    "nonfinite": "In single_horizon replace both A outcome fields with NaN, +Inf or None separately; A is unavailable, Bq9 observedvalue-4.5,coverage.9. Serialize nonfinite provenance as kind strings rather than nonstandard JSON numbers.",
+    "duplicate_conflict": "Append copy of B,h10 with markout_ticks+1 and corresponding markout_value+tick; reject conflict.",
+    "join_errors": [
+      "duplicate authoritative fill ID",
+      "unknown markout fill ID",
+      "side mismatch",
+      "provided fill timestamp mismatch",
+      "provided fill price mismatch",
+      "zero or negative fill quantity",
+      "boolean fill quantity",
+      "nonpositive or boolean horizon"
+    ]
+  },
+  "hand_expected_primary": {
+    "single_horizon": {
+      "total_quantity": 10,
+      "observed_quantity": 10,
+      "observed_total_ticks_times_quantity": -8,
+      "observed_markout_value": -2.0,
+      "quantity_weighted_markout_ticks": -0.8,
+      "legacy_pooled_proxy": 10.0
+    },
+    "split_single": {
+      "same_quantity_weighted_results": true,
+      "legacy_pooled_proxy": -2.0
+    },
+    "mixed_horizons": {
+      "h10_observed_markout_value": -2.0,
+      "h30_observed_markout_value": 8.5,
+      "legacy_pooled_proxy": 6.25
+    },
+    "split_mixed": {
+      "same_quantity_weighted_results": true,
+      "legacy_pooled_proxy": 3.25
+    },
+    "duplicate_horizon": {
+      "same_quantity_weighted_results_as_mixed": true,
+      "legacy_pooled_proxy": 5.0
+    },
+    "censored_late": {
+      "same_observed_amounts_as_mixed": true,
+      "total_quantity": 110,
+      "observed_quantity": 10,
+      "quantity_coverage": "1/11",
+      "legacy_pooled_proxy": 68.75
+    },
+    "horizon_censoring": {
+      "total_quantity": 14,
+      "h10_observed_quantity": 14,
+      "h30_observed_quantity": 10,
+      "h10_observed_markout_value": 2.0,
+      "h30_observed_markout_value": 8.5
+    },
+    "mixed_sides": {
+      "h10_observed_markout_value": 0.0,
+      "h30_observed_markout_value": 7.5
+    },
+    "all_missing": {
+      "observed_quantity": 0,
+      "quantity_coverage": 0.0,
+      "observed_markout_value": null,
+      "quantity_weighted_markout_ticks": null
+    },
+    "empty": {
+      "new_horizon_table": {},
+      "legacy_proxy": 0.0,
+      "adverse_selection_markout": null
+    }
+  }
+}

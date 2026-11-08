@@ -1,0 +1,9 @@
+{
+  "phase": "Before outcomes or implementation",
+  "reviewers": {
+    "independent_feasibility": "GO. Explicit API null+exact legacy proxy, keep descriptive old means; fixed controls sufficient; unique joins/dedup/conflict rules; no causal/economic claim.",
+    "data_execution_audit": "GO. Per-horizon observed A=sumqv, coverage with all authoritative qty; null vs zero and split/count distinction, duplicate-request compatibility; no rawmarkout/execution changes.",
+    "growth_reproducer": "No new real data/calibration; metadata-only feasibility STOP, prior candidates preserved."
+  },
+  "selection_effects": "Parent static lead and source/doc algebra motivated one candidate; no numerical search or retained aggregate inspection before protocol. Previous exposed cohorts labeled exposed."
+}
