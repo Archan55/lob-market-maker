@@ -1,0 +1,37 @@
+{
+  "phase": "Static acceptance clarification before test/provider/controller freeze and BEFORE any new numerical evaluation, tape validation or engine run.",
+  "original_contract": "d8f4a8192d7595118c48592601db7807a203eb2a; contract8862b5a andfixtures96c30a remainunchanged.",
+  "frozen_corpus_prediction": {
+    "nodes": 64,
+    "main_failed": 26,
+    "main_passed": 38,
+    "errors": 0,
+    "skipped": 0,
+    "pure_constructor_error_sets": {
+      "fixed_spread": [
+        "flat_low",
+        "low_long_half",
+        "low_short_half",
+        "low_short_cap"
+      ],
+      "inventory_aware": [
+        "flat_low",
+        "low_long_half",
+        "nonpositive_ask"
+      ],
+      "microprice": [
+        "flat_low",
+        "low_long_half",
+        "nonpositive_ask"
+      ]
+    },
+    "modes": "Both post_only True/False. All six managed probes fail only at low_decide constructor; all other pure controls and all strict-validator controls succeed."
+  },
+  "low_evidence_refinements": [
+    "Certificate explicitly strict, reconstructed and nonempty, with all nine events valid",
+    "Complete original ASK ManagedQuote state equal before/after decision10",
+    "First original BID cancel report and order post-state explicitly CANCELLED at10, remaining1, no fills, combined with one command and age<minimumlifetime"
+  ],
+  "interpretation": "This distinguishes a public managed pending-cancel probe (no acknowledgement invented) from the one observed physical completion in the frozen zero-delay tape. It does not establish general cancellation liveness.",
+  "no_scope_or_input_change": "Same policies, equations, omission rule, exact final tape, low config, source baseline, ordinary controls, one candidate/one repair budget and publication rules; this makes already static expected outcomes/evidence gates explicit before results."
+}
