@@ -38,8 +38,8 @@ class MicropriceStrategy(MarketMakingStrategy):
             self.config.order_size, known_inventory, max_abs_inventory
         )
         quotes: list[DesiredQuote] = []
-        if known_inventory < max_abs_inventory:
+        if known_inventory < max_abs_inventory and bid > 0:
             quotes.append(DesiredQuote(Side.BID, bid, size))
-        if known_inventory > -max_abs_inventory:
+        if known_inventory > -max_abs_inventory and ask > 0:
             quotes.append(DesiredQuote(Side.ASK, ask, size))
         return tuple(quotes)
