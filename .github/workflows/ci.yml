@@ -9,6 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Record executed source
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/positive-price-ci
+          git rev-parse HEAD | tee experiments/positive-price-ci/checkout.txt
+          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -22,6 +33,35 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --junitxml=experiments/positive-price-ci/full-suite.xml
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Archived main and exact-head positive-price verification
+        run: |
+          python tools/reproduce_positive_price.py --stage verify \
+            --candidate "$(git rev-parse HEAD)" \
+            --output experiments/positive-price-ci/verify
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path("experiments/positive-price-ci/verify/report.json").read_text())
+          print(json.dumps({key: report[key] for key in ("status", "stage", "sources", "criterion_passed", "attempts")}, sort_keys=True))
+          PY
+      - name: Retain source and numerical evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: positive-price-${{ steps.source.outputs.head_sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            experiments/positive-price-ci/
+            runs/ci-smoke/
+            docs/evidence/positive-price-20261109/
+            docs/POSITIVE_PRICE_QUOTES.md
+            tools/reproduce_positive_price.py
+            tools/positive_price_witnesses.py
+            tests/unit/test_positive_price_quotes_independent.py
+            src/lobmm/strategies/fixed_spread.py
+            src/lobmm/strategies/inventory_aware.py
+            src/lobmm/strategies/microprice.py

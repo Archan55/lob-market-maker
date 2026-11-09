@@ -1,0 +1,2069 @@
+{
+  "committed_copies": [
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/corpus-all-main.json",
+      "original": "baseline/corpus-all-main.json",
+      "sha256": "b3f7d33ede6109dad4213cda5f4dac4dd99acbb46d9b014472fe760fd1845dc2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/corpus-all-main.log",
+      "original": "baseline/corpus-all-main.log",
+      "sha256": "828dad93dd7b98fb22a8d1337b54d546d6c4432a8c85ebe55eeb4565408544b3"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/corpus-all-main.probes.json",
+      "original": "baseline/corpus-all-main.probes.json",
+      "sha256": "c3e73b40ca2dca73966ada1d19253bc8ef7c92febfe43e4476c9fb52da0bad5c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/corpus-all-main.xml",
+      "original": "baseline/corpus-all-main.xml",
+      "sha256": "ec8e04c52ac10d1e0a06b3d715c28c7620de6c41c7c6148b7cef36e5ccb8a098"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/environment.json",
+      "original": "baseline/environment.json",
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-fixed_spread-main/inputs.json",
+      "original": "baseline/low-fixed_spread-main/inputs.json",
+      "sha256": "e6f2a9ddcab0dd827e3bd0af44539a8b4802eb35331c5b6a5781aec6b8868985"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-fixed_spread-main/oracle.json",
+      "original": "baseline/low-fixed_spread-main/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-fixed_spread-main/raw-witness.json",
+      "original": "baseline/low-fixed_spread-main/raw-witness.json",
+      "sha256": "2328baceb3593adbc1d4c8d00b9cf4ce8267942c3c27f5e25c326b63b320654f"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-fixed_spread-main/result.json",
+      "original": "baseline/low-fixed_spread-main/result.json",
+      "sha256": "2328baceb3593adbc1d4c8d00b9cf4ce8267942c3c27f5e25c326b63b320654f"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-fixed_spread-main/trace.json",
+      "original": "baseline/low-fixed_spread-main/trace.json",
+      "sha256": "594354482c642a73dbb87f5ec63f5b33a4d5d5507fdf0c9cdb2c056b747ee93a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-fixed_spread-main.json",
+      "original": "baseline/low-fixed_spread-main.json",
+      "sha256": "8cb51e946d10b6d33350e6665bc1b4643bdcb3583183d946524986fad335329f"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-fixed_spread-main.log",
+      "original": "baseline/low-fixed_spread-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-inventory_aware-main/inputs.json",
+      "original": "baseline/low-inventory_aware-main/inputs.json",
+      "sha256": "b4f4bfb0e72292d33de4a0e7113d79f266724443d5a4dd951a9c24e009c50291"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-inventory_aware-main/oracle.json",
+      "original": "baseline/low-inventory_aware-main/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-inventory_aware-main/raw-witness.json",
+      "original": "baseline/low-inventory_aware-main/raw-witness.json",
+      "sha256": "0532d656fb6f44f524b7fed7521b55ebfdb126a6c8730b27c591c277b942baf7"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-inventory_aware-main/result.json",
+      "original": "baseline/low-inventory_aware-main/result.json",
+      "sha256": "0532d656fb6f44f524b7fed7521b55ebfdb126a6c8730b27c591c277b942baf7"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-inventory_aware-main/trace.json",
+      "original": "baseline/low-inventory_aware-main/trace.json",
+      "sha256": "594354482c642a73dbb87f5ec63f5b33a4d5d5507fdf0c9cdb2c056b747ee93a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-inventory_aware-main.json",
+      "original": "baseline/low-inventory_aware-main.json",
+      "sha256": "a6e5020fa4bd5a9c032bb57ddaf0ea64c25eae32fa125e65a103547c2dd5acf8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-inventory_aware-main.log",
+      "original": "baseline/low-inventory_aware-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-microprice-main/inputs.json",
+      "original": "baseline/low-microprice-main/inputs.json",
+      "sha256": "6e8c23b7216f6dcf9b67f14c73fce8ebb60e3d480c3823062e1be0606ca2d110"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-microprice-main/oracle.json",
+      "original": "baseline/low-microprice-main/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-microprice-main/raw-witness.json",
+      "original": "baseline/low-microprice-main/raw-witness.json",
+      "sha256": "2985f3a21e3ff5d1451fdd0341c583dc1de6028b0ce62c7b99787745f5b3f7d2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-microprice-main/result.json",
+      "original": "baseline/low-microprice-main/result.json",
+      "sha256": "2985f3a21e3ff5d1451fdd0341c583dc1de6028b0ce62c7b99787745f5b3f7d2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-microprice-main/trace.json",
+      "original": "baseline/low-microprice-main/trace.json",
+      "sha256": "594354482c642a73dbb87f5ec63f5b33a4d5d5507fdf0c9cdb2c056b747ee93a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-microprice-main.json",
+      "original": "baseline/low-microprice-main.json",
+      "sha256": "8d9abfb2bd2e1d985a8a3cafbde796a80fb6f04180575d7cda4ac8dd2d2d9418"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/low-microprice-main.log",
+      "original": "baseline/low-microprice-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/diagnostics.json",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/diagnostics.json",
+      "sha256": "19f9e126b1605dd88344e32ab3d772c166f96052d5a755339263bc1b39812c8a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/fills.parquet",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/fills.parquet",
+      "sha256": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/inventory.parquet",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/inventory.parquet",
+      "sha256": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/market.parquet",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/markouts.parquet",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/markouts.parquet",
+      "sha256": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/metrics.json",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/metrics.json",
+      "sha256": "d47a09513a21c6bb9307242c6ec574a4ac0b1e1e3f62c8c04ff5de9803660a53"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/orders.parquet",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/orders.parquet",
+      "sha256": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/pnl.parquet",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/pnl.parquet",
+      "sha256": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/quotes.parquet",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/quotes.parquet",
+      "sha256": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/risk_events.parquet",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/run_config.yaml",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/run_config.yaml",
+      "sha256": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/summary.json",
+      "original": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/summary.json",
+      "sha256": "ae1456e51524a505633868ecdabb56830862008a6a9acde76dbd5fa81184bcca"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main.json",
+      "original": "baseline/normal-fixed_spread-main.json",
+      "sha256": "205fb5e61c43fdf2fe6ce70034852ca898b07c4e9769a1875ac7971615b91d20"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-fixed_spread-main.log",
+      "original": "baseline/normal-fixed_spread-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/diagnostics.json",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/diagnostics.json",
+      "sha256": "2dad09d04c12894c75bd8b648985c2e8dff250e0f1bf119e615f15a2cf0c8f15"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/fills.parquet",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/fills.parquet",
+      "sha256": "4093d455742c586090a898fae877c2fcc6ae19e6f161779ebd14c268febcf66c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/inventory.parquet",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/inventory.parquet",
+      "sha256": "319baf63158ad69ba00df7100c36323c835aa4cdd41db7d81366559b2f7641ee"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/market.parquet",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/markouts.parquet",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/markouts.parquet",
+      "sha256": "288b1168771211b0c88d3f3cd2b77897456373d08247734ee9a19a8f3c49a000"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/metrics.json",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/metrics.json",
+      "sha256": "c9758d434c0730d273d9d1764a42db141661846d6286e46d8e626f7b9984a338"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/orders.parquet",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/orders.parquet",
+      "sha256": "2f44ce38db3e1aa8b8dd3f8a72a7d997a6c4bb6c8e7cb172b01f591eeeaded0e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/pnl.parquet",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/pnl.parquet",
+      "sha256": "46f1cf7bd4b3e7f0acda691a704c9cd2c32e9336f3fc9f9e3fec9a4d1aac1aea"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/quotes.parquet",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/quotes.parquet",
+      "sha256": "4335fc354fc14bad514747d57b96836de13d70de5aa6cdb34a31032fa5840c35"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/risk_events.parquet",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/run_config.yaml",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/run_config.yaml",
+      "sha256": "1896d49095c33af8c1608aa33675ff982c16880333eb24f331426ebd8f93fccf"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/summary.json",
+      "original": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/summary.json",
+      "sha256": "be220e98913961131b97e385ed9ce72a1656fffd15bed3080a9baed41a250cfc"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main.json",
+      "original": "baseline/normal-inventory_aware-main.json",
+      "sha256": "96c477cdc5ddaa963365a35fbe4028f996558f00276bc04751b8f85e129c4da8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-inventory_aware-main.log",
+      "original": "baseline/normal-inventory_aware-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/diagnostics.json",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/diagnostics.json",
+      "sha256": "0ca3670eac0c75da10ddb96a0f38224589d0de41410426f896b4328f56499c6a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/fills.parquet",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/fills.parquet",
+      "sha256": "cc7f151922b803c608c7bd949501c636d499dd62ae5df62d30d221c7f6fb3565"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/inventory.parquet",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/inventory.parquet",
+      "sha256": "9e3fc489c4c163609ecaa80844584515ef8757ac68c8e7373eca80543f1cb8a1"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/market.parquet",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/markouts.parquet",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/markouts.parquet",
+      "sha256": "249f9bf153ce7891ce74515c32abd85402be3c7cd9bb352907b2b33ad961c1a0"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/metrics.json",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/metrics.json",
+      "sha256": "e4a947d6ddb423914ef4861342d85273a0db35bd4bf7138ac586cd12ec5c2375"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/orders.parquet",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/orders.parquet",
+      "sha256": "2917eb45fdd929c3aff4a442b3f61f1931f4154dc75d3d4032e431f826d05260"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/pnl.parquet",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/pnl.parquet",
+      "sha256": "8895232f7fea2cbd3a05fbdd18b074a109861809c43290704ce5db39df7f7051"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/quotes.parquet",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/quotes.parquet",
+      "sha256": "55db5d941ff30b7a89e702cf93f375b9a4fa7d5575a59da5ed1510d02f1bff94"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/risk_events.parquet",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/run_config.yaml",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/run_config.yaml",
+      "sha256": "48189d6daf3d5a4f9c03f9ada919e501b57622e5a0a2445717f87c80ebae5c17"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main/positive-price-normal-microprice/summary.json",
+      "original": "baseline/normal-microprice-main/positive-price-normal-microprice/summary.json",
+      "sha256": "c984e9f300c1a5e69813250a85a48cc173000342e215073ac9934bb84ed7af42"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main.json",
+      "original": "baseline/normal-microprice-main.json",
+      "sha256": "8432de8d417e3515345b0851205c240301cb9c7251dab6fa560ef1d9470802ea"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/normal-microprice-main.log",
+      "original": "baseline/normal-microprice-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/baseline/report.json",
+      "original": "baseline/report.json",
+      "sha256": "475ca3d1b208152189079122d6358a3bb002801cbb15c380cb62a115dbe86a79"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/full-suite/import_identity.py.txt",
+      "original": "full-suite/import_identity.py",
+      "sha256": "c0b00d0933d659db0998b3514b2a180625dcce5c62cac1ff849782380e4ab15a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/full-suite/imports.json",
+      "original": "full-suite/imports.json",
+      "sha256": "df3ca2e229e7432756d28344cb1417f5c9137d6f76f9e29488eb5728b2d4abd3"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/full-suite/result.txt",
+      "original": "full-suite/result.txt",
+      "sha256": "d88f1a99337ae15f0825854d72ff137ab78a4c4751fda34b40c16810151c1003"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/full-suite/result.xml",
+      "original": "full-suite/result.xml",
+      "sha256": "86551c875d4b7f2e42cea2027208c2a82ceee4c3abcb852132d68643e4da8b2b"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/quality/mypy.txt",
+      "original": "quality/mypy.txt",
+      "sha256": "34df9cf38736563d4bb02e64b66effac851acb546ad0a3c3761547e25bbe3570"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/quality/ruff-check.txt",
+      "original": "quality/ruff-check.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/quality/ruff-format.txt",
+      "original": "quality/ruff-format.txt",
+      "sha256": "38f0dfe1a7daff274f5b6f83c4ee23fa63c25f59af378bb179f62bf8ce90eaf8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/corpus-all-candidate.json",
+      "original": "study-final/corpus-all-candidate.json",
+      "sha256": "7d1964237920565fde12d128224fbf2b22611ad14c06d35dffff1708f7e25a4b"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/corpus-all-candidate.log",
+      "original": "study-final/corpus-all-candidate.log",
+      "sha256": "62598d2898f0b76ba4453c78c1764b4e9b1ba509fd2541939b96a8400b6160e7"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/corpus-all-candidate.probes.json",
+      "original": "study-final/corpus-all-candidate.probes.json",
+      "sha256": "e8d29eb0adf8804b8ed60de284ddd1109ca6b593963866159edaea9228e10fb7"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/corpus-all-candidate.xml",
+      "original": "study-final/corpus-all-candidate.xml",
+      "sha256": "d4a5e55e3e4d44a3e48b3b4a2ab204c803820811d38553cb520cc63b73d7f31c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/environment.json",
+      "original": "study-final/environment.json",
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/diagnostics.json",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/diagnostics.json",
+      "sha256": "9acdab4ea8c1ee99d0bf8d5bb2fd9ccf22cb0cc65558afee8cc6f899997cbcff"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/fills.parquet",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/fills.parquet",
+      "sha256": "1fc79a94e39a45d9e21646b92d7f1c9dd8920bf02ed3e4f2cdb3c5a0787760b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/inventory.parquet",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/inventory.parquet",
+      "sha256": "24e670555fa83a837c9804219af00cefae0dfcc429fbf1f353d2e13c03fe88c2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/market.parquet",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/market.parquet",
+      "sha256": "09c7062a3c65d9de0afa6ca8304f9423b451a837064978ee52a3c1c8c7d4629e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/markouts.parquet",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/markouts.parquet",
+      "sha256": "872ecc2b5ffd07e33acd6c3a1bbb6d98fe23e24c02a668cbe42f3e59b3973a35"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/metrics.json",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/metrics.json",
+      "sha256": "86932c7725bb1b5d80beb206860b41e9e667392524dedb2446c3dd9c742d927f"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/orders.parquet",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/orders.parquet",
+      "sha256": "822c3147a3061fe082f78e1d7b93503292b1540b394e5ec18177d05bb602d45c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/pnl.parquet",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/pnl.parquet",
+      "sha256": "7e39d94f291a958a99093aece89fbea11b372301c8ae1d99f6023f63f45cffdb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/quotes.parquet",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/quotes.parquet",
+      "sha256": "5c2b097a72374b5db3542252d9936f42ef680eb3907384682bdc5f3d6d3d8aca"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/risk_events.parquet",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/run_config.yaml",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/run_config.yaml",
+      "sha256": "3e3c175180068fadd49321c34d4faabfeee204f009bc4661663d2324d9129b86"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/summary.json",
+      "original": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/summary.json",
+      "sha256": "3b7f34f24026a88146cea674d4bc4ba714b1aca1620ed7bb9cf48a72edf4831c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/inputs.json",
+      "original": "study-final/low-fixed_spread-candidate/inputs.json",
+      "sha256": "b532c16214d5f474a6ae5d4338f1a27bec679d3401239564406cd255e7170971"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/oracle.json",
+      "original": "study-final/low-fixed_spread-candidate/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/raw-witness.json",
+      "original": "study-final/low-fixed_spread-candidate/raw-witness.json",
+      "sha256": "59357b1cb50680760e6eb23e0a3560fca423ef0eff79bddd0ab9394092000b70"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/result.json",
+      "original": "study-final/low-fixed_spread-candidate/result.json",
+      "sha256": "59357b1cb50680760e6eb23e0a3560fca423ef0eff79bddd0ab9394092000b70"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate/trace.json",
+      "original": "study-final/low-fixed_spread-candidate/trace.json",
+      "sha256": "f569c42fc2936ce6c3919931a80cc6c3f5444ad21988879fc21da78a4c6d00c7"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate.json",
+      "original": "study-final/low-fixed_spread-candidate.json",
+      "sha256": "c59b2ec75a015261c8c0075b6fa36bb220b2c1f721e331155ef2cf8df86420d1"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-fixed_spread-candidate.log",
+      "original": "study-final/low-fixed_spread-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/diagnostics.json",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/diagnostics.json",
+      "sha256": "0424ea02ae1fbb222e43213774e9195642130f3e7592034a903854ccf1e8f664"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/fills.parquet",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/fills.parquet",
+      "sha256": "1fc79a94e39a45d9e21646b92d7f1c9dd8920bf02ed3e4f2cdb3c5a0787760b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/inventory.parquet",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/inventory.parquet",
+      "sha256": "24e670555fa83a837c9804219af00cefae0dfcc429fbf1f353d2e13c03fe88c2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/market.parquet",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/market.parquet",
+      "sha256": "09c7062a3c65d9de0afa6ca8304f9423b451a837064978ee52a3c1c8c7d4629e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/markouts.parquet",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/markouts.parquet",
+      "sha256": "872ecc2b5ffd07e33acd6c3a1bbb6d98fe23e24c02a668cbe42f3e59b3973a35"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/metrics.json",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/metrics.json",
+      "sha256": "83679f27685e09428b4b982832766c0606c6c4d966e8f04fcb081b0884613bd4"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/orders.parquet",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/orders.parquet",
+      "sha256": "822c3147a3061fe082f78e1d7b93503292b1540b394e5ec18177d05bb602d45c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/pnl.parquet",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/pnl.parquet",
+      "sha256": "7e39d94f291a958a99093aece89fbea11b372301c8ae1d99f6023f63f45cffdb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/quotes.parquet",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/quotes.parquet",
+      "sha256": "5c2b097a72374b5db3542252d9936f42ef680eb3907384682bdc5f3d6d3d8aca"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/risk_events.parquet",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/run_config.yaml",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/run_config.yaml",
+      "sha256": "72e322733bc73fa381c876be16dac71171b5e8d1d5b378a56083912139d3101c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/summary.json",
+      "original": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/summary.json",
+      "sha256": "466c5a913b7b7f77309e1f79cd30fb80d396c3d1c84d35c6a15c376c4d17584f"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/inputs.json",
+      "original": "study-final/low-inventory_aware-candidate/inputs.json",
+      "sha256": "6186d5ed4a8e075409f23e456dd94406fea47b676dc2941113b31351b07838cd"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/oracle.json",
+      "original": "study-final/low-inventory_aware-candidate/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/raw-witness.json",
+      "original": "study-final/low-inventory_aware-candidate/raw-witness.json",
+      "sha256": "0fd98367478dce47eb9f02e85b86d599d0901df741185f7df370ba1a1629f0ee"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/result.json",
+      "original": "study-final/low-inventory_aware-candidate/result.json",
+      "sha256": "0fd98367478dce47eb9f02e85b86d599d0901df741185f7df370ba1a1629f0ee"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate/trace.json",
+      "original": "study-final/low-inventory_aware-candidate/trace.json",
+      "sha256": "f569c42fc2936ce6c3919931a80cc6c3f5444ad21988879fc21da78a4c6d00c7"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate.json",
+      "original": "study-final/low-inventory_aware-candidate.json",
+      "sha256": "9d63ae1fa0f4b1897b2ae83ae0933d5ed46c0bf3592140ef509bcf2a17c1a9d6"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-inventory_aware-candidate.log",
+      "original": "study-final/low-inventory_aware-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/diagnostics.json",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/diagnostics.json",
+      "sha256": "ddaae598b114f9e44203babf0330acecadcfb08f95aea8f5cff0dd5188cc86ed"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/fills.parquet",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/fills.parquet",
+      "sha256": "1fc79a94e39a45d9e21646b92d7f1c9dd8920bf02ed3e4f2cdb3c5a0787760b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/inventory.parquet",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/inventory.parquet",
+      "sha256": "24e670555fa83a837c9804219af00cefae0dfcc429fbf1f353d2e13c03fe88c2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/market.parquet",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/market.parquet",
+      "sha256": "09c7062a3c65d9de0afa6ca8304f9423b451a837064978ee52a3c1c8c7d4629e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/markouts.parquet",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/markouts.parquet",
+      "sha256": "872ecc2b5ffd07e33acd6c3a1bbb6d98fe23e24c02a668cbe42f3e59b3973a35"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/metrics.json",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/metrics.json",
+      "sha256": "ab17f57f82356781fa9304e1affc8360d0c57815f484271bc5b4a4a64f16355b"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/orders.parquet",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/orders.parquet",
+      "sha256": "f2fcc572edbdce7464032dcf89442e835cf4b48f5f9e4dcde1e901aab1d3d140"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/pnl.parquet",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/pnl.parquet",
+      "sha256": "7e39d94f291a958a99093aece89fbea11b372301c8ae1d99f6023f63f45cffdb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/quotes.parquet",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/quotes.parquet",
+      "sha256": "991802ffc975228fb884dc77867710cca6abd304e29d88034d5fb475d893d23f"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/risk_events.parquet",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/run_config.yaml",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/run_config.yaml",
+      "sha256": "3f5da561f683b54594f599a34a85d9fdbecc47b723f81a54e0cc0113d60fc831"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/summary.json",
+      "original": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/summary.json",
+      "sha256": "9d5444f45cc5dfa320931e6f2e3dc89cd25fc6303f75e837d9719578a2ad8796"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/inputs.json",
+      "original": "study-final/low-microprice-candidate/inputs.json",
+      "sha256": "4473086f1ac794c0d39246e009b86520cec482224cc41bb898da7bd1f2bf5932"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/oracle.json",
+      "original": "study-final/low-microprice-candidate/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/raw-witness.json",
+      "original": "study-final/low-microprice-candidate/raw-witness.json",
+      "sha256": "a5bc91cb18d095cbc49d7cb62c182be408cb10adb03c00000141675bdd60b571"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/result.json",
+      "original": "study-final/low-microprice-candidate/result.json",
+      "sha256": "a5bc91cb18d095cbc49d7cb62c182be408cb10adb03c00000141675bdd60b571"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate/trace.json",
+      "original": "study-final/low-microprice-candidate/trace.json",
+      "sha256": "9d3bfb771c14aa347be0d445466f0f5f05bde888584f5442e1163652c577a5c9"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate.json",
+      "original": "study-final/low-microprice-candidate.json",
+      "sha256": "6f12e82cbf3bd321e28183a6a13c6086d80cf5fe1951644fe0d9ef694e9bc8c2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/low-microprice-candidate.log",
+      "original": "study-final/low-microprice-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/diagnostics.json",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/diagnostics.json",
+      "sha256": "72e5b6939b6e7c49464832e74caed314af6d5e49db60e3d0a7365ea0d1d72f4a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/fills.parquet",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/fills.parquet",
+      "sha256": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/inventory.parquet",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/inventory.parquet",
+      "sha256": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/market.parquet",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/markouts.parquet",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/markouts.parquet",
+      "sha256": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/metrics.json",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/metrics.json",
+      "sha256": "488be6367a031917213ca58a3f271d111a9ce19590b8dfdfc701a1cdb808d6fa"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/orders.parquet",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/orders.parquet",
+      "sha256": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/pnl.parquet",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/pnl.parquet",
+      "sha256": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/quotes.parquet",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/quotes.parquet",
+      "sha256": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/risk_events.parquet",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/run_config.yaml",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/run_config.yaml",
+      "sha256": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/summary.json",
+      "original": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/summary.json",
+      "sha256": "ae1456e51524a505633868ecdabb56830862008a6a9acde76dbd5fa81184bcca"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate.json",
+      "original": "study-final/normal-fixed_spread-candidate.json",
+      "sha256": "58931c91d0f5bc776768fe59433330c333a24cc532885756d355a402eddecf6b"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-fixed_spread-candidate.log",
+      "original": "study-final/normal-fixed_spread-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/diagnostics.json",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/diagnostics.json",
+      "sha256": "71c17e90e8030d6d652d6d080f2c88a612a5b9fae1dd6fb2929599561fdc402b"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/fills.parquet",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/fills.parquet",
+      "sha256": "4093d455742c586090a898fae877c2fcc6ae19e6f161779ebd14c268febcf66c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/inventory.parquet",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/inventory.parquet",
+      "sha256": "319baf63158ad69ba00df7100c36323c835aa4cdd41db7d81366559b2f7641ee"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/market.parquet",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/markouts.parquet",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/markouts.parquet",
+      "sha256": "288b1168771211b0c88d3f3cd2b77897456373d08247734ee9a19a8f3c49a000"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/metrics.json",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/metrics.json",
+      "sha256": "a3a1f95b901e62c5fb870b155c342935dc2c7a289ba84b693946d2695a9c06e4"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/orders.parquet",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/orders.parquet",
+      "sha256": "2f44ce38db3e1aa8b8dd3f8a72a7d997a6c4bb6c8e7cb172b01f591eeeaded0e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/pnl.parquet",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/pnl.parquet",
+      "sha256": "46f1cf7bd4b3e7f0acda691a704c9cd2c32e9336f3fc9f9e3fec9a4d1aac1aea"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/quotes.parquet",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/quotes.parquet",
+      "sha256": "4335fc354fc14bad514747d57b96836de13d70de5aa6cdb34a31032fa5840c35"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/risk_events.parquet",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/run_config.yaml",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/run_config.yaml",
+      "sha256": "1896d49095c33af8c1608aa33675ff982c16880333eb24f331426ebd8f93fccf"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/summary.json",
+      "original": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/summary.json",
+      "sha256": "be220e98913961131b97e385ed9ce72a1656fffd15bed3080a9baed41a250cfc"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate.json",
+      "original": "study-final/normal-inventory_aware-candidate.json",
+      "sha256": "21ac618bcc118dc3f65bfdac90eef4a51ae6387698172a9f6b8563e23564915f"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-inventory_aware-candidate.log",
+      "original": "study-final/normal-inventory_aware-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/diagnostics.json",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/diagnostics.json",
+      "sha256": "9549b7d38f82f9893b7048a8183d5d3c33f4456fec17a2fd5f09d0436051ac5c"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/fills.parquet",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/fills.parquet",
+      "sha256": "cc7f151922b803c608c7bd949501c636d499dd62ae5df62d30d221c7f6fb3565"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/inventory.parquet",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/inventory.parquet",
+      "sha256": "9e3fc489c4c163609ecaa80844584515ef8757ac68c8e7373eca80543f1cb8a1"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/market.parquet",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/markouts.parquet",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/markouts.parquet",
+      "sha256": "249f9bf153ce7891ce74515c32abd85402be3c7cd9bb352907b2b33ad961c1a0"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/metrics.json",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/metrics.json",
+      "sha256": "49149e9aab7de65943159418c8f3fd6252a0bcc8a306c5f6eb82b4940834c518"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/orders.parquet",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/orders.parquet",
+      "sha256": "2917eb45fdd929c3aff4a442b3f61f1931f4154dc75d3d4032e431f826d05260"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/pnl.parquet",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/pnl.parquet",
+      "sha256": "8895232f7fea2cbd3a05fbdd18b074a109861809c43290704ce5db39df7f7051"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/quotes.parquet",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/quotes.parquet",
+      "sha256": "55db5d941ff30b7a89e702cf93f375b9a4fa7d5575a59da5ed1510d02f1bff94"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/risk_events.parquet",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/run_config.yaml",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/run_config.yaml",
+      "sha256": "48189d6daf3d5a4f9c03f9ada919e501b57622e5a0a2445717f87c80ebae5c17"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate/positive-price-normal-microprice/summary.json",
+      "original": "study-final/normal-microprice-candidate/positive-price-normal-microprice/summary.json",
+      "sha256": "c984e9f300c1a5e69813250a85a48cc173000342e215073ac9934bb84ed7af42"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate.json",
+      "original": "study-final/normal-microprice-candidate.json",
+      "sha256": "ea767e0fbc66f408bf2dc1b49f7bbefab9ba728c0101687e3c09da440fcd8a31"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/normal-microprice-candidate.log",
+      "original": "study-final/normal-microprice-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "committed": "docs/evidence/positive-price-20261109/local/study-final/report.json",
+      "original": "study-final/report.json",
+      "sha256": "c7ad0214d703ac64282baefeada2620313bf8b41717a6cba6e1b48d739aecdd6"
+    }
+  ],
+  "excluded_copy_reason": "Redundant archived production and frozen harness/input copies are retained locally, hash-pinned here and in Git. Python identity-observer source is copied verbatim with .py.txt suffix.",
+  "files": [
+    {
+      "bytes": 7835,
+      "path": "baseline/contract.json",
+      "sha256": "8862b5a2d346e65248e8a561c488dfe3c2bdf1b85d54de75a85dd85fe017c037"
+    },
+    {
+      "bytes": 234652,
+      "path": "baseline/corpus-all-main.json",
+      "sha256": "b3f7d33ede6109dad4213cda5f4dac4dd99acbb46d9b014472fe760fd1845dc2"
+    },
+    {
+      "bytes": 21402,
+      "path": "baseline/corpus-all-main.log",
+      "sha256": "828dad93dd7b98fb22a8d1337b54d546d6c4432a8c85ebe55eeb4565408544b3"
+    },
+    {
+      "bytes": 136729,
+      "path": "baseline/corpus-all-main.probes.json",
+      "sha256": "c3e73b40ca2dca73966ada1d19253bc8ef7c92febfe43e4476c9fb52da0bad5c"
+    },
+    {
+      "bytes": 37345,
+      "path": "baseline/corpus-all-main.xml",
+      "sha256": "ec8e04c52ac10d1e0a06b3d715c28c7620de6c41c7c6148b7cef36e5ccb8a098"
+    },
+    {
+      "bytes": 2227,
+      "path": "baseline/environment.json",
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    {
+      "bytes": 8402,
+      "path": "baseline/fixtures.json",
+      "sha256": "96c30af69e182c3218c9f892ac5276f773b3a10393adf0782441869470cf727c"
+    },
+    {
+      "bytes": 9037,
+      "path": "baseline/low-fixed_spread-main/inputs.json",
+      "sha256": "e6f2a9ddcab0dd827e3bd0af44539a8b4802eb35331c5b6a5781aec6b8868985"
+    },
+    {
+      "bytes": 5599,
+      "path": "baseline/low-fixed_spread-main/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "bytes": 16378,
+      "path": "baseline/low-fixed_spread-main/raw-witness.json",
+      "sha256": "2328baceb3593adbc1d4c8d00b9cf4ce8267942c3c27f5e25c326b63b320654f"
+    },
+    {
+      "bytes": 16378,
+      "path": "baseline/low-fixed_spread-main/result.json",
+      "sha256": "2328baceb3593adbc1d4c8d00b9cf4ce8267942c3c27f5e25c326b63b320654f"
+    },
+    {
+      "bytes": 50339,
+      "path": "baseline/low-fixed_spread-main/trace.json",
+      "sha256": "594354482c642a73dbb87f5ec63f5b33a4d5d5507fdf0c9cdb2c056b747ee93a"
+    },
+    {
+      "bytes": 21706,
+      "path": "baseline/low-fixed_spread-main.json",
+      "sha256": "8cb51e946d10b6d33350e6665bc1b4643bdcb3583183d946524986fad335329f"
+    },
+    {
+      "bytes": 0,
+      "path": "baseline/low-fixed_spread-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 9043,
+      "path": "baseline/low-inventory_aware-main/inputs.json",
+      "sha256": "b4f4bfb0e72292d33de4a0e7113d79f266724443d5a4dd951a9c24e009c50291"
+    },
+    {
+      "bytes": 5599,
+      "path": "baseline/low-inventory_aware-main/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "bytes": 16396,
+      "path": "baseline/low-inventory_aware-main/raw-witness.json",
+      "sha256": "0532d656fb6f44f524b7fed7521b55ebfdb126a6c8730b27c591c277b942baf7"
+    },
+    {
+      "bytes": 16396,
+      "path": "baseline/low-inventory_aware-main/result.json",
+      "sha256": "0532d656fb6f44f524b7fed7521b55ebfdb126a6c8730b27c591c277b942baf7"
+    },
+    {
+      "bytes": 50339,
+      "path": "baseline/low-inventory_aware-main/trace.json",
+      "sha256": "594354482c642a73dbb87f5ec63f5b33a4d5d5507fdf0c9cdb2c056b747ee93a"
+    },
+    {
+      "bytes": 21733,
+      "path": "baseline/low-inventory_aware-main.json",
+      "sha256": "a6e5020fa4bd5a9c032bb57ddaf0ea64c25eae32fa125e65a103547c2dd5acf8"
+    },
+    {
+      "bytes": 0,
+      "path": "baseline/low-inventory_aware-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 9033,
+      "path": "baseline/low-microprice-main/inputs.json",
+      "sha256": "6e8c23b7216f6dcf9b67f14c73fce8ebb60e3d480c3823062e1be0606ca2d110"
+    },
+    {
+      "bytes": 5599,
+      "path": "baseline/low-microprice-main/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "bytes": 16366,
+      "path": "baseline/low-microprice-main/raw-witness.json",
+      "sha256": "2985f3a21e3ff5d1451fdd0341c583dc1de6028b0ce62c7b99787745f5b3f7d2"
+    },
+    {
+      "bytes": 16366,
+      "path": "baseline/low-microprice-main/result.json",
+      "sha256": "2985f3a21e3ff5d1451fdd0341c583dc1de6028b0ce62c7b99787745f5b3f7d2"
+    },
+    {
+      "bytes": 50339,
+      "path": "baseline/low-microprice-main/trace.json",
+      "sha256": "594354482c642a73dbb87f5ec63f5b33a4d5d5507fdf0c9cdb2c056b747ee93a"
+    },
+    {
+      "bytes": 21688,
+      "path": "baseline/low-microprice-main.json",
+      "sha256": "8d9abfb2bd2e1d985a8a3cafbde796a80fb6f04180575d7cda4ac8dd2d2d9418"
+    },
+    {
+      "bytes": 0,
+      "path": "baseline/low-microprice-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1864,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/diagnostics.json",
+      "sha256": "19f9e126b1605dd88344e32ab3d772c166f96052d5a755339263bc1b39812c8a"
+    },
+    {
+      "bytes": 7545,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/fills.parquet",
+      "sha256": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228"
+    },
+    {
+      "bytes": 2847,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/inventory.parquet",
+      "sha256": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2"
+    },
+    {
+      "bytes": 11621,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "bytes": 6174,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/markouts.parquet",
+      "sha256": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a"
+    },
+    {
+      "bytes": 2397,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/metrics.json",
+      "sha256": "d47a09513a21c6bb9307242c6ec574a4ac0b1e1e3f62c8c04ff5de9803660a53"
+    },
+    {
+      "bytes": 10998,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/orders.parquet",
+      "sha256": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0"
+    },
+    {
+      "bytes": 13044,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/pnl.parquet",
+      "sha256": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a"
+    },
+    {
+      "bytes": 4705,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/quotes.parquet",
+      "sha256": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c"
+    },
+    {
+      "bytes": 506,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2425,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/run_config.yaml",
+      "sha256": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5"
+    },
+    {
+      "bytes": 845,
+      "path": "baseline/normal-fixed_spread-main/positive-price-normal-fixed_spread/summary.json",
+      "sha256": "ae1456e51524a505633868ecdabb56830862008a6a9acde76dbd5fa81184bcca"
+    },
+    {
+      "bytes": 11263,
+      "path": "baseline/normal-fixed_spread-main.json",
+      "sha256": "205fb5e61c43fdf2fe6ce70034852ca898b07c4e9769a1875ac7971615b91d20"
+    },
+    {
+      "bytes": 0,
+      "path": "baseline/normal-fixed_spread-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1863,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/diagnostics.json",
+      "sha256": "2dad09d04c12894c75bd8b648985c2e8dff250e0f1bf119e615f15a2cf0c8f15"
+    },
+    {
+      "bytes": 7375,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/fills.parquet",
+      "sha256": "4093d455742c586090a898fae877c2fcc6ae19e6f161779ebd14c268febcf66c"
+    },
+    {
+      "bytes": 2934,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/inventory.parquet",
+      "sha256": "319baf63158ad69ba00df7100c36323c835aa4cdd41db7d81366559b2f7641ee"
+    },
+    {
+      "bytes": 11621,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "bytes": 6042,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/markouts.parquet",
+      "sha256": "288b1168771211b0c88d3f3cd2b77897456373d08247734ee9a19a8f3c49a000"
+    },
+    {
+      "bytes": 2438,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/metrics.json",
+      "sha256": "c9758d434c0730d273d9d1764a42db141661846d6286e46d8e626f7b9984a338"
+    },
+    {
+      "bytes": 10997,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/orders.parquet",
+      "sha256": "2f44ce38db3e1aa8b8dd3f8a72a7d997a6c4bb6c8e7cb172b01f591eeeaded0e"
+    },
+    {
+      "bytes": 13473,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/pnl.parquet",
+      "sha256": "46f1cf7bd4b3e7f0acda691a704c9cd2c32e9336f3fc9f9e3fec9a4d1aac1aea"
+    },
+    {
+      "bytes": 4698,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/quotes.parquet",
+      "sha256": "4335fc354fc14bad514747d57b96836de13d70de5aa6cdb34a31032fa5840c35"
+    },
+    {
+      "bytes": 506,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2428,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/run_config.yaml",
+      "sha256": "1896d49095c33af8c1608aa33675ff982c16880333eb24f331426ebd8f93fccf"
+    },
+    {
+      "bytes": 852,
+      "path": "baseline/normal-inventory_aware-main/positive-price-normal-inventory_aware/summary.json",
+      "sha256": "be220e98913961131b97e385ed9ce72a1656fffd15bed3080a9baed41a250cfc"
+    },
+    {
+      "bytes": 11319,
+      "path": "baseline/normal-inventory_aware-main.json",
+      "sha256": "96c477cdc5ddaa963365a35fbe4028f996558f00276bc04751b8f85e129c4da8"
+    },
+    {
+      "bytes": 0,
+      "path": "baseline/normal-inventory_aware-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1864,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/diagnostics.json",
+      "sha256": "0ca3670eac0c75da10ddb96a0f38224589d0de41410426f896b4328f56499c6a"
+    },
+    {
+      "bytes": 6884,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/fills.parquet",
+      "sha256": "cc7f151922b803c608c7bd949501c636d499dd62ae5df62d30d221c7f6fb3565"
+    },
+    {
+      "bytes": 2819,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/inventory.parquet",
+      "sha256": "9e3fc489c4c163609ecaa80844584515ef8757ac68c8e7373eca80543f1cb8a1"
+    },
+    {
+      "bytes": 11621,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "bytes": 5512,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/markouts.parquet",
+      "sha256": "249f9bf153ce7891ce74515c32abd85402be3c7cd9bb352907b2b33ad961c1a0"
+    },
+    {
+      "bytes": 2331,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/metrics.json",
+      "sha256": "e4a947d6ddb423914ef4861342d85273a0db35bd4bf7138ac586cd12ec5c2375"
+    },
+    {
+      "bytes": 11579,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/orders.parquet",
+      "sha256": "2917eb45fdd929c3aff4a442b3f61f1931f4154dc75d3d4032e431f826d05260"
+    },
+    {
+      "bytes": 12194,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/pnl.parquet",
+      "sha256": "8895232f7fea2cbd3a05fbdd18b074a109861809c43290704ce5db39df7f7051"
+    },
+    {
+      "bytes": 5103,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/quotes.parquet",
+      "sha256": "55db5d941ff30b7a89e702cf93f375b9a4fa7d5575a59da5ed1510d02f1bff94"
+    },
+    {
+      "bytes": 506,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2423,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/run_config.yaml",
+      "sha256": "48189d6daf3d5a4f9c03f9ada919e501b57622e5a0a2445717f87c80ebae5c17"
+    },
+    {
+      "bytes": 840,
+      "path": "baseline/normal-microprice-main/positive-price-normal-microprice/summary.json",
+      "sha256": "c984e9f300c1a5e69813250a85a48cc173000342e215073ac9934bb84ed7af42"
+    },
+    {
+      "bytes": 11186,
+      "path": "baseline/normal-microprice-main.json",
+      "sha256": "8432de8d417e3515345b0851205c240301cb9c7251dab6fa560ef1d9470802ea"
+    },
+    {
+      "bytes": 0,
+      "path": "baseline/normal-microprice-main.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 32260,
+      "path": "baseline/positive_price_witnesses.py",
+      "sha256": "e8ab1ed2e1de58687233fa8b3cf1dc692e4b7d9a62645d9bda5392895af773a8"
+    },
+    {
+      "bytes": 374816,
+      "path": "baseline/report.json",
+      "sha256": "475ca3d1b208152189079122d6358a3bb002801cbb15c380cb62a115dbe86a79"
+    },
+    {
+      "bytes": 36692,
+      "path": "baseline/reproducer.py",
+      "sha256": "28330785551ada2e1f243b14538d7d8cf3e264d461108d35e05e045415e59b53"
+    },
+    {
+      "bytes": 35768,
+      "path": "baseline/sources/main/backtest.py",
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    {
+      "bytes": 12658,
+      "path": "baseline/sources/main/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    {
+      "bytes": 5274,
+      "path": "baseline/sources/main/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    {
+      "bytes": 12286,
+      "path": "baseline/sources/main/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    {
+      "bytes": 7835,
+      "path": "baseline/sources/main/contract.json",
+      "sha256": "8862b5a2d346e65248e8a561c488dfe3c2bdf1b85d54de75a85dd85fe017c037"
+    },
+    {
+      "bytes": 3006,
+      "path": "baseline/sources/main/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    {
+      "bytes": 16502,
+      "path": "baseline/sources/main/exchange.py",
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    {
+      "bytes": 8402,
+      "path": "baseline/sources/main/fixtures.json",
+      "sha256": "96c30af69e182c3218c9f892ac5276f773b3a10393adf0782441869470cf727c"
+    },
+    {
+      "bytes": 14898,
+      "path": "baseline/sources/main/metrics.py",
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    {
+      "bytes": 17176,
+      "path": "baseline/sources/main/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    {
+      "bytes": 18850,
+      "path": "baseline/sources/main/portfolio.py",
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    {
+      "bytes": 32260,
+      "path": "baseline/sources/main/positive_price_witnesses.py",
+      "sha256": "e8ab1ed2e1de58687233fa8b3cf1dc692e4b7d9a62645d9bda5392895af773a8"
+    },
+    {
+      "bytes": 23906,
+      "path": "baseline/sources/main/risk.py",
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    {
+      "bytes": 8559,
+      "path": "baseline/sources/main/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    {
+      "bytes": 21607,
+      "path": "baseline/sources/main/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    {
+      "bytes": 918,
+      "path": "baseline/sources/main/strategies/fixed_spread.py",
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    {
+      "bytes": 1205,
+      "path": "baseline/sources/main/strategies/inventory_aware.py",
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    {
+      "bytes": 1659,
+      "path": "baseline/sources/main/strategies/microprice.py",
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    {
+      "bytes": 3433,
+      "path": "baseline/sources/main/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    {
+      "bytes": 20354,
+      "path": "baseline/sources/main/test_positive_price_quotes_independent.py",
+      "sha256": "40cc751b121c0c23668f6cfd2c42dbf2962a8e210e21634e4734cb8f8614d4c1"
+    },
+    {
+      "bytes": 20354,
+      "path": "baseline/test_positive_price_quotes_independent.py",
+      "sha256": "40cc751b121c0c23668f6cfd2c42dbf2962a8e210e21634e4734cb8f8614d4c1"
+    },
+    {
+      "bytes": 738,
+      "path": "full-suite/import_identity.py",
+      "sha256": "c0b00d0933d659db0998b3514b2a180625dcce5c62cac1ff849782380e4ab15a"
+    },
+    {
+      "bytes": 7070,
+      "path": "full-suite/imports.json",
+      "sha256": "df3ca2e229e7432756d28344cb1417f5c9137d6f76f9e29488eb5728b2d4abd3"
+    },
+    {
+      "bytes": 6891,
+      "path": "full-suite/result.txt",
+      "sha256": "d88f1a99337ae15f0825854d72ff137ab78a4c4751fda34b40c16810151c1003"
+    },
+    {
+      "bytes": 47497,
+      "path": "full-suite/result.xml",
+      "sha256": "86551c875d4b7f2e42cea2027208c2a82ceee4c3abcb852132d68643e4da8b2b"
+    },
+    {
+      "bytes": 44,
+      "path": "quality/mypy.txt",
+      "sha256": "34df9cf38736563d4bb02e64b66effac851acb546ad0a3c3761547e25bbe3570"
+    },
+    {
+      "bytes": 19,
+      "path": "quality/ruff-check.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "bytes": 27,
+      "path": "quality/ruff-format.txt",
+      "sha256": "38f0dfe1a7daff274f5b6f83c4ee23fa63c25f59af378bb179f62bf8ce90eaf8"
+    },
+    {
+      "bytes": 7835,
+      "path": "study-final/contract.json",
+      "sha256": "8862b5a2d346e65248e8a561c488dfe3c2bdf1b85d54de75a85dd85fe017c037"
+    },
+    {
+      "bytes": 225860,
+      "path": "study-final/corpus-all-candidate.json",
+      "sha256": "7d1964237920565fde12d128224fbf2b22611ad14c06d35dffff1708f7e25a4b"
+    },
+    {
+      "bytes": 99,
+      "path": "study-final/corpus-all-candidate.log",
+      "sha256": "62598d2898f0b76ba4453c78c1764b4e9b1ba509fd2541939b96a8400b6160e7"
+    },
+    {
+      "bytes": 145591,
+      "path": "study-final/corpus-all-candidate.probes.json",
+      "sha256": "e8d29eb0adf8804b8ed60de284ddd1109ca6b593963866159edaea9228e10fb7"
+    },
+    {
+      "bytes": 13150,
+      "path": "study-final/corpus-all-candidate.xml",
+      "sha256": "d4a5e55e3e4d44a3e48b3b4a2ab204c803820811d38553cb520cc63b73d7f31c"
+    },
+    {
+      "bytes": 2227,
+      "path": "study-final/environment.json",
+      "sha256": "8fab30846c810a30a65165ed1c1560a9da9ff5ef3049a8edfb36f3bb3232cd30"
+    },
+    {
+      "bytes": 8402,
+      "path": "study-final/fixtures.json",
+      "sha256": "96c30af69e182c3218c9f892ac5276f773b3a10393adf0782441869470cf727c"
+    },
+    {
+      "bytes": 1902,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/diagnostics.json",
+      "sha256": "9acdab4ea8c1ee99d0bf8d5bb2fd9ccf22cb0cc65558afee8cc6f899997cbcff"
+    },
+    {
+      "bytes": 6580,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/fills.parquet",
+      "sha256": "1fc79a94e39a45d9e21646b92d7f1c9dd8920bf02ed3e4f2cdb3c5a0787760b8"
+    },
+    {
+      "bytes": 1765,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/inventory.parquet",
+      "sha256": "24e670555fa83a837c9804219af00cefae0dfcc429fbf1f353d2e13c03fe88c2"
+    },
+    {
+      "bytes": 6671,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/market.parquet",
+      "sha256": "09c7062a3c65d9de0afa6ca8304f9423b451a837064978ee52a3c1c8c7d4629e"
+    },
+    {
+      "bytes": 4495,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/markouts.parquet",
+      "sha256": "872ecc2b5ffd07e33acd6c3a1bbb6d98fe23e24c02a668cbe42f3e59b3973a35"
+    },
+    {
+      "bytes": 2190,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/metrics.json",
+      "sha256": "86932c7725bb1b5d80beb206860b41e9e667392524dedb2446c3dd9c742d927f"
+    },
+    {
+      "bytes": 8304,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/orders.parquet",
+      "sha256": "822c3147a3061fe082f78e1d7b93503292b1540b394e5ec18177d05bb602d45c"
+    },
+    {
+      "bytes": 9043,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/pnl.parquet",
+      "sha256": "7e39d94f291a958a99093aece89fbea11b372301c8ae1d99f6023f63f45cffdb"
+    },
+    {
+      "bytes": 3873,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/quotes.parquet",
+      "sha256": "5c2b097a72374b5db3542252d9936f42ef680eb3907384682bdc5f3d6d3d8aca"
+    },
+    {
+      "bytes": 506,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2448,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/run_config.yaml",
+      "sha256": "3e3c175180068fadd49321c34d4faabfeee204f009bc4661663d2324d9129b86"
+    },
+    {
+      "bytes": 895,
+      "path": "study-final/low-fixed_spread-candidate/artifacts/positive-price-low-fixed_spread/summary.json",
+      "sha256": "3b7f34f24026a88146cea674d4bc4ba714b1aca1620ed7bb9cf48a72edf4831c"
+    },
+    {
+      "bytes": 9132,
+      "path": "study-final/low-fixed_spread-candidate/inputs.json",
+      "sha256": "b532c16214d5f474a6ae5d4338f1a27bec679d3401239564406cd255e7170971"
+    },
+    {
+      "bytes": 5599,
+      "path": "study-final/low-fixed_spread-candidate/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "bytes": 46178,
+      "path": "study-final/low-fixed_spread-candidate/raw-witness.json",
+      "sha256": "59357b1cb50680760e6eb23e0a3560fca423ef0eff79bddd0ab9394092000b70"
+    },
+    {
+      "bytes": 46178,
+      "path": "study-final/low-fixed_spread-candidate/result.json",
+      "sha256": "59357b1cb50680760e6eb23e0a3560fca423ef0eff79bddd0ab9394092000b70"
+    },
+    {
+      "bytes": 168775,
+      "path": "study-final/low-fixed_spread-candidate/trace.json",
+      "sha256": "f569c42fc2936ce6c3919931a80cc6c3f5444ad21988879fc21da78a4c6d00c7"
+    },
+    {
+      "bytes": 62882,
+      "path": "study-final/low-fixed_spread-candidate.json",
+      "sha256": "c59b2ec75a015261c8c0075b6fa36bb220b2c1f721e331155ef2cf8df86420d1"
+    },
+    {
+      "bytes": 0,
+      "path": "study-final/low-fixed_spread-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1903,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/diagnostics.json",
+      "sha256": "0424ea02ae1fbb222e43213774e9195642130f3e7592034a903854ccf1e8f664"
+    },
+    {
+      "bytes": 6580,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/fills.parquet",
+      "sha256": "1fc79a94e39a45d9e21646b92d7f1c9dd8920bf02ed3e4f2cdb3c5a0787760b8"
+    },
+    {
+      "bytes": 1765,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/inventory.parquet",
+      "sha256": "24e670555fa83a837c9804219af00cefae0dfcc429fbf1f353d2e13c03fe88c2"
+    },
+    {
+      "bytes": 6671,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/market.parquet",
+      "sha256": "09c7062a3c65d9de0afa6ca8304f9423b451a837064978ee52a3c1c8c7d4629e"
+    },
+    {
+      "bytes": 4495,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/markouts.parquet",
+      "sha256": "872ecc2b5ffd07e33acd6c3a1bbb6d98fe23e24c02a668cbe42f3e59b3973a35"
+    },
+    {
+      "bytes": 2191,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/metrics.json",
+      "sha256": "83679f27685e09428b4b982832766c0606c6c4d966e8f04fcb081b0884613bd4"
+    },
+    {
+      "bytes": 8304,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/orders.parquet",
+      "sha256": "822c3147a3061fe082f78e1d7b93503292b1540b394e5ec18177d05bb602d45c"
+    },
+    {
+      "bytes": 9043,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/pnl.parquet",
+      "sha256": "7e39d94f291a958a99093aece89fbea11b372301c8ae1d99f6023f63f45cffdb"
+    },
+    {
+      "bytes": 3873,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/quotes.parquet",
+      "sha256": "5c2b097a72374b5db3542252d9936f42ef680eb3907384682bdc5f3d6d3d8aca"
+    },
+    {
+      "bytes": 506,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2451,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/run_config.yaml",
+      "sha256": "72e322733bc73fa381c876be16dac71171b5e8d1d5b378a56083912139d3101c"
+    },
+    {
+      "bytes": 901,
+      "path": "study-final/low-inventory_aware-candidate/artifacts/positive-price-low-inventory_aware/summary.json",
+      "sha256": "466c5a913b7b7f77309e1f79cd30fb80d396c3d1c84d35c6a15c376c4d17584f"
+    },
+    {
+      "bytes": 9138,
+      "path": "study-final/low-inventory_aware-candidate/inputs.json",
+      "sha256": "6186d5ed4a8e075409f23e456dd94406fea47b676dc2941113b31351b07838cd"
+    },
+    {
+      "bytes": 5599,
+      "path": "study-final/low-inventory_aware-candidate/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "bytes": 46204,
+      "path": "study-final/low-inventory_aware-candidate/raw-witness.json",
+      "sha256": "0fd98367478dce47eb9f02e85b86d599d0901df741185f7df370ba1a1629f0ee"
+    },
+    {
+      "bytes": 46204,
+      "path": "study-final/low-inventory_aware-candidate/result.json",
+      "sha256": "0fd98367478dce47eb9f02e85b86d599d0901df741185f7df370ba1a1629f0ee"
+    },
+    {
+      "bytes": 168775,
+      "path": "study-final/low-inventory_aware-candidate/trace.json",
+      "sha256": "f569c42fc2936ce6c3919931a80cc6c3f5444ad21988879fc21da78a4c6d00c7"
+    },
+    {
+      "bytes": 62967,
+      "path": "study-final/low-inventory_aware-candidate.json",
+      "sha256": "9d63ae1fa0f4b1897b2ae83ae0933d5ed46c0bf3592140ef509bcf2a17c1a9d6"
+    },
+    {
+      "bytes": 0,
+      "path": "study-final/low-inventory_aware-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1903,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/diagnostics.json",
+      "sha256": "ddaae598b114f9e44203babf0330acecadcfb08f95aea8f5cff0dd5188cc86ed"
+    },
+    {
+      "bytes": 6580,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/fills.parquet",
+      "sha256": "1fc79a94e39a45d9e21646b92d7f1c9dd8920bf02ed3e4f2cdb3c5a0787760b8"
+    },
+    {
+      "bytes": 1765,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/inventory.parquet",
+      "sha256": "24e670555fa83a837c9804219af00cefae0dfcc429fbf1f353d2e13c03fe88c2"
+    },
+    {
+      "bytes": 6671,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/market.parquet",
+      "sha256": "09c7062a3c65d9de0afa6ca8304f9423b451a837064978ee52a3c1c8c7d4629e"
+    },
+    {
+      "bytes": 4495,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/markouts.parquet",
+      "sha256": "872ecc2b5ffd07e33acd6c3a1bbb6d98fe23e24c02a668cbe42f3e59b3973a35"
+    },
+    {
+      "bytes": 2191,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/metrics.json",
+      "sha256": "ab17f57f82356781fa9304e1affc8360d0c57815f484271bc5b4a4a64f16355b"
+    },
+    {
+      "bytes": 8281,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/orders.parquet",
+      "sha256": "f2fcc572edbdce7464032dcf89442e835cf4b48f5f9e4dcde1e901aab1d3d140"
+    },
+    {
+      "bytes": 9043,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/pnl.parquet",
+      "sha256": "7e39d94f291a958a99093aece89fbea11b372301c8ae1d99f6023f63f45cffdb"
+    },
+    {
+      "bytes": 3871,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/quotes.parquet",
+      "sha256": "991802ffc975228fb884dc77867710cca6abd304e29d88034d5fb475d893d23f"
+    },
+    {
+      "bytes": 506,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2446,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/run_config.yaml",
+      "sha256": "3f5da561f683b54594f599a34a85d9fdbecc47b723f81a54e0cc0113d60fc831"
+    },
+    {
+      "bytes": 891,
+      "path": "study-final/low-microprice-candidate/artifacts/positive-price-low-microprice/summary.json",
+      "sha256": "9d5444f45cc5dfa320931e6f2e3dc89cd25fc6303f75e837d9719578a2ad8796"
+    },
+    {
+      "bytes": 9128,
+      "path": "study-final/low-microprice-candidate/inputs.json",
+      "sha256": "4473086f1ac794c0d39246e009b86520cec482224cc41bb898da7bd1f2bf5932"
+    },
+    {
+      "bytes": 5599,
+      "path": "study-final/low-microprice-candidate/oracle.json",
+      "sha256": "b45024da9751a762b6eb0de7bbd054508a5d64ef8f58d4833442b126694b68b8"
+    },
+    {
+      "bytes": 46164,
+      "path": "study-final/low-microprice-candidate/raw-witness.json",
+      "sha256": "a5bc91cb18d095cbc49d7cb62c182be408cb10adb03c00000141675bdd60b571"
+    },
+    {
+      "bytes": 46164,
+      "path": "study-final/low-microprice-candidate/result.json",
+      "sha256": "a5bc91cb18d095cbc49d7cb62c182be408cb10adb03c00000141675bdd60b571"
+    },
+    {
+      "bytes": 158997,
+      "path": "study-final/low-microprice-candidate/trace.json",
+      "sha256": "9d3bfb771c14aa347be0d445466f0f5f05bde888584f5442e1163652c577a5c9"
+    },
+    {
+      "bytes": 62832,
+      "path": "study-final/low-microprice-candidate.json",
+      "sha256": "6f12e82cbf3bd321e28183a6a13c6086d80cf5fe1951644fe0d9ef694e9bc8c2"
+    },
+    {
+      "bytes": 0,
+      "path": "study-final/low-microprice-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1864,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/diagnostics.json",
+      "sha256": "72e5b6939b6e7c49464832e74caed314af6d5e49db60e3d0a7365ea0d1d72f4a"
+    },
+    {
+      "bytes": 7545,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/fills.parquet",
+      "sha256": "9d2ddcb1f7d02af6d40ad649db520869811a9575dedc0cdfcb94f11d17d97228"
+    },
+    {
+      "bytes": 2847,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/inventory.parquet",
+      "sha256": "f24d3b49b98c0f75bee652b3c481c957edb3271520ea002434deb2fb0d69f1b2"
+    },
+    {
+      "bytes": 11621,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "bytes": 6174,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/markouts.parquet",
+      "sha256": "8f3860ceb4433a2ff8b107cc1683e1ce43b74f47e5699ab262abe7ff8edc211a"
+    },
+    {
+      "bytes": 2397,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/metrics.json",
+      "sha256": "488be6367a031917213ca58a3f271d111a9ce19590b8dfdfc701a1cdb808d6fa"
+    },
+    {
+      "bytes": 10998,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/orders.parquet",
+      "sha256": "aff935f0f84dc69254c2e47f176beb21e297a50de497c766afbf46f4a10f97c0"
+    },
+    {
+      "bytes": 13044,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/pnl.parquet",
+      "sha256": "881b4d75859fbb649e9a63dfbb724aa7084b40a2eb9895df4bd74bfdd6db437a"
+    },
+    {
+      "bytes": 4705,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/quotes.parquet",
+      "sha256": "d65699c58c393496c01d5355804fdc1433096e674089109873bc85db88f5537c"
+    },
+    {
+      "bytes": 506,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2425,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/run_config.yaml",
+      "sha256": "aa784e1006d915247abd0f77e209a5d090adda510a85bd6de8c66404cd848ce5"
+    },
+    {
+      "bytes": 845,
+      "path": "study-final/normal-fixed_spread-candidate/positive-price-normal-fixed_spread/summary.json",
+      "sha256": "ae1456e51524a505633868ecdabb56830862008a6a9acde76dbd5fa81184bcca"
+    },
+    {
+      "bytes": 11353,
+      "path": "study-final/normal-fixed_spread-candidate.json",
+      "sha256": "58931c91d0f5bc776768fe59433330c333a24cc532885756d355a402eddecf6b"
+    },
+    {
+      "bytes": 0,
+      "path": "study-final/normal-fixed_spread-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1865,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/diagnostics.json",
+      "sha256": "71c17e90e8030d6d652d6d080f2c88a612a5b9fae1dd6fb2929599561fdc402b"
+    },
+    {
+      "bytes": 7375,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/fills.parquet",
+      "sha256": "4093d455742c586090a898fae877c2fcc6ae19e6f161779ebd14c268febcf66c"
+    },
+    {
+      "bytes": 2934,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/inventory.parquet",
+      "sha256": "319baf63158ad69ba00df7100c36323c835aa4cdd41db7d81366559b2f7641ee"
+    },
+    {
+      "bytes": 11621,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "bytes": 6042,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/markouts.parquet",
+      "sha256": "288b1168771211b0c88d3f3cd2b77897456373d08247734ee9a19a8f3c49a000"
+    },
+    {
+      "bytes": 2440,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/metrics.json",
+      "sha256": "a3a1f95b901e62c5fb870b155c342935dc2c7a289ba84b693946d2695a9c06e4"
+    },
+    {
+      "bytes": 10997,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/orders.parquet",
+      "sha256": "2f44ce38db3e1aa8b8dd3f8a72a7d997a6c4bb6c8e7cb172b01f591eeeaded0e"
+    },
+    {
+      "bytes": 13473,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/pnl.parquet",
+      "sha256": "46f1cf7bd4b3e7f0acda691a704c9cd2c32e9336f3fc9f9e3fec9a4d1aac1aea"
+    },
+    {
+      "bytes": 4698,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/quotes.parquet",
+      "sha256": "4335fc354fc14bad514747d57b96836de13d70de5aa6cdb34a31032fa5840c35"
+    },
+    {
+      "bytes": 506,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2428,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/run_config.yaml",
+      "sha256": "1896d49095c33af8c1608aa33675ff982c16880333eb24f331426ebd8f93fccf"
+    },
+    {
+      "bytes": 852,
+      "path": "study-final/normal-inventory_aware-candidate/positive-price-normal-inventory_aware/summary.json",
+      "sha256": "be220e98913961131b97e385ed9ce72a1656fffd15bed3080a9baed41a250cfc"
+    },
+    {
+      "bytes": 11413,
+      "path": "study-final/normal-inventory_aware-candidate.json",
+      "sha256": "21ac618bcc118dc3f65bfdac90eef4a51ae6387698172a9f6b8563e23564915f"
+    },
+    {
+      "bytes": 0,
+      "path": "study-final/normal-inventory_aware-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1861,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/diagnostics.json",
+      "sha256": "9549b7d38f82f9893b7048a8183d5d3c33f4456fec17a2fd5f09d0436051ac5c"
+    },
+    {
+      "bytes": 6884,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/fills.parquet",
+      "sha256": "cc7f151922b803c608c7bd949501c636d499dd62ae5df62d30d221c7f6fb3565"
+    },
+    {
+      "bytes": 2819,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/inventory.parquet",
+      "sha256": "9e3fc489c4c163609ecaa80844584515ef8757ac68c8e7373eca80543f1cb8a1"
+    },
+    {
+      "bytes": 11621,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/market.parquet",
+      "sha256": "28e21aed71c6b342f05fe0cb59b2ccdc82a4ecdca73482c58a2bd360a8e952bb"
+    },
+    {
+      "bytes": 5512,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/markouts.parquet",
+      "sha256": "249f9bf153ce7891ce74515c32abd85402be3c7cd9bb352907b2b33ad961c1a0"
+    },
+    {
+      "bytes": 2328,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/metrics.json",
+      "sha256": "49149e9aab7de65943159418c8f3fd6252a0bcc8a306c5f6eb82b4940834c518"
+    },
+    {
+      "bytes": 11579,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/orders.parquet",
+      "sha256": "2917eb45fdd929c3aff4a442b3f61f1931f4154dc75d3d4032e431f826d05260"
+    },
+    {
+      "bytes": 12194,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/pnl.parquet",
+      "sha256": "8895232f7fea2cbd3a05fbdd18b074a109861809c43290704ce5db39df7f7051"
+    },
+    {
+      "bytes": 5103,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/quotes.parquet",
+      "sha256": "55db5d941ff30b7a89e702cf93f375b9a4fa7d5575a59da5ed1510d02f1bff94"
+    },
+    {
+      "bytes": 506,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/risk_events.parquet",
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e"
+    },
+    {
+      "bytes": 2423,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/run_config.yaml",
+      "sha256": "48189d6daf3d5a4f9c03f9ada919e501b57622e5a0a2445717f87c80ebae5c17"
+    },
+    {
+      "bytes": 840,
+      "path": "study-final/normal-microprice-candidate/positive-price-normal-microprice/summary.json",
+      "sha256": "c984e9f300c1a5e69813250a85a48cc173000342e215073ac9934bb84ed7af42"
+    },
+    {
+      "bytes": 11270,
+      "path": "study-final/normal-microprice-candidate.json",
+      "sha256": "ea767e0fbc66f408bf2dc1b49f7bbefab9ba728c0101687e3c09da440fcd8a31"
+    },
+    {
+      "bytes": 0,
+      "path": "study-final/normal-microprice-candidate.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 32260,
+      "path": "study-final/positive_price_witnesses.py",
+      "sha256": "e8ab1ed2e1de58687233fa8b3cf1dc692e4b7d9a62645d9bda5392895af773a8"
+    },
+    {
+      "bytes": 506930,
+      "path": "study-final/report.json",
+      "sha256": "c7ad0214d703ac64282baefeada2620313bf8b41717a6cba6e1b48d739aecdd6"
+    },
+    {
+      "bytes": 36692,
+      "path": "study-final/reproducer.py",
+      "sha256": "28330785551ada2e1f243b14538d7d8cf3e264d461108d35e05e045415e59b53"
+    },
+    {
+      "bytes": 35768,
+      "path": "study-final/sources/candidate/backtest.py",
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    {
+      "bytes": 12658,
+      "path": "study-final/sources/candidate/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    {
+      "bytes": 5274,
+      "path": "study-final/sources/candidate/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    {
+      "bytes": 12286,
+      "path": "study-final/sources/candidate/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    {
+      "bytes": 7835,
+      "path": "study-final/sources/candidate/contract.json",
+      "sha256": "8862b5a2d346e65248e8a561c488dfe3c2bdf1b85d54de75a85dd85fe017c037"
+    },
+    {
+      "bytes": 3006,
+      "path": "study-final/sources/candidate/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    {
+      "bytes": 16502,
+      "path": "study-final/sources/candidate/exchange.py",
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    {
+      "bytes": 8402,
+      "path": "study-final/sources/candidate/fixtures.json",
+      "sha256": "96c30af69e182c3218c9f892ac5276f773b3a10393adf0782441869470cf727c"
+    },
+    {
+      "bytes": 14898,
+      "path": "study-final/sources/candidate/metrics.py",
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    {
+      "bytes": 17176,
+      "path": "study-final/sources/candidate/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    {
+      "bytes": 18850,
+      "path": "study-final/sources/candidate/portfolio.py",
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    {
+      "bytes": 32260,
+      "path": "study-final/sources/candidate/positive_price_witnesses.py",
+      "sha256": "e8ab1ed2e1de58687233fa8b3cf1dc692e4b7d9a62645d9bda5392895af773a8"
+    },
+    {
+      "bytes": 23906,
+      "path": "study-final/sources/candidate/risk.py",
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    {
+      "bytes": 8559,
+      "path": "study-final/sources/candidate/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    {
+      "bytes": 21607,
+      "path": "study-final/sources/candidate/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    {
+      "bytes": 942,
+      "path": "study-final/sources/candidate/strategies/fixed_spread.py",
+      "sha256": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c"
+    },
+    {
+      "bytes": 1229,
+      "path": "study-final/sources/candidate/strategies/inventory_aware.py",
+      "sha256": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972"
+    },
+    {
+      "bytes": 1683,
+      "path": "study-final/sources/candidate/strategies/microprice.py",
+      "sha256": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa"
+    },
+    {
+      "bytes": 3433,
+      "path": "study-final/sources/candidate/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    {
+      "bytes": 20354,
+      "path": "study-final/sources/candidate/test_positive_price_quotes_independent.py",
+      "sha256": "40cc751b121c0c23668f6cfd2c42dbf2962a8e210e21634e4734cb8f8614d4c1"
+    },
+    {
+      "bytes": 20354,
+      "path": "study-final/test_positive_price_quotes_independent.py",
+      "sha256": "40cc751b121c0c23668f6cfd2c42dbf2962a8e210e21634e4734cb8f8614d4c1"
+    }
+  ],
+  "scope": "Original local research and quality evidence; bytecode caches excluded. No new outcome executions during curation.",
+  "workspace": "/workspace/lob-market-maker-price-domain/experiments/positive-price-20261109"
+}

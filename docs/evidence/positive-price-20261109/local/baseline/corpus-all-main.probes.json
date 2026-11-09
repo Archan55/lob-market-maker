@@ -1,0 +1,5486 @@
+{
+  "pure": [
+    {
+      "name": "flat_low",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "flat_low",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "flat_low",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "flat_low",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "flat_low",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "flat_low",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "positive_floor",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "positive_floor",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "positive_floor",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "positive_floor",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "positive_floor",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "positive_floor",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "ordinary_flat",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 99,
+        "best_ask_ticks": 101,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 100.0,
+        "microprice_ticks": 100.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            99,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            101,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "ordinary_flat",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 99,
+        "best_ask_ticks": 101,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 100.0,
+        "microprice_ticks": 100.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            99,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            101,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "ordinary_flat",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 99,
+        "best_ask_ticks": 101,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 100.0,
+        "microprice_ticks": 100.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            99,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            101,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "ordinary_flat",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 99,
+        "best_ask_ticks": 101,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 100.0,
+        "microprice_ticks": 100.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            99,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            101,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "ordinary_flat",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 99,
+        "best_ask_ticks": 101,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 100.0,
+        "microprice_ticks": 100.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            99,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            101,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "ordinary_flat",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 99,
+        "best_ask_ticks": 101,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 100.0,
+        "microprice_ticks": 100.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            99,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            101,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          99,
+          10
+        ],
+        [
+          -1,
+          101,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_long_half",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_long_half",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_long_half",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          2,
+          6
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_long_half",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          2,
+          6
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_long_half",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          2,
+          6
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_long_half",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          2,
+          6
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_short_half",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_short_half",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_short_half",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          -1,
+          4,
+          6
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          -1,
+          4,
+          6
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_short_half",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          -1,
+          4,
+          6
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          -1,
+          4,
+          6
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_short_half",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          -1,
+          4,
+          6
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          -1,
+          4,
+          6
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_short_half",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -50,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          -1,
+          4,
+          6
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          -1,
+          4,
+          6
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_long_cap",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_long_cap",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_long_cap",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "actual": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_long_cap",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "actual": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_long_cap",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "actual": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_long_cap",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "actual": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_short_cap",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -100,
+      "max_abs_inventory": 100,
+      "oracle": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_short_cap",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -100,
+      "max_abs_inventory": 100,
+      "oracle": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "low_short_cap",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_short_cap",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_short_cap",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "low_short_cap",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": -100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "nonpositive_ask",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 4.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "nonpositive_ask",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 4.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "nonpositive_ask",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 4.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "nonpositive_ask",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 4.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "nonpositive_ask",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 4.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "nonpositive_ask",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 4.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 100,
+      "max_abs_inventory": 100,
+      "oracle": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "desired_quotes"
+      },
+      "checks": {
+        "no_error": false,
+        "matches_oracle": false,
+        "all_prices_positive": false
+      }
+    },
+    {
+      "name": "minimum_half_spread",
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 0.5,
+        "minimum_half_spread_ticks": 0.5,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "minimum_half_spread",
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 0.5,
+        "minimum_half_spread_ticks": 0.5,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "minimum_half_spread",
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 0.5,
+        "minimum_half_spread_ticks": 0.5,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "minimum_half_spread",
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 0.5,
+        "minimum_half_spread_ticks": 0.5,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "minimum_half_spread",
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 0.5,
+        "minimum_half_spread_ticks": 0.5,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    },
+    {
+      "name": "minimum_half_spread",
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 0.5,
+        "minimum_half_spread_ticks": 0.5,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 50000000,
+        "minimum_quote_lifetime_ns": 5000000,
+        "stale_after_ns": 250000000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "inventory": 0,
+      "max_abs_inventory": 100,
+      "oracle": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "actual": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          2,
+          10
+        ]
+      ],
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "matches_oracle": true,
+        "all_prices_positive": true
+      }
+    }
+  ],
+  "managed": [
+    {
+      "policy": "fixed_spread",
+      "post_only": true,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 1000,
+        "minimum_quote_lifetime_ns": 1000,
+        "stale_after_ns": 2000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "initial_view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "low_view": {
+        "timestamp_ns": 3,
+        "sequence_number": 2,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "oracle_initial": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "oracle_low": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "initial_actions": [
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000001",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000002",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      ],
+      "accepted_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "low_actions": null,
+      "repeat_actions": null,
+      "after_low_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "after_repeat_quotes": null,
+      "decisions": [
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000001",
+          "order_id": null,
+          "price_ticks": 1,
+          "quantity": 10,
+          "reason": "desired_quote"
+        },
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000002",
+          "order_id": null,
+          "price_ticks": 3,
+          "quantity": 10,
+          "reason": "desired_quote"
+        }
+      ],
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "low_decide"
+      },
+      "checks": {
+        "initial_quotes_exact": true,
+        "no_error": false,
+        "one_original_bid_cancel": false,
+        "ask_unchanged": false,
+        "repeat_idempotent": false
+      }
+    },
+    {
+      "policy": "fixed_spread",
+      "post_only": false,
+      "config": {
+        "name": "fixed_spread",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 1000,
+        "minimum_quote_lifetime_ns": 1000,
+        "stale_after_ns": 2000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "initial_view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "low_view": {
+        "timestamp_ns": 3,
+        "sequence_number": 2,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "oracle_initial": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "oracle_low": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "initial_actions": [
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000001",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": false,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000002",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": false,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      ],
+      "accepted_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "low_actions": null,
+      "repeat_actions": null,
+      "after_low_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "after_repeat_quotes": null,
+      "decisions": [
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000001",
+          "order_id": null,
+          "price_ticks": 1,
+          "quantity": 10,
+          "reason": "desired_quote"
+        },
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000002",
+          "order_id": null,
+          "price_ticks": 3,
+          "quantity": 10,
+          "reason": "desired_quote"
+        }
+      ],
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "low_decide"
+      },
+      "checks": {
+        "initial_quotes_exact": true,
+        "no_error": false,
+        "one_original_bid_cancel": false,
+        "ask_unchanged": false,
+        "repeat_idempotent": false
+      }
+    },
+    {
+      "policy": "inventory_aware",
+      "post_only": true,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 1000,
+        "minimum_quote_lifetime_ns": 1000,
+        "stale_after_ns": 2000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "initial_view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "low_view": {
+        "timestamp_ns": 3,
+        "sequence_number": 2,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "oracle_initial": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "oracle_low": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "initial_actions": [
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000001",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000002",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      ],
+      "accepted_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "low_actions": null,
+      "repeat_actions": null,
+      "after_low_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "after_repeat_quotes": null,
+      "decisions": [
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000001",
+          "order_id": null,
+          "price_ticks": 1,
+          "quantity": 10,
+          "reason": "desired_quote"
+        },
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000002",
+          "order_id": null,
+          "price_ticks": 3,
+          "quantity": 10,
+          "reason": "desired_quote"
+        }
+      ],
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "low_decide"
+      },
+      "checks": {
+        "initial_quotes_exact": true,
+        "no_error": false,
+        "one_original_bid_cancel": false,
+        "ask_unchanged": false,
+        "repeat_idempotent": false
+      }
+    },
+    {
+      "policy": "inventory_aware",
+      "post_only": false,
+      "config": {
+        "name": "inventory_aware",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 1000,
+        "minimum_quote_lifetime_ns": 1000,
+        "stale_after_ns": 2000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "initial_view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "low_view": {
+        "timestamp_ns": 3,
+        "sequence_number": 2,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "oracle_initial": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "oracle_low": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "initial_actions": [
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000001",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": false,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000002",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": false,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      ],
+      "accepted_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "low_actions": null,
+      "repeat_actions": null,
+      "after_low_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "after_repeat_quotes": null,
+      "decisions": [
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000001",
+          "order_id": null,
+          "price_ticks": 1,
+          "quantity": 10,
+          "reason": "desired_quote"
+        },
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000002",
+          "order_id": null,
+          "price_ticks": 3,
+          "quantity": 10,
+          "reason": "desired_quote"
+        }
+      ],
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "low_decide"
+      },
+      "checks": {
+        "initial_quotes_exact": true,
+        "no_error": false,
+        "one_original_bid_cancel": false,
+        "ask_unchanged": false,
+        "repeat_idempotent": false
+      }
+    },
+    {
+      "policy": "microprice",
+      "post_only": true,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 1000,
+        "minimum_quote_lifetime_ns": 1000,
+        "stale_after_ns": 2000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": true
+      },
+      "initial_view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "low_view": {
+        "timestamp_ns": 3,
+        "sequence_number": 2,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "oracle_initial": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "oracle_low": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "initial_actions": [
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000001",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000002",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      ],
+      "accepted_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "low_actions": null,
+      "repeat_actions": null,
+      "after_low_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "after_repeat_quotes": null,
+      "decisions": [
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000001",
+          "order_id": null,
+          "price_ticks": 1,
+          "quantity": 10,
+          "reason": "desired_quote"
+        },
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000002",
+          "order_id": null,
+          "price_ticks": 3,
+          "quantity": 10,
+          "reason": "desired_quote"
+        }
+      ],
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "low_decide"
+      },
+      "checks": {
+        "initial_quotes_exact": true,
+        "no_error": false,
+        "one_original_bid_cancel": false,
+        "ask_unchanged": false,
+        "repeat_idempotent": false
+      }
+    },
+    {
+      "policy": "microprice",
+      "post_only": false,
+      "config": {
+        "name": "microprice",
+        "strategy_id": "market-maker",
+        "order_size": 10,
+        "base_half_spread_ticks": 1.0,
+        "minimum_half_spread_ticks": 1.0,
+        "inventory_penalty_ticks": 2.0,
+        "imbalance_coefficient_ticks": 1.0,
+        "volatility_multiplier": 1.0,
+        "volatility_window": 50,
+        "refresh_interval_ns": 1000,
+        "minimum_quote_lifetime_ns": 1000,
+        "stale_after_ns": 2000,
+        "price_change_threshold_ticks": 1,
+        "quantity_change_threshold": 1,
+        "rejection_cooldown_ns": 50000000,
+        "rejection_backoff_multiplier": 2.0,
+        "rejection_max_cooldown_ns": 1000000000,
+        "message_rate_cooldown_ns": 1000000000,
+        "post_only": false
+      },
+      "initial_view": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 3,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 2.0,
+        "microprice_ticks": 2.0,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            10
+          ]
+        ]
+      },
+      "low_view": {
+        "timestamp_ns": 3,
+        "sequence_number": 2,
+        "best_bid_ticks": 1,
+        "best_ask_ticks": 2,
+        "best_bid_quantity": 10,
+        "best_ask_quantity": 10,
+        "midpoint_ticks": 1.5,
+        "microprice_ticks": 1.5,
+        "imbalance": 0.0,
+        "bids": [
+          [
+            1,
+            10
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "oracle_initial": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "oracle_low": [
+        [
+          -1,
+          3,
+          10
+        ]
+      ],
+      "initial_actions": [
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000001",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": false,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        {
+          "type": "NewOrderRequest",
+          "client_order_id": "market-maker-000000000002",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 10,
+          "strategy_id": "market-maker",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": false,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      ],
+      "accepted_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "low_actions": null,
+      "repeat_actions": null,
+      "after_low_quotes": [
+        {
+          "side": 1,
+          "client_order_id": "market-maker-000000000001",
+          "price_ticks": 1,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order-1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        },
+        {
+          "side": -1,
+          "client_order_id": "market-maker-000000000002",
+          "price_ticks": 3,
+          "original_quantity": 10,
+          "remaining_quantity": 10,
+          "sent_timestamp_ns": 0,
+          "exchange_order_id": "independent-order--1",
+          "accepted_timestamp_ns": 2,
+          "pending_cancel": false,
+          "next_cancel_attempt_ns": 0,
+          "cancel_rejection_count": 0,
+          "dispatch_status": "sent",
+          "cancel_dispatch_status": null
+        }
+      ],
+      "after_repeat_quotes": null,
+      "decisions": [
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000001",
+          "order_id": null,
+          "price_ticks": 1,
+          "quantity": 10,
+          "reason": "desired_quote"
+        },
+        {
+          "timestamp_ns": 0,
+          "observed_sequence": 1,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "market-maker-000000000002",
+          "order_id": null,
+          "price_ticks": 3,
+          "quantity": 10,
+          "reason": "desired_quote"
+        }
+      ],
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "low_decide"
+      },
+      "checks": {
+        "initial_quotes_exact": true,
+        "no_error": false,
+        "one_original_bid_cancel": false,
+        "ask_unchanged": false,
+        "repeat_idempotent": false
+      }
+    }
+  ],
+  "validators": [
+    {
+      "kind": "DesiredQuote",
+      "side": 1,
+      "price": 0,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "NewOrderRequest",
+      "side": 1,
+      "price": 0,
+      "error": {
+        "type": "OrderError",
+        "message": "price_ticks must be positive",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "MarketEvent",
+      "side": 1,
+      "price": 0,
+      "error": {
+        "type": "EventValidationError",
+        "message": "ADD requires positive price_ticks",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "DesiredQuote",
+      "side": 1,
+      "price": -1,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "NewOrderRequest",
+      "side": 1,
+      "price": -1,
+      "error": {
+        "type": "OrderError",
+        "message": "price_ticks must be positive",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "MarketEvent",
+      "side": 1,
+      "price": -1,
+      "error": {
+        "type": "EventValidationError",
+        "message": "ADD requires positive price_ticks",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "DesiredQuote",
+      "side": 1,
+      "price": 1,
+      "error": null,
+      "check": true
+    },
+    {
+      "kind": "NewOrderRequest",
+      "side": 1,
+      "price": 1,
+      "error": null,
+      "check": true
+    },
+    {
+      "kind": "MarketEvent",
+      "side": 1,
+      "price": 1,
+      "error": null,
+      "check": true
+    },
+    {
+      "kind": "DesiredQuote",
+      "side": -1,
+      "price": 0,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "NewOrderRequest",
+      "side": -1,
+      "price": 0,
+      "error": {
+        "type": "OrderError",
+        "message": "price_ticks must be positive",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "MarketEvent",
+      "side": -1,
+      "price": 0,
+      "error": {
+        "type": "EventValidationError",
+        "message": "ADD requires positive price_ticks",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "DesiredQuote",
+      "side": -1,
+      "price": -1,
+      "error": {
+        "type": "ValueError",
+        "message": "desired quote price and quantity must be positive",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "NewOrderRequest",
+      "side": -1,
+      "price": -1,
+      "error": {
+        "type": "OrderError",
+        "message": "price_ticks must be positive",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "MarketEvent",
+      "side": -1,
+      "price": -1,
+      "error": {
+        "type": "EventValidationError",
+        "message": "ADD requires positive price_ticks",
+        "stage": "constructor"
+      },
+      "check": true
+    },
+    {
+      "kind": "DesiredQuote",
+      "side": -1,
+      "price": 1,
+      "error": null,
+      "check": true
+    },
+    {
+      "kind": "NewOrderRequest",
+      "side": -1,
+      "price": 1,
+      "error": null,
+      "check": true
+    },
+    {
+      "kind": "MarketEvent",
+      "side": -1,
+      "price": 1,
+      "error": null,
+      "check": true
+    }
+  ]
+}

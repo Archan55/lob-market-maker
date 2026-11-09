@@ -1,0 +1,19 @@
+{
+  "phase": "After completed frozen mainbaseline, before any candidate numerical execution",
+  "verdict": "GO",
+  "reviewer": "independent_feasibility",
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "baseline_findings": "Exact7plannedworkers,64nodes26fail38pass,zeroerrors/skips and predicted fullnamedmatrix. Allthree actualfullattempts showacceptedB1/A3,decision10/BBO1/2/rawrounded0/3/attemptedBID0quantity1 and exactconstructorValueError. Archive/import/source/frozeninputs/JUnit/ledger records independently verified.",
+  "candidate_source_sha256": {
+    "strategies/fixed_spread": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c",
+    "strategies/inventory_aware": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972",
+    "strategies/microprice": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa"
+  },
+  "diff": "Only six `price > 0` conjunctions with existing side-inventory conditions. Every positive target, size, ordering, flag, reservation/rounding formula, validator and manager unchanged.",
+  "candidate_count": 1,
+  "repairs_used": 0,
+  "frozen_test_sha256": "40cc751b121c0c23668f6cfd2c42dbf2962a8e210e21634e4734cb8f8614d4c1",
+  "frozen_provider_sha256": "e8ab1ed2e1de58687233fa8b3cf1dc692e4b7d9a62645d9bda5392895af773a8",
+  "frozen_controller_sha256": "28330785551ada2e1f243b14538d7d8cf3e264d461108d35e05e045415e59b53",
+  "next": "Run candidate corpus+three low+three normal workers once with exact mainbaseline reuse; independent actualartifact review and fullquality remain pending. No test/engine reruns by reviewer."
+}

@@ -1,0 +1,319 @@
+{
+  "policy": "fixed_spread",
+  "resolved_config": {
+    "instrument": {
+      "symbol": "SYNTH-PRICE",
+      "currency": "MODEL",
+      "tick_size": "1",
+      "lot_size": 1
+    },
+    "data": {
+      "input_path": null,
+      "validation_mode": "strict",
+      "book_depth": 5,
+      "provenance": {
+        "source_type": "synthetic",
+        "provider": "lobmm hand-constructed positive-price witness",
+        "venue": "SIMULATED",
+        "symbol": "SYNTH-PRICE",
+        "dataset_id": "lobmm-positive-price-v1",
+        "session_start": null,
+        "session_end": null,
+        "checksum_sha256": null,
+        "license_notes": "Original locally constructed fictional mechanics tape; not historical or licensed market data."
+      }
+    },
+    "synthetic": {
+      "event_count": 2000,
+      "start_timestamp_ns": 0,
+      "interval_ns": 1000000,
+      "start_price_ticks": 10000,
+      "levels": 5,
+      "base_quantity": 100,
+      "regime_length": 250,
+      "reset_interval": 400
+    },
+    "latency": {
+      "market_data_ns": 0,
+      "order_entry_ns": 0,
+      "cancellation_ns": 0,
+      "fill_report_ns": 0,
+      "market_data_jitter_ns": 0,
+      "order_entry_jitter_ns": 0,
+      "cancellation_jitter_ns": 0,
+      "fill_report_jitter_ns": 0
+    },
+    "exchange": {
+      "validation_mode": "strict",
+      "rest_unfilled_marketable_quantity": true,
+      "cancel_orders_on_reset": true
+    },
+    "queue_model": {
+      "cancellation_allocation": "back_of_queue",
+      "price_through_fills": true
+    },
+    "fees": {
+      "maker_fee_per_unit": "0",
+      "maker_rebate_per_unit": "0",
+      "taker_fee_per_unit": "0",
+      "proportional_fee_rate": "0"
+    },
+    "strategy": {
+      "name": "fixed_spread",
+      "strategy_id": "positive-price",
+      "order_size": 1,
+      "base_half_spread_ticks": 1.0,
+      "minimum_half_spread_ticks": 1.0,
+      "inventory_penalty_ticks": 0.0,
+      "imbalance_coefficient_ticks": 0.0,
+      "volatility_multiplier": 0.0,
+      "volatility_window": 50,
+      "refresh_interval_ns": 1000,
+      "minimum_quote_lifetime_ns": 1000,
+      "stale_after_ns": 2000,
+      "price_change_threshold_ticks": 1,
+      "quantity_change_threshold": 1,
+      "rejection_cooldown_ns": 50000000,
+      "rejection_backoff_multiplier": 2.0,
+      "rejection_max_cooldown_ns": 1000000000,
+      "message_rate_cooldown_ns": 1000000000,
+      "post_only": true
+    },
+    "risk": {
+      "max_abs_inventory": 10,
+      "max_order_size": 10,
+      "max_total_open_quantity": 20,
+      "max_open_orders": 4,
+      "max_loss": "1000",
+      "max_drawdown": "1000",
+      "max_quote_age_ns": 1000,
+      "minimum_spread_ticks": 1,
+      "max_volatility_ticks": null,
+      "max_messages_per_second": null,
+      "prohibit_new_quotes_last_ns": 0
+    },
+    "backtest": {
+      "warmup_events": 0,
+      "start_timestamp_ns": null,
+      "end_timestamp_ns": null,
+      "event_limit": null,
+      "timer_interval_ns": 100,
+      "mark_price": "midpoint",
+      "session_end_policy": "mark",
+      "track_memory": false
+    },
+    "metrics": {
+      "markout_horizons_ns": [
+        100000000,
+        1000000000,
+        5000000000
+      ],
+      "near_limit_fraction": 0.8
+    },
+    "output": {
+      "runs_directory": "runs",
+      "write_plots": false
+    },
+    "random_seed": 7
+  },
+  "effective_config_sha256": "1c80e4614b0656b121c710a8d4939088f875db96bb1e710dae465bdea1463a15",
+  "tape": [
+    [
+      0,
+      0,
+      "RESET",
+      null,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      "SNAPSHOT",
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      2,
+      "SNAPSHOT",
+      -1,
+      3,
+      1
+    ],
+    [
+      0,
+      3,
+      "SNAPSHOT",
+      -1,
+      4,
+      1
+    ],
+    [
+      10,
+      4,
+      "ADD",
+      -1,
+      2,
+      1
+    ],
+    [
+      20,
+      5,
+      "ADD",
+      -1,
+      3,
+      1
+    ],
+    [
+      30,
+      6,
+      "TRADE",
+      -1,
+      2,
+      1
+    ],
+    [
+      40,
+      7,
+      "TRADE",
+      -1,
+      3,
+      2
+    ],
+    [
+      50,
+      8,
+      "ADD",
+      1,
+      1,
+      1
+    ]
+  ],
+  "event_stream_sha256": "b4ee9738140bd44be7d3a7a7b240629677a8316519729c008a9ba00182f17efe",
+  "fixture_sha256": "96c30af69e182c3218c9f892ac5276f773b3a10393adf0782441869470cf727c",
+  "contract_sha256": "8862b5a2d346e65248e8a561c488dfe3c2bdf1b85d54de75a85dd85fe017c037",
+  "provider_sha256": "e8ab1ed2e1de58687233fa8b3cf1dc692e4b7d9a62645d9bda5392895af773a8",
+  "imports": {
+    "strategies/fixed_spread": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/strategies/fixed_spread.py",
+      "sha256": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c"
+    },
+    "strategies/inventory_aware": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/strategies/inventory_aware.py",
+      "sha256": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972"
+    },
+    "strategies/microprice": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/strategies/microprice.py",
+      "sha256": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa"
+    },
+    "strategies/base": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "strategy_runtime": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "backtest": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/backtest.py",
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "exchange": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/exchange.py",
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "orders": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "scheduler": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "config": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "metrics": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/metrics.py",
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    "portfolio": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/portfolio.py",
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "risk": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/risk.py",
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "book": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "events": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "channels": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    }
+  },
+  "auxiliary_imports": {
+    "validation": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/validation.py",
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    },
+    "queue_model": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/queue_model.py",
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "data/fingerprint": {
+      "path": "/tmp/lob-positive-price-vqw8_6hn/candidate/src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    }
+  },
+  "certificate": {
+    "valid": true,
+    "issue_count": 0,
+    "issues": [],
+    "event_count": 9,
+    "event_stream_sha256": "b4ee9738140bd44be7d3a7a7b240629677a8316519729c008a9ba00182f17efe",
+    "mode": "strict",
+    "reconstructed_book": true,
+    "required_nonempty": true,
+    "final_book": {
+      "_type": "BookView",
+      "timestamp_ns": 50,
+      "sequence_number": 8,
+      "best_bid_ticks": 1,
+      "best_ask_ticks": 4,
+      "best_bid_quantity": 2,
+      "best_ask_quantity": 1,
+      "midpoint_ticks": {
+        "binary64": "4004000000000000"
+      },
+      "microprice_ticks": {
+        "binary64": "4008000000000000"
+      },
+      "imbalance": {
+        "binary64": "3fd5555555555555"
+      },
+      "bids": [
+        [
+          1,
+          2
+        ]
+      ],
+      "asks": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    "diagnostics": {}
+  }
+}

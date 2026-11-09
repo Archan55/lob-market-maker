@@ -1,0 +1,400 @@
+{
+  "historical_book": [
+    {
+      "event": [
+        0,
+        0,
+        "RESET",
+        null,
+        0,
+        0
+      ],
+      "pre": {
+        "bid": null,
+        "ask": null,
+        "bids": [],
+        "asks": []
+      },
+      "post": {
+        "bid": null,
+        "ask": null,
+        "bids": [],
+        "asks": []
+      }
+    },
+    {
+      "event": [
+        0,
+        1,
+        "SNAPSHOT",
+        1,
+        1,
+        1
+      ],
+      "pre": {
+        "bid": null,
+        "ask": null,
+        "bids": [],
+        "asks": []
+      },
+      "post": {
+        "bid": 1,
+        "ask": null,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": []
+      }
+    },
+    {
+      "event": [
+        0,
+        2,
+        "SNAPSHOT",
+        -1,
+        3,
+        1
+      ],
+      "pre": {
+        "bid": 1,
+        "ask": null,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": []
+      },
+      "post": {
+        "bid": 1,
+        "ask": 3,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "event": [
+        0,
+        3,
+        "SNAPSHOT",
+        -1,
+        4,
+        1
+      ],
+      "pre": {
+        "bid": 1,
+        "ask": 3,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            1
+          ]
+        ]
+      },
+      "post": {
+        "bid": 1,
+        "ask": 3,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "event": [
+        10,
+        4,
+        "ADD",
+        -1,
+        2,
+        1
+      ],
+      "pre": {
+        "bid": 1,
+        "ask": 3,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      "post": {
+        "bid": 1,
+        "ask": 2,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "event": [
+        20,
+        5,
+        "ADD",
+        -1,
+        3,
+        1
+      ],
+      "pre": {
+        "bid": 1,
+        "ask": 2,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      "post": {
+        "bid": 1,
+        "ask": 2,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "event": [
+        30,
+        6,
+        "TRADE",
+        -1,
+        2,
+        1
+      ],
+      "pre": {
+        "bid": 1,
+        "ask": 2,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      "post": {
+        "bid": 1,
+        "ask": 3,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "event": [
+        40,
+        7,
+        "TRADE",
+        -1,
+        3,
+        2
+      ],
+      "pre": {
+        "bid": 1,
+        "ask": 3,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      "post": {
+        "bid": 1,
+        "ask": 4,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "event": [
+        50,
+        8,
+        "ADD",
+        1,
+        1,
+        1
+      ],
+      "pre": {
+        "bid": 1,
+        "ask": 4,
+        "bids": [
+          [
+            1,
+            1
+          ]
+        ],
+        "asks": [
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      "post": {
+        "bid": 1,
+        "ask": 4,
+        "bids": [
+          [
+            1,
+            2
+          ]
+        ],
+        "asks": [
+          [
+            4,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "fifo_budget": {
+    "ask_price": 3,
+    "initial_external_ahead": 1,
+    "own_quantity": 1,
+    "later_external_behind": 1,
+    "trade40_quantity": 2,
+    "expected_external_ahead_consumed": 1,
+    "expected_own_fill": 1
+  },
+  "note": "Queue pre/post snapshots are runtime copies. Terminal exported queue/cumulative order fields are not used as trajectory evidence."
+}

@@ -189,7 +189,18 @@ half_spread = max(minimum_half_spread,
 ```
 
 Rolling volatility uses only changes in delivered midpoints. Bids round down,
-asks round up, and passive quotes are forced uncrossed.
+asks round up, and the rounded own bid is below the rounded own ask. A computed
+side with a nonpositive price is omitted rather than clipped or repriced; any
+surviving side keeps its original price, size and inventory restriction. An
+absent desired side follows the existing quote-manager cancellation path. Its
+legacy `risk_side_suppression` reason labels that absence, rather than proving
+a RiskManager rejection or completed cancellation.
+
+Positive targets can still cross the observed BBO under the reservation-price
+formula. Post-only requests remain subject to rejection at venue arrival;
+non-post-only configuration retains its existing marketable-order behavior.
+Omitting an unrepresentable price does not add an observed-BBO clamp or change
+that execution assumption. See [the bounded price-domain study](POSITIVE_PRICE_QUOTES.md).
 
 ## Markouts
 

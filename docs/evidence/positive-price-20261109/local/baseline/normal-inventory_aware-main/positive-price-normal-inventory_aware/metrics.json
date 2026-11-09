@@ -1,0 +1,80 @@
+{
+  "attribution": {
+    "adverse_selection_markout": 2.327692307692308,
+    "fees": -0.0,
+    "inventory_mark_to_market": 0.5099999999999998,
+    "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+    "rebates": 0.0178,
+    "reconciliation_residual": 0.0,
+    "spread_capture": 0.9900000000000002
+  },
+  "engineering": {
+    "events_per_second": 4298.346019367683,
+    "events_processed": 300,
+    "peak_memory_bytes": null,
+    "scheduler_events_processed": 1131,
+    "wall_clock_seconds": 0.0697942880001392
+  },
+  "execution_quality": {
+    "effective_spread_ticks": 2.272727272727273,
+    "markout_ticks_by_horizon_ns": {
+      "100000000": 2.6153846153846154,
+      "1000000000": null,
+      "5000000000": null
+    },
+    "markout_ticks_by_side": {
+      "ask": 3.3125,
+      "bid": 1.5
+    },
+    "realized_spread_ticks": 1.1363636363636365
+  },
+  "inventory": {
+    "end_of_session": -15,
+    "maximum_long": 5,
+    "maximum_short": -15,
+    "mean": -5.032258064516129,
+    "mean_absolute": 6.090322580645161,
+    "standard_deviation": 5.692575079010983,
+    "time_near_limits_fraction": 0.0
+  },
+  "market_conditions": {
+    "average_displayed_top_depth": 134.03,
+    "average_market_spread_ticks": 2.892361111111111
+  },
+  "pnl": {
+    "annualized_sharpe": null,
+    "fees": 0.0,
+    "gross_pnl": 1.5,
+    "maximum_drawdown": 0.28,
+    "net_pnl": 1.5178,
+    "pnl_per_fill": 0.06899090909090909,
+    "pnl_per_traded_unit": 0.017053932584269665,
+    "pnl_per_unit_turnover": 0.0001704318962990744,
+    "realized_pnl": 1.3501659722696537,
+    "rebates": 0.0178,
+    "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+    "unrealized_pnl": 0.1498340277303463
+  },
+  "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+  "risk": {
+    "event_count": 0,
+    "kill_switch_active": false
+  },
+  "trading_activity": {
+    "buy_volume": 37,
+    "cancel_to_fill_ratio": 1.2272727272727273,
+    "cancelled_orders": 27,
+    "completed_fills": 22,
+    "fill_events": 22,
+    "fill_rate": 0.36065573770491804,
+    "maker_volume": 89,
+    "order_to_fill_ratio": 2.772727272727273,
+    "partial_fills": 0,
+    "quote_messages": 88,
+    "rejected_orders": 0,
+    "sell_volume": 52,
+    "submitted_orders": 61,
+    "taker_volume": 0,
+    "turnover": 8905.61
+  }
+}

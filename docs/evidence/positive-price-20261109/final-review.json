@@ -1,0 +1,79 @@
+{
+  "actual_data_artifact_audit": {
+    "coverage": [
+      "All 72 actual Parquets rehashed and decoded: 48 normal files form 24 byte-identical pairs, plus 24 candidate-low files",
+      "All 16 source/import/Git/archive and frozen harness pins; all 14 worker records and exact corpus/probe ledgers",
+      "Every strict nine-event low tape, independent dictionary book/FIFO, config/event/certificate identity",
+      "Original BID one cancel at 10, actual CANCELLED report with remaining one/no fills; original ASK complete managed record unchanged at 10 and no cancel before 40",
+      "External one / original own one / external one queue, immutable original maker ASK fill one at price three/time 40, no buys, inventory minus one, no risk events",
+      "No claim of completed main-low tables; no replay, repair or edit performed by reviewer"
+    ],
+    "decision": "GO",
+    "reviewer": "data_execution_audit"
+  },
+  "date": "2026-11-09",
+  "design_review": "GO before outcomes: contract, source scope, original-equation positive-domain oracle, low strict tape/FIFO and within-policy CI300 comparisons; constructor/venue validators and positive crossed-price behavior unchanged.",
+  "final_report_curation_workflow_review": {
+    "corrections": "Two report wording corrections before publication: qualify opening with flat inventory; describe controller as refusing retained-evidence overwrite. No source, gate, input or outcome changes.",
+    "decision": "GO",
+    "reviewer": "independent_feasibility",
+    "verified": [
+      "All 181 curated original copies match the 231-file workspace manifest by size and SHA; all 72 actual Parquets present",
+      "Report and methodology accurately scope flat-inventory failure, omission policy, queue/management mechanics and negative controls",
+      "All eight report links resolve; one candidate, zero repairs and complete 12-engine-attempt / 14-worker ledger",
+      "Full-suite JUnit 314 pass with no errors/skips, 37 actual source imports and source/harness pins",
+      "Quality logs confirm 90.68% branch-aware coverage, Ruff 84 files and mypy 37 files",
+      "Workflow checks out actual head with full history, runs ordinary gates, smoke and both-source seven-worker verification, prints provenance and retains 14-day actual-head evidence"
+    ]
+  },
+  "independence": "Complementary agents authored frozen oracle, observer and controller; root alone executed the bounded measurements and candidate. Independent reviewers inspected actual saved source/artifacts without reruns or repairs.",
+  "limits": [
+    "Constructed mechanics only; no economic advantage or calibrated execution claim",
+    "Observed cancellation completion applies only to this zero-delay tape, not general liveness or recovery",
+    "Ordinary CI300 controls are exposed history, not untouched holdouts",
+    "No combined integration of independent open drafts; exact-accounting overhead and real tape/calibration requirements unchanged"
+  ],
+  "main": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "measured_candidate": "2fc983cb861697a9cab4da00f9f3948b2066da42",
+  "quality": {
+    "full_suite": {
+      "actual_import_identity": "local/full-suite/imports.json",
+      "coverage_percent": 90.68,
+      "failed": 0,
+      "junit": "local/full-suite/result.xml",
+      "passed": 314
+    },
+    "mypy": "37 source files pass",
+    "python": "3.12.14",
+    "ruff_check": "pass",
+    "ruff_format": "84 files already formatted"
+  },
+  "remaining_gates": [
+    "All publication-manifest files tracked, including the 14 ignored original synthetic logs",
+    "New branch/draft publication and exact remote commit verification",
+    "Terminal exact-head CI and decoded log review, artifact metadata verification; record verified links/head in new PR body"
+  ],
+  "source_and_numerical_audit": {
+    "coverage": [
+      "16 source archive/copy/import hashes for main and candidate; only three approved strategy files differ",
+      "Frozen contract, fixtures, independent test, observer and controller hashes",
+      "All 14 worker records, raw embedded JSON, JUnit, exact same 64 node identities and 26/38 main failure matrix",
+      "Candidate 64 passes; 54 pure, 6 managed and 18 validator probe checks; identical cross-source inputs/oracles/initial accepted contexts",
+      "All three low actual config/event/certificate identities and physical/management checks",
+      "Entire metrics/diagnostics after only three declared clock exclusions; normal config/event/summary and table record maps"
+    ],
+    "decision": "GO",
+    "reviewer": "independent_feasibility"
+  },
+  "status": "GO for publication; remote exact head and terminal CI remain pending",
+  "trial_accounting": {
+    "baseline_reexecuted_for_selection": false,
+    "candidate_count": 1,
+    "engine_attempts": 12,
+    "infrastructure_or_timeout_failures": 0,
+    "local_workers": 14,
+    "omitted_trials": 0,
+    "remote_CI_replication": "separate verification, not candidate selection",
+    "repair_count": 0
+  }
+}

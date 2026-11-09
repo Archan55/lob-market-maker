@@ -1,0 +1,101 @@
+instrument:
+  symbol: SYNTH-PRICE
+  currency: MODEL
+  tick_size: '1'
+  lot_size: 1
+data:
+  input_path: null
+  validation_mode: strict
+  book_depth: 5
+  provenance:
+    source_type: synthetic
+    provider: lobmm hand-constructed positive-price witness
+    venue: SIMULATED
+    symbol: SYNTH-PRICE
+    dataset_id: lobmm-positive-price-v1
+    session_start: null
+    session_end: null
+    checksum_sha256: null
+    license_notes: Original locally constructed fictional mechanics tape; not historical
+      or licensed market data.
+synthetic:
+  event_count: 2000
+  start_timestamp_ns: 0
+  interval_ns: 1000000
+  start_price_ticks: 10000
+  levels: 5
+  base_quantity: 100
+  regime_length: 250
+  reset_interval: 400
+latency:
+  market_data_ns: 0
+  order_entry_ns: 0
+  cancellation_ns: 0
+  fill_report_ns: 0
+  market_data_jitter_ns: 0
+  order_entry_jitter_ns: 0
+  cancellation_jitter_ns: 0
+  fill_report_jitter_ns: 0
+exchange:
+  validation_mode: strict
+  rest_unfilled_marketable_quantity: true
+  cancel_orders_on_reset: true
+queue_model:
+  cancellation_allocation: back_of_queue
+  price_through_fills: true
+fees:
+  maker_fee_per_unit: '0'
+  maker_rebate_per_unit: '0'
+  taker_fee_per_unit: '0'
+  proportional_fee_rate: '0'
+strategy:
+  name: inventory_aware
+  strategy_id: positive-price
+  order_size: 1
+  base_half_spread_ticks: 1.0
+  minimum_half_spread_ticks: 1.0
+  inventory_penalty_ticks: 0.0
+  imbalance_coefficient_ticks: 0.0
+  volatility_multiplier: 0.0
+  volatility_window: 50
+  refresh_interval_ns: 1000
+  minimum_quote_lifetime_ns: 1000
+  stale_after_ns: 2000
+  price_change_threshold_ticks: 1
+  quantity_change_threshold: 1
+  rejection_cooldown_ns: 50000000
+  rejection_backoff_multiplier: 2.0
+  rejection_max_cooldown_ns: 1000000000
+  message_rate_cooldown_ns: 1000000000
+  post_only: true
+risk:
+  max_abs_inventory: 10
+  max_order_size: 10
+  max_total_open_quantity: 20
+  max_open_orders: 4
+  max_loss: '1000'
+  max_drawdown: '1000'
+  max_quote_age_ns: 1000
+  minimum_spread_ticks: 1
+  max_volatility_ticks: null
+  max_messages_per_second: null
+  prohibit_new_quotes_last_ns: 0
+backtest:
+  warmup_events: 0
+  start_timestamp_ns: null
+  end_timestamp_ns: null
+  event_limit: null
+  timer_interval_ns: 100
+  mark_price: midpoint
+  session_end_policy: mark
+  track_memory: false
+metrics:
+  markout_horizons_ns:
+  - 100000000
+  - 1000000000
+  - 5000000000
+  near_limit_fraction: 0.8
+output:
+  runs_directory: runs
+  write_plots: false
+random_seed: 7
