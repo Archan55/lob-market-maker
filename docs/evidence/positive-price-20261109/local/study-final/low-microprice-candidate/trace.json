@@ -1,0 +1,6537 @@
+{
+  "scheduler": [
+    {
+      "key": [
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 0,
+        "sequence_number": 0,
+        "event_type": "RESET",
+        "side": null,
+        "price_ticks": 0,
+        "quantity": 0
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        10,
+        1,
+        1
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "event_type": "SNAPSHOT",
+        "side": 1,
+        "price_ticks": 1,
+        "quantity": 1
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        10,
+        2,
+        2
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 0,
+        "sequence_number": 2,
+        "event_type": "SNAPSHOT",
+        "side": -1,
+        "price_ticks": 3,
+        "quantity": 1
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        10,
+        3,
+        3
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 0,
+        "sequence_number": 3,
+        "event_type": "SNAPSHOT",
+        "side": -1,
+        "price_ticks": 4,
+        "quantity": 1
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        30,
+        0,
+        11
+      ],
+      "parent_schedule_id": 0,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 0,
+        "send_timestamp_ns": 0,
+        "delivery_timestamp_ns": 0,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 0,
+          "sequence_number": 0,
+          "event_type": "RESET",
+          "side": null,
+          "price_ticks": 0,
+          "quantity": 0
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        30,
+        1,
+        12
+      ],
+      "parent_schedule_id": 1,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 1,
+        "send_timestamp_ns": 0,
+        "delivery_timestamp_ns": 0,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 1
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        30,
+        2,
+        13
+      ],
+      "parent_schedule_id": 2,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 2,
+        "send_timestamp_ns": 0,
+        "delivery_timestamp_ns": 0,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 0,
+          "sequence_number": 2,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 1
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        30,
+        3,
+        14
+      ],
+      "parent_schedule_id": 3,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 3,
+        "send_timestamp_ns": 0,
+        "delivery_timestamp_ns": 0,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 4,
+          "quantity": 1
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        32,
+        0,
+        9
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "TimerMessage",
+        "timer_sequence": 0
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        0,
+        40,
+        0,
+        15
+      ],
+      "parent_schedule_id": 11,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "market_data"
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        1,
+        20,
+        0,
+        16
+      ],
+      "parent_schedule_id": 15,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "new_orders",
+        "channel_sequence": 0,
+        "send_timestamp_ns": 0,
+        "delivery_timestamp_ns": 0,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "NewOrderRequest",
+          "client_order_id": "positive-price-000000000001",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 1,
+          "strategy_id": "positive-price",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        1,
+        20,
+        1,
+        17
+      ],
+      "parent_schedule_id": 15,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "new_orders",
+        "channel_sequence": 1,
+        "send_timestamp_ns": 0,
+        "delivery_timestamp_ns": 0,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "NewOrderRequest",
+          "client_order_id": "positive-price-000000000002",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 1,
+          "strategy_id": "positive-price",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        1,
+        31,
+        0,
+        18
+      ],
+      "parent_schedule_id": 16,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "execution_reports",
+        "channel_sequence": 0,
+        "send_timestamp_ns": 0,
+        "delivery_timestamp_ns": 0,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000001",
+          "report_type": "accepted",
+          "exchange_timestamp_ns": 0,
+          "order_id": "O000000000001",
+          "client_order_id": "positive-price-000000000001",
+          "order_status": "live",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        1,
+        31,
+        1,
+        19
+      ],
+      "parent_schedule_id": 17,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "execution_reports",
+        "channel_sequence": 1,
+        "send_timestamp_ns": 0,
+        "delivery_timestamp_ns": 0,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000002",
+          "report_type": "accepted",
+          "exchange_timestamp_ns": 0,
+          "order_id": "O000000000002",
+          "client_order_id": "positive-price-000000000002",
+          "order_status": "live",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        0,
+        1,
+        40,
+        0,
+        20
+      ],
+      "parent_schedule_id": 18,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "execution_report"
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        10,
+        0,
+        10,
+        4,
+        4
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 10,
+        "sequence_number": 4,
+        "event_type": "ADD",
+        "side": -1,
+        "price_ticks": 2,
+        "quantity": 1
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        10,
+        0,
+        30,
+        4,
+        21
+      ],
+      "parent_schedule_id": 4,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 4,
+        "send_timestamp_ns": 10,
+        "delivery_timestamp_ns": 10,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 10,
+          "sequence_number": 4,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 2,
+          "quantity": 1
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        10,
+        0,
+        40,
+        0,
+        22
+      ],
+      "parent_schedule_id": 21,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "market_data"
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        10,
+        1,
+        20,
+        0,
+        23
+      ],
+      "parent_schedule_id": 22,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "cancellations",
+        "channel_sequence": 0,
+        "send_timestamp_ns": 10,
+        "delivery_timestamp_ns": 10,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "CancelRequest",
+          "decision_timestamp_ns": 10,
+          "send_timestamp_ns": 10,
+          "order_id": "O000000000001",
+          "client_order_id": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        10,
+        1,
+        31,
+        2,
+        24
+      ],
+      "parent_schedule_id": 23,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "execution_reports",
+        "channel_sequence": 2,
+        "send_timestamp_ns": 10,
+        "delivery_timestamp_ns": 10,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000003",
+          "report_type": "cancelled",
+          "exchange_timestamp_ns": 10,
+          "order_id": "O000000000001",
+          "client_order_id": "positive-price-000000000001",
+          "order_status": "cancelled",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        10,
+        1,
+        40,
+        0,
+        25
+      ],
+      "parent_schedule_id": 24,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "execution_report"
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        20,
+        0,
+        10,
+        5,
+        5
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 20,
+        "sequence_number": 5,
+        "event_type": "ADD",
+        "side": -1,
+        "price_ticks": 3,
+        "quantity": 1
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        20,
+        0,
+        30,
+        5,
+        26
+      ],
+      "parent_schedule_id": 5,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 5,
+        "send_timestamp_ns": 20,
+        "delivery_timestamp_ns": 20,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 20,
+          "sequence_number": 5,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 1
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        20,
+        0,
+        40,
+        0,
+        27
+      ],
+      "parent_schedule_id": 26,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "market_data"
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        30,
+        0,
+        10,
+        6,
+        6
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 30,
+        "sequence_number": 6,
+        "event_type": "TRADE",
+        "side": -1,
+        "price_ticks": 2,
+        "quantity": 1
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        30,
+        0,
+        30,
+        6,
+        28
+      ],
+      "parent_schedule_id": 6,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 6,
+        "send_timestamp_ns": 30,
+        "delivery_timestamp_ns": 30,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 30,
+          "sequence_number": 6,
+          "event_type": "TRADE",
+          "side": -1,
+          "price_ticks": 2,
+          "quantity": 1
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        30,
+        0,
+        40,
+        0,
+        29
+      ],
+      "parent_schedule_id": 28,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "market_data"
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        0,
+        10,
+        7,
+        7
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 40,
+        "sequence_number": 7,
+        "event_type": "TRADE",
+        "side": -1,
+        "price_ticks": 3,
+        "quantity": 2
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        0,
+        30,
+        7,
+        31
+      ],
+      "parent_schedule_id": 7,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 7,
+        "send_timestamp_ns": 40,
+        "delivery_timestamp_ns": 40,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "event_type": "TRADE",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 2
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        0,
+        31,
+        3,
+        30
+      ],
+      "parent_schedule_id": 7,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "execution_reports",
+        "channel_sequence": 3,
+        "send_timestamp_ns": 40,
+        "delivery_timestamp_ns": 40,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000004",
+          "report_type": "fill",
+          "exchange_timestamp_ns": 40,
+          "order_id": "O000000000002",
+          "client_order_id": "positive-price-000000000002",
+          "order_status": "filled",
+          "remaining_quantity": 0,
+          "fill": {
+            "_type": "Fill",
+            "fill_id": "F000000000001",
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "strategy_id": "positive-price",
+            "side": -1,
+            "quantity": 1,
+            "price_ticks": 3,
+            "liquidity_role": "maker",
+            "exchange_fill_timestamp_ns": 40,
+            "fee": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "rebate": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            }
+          },
+          "reason": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        0,
+        40,
+        0,
+        32
+      ],
+      "parent_schedule_id": 31,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "market_data"
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        1,
+        20,
+        2,
+        33
+      ],
+      "parent_schedule_id": 32,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "new_orders",
+        "channel_sequence": 2,
+        "send_timestamp_ns": 40,
+        "delivery_timestamp_ns": 40,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "NewOrderRequest",
+          "client_order_id": "positive-price-000000000003",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 1,
+          "strategy_id": "positive-price",
+          "decision_timestamp_ns": 40,
+          "send_timestamp_ns": 40,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        1,
+        20,
+        3,
+        34
+      ],
+      "parent_schedule_id": 32,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "new_orders",
+        "channel_sequence": 3,
+        "send_timestamp_ns": 40,
+        "delivery_timestamp_ns": 40,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "NewOrderRequest",
+          "client_order_id": "positive-price-000000000004",
+          "side": -1,
+          "price_ticks": 4,
+          "quantity": 1,
+          "strategy_id": "positive-price",
+          "decision_timestamp_ns": 40,
+          "send_timestamp_ns": 40,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        1,
+        31,
+        4,
+        35
+      ],
+      "parent_schedule_id": 33,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "execution_reports",
+        "channel_sequence": 4,
+        "send_timestamp_ns": 40,
+        "delivery_timestamp_ns": 40,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000005",
+          "report_type": "accepted",
+          "exchange_timestamp_ns": 40,
+          "order_id": "O000000000003",
+          "client_order_id": "positive-price-000000000003",
+          "order_status": "live",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        1,
+        31,
+        5,
+        36
+      ],
+      "parent_schedule_id": 34,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "execution_reports",
+        "channel_sequence": 5,
+        "send_timestamp_ns": 40,
+        "delivery_timestamp_ns": 40,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000006",
+          "report_type": "accepted",
+          "exchange_timestamp_ns": 40,
+          "order_id": "O000000000004",
+          "client_order_id": "positive-price-000000000004",
+          "order_status": "live",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        40,
+        1,
+        40,
+        0,
+        37
+      ],
+      "parent_schedule_id": 35,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "execution_report"
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        50,
+        0,
+        10,
+        8,
+        8
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "MarketEvent",
+        "timestamp_ns": 50,
+        "sequence_number": 8,
+        "event_type": "ADD",
+        "side": 1,
+        "price_ticks": 1,
+        "quantity": 1
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        50,
+        0,
+        15,
+        0,
+        10
+      ],
+      "parent_schedule_id": null,
+      "payload": {
+        "_type": "SessionEnd",
+        "timestamp_ns": 50
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        50,
+        0,
+        30,
+        8,
+        38
+      ],
+      "parent_schedule_id": 8,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "market_data",
+        "channel_sequence": 8,
+        "send_timestamp_ns": 50,
+        "delivery_timestamp_ns": 50,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "MarketEvent",
+          "timestamp_ns": 50,
+          "sequence_number": 8,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 1
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        50,
+        0,
+        31,
+        6,
+        39
+      ],
+      "parent_schedule_id": 10,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "execution_reports",
+        "channel_sequence": 6,
+        "send_timestamp_ns": 50,
+        "delivery_timestamp_ns": 50,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000007",
+          "report_type": "expired",
+          "exchange_timestamp_ns": 50,
+          "order_id": "O000000000003",
+          "client_order_id": "positive-price-000000000003",
+          "order_status": "expired",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": "time_in_force"
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        50,
+        0,
+        31,
+        7,
+        40
+      ],
+      "parent_schedule_id": 10,
+      "payload": {
+        "_type": "ChannelDelivery",
+        "channel_name": "execution_reports",
+        "channel_sequence": 7,
+        "send_timestamp_ns": 50,
+        "delivery_timestamp_ns": 50,
+        "sampled_latency_ns": 0,
+        "payload": {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000008",
+          "report_type": "expired",
+          "exchange_timestamp_ns": 50,
+          "order_id": "O000000000004",
+          "client_order_id": "positive-price-000000000004",
+          "order_status": "expired",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": "time_in_force"
+        }
+      },
+      "completed": true
+    },
+    {
+      "key": [
+        50,
+        0,
+        40,
+        0,
+        41
+      ],
+      "parent_schedule_id": 38,
+      "payload": {
+        "_type": "StrategyWake",
+        "reason": "market_data"
+      },
+      "completed": true
+    }
+  ],
+  "decisions": [
+    {
+      "id": 0,
+      "scheduler_key": [
+        0,
+        0,
+        40,
+        0,
+        15
+      ],
+      "timestamp_ns": 0,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": true,
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 3,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": []
+      },
+      "actions": [
+        {
+          "_type": "NewOrderRequest",
+          "client_order_id": "positive-price-000000000001",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 1,
+          "strategy_id": "positive-price",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        {
+          "_type": "NewOrderRequest",
+          "client_order_id": "positive-price-000000000002",
+          "side": -1,
+          "price_ticks": 3,
+          "quantity": 1,
+          "strategy_id": "positive-price",
+          "decision_timestamp_ns": 0,
+          "send_timestamp_ns": 0,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      ],
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 3,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "pending",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "pending",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "new_decisions": [
+        {
+          "_type": "QuoteDecision",
+          "timestamp_ns": 0,
+          "observed_sequence": 3,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "positive-price-000000000001",
+          "order_id": null,
+          "price_ticks": 1,
+          "quantity": 1,
+          "reason": "desired_quote"
+        },
+        {
+          "_type": "QuoteDecision",
+          "timestamp_ns": 0,
+          "observed_sequence": 3,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "positive-price-000000000002",
+          "order_id": null,
+          "price_ticks": 3,
+          "quantity": 1,
+          "reason": "desired_quote"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "scheduler_key": [
+        0,
+        1,
+        40,
+        0,
+        20
+      ],
+      "timestamp_ns": 0,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": true,
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 3,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000001",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "actions": [],
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 3,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000001",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "new_decisions": []
+    },
+    {
+      "id": 2,
+      "scheduler_key": [
+        10,
+        0,
+        40,
+        0,
+        22
+      ],
+      "timestamp_ns": 10,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": true,
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 4,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 10,
+          "sequence_number": 4,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 2,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000001",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "actions": [
+        {
+          "_type": "CancelRequest",
+          "decision_timestamp_ns": 10,
+          "send_timestamp_ns": 10,
+          "order_id": "O000000000001",
+          "client_order_id": null
+        }
+      ],
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 4,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 10,
+          "sequence_number": 4,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 2,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000001",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": true,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": "pending"
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "new_decisions": [
+        {
+          "_type": "QuoteDecision",
+          "timestamp_ns": 10,
+          "observed_sequence": 4,
+          "side": 1,
+          "action": "cancel",
+          "client_order_id": "positive-price-000000000001",
+          "order_id": "O000000000001",
+          "price_ticks": 1,
+          "quantity": 1,
+          "reason": "risk_side_suppression"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scheduler_key": [
+        10,
+        1,
+        40,
+        0,
+        25
+      ],
+      "timestamp_ns": 10,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": true,
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 4,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 10,
+          "sequence_number": 4,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 2,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "actions": [],
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 4,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 10,
+          "sequence_number": 4,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 2,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "new_decisions": []
+    },
+    {
+      "id": 4,
+      "scheduler_key": [
+        20,
+        0,
+        40,
+        0,
+        27
+      ],
+      "timestamp_ns": 20,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": true,
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 5,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 20,
+          "sequence_number": 5,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 2,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "actions": [],
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 5,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 20,
+          "sequence_number": 5,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 2,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "new_decisions": []
+    },
+    {
+      "id": 5,
+      "scheduler_key": [
+        30,
+        0,
+        40,
+        0,
+        29
+      ],
+      "timestamp_ns": 30,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": true,
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 6,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 30,
+          "sequence_number": 6,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 2,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ffaaaaaaaaaaaab"
+          },
+          "imbalance": {
+            "binary64": "bfd5555555555555"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "actions": [],
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 6,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 30,
+          "sequence_number": 6,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 2,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ffaaaaaaaaaaaab"
+          },
+          "imbalance": {
+            "binary64": "bfd5555555555555"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "new_decisions": []
+    },
+    {
+      "id": 6,
+      "scheduler_key": [
+        40,
+        0,
+        40,
+        0,
+        32
+      ],
+      "timestamp_ns": 40,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": true,
+      "before": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": []
+      },
+      "actions": [
+        {
+          "_type": "NewOrderRequest",
+          "client_order_id": "positive-price-000000000003",
+          "side": 1,
+          "price_ticks": 1,
+          "quantity": 1,
+          "strategy_id": "positive-price",
+          "decision_timestamp_ns": 40,
+          "send_timestamp_ns": 40,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        },
+        {
+          "_type": "NewOrderRequest",
+          "client_order_id": "positive-price-000000000004",
+          "side": -1,
+          "price_ticks": 4,
+          "quantity": 1,
+          "strategy_id": "positive-price",
+          "decision_timestamp_ns": 40,
+          "send_timestamp_ns": 40,
+          "post_only": true,
+          "rest_unfilled": true,
+          "expire_timestamp_ns": null
+        }
+      ],
+      "after": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000003",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "pending",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "pending",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "new_decisions": [
+        {
+          "_type": "QuoteDecision",
+          "timestamp_ns": 40,
+          "observed_sequence": 7,
+          "side": 1,
+          "action": "submit",
+          "client_order_id": "positive-price-000000000003",
+          "order_id": null,
+          "price_ticks": 1,
+          "quantity": 1,
+          "reason": "desired_quote"
+        },
+        {
+          "_type": "QuoteDecision",
+          "timestamp_ns": 40,
+          "observed_sequence": 7,
+          "side": -1,
+          "action": "submit",
+          "client_order_id": "positive-price-000000000004",
+          "order_id": null,
+          "price_ticks": 4,
+          "quantity": 1,
+          "reason": "desired_quote"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "scheduler_key": [
+        40,
+        1,
+        40,
+        0,
+        37
+      ],
+      "timestamp_ns": 40,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": true,
+      "before": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000003",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000003",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000004",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "actions": [],
+      "after": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000003",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000003",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000004",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "new_decisions": []
+    },
+    {
+      "id": 8,
+      "scheduler_key": [
+        50,
+        0,
+        40,
+        0,
+        41
+      ],
+      "timestamp_ns": 50,
+      "max_abs_inventory": 10,
+      "allow_new_quotes": false,
+      "before": {
+        "known_inventory": -1,
+        "observed_sequence": 8,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 50,
+          "sequence_number": 8,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 2,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4008000000000000"
+          },
+          "imbalance": {
+            "binary64": "3fd5555555555555"
+          },
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": []
+      },
+      "actions": [],
+      "after": {
+        "known_inventory": -1,
+        "observed_sequence": 8,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 50,
+          "sequence_number": 8,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 2,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4008000000000000"
+          },
+          "imbalance": {
+            "binary64": "3fd5555555555555"
+          },
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": []
+      },
+      "new_decisions": []
+    }
+  ],
+  "rounded_calls": [
+    {
+      "decision_id": 0,
+      "timestamp_ns": 0,
+      "reservation_ticks": {
+        "binary64": "4000000000000000"
+      },
+      "half_spread_ticks": {
+        "binary64": "3ff0000000000000"
+      },
+      "result": [
+        1,
+        3
+      ]
+    },
+    {
+      "decision_id": 1,
+      "timestamp_ns": 0,
+      "reservation_ticks": {
+        "binary64": "4000000000000000"
+      },
+      "half_spread_ticks": {
+        "binary64": "3ff0000000000000"
+      },
+      "result": [
+        1,
+        3
+      ]
+    },
+    {
+      "decision_id": 2,
+      "timestamp_ns": 10,
+      "reservation_ticks": {
+        "binary64": "3ff8000000000000"
+      },
+      "half_spread_ticks": {
+        "binary64": "3ff0000000000000"
+      },
+      "result": [
+        0,
+        3
+      ]
+    },
+    {
+      "decision_id": 3,
+      "timestamp_ns": 10,
+      "reservation_ticks": {
+        "binary64": "3ff8000000000000"
+      },
+      "half_spread_ticks": {
+        "binary64": "3ff0000000000000"
+      },
+      "result": [
+        0,
+        3
+      ]
+    },
+    {
+      "decision_id": 4,
+      "timestamp_ns": 20,
+      "reservation_ticks": {
+        "binary64": "3ff8000000000000"
+      },
+      "half_spread_ticks": {
+        "binary64": "3ff0000000000000"
+      },
+      "result": [
+        0,
+        3
+      ]
+    },
+    {
+      "decision_id": 5,
+      "timestamp_ns": 30,
+      "reservation_ticks": {
+        "binary64": "3ffaaaaaaaaaaaab"
+      },
+      "half_spread_ticks": {
+        "binary64": "3ff0000000000000"
+      },
+      "result": [
+        0,
+        3
+      ]
+    },
+    {
+      "decision_id": 6,
+      "timestamp_ns": 40,
+      "reservation_ticks": {
+        "binary64": "4004000000000000"
+      },
+      "half_spread_ticks": {
+        "binary64": "3ff0000000000000"
+      },
+      "result": [
+        1,
+        4
+      ]
+    },
+    {
+      "decision_id": 7,
+      "timestamp_ns": 40,
+      "reservation_ticks": {
+        "binary64": "4004000000000000"
+      },
+      "half_spread_ticks": {
+        "binary64": "3ff0000000000000"
+      },
+      "result": [
+        1,
+        4
+      ]
+    }
+  ],
+  "desired_attempts": [
+    {
+      "decision_id": 0,
+      "timestamp_ns": 0,
+      "side": 1,
+      "price_ticks": 1,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 0,
+      "timestamp_ns": 0,
+      "side": -1,
+      "price_ticks": 3,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 1,
+      "timestamp_ns": 0,
+      "side": 1,
+      "price_ticks": 1,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 1,
+      "timestamp_ns": 0,
+      "side": -1,
+      "price_ticks": 3,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 2,
+      "timestamp_ns": 10,
+      "side": -1,
+      "price_ticks": 3,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 3,
+      "timestamp_ns": 10,
+      "side": -1,
+      "price_ticks": 3,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 4,
+      "timestamp_ns": 20,
+      "side": -1,
+      "price_ticks": 3,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 5,
+      "timestamp_ns": 30,
+      "side": -1,
+      "price_ticks": 3,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 6,
+      "timestamp_ns": 40,
+      "side": 1,
+      "price_ticks": 1,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 6,
+      "timestamp_ns": 40,
+      "side": -1,
+      "price_ticks": 4,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 7,
+      "timestamp_ns": 40,
+      "side": 1,
+      "price_ticks": 1,
+      "quantity": 1,
+      "validated": true
+    },
+    {
+      "decision_id": 7,
+      "timestamp_ns": 40,
+      "side": -1,
+      "price_ticks": 4,
+      "quantity": 1,
+      "validated": true
+    }
+  ],
+  "reports": [
+    {
+      "scheduler_key": [
+        0,
+        1,
+        31,
+        0,
+        18
+      ],
+      "notification_timestamp_ns": 0,
+      "report": {
+        "_type": "ExecutionReport",
+        "report_id": "R000000000001",
+        "report_type": "accepted",
+        "exchange_timestamp_ns": 0,
+        "order_id": "O000000000001",
+        "client_order_id": "positive-price-000000000001",
+        "order_status": "live",
+        "remaining_quantity": 1,
+        "fill": null,
+        "reason": null
+      },
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 3,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 3,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000001",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      }
+    },
+    {
+      "scheduler_key": [
+        0,
+        1,
+        31,
+        1,
+        19
+      ],
+      "notification_timestamp_ns": 0,
+      "report": {
+        "_type": "ExecutionReport",
+        "report_id": "R000000000002",
+        "report_type": "accepted",
+        "exchange_timestamp_ns": 0,
+        "order_id": "O000000000002",
+        "client_order_id": "positive-price-000000000002",
+        "order_status": "live",
+        "remaining_quantity": 1,
+        "fill": null,
+        "reason": null
+      },
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 3,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000001",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 3,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 0,
+          "sequence_number": 3,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 3,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4000000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000001",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      }
+    },
+    {
+      "scheduler_key": [
+        10,
+        1,
+        31,
+        2,
+        24
+      ],
+      "notification_timestamp_ns": 10,
+      "report": {
+        "_type": "ExecutionReport",
+        "report_id": "R000000000003",
+        "report_type": "cancelled",
+        "exchange_timestamp_ns": 10,
+        "order_id": "O000000000001",
+        "client_order_id": "positive-price-000000000001",
+        "order_status": "cancelled",
+        "remaining_quantity": 1,
+        "fill": null,
+        "reason": null
+      },
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 4,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 10,
+          "sequence_number": 4,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 2,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000001",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000001",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": true,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": "sent"
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "after": {
+        "known_inventory": 0,
+        "observed_sequence": 4,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 10,
+          "sequence_number": 4,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 2,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "3ff8000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      }
+    },
+    {
+      "scheduler_key": [
+        40,
+        0,
+        31,
+        3,
+        30
+      ],
+      "notification_timestamp_ns": 40,
+      "report": {
+        "_type": "ExecutionReport",
+        "report_id": "R000000000004",
+        "report_type": "fill",
+        "exchange_timestamp_ns": 40,
+        "order_id": "O000000000002",
+        "client_order_id": "positive-price-000000000002",
+        "order_status": "filled",
+        "remaining_quantity": 0,
+        "fill": {
+          "_type": "Fill",
+          "fill_id": "F000000000001",
+          "order_id": "O000000000002",
+          "client_order_id": "positive-price-000000000002",
+          "strategy_id": "positive-price",
+          "side": -1,
+          "quantity": 1,
+          "price_ticks": 3,
+          "liquidity_role": "maker",
+          "exchange_fill_timestamp_ns": 40,
+          "fee": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "rebate": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          }
+        },
+        "reason": null
+      },
+      "before": {
+        "known_inventory": 0,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000002",
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 0,
+            "exchange_order_id": "O000000000002",
+            "accepted_timestamp_ns": 0,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "after": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": []
+      }
+    },
+    {
+      "scheduler_key": [
+        40,
+        1,
+        31,
+        4,
+        35
+      ],
+      "notification_timestamp_ns": 40,
+      "report": {
+        "_type": "ExecutionReport",
+        "report_id": "R000000000005",
+        "report_type": "accepted",
+        "exchange_timestamp_ns": 40,
+        "order_id": "O000000000003",
+        "client_order_id": "positive-price-000000000003",
+        "order_status": "live",
+        "remaining_quantity": 1,
+        "fill": null,
+        "reason": null
+      },
+      "before": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000003",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "after": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000003",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000003",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      }
+    },
+    {
+      "scheduler_key": [
+        40,
+        1,
+        31,
+        5,
+        36
+      ],
+      "notification_timestamp_ns": 40,
+      "report": {
+        "_type": "ExecutionReport",
+        "report_id": "R000000000006",
+        "report_type": "accepted",
+        "exchange_timestamp_ns": 40,
+        "order_id": "O000000000004",
+        "client_order_id": "positive-price-000000000004",
+        "order_status": "live",
+        "remaining_quantity": 1,
+        "fill": null,
+        "reason": null
+      },
+      "before": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000003",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000003",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": null,
+            "accepted_timestamp_ns": null,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "after": {
+        "known_inventory": -1,
+        "observed_sequence": 7,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 40,
+          "sequence_number": 7,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 1,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "imbalance": {
+            "binary64": "0000000000000000"
+          },
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000003",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000003",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000004",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      }
+    },
+    {
+      "scheduler_key": [
+        50,
+        0,
+        31,
+        6,
+        39
+      ],
+      "notification_timestamp_ns": 50,
+      "report": {
+        "_type": "ExecutionReport",
+        "report_id": "R000000000007",
+        "report_type": "expired",
+        "exchange_timestamp_ns": 50,
+        "order_id": "O000000000003",
+        "client_order_id": "positive-price-000000000003",
+        "order_status": "expired",
+        "remaining_quantity": 1,
+        "fill": null,
+        "reason": "time_in_force"
+      },
+      "before": {
+        "known_inventory": -1,
+        "observed_sequence": 8,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 50,
+          "sequence_number": 8,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 2,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4008000000000000"
+          },
+          "imbalance": {
+            "binary64": "3fd5555555555555"
+          },
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": 1,
+            "client_order_id": "positive-price-000000000003",
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000003",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          },
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000004",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "after": {
+        "known_inventory": -1,
+        "observed_sequence": 8,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 50,
+          "sequence_number": 8,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 2,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4008000000000000"
+          },
+          "imbalance": {
+            "binary64": "3fd5555555555555"
+          },
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000004",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      }
+    },
+    {
+      "scheduler_key": [
+        50,
+        0,
+        31,
+        7,
+        40
+      ],
+      "notification_timestamp_ns": 50,
+      "report": {
+        "_type": "ExecutionReport",
+        "report_id": "R000000000008",
+        "report_type": "expired",
+        "exchange_timestamp_ns": 50,
+        "order_id": "O000000000004",
+        "client_order_id": "positive-price-000000000004",
+        "order_status": "expired",
+        "remaining_quantity": 1,
+        "fill": null,
+        "reason": "time_in_force"
+      },
+      "before": {
+        "known_inventory": -1,
+        "observed_sequence": 8,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 50,
+          "sequence_number": 8,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 2,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4008000000000000"
+          },
+          "imbalance": {
+            "binary64": "3fd5555555555555"
+          },
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": [
+          {
+            "_type": "ManagedQuote",
+            "side": -1,
+            "client_order_id": "positive-price-000000000004",
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "sent_timestamp_ns": 40,
+            "exchange_order_id": "O000000000004",
+            "accepted_timestamp_ns": 40,
+            "pending_cancel": false,
+            "next_cancel_attempt_ns": 0,
+            "cancel_rejection_count": 0,
+            "dispatch_status": "sent",
+            "cancel_dispatch_status": null
+          }
+        ]
+      },
+      "after": {
+        "known_inventory": -1,
+        "observed_sequence": 8,
+        "latest_view": {
+          "_type": "BookView",
+          "timestamp_ns": 50,
+          "sequence_number": 8,
+          "best_bid_ticks": 1,
+          "best_ask_ticks": 4,
+          "best_bid_quantity": 2,
+          "best_ask_quantity": 1,
+          "midpoint_ticks": {
+            "binary64": "4004000000000000"
+          },
+          "microprice_ticks": {
+            "binary64": "4008000000000000"
+          },
+          "imbalance": {
+            "binary64": "3fd5555555555555"
+          },
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "managed": []
+      }
+    }
+  ],
+  "exchange": [
+    {
+      "kind": "market",
+      "scheduler_key": [
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      "pre": {
+        "book": {
+          "bid": null,
+          "ask": null,
+          "bids": [],
+          "asks": []
+        },
+        "orders": [],
+        "queues": []
+      },
+      "event": {
+        "timestamp_ns": 0,
+        "sequence_number": 0,
+        "event_type": "RESET",
+        "side": null,
+        "price_ticks": 0,
+        "quantity": 0
+      },
+      "fills": [],
+      "reports": [],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 0,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": null,
+          "ask": null,
+          "bids": [],
+          "asks": []
+        },
+        "orders": [],
+        "queues": []
+      },
+      "new_transitions": []
+    },
+    {
+      "kind": "market",
+      "scheduler_key": [
+        0,
+        0,
+        10,
+        1,
+        1
+      ],
+      "pre": {
+        "book": {
+          "bid": null,
+          "ask": null,
+          "bids": [],
+          "asks": []
+        },
+        "orders": [],
+        "queues": []
+      },
+      "event": {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "event_type": "SNAPSHOT",
+        "side": 1,
+        "price_ticks": 1,
+        "quantity": 1
+      },
+      "fills": [],
+      "reports": [],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 0,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": null,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": []
+        },
+        "orders": [],
+        "queues": []
+      },
+      "new_transitions": []
+    },
+    {
+      "kind": "market",
+      "scheduler_key": [
+        0,
+        0,
+        10,
+        2,
+        2
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": null,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": []
+        },
+        "orders": [],
+        "queues": []
+      },
+      "event": {
+        "timestamp_ns": 0,
+        "sequence_number": 2,
+        "event_type": "SNAPSHOT",
+        "side": -1,
+        "price_ticks": 3,
+        "quantity": 1
+      },
+      "fills": [],
+      "reports": [],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 0,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        "orders": [],
+        "queues": []
+      },
+      "new_transitions": []
+    },
+    {
+      "kind": "market",
+      "scheduler_key": [
+        0,
+        0,
+        10,
+        3,
+        3
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        "orders": [],
+        "queues": []
+      },
+      "event": {
+        "timestamp_ns": 0,
+        "sequence_number": 3,
+        "event_type": "SNAPSHOT",
+        "side": -1,
+        "price_ticks": 4,
+        "quantity": 1
+      },
+      "fills": [],
+      "reports": [],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 0,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [],
+        "queues": []
+      },
+      "new_transitions": []
+    },
+    {
+      "kind": "command",
+      "scheduler_key": [
+        0,
+        1,
+        20,
+        0,
+        16
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [],
+        "queues": []
+      },
+      "command": {
+        "_type": "NewOrderRequest",
+        "client_order_id": "positive-price-000000000001",
+        "side": 1,
+        "price_ticks": 1,
+        "quantity": 1,
+        "strategy_id": "positive-price",
+        "decision_timestamp_ns": 0,
+        "send_timestamp_ns": 0,
+        "post_only": true,
+        "rest_unfilled": true,
+        "expire_timestamp_ns": null
+      },
+      "arrival_timestamp_ns": 0,
+      "fills": [],
+      "reports": [
+        {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000001",
+          "report_type": "accepted",
+          "exchange_timestamp_ns": 0,
+          "order_id": "O000000000001",
+          "client_order_id": "positive-price-000000000001",
+          "order_status": "live",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      ],
+      "queue_update": null,
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000001",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": [
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000001",
+          "order_id": "O000000000001",
+          "previous_status": null,
+          "new_status": "pending_arrival",
+          "timestamp_ns": 0,
+          "remaining_quantity": 1,
+          "reason": "created"
+        },
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000002",
+          "order_id": "O000000000001",
+          "previous_status": "pending_arrival",
+          "new_status": "live",
+          "timestamp_ns": 0,
+          "remaining_quantity": 1,
+          "reason": "accepted"
+        }
+      ]
+    },
+    {
+      "kind": "command",
+      "scheduler_key": [
+        0,
+        1,
+        20,
+        1,
+        17
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000001",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "command": {
+        "_type": "NewOrderRequest",
+        "client_order_id": "positive-price-000000000002",
+        "side": -1,
+        "price_ticks": 3,
+        "quantity": 1,
+        "strategy_id": "positive-price",
+        "decision_timestamp_ns": 0,
+        "send_timestamp_ns": 0,
+        "post_only": true,
+        "rest_unfilled": true,
+        "expire_timestamp_ns": null
+      },
+      "arrival_timestamp_ns": 0,
+      "fills": [],
+      "reports": [
+        {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000002",
+          "report_type": "accepted",
+          "exchange_timestamp_ns": 0,
+          "order_id": "O000000000002",
+          "client_order_id": "positive-price-000000000002",
+          "order_status": "live",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      ],
+      "queue_update": null,
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000001",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": [
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000003",
+          "order_id": "O000000000002",
+          "previous_status": null,
+          "new_status": "pending_arrival",
+          "timestamp_ns": 0,
+          "remaining_quantity": 1,
+          "reason": "created"
+        },
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000004",
+          "order_id": "O000000000002",
+          "previous_status": "pending_arrival",
+          "new_status": "live",
+          "timestamp_ns": 0,
+          "remaining_quantity": 1,
+          "reason": "accepted"
+        }
+      ]
+    },
+    {
+      "kind": "market",
+      "scheduler_key": [
+        10,
+        0,
+        10,
+        4,
+        4
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000001",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "event": {
+        "timestamp_ns": 10,
+        "sequence_number": 4,
+        "event_type": "ADD",
+        "side": -1,
+        "price_ticks": 2,
+        "quantity": 1
+      },
+      "fills": [],
+      "reports": [],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 0,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 2,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000001",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": []
+    },
+    {
+      "kind": "command",
+      "scheduler_key": [
+        10,
+        1,
+        20,
+        0,
+        23
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 2,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000001",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "command": {
+        "_type": "CancelRequest",
+        "decision_timestamp_ns": 10,
+        "send_timestamp_ns": 10,
+        "order_id": "O000000000001",
+        "client_order_id": null
+      },
+      "arrival_timestamp_ns": 10,
+      "fills": [],
+      "reports": [
+        {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000003",
+          "report_type": "cancelled",
+          "exchange_timestamp_ns": 10,
+          "order_id": "O000000000001",
+          "client_order_id": "positive-price-000000000001",
+          "order_status": "cancelled",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      ],
+      "queue_update": null,
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 2,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": [
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000005",
+          "order_id": "O000000000001",
+          "previous_status": "live",
+          "new_status": "cancelled",
+          "timestamp_ns": 10,
+          "remaining_quantity": 1,
+          "reason": "cancel_arrived"
+        }
+      ]
+    },
+    {
+      "kind": "market",
+      "scheduler_key": [
+        20,
+        0,
+        10,
+        5,
+        5
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 2,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "event": {
+        "timestamp_ns": 20,
+        "sequence_number": 5,
+        "event_type": "ADD",
+        "side": -1,
+        "price_ticks": 3,
+        "quantity": 1
+      },
+      "fills": [],
+      "reports": [],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 0,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 2,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ],
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": []
+    },
+    {
+      "kind": "market",
+      "scheduler_key": [
+        30,
+        0,
+        10,
+        6,
+        6
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 2,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ],
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "event": {
+        "timestamp_ns": 30,
+        "sequence_number": 6,
+        "event_type": "TRADE",
+        "side": -1,
+        "price_ticks": 2,
+        "quantity": 1
+      },
+      "fills": [],
+      "reports": [],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 0,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ],
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": []
+    },
+    {
+      "kind": "market",
+      "scheduler_key": [
+        40,
+        0,
+        10,
+        7,
+        7
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 3,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000002",
+                1
+              ],
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "event": {
+        "timestamp_ns": 40,
+        "sequence_number": 7,
+        "event_type": "TRADE",
+        "side": -1,
+        "price_ticks": 3,
+        "quantity": 2
+      },
+      "fills": [
+        {
+          "_type": "Fill",
+          "fill_id": "F000000000001",
+          "order_id": "O000000000002",
+          "client_order_id": "positive-price-000000000002",
+          "strategy_id": "positive-price",
+          "side": -1,
+          "quantity": 1,
+          "price_ticks": 3,
+          "liquidity_role": "maker",
+          "exchange_fill_timestamp_ns": 40,
+          "fee": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          },
+          "rebate": {
+            "decimal": [
+              0,
+              [
+                0
+              ],
+              0
+            ]
+          }
+        }
+      ],
+      "reports": [
+        {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000004",
+          "report_type": "fill",
+          "exchange_timestamp_ns": 40,
+          "order_id": "O000000000002",
+          "client_order_id": "positive-price-000000000002",
+          "order_status": "filled",
+          "remaining_quantity": 0,
+          "fill": {
+            "_type": "Fill",
+            "fill_id": "F000000000001",
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "strategy_id": "positive-price",
+            "side": -1,
+            "quantity": 1,
+            "price_ticks": 3,
+            "liquidity_role": "maker",
+            "exchange_fill_timestamp_ns": 40,
+            "fee": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            },
+            "rebate": {
+              "decimal": [
+                0,
+                [
+                  0
+                ],
+                0
+              ]
+            }
+          },
+          "reason": null
+        }
+      ],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [
+          {
+            "_type": "QueueFillIntent",
+            "order_id": "O000000000002",
+            "side": -1,
+            "quantity": 1,
+            "price_ticks": 3,
+            "trigger": "exact_price_trade"
+          }
+        ],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 1,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": [
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000006",
+          "order_id": "O000000000002",
+          "previous_status": "live",
+          "new_status": "filled",
+          "timestamp_ns": 40,
+          "remaining_quantity": 0,
+          "reason": "fill"
+        }
+      ]
+    },
+    {
+      "kind": "command",
+      "scheduler_key": [
+        40,
+        1,
+        20,
+        2,
+        33
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "command": {
+        "_type": "NewOrderRequest",
+        "client_order_id": "positive-price-000000000003",
+        "side": 1,
+        "price_ticks": 1,
+        "quantity": 1,
+        "strategy_id": "positive-price",
+        "decision_timestamp_ns": 40,
+        "send_timestamp_ns": 40,
+        "post_only": true,
+        "rest_unfilled": true,
+        "expire_timestamp_ns": null
+      },
+      "arrival_timestamp_ns": 40,
+      "fills": [],
+      "reports": [
+        {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000005",
+          "report_type": "accepted",
+          "exchange_timestamp_ns": 40,
+          "order_id": "O000000000003",
+          "client_order_id": "positive-price-000000000003",
+          "order_status": "live",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      ],
+      "queue_update": null,
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000003",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": [
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000007",
+          "order_id": "O000000000003",
+          "previous_status": null,
+          "new_status": "pending_arrival",
+          "timestamp_ns": 40,
+          "remaining_quantity": 1,
+          "reason": "created"
+        },
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000008",
+          "order_id": "O000000000003",
+          "previous_status": "pending_arrival",
+          "new_status": "live",
+          "timestamp_ns": 40,
+          "remaining_quantity": 1,
+          "reason": "accepted"
+        }
+      ]
+    },
+    {
+      "kind": "command",
+      "scheduler_key": [
+        40,
+        1,
+        20,
+        3,
+        34
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000003",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "command": {
+        "_type": "NewOrderRequest",
+        "client_order_id": "positive-price-000000000004",
+        "side": -1,
+        "price_ticks": 4,
+        "quantity": 1,
+        "strategy_id": "positive-price",
+        "decision_timestamp_ns": 40,
+        "send_timestamp_ns": 40,
+        "post_only": true,
+        "rest_unfilled": true,
+        "expire_timestamp_ns": null
+      },
+      "arrival_timestamp_ns": 40,
+      "fills": [],
+      "reports": [
+        {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000006",
+          "report_type": "accepted",
+          "exchange_timestamp_ns": 40,
+          "order_id": "O000000000004",
+          "client_order_id": "positive-price-000000000004",
+          "order_status": "live",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": null
+        }
+      ],
+      "queue_update": null,
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          },
+          {
+            "order_id": "O000000000004",
+            "client_order_id": "positive-price-000000000004",
+            "side": -1,
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          },
+          {
+            "side": -1,
+            "price_ticks": 4,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000004",
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000003",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": [
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000009",
+          "order_id": "O000000000004",
+          "previous_status": null,
+          "new_status": "pending_arrival",
+          "timestamp_ns": 40,
+          "remaining_quantity": 1,
+          "reason": "created"
+        },
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000010",
+          "order_id": "O000000000004",
+          "previous_status": "pending_arrival",
+          "new_status": "live",
+          "timestamp_ns": 40,
+          "remaining_quantity": 1,
+          "reason": "accepted"
+        }
+      ]
+    },
+    {
+      "kind": "market",
+      "scheduler_key": [
+        50,
+        0,
+        10,
+        8,
+        8
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              1
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          },
+          {
+            "order_id": "O000000000004",
+            "client_order_id": "positive-price-000000000004",
+            "side": -1,
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          },
+          {
+            "side": -1,
+            "price_ticks": 4,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000004",
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000003",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "event": {
+        "timestamp_ns": 50,
+        "sequence_number": 8,
+        "event_type": "ADD",
+        "side": 1,
+        "price_ticks": 1,
+        "quantity": 1
+      },
+      "fills": [],
+      "reports": [],
+      "queue_update": {
+        "_type": "QueueUpdate",
+        "fills": [],
+        "orders_lost_on_reset": [],
+        "external_quantity_removed": 0,
+        "unmatched_trade_quantity": 0
+      },
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          },
+          {
+            "order_id": "O000000000004",
+            "client_order_id": "positive-price-000000000004",
+            "side": -1,
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          },
+          {
+            "side": -1,
+            "price_ticks": 4,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000004",
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000003",
+                1
+              ],
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": []
+    },
+    {
+      "kind": "expire",
+      "scheduler_key": [
+        50,
+        0,
+        15,
+        0,
+        10
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          },
+          {
+            "order_id": "O000000000004",
+            "client_order_id": "positive-price-000000000004",
+            "side": -1,
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          },
+          {
+            "side": -1,
+            "price_ticks": 4,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000004",
+                1
+              ]
+            ]
+          },
+          {
+            "side": 1,
+            "price_ticks": 1,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000003",
+                1
+              ],
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "order_id": "O000000000003",
+      "timestamp_ns": 50,
+      "fills": [],
+      "reports": [
+        {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000007",
+          "report_type": "expired",
+          "exchange_timestamp_ns": 50,
+          "order_id": "O000000000003",
+          "client_order_id": "positive-price-000000000003",
+          "order_status": "expired",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": "time_in_force"
+        }
+      ],
+      "queue_update": null,
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "expired",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          },
+          {
+            "order_id": "O000000000004",
+            "client_order_id": "positive-price-000000000004",
+            "side": -1,
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          },
+          {
+            "side": -1,
+            "price_ticks": 4,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000004",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": [
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000011",
+          "order_id": "O000000000003",
+          "previous_status": "live",
+          "new_status": "expired",
+          "timestamp_ns": 50,
+          "remaining_quantity": 1,
+          "reason": "time_in_force"
+        }
+      ]
+    },
+    {
+      "kind": "expire",
+      "scheduler_key": [
+        50,
+        0,
+        15,
+        0,
+        10
+      ],
+      "pre": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "expired",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          },
+          {
+            "order_id": "O000000000004",
+            "client_order_id": "positive-price-000000000004",
+            "side": -1,
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "live",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          },
+          {
+            "side": -1,
+            "price_ticks": 4,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ],
+              [
+                "own",
+                "O000000000004",
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "order_id": "O000000000004",
+      "timestamp_ns": 50,
+      "fills": [],
+      "reports": [
+        {
+          "_type": "ExecutionReport",
+          "report_id": "R000000000008",
+          "report_type": "expired",
+          "exchange_timestamp_ns": 50,
+          "order_id": "O000000000004",
+          "client_order_id": "positive-price-000000000004",
+          "order_status": "expired",
+          "remaining_quantity": 1,
+          "fill": null,
+          "reason": "time_in_force"
+        }
+      ],
+      "queue_update": null,
+      "post": {
+        "book": {
+          "bid": 1,
+          "ask": 4,
+          "bids": [
+            [
+              1,
+              2
+            ]
+          ],
+          "asks": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "orders": [
+          {
+            "order_id": "O000000000001",
+            "client_order_id": "positive-price-000000000001",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "cancelled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000002",
+            "client_order_id": "positive-price-000000000002",
+            "side": -1,
+            "price_ticks": 3,
+            "original_quantity": 1,
+            "remaining_quantity": 0,
+            "status": "filled",
+            "creation_timestamp_ns": 0,
+            "send_timestamp_ns": 0,
+            "exchange_arrival_timestamp_ns": 0
+          },
+          {
+            "order_id": "O000000000003",
+            "client_order_id": "positive-price-000000000003",
+            "side": 1,
+            "price_ticks": 1,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "expired",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          },
+          {
+            "order_id": "O000000000004",
+            "client_order_id": "positive-price-000000000004",
+            "side": -1,
+            "price_ticks": 4,
+            "original_quantity": 1,
+            "remaining_quantity": 1,
+            "status": "expired",
+            "creation_timestamp_ns": 40,
+            "send_timestamp_ns": 40,
+            "exchange_arrival_timestamp_ns": 40
+          }
+        ],
+        "queues": [
+          {
+            "side": -1,
+            "price_ticks": 3,
+            "segments": [
+              [
+                "external",
+                null,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "new_transitions": [
+        {
+          "_type": "OrderTransition",
+          "transition_id": "T000000000012",
+          "order_id": "O000000000004",
+          "previous_status": "live",
+          "new_status": "expired",
+          "timestamp_ns": 50,
+          "remaining_quantity": 1,
+          "reason": "time_in_force"
+        }
+      ]
+    }
+  ]
+}

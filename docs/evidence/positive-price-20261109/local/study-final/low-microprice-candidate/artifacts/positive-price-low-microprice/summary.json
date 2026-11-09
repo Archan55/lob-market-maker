@@ -1,0 +1,24 @@
+{
+  "dataset_provenance": {
+    "checksum_sha256": null,
+    "dataset_id": "lobmm-positive-price-v1",
+    "license_notes": "Original locally constructed fictional mechanics tape; not historical or licensed market data.",
+    "provider": "lobmm hand-constructed positive-price witness",
+    "session_end": null,
+    "session_start": null,
+    "source_type": "synthetic",
+    "symbol": "SYNTH-PRICE",
+    "synthetic_demonstration": true,
+    "venue": "SIMULATED"
+  },
+  "disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+  "end_inventory": -1,
+  "event_count": 9,
+  "event_stream_sha256": "b4ee9738140bd44be7d3a7a7b240629677a8316519729c008a9ba00182f17efe",
+  "fill_count": 1,
+  "net_pnl": 0.5,
+  "run_name": "positive-price-low-microprice",
+  "strategy": "microprice",
+  "symbol": "SYNTH-PRICE",
+  "synthetic_demonstration": true
+}

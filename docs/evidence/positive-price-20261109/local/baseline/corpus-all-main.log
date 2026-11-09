@@ -1,0 +1,160 @@
+F..FF.F..F..F...F.F..F...F.F..FF.F..F..F...F.F..F...F....FFFFFF.         [100%]
+=================================== FAILURES ===================================
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-fixed_spread-flat_low] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'flat_low', 'policy': 'fixed_spread', 'post_only': True, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-fixed_spread-low_long_half] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_long_half', 'policy': 'fixed_spread', 'post_only': True, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-fixed_spread-low_short_half] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_short_half', 'policy': 'fixed_spread', 'post_only': True, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-fixed_spread-low_short_cap] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_short_cap', 'policy': 'fixed_spread', 'post_only': True, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-inventory_aware-flat_low] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'flat_low', 'policy': 'inventory_aware', 'post_only': True, 'config': {'name': 'inventory_aware', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-inventory_aware-low_long_half] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_long_half', 'policy': 'inventory_aware', 'post_only': True, 'config': {'name': 'inventory_aware', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-inventory_aware-nonpositive_ask] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'nonpositive_ask', 'policy': 'inventory_aware', 'post_only': True, 'config': {'name': 'inventory_aware', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-microprice-flat_low] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'flat_low', 'policy': 'microprice', 'post_only': True, 'config': {'name': 'microprice', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-microprice-low_long_half] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_long_half', 'policy': 'microprice', 'post_only': True, 'config': {'name': 'microprice', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-microprice-nonpositive_ask] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'nonpositive_ask', 'policy': 'microprice', 'post_only': True, 'config': {'name': 'microprice', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-fixed_spread-flat_low] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'flat_low', 'policy': 'fixed_spread', 'post_only': False, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-fixed_spread-low_long_half] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_long_half', 'policy': 'fixed_spread', 'post_only': False, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-fixed_spread-low_short_half] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_short_half', 'policy': 'fixed_spread', 'post_only': False, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-fixed_spread-low_short_cap] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_short_cap', 'policy': 'fixed_spread', 'post_only': False, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-inventory_aware-flat_low] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'flat_low', 'policy': 'inventory_aware', 'post_only': False, 'config': {'name': 'inventory_aware', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-inventory_aware-low_long_half] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_long_half', 'policy': 'inventory_aware', 'post_only': False, 'config': {'name': 'inventory_aware', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-inventory_aware-nonpositive_ask] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'nonpositive_ask', 'policy': 'inventory_aware', 'post_only': False, 'config': {'name': 'inventory_aware', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-microprice-flat_low] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'flat_low', 'policy': 'microprice', 'post_only': False, 'config': {'name': 'microprice', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-microprice-low_long_half] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'low_long_half', 'policy': 'microprice', 'post_only': False, 'config': {'name': 'microprice', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-microprice-nonpositive_ask] _
+tests/unit/test_positive_price_quotes_independent.py:493: in test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain
+    assert result["error"] is None, result
+E   AssertionError: {'name': 'nonpositive_ask', 'policy': 'microprice', 'post_only': False, 'config': {'name': 'microprice', 'strategy_id': 'market-maker', 'order_size': 10, 'base_half_spread_ticks': 1.0, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'desired_quotes'} is None
+_ test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[True-fixed_spread] _
+tests/unit/test_positive_price_quotes_independent.py:529: in test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask
+    assert result["error"] is None, result
+E   AssertionError: {'policy': 'fixed_spread', 'post_only': True, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'order...0, ...}, 'initial_view': {'timestamp_ns': 0, 'sequence_number': 1, 'best_bid_ticks': 1, 'best_ask_ticks': 3, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'low_decide'} is None
+_ test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[True-inventory_aware] _
+tests/unit/test_positive_price_quotes_independent.py:529: in test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask
+    assert result["error"] is None, result
+E   AssertionError: {'policy': 'inventory_aware', 'post_only': True, 'config': {'name': 'inventory_aware', 'strategy_id': 'market-maker', ...0, ...}, 'initial_view': {'timestamp_ns': 0, 'sequence_number': 1, 'best_bid_ticks': 1, 'best_ask_ticks': 3, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'low_decide'} is None
+_ test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[True-microprice] _
+tests/unit/test_positive_price_quotes_independent.py:529: in test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask
+    assert result["error"] is None, result
+E   AssertionError: {'policy': 'microprice', 'post_only': True, 'config': {'name': 'microprice', 'strategy_id': 'market-maker', 'order_siz...0, ...}, 'initial_view': {'timestamp_ns': 0, 'sequence_number': 1, 'best_bid_ticks': 1, 'best_ask_ticks': 3, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'low_decide'} is None
+_ test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[False-fixed_spread] _
+tests/unit/test_positive_price_quotes_independent.py:529: in test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask
+    assert result["error"] is None, result
+E   AssertionError: {'policy': 'fixed_spread', 'post_only': False, 'config': {'name': 'fixed_spread', 'strategy_id': 'market-maker', 'orde...0, ...}, 'initial_view': {'timestamp_ns': 0, 'sequence_number': 1, 'best_bid_ticks': 1, 'best_ask_ticks': 3, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'low_decide'} is None
+_ test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[False-inventory_aware] _
+tests/unit/test_positive_price_quotes_independent.py:529: in test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask
+    assert result["error"] is None, result
+E   AssertionError: {'policy': 'inventory_aware', 'post_only': False, 'config': {'name': 'inventory_aware', 'strategy_id': 'market-maker',...0, ...}, 'initial_view': {'timestamp_ns': 0, 'sequence_number': 1, 'best_bid_ticks': 1, 'best_ask_ticks': 3, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'low_decide'} is None
+_ test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[False-microprice] _
+tests/unit/test_positive_price_quotes_independent.py:529: in test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask
+    assert result["error"] is None, result
+E   AssertionError: {'policy': 'microprice', 'post_only': False, 'config': {'name': 'microprice', 'strategy_id': 'market-maker', 'order_si...0, ...}, 'initial_view': {'timestamp_ns': 0, 'sequence_number': 1, 'best_bid_ticks': 1, 'best_ask_ticks': 3, ...}, ...}
+E   assert {'type': 'ValueError', 'message': 'desired quote price and quantity must be positive', 'stage': 'low_decide'} is None
+=========================== short test summary info ============================
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-fixed_spread-flat_low]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-fixed_spread-low_long_half]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-fixed_spread-low_short_half]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-fixed_spread-low_short_cap]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-inventory_aware-flat_low]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-inventory_aware-low_long_half]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-inventory_aware-nonpositive_ask]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-microprice-flat_low]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-microprice-low_long_half]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[True-microprice-nonpositive_ask]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-fixed_spread-flat_low]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-fixed_spread-low_long_half]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-fixed_spread-low_short_half]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-fixed_spread-low_short_cap]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-inventory_aware-flat_low]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-inventory_aware-low_long_half]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-inventory_aware-nonpositive_ask]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-microprice-flat_low]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-microprice-low_long_half]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_frozen_policy_targets_equal_original_formulas_intersect_positive_domain[False-microprice-nonpositive_ask]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[True-fixed_spread]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[True-inventory_aware]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[True-microprice]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[False-fixed_spread]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[False-inventory_aware]
+FAILED tests/unit/test_positive_price_quotes_independent.py::test_omitted_bid_uses_existing_cancel_path_and_retains_accepted_ask[False-microprice]
+26 failed, 38 passed in 0.60s
