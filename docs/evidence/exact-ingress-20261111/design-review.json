@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-11",
+  "reviewer": "independent_feasibility",
+  "phase": "Static review before oracle evaluation, numerical examples, test collection/execution, adapter conversions or candidate implementation.",
+  "decision": "GO",
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "contract_sha256": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b",
+  "fixtures_sha256": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144",
+  "novelty": "Strict source-value admission precedes canonical validation and is distinct from completed Portfolio, risk, reporting, strategy-boundary and recovery studies. A source lead remains unconfirmed until the frozen baseline reproduces it.",
+  "scope_review": [
+    "Only strict price_to_ticks and scaled_quantity use the exact coefficient/exponent kernel; the other conversion APIs and literal non-strict arithmetic remain unchanged.",
+    "Signed and zero generic prices, positive finite units, quantity positivity/allow_zero and Decimal(str(input)) semantics are preserved.",
+    "Combine exponents and cancel integer factors before allocating powers; balanced compact operands must not be expanded independently.",
+    "The six fixed profiles and 240 scalar/CSV observations, two existing default-context adapter controls and legacy group are a bounded correctness corpus, not a parameter or performance search.",
+    "Full source-tree/import/frozen-input pins, strict canonical certificates, exact ordinary rows/schema/fingerprint/diagnostics/Parquet controls and independent artifact review are appropriate publication gates."
+  ],
+  "preexecution_bindings": [
+    "For the frozen CSV template, book_price and book_amount edits apply to the initial BID row whose original price is 1 and amount is 2. This preserves the intended strict-valid false-admission witness rather than introducing an unrelated crossed ask.",
+    "Trade cases use the frozen book reduction and trade row; book_zero_update uses the frozen zero-amount update. The test/provider must record the exact generated CSV bytes and parsed strings before conversion.",
+    "Create deterministic local context profiles, including the preexisting FloatOperation flag, then compare every context setting/trap/flag before and after each call while preserving the outer caller context.",
+    "The independent oracle must use lexical/integer rational reasoning and explicit compact-exponent expectations without production helpers or context-rounded Decimal arithmetic."
+  ],
+  "limits": [
+    "LOBSTER price-scale and timestamp preprocessing can round before the repaired helpers and remains unresolved; normal-control equivalence does not establish its general exactness.",
+    "Malformed/nonfinite parsing flags, whole-adapter rollback, already-rounded binary64 provenance and unlimited resource/output ranges are outside the stated guarantee.",
+    "No market-data rights/admission, causal midpoint identification, calibrated fills, economic advantage or performance improvement is established.",
+    "Nasdaq review belongs to the separate worker; this reviewer issued no Nasdaq request."
+  ],
+  "trial_accounting": "One main worker and one candidate worker using the fixed corpus and reused baseline; at most one independently justified correctness repair. Ordinary full-suite and exact-head CI repetitions are separate disclosed verification.",
+  "execution_by_reviewer": "Source, protocol and fixture text/hash reads only. No numerical example, oracle, conversion, test, engine or outcome evaluation; no source edit. This design-review file is the only requested write."
+}
