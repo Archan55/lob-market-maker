@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "dependencies": {
+    "pytest": "9.2.0",
+    "polars": "2.1.0",
+    "pyarrow": "26.0.0",
+    "pydantic": "2.14.2",
+    "PyYAML": "6.0.3",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "typer": "0.27.3",
+    "ruff": "0.17.3",
+    "mypy": "2.4.1"
+  },
+  "assertions_enabled": true,
+  "integer_string_guard": 4300
+}

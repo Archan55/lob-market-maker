@@ -1,0 +1,708 @@
+{
+  "observations": [
+    {
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "completed": true,
+        "strict_valid": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true
+      },
+      "id": "tardis_existing",
+      "status": "admitted",
+      "input_sha256": {
+        "tests/fixtures/adapters/tardis_incremental_book_L2.csv": "ed3a0a2af30fdeb86df22edcea7520e16cfefb27c78284588a756a72acfcf14f",
+        "tests/fixtures/adapters/tardis_trades.csv": "8038c20781f7ae0c87875acdd978903a5e295360f1ab3565e018482d50f8de48"
+      },
+      "rows": [
+        {
+          "timestamp_ns": 2001000,
+          "sequence_number": 0,
+          "event_type": "RESET",
+          "side": null,
+          "price_ticks": 0,
+          "quantity": 0
+        },
+        {
+          "timestamp_ns": 2001000,
+          "sequence_number": 1,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 10000,
+          "quantity": 10
+        },
+        {
+          "timestamp_ns": 2001000,
+          "sequence_number": 2,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 10100,
+          "quantity": 12
+        },
+        {
+          "timestamp_ns": 3001000,
+          "sequence_number": 3,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 10000,
+          "quantity": 2
+        },
+        {
+          "timestamp_ns": 3001000,
+          "sequence_number": 4,
+          "event_type": "CANCEL",
+          "side": 1,
+          "price_ticks": 10000,
+          "quantity": 1
+        },
+        {
+          "timestamp_ns": 4001000,
+          "sequence_number": 5,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 10100,
+          "quantity": 3
+        },
+        {
+          "timestamp_ns": 5001000,
+          "sequence_number": 6,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 9900,
+          "quantity": 5
+        },
+        {
+          "timestamp_ns": 6001000,
+          "sequence_number": 7,
+          "event_type": "CANCEL",
+          "side": 1,
+          "price_ticks": 10000,
+          "quantity": 7
+        },
+        {
+          "timestamp_ns": 7001000,
+          "sequence_number": 8,
+          "event_type": "RESET",
+          "side": null,
+          "price_ticks": 0,
+          "quantity": 0
+        },
+        {
+          "timestamp_ns": 7001000,
+          "sequence_number": 9,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 10200,
+          "quantity": 9
+        },
+        {
+          "timestamp_ns": 7001000,
+          "sequence_number": 10,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 10300,
+          "quantity": 11
+        }
+      ],
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "sequence_number",
+          "Int64"
+        ],
+        [
+          "event_type",
+          "String"
+        ],
+        [
+          "side",
+          "Int8"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "quantity",
+          "Int64"
+        ]
+      ],
+      "parquet_path": "normal/tardis_existing.parquet",
+      "parquet_sha256": "0c740a19aaf4e698ce3d3172b6049c85b1867935fbb9eec87c7761341d8a1ec2",
+      "event_stream_sha256": "75cdad9dc4db9682ccf58da8ce7bba7a73fc5c52801fb7b5cfb239f610c85a3c",
+      "validation": {
+        "valid": true,
+        "issue_count": 0,
+        "event_count": 11,
+        "event_stream_sha256": "75cdad9dc4db9682ccf58da8ce7bba7a73fc5c52801fb7b5cfb239f610c85a3c",
+        "mode": "strict",
+        "reconstructed_book": true,
+        "required_nonempty": true,
+        "issues": [],
+        "diagnostics": {},
+        "final_book": {
+          "timestamp_ns": 7001000,
+          "sequence_number": 10,
+          "best_bid_ticks": 10200,
+          "best_ask_ticks": 10300,
+          "best_bid_quantity": 9,
+          "best_ask_quantity": 11,
+          "midpoint_ticks": 10250.0,
+          "microprice_ticks": 10245.0,
+          "imbalance": -0.1,
+          "bids": [
+            [
+              10200,
+              9
+            ]
+          ],
+          "asks": [
+            [
+              10300,
+              11
+            ]
+          ]
+        }
+      },
+      "diagnostics": {
+        "book_rows": 9,
+        "pre_snapshot_rows_skipped": 1,
+        "resets": 2,
+        "snapshot_levels": 4,
+        "add_events": 2,
+        "trade_rows": 3,
+        "unknown_side_trades_skipped": 1,
+        "matched_trade_quantity": 2,
+        "unmatched_trade_quantity": 2,
+        "partially_or_unmatched_trade_rows": 1,
+        "trade_events": 1,
+        "cancel_events": 2,
+        "output_events": 11
+      },
+      "instrument": [
+        "fixture",
+        "ABC-USD"
+      ]
+    },
+    {
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "completed": true,
+        "strict_valid": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true
+      },
+      "id": "lobster_existing",
+      "status": "admitted",
+      "input_sha256": {
+        "tests/fixtures/adapters/lobster_message.csv": "639a47ef73d0e3fb97bdc8802942512684fc60d85058196768c6fb918470cd21",
+        "tests/fixtures/adapters/lobster_orderbook.csv": "03c83b2061f62a7b7f751077c47e221e4bba3a2911be099f23effdf3f28498f2"
+      },
+      "rows": [
+        {
+          "timestamp_ns": 1704205800000000001,
+          "sequence_number": 0,
+          "event_type": "RESET",
+          "side": null,
+          "price_ticks": 0,
+          "quantity": 0
+        },
+        {
+          "timestamp_ns": 1704205800000000001,
+          "sequence_number": 1,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 10000,
+          "quantity": 12
+        },
+        {
+          "timestamp_ns": 1704205800000000001,
+          "sequence_number": 2,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 9900,
+          "quantity": 15
+        },
+        {
+          "timestamp_ns": 1704205800000000001,
+          "sequence_number": 3,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 10100,
+          "quantity": 10
+        },
+        {
+          "timestamp_ns": 1704205800000000001,
+          "sequence_number": 4,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 10200,
+          "quantity": 20
+        },
+        {
+          "timestamp_ns": 1704205800000000002,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": -1,
+          "price_ticks": 10100,
+          "quantity": 4
+        },
+        {
+          "timestamp_ns": 1704205800000000003,
+          "sequence_number": 6,
+          "event_type": "CANCEL",
+          "side": 1,
+          "price_ticks": 10000,
+          "quantity": 2
+        },
+        {
+          "timestamp_ns": 1704205800000000004,
+          "sequence_number": 7,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 10050,
+          "quantity": 5
+        },
+        {
+          "timestamp_ns": 1704205800000000004,
+          "sequence_number": 8,
+          "event_type": "CANCEL",
+          "side": 1,
+          "price_ticks": 9900,
+          "quantity": 15
+        },
+        {
+          "timestamp_ns": 1704205800000000006,
+          "sequence_number": 9,
+          "event_type": "RESET",
+          "side": null,
+          "price_ticks": 0,
+          "quantity": 0
+        },
+        {
+          "timestamp_ns": 1704205800000000007,
+          "sequence_number": 10,
+          "event_type": "RESET",
+          "side": null,
+          "price_ticks": 0,
+          "quantity": 0
+        },
+        {
+          "timestamp_ns": 1704205800000000007,
+          "sequence_number": 11,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 10050,
+          "quantity": 5
+        },
+        {
+          "timestamp_ns": 1704205800000000007,
+          "sequence_number": 12,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 10000,
+          "quantity": 10
+        },
+        {
+          "timestamp_ns": 1704205800000000007,
+          "sequence_number": 13,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 10100,
+          "quantity": 6
+        },
+        {
+          "timestamp_ns": 1704205800000000007,
+          "sequence_number": 14,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 10200,
+          "quantity": 20
+        },
+        {
+          "timestamp_ns": 1704205800000000009,
+          "sequence_number": 15,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 10050,
+          "quantity": 5
+        },
+        {
+          "timestamp_ns": 1704205800000000009,
+          "sequence_number": 16,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 9900,
+          "quantity": 15
+        }
+      ],
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "sequence_number",
+          "Int64"
+        ],
+        [
+          "event_type",
+          "String"
+        ],
+        [
+          "side",
+          "Int8"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "quantity",
+          "Int64"
+        ]
+      ],
+      "parquet_path": "normal/lobster_existing.parquet",
+      "parquet_sha256": "9f3877a2c9252b39a8cd4dcdaaad9d0bdd7aac14cdcd8219c738e8d55e7e346b",
+      "event_stream_sha256": "deda9d19aca78f4d4f0df8b5bc0f91273c84ae9b3d1bbd1464b6ae2b52ca59a2",
+      "validation": {
+        "valid": true,
+        "issue_count": 0,
+        "event_count": 17,
+        "event_stream_sha256": "deda9d19aca78f4d4f0df8b5bc0f91273c84ae9b3d1bbd1464b6ae2b52ca59a2",
+        "mode": "strict",
+        "reconstructed_book": true,
+        "required_nonempty": true,
+        "issues": [],
+        "diagnostics": {},
+        "final_book": {
+          "timestamp_ns": 1704205800000000009,
+          "sequence_number": 16,
+          "best_bid_ticks": 10000,
+          "best_ask_ticks": 10100,
+          "best_bid_quantity": 10,
+          "best_ask_quantity": 6,
+          "midpoint_ticks": 10050.0,
+          "microprice_ticks": 10062.5,
+          "imbalance": 0.25,
+          "bids": [
+            [
+              10000,
+              10
+            ],
+            [
+              9900,
+              15
+            ]
+          ],
+          "asks": [
+            [
+              10100,
+              6
+            ],
+            [
+              10200,
+              20
+            ]
+          ]
+        }
+      },
+      "diagnostics": {
+        "source_rows": 9,
+        "snapshot_resets": 2,
+        "snapshot_levels": 8,
+        "first_message_represented_by_snapshot": 1,
+        "causal_trade_events": 2,
+        "causal_cancel_events": 1,
+        "causal_add_events": 1,
+        "window_reconciliation_cancels": 1,
+        "hidden_executions_not_emitted": 1,
+        "halt_resets": 1,
+        "halt_resumes": 1,
+        "redundant_halt_resume_indicators": 1,
+        "window_reconciliation_adds": 1,
+        "output_events": 17
+      },
+      "instrument": null
+    }
+  ],
+  "complete": true,
+  "provenance": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "test_path": "/tmp/lob-exact-ingress-dg4rok92/candidate/tests/unit/test_exact_ingress_independent.py",
+    "test_sha256": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7",
+    "fixtures_sha256": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144",
+    "contract_sha256": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b",
+    "sources": {
+      "types": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/types.py",
+        "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+      },
+      "data/_adapter_utils": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/_adapter_utils.py",
+        "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+      },
+      "data/tardis": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/tardis.py",
+        "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+      },
+      "data/lobster": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/lobster.py",
+        "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+      },
+      "validation": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/validation.py",
+        "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+      }
+    }
+  }
+}

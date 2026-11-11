@@ -1,0 +1,2 @@
+exchange,symbol,timestamp,local_timestamp,id,side,price,amount
+fixture,SYNTH-INGRESS,2,2,SYNTH-T1,sell,1,1.00000000000000000000000000001

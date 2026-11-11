@@ -1,0 +1,2899 @@
+{
+  "committed_copies": [
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/environment.json",
+      "original": "baseline/environment.json",
+      "sha256": "81eeeff3eb6b169a7d178346d3617650a7d2cad6625e5c68ec436de98bfd1879"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/book_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/book_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/default28/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/book_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/book_off_price/canonical.parquet",
+      "original": "baseline/main-evidence/groups/default28/csv/book_off_price/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/book_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/book_off_quantity/canonical.parquet",
+      "original": "baseline/main-evidence/groups/default28/csv/book_off_quantity/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/book_zero_update/book.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/book_zero_update/canonical.parquet",
+      "original": "baseline/main-evidence/groups/default28/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_aligned/trades.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_off_price/canonical.parquet",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_off_price/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_off_price/trades.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_off_quantity/canonical.parquet",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_off_quantity/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_off_quantity/trades.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_zero/book.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28/csv/trade_zero/trades.csv",
+      "original": "baseline/main-evidence/groups/default28/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/default28.json",
+      "original": "baseline/main-evidence/groups/default28.json",
+      "sha256": "b8026c7ca8e53586a65bbdf868e8485f1b939c0bf8110ee0414e67613b8836b3"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/book_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/book_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/high50/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/book_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/book_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/book_zero_update/book.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/book_zero_update/canonical.parquet",
+      "original": "baseline/main-evidence/groups/high50/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_aligned/trades.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_off_price/trades.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_off_quantity/trades.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_zero/book.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50/csv/trade_zero/trades.csv",
+      "original": "baseline/main-evidence/groups/high50/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/high50.json",
+      "original": "baseline/main-evidence/groups/high50.json",
+      "sha256": "93c3a1ed0ed3a55edb2bcb00a1afb8ae665d235d6111e9eb87db75a75aaf0987"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/book_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/book_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_down/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/book_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/book_off_price/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_down/csv/book_off_price/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/book_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/book_off_quantity/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_down/csv/book_off_quantity/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/book_zero_update/book.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/book_zero_update/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_down/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_aligned/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_off_price/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_off_price/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_off_price/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_zero/book.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down/csv/trade_zero/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_down/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_down.json",
+      "original": "baseline/main-evidence/groups/low3_down.json",
+      "sha256": "97f3859739d637247545ab25f705c7f73647d73969c988327583cc17c49c0bca"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/book_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/book_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_even/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/book_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/book_off_price/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_even/csv/book_off_price/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/book_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/book_off_quantity/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_even/csv/book_off_quantity/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/book_zero_update/book.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/book_zero_update/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_even/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_aligned/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_off_price/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_off_price/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_off_price/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_zero/book.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even/csv/trade_zero/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_even/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_even.json",
+      "original": "baseline/main-evidence/groups/low3_even.json",
+      "sha256": "f394ebea77255f6422c0a51baa86a24776cf730eeb634b9cff553c3c5cf30356"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/book_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/book_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_up/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/book_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/book_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/book_zero_update/book.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/book_zero_update/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_up/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_aligned/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_off_price/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_off_quantity/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_zero/book.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up/csv/trade_zero/trades.csv",
+      "original": "baseline/main-evidence/groups/low3_up/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/low3_up.json",
+      "original": "baseline/main-evidence/groups/low3_up.json",
+      "sha256": "e154d7246dd0ea40522f5e28d0830b1c9a9251f64f3b30577e887a9ae2dcd9b3"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/book_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/book_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/trapped28/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/book_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/book_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/book_zero_update/book.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/book_zero_update/canonical.parquet",
+      "original": "baseline/main-evidence/groups/trapped28/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_aligned/book.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_aligned/canonical.parquet",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_aligned/trades.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_off_price/book.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_off_price/trades.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_off_quantity/book.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_off_quantity/trades.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_zero/book.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28/csv/trade_zero/trades.csv",
+      "original": "baseline/main-evidence/groups/trapped28/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/groups/trapped28.json",
+      "original": "baseline/main-evidence/groups/trapped28.json",
+      "sha256": "aa53b2255fbb6bc9dbb3beb973b47629c58882b19e3cda94497b12bcb46eb3eb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/legacy-controls.json",
+      "original": "baseline/main-evidence/legacy-controls.json",
+      "sha256": "8da10ed85032e3e324538707613fe4d653fc406fb83413a6b631cd4efa1957f1"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/normal/lobster_existing.parquet",
+      "original": "baseline/main-evidence/normal/lobster_existing.parquet",
+      "sha256": "9f3877a2c9252b39a8cd4dcdaaad9d0bdd7aac14cdcd8219c738e8d55e7e346b"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/normal/tardis_existing.parquet",
+      "original": "baseline/main-evidence/normal/tardis_existing.parquet",
+      "sha256": "0c740a19aaf4e698ce3d3172b6049c85b1867935fbb9eec87c7761341d8a1ec2"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-evidence/normal-controls.json",
+      "original": "baseline/main-evidence/normal-controls.json",
+      "sha256": "7e7adec4e9d1c097d9b908859ee46d1c203c0bbf0fb11629dc4cfb0686e503be"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main-source-pins.json",
+      "original": "baseline/main-source-pins.json",
+      "sha256": "a80db64f7751732cea30993dc5ecbe4cd2c9b56895fd27eceb9a15f73cead5b4"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main.json",
+      "original": "baseline/main.json",
+      "sha256": "9f5e9dc89e7ed995d5936e3887b0eaa9bb3da61aa8e8817451a2762ad0e9939c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main.log",
+      "original": "baseline/main.log",
+      "sha256": "1552c1d40d922a792b315478085531e037d49f9bd00dc9a510bdd02a24a49a4d"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/main.xml",
+      "original": "baseline/main.xml",
+      "sha256": "5a2426c1176b4c81ac1644195a4bf0e0a1931a45eb02c500da4aa2a1d1d16b3d"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline/report.json",
+      "original": "baseline/report.json",
+      "sha256": "61bd189e249e7033505168e8d1d0861ca41a0356e64f077059931f2f412e489b"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/baseline-command.log",
+      "original": "baseline-command.log",
+      "sha256": "aaf3bda349fd9339249a20235d3ea5838758269a32ba2c16ac8ce2450041179c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/full-suite/imports.json",
+      "original": "full-suite/imports.json",
+      "sha256": "706cdb531089a74bd11659819c50789fa27f7a34bf70dff001ad880578b725d8"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/full-suite/ingress_import_identity.py.txt",
+      "original": "full-suite/ingress_import_identity.py",
+      "sha256": "4f2a1c3f364e4716b8e200b0d2816309a94d16556982de58f47a0a9478ed4f31"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/full-suite/result.txt",
+      "original": "full-suite/result.txt",
+      "sha256": "ef0bf8a057f1cc147abe86c111747069c0f8c1c7b3b37c92b3a5067d56635eb4"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/full-suite/result.xml",
+      "original": "full-suite/result.xml",
+      "sha256": "5b9337b15382cf6e1dc7d66ed7eb26519537351702af3388f34807bdb91bd2c7"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/quality/mypy.txt",
+      "original": "quality/mypy.txt",
+      "sha256": "34df9cf38736563d4bb02e64b66effac851acb546ad0a3c3761547e25bbe3570"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/quality/ruff-check.txt",
+      "original": "quality/ruff-check.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/quality/ruff-format.txt",
+      "original": "quality/ruff-format.txt",
+      "sha256": "e5d285e654af339bd79aedd43f7389a16ff483c0cdb5376a5926eb5a93d4a4d4"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/quality/verification-notes.json",
+      "original": "quality/verification-notes.json",
+      "sha256": "e4682c53232462a1478e42db0b578e8791bc41ebbc77e6368d11d7114641bc5f"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-command.log",
+      "original": "study-command.log",
+      "sha256": "295696482b4b8946c0a4ef82e8a4c30542cd0ecc1560aacb3b67d37effbb3099"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/book_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/book_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/default28/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/book_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/book_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/book_zero_update/book.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/book_zero_update/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/default28/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_aligned/trades.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_off_price/trades.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_off_quantity/trades.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_zero/book.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28/csv/trade_zero/trades.csv",
+      "original": "study-final/candidate-evidence/groups/default28/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/default28.json",
+      "original": "study-final/candidate-evidence/groups/default28.json",
+      "sha256": "96ddf0b3481bd1bc686a20123e59ec55df182ebd319124ff3cee38cbea71a4a8"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/book_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/book_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/high50/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/book_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/book_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/book_zero_update/book.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/book_zero_update/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/high50/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_aligned/trades.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_off_price/trades.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_off_quantity/trades.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_zero/book.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50/csv/trade_zero/trades.csv",
+      "original": "study-final/candidate-evidence/groups/high50/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/high50.json",
+      "original": "study-final/candidate-evidence/groups/high50.json",
+      "sha256": "1613003dbd1e1ce279b0bd0b0ce763049d8c88ac3747217700ce6054ff448386"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/book_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/book_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/book_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/book_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/book_zero_update/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/book_zero_update/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_off_price/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_off_quantity/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_zero/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down/csv/trade_zero/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_down/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_down.json",
+      "original": "study-final/candidate-evidence/groups/low3_down.json",
+      "sha256": "b4c60dffb146f84f771e23b9cca605fe019a31059c5990bf5959bf8d7c6f62c3"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/book_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/book_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/book_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/book_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/book_zero_update/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/book_zero_update/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_off_price/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_off_quantity/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_zero/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even/csv/trade_zero/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_even/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_even.json",
+      "original": "study-final/candidate-evidence/groups/low3_even.json",
+      "sha256": "4b88ac8b4713a6b26677129367c12d896edd9368bf4817264e21269f09ca4fc7"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/book_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/book_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/book_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/book_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/book_zero_update/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/book_zero_update/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_off_price/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_off_quantity/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_zero/book.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up/csv/trade_zero/trades.csv",
+      "original": "study-final/candidate-evidence/groups/low3_up/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/low3_up.json",
+      "original": "study-final/candidate-evidence/groups/low3_up.json",
+      "sha256": "7a9bad18e56b21f20a3cac448e18daf35876daa60f4df107330b649ad7d82cb2"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/book_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/book_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/book_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/book_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/book_zero_update/book.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/book_zero_update/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/book.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/canonical.parquet",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/trades.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_off_price/book.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_off_price/trades.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_off_quantity/book.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_off_quantity/trades.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_zero/book.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28/csv/trade_zero/trades.csv",
+      "original": "study-final/candidate-evidence/groups/trapped28/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/groups/trapped28.json",
+      "original": "study-final/candidate-evidence/groups/trapped28.json",
+      "sha256": "ddbe5d04a9b1f586d3cd1bdb778aa52ce217f7aa0619c4604741347368be5154"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/legacy-controls.json",
+      "original": "study-final/candidate-evidence/legacy-controls.json",
+      "sha256": "9fdd81121c6cd7f8fe42abca9327a693edc3049a40f07bcf762a56dbf8dca477"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/normal/lobster_existing.parquet",
+      "original": "study-final/candidate-evidence/normal/lobster_existing.parquet",
+      "sha256": "9f3877a2c9252b39a8cd4dcdaaad9d0bdd7aac14cdcd8219c738e8d55e7e346b"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/normal/tardis_existing.parquet",
+      "original": "study-final/candidate-evidence/normal/tardis_existing.parquet",
+      "sha256": "0c740a19aaf4e698ce3d3172b6049c85b1867935fbb9eec87c7761341d8a1ec2"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-evidence/normal-controls.json",
+      "original": "study-final/candidate-evidence/normal-controls.json",
+      "sha256": "6c79af6e06dcdebd495523c2f94ea2985c97853215ef155c4c4913fc69f80020"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate-source-pins.json",
+      "original": "study-final/candidate-source-pins.json",
+      "sha256": "c619a7e0d8ff626017babdee4af71ecc67170b8d6af8eb24774ab4b8bfde86c6"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate.json",
+      "original": "study-final/candidate.json",
+      "sha256": "7927a15f823c344184ed9c238b33ba840004a2a3bc98d457b493673fe0100578"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate.log",
+      "original": "study-final/candidate.log",
+      "sha256": "9bd2978ed56ba4d0666db706d3531cca0e661371b6717ec59b63c07fb38c30db"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/candidate.xml",
+      "original": "study-final/candidate.xml",
+      "sha256": "e0f0971ea41bc7c9651964714d15aa8407f9cd46f77357bef519fda6bf653262"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/environment.json",
+      "original": "study-final/environment.json",
+      "sha256": "81eeeff3eb6b169a7d178346d3617650a7d2cad6625e5c68ec436de98bfd1879"
+    },
+    {
+      "committed": "docs/evidence/exact-ingress-20261111/local/study-final/report.json",
+      "original": "study-final/report.json",
+      "sha256": "57f57749e34624e625c1475b603c75dda5bd5fbdb06b22ab4872892501be2baf"
+    }
+  ],
+  "excluded_copy_reason": "Redundant Git-archived source copies and frozen inputs/harness copies remain locally and are represented by exact source/input/harness hashes and Git commits. Import-identity plugin copied verbatim as .py.txt.",
+  "files": [
+    {
+      "bytes": 526,
+      "path": "baseline/environment.json",
+      "sha256": "81eeeff3eb6b169a7d178346d3617650a7d2cad6625e5c68ec436de98bfd1879"
+    },
+    {
+      "bytes": 12139,
+      "path": "baseline/frozen/docs/evidence/exact-ingress-20261111/contract.json",
+      "sha256": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b"
+    },
+    {
+      "bytes": 3624,
+      "path": "baseline/frozen/docs/evidence/exact-ingress-20261111/design-review.json",
+      "sha256": "e22e97dc1c99d4c907a2fd1903555f276524d80a48e0903cbd757972f0eeefd6"
+    },
+    {
+      "bytes": 9713,
+      "path": "baseline/frozen/docs/evidence/exact-ingress-20261111/fixtures.json",
+      "sha256": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144"
+    },
+    {
+      "bytes": 293,
+      "path": "baseline/frozen/tests/fixtures/adapters/lobster_message.csv",
+      "sha256": "639a47ef73d0e3fb97bdc8802942512684fc60d85058196768c6fb918470cd21"
+    },
+    {
+      "bytes": 379,
+      "path": "baseline/frozen/tests/fixtures/adapters/lobster_orderbook.csv",
+      "sha256": "03c83b2061f62a7b7f751077c47e221e4bba3a2911be099f23effdf3f28498f2"
+    },
+    {
+      "bytes": 475,
+      "path": "baseline/frozen/tests/fixtures/adapters/tardis_incremental_book_L2.csv",
+      "sha256": "ed3a0a2af30fdeb86df22edcea7520e16cfefb27c78284588a756a72acfcf14f"
+    },
+    {
+      "bytes": 196,
+      "path": "baseline/frozen/tests/fixtures/adapters/tardis_trades.csv",
+      "sha256": "8038c20781f7ae0c87875acdd978903a5e295360f1ab3565e018482d50f8de48"
+    },
+    {
+      "bytes": 25830,
+      "path": "baseline/frozen/tests/unit/test_exact_ingress_independent.py",
+      "sha256": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7"
+    },
+    {
+      "bytes": 150,
+      "path": "baseline/main-evidence/groups/default28/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/default28/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/default28/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/default28/csv/book_off_price/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/default28/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/default28/csv/book_off_quantity/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/default28/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "baseline/main-evidence/groups/default28/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_off_price/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_off_quantity/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/default28/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 212168,
+      "path": "baseline/main-evidence/groups/default28.json",
+      "sha256": "b8026c7ca8e53586a65bbdf868e8485f1b939c0bf8110ee0414e67613b8836b3"
+    },
+    {
+      "bytes": 150,
+      "path": "baseline/main-evidence/groups/high50/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/high50/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/high50/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/high50/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/high50/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "baseline/main-evidence/groups/high50/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/high50/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 191195,
+      "path": "baseline/main-evidence/groups/high50.json",
+      "sha256": "93c3a1ed0ed3a55edb2bcb00a1afb8ae665d235d6111e9eb87db75a75aaf0987"
+    },
+    {
+      "bytes": 150,
+      "path": "baseline/main-evidence/groups/low3_down/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/low3_down/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/low3_down/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/low3_down/csv/book_off_price/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/low3_down/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/low3_down/csv/book_off_quantity/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_down/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "baseline/main-evidence/groups/low3_down/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_off_price/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/low3_down/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 211512,
+      "path": "baseline/main-evidence/groups/low3_down.json",
+      "sha256": "97f3859739d637247545ab25f705c7f73647d73969c988327583cc17c49c0bca"
+    },
+    {
+      "bytes": 150,
+      "path": "baseline/main-evidence/groups/low3_even/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/low3_even/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/low3_even/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/low3_even/csv/book_off_price/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/low3_even/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/low3_even/csv/book_off_quantity/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_even/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "baseline/main-evidence/groups/low3_even/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_off_price/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/low3_even/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 211763,
+      "path": "baseline/main-evidence/groups/low3_even.json",
+      "sha256": "f394ebea77255f6422c0a51baa86a24776cf730eeb634b9cff553c3c5cf30356"
+    },
+    {
+      "bytes": 150,
+      "path": "baseline/main-evidence/groups/low3_up/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/low3_up/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/low3_up/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/low3_up/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_up/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "baseline/main-evidence/groups/low3_up/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/low3_up/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 190246,
+      "path": "baseline/main-evidence/groups/low3_up.json",
+      "sha256": "e154d7246dd0ea40522f5e28d0830b1c9a9251f64f3b30577e887a9ae2dcd9b3"
+    },
+    {
+      "bytes": 150,
+      "path": "baseline/main-evidence/groups/trapped28/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "baseline/main-evidence/groups/trapped28/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/trapped28/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "baseline/main-evidence/groups/trapped28/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/trapped28/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "baseline/main-evidence/groups/trapped28/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "baseline/main-evidence/groups/trapped28/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 190564,
+      "path": "baseline/main-evidence/groups/trapped28.json",
+      "sha256": "aa53b2255fbb6bc9dbb3beb973b47629c58882b19e3cda94497b12bcb46eb3eb"
+    },
+    {
+      "bytes": 31527,
+      "path": "baseline/main-evidence/legacy-controls.json",
+      "sha256": "8da10ed85032e3e324538707613fe4d653fc406fb83413a6b631cd4efa1957f1"
+    },
+    {
+      "bytes": 2580,
+      "path": "baseline/main-evidence/normal/lobster_existing.parquet",
+      "sha256": "9f3877a2c9252b39a8cd4dcdaaad9d0bdd7aac14cdcd8219c738e8d55e7e346b"
+    },
+    {
+      "bytes": 2551,
+      "path": "baseline/main-evidence/normal/tardis_existing.parquet",
+      "sha256": "0c740a19aaf4e698ce3d3172b6049c85b1867935fbb9eec87c7761341d8a1ec2"
+    },
+    {
+      "bytes": 19378,
+      "path": "baseline/main-evidence/normal-controls.json",
+      "sha256": "7e7adec4e9d1c097d9b908859ee46d1c203c0bbf0fb11629dc4cfb0686e503be"
+    },
+    {
+      "bytes": 3716,
+      "path": "baseline/main-source-pins.json",
+      "sha256": "a80db64f7751732cea30993dc5ecbe4cd2c9b56895fd27eceb9a15f73cead5b4"
+    },
+    {
+      "bytes": 41510,
+      "path": "baseline/main.json",
+      "sha256": "9f5e9dc89e7ed995d5936e3887b0eaa9bb3da61aa8e8817451a2762ad0e9939c"
+    },
+    {
+      "bytes": 8024,
+      "path": "baseline/main.log",
+      "sha256": "1552c1d40d922a792b315478085531e037d49f9bd00dc9a510bdd02a24a49a4d"
+    },
+    {
+      "bytes": 8613,
+      "path": "baseline/main.xml",
+      "sha256": "5a2426c1176b4c81ac1644195a4bf0e0a1931a45eb02c500da4aa2a1d1d16b3d"
+    },
+    {
+      "bytes": 444135,
+      "path": "baseline/report.json",
+      "sha256": "61bd189e249e7033505168e8d1d0861ca41a0356e64f077059931f2f412e489b"
+    },
+    {
+      "bytes": 35239,
+      "path": "baseline/reproducer.py",
+      "sha256": "bbb04f068e9c58d16b50df5926677b9bff423e2be65063054c227678525e69e1"
+    },
+    {
+      "bytes": 12139,
+      "path": "baseline/sources/main/frozen/docs/evidence/exact-ingress-20261111/contract.json",
+      "sha256": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b"
+    },
+    {
+      "bytes": 3624,
+      "path": "baseline/sources/main/frozen/docs/evidence/exact-ingress-20261111/design-review.json",
+      "sha256": "e22e97dc1c99d4c907a2fd1903555f276524d80a48e0903cbd757972f0eeefd6"
+    },
+    {
+      "bytes": 9713,
+      "path": "baseline/sources/main/frozen/docs/evidence/exact-ingress-20261111/fixtures.json",
+      "sha256": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144"
+    },
+    {
+      "bytes": 293,
+      "path": "baseline/sources/main/frozen/tests/fixtures/adapters/lobster_message.csv",
+      "sha256": "639a47ef73d0e3fb97bdc8802942512684fc60d85058196768c6fb918470cd21"
+    },
+    {
+      "bytes": 379,
+      "path": "baseline/sources/main/frozen/tests/fixtures/adapters/lobster_orderbook.csv",
+      "sha256": "03c83b2061f62a7b7f751077c47e221e4bba3a2911be099f23effdf3f28498f2"
+    },
+    {
+      "bytes": 475,
+      "path": "baseline/sources/main/frozen/tests/fixtures/adapters/tardis_incremental_book_L2.csv",
+      "sha256": "ed3a0a2af30fdeb86df22edcea7520e16cfefb27c78284588a756a72acfcf14f"
+    },
+    {
+      "bytes": 196,
+      "path": "baseline/sources/main/frozen/tests/fixtures/adapters/tardis_trades.csv",
+      "sha256": "8038c20781f7ae0c87875acdd978903a5e295360f1ab3565e018482d50f8de48"
+    },
+    {
+      "bytes": 25830,
+      "path": "baseline/sources/main/frozen/tests/unit/test_exact_ingress_independent.py",
+      "sha256": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7"
+    },
+    {
+      "bytes": 164,
+      "path": "baseline/sources/main/src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    {
+      "bytes": 35768,
+      "path": "baseline/sources/main/src/lobmm/backtest.py",
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    {
+      "bytes": 10082,
+      "path": "baseline/sources/main/src/lobmm/benchmark.py",
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    {
+      "bytes": 12658,
+      "path": "baseline/sources/main/src/lobmm/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    {
+      "bytes": 19324,
+      "path": "baseline/sources/main/src/lobmm/case_study.py",
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    {
+      "bytes": 5274,
+      "path": "baseline/sources/main/src/lobmm/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    {
+      "bytes": 22297,
+      "path": "baseline/sources/main/src/lobmm/cli.py",
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    {
+      "bytes": 12286,
+      "path": "baseline/sources/main/src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    {
+      "bytes": 1786,
+      "path": "baseline/sources/main/src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    {
+      "bytes": 5955,
+      "path": "baseline/sources/main/src/lobmm/data/_adapter_utils.py",
+      "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+    },
+    {
+      "bytes": 1367,
+      "path": "baseline/sources/main/src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    {
+      "bytes": 1079,
+      "path": "baseline/sources/main/src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    {
+      "bytes": 3935,
+      "path": "baseline/sources/main/src/lobmm/data/loaders.py",
+      "sha256": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a"
+    },
+    {
+      "bytes": 21121,
+      "path": "baseline/sources/main/src/lobmm/data/lobster.py",
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    {
+      "bytes": 3983,
+      "path": "baseline/sources/main/src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    {
+      "bytes": 4830,
+      "path": "baseline/sources/main/src/lobmm/data/schema.py",
+      "sha256": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9"
+    },
+    {
+      "bytes": 21020,
+      "path": "baseline/sources/main/src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    {
+      "bytes": 2472,
+      "path": "baseline/sources/main/src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    {
+      "bytes": 3006,
+      "path": "baseline/sources/main/src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    {
+      "bytes": 16502,
+      "path": "baseline/sources/main/src/lobmm/exchange.py",
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    {
+      "bytes": 18529,
+      "path": "baseline/sources/main/src/lobmm/experiments.py",
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    {
+      "bytes": 14898,
+      "path": "baseline/sources/main/src/lobmm/metrics.py",
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    {
+      "bytes": 17176,
+      "path": "baseline/sources/main/src/lobmm/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    {
+      "bytes": 18850,
+      "path": "baseline/sources/main/src/lobmm/portfolio.py",
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    {
+      "bytes": 1,
+      "path": "baseline/sources/main/src/lobmm/py.typed",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 20413,
+      "path": "baseline/sources/main/src/lobmm/queue_model.py",
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    {
+      "bytes": 35627,
+      "path": "baseline/sources/main/src/lobmm/report.py",
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    {
+      "bytes": 23906,
+      "path": "baseline/sources/main/src/lobmm/risk.py",
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    {
+      "bytes": 8559,
+      "path": "baseline/sources/main/src/lobmm/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    {
+      "bytes": 1008,
+      "path": "baseline/sources/main/src/lobmm/strategies/__init__.py",
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    {
+      "bytes": 21607,
+      "path": "baseline/sources/main/src/lobmm/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    {
+      "bytes": 918,
+      "path": "baseline/sources/main/src/lobmm/strategies/fixed_spread.py",
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    {
+      "bytes": 1205,
+      "path": "baseline/sources/main/src/lobmm/strategies/inventory_aware.py",
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    {
+      "bytes": 1659,
+      "path": "baseline/sources/main/src/lobmm/strategies/microprice.py",
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    {
+      "bytes": 3433,
+      "path": "baseline/sources/main/src/lobmm/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    {
+      "bytes": 14929,
+      "path": "baseline/sources/main/src/lobmm/synthetic.py",
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    {
+      "bytes": 1507,
+      "path": "baseline/sources/main/src/lobmm/types.py",
+      "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+    },
+    {
+      "bytes": 7386,
+      "path": "baseline/sources/main/src/lobmm/validation.py",
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    },
+    {
+      "bytes": 71058,
+      "path": "baseline-command.log",
+      "sha256": "aaf3bda349fd9339249a20235d3ea5838758269a32ba2c16ac8ce2450041179c"
+    },
+    {
+      "bytes": 7033,
+      "path": "full-suite/imports.json",
+      "sha256": "706cdb531089a74bd11659819c50789fa27f7a34bf70dff001ad880578b725d8"
+    },
+    {
+      "bytes": 742,
+      "path": "full-suite/ingress_import_identity.py",
+      "sha256": "4f2a1c3f364e4716b8e200b0d2816309a94d16556982de58f47a0a9478ed4f31"
+    },
+    {
+      "bytes": 6891,
+      "path": "full-suite/result.txt",
+      "sha256": "ef0bf8a057f1cc147abe86c111747069c0f8c1c7b3b37c92b3a5067d56635eb4"
+    },
+    {
+      "bytes": 35923,
+      "path": "full-suite/result.xml",
+      "sha256": "5b9337b15382cf6e1dc7d66ed7eb26519537351702af3388f34807bdb91bd2c7"
+    },
+    {
+      "bytes": 44,
+      "path": "quality/mypy.txt",
+      "sha256": "34df9cf38736563d4bb02e64b66effac851acb546ad0a3c3761547e25bbe3570"
+    },
+    {
+      "bytes": 19,
+      "path": "quality/ruff-check.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "bytes": 27,
+      "path": "quality/ruff-format.txt",
+      "sha256": "e5d285e654af339bd79aedd43f7389a16ff483c0cdb5376a5926eb5a93d4a4d4"
+    },
+    {
+      "bytes": 1168,
+      "path": "quality/verification-notes.json",
+      "sha256": "e4682c53232462a1478e42db0b578e8791bc41ebbc77e6368d11d7114641bc5f"
+    },
+    {
+      "bytes": 74695,
+      "path": "study-command.log",
+      "sha256": "295696482b4b8946c0a4ef82e8a4c30542cd0ecc1560aacb3b67d37effbb3099"
+    },
+    {
+      "bytes": 150,
+      "path": "study-final/candidate-evidence/groups/default28/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "study-final/candidate-evidence/groups/default28/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/default28/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/default28/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/default28/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "study-final/candidate-evidence/groups/default28/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/default28/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 191286,
+      "path": "study-final/candidate-evidence/groups/default28.json",
+      "sha256": "96ddf0b3481bd1bc686a20123e59ec55df182ebd319124ff3cee38cbea71a4a8"
+    },
+    {
+      "bytes": 150,
+      "path": "study-final/candidate-evidence/groups/high50/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "study-final/candidate-evidence/groups/high50/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/high50/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/high50/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/high50/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "study-final/candidate-evidence/groups/high50/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/high50/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 191226,
+      "path": "study-final/candidate-evidence/groups/high50.json",
+      "sha256": "1613003dbd1e1ce279b0bd0b0ce763049d8c88ac3747217700ce6054ff448386"
+    },
+    {
+      "bytes": 150,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/low3_down/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 190800,
+      "path": "study-final/candidate-evidence/groups/low3_down.json",
+      "sha256": "b4c60dffb146f84f771e23b9cca605fe019a31059c5990bf5959bf8d7c6f62c3"
+    },
+    {
+      "bytes": 150,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/low3_even/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 191205,
+      "path": "study-final/candidate-evidence/groups/low3_even.json",
+      "sha256": "4b88ac8b4713a6b26677129367c12d896edd9368bf4817264e21269f09ca4fc7"
+    },
+    {
+      "bytes": 150,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/low3_up/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 190598,
+      "path": "study-final/candidate-evidence/groups/low3_up.json",
+      "sha256": "7a9bad18e56b21f20a3cac448e18daf35876daa60f4df107330b649ad7d82cb2"
+    },
+    {
+      "bytes": 150,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/book_aligned/book.csv",
+      "sha256": "ff0d99053bfbb813355e23e0f603cfba891a10c7c0d8e6712879c62c3f958510"
+    },
+    {
+      "bytes": 2437,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/book_aligned/canonical.parquet",
+      "sha256": "48d6aad8787c424c79c57799584b5d05d6d5cb625dd8ad37408e7a2ad863a8ba"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/book_off_price/book.csv",
+      "sha256": "e4f6b240fe17fb0865ef086040a3c38e4522982e342a4c8ba5ca112920329a94"
+    },
+    {
+      "bytes": 180,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/book_off_quantity/book.csv",
+      "sha256": "e1b218e5ff2b674cb5a9a93dc0da8a9fa09ced48e8b6889beef14cfd4e4e320c"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/book_zero_update/book.csv",
+      "sha256": "8930e052534e651d9d74b04f8a677416babdaa54823539d4ed66903b78fe7b74"
+    },
+    {
+      "bytes": 2462,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/book_zero_update/canonical.parquet",
+      "sha256": "9c91e5646769911e5d0153c566697d42dd49e0e0bd559e959988272e53b89f10"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 2450,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/canonical.parquet",
+      "sha256": "d2d99332053649bcbc7e48b835b06eda1e373c9cdf5d70ee1fe0ef8b9da0b3b0"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_aligned/trades.csv",
+      "sha256": "ce0c208e67da9df69e728652101d7178aa6bcd7556255bf9b276b3e85333f6cb"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_off_price/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_off_price/trades.csv",
+      "sha256": "130271195f87390624999ea14e5b19c161d465e9f872baa02b036edd5377ed81"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_off_quantity/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 137,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_off_quantity/trades.csv",
+      "sha256": "a695ca8855ac812b9efb02a536cd33446968dbcd3526d02d8da23deb7dbcc4a6"
+    },
+    {
+      "bytes": 190,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_zero/book.csv",
+      "sha256": "0e6d0b001c571c66de213b1c1414f7d50af5640d35578eb0a49ec2623b095390"
+    },
+    {
+      "bytes": 107,
+      "path": "study-final/candidate-evidence/groups/trapped28/csv/trade_zero/trades.csv",
+      "sha256": "bac0937f7ddf81f21f3292ccc0e8b21458c10cff4d571925f54220f1ac270d84"
+    },
+    {
+      "bytes": 191125,
+      "path": "study-final/candidate-evidence/groups/trapped28.json",
+      "sha256": "ddbe5d04a9b1f586d3cd1bdb778aa52ce217f7aa0619c4604741347368be5154"
+    },
+    {
+      "bytes": 31557,
+      "path": "study-final/candidate-evidence/legacy-controls.json",
+      "sha256": "9fdd81121c6cd7f8fe42abca9327a693edc3049a40f07bcf762a56dbf8dca477"
+    },
+    {
+      "bytes": 2580,
+      "path": "study-final/candidate-evidence/normal/lobster_existing.parquet",
+      "sha256": "9f3877a2c9252b39a8cd4dcdaaad9d0bdd7aac14cdcd8219c738e8d55e7e346b"
+    },
+    {
+      "bytes": 2551,
+      "path": "study-final/candidate-evidence/normal/tardis_existing.parquet",
+      "sha256": "0c740a19aaf4e698ce3d3172b6049c85b1867935fbb9eec87c7761341d8a1ec2"
+    },
+    {
+      "bytes": 19408,
+      "path": "study-final/candidate-evidence/normal-controls.json",
+      "sha256": "6c79af6e06dcdebd495523c2f94ea2985c97853215ef155c4c4913fc69f80020"
+    },
+    {
+      "bytes": 3716,
+      "path": "study-final/candidate-source-pins.json",
+      "sha256": "c619a7e0d8ff626017babdee4af71ecc67170b8d6af8eb24774ab4b8bfde86c6"
+    },
+    {
+      "bytes": 32830,
+      "path": "study-final/candidate.json",
+      "sha256": "7927a15f823c344184ed9c238b33ba840004a2a3bc98d457b493673fe0100578"
+    },
+    {
+      "bytes": 98,
+      "path": "study-final/candidate.log",
+      "sha256": "9bd2978ed56ba4d0666db706d3531cca0e661371b6717ec59b63c07fb38c30db"
+    },
+    {
+      "bytes": 1575,
+      "path": "study-final/candidate.xml",
+      "sha256": "e0f0971ea41bc7c9651964714d15aa8407f9cd46f77357bef519fda6bf653262"
+    },
+    {
+      "bytes": 526,
+      "path": "study-final/environment.json",
+      "sha256": "81eeeff3eb6b169a7d178346d3617650a7d2cad6625e5c68ec436de98bfd1879"
+    },
+    {
+      "bytes": 12139,
+      "path": "study-final/frozen/docs/evidence/exact-ingress-20261111/contract.json",
+      "sha256": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b"
+    },
+    {
+      "bytes": 3624,
+      "path": "study-final/frozen/docs/evidence/exact-ingress-20261111/design-review.json",
+      "sha256": "e22e97dc1c99d4c907a2fd1903555f276524d80a48e0903cbd757972f0eeefd6"
+    },
+    {
+      "bytes": 9713,
+      "path": "study-final/frozen/docs/evidence/exact-ingress-20261111/fixtures.json",
+      "sha256": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144"
+    },
+    {
+      "bytes": 293,
+      "path": "study-final/frozen/tests/fixtures/adapters/lobster_message.csv",
+      "sha256": "639a47ef73d0e3fb97bdc8802942512684fc60d85058196768c6fb918470cd21"
+    },
+    {
+      "bytes": 379,
+      "path": "study-final/frozen/tests/fixtures/adapters/lobster_orderbook.csv",
+      "sha256": "03c83b2061f62a7b7f751077c47e221e4bba3a2911be099f23effdf3f28498f2"
+    },
+    {
+      "bytes": 475,
+      "path": "study-final/frozen/tests/fixtures/adapters/tardis_incremental_book_L2.csv",
+      "sha256": "ed3a0a2af30fdeb86df22edcea7520e16cfefb27c78284588a756a72acfcf14f"
+    },
+    {
+      "bytes": 196,
+      "path": "study-final/frozen/tests/fixtures/adapters/tardis_trades.csv",
+      "sha256": "8038c20781f7ae0c87875acdd978903a5e295360f1ab3565e018482d50f8de48"
+    },
+    {
+      "bytes": 25830,
+      "path": "study-final/frozen/tests/unit/test_exact_ingress_independent.py",
+      "sha256": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7"
+    },
+    {
+      "bytes": 382831,
+      "path": "study-final/report.json",
+      "sha256": "57f57749e34624e625c1475b603c75dda5bd5fbdb06b22ab4872892501be2baf"
+    },
+    {
+      "bytes": 35239,
+      "path": "study-final/reproducer.py",
+      "sha256": "bbb04f068e9c58d16b50df5926677b9bff423e2be65063054c227678525e69e1"
+    },
+    {
+      "bytes": 12139,
+      "path": "study-final/sources/candidate/frozen/docs/evidence/exact-ingress-20261111/contract.json",
+      "sha256": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b"
+    },
+    {
+      "bytes": 3624,
+      "path": "study-final/sources/candidate/frozen/docs/evidence/exact-ingress-20261111/design-review.json",
+      "sha256": "e22e97dc1c99d4c907a2fd1903555f276524d80a48e0903cbd757972f0eeefd6"
+    },
+    {
+      "bytes": 9713,
+      "path": "study-final/sources/candidate/frozen/docs/evidence/exact-ingress-20261111/fixtures.json",
+      "sha256": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144"
+    },
+    {
+      "bytes": 293,
+      "path": "study-final/sources/candidate/frozen/tests/fixtures/adapters/lobster_message.csv",
+      "sha256": "639a47ef73d0e3fb97bdc8802942512684fc60d85058196768c6fb918470cd21"
+    },
+    {
+      "bytes": 379,
+      "path": "study-final/sources/candidate/frozen/tests/fixtures/adapters/lobster_orderbook.csv",
+      "sha256": "03c83b2061f62a7b7f751077c47e221e4bba3a2911be099f23effdf3f28498f2"
+    },
+    {
+      "bytes": 475,
+      "path": "study-final/sources/candidate/frozen/tests/fixtures/adapters/tardis_incremental_book_L2.csv",
+      "sha256": "ed3a0a2af30fdeb86df22edcea7520e16cfefb27c78284588a756a72acfcf14f"
+    },
+    {
+      "bytes": 196,
+      "path": "study-final/sources/candidate/frozen/tests/fixtures/adapters/tardis_trades.csv",
+      "sha256": "8038c20781f7ae0c87875acdd978903a5e295360f1ab3565e018482d50f8de48"
+    },
+    {
+      "bytes": 25830,
+      "path": "study-final/sources/candidate/frozen/tests/unit/test_exact_ingress_independent.py",
+      "sha256": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7"
+    },
+    {
+      "bytes": 164,
+      "path": "study-final/sources/candidate/src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    {
+      "bytes": 35768,
+      "path": "study-final/sources/candidate/src/lobmm/backtest.py",
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    {
+      "bytes": 10082,
+      "path": "study-final/sources/candidate/src/lobmm/benchmark.py",
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    {
+      "bytes": 12658,
+      "path": "study-final/sources/candidate/src/lobmm/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    {
+      "bytes": 19324,
+      "path": "study-final/sources/candidate/src/lobmm/case_study.py",
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    {
+      "bytes": 5274,
+      "path": "study-final/sources/candidate/src/lobmm/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    {
+      "bytes": 22297,
+      "path": "study-final/sources/candidate/src/lobmm/cli.py",
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    {
+      "bytes": 12286,
+      "path": "study-final/sources/candidate/src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    {
+      "bytes": 1786,
+      "path": "study-final/sources/candidate/src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    {
+      "bytes": 6206,
+      "path": "study-final/sources/candidate/src/lobmm/data/_adapter_utils.py",
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+    },
+    {
+      "bytes": 1367,
+      "path": "study-final/sources/candidate/src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    {
+      "bytes": 1079,
+      "path": "study-final/sources/candidate/src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    {
+      "bytes": 3935,
+      "path": "study-final/sources/candidate/src/lobmm/data/loaders.py",
+      "sha256": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a"
+    },
+    {
+      "bytes": 21121,
+      "path": "study-final/sources/candidate/src/lobmm/data/lobster.py",
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    {
+      "bytes": 3983,
+      "path": "study-final/sources/candidate/src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    {
+      "bytes": 4830,
+      "path": "study-final/sources/candidate/src/lobmm/data/schema.py",
+      "sha256": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9"
+    },
+    {
+      "bytes": 21020,
+      "path": "study-final/sources/candidate/src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    {
+      "bytes": 2472,
+      "path": "study-final/sources/candidate/src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    {
+      "bytes": 3006,
+      "path": "study-final/sources/candidate/src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    {
+      "bytes": 16502,
+      "path": "study-final/sources/candidate/src/lobmm/exchange.py",
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    {
+      "bytes": 18529,
+      "path": "study-final/sources/candidate/src/lobmm/experiments.py",
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    {
+      "bytes": 14898,
+      "path": "study-final/sources/candidate/src/lobmm/metrics.py",
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    {
+      "bytes": 17176,
+      "path": "study-final/sources/candidate/src/lobmm/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    {
+      "bytes": 18850,
+      "path": "study-final/sources/candidate/src/lobmm/portfolio.py",
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    {
+      "bytes": 1,
+      "path": "study-final/sources/candidate/src/lobmm/py.typed",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 20413,
+      "path": "study-final/sources/candidate/src/lobmm/queue_model.py",
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    {
+      "bytes": 35627,
+      "path": "study-final/sources/candidate/src/lobmm/report.py",
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    {
+      "bytes": 23906,
+      "path": "study-final/sources/candidate/src/lobmm/risk.py",
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    {
+      "bytes": 8559,
+      "path": "study-final/sources/candidate/src/lobmm/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    {
+      "bytes": 1008,
+      "path": "study-final/sources/candidate/src/lobmm/strategies/__init__.py",
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    {
+      "bytes": 21607,
+      "path": "study-final/sources/candidate/src/lobmm/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    {
+      "bytes": 918,
+      "path": "study-final/sources/candidate/src/lobmm/strategies/fixed_spread.py",
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    {
+      "bytes": 1205,
+      "path": "study-final/sources/candidate/src/lobmm/strategies/inventory_aware.py",
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    {
+      "bytes": 1659,
+      "path": "study-final/sources/candidate/src/lobmm/strategies/microprice.py",
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    {
+      "bytes": 3433,
+      "path": "study-final/sources/candidate/src/lobmm/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    {
+      "bytes": 14929,
+      "path": "study-final/sources/candidate/src/lobmm/synthetic.py",
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    {
+      "bytes": 3850,
+      "path": "study-final/sources/candidate/src/lobmm/types.py",
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+    },
+    {
+      "bytes": 7386,
+      "path": "study-final/sources/candidate/src/lobmm/validation.py",
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    }
+  ],
+  "scope": "All files in original local study/quality evidence except bytecode caches; no new numerical execution during curation.",
+  "workspace": "/workspace/lob-market-maker-ingress-fix/experiments/exact-ingress-20261111"
+}
