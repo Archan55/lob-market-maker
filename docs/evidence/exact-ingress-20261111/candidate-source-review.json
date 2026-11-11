@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-11",
+  "phase": "Actual single candidate source reviewed before first candidate measurement",
+  "decision": "GO",
+  "reviewer": "independent_feasibility",
+  "additional_static_reviewer": "performance_reproducer/fraction_float_static",
+  "recorded_by": "root from independent source review messages",
+  "source_sha256": {
+    "src/lobmm/types.py": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b",
+    "src/lobmm/data/_adapter_utils.py": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+  },
+  "test_sha256": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7",
+  "controller_sha256": "bbb04f068e9c58d16b50df5926677b9bff423e2be65063054c227678525e69e1",
+  "mathematical_review": [
+    "Finite tuple coefficient extraction uses exponent-zero Decimal->int without rounded arithmetic or integer text conversion",
+    "GCD-reduced denominator at nonnegative decimal exponent must contain only factors two/five with sufficient exponent; returned shifts/powers implement exact quotient",
+    "For negative exponent a remaining denominator precludes integrality; otherwise the binary-zero bound rejects impossible decimal divisibility before allocating a coefficient-bounded power, then exact signed divmod applies",
+    "Zero follows caller unit validation; signed generic prices preserved",
+    "No precision, tolerance, rounding, trap, flag or integer-guard changes; compact operand exponents combine before powers"
+  ],
+  "compatibility_review": [
+    "Only two approved production files change",
+    "Literal old strict=False arithmetic tail remains unchanged; bool(strict) early entry avoids a static unreachable warning without changing typed-bool behavior",
+    "Entire floor_price_to_ticks and ticks_to_price source unchanged",
+    "Quantity sign/allow_zero/error policy preserved; positive finite multiplier remains prevalidated public-adapter precondition"
+  ],
+  "authoring_checks": "Ruff lint/format and strict mypy passed; initial static typing/style issues resolved before source freeze without any numeric candidate execution or algorithm retuning",
+  "trial_status": {
+    "main_workers_completed": 1,
+    "candidate_workers_completed": 0,
+    "source_candidates": 1,
+    "numerical_repairs_used": 0
+  },
+  "limits": [
+    "No whole LOBSTER upstream price/time closure or malformed parsing-context claim",
+    "Non-strict arithmetic retains its existing ambient-context behavior",
+    "Actual huge integer outputs still incur output-proportional resource cost; no arbitrary-output resource guarantee",
+    "No market/economic/calibrated execution conclusion"
+  ],
+  "next_gate": "One unchanged candidate corpus worker reusing/rechecking the saved main baseline, then full quality and actual artifact review"
+}

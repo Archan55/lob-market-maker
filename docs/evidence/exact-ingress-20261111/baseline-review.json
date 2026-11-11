@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-11",
+  "phase": "Actual main baseline completed before candidate measurement",
+  "decision": "GO for the frozen candidate",
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "frozen_harness_commit": "6a2cb1dad9803a6221fc4ba0e17b600a2512167c",
+  "reviewer": "independent_feasibility",
+  "recorded_by": "root from independent actual-evidence audit",
+  "execution": {
+    "workers": 1,
+    "observations": 240,
+    "junit": {
+      "collected": 8,
+      "failed": 6,
+      "passed": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    "worker_exit_code": 0,
+    "pytest_exit_code": 1,
+    "observations_with_any_failed_contract_check": 101,
+    "semantic_mismatches": 64,
+    "in_profile_status_flag_changes": 101
+  },
+  "verified_primary": {
+    "source_literal": "1.00000000000000000000000000001",
+    "price_unit": "1",
+    "quantity_multiplier": "1",
+    "default_precision": 28,
+    "actual_price_result": 1,
+    "actual_quantity_result": 1,
+    "expected": "Reject nonintegral exact source value",
+    "public_csv_cases": [
+      "book_off_price",
+      "book_off_quantity",
+      "trade_off_price",
+      "trade_off_quantity"
+    ],
+    "csv_result": "All four preserve literal text at delegated helper, admit canonical integer rows and pass strict reconstructed nonempty zero-issue certification",
+    "canonical_identity": "Each bad default book/trade artifact is byte-identical to its corresponding aligned control; canonical hashes cannot recover discarded source information"
+  },
+  "independent_audit": [
+    "Original main Git archive and all 38 source/import identities; frozen test/controller/input/design pins",
+    "All 172 retained manifest files and exactly one completed worker",
+    "All 240 actual inputs and complete profile/case/node ledger",
+    "Parsed/hashed 72 actual original synthetic CSVs; 282 delegated helper calls match raw ordered prefixes",
+    "All 32 actual Parquets rehashed and decoded with matching rows/schema/fingerprint/certificates",
+    "Ordinary Tardis 11 rows and LOBSTER 17 rows strict-valid; all eight legacy controls pass",
+    "All outer caller contexts and integer string guard 4300 preserved; changed in-profile flags independently checked"
+  ],
+  "profile_results": [
+    {
+      "profile": "default28",
+      "semantic_mismatches": 10,
+      "status_flag_changes": 14
+    },
+    {
+      "profile": "low3_even",
+      "semantic_mismatches": 18,
+      "status_flag_changes": 23
+    },
+    {
+      "profile": "low3_up",
+      "semantic_mismatches": 8,
+      "status_flag_changes": 23
+    },
+    {
+      "profile": "low3_down",
+      "semantic_mismatches": 17,
+      "status_flag_changes": 23
+    },
+    {
+      "profile": "high50",
+      "semantic_mismatches": 0,
+      "status_flag_changes": 4
+    },
+    {
+      "profile": "trapped28",
+      "semantic_mismatches": 11,
+      "status_flag_changes": 14
+    }
+  ],
+  "negative_and_scope_notes": [
+    "The 101 violated observations and six failed groups are overlapping manifestations, not independent defects",
+    "Higher precision has no semantic mismatch for this fixed corpus but still changes status flags; it is not an exactness repair for arbitrary finite input strings",
+    "No numerical study/test/adapter worker was rerun by reviewer; audit reads and independent exact checks only",
+    "No real-data rights, economic advantage, execution calibration, LOBSTER upstream pipeline closure or PR3 performance resolution"
+  ],
+  "next_gates": [
+    "Independent candidate production-diff review with strict=False arithmetic and floor/inverse source preserved",
+    "Single candidate worker using unchanged test/inputs and rehashed baseline",
+    "Full quality/source/artifact review, reviewed draft publication and terminal exact-head CI"
+  ]
+}
