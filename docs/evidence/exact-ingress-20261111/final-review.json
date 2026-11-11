@@ -1,0 +1,71 @@
+{
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "date": "2026-11-11",
+  "frozen_harness": "6a2cb1dad9803a6221fc4ba0e17b600a2512167c",
+  "independent_review": {
+    "actual_baseline": "GO: full source/archive/import/frozen pins,172manifestfiles,240 observations,32 actual Parquets,72 generated plus4 original CSV inputs; H1 false admissions verified",
+    "actual_candidate_raw_result": "GO: all240 raw records/context/order/expected inputs; all52 actual Parquets,144 generated CSVs plus4 original inputs; full normal/legacy equality; no reruns.",
+    "actual_candidate_source": "GO by independent_feasibility and fraction_float_static: only two approved files, exact coefficient/exponent integer divisibility, signed/zero/resource controls, literal legacy tail and full floor/inverse unchanged",
+    "actual_candidate_structural_result": "GO: independent_feasibility verified all172 baseline and160 study manifest entries, raw/report equality, unchanged baseline reuse, both Git archive hashes, all38 source copies/import identities, same8JUnit nodes, only two approved files changed.",
+    "controller_author_artifact_audit": "Role disclosed: data_execution_audit authored controller and independently checked original main artifacts using separate dictionary/schema/book/fingerprint arithmetic; baseline source/oracle/result also audited by reviewer who authored no production/test/controller code",
+    "design_and_frozen_harness": "GO before outcomes by independent_feasibility; source has exactness promises and CSV preserves text; distinct from PR3/4",
+    "full_quality_and_report": "GO: independent_feasibility checked actual258 full-suite JUnit nodes, terminal90.63% coverage,37 measured-source imports,Ruff83/mypy37 logs; report/data documentation/CI scopes accurate, full-suite shell-status gap disclosed.",
+    "publication_curation": "GO by publication_integrity: all344 original files and234 byte-identical curated copies;249 publication hashes;52Parquets/144CSVs;measured source/test/controller identity;all7 local report links;four ignored logs identified.",
+    "remaining_independent_gate": "Final structural provenance/reuse and curated publication integrity before publishing"
+  },
+  "limits": [
+    "Finite strict helper domain, not whole LOBSTER upstream price/time exactness",
+    "No malformed/nonfinite parsing-context preservation or float DataFrame lost-text recovery claim",
+    "Legacy non-strict arithmetic retains ambient context; no strategy/exchange change or huge-output resource guarantee",
+    "No real-data admission/rights/economic advantage/execution calibration or PR3 overhead resolution",
+    "Nasdaq source review belongs separate quant worker; no Nasdaq request or sample acquisition here"
+  ],
+  "measured_candidate": "238843475e757b8efec0f0a7feffd4cb511e2c10",
+  "preregistration": "8463362e57e7a99b7d03f4f942466eba29d54b86",
+  "quality": {
+    "full_suite": {
+      "branch_aware_coverage_percent": 90.63,
+      "errors": 0,
+      "failures": 0,
+      "imports": "37 current source module paths/hashes checked",
+      "process_exit_status": "Not reaped after exec session identifier disappeared; finished JUnit/terminal coverage/import artifacts verify completion. No rerun.",
+      "skips": 0,
+      "tests": 258
+    },
+    "mypy": "37 source files pass",
+    "python": "3.12.14",
+    "ruff_format": "83 files",
+    "ruff_lint": "pass"
+  },
+  "remaining_gates": [
+    "All publication-manifest files tracked, including four original synthetic logs",
+    "Authorized new draft branch publication and exact remote head",
+    "Terminal exact-head CI, decoded-log review and artifact metadata; no ZIP audit implied"
+  ],
+  "results": {
+    "candidate_either": 0,
+    "four_default_bad_CSVs": "Main admits strict-valid artifacts byte-identical to aligned controls; candidate rejects MarketDataAdapterError without canonical files",
+    "main_in_profile_status_flag_changes": 101,
+    "main_semantic_mismatches": 64,
+    "normal_pairs": "Two actual canonical Parquet pairs byte-identical, with rows/schema/event hashes/diagnostics/strict certificates equal",
+    "pytest_group_ledger": {
+      "candidate": "8passed;0errors/skips",
+      "main": "6failed/2passed;0errors/skips"
+    }
+  },
+  "status": "GO for authorized draft publication; remote head and terminal exact-head CI pending",
+  "trial_accounting": {
+    "baseline_rerun_for_selection": false,
+    "candidate_count": 1,
+    "candidate_workers": 1,
+    "legacy_controls_per_source": 8,
+    "main_workers": 1,
+    "normal_conversions_per_source": 2,
+    "numerical_repairs": 0,
+    "observations_per_source": 240,
+    "omitted_trials": 0,
+    "ordinary_suite_and_CI": "Separate prescribed verification; not candidate selection",
+    "timeouts": 0,
+    "worker_infrastructure_failures": 0
+  }
+}

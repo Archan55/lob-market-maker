@@ -1,0 +1,1177 @@
+{
+  "observations": [
+    {
+      "result": 2,
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "result_matches": true
+      },
+      "id": "ties_positive_even",
+      "kind": "nonstrict",
+      "input": {
+        "value": "2.5",
+        "unit": "1"
+      },
+      "expected": 2
+    },
+    {
+      "result": 4,
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "result_matches": true
+      },
+      "id": "ties_positive_odd",
+      "kind": "nonstrict",
+      "input": {
+        "value": "3.5",
+        "unit": "1"
+      },
+      "expected": 4
+    },
+    {
+      "result": -2,
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "result_matches": true
+      },
+      "id": "ties_negative_even",
+      "kind": "nonstrict",
+      "input": {
+        "value": "-2.5",
+        "unit": "1"
+      },
+      "expected": -2
+    },
+    {
+      "result": -4,
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "result_matches": true
+      },
+      "id": "ties_negative_odd",
+      "kind": "nonstrict",
+      "input": {
+        "value": "-3.5",
+        "unit": "1"
+      },
+      "expected": -4
+    },
+    {
+      "result": 10000,
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "result_matches": true
+      },
+      "id": "existing_nonstrict",
+      "kind": "nonstrict",
+      "input": {
+        "value": "100.005",
+        "unit": "0.01"
+      },
+      "expected": 10000
+    },
+    {
+      "result": 10001,
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "result_matches": true
+      },
+      "id": "existing_floor",
+      "kind": "floor",
+      "input": {
+        "value": "100.019",
+        "unit": "0.01"
+      },
+      "expected": 10001
+    },
+    {
+      "result": -2,
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "result_matches": true
+      },
+      "id": "signed_floor",
+      "kind": "floor",
+      "input": {
+        "value": "-1.01",
+        "unit": "1"
+      },
+      "expected": -2
+    },
+    {
+      "result": {
+        "decimal": "100.01",
+        "tuple": [
+          0,
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          -2
+        ]
+      },
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "result_matches": true
+      },
+      "id": "existing_inverse",
+      "kind": "inverse",
+      "input": {
+        "value": "10001",
+        "unit": "0.01"
+      },
+      "expected": "100.01"
+    }
+  ],
+  "checks": {
+    "ties_positive_even": true,
+    "ties_positive_odd": true,
+    "ties_negative_even": true,
+    "ties_negative_odd": true,
+    "existing_nonstrict": true,
+    "existing_floor": true,
+    "signed_floor": true,
+    "existing_inverse": true
+  },
+  "complete": true,
+  "provenance": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "test_path": "/tmp/lob-exact-ingress-dg4rok92/candidate/tests/unit/test_exact_ingress_independent.py",
+    "test_sha256": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7",
+    "fixtures_sha256": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144",
+    "contract_sha256": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b",
+    "sources": {
+      "types": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/types.py",
+        "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+      },
+      "data/_adapter_utils": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/_adapter_utils.py",
+        "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+      },
+      "data/tardis": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/tardis.py",
+        "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+      },
+      "data/lobster": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/lobster.py",
+        "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+      },
+      "validation": {
+        "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/validation.py",
+        "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+      }
+    }
+  }
+}

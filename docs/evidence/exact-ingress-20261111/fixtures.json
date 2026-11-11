@@ -1,0 +1,422 @@
+{
+  "compatibility": "Run one default-context compatibility group for preexisting price_to_ticks(strict=False) ordinary positive/negative ties-even, floor_price_to_ticks and ticks_to_price; preserve literal legacy non-strict arithmetic branch and entire other functions. Do not demand nondefault exactness for those unchanged APIs.",
+  "context_setup": "In localcontext set precision/rounding as listed, default Emin=-999999,Emax=999999,capitals=1,clamp=0; explicitly disable Inexact/Rounded traps unless profile requests them; preset FloatOperation flag True without triggering it. Capture every context attribute/trap/flag before and after each call. Preserve outer caller context.",
+  "counts": {
+    "csv_observations": 48,
+    "normal_adapter_conversions_per_source": 2,
+    "price_observations": 108,
+    "profiles": 6,
+    "quantity_observations": 84
+  },
+  "csv_cases": [
+    {
+      "edit": "none",
+      "expected": "admit",
+      "id": "book_aligned"
+    },
+    {
+      "edit": "book_price",
+      "expected": "reject",
+      "id": "book_off_price",
+      "literal": "1.00000000000000000000000000001"
+    },
+    {
+      "edit": "book_amount",
+      "expected": "reject",
+      "id": "book_off_quantity",
+      "literal": "2.00000000000000000000000000001"
+    },
+    {
+      "edit": "trade_none",
+      "expected": "admit",
+      "id": "trade_aligned"
+    },
+    {
+      "edit": "trade_price",
+      "expected": "reject",
+      "id": "trade_off_price",
+      "literal": "1.00000000000000000000000000001"
+    },
+    {
+      "edit": "trade_amount",
+      "expected": "reject",
+      "id": "trade_off_quantity",
+      "literal": "1.00000000000000000000000000001"
+    },
+    {
+      "edit": "trade_amount",
+      "expected": "reject",
+      "id": "trade_zero",
+      "literal": "0"
+    },
+    {
+      "edit": "book_zero_update",
+      "expected": "admit",
+      "id": "book_zero_update"
+    }
+  ],
+  "csv_template": {
+    "book_header": [
+      "exchange",
+      "symbol",
+      "timestamp",
+      "local_timestamp",
+      "is_snapshot",
+      "side",
+      "price",
+      "amount"
+    ],
+    "initial_book_rows": [
+      [
+        "fixture",
+        "SYNTH-INGRESS",
+        "1",
+        "1",
+        "true",
+        "bid",
+        "1",
+        "2"
+      ],
+      [
+        "fixture",
+        "SYNTH-INGRESS",
+        "1",
+        "1",
+        "true",
+        "ask",
+        "3",
+        "2"
+      ]
+    ],
+    "quantity_multiplier": "1",
+    "reduction_row": [
+      "fixture",
+      "SYNTH-INGRESS",
+      "2",
+      "2",
+      "false",
+      "bid",
+      "1",
+      "1"
+    ],
+    "tick_size": "1",
+    "timestamp_source": "local_timestamp",
+    "trade_header": [
+      "exchange",
+      "symbol",
+      "timestamp",
+      "local_timestamp",
+      "id",
+      "side",
+      "price",
+      "amount"
+    ],
+    "trade_match_window_ns": 1000000,
+    "trade_row": [
+      "fixture",
+      "SYNTH-INGRESS",
+      "2",
+      "2",
+      "SYNTH-T1",
+      "sell",
+      "1",
+      "1"
+    ],
+    "zero_update_row": [
+      "fixture",
+      "SYNTH-INGRESS",
+      "2",
+      "2",
+      "false",
+      "bid",
+      "1",
+      "0"
+    ]
+  },
+  "normal_controls": [
+    {
+      "book": "tests/fixtures/adapters/tardis_incremental_book_L2.csv",
+      "class": "TardisCSVAdapter",
+      "id": "tardis_existing",
+      "tick_size": "0.01",
+      "trades": "tests/fixtures/adapters/tardis_trades.csv"
+    },
+    {
+      "class": "LOBSTERCSVAdapter",
+      "date": "2024-01-02",
+      "id": "lobster_existing",
+      "levels": 2,
+      "messages": "tests/fixtures/adapters/lobster_message.csv",
+      "orderbook": "tests/fixtures/adapters/lobster_orderbook.csv",
+      "tick_size": "0.01"
+    }
+  ],
+  "price_cases": [
+    {
+      "expected_integer": "1",
+      "id": "on_one",
+      "input_type": "str",
+      "tick": "1",
+      "value": "1"
+    },
+    {
+      "expected_integer": null,
+      "id": "off_tail_above",
+      "input_type": "str",
+      "tick": "1",
+      "value": "1.00000000000000000000000000001"
+    },
+    {
+      "expected_integer": null,
+      "id": "off_low_precision",
+      "input_type": "str",
+      "tick": "1",
+      "value": "1.001"
+    },
+    {
+      "expected_integer": "10001",
+      "id": "on_decimal",
+      "input_type": "str",
+      "tick": "0.01",
+      "value": "100.01"
+    },
+    {
+      "expected_integer": null,
+      "id": "off_scaled_tail",
+      "input_type": "str",
+      "tick": "0.01",
+      "value": "100.01000000000000000000000000001"
+    },
+    {
+      "expected_integer": "-10001",
+      "id": "signed",
+      "input_type": "str",
+      "tick": "0.01",
+      "value": "-100.01"
+    },
+    {
+      "expected_integer": "0",
+      "id": "zero",
+      "input_type": "str",
+      "tick": "0.0001",
+      "value": "0"
+    },
+    {
+      "expected_integer": "9223372036854775807",
+      "id": "int64_max",
+      "input_type": "str",
+      "tick": "1",
+      "value": "9223372036854775807"
+    },
+    {
+      "expected_integer": null,
+      "id": "negative_off_tail",
+      "input_type": "str",
+      "tick": "1",
+      "value": "-1.00000000000000000000000000001"
+    },
+    {
+      "expected_integer": "25",
+      "id": "factor_two_five",
+      "input_type": "str",
+      "tick": "0.05",
+      "value": "1.25"
+    },
+    {
+      "expected_integer": null,
+      "id": "repeating_quotient",
+      "input_type": "str",
+      "tick": "0.3",
+      "value": "1"
+    },
+    {
+      "expected_integer": "3",
+      "id": "float_as_str",
+      "input_type": "float",
+      "tick": "0.1",
+      "value": "0.3"
+    },
+    {
+      "expected_integer": "10001",
+      "id": "decimal_input",
+      "input_type": "decimal",
+      "tick": "0.01",
+      "value": "100.01"
+    },
+    {
+      "expected_integer": null,
+      "id": "off_tail_below",
+      "input_type": "str",
+      "tick": "1",
+      "value": "0.99999999999999999999999999999"
+    },
+    {
+      "expected_integer": "10001",
+      "id": "trailing_zeros",
+      "input_type": "str",
+      "tick": "0.0100",
+      "value": "100.0100"
+    },
+    {
+      "expected_integer": "1",
+      "id": "compact_large_balanced",
+      "input_type": "str",
+      "tick": "1e1000000",
+      "value": "1e1000000"
+    },
+    {
+      "expected_integer": "1",
+      "id": "compact_small_balanced",
+      "input_type": "str",
+      "tick": "1e-1000000",
+      "value": "1e-1000000"
+    },
+    {
+      "expected_integer": null,
+      "id": "compact_small_fraction",
+      "input_type": "str",
+      "tick": "1",
+      "value": "1e-1000000"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "default28",
+      "precision": 28,
+      "rounding": "ROUND_HALF_EVEN",
+      "trap_inexact_rounded": false
+    },
+    {
+      "id": "low3_even",
+      "precision": 3,
+      "rounding": "ROUND_HALF_EVEN",
+      "trap_inexact_rounded": false
+    },
+    {
+      "id": "low3_up",
+      "precision": 3,
+      "rounding": "ROUND_UP",
+      "trap_inexact_rounded": false
+    },
+    {
+      "id": "low3_down",
+      "precision": 3,
+      "rounding": "ROUND_DOWN",
+      "trap_inexact_rounded": false
+    },
+    {
+      "id": "high50",
+      "precision": 50,
+      "rounding": "ROUND_HALF_EVEN",
+      "trap_inexact_rounded": false
+    },
+    {
+      "id": "trapped28",
+      "precision": 28,
+      "rounding": "ROUND_HALF_EVEN",
+      "trap_inexact_rounded": true
+    }
+  ],
+  "provenance": "Wholly original fictional synthetic ingress strings and CSV rows; no market/vendor data or trading outcomes. All case selection before numerical outcomes.",
+  "quantity_cases": [
+    {
+      "allow_zero": true,
+      "expected_integer": "1",
+      "id": "on_one",
+      "multiplier": "1",
+      "value": "1"
+    },
+    {
+      "allow_zero": true,
+      "expected_integer": null,
+      "id": "off_tail_above",
+      "multiplier": "1",
+      "value": "1.00000000000000000000000000001"
+    },
+    {
+      "allow_zero": true,
+      "expected_integer": null,
+      "id": "off_low_precision",
+      "multiplier": "1",
+      "value": "1.001"
+    },
+    {
+      "allow_zero": false,
+      "expected_integer": "1",
+      "id": "on_scaled",
+      "multiplier": "1000",
+      "value": "0.001"
+    },
+    {
+      "allow_zero": false,
+      "expected_integer": "1",
+      "id": "on_fraction",
+      "multiplier": "4",
+      "value": "0.25"
+    },
+    {
+      "allow_zero": true,
+      "expected_integer": null,
+      "id": "off_scaled_tail",
+      "multiplier": "4",
+      "value": "0.25000000000000000000000000001"
+    },
+    {
+      "allow_zero": false,
+      "expected_integer": "9223372036854775807",
+      "id": "int64_max",
+      "multiplier": "1",
+      "value": "9223372036854775807"
+    },
+    {
+      "allow_zero": true,
+      "expected_integer": "0",
+      "id": "zero_allowed",
+      "multiplier": "1000",
+      "value": "0"
+    },
+    {
+      "allow_zero": false,
+      "expected_integer": null,
+      "id": "zero_forbidden",
+      "multiplier": "1",
+      "value": "0"
+    },
+    {
+      "allow_zero": true,
+      "expected_integer": null,
+      "id": "negative",
+      "multiplier": "1",
+      "value": "-1"
+    },
+    {
+      "allow_zero": false,
+      "expected_integer": "1",
+      "id": "compact_balanced",
+      "multiplier": "1e-1000000",
+      "value": "1e1000000"
+    },
+    {
+      "allow_zero": false,
+      "expected_integer": "1",
+      "id": "compact_reversed",
+      "multiplier": "1e1000000",
+      "value": "1e-1000000"
+    },
+    {
+      "allow_zero": true,
+      "expected_integer": null,
+      "id": "compact_fraction",
+      "multiplier": "1",
+      "value": "1e-1000000"
+    },
+    {
+      "allow_zero": true,
+      "expected_integer": "0",
+      "id": "zero_compact_multiplier",
+      "multiplier": "1e1000000",
+      "value": "0"
+    }
+  ],
+  "version": 1
+}

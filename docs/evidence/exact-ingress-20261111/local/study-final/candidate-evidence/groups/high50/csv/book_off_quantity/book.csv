@@ -1,0 +1,3 @@
+exchange,symbol,timestamp,local_timestamp,is_snapshot,side,price,amount
+fixture,SYNTH-INGRESS,1,1,true,bid,1,2.00000000000000000000000000001
+fixture,SYNTH-INGRESS,1,1,true,ask,3,2

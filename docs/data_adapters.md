@@ -70,6 +70,13 @@ that is when the displayed reduction is observable in this stream.
 simulator units. For example, a multiplier of `1000` maps `0.001` to one unit.
 Any amount that is not exactly representable is rejected.
 
+Strict price conversion and quantity scaling use exact decimal coefficients
+and integer divisibility, independently of caller Decimal precision and rounding.
+They do not round a source value before deciding whether it is representable.
+This guarantee applies to the finite numeric value presented to those helpers;
+it cannot recover source digits already lost in a float DataFrame or an earlier
+calculation. See the [fixed ingress study](EXACT_INGRESS_CONVERSION.md).
+
 ### Tardis limitations
 
 - Trade/book reconciliation is a conservative offline attribution heuristic,
@@ -104,8 +111,13 @@ validate_frame(events)
 
 LOBSTER files are headerless and paired row-for-row. Message time is seconds
 after local midnight; the adapter requires a trading date and defaults to
-`America/New_York`, then converts the exact decimal time to epoch nanoseconds.
-LOBSTER prices are divided by 10,000 before exact tick conversion.
+`America/New_York`, then converts decimal time to epoch nanoseconds.
+LOBSTER prices are divided by 10,000 before strict tick conversion. These
+LOBSTER time/price preprocessing operations still use ambient-context Decimal
+arithmetic: source information can round before it reaches the corrected shared
+helpers. The strict-helper study does not establish whole-pipeline exactness for
+LOBSTER. The ordinary fictional LOBSTER control remains unchanged at default
+precision; nondefault or higher-precision source text needs separate validation.
 
 The order-book row contains state after its matching message. Consequently the
 first available row is represented as `RESET` plus `SNAPSHOT` levels; its

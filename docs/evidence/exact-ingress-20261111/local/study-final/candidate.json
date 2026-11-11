@@ -1,0 +1,679 @@
+{
+  "status": "complete",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "polars": "2.1.0",
+      "pyarrow": "26.0.0",
+      "pydantic": "2.14.2",
+      "PyYAML": "6.0.3",
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2",
+      "typer": "0.27.3",
+      "ruff": "0.17.3",
+      "mypy": "2.4.1"
+    },
+    "assertions_enabled": true,
+    "integer_string_guard": 4300
+  },
+  "nodes": [
+    "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[default28]",
+    "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_even]",
+    "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_up]",
+    "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_down]",
+    "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[high50]",
+    "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[trapped28]",
+    "tests/unit/test_exact_ingress_independent.py::test_existing_adapter_controls_preserve_canonical_contract",
+    "tests/unit/test_exact_ingress_independent.py::test_legacy_conversion_controls_keep_default_context_semantics"
+  ],
+  "reports": [
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[default28]",
+      "when": "setup",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[default28]",
+      "when": "call",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[default28]",
+      "when": "teardown",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_even]",
+      "when": "setup",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_even]",
+      "when": "call",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_even]",
+      "when": "teardown",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_up]",
+      "when": "setup",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_up]",
+      "when": "call",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_up]",
+      "when": "teardown",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_down]",
+      "when": "setup",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_down]",
+      "when": "call",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_down]",
+      "when": "teardown",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[high50]",
+      "when": "setup",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[high50]",
+      "when": "call",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[high50]",
+      "when": "teardown",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[trapped28]",
+      "when": "setup",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[trapped28]",
+      "when": "call",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[trapped28]",
+      "when": "teardown",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_existing_adapter_controls_preserve_canonical_contract",
+      "when": "setup",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_existing_adapter_controls_preserve_canonical_contract",
+      "when": "call",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_existing_adapter_controls_preserve_canonical_contract",
+      "when": "teardown",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_legacy_conversion_controls_keep_default_context_semantics",
+      "when": "setup",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_legacy_conversion_controls_keep_default_context_semantics",
+      "when": "call",
+      "outcome": "passed",
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/unit/test_exact_ingress_independent.py::test_legacy_conversion_controls_keep_default_context_semantics",
+      "when": "teardown",
+      "outcome": "passed",
+      "longrepr": null
+    }
+  ],
+  "exceptions": [],
+  "evidence_directory": "candidate-evidence",
+  "imports_before_collection": {
+    "src/lobmm/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "src/lobmm/backtest.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/backtest.py",
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "src/lobmm/benchmark.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/benchmark.py",
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    "src/lobmm/book.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "src/lobmm/case_study.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/case_study.py",
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    "src/lobmm/channels.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "src/lobmm/cli.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/cli.py",
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    "src/lobmm/config.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "src/lobmm/data/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "src/lobmm/data/_adapter_utils.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/_adapter_utils.py",
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+    },
+    "src/lobmm/data/adapters.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "src/lobmm/data/fingerprint.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "src/lobmm/data/loaders.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/loaders.py",
+      "sha256": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a"
+    },
+    "src/lobmm/data/lobster.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/lobster.py",
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "src/lobmm/data/manifest.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "src/lobmm/data/schema.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/schema.py",
+      "sha256": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9"
+    },
+    "src/lobmm/data/tardis.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "src/lobmm/enums.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "src/lobmm/events.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "src/lobmm/exchange.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/exchange.py",
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "src/lobmm/experiments.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/experiments.py",
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    "src/lobmm/metrics.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/metrics.py",
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    "src/lobmm/orders.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "src/lobmm/portfolio.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/portfolio.py",
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "src/lobmm/py.typed": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/py.typed",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "src/lobmm/queue_model.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/queue_model.py",
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "src/lobmm/report.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/report.py",
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    "src/lobmm/risk.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/risk.py",
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "src/lobmm/scheduler.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "src/lobmm/strategies/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/__init__.py",
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "src/lobmm/strategies/base.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "src/lobmm/strategies/fixed_spread.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/fixed_spread.py",
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    "src/lobmm/strategies/inventory_aware.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/inventory_aware.py",
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    "src/lobmm/strategies/microprice.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/microprice.py",
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    "src/lobmm/strategy_runtime.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "src/lobmm/synthetic.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/synthetic.py",
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    "src/lobmm/types.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/types.py",
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+    },
+    "src/lobmm/validation.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/validation.py",
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    }
+  },
+  "imports_after_collection": {
+    "src/lobmm/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "src/lobmm/backtest.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/backtest.py",
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "src/lobmm/benchmark.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/benchmark.py",
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    "src/lobmm/book.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "src/lobmm/case_study.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/case_study.py",
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    "src/lobmm/channels.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "src/lobmm/cli.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/cli.py",
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    "src/lobmm/config.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "src/lobmm/data/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "src/lobmm/data/_adapter_utils.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/_adapter_utils.py",
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+    },
+    "src/lobmm/data/adapters.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "src/lobmm/data/fingerprint.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "src/lobmm/data/loaders.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/loaders.py",
+      "sha256": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a"
+    },
+    "src/lobmm/data/lobster.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/lobster.py",
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "src/lobmm/data/manifest.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "src/lobmm/data/schema.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/schema.py",
+      "sha256": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9"
+    },
+    "src/lobmm/data/tardis.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "src/lobmm/enums.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "src/lobmm/events.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "src/lobmm/exchange.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/exchange.py",
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "src/lobmm/experiments.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/experiments.py",
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    "src/lobmm/metrics.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/metrics.py",
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    "src/lobmm/orders.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "src/lobmm/portfolio.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/portfolio.py",
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "src/lobmm/py.typed": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/py.typed",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "src/lobmm/queue_model.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/queue_model.py",
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "src/lobmm/report.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/report.py",
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    "src/lobmm/risk.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/risk.py",
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "src/lobmm/scheduler.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "src/lobmm/strategies/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/__init__.py",
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "src/lobmm/strategies/base.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "src/lobmm/strategies/fixed_spread.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/fixed_spread.py",
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    "src/lobmm/strategies/inventory_aware.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/inventory_aware.py",
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    "src/lobmm/strategies/microprice.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/microprice.py",
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    "src/lobmm/strategy_runtime.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "src/lobmm/synthetic.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/synthetic.py",
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    "src/lobmm/types.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/types.py",
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+    },
+    "src/lobmm/validation.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/validation.py",
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    }
+  },
+  "pytest_exit_code": 0,
+  "imports_after_execution": {
+    "src/lobmm/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "src/lobmm/backtest.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/backtest.py",
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "src/lobmm/benchmark.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/benchmark.py",
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    "src/lobmm/book.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "src/lobmm/case_study.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/case_study.py",
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    "src/lobmm/channels.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "src/lobmm/cli.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/cli.py",
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    "src/lobmm/config.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "src/lobmm/data/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "src/lobmm/data/_adapter_utils.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/_adapter_utils.py",
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+    },
+    "src/lobmm/data/adapters.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "src/lobmm/data/fingerprint.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "src/lobmm/data/loaders.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/loaders.py",
+      "sha256": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a"
+    },
+    "src/lobmm/data/lobster.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/lobster.py",
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "src/lobmm/data/manifest.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "src/lobmm/data/schema.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/schema.py",
+      "sha256": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9"
+    },
+    "src/lobmm/data/tardis.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "src/lobmm/enums.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "src/lobmm/events.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "src/lobmm/exchange.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/exchange.py",
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "src/lobmm/experiments.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/experiments.py",
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    "src/lobmm/metrics.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/metrics.py",
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    "src/lobmm/orders.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "src/lobmm/portfolio.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/portfolio.py",
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "src/lobmm/py.typed": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/py.typed",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "src/lobmm/queue_model.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/queue_model.py",
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "src/lobmm/report.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/report.py",
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    "src/lobmm/risk.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/risk.py",
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "src/lobmm/scheduler.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "src/lobmm/strategies/__init__.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/__init__.py",
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "src/lobmm/strategies/base.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "src/lobmm/strategies/fixed_spread.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/fixed_spread.py",
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    "src/lobmm/strategies/inventory_aware.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/inventory_aware.py",
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    "src/lobmm/strategies/microprice.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategies/microprice.py",
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    "src/lobmm/strategy_runtime.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "src/lobmm/synthetic.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/synthetic.py",
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    "src/lobmm/types.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/types.py",
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+    },
+    "src/lobmm/validation.py": {
+      "path": "/tmp/lob-exact-ingress-dg4rok92/candidate/src/lobmm/validation.py",
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    }
+  },
+  "frozen_pins_after_execution": {
+    "docs/evidence/exact-ingress-20261111/contract.json": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b",
+    "docs/evidence/exact-ingress-20261111/fixtures.json": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144",
+    "docs/evidence/exact-ingress-20261111/design-review.json": "e22e97dc1c99d4c907a2fd1903555f276524d80a48e0903cbd757972f0eeefd6",
+    "tests/unit/test_exact_ingress_independent.py": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7",
+    "tests/fixtures/adapters/lobster_message.csv": "639a47ef73d0e3fb97bdc8802942512684fc60d85058196768c6fb918470cd21",
+    "tests/fixtures/adapters/lobster_orderbook.csv": "03c83b2061f62a7b7f751077c47e221e4bba3a2911be099f23effdf3f28498f2",
+    "tests/fixtures/adapters/tardis_incremental_book_L2.csv": "ed3a0a2af30fdeb86df22edcea7520e16cfefb27c78284588a756a72acfcf14f",
+    "tests/fixtures/adapters/tardis_trades.csv": "8038c20781f7ae0c87875acdd978903a5e295360f1ab3565e018482d50f8de48"
+  },
+  "environment_after": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "polars": "2.1.0",
+      "pyarrow": "26.0.0",
+      "pydantic": "2.14.2",
+      "PyYAML": "6.0.3",
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2",
+      "typer": "0.27.3",
+      "ruff": "0.17.3",
+      "mypy": "2.4.1"
+    },
+    "assertions_enabled": true,
+    "integer_string_guard": 4300
+  },
+  "counts": {
+    "collected": 8,
+    "passed": 8,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

@@ -1,0 +1,81 @@
+FFFFFF..                                                                 [100%]
+=================================== FAILURES ===================================
+_ test_frozen_strict_ingress_group_records_every_observation_before_asserting[default28] _
+tests/unit/test_exact_ingress_independent.py:707: in test_frozen_strict_ingress_group_records_every_observation_before_asserting
+    assert_group_matches(run_context_group(profile_id, evidence_root(tmp_path)))
+tests/unit/test_exact_ingress_independent.py:544: in assert_group_matches
+    assert not failed, failed
+E   AssertionError: [{'kind': 'price', 'case_id': 'off_tail_above', 'result': 1, 'error': None, ...}, {'kind': 'price', 'case_id': 'off_sc...: {'type': 'ValueError', 'module': 'builtins', 'message': 'price 1E-1000000 is not aligned to tick size 1'}, ...}, ...]
+E   assert not [{'kind': 'price', 'case_id': 'off_tail_above', 'result': 1, 'error': None, ...}, {'kind': 'price', 'case_id': 'off_sc...: {'type': 'ValueError', 'module': 'builtins', 'message': 'price 1E-1000000 is not aligned to tick size 1'}, ...}, ...]
+_ test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_even] _
+tests/unit/test_exact_ingress_independent.py:707: in test_frozen_strict_ingress_group_records_every_observation_before_asserting
+    assert_group_matches(run_context_group(profile_id, evidence_root(tmp_path)))
+tests/unit/test_exact_ingress_independent.py:544: in assert_group_matches
+    assert not failed, failed
+E   AssertionError: [{'kind': 'price', 'case_id': 'off_tail_above', 'result': 1, 'error': None, ...}, {'kind': 'price', 'case_id': 'off_lo...'error': None, ...}, {'kind': 'price', 'case_id': 'int64_max', 'result': 9220000000000000000, 'error': None, ...}, ...]
+E   assert not [{'kind': 'price', 'case_id': 'off_tail_above', 'result': 1, 'error': None, ...}, {'kind': 'price', 'case_id': 'off_lo...'error': None, ...}, {'kind': 'price', 'case_id': 'int64_max', 'result': 9220000000000000000, 'error': None, ...}, ...]
+_ test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_up] _
+tests/unit/test_exact_ingress_independent.py:707: in test_frozen_strict_ingress_group_records_every_observation_before_asserting
+    assert_group_matches(run_context_group(profile_id, evidence_root(tmp_path)))
+tests/unit/test_exact_ingress_independent.py:544: in assert_group_matches
+    assert not failed, failed
+E   AssertionError: [{'kind': 'price', 'case_id': 'off_tail_above', 'result': None, 'error': {'type': 'ValueError', 'module': 'builtins', ...'error': None, ...}, {'kind': 'price', 'case_id': 'int64_max', 'result': 9230000000000000000, 'error': None, ...}, ...]
+E   assert not [{'kind': 'price', 'case_id': 'off_tail_above', 'result': None, 'error': {'type': 'ValueError', 'module': 'builtins', ...'error': None, ...}, {'kind': 'price', 'case_id': 'int64_max', 'result': 9230000000000000000, 'error': None, ...}, ...]
+_ test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_down] _
+tests/unit/test_exact_ingress_independent.py:707: in test_frozen_strict_ingress_group_records_every_observation_before_asserting
+    assert_group_matches(run_context_group(profile_id, evidence_root(tmp_path)))
+tests/unit/test_exact_ingress_independent.py:544: in assert_group_matches
+    assert not failed, failed
+E   AssertionError: [{'kind': 'price', 'case_id': 'off_tail_above', 'result': 1, 'error': None, ...}, {'kind': 'price', 'case_id': 'off_lo...'error': None, ...}, {'kind': 'price', 'case_id': 'int64_max', 'result': 9220000000000000000, 'error': None, ...}, ...]
+E   assert not [{'kind': 'price', 'case_id': 'off_tail_above', 'result': 1, 'error': None, ...}, {'kind': 'price', 'case_id': 'off_lo...'error': None, ...}, {'kind': 'price', 'case_id': 'int64_max', 'result': 9220000000000000000, 'error': None, ...}, ...]
+_ test_frozen_strict_ingress_group_records_every_observation_before_asserting[high50] _
+tests/unit/test_exact_ingress_independent.py:707: in test_frozen_strict_ingress_group_records_every_observation_before_asserting
+    assert_group_matches(run_context_group(profile_id, evidence_root(tmp_path)))
+tests/unit/test_exact_ingress_independent.py:544: in assert_group_matches
+    assert not failed, failed
+E   AssertionError: [{'kind': 'price', 'case_id': 'repeating_quotient', 'result': None, 'error': {'type': 'ValueError', 'module': 'builtin...iplier=1 at row 0'}, ...}, {'kind': 'quantity', 'case_id': 'zero_compact_multiplier', 'result': 0, 'error': None, ...}]
+E   assert not [{'kind': 'price', 'case_id': 'repeating_quotient', 'result': None, 'error': {'type': 'ValueError', 'module': 'builtin...iplier=1 at row 0'}, ...}, {'kind': 'quantity', 'case_id': 'zero_compact_multiplier', 'result': 0, 'error': None, ...}]
+_ test_frozen_strict_ingress_group_records_every_observation_before_asserting[trapped28] _
+tests/unit/test_exact_ingress_independent.py:707: in test_frozen_strict_ingress_group_records_every_observation_before_asserting
+    assert_group_matches(run_context_group(profile_id, evidence_root(tmp_path)))
+tests/unit/test_exact_ingress_independent.py:544: in assert_group_matches
+    assert not failed, failed
+E   AssertionError: [{'kind': 'price', 'case_id': 'off_tail_above', 'result': None, 'error': {'type': 'Inexact', 'module': 'decimal', 'mes...: {'type': 'ValueError', 'module': 'builtins', 'message': 'price 1E-1000000 is not aligned to tick size 1'}, ...}, ...]
+E   assert not [{'kind': 'price', 'case_id': 'off_tail_above', 'result': None, 'error': {'type': 'Inexact', 'module': 'decimal', 'mes...: {'type': 'ValueError', 'module': 'builtins', 'message': 'price 1E-1000000 is not aligned to tick size 1'}, ...}, ...]
+=========================== short test summary info ============================
+FAILED tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[default28]
+FAILED tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_even]
+FAILED tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_up]
+FAILED tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[low3_down]
+FAILED tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[high50]
+FAILED tests/unit/test_exact_ingress_independent.py::test_frozen_strict_ingress_group_records_every_observation_before_asserting[trapped28]
+6 failed, 2 passed in 1.39s
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
