@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-11",
+  "phase": "Final static GO before first numerical baseline; no collection, examples, conversions or candidate executed",
+  "reviewer": "independent_feasibility",
+  "recorded_by": "root from independent review message",
+  "decision": "GO",
+  "preregistration_commit": "8463362e57e7a99b7d03f4f942466eba29d54b86",
+  "hashes": {
+    "contract": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b",
+    "fixtures": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144",
+    "design_review": "e22e97dc1c99d4c907a2fd1903555f276524d80a48e0903cbd757972f0eeefd6",
+    "test_provider": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7",
+    "controller": "bbb04f068e9c58d16b50df5926677b9bff423e2be65063054c227678525e69e1"
+  },
+  "coverage": [
+    "All 240 fixed observations in six profile nodes; two normal adapter conversions and eight legacy controls",
+    "Independent lexical/rational and compact hand oracle; no production helper reuse",
+    "Original CSV literal observations, actual canonical Parquets and explicit strict certificates",
+    "All 38 source/archive/import identities and frozen input/design/test pins",
+    "Single worker per source, cap/refuse overwrite/partial failures, rehashed baseline reuse",
+    "Normal row/schema/Parquet/fingerprint/diagnostic/validation comparisons",
+    "Actual-head CI with full history, compact complete numerical/source ledger and 14-day retention"
+  ],
+  "limits": [
+    "Candidate strict=False arithmetic branch still requires production-diff review; floor/inverse function AST-source identity is checked automatically",
+    "No numerical result or runtime defect verified yet; baseline primary prediction must reproduce before candidate",
+    "No whole LOBSTER pipeline, malformed parsing context, economic/calibrated execution or performance claim"
+  ],
+  "completed_static_checks": {
+    "ruff_check": "pass",
+    "ruff_format": "83 files already formatted",
+    "authors_syntax_or_help": "pass",
+    "production_source": "all 38 files still exact main bytes"
+  }
+}

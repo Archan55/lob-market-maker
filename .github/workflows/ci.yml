@@ -9,6 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Record executed source
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/exact-ingress-ci
+          git rev-parse HEAD | tee experiments/exact-ingress-ci/checkout.txt
+          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -22,6 +33,27 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --junitxml=experiments/exact-ingress-ci/full-suite.xml
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Archived main and exact-head strict-ingress verification
+        run: |
+          python tools/reproduce_exact_ingress.py --stage verify \
+            --candidate "$(git rev-parse HEAD)" \
+            --output experiments/exact-ingress-ci/verify
+      - name: Retain source and numerical evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: exact-ingress-${{ steps.source.outputs.head_sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            experiments/exact-ingress-ci/
+            runs/ci-smoke/
+            docs/evidence/exact-ingress-20261111/
+            docs/EXACT_INGRESS_CONVERSION.md
+            tools/reproduce_exact_ingress.py
+            tests/unit/test_exact_ingress_independent.py
+            src/lobmm/types.py
+            src/lobmm/data/_adapter_utils.py
