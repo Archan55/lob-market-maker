@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-12",
+  "phase": "Final static GO before any new numerical baseline",
+  "decision": "GO",
+  "reviewer": "independent_feasibility",
+  "recorded_by": "root from independent review messages",
+  "preregistration_commit": "88510ac5190487e13810cf4eb9fdbc86e0944fe0",
+  "baseline": "253abee735c02d7805e2a4377c12626742108d84",
+  "hashes": {
+    "contract": "513f9b2be85b582c020e575b32dded6df123f10d0aaeee4e51d7aceed755de8b",
+    "fixtures": "1987016a419c065535b2ac5590305e1966328c39e495feda8eb487dbf2dbf670",
+    "design_review": "215f4f923ad4f2868cc23b2d3344cee3cf12a4fefa98264490d6c393ac960936",
+    "test_provider": "a29f7842ff5565f7a9f80b46544333208684a251fc192cbd19c756dad6e76906",
+    "controller": "57ddf8ed05df7fd2b161bb111920eeb72f146e3162dcb42cb158819d1e10a8ee"
+  },
+  "reviewed": [
+    "Independent exact lexical/rational/integer-datetime oracle with coherent paired-book/TRADE cause,36 full observations before assertions and one17-row normal control",
+    "Thin original-method wrappers, raw string/actual Parquet/dictionary/strict certificate evidence, complete caller context/traps/flags/guard snapshots",
+    "All38 source/archive/import identities, new frozen hashes and byte preservation of historical PR9 evidence/report/test/controller/fixtures",
+    "One120-second worker per source, no overwrite, complete partial failures, rehashed raw baseline reuse and normal byte/fullrecord equality",
+    "Required valid-format reduced3 admitted-wrong price/time positive witnesses with default-correct controls; default longsubns only invalid rejection witness",
+    "Candidate all exact row/type/cause/time/error/raw/context checks; exact-head/fullhistory two-sourceCI and14day artifact"
+  ],
+  "preexecution_revision": "One controller metadata-path omission was corrected before any numerical execution: include historical docs/EXACT_INGRESS_CONVERSION.md. No cases, contexts, gates or source changed.",
+  "limits": [
+    "No new runtime defect or result verified yet",
+    "Stacked on PR9; only lobster.py source may change and existing exact kernel remains pinned",
+    "No ordinary valid default28 corruption or economic/real-data/calibrated-execution claim"
+  ],
+  "status": "Ready for one pinned PR9 baseline"
+}

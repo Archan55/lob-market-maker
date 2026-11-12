@@ -17,8 +17,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p experiments/exact-ingress-ci
-          git rev-parse HEAD | tee experiments/exact-ingress-ci/checkout.txt
+          mkdir -p experiments/lobster-fidelity-ci
+          git rev-parse HEAD | tee experiments/lobster-fidelity-ci/checkout.txt
           echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
         with:
@@ -33,27 +33,28 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing --junitxml=experiments/exact-ingress-ci/full-suite.xml
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --junitxml=experiments/lobster-fidelity-ci/full-suite.xml
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
-      - name: Archived main and exact-head strict-ingress verification
+      - name: Archived PR9 and exact-head LOBSTER fidelity verification
         run: |
-          python tools/reproduce_exact_ingress.py --stage verify \
+          python tools/reproduce_lobster_fidelity.py --stage verify \
             --candidate "$(git rev-parse HEAD)" \
-            --output experiments/exact-ingress-ci/verify
+            --output experiments/lobster-fidelity-ci/verify
       - name: Retain source and numerical evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: exact-ingress-${{ steps.source.outputs.head_sha }}
+          name: lobster-fidelity-${{ steps.source.outputs.head_sha }}
           retention-days: 14
           if-no-files-found: error
           path: |
-            experiments/exact-ingress-ci/
+            experiments/lobster-fidelity-ci/
             runs/ci-smoke/
-            docs/evidence/exact-ingress-20261111/
-            docs/EXACT_INGRESS_CONVERSION.md
-            tools/reproduce_exact_ingress.py
-            tests/unit/test_exact_ingress_independent.py
+            docs/evidence/lobster-fidelity-20261112/
+            docs/LOBSTER_PREPROCESSING_FIDELITY.md
+            tools/reproduce_lobster_fidelity.py
+            tests/unit/test_lobster_fidelity_independent.py
+            src/lobmm/data/lobster.py
             src/lobmm/types.py
             src/lobmm/data/_adapter_utils.py
