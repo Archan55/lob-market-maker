@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-12",
+  "decision": "GO",
+  "phase": "Actual one-file candidate statically reviewed before numerical measurement",
+  "reviewers": [
+    "independent_feasibility",
+    "source_adversary"
+  ],
+  "recorded_by": "root from independent review messages",
+  "source_sha256": {
+    "src/lobmm/data/lobster.py": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5"
+  },
+  "test_sha256": "a29f7842ff5565f7a9f80b46544333208684a251fc192cbd19c756dad6e76906",
+  "controller_sha256": "57ddf8ed05df7fd2b161bb111920eeb72f146e3162dcb42cb158819d1e10a8ee",
+  "verified": [
+    "Only lobster.py changed; PR9 type/kernel/adapterutils and old frozen history unchanged",
+    "Exact raw/(scale*tick) integer coefficient/exponent composition, no rounded intermediate even for error text",
+    "Exact seconds exponent+9 then unchanged integer midnight addition, original finite/range checks",
+    "Both book/message callers use shared price helper; original field/row/reason, zero-size early return and active positivity preserved",
+    "Quantity/direction/calendar/timezone/ordering/cause/reconcile/halt/hidden/cross behavior unchanged",
+    "Finite fractional raw generic API math not newly rejected as a raw-integer-only policy"
+  ],
+  "trial_status": {
+    "baseline_workers": 1,
+    "candidate_workers": 0,
+    "candidates": 1,
+    "numerical_repairs": 0
+  },
+  "next_gate": "One candidate worker with unchanged corpus and rehashed baseline, then full quality/result review"
+}
