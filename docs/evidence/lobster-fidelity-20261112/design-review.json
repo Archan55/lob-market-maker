@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-12",
+  "decision": "GO",
+  "reviewer": "independent_feasibility",
+  "recorded_by": "root from independent static review; no reviewer file writes",
+  "phase": "Before numerical examples, oracle evaluation, test collection, conversions or candidate",
+  "contract_sha256": "513f9b2be85b582c020e575b32dded6df123f10d0aaeee4e51d7aceed755de8b",
+  "fixtures_sha256": "1987016a419c065535b2ac5590305e1966328c39e495feda8eb487dbf2dbf670",
+  "baseline": "253abee735c02d7805e2a4377c12626742108d84",
+  "scope": [
+    "12 fixed paired-file cases across three contexts:36 new public observations and one normal conversion per source",
+    "Integer raw prices, standard10000 scale and nanosecond-grid positive times; invalid-resolution/configuration/order/bounds inputs explicitly negative",
+    "Price/time isolation and combined cases, coherent post-message books and one visible BID TRADE; partial book-only repair must fail cause attribution",
+    "Primary advance gate requires wrong admitted strict-valid VALID-format reduced3 positives; default28 valid inputs are correctness controls",
+    "Default28 long-subns admission is INVALID-source rejection witness only",
+    "Only lobster.py changes, exact PR9 kernel reused; old frozen study files preserved as historical253 snapshots",
+    "One baseline+one candidate worker, unchanged gates/corpus,120-second cap and at mostone source repair"
+  ],
+  "clarifications": [
+    "Time_pair contains1ns and9ns offsets after34200 seconds, an8ns gap.",
+    "Primary test configuration uses supported UTC timezone solely to isolate arithmetic; existing normal control uses default America/New_York. No new calendar or DST claim.",
+    "Price error class/field/row/reason preserved with context-free raw/scale/tick display; no rounded intermediate solely for formatting."
+  ],
+  "restrictions": "No real-data acquisition/admission, Nasdaq review, private E1/E2, denied operations, paid services, access/security/credentials, desktop, merge/deploy/trading."
+}
