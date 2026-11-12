@@ -112,12 +112,19 @@ validate_frame(events)
 LOBSTER files are headerless and paired row-for-row. Message time is seconds
 after local midnight; the adapter requires a trading date and defaults to
 `America/New_York`, then converts decimal time to epoch nanoseconds.
-LOBSTER prices are divided by 10,000 before strict tick conversion. These
-LOBSTER time/price preprocessing operations still use ambient-context Decimal
-arithmetic: source information can round before it reaches the corrected shared
-helpers. The strict-helper study does not establish whole-pipeline exactness for
-LOBSTER. The ordinary fictional LOBSTER control remains unchanged at default
-precision; nondefault or higher-precision source text needs separate validation.
+LOBSTER prices are expressed in raw units scaled by 10,000. Price scaling and
+tick conversion are composed as one exact coefficient/exponent divisibility
+calculation; seconds-to-nanoseconds likewise uses the unchanged exact integer
+kernel before adding the integer midnight anchor. Neither operation rounds an
+intermediate Decimal value under caller precision. Unsupported fractional ticks
+or nanoseconds are rejected, with field/row/reason preserved. Price-error text
+shows original raw/scale/tick operands rather than a rounded display quotient.
+
+The [LOBSTER preprocessing study](LOBSTER_PREPROCESSING_FIDELITY.md) tests valid
+integer-price/ns-grid pairs under reduced precision and separately labeled
+invalid-source controls, while preserving the ordinary default-precision output.
+This does not certify an actual vendor dataset, infer execution priority or
+recover precision already lost before parsing a float-valued input.
 
 The order-book row contains state after its matching message. Consequently the
 first available row is represented as `RESET` plus `SNAPSHOT` levels; its

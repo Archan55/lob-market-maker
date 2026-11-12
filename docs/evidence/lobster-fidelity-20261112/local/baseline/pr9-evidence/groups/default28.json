@@ -1,0 +1,6486 @@
+{
+  "profile": "default28",
+  "profile_spec": {
+    "id": "default28",
+    "precision": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "trap_inexact_rounded": false
+  },
+  "observations": [
+    {
+      "result": {
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/price_pair/canonical.parquet",
+        "parquet_sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "e7b6ff62f07c88f3bc8646f2b5dd7b7c87db6a6f29176b632cb0ec626b0ad363",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "best_bid_ticks": 10001,
+            "best_ask_ticks": 10103,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10052.0,
+            "microprice_ticks": 10035.0,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "e7b6ff62f07c88f3bc8646f2b5dd7b7c87db6a6f29176b632cb0ec626b0ad363"
+      },
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true,
+        "boundary_calls_complete": true,
+        "boundary_results_exact": true,
+        "zero_size_prices_skipped": true
+      },
+      "case_id": "price_pair",
+      "input": {
+        "classification": "valid_integer_price_ns_grid",
+        "error_reason": null,
+        "expected": "admit",
+        "id": "price_pair",
+        "levels": 1,
+        "messages": [
+          [
+            "0",
+            "1",
+            "1001",
+            "2",
+            "1000100",
+            "1"
+          ],
+          [
+            "0",
+            "4",
+            "1001",
+            "1",
+            "1000100",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010300",
+            "2",
+            "1000100",
+            "2"
+          ],
+          [
+            "1010300",
+            "2",
+            "1000100",
+            "1"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "admit",
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "output_events": 4,
+          "causal_trade_events": 1
+        },
+        "error_reason": null,
+        "timestamps": [
+          1704153600000000000,
+          1704153600000000000
+        ],
+        "visible_details": [
+          [
+            1,
+            10001,
+            2
+          ],
+          [
+            1,
+            10001,
+            1
+          ]
+        ],
+        "books": [
+          {
+            "bids": [
+              [
+                10001,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          },
+          {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        ],
+        "oracle_trace": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        }
+      },
+      "status": "admitted",
+      "canonical": {
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/price_pair/canonical.parquet",
+        "parquet_sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "e7b6ff62f07c88f3bc8646f2b5dd7b7c87db6a6f29176b632cb0ec626b0ad363",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "best_bid_ticks": 10001,
+            "best_ask_ticks": 10103,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10052.0,
+            "microprice_ticks": 10035.0,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "e7b6ff62f07c88f3bc8646f2b5dd7b7c87db6a6f29176b632cb0ec626b0ad363"
+      },
+      "strict_valid": true,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "0",
+          "type": "str",
+          "result": 1704153600000000000,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010300",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000100",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 0,
+          "message_row": [
+            "0",
+            "1",
+            "1001",
+            "2",
+            "1000100",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10001,
+            2
+          ],
+          "error": null
+        },
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 1,
+          "value": "0",
+          "type": "str",
+          "result": 1704153600000000000,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010300",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000100",
+          "size_raw": "1",
+          "side": 1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              1
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 1,
+          "message_row": [
+            "0",
+            "4",
+            "1001",
+            "1",
+            "1000100",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10001,
+            1
+          ],
+          "error": null
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/price_pair/messages.csv",
+        "orderbook": "groups/default28/price_pair/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b",
+        "orderbook": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+      }
+    },
+    {
+      "result": {
+        "rows": [
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10100,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/time_pair/canonical.parquet",
+        "parquet_sha256": "da4a7367b4f6464e27762f10c7d01b967abca9004f44ecd874cf9a2ad59e160b",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "152c63ef43ee8ff6aeb7dd1e8bae2009243cbc00dc7bbfaa654e6b2a22c1a7b6",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "best_bid_ticks": 10000,
+            "best_ask_ticks": 10100,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10050.0,
+            "microprice_ticks": 10033.333333333334,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "152c63ef43ee8ff6aeb7dd1e8bae2009243cbc00dc7bbfaa654e6b2a22c1a7b6"
+      },
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true,
+        "boundary_calls_complete": true,
+        "boundary_results_exact": true,
+        "zero_size_prices_skipped": true
+      },
+      "case_id": "time_pair",
+      "input": {
+        "classification": "valid_integer_price_ns_grid",
+        "error_reason": null,
+        "expected": "admit",
+        "id": "time_pair",
+        "levels": 1,
+        "messages": [
+          [
+            "34200.000000001",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ],
+          [
+            "34200.000000009",
+            "4",
+            "1001",
+            "1",
+            "1000000",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "2"
+          ],
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "1"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "admit",
+        "rows": [
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10100,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 1
+          }
+        ],
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "output_events": 4,
+          "causal_trade_events": 1
+        },
+        "error_reason": null,
+        "timestamps": [
+          1704187800000000001,
+          1704187800000000009
+        ],
+        "visible_details": [
+          [
+            1,
+            10000,
+            2
+          ],
+          [
+            1,
+            10000,
+            1
+          ]
+        ],
+        "books": [
+          {
+            "bids": [
+              [
+                10000,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          },
+          {
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        ],
+        "oracle_trace": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        }
+      },
+      "status": "admitted",
+      "canonical": {
+        "rows": [
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10100,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/time_pair/canonical.parquet",
+        "parquet_sha256": "da4a7367b4f6464e27762f10c7d01b967abca9004f44ecd874cf9a2ad59e160b",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "152c63ef43ee8ff6aeb7dd1e8bae2009243cbc00dc7bbfaa654e6b2a22c1a7b6",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "best_bid_ticks": 10000,
+            "best_ask_ticks": 10100,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10050.0,
+            "microprice_ticks": 10033.333333333334,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "152c63ef43ee8ff6aeb7dd1e8bae2009243cbc00dc7bbfaa654e6b2a22c1a7b6"
+      },
+      "strict_valid": true,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "34200.000000001",
+          "type": "str",
+          "result": 1704187800000000001,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010000",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10100,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10100
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000000",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10000,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10000
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 0,
+          "message_row": [
+            "34200.000000001",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10000,
+            2
+          ],
+          "error": null
+        },
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 1,
+          "value": "34200.000000009",
+          "type": "str",
+          "result": 1704187800000000009,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010000",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10100,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10100
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000000",
+          "size_raw": "1",
+          "side": 1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10000,
+              1
+            ]
+          ],
+          "ordered_after": [
+            10000
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 1,
+          "message_row": [
+            "34200.000000009",
+            "4",
+            "1001",
+            "1",
+            "1000000",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10000,
+            1
+          ],
+          "error": null
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/time_pair/messages.csv",
+        "orderbook": "groups/default28/time_pair/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "5a999a5a831d77d004db317c6b31e25939f0671c354f5260a4bb58eae3060584",
+        "orderbook": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+      }
+    },
+    {
+      "result": {
+        "rows": [
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/combined_pair/canonical.parquet",
+        "parquet_sha256": "53220585dddbed16f5b14487485ff6ef7cdc915b2e93d6e533e3867b1a483b21",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "564ed237d8c53c4cc45b3f2100595d87f9b8a5062ab43fbe2bc818a30cc02fcc",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "best_bid_ticks": 10001,
+            "best_ask_ticks": 10103,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10052.0,
+            "microprice_ticks": 10035.0,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "564ed237d8c53c4cc45b3f2100595d87f9b8a5062ab43fbe2bc818a30cc02fcc"
+      },
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true,
+        "boundary_calls_complete": true,
+        "boundary_results_exact": true,
+        "zero_size_prices_skipped": true
+      },
+      "case_id": "combined_pair",
+      "input": {
+        "classification": "valid_integer_price_ns_grid",
+        "error_reason": null,
+        "expected": "admit",
+        "id": "combined_pair",
+        "levels": 1,
+        "messages": [
+          [
+            "34200.000000001",
+            "1",
+            "1001",
+            "2",
+            "1000100",
+            "1"
+          ],
+          [
+            "34200.000000009",
+            "4",
+            "1001",
+            "1",
+            "1000100",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010300",
+            "2",
+            "1000100",
+            "2"
+          ],
+          [
+            "1010300",
+            "2",
+            "1000100",
+            "1"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "admit",
+        "rows": [
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "output_events": 4,
+          "causal_trade_events": 1
+        },
+        "error_reason": null,
+        "timestamps": [
+          1704187800000000001,
+          1704187800000000009
+        ],
+        "visible_details": [
+          [
+            1,
+            10001,
+            2
+          ],
+          [
+            1,
+            10001,
+            1
+          ]
+        ],
+        "books": [
+          {
+            "bids": [
+              [
+                10001,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          },
+          {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        ],
+        "oracle_trace": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        }
+      },
+      "status": "admitted",
+      "canonical": {
+        "rows": [
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000001,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/combined_pair/canonical.parquet",
+        "parquet_sha256": "53220585dddbed16f5b14487485ff6ef7cdc915b2e93d6e533e3867b1a483b21",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "564ed237d8c53c4cc45b3f2100595d87f9b8a5062ab43fbe2bc818a30cc02fcc",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "best_bid_ticks": 10001,
+            "best_ask_ticks": 10103,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10052.0,
+            "microprice_ticks": 10035.0,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "564ed237d8c53c4cc45b3f2100595d87f9b8a5062ab43fbe2bc818a30cc02fcc"
+      },
+      "strict_valid": true,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "34200.000000001",
+          "type": "str",
+          "result": 1704187800000000001,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010300",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000100",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 0,
+          "message_row": [
+            "34200.000000001",
+            "1",
+            "1001",
+            "2",
+            "1000100",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10001,
+            2
+          ],
+          "error": null
+        },
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 1,
+          "value": "34200.000000009",
+          "type": "str",
+          "result": 1704187800000000009,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010300",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000100",
+          "size_raw": "1",
+          "side": 1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              1
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 1,
+          "message_row": [
+            "34200.000000009",
+            "4",
+            "1001",
+            "1",
+            "1000100",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10001,
+            1
+          ],
+          "error": null
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/combined_pair/messages.csv",
+        "orderbook": "groups/default28/combined_pair/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "fff841bdd4306e893d20a6e005b5d0eaeb53d1038dabda00ab0d4d6d42de30f2",
+        "orderbook": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+      }
+    },
+    {
+      "result": null,
+      "error": {
+        "type": "MarketDataAdapterError",
+        "module": "lobmm.data._adapter_utils",
+        "message": "bid_price at row 0: price 100.0101 is not aligned to tick size 0.01"
+      },
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true
+      },
+      "case_id": "book_off_tick",
+      "input": {
+        "classification": "negative_configured_tick",
+        "error_reason": "bid_price/not aligned/row 0",
+        "expected": "reject",
+        "id": "book_off_tick",
+        "levels": 1,
+        "messages": [
+          [
+            "0",
+            "1",
+            "1001",
+            "2",
+            "1000101",
+            "1"
+          ],
+          [
+            "0",
+            "4",
+            "1001",
+            "1",
+            "1000101",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010300",
+            "2",
+            "1000101",
+            "2"
+          ],
+          [
+            "1010300",
+            "2",
+            "1000101",
+            "1"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "reject",
+        "rows": null,
+        "diagnostics": null,
+        "error_reason": "bid_price/not aligned/row 0",
+        "timestamps": [
+          1704153600000000000
+        ],
+        "visible_details": [],
+        "books": [],
+        "oracle_trace": null
+      },
+      "status": "rejected",
+      "canonical": null,
+      "strict_valid": false,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "0",
+          "type": "str",
+          "result": 1704153600000000000,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010300",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000101",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": {
+            "type": "MarketDataAdapterError",
+            "module": "lobmm.data._adapter_utils",
+            "message": "bid_price at row 0: price 100.0101 is not aligned to tick size 0.01"
+          },
+          "levels_after": [],
+          "ordered_after": []
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/book_off_tick/messages.csv",
+        "orderbook": "groups/default28/book_off_tick/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "6e4e7ed5a5431dcd585045fda577e90e6665009b5d87c61722142809ac435aa5",
+        "orderbook": "544cdebea5b4374c128659d1915f5619c822a98f8ff8afee885f54e2c52fde59"
+      }
+    },
+    {
+      "result": null,
+      "error": {
+        "type": "MarketDataAdapterError",
+        "module": "lobmm.data._adapter_utils",
+        "message": "price at row 0: price 99.0001 is not aligned to tick size 0.01"
+      },
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true
+      },
+      "case_id": "message_off_tick_outside_window",
+      "input": {
+        "classification": "negative_configured_tick",
+        "error_reason": "price/not aligned/row 0",
+        "expected": "reject",
+        "id": "message_off_tick_outside_window",
+        "levels": 1,
+        "messages": [
+          [
+            "0",
+            "1",
+            "1001",
+            "1",
+            "990001",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010300",
+            "2",
+            "1000100",
+            "2"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "reject",
+        "rows": null,
+        "diagnostics": null,
+        "error_reason": "price/not aligned/row 0",
+        "timestamps": [
+          1704153600000000000
+        ],
+        "visible_details": [],
+        "books": [
+          {
+            "bids": [
+              [
+                10001,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        ],
+        "oracle_trace": null
+      },
+      "status": "rejected",
+      "canonical": null,
+      "strict_valid": false,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "0",
+          "type": "str",
+          "result": 1704153600000000000,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010300",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000100",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 0,
+          "message_row": [
+            "0",
+            "1",
+            "1001",
+            "1",
+            "990001",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": null,
+          "error": {
+            "type": "MarketDataAdapterError",
+            "module": "lobmm.data._adapter_utils",
+            "message": "price at row 0: price 99.0001 is not aligned to tick size 0.01"
+          }
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/message_off_tick_outside_window/messages.csv",
+        "orderbook": "groups/default28/message_off_tick_outside_window/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "5555fa6ea8ec3b8c965c2ca178b92d3adc582b1436e1b55709d2c28e4a6a0185",
+        "orderbook": "56f857684d6296871c2fe698acb637ba002179ffc84bab6c867ad41c83be9d41"
+      }
+    },
+    {
+      "result": null,
+      "error": {
+        "type": "MarketDataAdapterError",
+        "module": "lobmm.data._adapter_utils",
+        "message": "time=34200.0000000001 has precision finer than one nanosecond at row 0"
+      },
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true
+      },
+      "case_id": "subns_short",
+      "input": {
+        "classification": "negative_resolution",
+        "error_reason": "time/finer than one nanosecond/row 0",
+        "expected": "reject",
+        "id": "subns_short",
+        "levels": 1,
+        "messages": [
+          [
+            "34200.0000000001",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ],
+          [
+            "34200.000000009",
+            "4",
+            "1001",
+            "1",
+            "1000000",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "2"
+          ],
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "1"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "reject",
+        "rows": null,
+        "diagnostics": null,
+        "error_reason": "time/finer than one nanosecond/row 0",
+        "timestamps": [],
+        "visible_details": [],
+        "books": [],
+        "oracle_trace": null
+      },
+      "status": "rejected",
+      "canonical": null,
+      "strict_valid": false,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "34200.0000000001",
+          "type": "str",
+          "result": null,
+          "error": {
+            "type": "MarketDataAdapterError",
+            "module": "lobmm.data._adapter_utils",
+            "message": "time=34200.0000000001 has precision finer than one nanosecond at row 0"
+          }
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/subns_short/messages.csv",
+        "orderbook": "groups/default28/subns_short/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "4ff697d3cde3d0debb6fe5ae8ca5bdfdea71c15fdc69c08821ae1854317e4c1f",
+        "orderbook": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+      }
+    },
+    {
+      "result": {
+        "rows": [
+          {
+            "timestamp_ns": 1704187800000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704187800000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10100,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/subns_long/canonical.parquet",
+        "parquet_sha256": "fc2e3719dbad308963f8e2cc2b5864a17b868abbe249ba3c1a22900a9367dc70",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "65eb1b035380286dba97e96a01d04869688b4ae63bbc90191f5ddd387a1cfbc5",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "best_bid_ticks": 10000,
+            "best_ask_ticks": 10100,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10050.0,
+            "microprice_ticks": 10033.333333333334,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "65eb1b035380286dba97e96a01d04869688b4ae63bbc90191f5ddd387a1cfbc5"
+      },
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": true,
+          "Rounded": true,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": false,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": false,
+        "raw_boundary_literals_preserved": true
+      },
+      "case_id": "subns_long",
+      "input": {
+        "classification": "negative_resolution",
+        "error_reason": "time/finer than one nanosecond/row 0",
+        "expected": "reject",
+        "id": "subns_long",
+        "levels": 1,
+        "messages": [
+          [
+            "34200.00000000000000000000000000001",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ],
+          [
+            "34200.000000009",
+            "4",
+            "1001",
+            "1",
+            "1000000",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "2"
+          ],
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "1"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "reject",
+        "rows": null,
+        "diagnostics": null,
+        "error_reason": "time/finer than one nanosecond/row 0",
+        "timestamps": [],
+        "visible_details": [],
+        "books": [],
+        "oracle_trace": null
+      },
+      "status": "admitted",
+      "canonical": {
+        "rows": [
+          {
+            "timestamp_ns": 1704187800000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704187800000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10100,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/subns_long/canonical.parquet",
+        "parquet_sha256": "fc2e3719dbad308963f8e2cc2b5864a17b868abbe249ba3c1a22900a9367dc70",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "65eb1b035380286dba97e96a01d04869688b4ae63bbc90191f5ddd387a1cfbc5",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704187800000000009,
+            "sequence_number": 3,
+            "best_bid_ticks": 10000,
+            "best_ask_ticks": 10100,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10050.0,
+            "microprice_ticks": 10033.333333333334,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10000,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "65eb1b035380286dba97e96a01d04869688b4ae63bbc90191f5ddd387a1cfbc5"
+      },
+      "strict_valid": true,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "34200.00000000000000000000000000001",
+          "type": "str",
+          "result": 1704187800000000000,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010000",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10100,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10100
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000000",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10000,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10000
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 0,
+          "message_row": [
+            "34200.00000000000000000000000000001",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10000,
+            2
+          ],
+          "error": null
+        },
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 1,
+          "value": "34200.000000009",
+          "type": "str",
+          "result": 1704187800000000009,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010000",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10100,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10100
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000000",
+          "size_raw": "1",
+          "side": 1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10000,
+              1
+            ]
+          ],
+          "ordered_after": [
+            10000
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 1,
+          "message_row": [
+            "34200.000000009",
+            "4",
+            "1001",
+            "1",
+            "1000000",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10000,
+            1
+          ],
+          "error": null
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/subns_long/messages.csv",
+        "orderbook": "groups/default28/subns_long/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "98fe661829174a64b57f54788796f7d1b29794909760d40916fab50fad8d4342",
+        "orderbook": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+      }
+    },
+    {
+      "result": null,
+      "error": {
+        "type": "MarketDataAdapterError",
+        "module": "lobmm.data._adapter_utils",
+        "message": "LOBSTER message time regressed at row 1: 1704187800000000001 follows 1704187800000000009"
+      },
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true
+      },
+      "case_id": "regressing_ns",
+      "input": {
+        "classification": "negative_source_order",
+        "error_reason": "time regressed/row 1",
+        "expected": "reject",
+        "id": "regressing_ns",
+        "levels": 1,
+        "messages": [
+          [
+            "34200.000000009",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ],
+          [
+            "34200.000000001",
+            "4",
+            "1001",
+            "1",
+            "1000000",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "2"
+          ],
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "1"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "reject",
+        "rows": null,
+        "diagnostics": null,
+        "error_reason": "time regressed/row 1",
+        "timestamps": [
+          1704187800000000009
+        ],
+        "visible_details": [
+          [
+            1,
+            10000,
+            2
+          ]
+        ],
+        "books": [
+          {
+            "bids": [
+              [
+                10000,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        ],
+        "oracle_trace": null
+      },
+      "status": "rejected",
+      "canonical": null,
+      "strict_valid": false,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "34200.000000009",
+          "type": "str",
+          "result": 1704187800000000009,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010000",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10100,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10100
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000000",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10000,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10000
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 0,
+          "message_row": [
+            "34200.000000009",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10000,
+            2
+          ],
+          "error": null
+        },
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 1,
+          "value": "34200.000000001",
+          "type": "str",
+          "result": 1704187800000000001,
+          "error": null
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/regressing_ns/messages.csv",
+        "orderbook": "groups/default28/regressing_ns/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "104e1bd7170664293ee70b6e7b58be7ae32563cf02d48aa4c5e2ff9113a1646a",
+        "orderbook": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+      }
+    },
+    {
+      "result": {
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/zero_dummy_levels/canonical.parquet",
+        "parquet_sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "e7b6ff62f07c88f3bc8646f2b5dd7b7c87db6a6f29176b632cb0ec626b0ad363",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "best_bid_ticks": 10001,
+            "best_ask_ticks": 10103,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10052.0,
+            "microprice_ticks": 10035.0,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "e7b6ff62f07c88f3bc8646f2b5dd7b7c87db6a6f29176b632cb0ec626b0ad363"
+      },
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true,
+        "boundary_calls_complete": true,
+        "boundary_results_exact": true,
+        "zero_size_prices_skipped": true
+      },
+      "case_id": "zero_dummy_levels",
+      "input": {
+        "classification": "valid_zero_size_sentinel_control",
+        "error_reason": null,
+        "expected": "admit",
+        "id": "zero_dummy_levels",
+        "levels": 2,
+        "messages": [
+          [
+            "0",
+            "1",
+            "1001",
+            "2",
+            "1000100",
+            "1"
+          ],
+          [
+            "0",
+            "4",
+            "1001",
+            "1",
+            "1000100",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010300",
+            "2",
+            "1000100",
+            "2",
+            "9999999999",
+            "0",
+            "-9999999999",
+            "0"
+          ],
+          [
+            "1010300",
+            "2",
+            "1000100",
+            "1",
+            "9999999999",
+            "0",
+            "-9999999999",
+            "0"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "admit",
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "output_events": 4,
+          "causal_trade_events": 1
+        },
+        "error_reason": null,
+        "timestamps": [
+          1704153600000000000,
+          1704153600000000000
+        ],
+        "visible_details": [
+          [
+            1,
+            10001,
+            2
+          ],
+          [
+            1,
+            10001,
+            1
+          ]
+        ],
+        "books": [
+          {
+            "bids": [
+              [
+                10001,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          },
+          {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        ],
+        "oracle_trace": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        }
+      },
+      "status": "admitted",
+      "canonical": {
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10103,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "event_type": "TRADE",
+            "side": 1,
+            "price_ticks": 10001,
+            "quantity": 1
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/zero_dummy_levels/canonical.parquet",
+        "parquet_sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608",
+        "diagnostics": {
+          "source_rows": 2,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "causal_trade_events": 1,
+          "output_events": 4
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 4,
+          "event_stream_sha256": "e7b6ff62f07c88f3bc8646f2b5dd7b7c87db6a6f29176b632cb0ec626b0ad363",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 3,
+            "best_bid_ticks": 10001,
+            "best_ask_ticks": 10103,
+            "best_bid_quantity": 1,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10052.0,
+            "microprice_ticks": 10035.0,
+            "imbalance": -0.3333333333333333,
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 4,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            },
+            {
+              "sequence_number": 3,
+              "book": {
+                "bids": [
+                  [
+                    10001,
+                    1
+                  ]
+                ],
+                "asks": [
+                  [
+                    10103,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10001,
+                1
+              ]
+            ],
+            "asks": [
+              [
+                10103,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "e7b6ff62f07c88f3bc8646f2b5dd7b7c87db6a6f29176b632cb0ec626b0ad363"
+      },
+      "strict_valid": true,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "0",
+          "type": "str",
+          "result": 1704153600000000000,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010300",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000100",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "9999999999",
+          "size_raw": "0",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_before": [
+            10103
+          ],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "-9999999999",
+          "size_raw": "0",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [
+            [
+              10001,
+              2
+            ]
+          ],
+          "ordered_before": [
+            10001
+          ],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 0,
+          "message_row": [
+            "0",
+            "1",
+            "1001",
+            "2",
+            "1000100",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10001,
+            2
+          ],
+          "error": null
+        },
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 1,
+          "value": "0",
+          "type": "str",
+          "result": 1704153600000000000,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010300",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000100",
+          "size_raw": "1",
+          "side": 1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              1
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "9999999999",
+          "size_raw": "0",
+          "side": -1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_before": [
+            10103
+          ],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10103,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10103
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "-9999999999",
+          "size_raw": "0",
+          "side": 1,
+          "row_index": 1,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [
+            [
+              10001,
+              1
+            ]
+          ],
+          "ordered_before": [
+            10001
+          ],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10001,
+              1
+            ]
+          ],
+          "ordered_after": [
+            10001
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 1,
+          "message_row": [
+            "0",
+            "4",
+            "1001",
+            "1",
+            "1000100",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10001,
+            1
+          ],
+          "error": null
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/zero_dummy_levels/messages.csv",
+        "orderbook": "groups/default28/zero_dummy_levels/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b",
+        "orderbook": "46c1c74d3fbedfec264bef049daf8d230901969367ad0493b47e39de693b2e26"
+      }
+    },
+    {
+      "result": null,
+      "error": {
+        "type": "MarketDataAdapterError",
+        "module": "lobmm.data._adapter_utils",
+        "message": "time=86400 must be in [0, 86400) at row 0"
+      },
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true
+      },
+      "case_id": "day_end",
+      "input": {
+        "classification": "negative_time_bounds",
+        "error_reason": "time/[0, 86400)/row 0",
+        "expected": "reject",
+        "id": "day_end",
+        "levels": 1,
+        "messages": [
+          [
+            "86400",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "2"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "reject",
+        "rows": null,
+        "diagnostics": null,
+        "error_reason": "time/[0, 86400)/row 0",
+        "timestamps": [],
+        "visible_details": [],
+        "books": [],
+        "oracle_trace": null
+      },
+      "status": "rejected",
+      "canonical": null,
+      "strict_valid": false,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "86400",
+          "type": "str",
+          "result": null,
+          "error": {
+            "type": "MarketDataAdapterError",
+            "module": "lobmm.data._adapter_utils",
+            "message": "time=86400 must be in [0, 86400) at row 0"
+          }
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/day_end/messages.csv",
+        "orderbook": "groups/default28/day_end/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "c8aeaddaac80f6cb6ed9693b96fa12ba7a3ac865640fa4eec3208a4cebffee4e",
+        "orderbook": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+      }
+    },
+    {
+      "result": null,
+      "error": {
+        "type": "MarketDataAdapterError",
+        "module": "lobmm.data._adapter_utils",
+        "message": "time=-1 must be in [0, 86400) at row 0"
+      },
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true
+      },
+      "case_id": "negative_time",
+      "input": {
+        "classification": "negative_time_bounds",
+        "error_reason": "time/[0, 86400)/row 0",
+        "expected": "reject",
+        "id": "negative_time",
+        "levels": 1,
+        "messages": [
+          [
+            "-1",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "2"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "reject",
+        "rows": null,
+        "diagnostics": null,
+        "error_reason": "time/[0, 86400)/row 0",
+        "timestamps": [],
+        "visible_details": [],
+        "books": [],
+        "oracle_trace": null
+      },
+      "status": "rejected",
+      "canonical": null,
+      "strict_valid": false,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "-1",
+          "type": "str",
+          "result": null,
+          "error": {
+            "type": "MarketDataAdapterError",
+            "module": "lobmm.data._adapter_utils",
+            "message": "time=-1 must be in [0, 86400) at row 0"
+          }
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/negative_time/messages.csv",
+        "orderbook": "groups/default28/negative_time/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "8b6d84b2861de6b3692a2b5cad4e8a70fd9442c079e4d4020724d76723650b17",
+        "orderbook": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+      }
+    },
+    {
+      "result": {
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10100,
+            "quantity": 2
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/zero_time/canonical.parquet",
+        "parquet_sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c",
+        "diagnostics": {
+          "source_rows": 1,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "output_events": 3
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 3,
+          "event_stream_sha256": "90eb8f9d0a756b46385785486becdffebf2112cf05ebed888c49297d6ab9de71",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "best_bid_ticks": 10000,
+            "best_ask_ticks": 10100,
+            "best_bid_quantity": 2,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10050.0,
+            "microprice_ticks": 10050.0,
+            "imbalance": 0.0,
+            "bids": [
+              [
+                10000,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 3,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10000,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "90eb8f9d0a756b46385785486becdffebf2112cf05ebed888c49297d6ab9de71"
+      },
+      "error": null,
+      "infrastructure_error": null,
+      "outer_context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_before": 4300,
+      "context_before": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": true,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "outer_context_after": {
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "Emin": -999999,
+        "Emax": 999999,
+        "capitals": 1,
+        "clamp": 0,
+        "traps": {
+          "InvalidOperation": true,
+          "FloatOperation": false,
+          "DivisionByZero": true,
+          "Overflow": true,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        },
+        "flags": {
+          "InvalidOperation": false,
+          "FloatOperation": false,
+          "DivisionByZero": false,
+          "Overflow": false,
+          "Underflow": false,
+          "Subnormal": false,
+          "Inexact": false,
+          "Rounded": false,
+          "Clamped": false
+        }
+      },
+      "guard_after": 4300,
+      "checks": {
+        "context_preserved": true,
+        "outer_context_preserved": true,
+        "guard_preserved": true,
+        "oracle_match": true,
+        "raw_boundary_literals_preserved": true,
+        "boundary_calls_complete": true,
+        "boundary_results_exact": true,
+        "zero_size_prices_skipped": true
+      },
+      "case_id": "zero_time",
+      "input": {
+        "classification": "valid_boundary_control",
+        "error_reason": null,
+        "expected": "admit",
+        "id": "zero_time",
+        "levels": 1,
+        "messages": [
+          [
+            "0",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ]
+        ],
+        "orderbook": [
+          [
+            "1010000",
+            "2",
+            "1000000",
+            "2"
+          ]
+        ]
+      },
+      "expected": {
+        "status": "admit",
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10100,
+            "quantity": 2
+          }
+        ],
+        "diagnostics": {
+          "source_rows": 1,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "output_events": 3
+        },
+        "error_reason": null,
+        "timestamps": [
+          1704153600000000000
+        ],
+        "visible_details": [
+          [
+            1,
+            10000,
+            2
+          ]
+        ],
+        "books": [
+          {
+            "bids": [
+              [
+                10000,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        ],
+        "oracle_trace": {
+          "valid": true,
+          "event_count": 3,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10000,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        }
+      },
+      "status": "admitted",
+      "canonical": {
+        "rows": [
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 0,
+            "event_type": "RESET",
+            "side": null,
+            "price_ticks": 0,
+            "quantity": 0
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 1,
+            "event_type": "SNAPSHOT",
+            "side": 1,
+            "price_ticks": 10000,
+            "quantity": 2
+          },
+          {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "event_type": "SNAPSHOT",
+            "side": -1,
+            "price_ticks": 10100,
+            "quantity": 2
+          }
+        ],
+        "schema": [
+          [
+            "timestamp_ns",
+            "Int64"
+          ],
+          [
+            "sequence_number",
+            "Int64"
+          ],
+          [
+            "event_type",
+            "String"
+          ],
+          [
+            "side",
+            "Int8"
+          ],
+          [
+            "price_ticks",
+            "Int64"
+          ],
+          [
+            "quantity",
+            "Int64"
+          ]
+        ],
+        "parquet_path": "groups/default28/zero_time/canonical.parquet",
+        "parquet_sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c",
+        "diagnostics": {
+          "source_rows": 1,
+          "snapshot_resets": 1,
+          "snapshot_levels": 2,
+          "first_message_represented_by_snapshot": 1,
+          "output_events": 3
+        },
+        "validation": {
+          "valid": true,
+          "issue_count": 0,
+          "event_count": 3,
+          "event_stream_sha256": "90eb8f9d0a756b46385785486becdffebf2112cf05ebed888c49297d6ab9de71",
+          "mode": "strict",
+          "reconstructed_book": true,
+          "required_nonempty": true,
+          "issues": [],
+          "diagnostics": {},
+          "final_book": {
+            "timestamp_ns": 1704153600000000000,
+            "sequence_number": 2,
+            "best_bid_ticks": 10000,
+            "best_ask_ticks": 10100,
+            "best_bid_quantity": 2,
+            "best_ask_quantity": 2,
+            "midpoint_ticks": 10050.0,
+            "microprice_ticks": 10050.0,
+            "imbalance": 0.0,
+            "bids": [
+              [
+                10000,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "dictionary_reconstruction": {
+          "valid": true,
+          "event_count": 3,
+          "trace": [
+            {
+              "sequence_number": 0,
+              "book": {
+                "bids": [],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 1,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": []
+              }
+            },
+            {
+              "sequence_number": 2,
+              "book": {
+                "bids": [
+                  [
+                    10000,
+                    2
+                  ]
+                ],
+                "asks": [
+                  [
+                    10100,
+                    2
+                  ]
+                ]
+              }
+            }
+          ],
+          "final_book": {
+            "bids": [
+              [
+                10000,
+                2
+              ]
+            ],
+            "asks": [
+              [
+                10100,
+                2
+              ]
+            ]
+          }
+        },
+        "validation_error": null,
+        "event_stream_sha256": "90eb8f9d0a756b46385785486becdffebf2112cf05ebed888c49297d6ab9de71"
+      },
+      "strict_valid": true,
+      "boundary_calls": [
+        {
+          "helper": "_timestamp_ns",
+          "row_index": 0,
+          "value": "0",
+          "type": "str",
+          "result": 1704153600000000000,
+          "error": null
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1010000",
+          "size_raw": "2",
+          "side": -1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10100,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10100
+          ]
+        },
+        {
+          "helper": "_add_level",
+          "price_raw": "1000000",
+          "size_raw": "2",
+          "side": 1,
+          "row_index": 0,
+          "price_type": "str",
+          "size_type": "str",
+          "levels_before": [],
+          "ordered_before": [],
+          "result": null,
+          "error": null,
+          "levels_after": [
+            [
+              10000,
+              2
+            ]
+          ],
+          "ordered_after": [
+            10000
+          ]
+        },
+        {
+          "helper": "_visible_message_details",
+          "row_index": 0,
+          "message_row": [
+            "0",
+            "1",
+            "1001",
+            "2",
+            "1000000",
+            "1"
+          ],
+          "types": [
+            "str",
+            "str",
+            "str",
+            "str",
+            "str",
+            "str"
+          ],
+          "result": [
+            1,
+            10000,
+            2
+          ],
+          "error": null
+        }
+      ],
+      "csv_paths": {
+        "messages": "groups/default28/zero_time/messages.csv",
+        "orderbook": "groups/default28/zero_time/orderbook.csv"
+      },
+      "csv_sha256": {
+        "messages": "771662018489cafd8d3e044efa7a1206fdadea6ae60624aa8d0c6409c5b2ae8a",
+        "orderbook": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+      }
+    }
+  ],
+  "complete": true,
+  "provenance": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "test_path": "/tmp/lob-lobster-fidelity-pywxp5x5/pr9/tests/unit/test_lobster_fidelity_independent.py",
+    "test_sha256": "a29f7842ff5565f7a9f80b46544333208684a251fc192cbd19c756dad6e76906",
+    "fixtures_sha256": "1987016a419c065535b2ac5590305e1966328c39e495feda8eb487dbf2dbf670",
+    "contract_sha256": "513f9b2be85b582c020e575b32dded6df123f10d0aaeee4e51d7aceed755de8b",
+    "sources": {
+      "data/lobster": {
+        "path": "/tmp/lob-lobster-fidelity-pywxp5x5/pr9/src/lobmm/data/lobster.py",
+        "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+      },
+      "validation": {
+        "path": "/tmp/lob-lobster-fidelity-pywxp5x5/pr9/src/lobmm/validation.py",
+        "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+      }
+    }
+  }
+}

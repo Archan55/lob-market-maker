@@ -1,0 +1,921 @@
+{
+  "files": {
+    ".github/workflows/ci.yml": {
+      "bytes": 2164,
+      "sha256": "b75883e688ec9eeebe3c36627cb48fbeb98a28afd5c74d8e85c1db32b7230c71"
+    },
+    "docs/LOBSTER_PREPROCESSING_FIDELITY.md": {
+      "bytes": 14353,
+      "sha256": "e5af264fd4de13e9986fdbc10c7a28cb25def9e5568c99b99861c384ac361d1c"
+    },
+    "docs/data_adapters.md": {
+      "bytes": 8489,
+      "sha256": "ff51a262028df4b9dca86bd6a839c74d51e432502f3f7b1dff06fa45c77c9558"
+    },
+    "docs/evidence/lobster-fidelity-20261112/baseline-review.json": {
+      "bytes": 2313,
+      "sha256": "229c1dbe459dcb4e858aff1d1fa2c884e1c56f93009ddc39273610eb3dc1da68"
+    },
+    "docs/evidence/lobster-fidelity-20261112/candidate-source-review.json": {
+      "bytes": 1489,
+      "sha256": "9d47832b35a6cb3d6ab8b2a1a6d6bb9dab43b61270083db033a2512118698b97"
+    },
+    "docs/evidence/lobster-fidelity-20261112/contract.json": {
+      "bytes": 10437,
+      "sha256": "513f9b2be85b582c020e575b32dded6df123f10d0aaeee4e51d7aceed755de8b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/design-review.json": {
+      "bytes": 2007,
+      "sha256": "215f4f923ad4f2868cc23b2d3344cee3cf12a4fefa98264490d6c393ac960936"
+    },
+    "docs/evidence/lobster-fidelity-20261112/final-review.json": {
+      "bytes": 3465,
+      "sha256": "9110a21ae8e3c0f51610eddbc559bf56e2bcc163efd2a7e7217677806615ea03"
+    },
+    "docs/evidence/lobster-fidelity-20261112/fixtures.json": {
+      "bytes": 10457,
+      "sha256": "1987016a419c065535b2ac5590305e1966328c39e495feda8eb487dbf2dbf670"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline-command.log": {
+      "bytes": 38218,
+      "sha256": "f2b7af4a5893b11e4595f90d68d197461b1e5856395b482fb70f4f6f61f445a6"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/environment.json": {
+      "bytes": 483,
+      "sha256": "8e28e4837851b4ffa24b47d01d09d4e2638e6705caa4a8cc1da2ae7bd9ce56ad"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/historical-pr9-source-pins.json": {
+      "bytes": 44992,
+      "sha256": "88cc829151165e4e9442ad112b5363a4e6cc7d50329cfa3758820819e7cb3f67"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28.json": {
+      "bytes": 160412,
+      "sha256": "c42674d10125657546abb787f1c7ddc30c3aef2ee11393eaedca35f2e19ef257"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/book_off_tick/messages.csv": {
+      "bytes": 42,
+      "sha256": "6e4e7ed5a5431dcd585045fda577e90e6665009b5d87c61722142809ac435aa5"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/book_off_tick/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "544cdebea5b4374c128659d1915f5619c822a98f8ff8afee885f54e2c52fde59"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/combined_pair/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "53220585dddbed16f5b14487485ff6ef7cdc915b2e93d6e533e3867b1a483b21"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/combined_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "fff841bdd4306e893d20a6e005b5d0eaeb53d1038dabda00ab0d4d6d42de30f2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/combined_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/day_end/messages.csv": {
+      "bytes": 25,
+      "sha256": "c8aeaddaac80f6cb6ed9693b96fa12ba7a3ac865640fa4eec3208a4cebffee4e"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/day_end/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/message_off_tick_outside_window/messages.csv": {
+      "bytes": 20,
+      "sha256": "5555fa6ea8ec3b8c965c2ca178b92d3adc582b1436e1b55709d2c28e4a6a0185"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/message_off_tick_outside_window/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "56f857684d6296871c2fe698acb637ba002179ffc84bab6c867ad41c83be9d41"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/negative_time/messages.csv": {
+      "bytes": 22,
+      "sha256": "8b6d84b2861de6b3692a2b5cad4e8a70fd9442c079e4d4020724d76723650b17"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/negative_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/price_pair/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/price_pair/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/price_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/regressing_ns/messages.csv": {
+      "bytes": 70,
+      "sha256": "104e1bd7170664293ee70b6e7b58be7ae32563cf02d48aa4c5e2ff9113a1646a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/regressing_ns/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/subns_long/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "fc2e3719dbad308963f8e2cc2b5864a17b868abbe249ba3c1a22900a9367dc70"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/subns_long/messages.csv": {
+      "bytes": 90,
+      "sha256": "98fe661829174a64b57f54788796f7d1b29794909760d40916fab50fad8d4342"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/subns_long/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/subns_short/messages.csv": {
+      "bytes": 71,
+      "sha256": "4ff697d3cde3d0debb6fe5ae8ca5bdfdea71c15fdc69c08821ae1854317e4c1f"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/subns_short/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/time_pair/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "da4a7367b4f6464e27762f10c7d01b967abca9004f44ecd874cf9a2ad59e160b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/time_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "5a999a5a831d77d004db317c6b31e25939f0671c354f5260a4bb58eae3060584"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/time_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/zero_dummy_levels/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/zero_dummy_levels/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/zero_dummy_levels/orderbook.csv": {
+      "bytes": 94,
+      "sha256": "46c1c74d3fbedfec264bef049daf8d230901969367ad0493b47e39de693b2e26"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/zero_time/canonical.parquet": {
+      "bytes": 2438,
+      "sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/zero_time/messages.csv": {
+      "bytes": 21,
+      "sha256": "771662018489cafd8d3e044efa7a1206fdadea6ae60624aa8d0c6409c5b2ae8a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/default28/zero_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3.json": {
+      "bytes": 200979,
+      "sha256": "65ea21939fce2b85b78e24dbe78d39fd0f2517ec6a4704557bbbeaed8d0a3a97"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/book_off_tick/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "9d9303e0c9123cce15238eb6c2aaba94bde70ed4c8d95bec5748f64272abe755"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/book_off_tick/messages.csv": {
+      "bytes": 42,
+      "sha256": "6e4e7ed5a5431dcd585045fda577e90e6665009b5d87c61722142809ac435aa5"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/book_off_tick/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "544cdebea5b4374c128659d1915f5619c822a98f8ff8afee885f54e2c52fde59"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/combined_pair/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "f6d4175260d685b1dd207287e94a1017e994d382556ec3ca1efae964ba177815"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/combined_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "fff841bdd4306e893d20a6e005b5d0eaeb53d1038dabda00ab0d4d6d42de30f2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/combined_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/day_end/messages.csv": {
+      "bytes": 25,
+      "sha256": "c8aeaddaac80f6cb6ed9693b96fa12ba7a3ac865640fa4eec3208a4cebffee4e"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/day_end/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/message_off_tick_outside_window/canonical.parquet": {
+      "bytes": 2438,
+      "sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/message_off_tick_outside_window/messages.csv": {
+      "bytes": 20,
+      "sha256": "5555fa6ea8ec3b8c965c2ca178b92d3adc582b1436e1b55709d2c28e4a6a0185"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/message_off_tick_outside_window/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "56f857684d6296871c2fe698acb637ba002179ffc84bab6c867ad41c83be9d41"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/negative_time/messages.csv": {
+      "bytes": 22,
+      "sha256": "8b6d84b2861de6b3692a2b5cad4e8a70fd9442c079e4d4020724d76723650b17"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/negative_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/price_pair/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "9d9303e0c9123cce15238eb6c2aaba94bde70ed4c8d95bec5748f64272abe755"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/price_pair/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/price_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/regressing_ns/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "f6d4175260d685b1dd207287e94a1017e994d382556ec3ca1efae964ba177815"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/regressing_ns/messages.csv": {
+      "bytes": 70,
+      "sha256": "104e1bd7170664293ee70b6e7b58be7ae32563cf02d48aa4c5e2ff9113a1646a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/regressing_ns/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/subns_long/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "f6d4175260d685b1dd207287e94a1017e994d382556ec3ca1efae964ba177815"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/subns_long/messages.csv": {
+      "bytes": 90,
+      "sha256": "98fe661829174a64b57f54788796f7d1b29794909760d40916fab50fad8d4342"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/subns_long/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/subns_short/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "f6d4175260d685b1dd207287e94a1017e994d382556ec3ca1efae964ba177815"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/subns_short/messages.csv": {
+      "bytes": 71,
+      "sha256": "4ff697d3cde3d0debb6fe5ae8ca5bdfdea71c15fdc69c08821ae1854317e4c1f"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/subns_short/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/time_pair/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "f6d4175260d685b1dd207287e94a1017e994d382556ec3ca1efae964ba177815"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/time_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "5a999a5a831d77d004db317c6b31e25939f0671c354f5260a4bb58eae3060584"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/time_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/zero_dummy_levels/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "9d9303e0c9123cce15238eb6c2aaba94bde70ed4c8d95bec5748f64272abe755"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/zero_dummy_levels/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/zero_dummy_levels/orderbook.csv": {
+      "bytes": 94,
+      "sha256": "46c1c74d3fbedfec264bef049daf8d230901969367ad0493b47e39de693b2e26"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/zero_time/canonical.parquet": {
+      "bytes": 2438,
+      "sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/zero_time/messages.csv": {
+      "bytes": 21,
+      "sha256": "771662018489cafd8d3e044efa7a1206fdadea6ae60624aa8d0c6409c5b2ae8a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3/zero_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped.json": {
+      "bytes": 95604,
+      "sha256": "81c430d99cb71c9e5171a25c309642c37c1629f312d7b66caebc7fe3286f6916"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/book_off_tick/messages.csv": {
+      "bytes": 42,
+      "sha256": "6e4e7ed5a5431dcd585045fda577e90e6665009b5d87c61722142809ac435aa5"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/book_off_tick/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "544cdebea5b4374c128659d1915f5619c822a98f8ff8afee885f54e2c52fde59"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/combined_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "fff841bdd4306e893d20a6e005b5d0eaeb53d1038dabda00ab0d4d6d42de30f2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/combined_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/day_end/messages.csv": {
+      "bytes": 25,
+      "sha256": "c8aeaddaac80f6cb6ed9693b96fa12ba7a3ac865640fa4eec3208a4cebffee4e"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/day_end/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/message_off_tick_outside_window/messages.csv": {
+      "bytes": 20,
+      "sha256": "5555fa6ea8ec3b8c965c2ca178b92d3adc582b1436e1b55709d2c28e4a6a0185"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/message_off_tick_outside_window/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "56f857684d6296871c2fe698acb637ba002179ffc84bab6c867ad41c83be9d41"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/negative_time/messages.csv": {
+      "bytes": 22,
+      "sha256": "8b6d84b2861de6b3692a2b5cad4e8a70fd9442c079e4d4020724d76723650b17"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/negative_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/price_pair/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/price_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/regressing_ns/messages.csv": {
+      "bytes": 70,
+      "sha256": "104e1bd7170664293ee70b6e7b58be7ae32563cf02d48aa4c5e2ff9113a1646a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/regressing_ns/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/subns_long/messages.csv": {
+      "bytes": 90,
+      "sha256": "98fe661829174a64b57f54788796f7d1b29794909760d40916fab50fad8d4342"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/subns_long/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/subns_short/messages.csv": {
+      "bytes": 71,
+      "sha256": "4ff697d3cde3d0debb6fe5ae8ca5bdfdea71c15fdc69c08821ae1854317e4c1f"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/subns_short/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/time_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "5a999a5a831d77d004db317c6b31e25939f0671c354f5260a4bb58eae3060584"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/time_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/zero_dummy_levels/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/zero_dummy_levels/orderbook.csv": {
+      "bytes": 94,
+      "sha256": "46c1c74d3fbedfec264bef049daf8d230901969367ad0493b47e39de693b2e26"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/zero_time/canonical.parquet": {
+      "bytes": 2438,
+      "sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/zero_time/messages.csv": {
+      "bytes": 21,
+      "sha256": "771662018489cafd8d3e044efa7a1206fdadea6ae60624aa8d0c6409c5b2ae8a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/groups/reduced3_trapped/zero_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/normal-controls.json": {
+      "bytes": 17997,
+      "sha256": "bdfdf7736722a2a3bfa0a23a34239fb069294b9406a634d5742988e8f641b8b5"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/normal/canonical.parquet": {
+      "bytes": 2580,
+      "sha256": "9f3877a2c9252b39a8cd4dcdaaad9d0bdd7aac14cdcd8219c738e8d55e7e346b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/normal/messages.csv": {
+      "bytes": 293,
+      "sha256": "639a47ef73d0e3fb97bdc8802942512684fc60d85058196768c6fb918470cd21"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-evidence/normal/orderbook.csv": {
+      "bytes": 379,
+      "sha256": "03c83b2061f62a7b7f751077c47e221e4bba3a2911be099f23effdf3f28498f2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9-source-pins.json": {
+      "bytes": 3716,
+      "sha256": "c619a7e0d8ff626017babdee4af71ecc67170b8d6af8eb24774ab4b8bfde86c6"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9.json": {
+      "bytes": 32759,
+      "sha256": "9d894eaa2949fe88d79f8ca6c524bf62f8c78b802d663751b4a0e330fe66b521"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9.log": {
+      "bytes": 4198,
+      "sha256": "2f8d00052462928e52f0695bc39fad43a35c1d65cfb3c83aecbfa5a730e45943"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/pr9.xml": {
+      "bytes": 3969,
+      "sha256": "01c41ba94e28c1c1bb070bf635b0c92dc46c86ccb7f5fe5d49d5088b7629f71d"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/baseline/report.json": {
+      "bytes": 182992,
+      "sha256": "4f91c6e67ff6772cbab9b4208040217652420d20337eea140e0fec30e9676281"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/full-suite/imports.json": {
+      "bytes": 7033,
+      "sha256": "d4c25bfd5596c63cdf2af6cd012ee0c6be10af5162ff302121ae0dd789669155"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/full-suite/lobster_import_identity.py.txt": {
+      "bytes": 739,
+      "sha256": "d58eca24bafba6165b4927b23c5d56a00c51fa5c9fe780e3ffd908b61649fd95"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/full-suite/result.txt": {
+      "bytes": 6962,
+      "sha256": "e0a316a20c7d95a16f11aac2e3c18c1d34bd8ef87e83501d1c6f78cd493059f8"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/full-suite/result.xml": {
+      "bytes": 36561,
+      "sha256": "7f89059f9a016d5dc7321fcb55b3d48334caf4f49eadfff9127004e1a692b859"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/quality/mypy.txt": {
+      "bytes": 44,
+      "sha256": "34df9cf38736563d4bb02e64b66effac851acb546ad0a3c3761547e25bbe3570"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/quality/ruff-check.txt": {
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/quality/ruff-format.txt": {
+      "bytes": 27,
+      "sha256": "4ff47a71933cda9dac7b68bef86276a56fbcd69c7a3ec166850d7042addad6ea"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-command.log": {
+      "bytes": 40467,
+      "sha256": "3177880dc13b1723d6c86e9a93df0cb002f3f83268ee9f1e34d8cc2404b51582"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28.json": {
+      "bytes": 148582,
+      "sha256": "62710afc7e18fbeaabedc01c88cf0fdc6b150734ac1bb4c4237b159ea23a4f33"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/book_off_tick/messages.csv": {
+      "bytes": 42,
+      "sha256": "6e4e7ed5a5431dcd585045fda577e90e6665009b5d87c61722142809ac435aa5"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/book_off_tick/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "544cdebea5b4374c128659d1915f5619c822a98f8ff8afee885f54e2c52fde59"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/combined_pair/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "53220585dddbed16f5b14487485ff6ef7cdc915b2e93d6e533e3867b1a483b21"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/combined_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "fff841bdd4306e893d20a6e005b5d0eaeb53d1038dabda00ab0d4d6d42de30f2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/combined_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/day_end/messages.csv": {
+      "bytes": 25,
+      "sha256": "c8aeaddaac80f6cb6ed9693b96fa12ba7a3ac865640fa4eec3208a4cebffee4e"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/day_end/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/message_off_tick_outside_window/messages.csv": {
+      "bytes": 20,
+      "sha256": "5555fa6ea8ec3b8c965c2ca178b92d3adc582b1436e1b55709d2c28e4a6a0185"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/message_off_tick_outside_window/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "56f857684d6296871c2fe698acb637ba002179ffc84bab6c867ad41c83be9d41"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/negative_time/messages.csv": {
+      "bytes": 22,
+      "sha256": "8b6d84b2861de6b3692a2b5cad4e8a70fd9442c079e4d4020724d76723650b17"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/negative_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/price_pair/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/price_pair/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/price_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/regressing_ns/messages.csv": {
+      "bytes": 70,
+      "sha256": "104e1bd7170664293ee70b6e7b58be7ae32563cf02d48aa4c5e2ff9113a1646a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/regressing_ns/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/subns_long/messages.csv": {
+      "bytes": 90,
+      "sha256": "98fe661829174a64b57f54788796f7d1b29794909760d40916fab50fad8d4342"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/subns_long/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/subns_short/messages.csv": {
+      "bytes": 71,
+      "sha256": "4ff697d3cde3d0debb6fe5ae8ca5bdfdea71c15fdc69c08821ae1854317e4c1f"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/subns_short/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/time_pair/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "da4a7367b4f6464e27762f10c7d01b967abca9004f44ecd874cf9a2ad59e160b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/time_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "5a999a5a831d77d004db317c6b31e25939f0671c354f5260a4bb58eae3060584"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/time_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/zero_dummy_levels/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/zero_dummy_levels/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/zero_dummy_levels/orderbook.csv": {
+      "bytes": 94,
+      "sha256": "46c1c74d3fbedfec264bef049daf8d230901969367ad0493b47e39de693b2e26"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/zero_time/canonical.parquet": {
+      "bytes": 2438,
+      "sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/zero_time/messages.csv": {
+      "bytes": 21,
+      "sha256": "771662018489cafd8d3e044efa7a1206fdadea6ae60624aa8d0c6409c5b2ae8a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/default28/zero_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3.json": {
+      "bytes": 148521,
+      "sha256": "13fdc0ca9e8726ee39c0c453b6a16aeea5bc049749543aa78a157174875f33ab"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/book_off_tick/messages.csv": {
+      "bytes": 42,
+      "sha256": "6e4e7ed5a5431dcd585045fda577e90e6665009b5d87c61722142809ac435aa5"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/book_off_tick/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "544cdebea5b4374c128659d1915f5619c822a98f8ff8afee885f54e2c52fde59"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/combined_pair/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "53220585dddbed16f5b14487485ff6ef7cdc915b2e93d6e533e3867b1a483b21"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/combined_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "fff841bdd4306e893d20a6e005b5d0eaeb53d1038dabda00ab0d4d6d42de30f2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/combined_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/day_end/messages.csv": {
+      "bytes": 25,
+      "sha256": "c8aeaddaac80f6cb6ed9693b96fa12ba7a3ac865640fa4eec3208a4cebffee4e"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/day_end/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/message_off_tick_outside_window/messages.csv": {
+      "bytes": 20,
+      "sha256": "5555fa6ea8ec3b8c965c2ca178b92d3adc582b1436e1b55709d2c28e4a6a0185"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/message_off_tick_outside_window/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "56f857684d6296871c2fe698acb637ba002179ffc84bab6c867ad41c83be9d41"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/negative_time/messages.csv": {
+      "bytes": 22,
+      "sha256": "8b6d84b2861de6b3692a2b5cad4e8a70fd9442c079e4d4020724d76723650b17"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/negative_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/price_pair/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/price_pair/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/price_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/regressing_ns/messages.csv": {
+      "bytes": 70,
+      "sha256": "104e1bd7170664293ee70b6e7b58be7ae32563cf02d48aa4c5e2ff9113a1646a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/regressing_ns/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/subns_long/messages.csv": {
+      "bytes": 90,
+      "sha256": "98fe661829174a64b57f54788796f7d1b29794909760d40916fab50fad8d4342"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/subns_long/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/subns_short/messages.csv": {
+      "bytes": 71,
+      "sha256": "4ff697d3cde3d0debb6fe5ae8ca5bdfdea71c15fdc69c08821ae1854317e4c1f"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/subns_short/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/time_pair/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "da4a7367b4f6464e27762f10c7d01b967abca9004f44ecd874cf9a2ad59e160b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/time_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "5a999a5a831d77d004db317c6b31e25939f0671c354f5260a4bb58eae3060584"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/time_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/zero_dummy_levels/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/zero_dummy_levels/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/zero_dummy_levels/orderbook.csv": {
+      "bytes": 94,
+      "sha256": "46c1c74d3fbedfec264bef049daf8d230901969367ad0493b47e39de693b2e26"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/zero_time/canonical.parquet": {
+      "bytes": 2438,
+      "sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/zero_time/messages.csv": {
+      "bytes": 21,
+      "sha256": "771662018489cafd8d3e044efa7a1206fdadea6ae60624aa8d0c6409c5b2ae8a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3/zero_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped.json": {
+      "bytes": 148760,
+      "sha256": "02ff63200019ab748c71916a457c0f0b2fc4f68ed74a139549746f52413ee581"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/book_off_tick/messages.csv": {
+      "bytes": 42,
+      "sha256": "6e4e7ed5a5431dcd585045fda577e90e6665009b5d87c61722142809ac435aa5"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/book_off_tick/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "544cdebea5b4374c128659d1915f5619c822a98f8ff8afee885f54e2c52fde59"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/combined_pair/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "53220585dddbed16f5b14487485ff6ef7cdc915b2e93d6e533e3867b1a483b21"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/combined_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "fff841bdd4306e893d20a6e005b5d0eaeb53d1038dabda00ab0d4d6d42de30f2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/combined_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/day_end/messages.csv": {
+      "bytes": 25,
+      "sha256": "c8aeaddaac80f6cb6ed9693b96fa12ba7a3ac865640fa4eec3208a4cebffee4e"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/day_end/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/message_off_tick_outside_window/messages.csv": {
+      "bytes": 20,
+      "sha256": "5555fa6ea8ec3b8c965c2ca178b92d3adc582b1436e1b55709d2c28e4a6a0185"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/message_off_tick_outside_window/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "56f857684d6296871c2fe698acb637ba002179ffc84bab6c867ad41c83be9d41"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/negative_time/messages.csv": {
+      "bytes": 22,
+      "sha256": "8b6d84b2861de6b3692a2b5cad4e8a70fd9442c079e4d4020724d76723650b17"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/negative_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/price_pair/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/price_pair/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/price_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "761c0e86f91ac06bcb6a2231898842bc70845e1abde2f19dd74aa1de3430fda2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/regressing_ns/messages.csv": {
+      "bytes": 70,
+      "sha256": "104e1bd7170664293ee70b6e7b58be7ae32563cf02d48aa4c5e2ff9113a1646a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/regressing_ns/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/subns_long/messages.csv": {
+      "bytes": 90,
+      "sha256": "98fe661829174a64b57f54788796f7d1b29794909760d40916fab50fad8d4342"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/subns_long/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/subns_short/messages.csv": {
+      "bytes": 71,
+      "sha256": "4ff697d3cde3d0debb6fe5ae8ca5bdfdea71c15fdc69c08821ae1854317e4c1f"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/subns_short/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/time_pair/canonical.parquet": {
+      "bytes": 2451,
+      "sha256": "da4a7367b4f6464e27762f10c7d01b967abca9004f44ecd874cf9a2ad59e160b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/time_pair/messages.csv": {
+      "bytes": 70,
+      "sha256": "5a999a5a831d77d004db317c6b31e25939f0671c354f5260a4bb58eae3060584"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/time_pair/orderbook.csv": {
+      "bytes": 40,
+      "sha256": "ba6067bba3bfb9bc2ca176104ffa4ab33e1e094b1c82ee160a1dc933134ce645"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/zero_dummy_levels/canonical.parquet": {
+      "bytes": 2442,
+      "sha256": "a769c5b1768bf5c9ac5648c529902a504b88a1db62a64c829aa571c36d892608"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/zero_dummy_levels/messages.csv": {
+      "bytes": 42,
+      "sha256": "769f715acd7df6b14d32852bbdac4ba2964942da087eda5aa22de39f0463180b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/zero_dummy_levels/orderbook.csv": {
+      "bytes": 94,
+      "sha256": "46c1c74d3fbedfec264bef049daf8d230901969367ad0493b47e39de693b2e26"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/zero_time/canonical.parquet": {
+      "bytes": 2438,
+      "sha256": "9f1fffb6ea444b24c163c8dfc678bb41f509aa03604938520f008fd045d1826c"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/zero_time/messages.csv": {
+      "bytes": 21,
+      "sha256": "771662018489cafd8d3e044efa7a1206fdadea6ae60624aa8d0c6409c5b2ae8a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/groups/reduced3_trapped/zero_time/orderbook.csv": {
+      "bytes": 20,
+      "sha256": "bc89a9a5bee09a98b213782e79a4773fb1defe6253ea5aff18ebb1e91a8dbd7a"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/normal-controls.json": {
+      "bytes": 18015,
+      "sha256": "c82951754791c2745e23fe3eda1156859e4d72fa367a8ab54c0fe99cf425a158"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/normal/canonical.parquet": {
+      "bytes": 2580,
+      "sha256": "9f3877a2c9252b39a8cd4dcdaaad9d0bdd7aac14cdcd8219c738e8d55e7e346b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/normal/messages.csv": {
+      "bytes": 293,
+      "sha256": "639a47ef73d0e3fb97bdc8802942512684fc60d85058196768c6fb918470cd21"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-evidence/normal/orderbook.csv": {
+      "bytes": 379,
+      "sha256": "03c83b2061f62a7b7f751077c47e221e4bba3a2911be099f23effdf3f28498f2"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate-source-pins.json": {
+      "bytes": 3716,
+      "sha256": "784df8fdefbf423068b7a53a05cd8fdc02e29ec499636363cdfa42f631047b2b"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate.json": {
+      "bytes": 29525,
+      "sha256": "f2e2474896748ae2a0f8606e315890e7df0e4d86b947c9b7ecdc7eb53f517fef"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate.log": {
+      "bytes": 98,
+      "sha256": "cd9f00546c34cfb5721e29ec23a1ed6cb673c65a1f499cca23fbf0be701ed940"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/candidate.xml": {
+      "bytes": 882,
+      "sha256": "f34778d426ef57aae50bc7a8fc0f20829a7344560d882f944c915fdd30eb6d33"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/environment.json": {
+      "bytes": 483,
+      "sha256": "8e28e4837851b4ffa24b47d01d09d4e2638e6705caa4a8cc1da2ae7bd9ce56ad"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/historical-pr9-source-pins.json": {
+      "bytes": 44992,
+      "sha256": "88cc829151165e4e9442ad112b5363a4e6cc7d50329cfa3758820819e7cb3f67"
+    },
+    "docs/evidence/lobster-fidelity-20261112/local/study-final/report.json": {
+      "bytes": 181345,
+      "sha256": "38cd805dc7cb75269d51afaaa94de093385712505a780dc28f201848b0a3b018"
+    },
+    "docs/evidence/lobster-fidelity-20261112/prebaseline-review.json": {
+      "bytes": 2243,
+      "sha256": "66b73e08733ce07874810075e3c855c1157032ff8f5597f56886000482ad5664"
+    },
+    "docs/evidence/lobster-fidelity-20261112/workspace-manifest.json": {
+      "bytes": 98153,
+      "sha256": "239ec5aece63756be4254dc4d692f0631531417179089b03990c2cfc84b489b9"
+    },
+    "src/lobmm/data/_adapter_utils.py": {
+      "bytes": 6206,
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+    },
+    "src/lobmm/data/lobster.py": {
+      "bytes": 22191,
+      "sha256": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5"
+    },
+    "src/lobmm/types.py": {
+      "bytes": 3850,
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+    },
+    "tests/unit/test_lobster_fidelity_independent.py": {
+      "bytes": 31891,
+      "sha256": "a29f7842ff5565f7a9f80b46544333208684a251fc192cbd19c756dad6e76906"
+    },
+    "tools/reproduce_lobster_fidelity.py": {
+      "bytes": 32573,
+      "sha256": "57ddf8ed05df7fd2b161bb111920eeb72f146e3162dcb42cb158819d1e10a8ee"
+    }
+  },
+  "scope": "November12 synthetic LOBSTER fidelity publication; old PR9 historical manifest bytes are separately preserved, not interpreted as current live documentation/workflow"
+}

@@ -1,10 +1,15 @@
 # LOBSTER preprocessing fidelity — November 12, 2026
 
-This preregistered study has not executed any new numerical case yet. PR9
-corrected strict shared conversion helpers, but LOBSTER still divides raw prices
-by the vendor scale and multiplies seconds by one billion before those exact
-checks. The hypothesis is that these intermediate Decimal operations can lose
-valid integer-price or nanosecond-time information under reduced precision.
+LOBSTER preprocessing still loses valid source information after PR9. At
+Decimal precision 3, a faithful integer-price pair is admitted with bid/ask ticks
+`10000/10100` instead of `10001/10103`; a nanosecond-grid pair's 1 ns and 9 ns
+offsets both become zero. Both incorrect streams pass strict canonical
+validation. At default precision, the deliberately invalid long-subnanosecond
+input is also admitted after rounding hides its fractional nanosecond.
+
+The single candidate composes price scaling/ticks and seconds/nanoseconds through
+PR9's unchanged exact kernel. All 36 frozen observations pass, including exact
+TRADE cause, and the ordinary default-precision output remains byte-identical.
 
 Ordinary valid LOBSTER inputs are not predicted to fail at default precision 28:
 Int64 raw prices and within-day nanosecond times fit that precision. Extra
@@ -24,8 +29,10 @@ snapshots at that commit, not live manifests for later workflow/document edits.
 The [contract](evidence/lobster-fidelity-20261112/contract.json),
 [paired inputs](evidence/lobster-fidelity-20261112/fixtures.json) and
 [independent design review](evidence/lobster-fidelity-20261112/design-review.json)
-precede every new numerical probe, oracle evaluation, collection, test,
-conversion and candidate.
+were committed as `88510ac5190487e13810cf4eb9fdbc86e0944fe0` before every new
+numerical probe, oracle evaluation, collection, test, conversion and candidate.
+The independent oracle/controller and final static acceptance were frozen in
+`0aab4ce857859ab20523bcdd7cd0086935ca102f` before baseline execution.
 
 Twelve fixed paired-file cases run in three fixed contexts: precision 28,
 precision 3, and precision 3 with Inexact/Rounded traps. The 36 public adapter
@@ -93,5 +100,147 @@ acquisition, Nasdaq review, private E1/E2 material, denied-action retry, paid
 service, credential/access/security change, desktop, merge, deployment or trading
 is included.
 
-Results and complete trial/source/artifact provenance will be recorded only
-after the frozen baseline and candidate are executed and independently reviewed.
+## Results and decision
+
+The measured candidate is `6b619fc992ead607feedccbf1bd590db2c60e01b`.
+Relative to PR9, only `lobster.py` differs among the 38 pinned production paths.
+The exact kernel, adapter utilities and all 251 protected historical PR9 files
+remain unchanged. Later documentation/evidence edits do not alter measured
+source, inputs, oracle or controller.
+
+| Fixed context | PR9 observations with semantic mismatch | PR9 observations with changed flags | Candidate, either category |
+| --- | ---: | ---: | ---: |
+| Precision 28 | 1 | 1 | 0 |
+| Precision 3 | 9 | 9 | 0 |
+| Precision 3 with traps | 9 | 9 | 0 |
+| Total over 36 observations | 19 | 19 | 0 |
+
+The categories overlap; these are 19 observations exposing preprocessing
+rounding, not 19 distinct defects. PR9 changes Inexact/Rounded flags or raises
+their trap exceptions. Neither source changes the configured precision,
+rounding mode, other settings, outer context or integer-string guard. The
+candidate preserves every recorded context/trap/preexisting-flag value.
+
+The valid reduced-precision price witness retains the original integer CSV
+values and coherent post-message book, but PR9's intermediate display-price
+division changes the resulting ticks. The valid time witness collapses an
+8 ns gap to zero. The candidate preserves both exact prices and offsets. Both
+book and message conversion are corrected: all two-row positive cases retain
+the one-unit BID TRADE and have no window-reconciliation cancellation/addition.
+The oracle would reject a partial book-only repair that silently changed that
+TRADE into a reconciliation CANCEL.
+
+Default-precision valid controls already match the exact oracle. No numeric
+corruption of ordinary valid default-precision vendor-style inputs is shown.
+The default long-subnanosecond admission is instead a demonstrated invalid-input
+rejection hole. Candidate negatives raise `MarketDataAdapterError` with the
+frozen field, row and reason, without creating a canonical file. Error price
+text intentionally displays original raw/scale/tick operands; it does not
+recompute a rounded display quotient merely for diagnostics.
+
+All 15 candidate positive frames match the independent exact rows, causes,
+diagnostics, dictionary reconstruction, fingerprints and strict certificates.
+All 21 negative observations have the required errors. The ordinary 17-row
+control's actual Parquet bytes, rows/schema, diagnostics, fingerprints and
+certificate equal the PR9 baseline. Its previously exposed input is a regression
+control, not a fresh market holdout.
+
+The practical decision is to retain the single-file correction in a draft
+stacked on PR9, preserving that dependency rather than duplicating its kernel.
+It closes the demonstrated upstream price/time loss path. This establishes
+source-conversion fidelity for the bounded study, not real-data rights,
+venue-faithful order priority, execution calibration or economic advantage.
+
+## Trials, provenance and independent review
+
+Exactly one PR9 worker and one candidate worker executed locally, each with
+the same 36 public pair observations and one existing normal conversion.
+Candidate comparison rehashed and reused baseline evidence without rerunning
+PR9. There was one source candidate, zero numerical repairs, no omitted trials,
+timeouts, worker infrastructure failures, substituted pairs or changed gates.
+Full-suite and exact-head CI repetitions are separately prescribed verification.
+Existing PR9's 240-case corpus runs only as an unchanged ordinary regression;
+its closed historical experiment is not reopened.
+
+One metadata-path omission was found and corrected during static prebaseline
+review: the preservation list also needed PR9's narrative report. That happened
+before numerical execution and changed no inputs or criteria. Static authoring
+and linting are not hidden numerical candidates.
+
+| Frozen component | SHA-256 |
+| --- | --- |
+| Contract | `513f9b2be85b582c020e575b32dded6df123f10d0aaeee4e51d7aceed755de8b` |
+| Paired inputs | `1987016a419c065535b2ac5590305e1966328c39e495feda8eb487dbf2dbf670` |
+| Independent test/provider | `a29f7842ff5565f7a9f80b46544333208684a251fc192cbd19c756dad6e76906` |
+| Controller | `57ddf8ed05df7fd2b161bb111920eeb72f146e3162dcb42cb158819d1e10a8ee` |
+| Candidate LOBSTER source | `145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5` |
+
+Independent reviewers challenged domain faithfulness, protocol, oracle and
+controller before outcomes, then the actual source before candidate measurement.
+Actual-result review checked the complete original-input and context ledgers,
+raw boundary-call prefixes and copied level states. All 34 actual Parquets
+(18 PR9, 16 candidate) were independently rehashed/decoded/reconstructed and
+fingerprinted. The 148 observed CSV files comprise 144 generated paired files
+and four copies of the two existing control inputs. The normal pair is
+byte-identical. Archive/import/source pins and all 251 historical PR9 file bytes
+were checked against the pinned snapshot. The controller author's separate
+artifact audit is disclosed alongside the reviewer who authored no production,
+test or controller code. Auditors did not rerun adapters, tests or study workers.
+See the [final review](evidence/lobster-fidelity-20261112/final-review.json).
+
+## Reproduction and evidence
+
+With project development dependencies and Python 3.12, use a new output path:
+
+```bash
+python tools/reproduce_lobster_fidelity.py --stage verify \
+  --candidate "$(git rev-parse HEAD)" \
+  --output experiments/lobster-fidelity-independent/verify
+```
+
+The original local commands were:
+
+```bash
+python tools/reproduce_lobster_fidelity.py --stage baseline \
+  --output experiments/lobster-fidelity-20261112/baseline
+python tools/reproduce_lobster_fidelity.py --stage study \
+  --candidate 6b619fc992ead607feedccbf1bd590db2c60e01b \
+  --baseline-evidence experiments/lobster-fidelity-20261112/baseline \
+  --output experiments/lobster-fidelity-20261112/study-final
+```
+
+The controller refuses to overwrite retained evidence, uses isolated Git source
+archives and verifies actual imported paths/hashes, frozen inputs, dependencies,
+JUnit and complete file manifests, including stopped attempts. Historical PR9
+manifests are checked as preserved files at their original commit; their old
+live-code/document entries are not reinterpreted as current-head snapshots.
+
+The local interpreter was
+`/workspace/lob-market-maker-accounting-fix/.venv/bin/python` (Python 3.12.14).
+Direct suite verification used `PYTHONPATH=$PWD/src` to supersede its older
+editable installation. All 37 actual suite module paths/hashes were checked;
+the suite's identity observer runs after coverage has observed execution.
+
+The original evidence remains under
+`/workspace/lob-market-maker-lobster-fix/experiments/lobster-fidelity-20261112/`.
+The [workspace manifest](evidence/lobster-fidelity-20261112/workspace-manifest.json)
+lists its files except bytecode caches. The committed
+[local evidence](evidence/lobster-fidelity-20261112/local/) preserves verbatim
+records, actual CSV/Parquet files, raw observer/context/oracle facts, logs,
+JUnit, environments and quality results. Redundant source/frozen-input/controller
+copies remain locally and are represented by source hashes and Git commits.
+The [publication manifest](evidence/lobster-fidelity-20261112/sha256-manifest.json)
+hashes the report, live adapter documentation, workflow, source, frozen harness
+and all curated evidence.
+
+Local ordinary checks passed **262 tests / 90.72% branch-aware coverage**,
+Ruff lint/format (86 files) and strict mypy (37 source files). This includes the
+unchanged PR9 regression tests. Existing integration tests and CI smoke are
+compatibility checks, not strategy-selection trials or market-performance data.
+
+Exact-head CI records the actual checkout, runs ordinary gates/smoke and both
+archived source workers, prints complete numerical/source ledgers and retains
+head-named artifacts for 14 days. Verified terminal CI/run/head/artifact details
+will be recorded in the draft PR body after publication; local results alone
+are not remote CI proof. Metadata and automated comparisons do not imply an
+independent download/audit of remote ZIP or Parquet bytes.
