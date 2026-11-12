@@ -1,0 +1,79 @@
+{
+  "base_pr9": "253abee735c02d7805e2a4377c12626742108d84",
+  "date": "2026-11-12",
+  "limitations": [
+    "Synthetic ingress correctness only; not strategy economics or calibrated fills.",
+    "Valid ordinary default28 controls already exact; default28 finding concerns deliberately invalid subnanosecond input.",
+    "No real source rights/tape/execution calibration admitted.",
+    "Exact-head CI and remote archive metadata must be verified after publication; no remote ZIP download/audit claimed."
+  ],
+  "local_checks": {
+    "coverage_percent_branch_aware": 90.72,
+    "failures": 0,
+    "full_suite_actual_import_pins": 37,
+    "mypy_sources": 37,
+    "ruff_files": 86,
+    "tests": 262,
+    "worker_status_and_raw_evidence_retained": true
+  },
+  "measured_commit": "6b619fc992ead607feedccbf1bd590db2c60e01b",
+  "publication_integrity_review": {
+    "actual_parquet_files": 34,
+    "csv_files": 148,
+    "historical_pr9_git_and_current_bytes": 251,
+    "no_reruns_edits_or_remote_actions": true,
+    "no_secret_or_private_licensed_input_found": true,
+    "publication_manifest_entries": 229,
+    "raw_hashed_files": 315,
+    "report_links_resolve": true,
+    "reviewer": "source_adversary",
+    "verbatim_curated_copies": 213,
+    "verdict": "GO"
+  },
+  "report_and_workflow_review": {
+    "coverage": "Human report, live adapter documentation, exact-head archived-source workflow, full-suite JUnit/coverage/import identities and quality logs",
+    "no_reruns_or_edits": true,
+    "reviewer": "independent_feasibility",
+    "verdict": "GO"
+  },
+  "results": {
+    "actual_parquets_audited": 34,
+    "baseline_changed_flags_observations": 19,
+    "baseline_observations": 36,
+    "baseline_overlap": true,
+    "baseline_semantic_mismatches": 19,
+    "by_context_mismatch": [
+      1,
+      9,
+      9
+    ],
+    "candidate_context_changes": 0,
+    "candidate_mismatches": 0,
+    "candidate_observations": 36,
+    "negative_expected_errors": 21,
+    "normal_control_rows": 17,
+    "normal_full_record_and_parquet_bytes_identical": true,
+    "observed_csv_files_audited": 148,
+    "only_changed_source": "src/lobmm/data/lobster.py",
+    "positive_frames": 15,
+    "protected_historical_pr9_files_unchanged": 251,
+    "source_paths": 38
+  },
+  "reviewers": {
+    "data_execution_audit": "Separate baseline and candidate actual CSV/Parquet/context/source audit GO; controller author, role disclosed",
+    "growth_reproducer": "Independent test/provider author; no study execution",
+    "independent_feasibility": "Independent frozen design, baseline and candidate oracle/context/actual-artifact GO; no production/test/controller authorship; report/CI review separate",
+    "independent_feasibility/lobster_format_review": "Independent structure/archive/import/history/baseline reuse GO",
+    "performance_reproducer": "Production source author; no study execution",
+    "source_adversary": "Static production source and unchanged kernel/API scope GO; no code authorship or numerical execution"
+  },
+  "root_record_of_independent_reviews": true,
+  "trials": {
+    "baseline_reused_without_rerun": true,
+    "baseline_workers": 1,
+    "candidate_repairs": 0,
+    "candidate_workers": 1,
+    "full_suite_and_remote_CI": "separate required verification; no candidate selection from those results"
+  },
+  "verdict": "GO for local result, source, actual artifacts, report/workflow and final publication curation; terminal exact-head remote CI remains separate gate"
+}

@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-12",
+  "decision": "GO for frozen candidate",
+  "phase": "Single PR9 baseline complete before candidate measurement",
+  "reviewer": "independent_feasibility",
+  "recorded_by": "root from independent actual-evidence audit",
+  "baseline": "253abee735c02d7805e2a4377c12626742108d84",
+  "frozen_harness_commit": "0aab4ce857859ab20523bcdd7cd0086935ca102f",
+  "execution": {
+    "workers": 1,
+    "observations": 36,
+    "junit": {
+      "collected": 4,
+      "failed": 3,
+      "passed": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "worker_exit_code": 0,
+    "pytest_exit_code": 1,
+    "semantic_mismatches": 19,
+    "context_flag_changes": 19,
+    "observations_with_any_failed_check": 19
+  },
+  "primary_verified": [
+    "Valid reduced3 price_pair admitted strict-valid with bid/ask ticks10000/10100 instead10001/10103",
+    "Valid reduced3 time_pair admitted strict-valid with1ns and9ns offsets bothzero,8nsgaplost",
+    "Default28 corresponding valid pairs exactly match source-derived oracle",
+    "Default28 explicitly INVALID subns_long admitted strict-valid insteadresolution rejection"
+  ],
+  "independent_artifact_audit": [
+    "All36 original pair/oracle/cause/diagnostic/raw-boundary/context records",
+    "All18 actual Parquets rehashed/decoded/dictionary-reconstructed/fingerprinted/strict-certified",
+    "74 actual CSVs parsed/rehashed,160 original boundary calls checked",
+    "One existing17-row default control strict-valid",
+    "All153 manifest files,38 source/import snapshots,full PR9 Git archive and251 historical files including report preserved",
+    "All outer contexts/guard4300 unchanged; in-profile flags expose loss/traps"
+  ],
+  "profile_failures": [
+    {
+      "profile": "default28",
+      "semantic": 1,
+      "flags": 1
+    },
+    {
+      "profile": "reduced3",
+      "semantic": 9,
+      "flags": 9
+    },
+    {
+      "profile": "reduced3_trapped",
+      "semantic": 9,
+      "flags": 9
+    }
+  ],
+  "limits": [
+    "19 violated observations are overlapping manifestations, not19 independent defects",
+    "No ordinary valid default28 distortion observed; malformed subns is a rejection control only",
+    "No tests/adapters/controller/worker reruns or writes by reviewer",
+    "No economic/data admission/calibration or PR3 performance result"
+  ]
+}
