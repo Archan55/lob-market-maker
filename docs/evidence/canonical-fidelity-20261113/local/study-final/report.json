@@ -1,0 +1,5088 @@
+{
+  "status": "complete",
+  "stage": "study",
+  "pins": {
+    "docs/evidence/canonical-fidelity-20261113/contract.json": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730",
+    "docs/evidence/canonical-fidelity-20261113/fixtures.json": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7",
+    "docs/evidence/canonical-fidelity-20261113/design-review.json": "605e3690d18a082784246719be711f3e3fc05de7e05bc7f64882b6e962bfb6e1",
+    "tests/unit/test_canonical_fidelity_independent.py": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855",
+    "tools/reproduce_canonical_fidelity.py": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+  },
+  "harness_sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453",
+  "process_cap_seconds": 120,
+  "sources": {
+    "main": {
+      "resolved_revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "git_archive_sha256": "45da6c2f4d117a08cf94b8af38d51392014e5c5553790b96bdaf0a148958837e",
+      "source_sha256": {
+        "src/lobmm/__init__.py": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+        "src/lobmm/backtest.py": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "src/lobmm/benchmark.py": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+        "src/lobmm/book.py": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+        "src/lobmm/case_study.py": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+        "src/lobmm/channels.py": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+        "src/lobmm/cli.py": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+        "src/lobmm/config.py": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+        "src/lobmm/data/__init__.py": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+        "src/lobmm/data/_adapter_utils.py": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229",
+        "src/lobmm/data/adapters.py": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+        "src/lobmm/data/fingerprint.py": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+        "src/lobmm/data/loaders.py": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a",
+        "src/lobmm/data/lobster.py": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8",
+        "src/lobmm/data/manifest.py": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+        "src/lobmm/data/schema.py": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9",
+        "src/lobmm/data/tardis.py": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+        "src/lobmm/enums.py": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+        "src/lobmm/events.py": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+        "src/lobmm/exchange.py": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+        "src/lobmm/experiments.py": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+        "src/lobmm/metrics.py": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "src/lobmm/orders.py": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+        "src/lobmm/portfolio.py": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3",
+        "src/lobmm/py.typed": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "src/lobmm/queue_model.py": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+        "src/lobmm/report.py": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "src/lobmm/risk.py": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38",
+        "src/lobmm/scheduler.py": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+        "src/lobmm/strategies/__init__.py": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+        "src/lobmm/strategies/base.py": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+        "src/lobmm/strategies/fixed_spread.py": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d",
+        "src/lobmm/strategies/inventory_aware.py": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897",
+        "src/lobmm/strategies/microprice.py": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c",
+        "src/lobmm/strategy_runtime.py": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+        "src/lobmm/synthetic.py": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+        "src/lobmm/types.py": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a",
+        "src/lobmm/validation.py": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+      }
+    },
+    "candidate": {
+      "resolved_revision": "6348303f041229d20d46d5bdc66165ba03e88040",
+      "git_archive_sha256": "80b63c7080b76c9d1f88c5fc512a3002811edf88c3483e589f9ca26a4115a48c",
+      "source_sha256": {
+        "src/lobmm/__init__.py": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+        "src/lobmm/backtest.py": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "src/lobmm/benchmark.py": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+        "src/lobmm/book.py": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+        "src/lobmm/case_study.py": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+        "src/lobmm/channels.py": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+        "src/lobmm/cli.py": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+        "src/lobmm/config.py": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+        "src/lobmm/data/__init__.py": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+        "src/lobmm/data/_adapter_utils.py": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229",
+        "src/lobmm/data/adapters.py": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+        "src/lobmm/data/fingerprint.py": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+        "src/lobmm/data/loaders.py": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+        "src/lobmm/data/lobster.py": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8",
+        "src/lobmm/data/manifest.py": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+        "src/lobmm/data/schema.py": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+        "src/lobmm/data/tardis.py": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+        "src/lobmm/enums.py": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+        "src/lobmm/events.py": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+        "src/lobmm/exchange.py": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+        "src/lobmm/experiments.py": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+        "src/lobmm/metrics.py": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "src/lobmm/orders.py": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+        "src/lobmm/portfolio.py": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3",
+        "src/lobmm/py.typed": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "src/lobmm/queue_model.py": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+        "src/lobmm/report.py": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "src/lobmm/risk.py": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38",
+        "src/lobmm/scheduler.py": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+        "src/lobmm/strategies/__init__.py": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+        "src/lobmm/strategies/base.py": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+        "src/lobmm/strategies/fixed_spread.py": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d",
+        "src/lobmm/strategies/inventory_aware.py": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897",
+        "src/lobmm/strategies/microprice.py": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c",
+        "src/lobmm/strategy_runtime.py": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+        "src/lobmm/synthetic.py": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+        "src/lobmm/types.py": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a",
+        "src/lobmm/validation.py": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+      }
+    }
+  },
+  "observations": [
+    {
+      "role": "candidate",
+      "status": "complete",
+      "resolved_revision": "6348303f041229d20d46d5bdc66165ba03e88040",
+      "git_archive_sha256": "80b63c7080b76c9d1f88c5fc512a3002811edf88c3483e589f9ca26a4115a48c",
+      "source_sha256": {
+        "src/lobmm/__init__.py": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+        "src/lobmm/backtest.py": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+        "src/lobmm/benchmark.py": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+        "src/lobmm/book.py": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+        "src/lobmm/case_study.py": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+        "src/lobmm/channels.py": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+        "src/lobmm/cli.py": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+        "src/lobmm/config.py": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+        "src/lobmm/data/__init__.py": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+        "src/lobmm/data/_adapter_utils.py": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229",
+        "src/lobmm/data/adapters.py": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+        "src/lobmm/data/fingerprint.py": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+        "src/lobmm/data/loaders.py": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+        "src/lobmm/data/lobster.py": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8",
+        "src/lobmm/data/manifest.py": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+        "src/lobmm/data/schema.py": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+        "src/lobmm/data/tardis.py": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+        "src/lobmm/enums.py": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+        "src/lobmm/events.py": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+        "src/lobmm/exchange.py": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+        "src/lobmm/experiments.py": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+        "src/lobmm/metrics.py": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+        "src/lobmm/orders.py": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+        "src/lobmm/portfolio.py": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3",
+        "src/lobmm/py.typed": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "src/lobmm/queue_model.py": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+        "src/lobmm/report.py": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+        "src/lobmm/risk.py": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38",
+        "src/lobmm/scheduler.py": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+        "src/lobmm/strategies/__init__.py": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+        "src/lobmm/strategies/base.py": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+        "src/lobmm/strategies/fixed_spread.py": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d",
+        "src/lobmm/strategies/inventory_aware.py": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897",
+        "src/lobmm/strategies/microprice.py": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c",
+        "src/lobmm/strategy_runtime.py": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+        "src/lobmm/synthetic.py": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+        "src/lobmm/types.py": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a",
+        "src/lobmm/validation.py": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+      },
+      "worker_returncode": 0,
+      "result": {
+        "status": "complete",
+        "nodes": [
+          "tests/unit/test_canonical_fidelity_independent.py::test_frozen_canonical_corpus_records_every_case_before_asserting",
+          "tests/unit/test_canonical_fidelity_independent.py::test_existing_six_event_control_preserves_canonical_contract"
+        ],
+        "reports": [
+          {
+            "nodeid": "tests/unit/test_canonical_fidelity_independent.py::test_frozen_canonical_corpus_records_every_case_before_asserting",
+            "when": "setup",
+            "outcome": "passed",
+            "longrepr": null
+          },
+          {
+            "nodeid": "tests/unit/test_canonical_fidelity_independent.py::test_frozen_canonical_corpus_records_every_case_before_asserting",
+            "when": "call",
+            "outcome": "passed",
+            "longrepr": null
+          },
+          {
+            "nodeid": "tests/unit/test_canonical_fidelity_independent.py::test_frozen_canonical_corpus_records_every_case_before_asserting",
+            "when": "teardown",
+            "outcome": "passed",
+            "longrepr": null
+          },
+          {
+            "nodeid": "tests/unit/test_canonical_fidelity_independent.py::test_existing_six_event_control_preserves_canonical_contract",
+            "when": "setup",
+            "outcome": "passed",
+            "longrepr": null
+          },
+          {
+            "nodeid": "tests/unit/test_canonical_fidelity_independent.py::test_existing_six_event_control_preserves_canonical_contract",
+            "when": "call",
+            "outcome": "passed",
+            "longrepr": null
+          },
+          {
+            "nodeid": "tests/unit/test_canonical_fidelity_independent.py::test_existing_six_event_control_preserves_canonical_contract",
+            "when": "teardown",
+            "outcome": "passed",
+            "longrepr": null
+          }
+        ],
+        "exceptions": [],
+        "environment": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+          "dependencies": {
+            "pytest": "9.2.0",
+            "polars": "2.1.0",
+            "pyarrow": "26.0.0",
+            "pydantic": "2.14.2",
+            "PyYAML": "6.0.3",
+            "numpy": "2.5.4",
+            "matplotlib": "3.11.2",
+            "typer": "0.27.3"
+          },
+          "integer_string_guard": 4300,
+          "assertions_enabled": true
+        },
+        "evidence_directory": "candidate-evidence",
+        "imports_before_collection": {
+          "src/lobmm/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/__init__.py",
+            "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+          },
+          "src/lobmm/backtest.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/backtest.py",
+            "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+          },
+          "src/lobmm/benchmark.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/benchmark.py",
+            "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+          },
+          "src/lobmm/book.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/book.py",
+            "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+          },
+          "src/lobmm/case_study.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/case_study.py",
+            "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+          },
+          "src/lobmm/channels.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/channels.py",
+            "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+          },
+          "src/lobmm/cli.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/cli.py",
+            "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+          },
+          "src/lobmm/config.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/config.py",
+            "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "src/lobmm/data/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/__init__.py",
+            "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+          },
+          "src/lobmm/data/_adapter_utils.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/_adapter_utils.py",
+            "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+          },
+          "src/lobmm/data/adapters.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/adapters.py",
+            "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+          },
+          "src/lobmm/data/fingerprint.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/fingerprint.py",
+            "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+          },
+          "src/lobmm/data/loaders.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/loaders.py",
+            "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+          },
+          "src/lobmm/data/lobster.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/lobster.py",
+            "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+          },
+          "src/lobmm/data/manifest.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/manifest.py",
+            "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+          },
+          "src/lobmm/data/schema.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/schema.py",
+            "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+          },
+          "src/lobmm/data/tardis.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/tardis.py",
+            "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+          },
+          "src/lobmm/enums.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/enums.py",
+            "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+          },
+          "src/lobmm/events.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/events.py",
+            "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+          },
+          "src/lobmm/exchange.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/exchange.py",
+            "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+          },
+          "src/lobmm/experiments.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/experiments.py",
+            "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+          },
+          "src/lobmm/metrics.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/metrics.py",
+            "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+          },
+          "src/lobmm/orders.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/orders.py",
+            "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+          },
+          "src/lobmm/portfolio.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/portfolio.py",
+            "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+          },
+          "src/lobmm/py.typed": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/py.typed",
+            "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+          },
+          "src/lobmm/queue_model.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/queue_model.py",
+            "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+          },
+          "src/lobmm/report.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/report.py",
+            "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+          },
+          "src/lobmm/risk.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/risk.py",
+            "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+          },
+          "src/lobmm/scheduler.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/scheduler.py",
+            "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+          },
+          "src/lobmm/strategies/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/__init__.py",
+            "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+          },
+          "src/lobmm/strategies/base.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/base.py",
+            "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+          },
+          "src/lobmm/strategies/fixed_spread.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/fixed_spread.py",
+            "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+          },
+          "src/lobmm/strategies/inventory_aware.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/inventory_aware.py",
+            "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+          },
+          "src/lobmm/strategies/microprice.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/microprice.py",
+            "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+          },
+          "src/lobmm/strategy_runtime.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategy_runtime.py",
+            "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+          },
+          "src/lobmm/synthetic.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/synthetic.py",
+            "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+          },
+          "src/lobmm/types.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/types.py",
+            "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+          },
+          "src/lobmm/validation.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/validation.py",
+            "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+          }
+        },
+        "imports_after_collection": {
+          "src/lobmm/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/__init__.py",
+            "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+          },
+          "src/lobmm/backtest.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/backtest.py",
+            "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+          },
+          "src/lobmm/benchmark.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/benchmark.py",
+            "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+          },
+          "src/lobmm/book.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/book.py",
+            "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+          },
+          "src/lobmm/case_study.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/case_study.py",
+            "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+          },
+          "src/lobmm/channels.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/channels.py",
+            "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+          },
+          "src/lobmm/cli.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/cli.py",
+            "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+          },
+          "src/lobmm/config.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/config.py",
+            "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "src/lobmm/data/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/__init__.py",
+            "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+          },
+          "src/lobmm/data/_adapter_utils.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/_adapter_utils.py",
+            "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+          },
+          "src/lobmm/data/adapters.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/adapters.py",
+            "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+          },
+          "src/lobmm/data/fingerprint.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/fingerprint.py",
+            "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+          },
+          "src/lobmm/data/loaders.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/loaders.py",
+            "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+          },
+          "src/lobmm/data/lobster.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/lobster.py",
+            "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+          },
+          "src/lobmm/data/manifest.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/manifest.py",
+            "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+          },
+          "src/lobmm/data/schema.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/schema.py",
+            "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+          },
+          "src/lobmm/data/tardis.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/tardis.py",
+            "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+          },
+          "src/lobmm/enums.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/enums.py",
+            "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+          },
+          "src/lobmm/events.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/events.py",
+            "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+          },
+          "src/lobmm/exchange.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/exchange.py",
+            "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+          },
+          "src/lobmm/experiments.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/experiments.py",
+            "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+          },
+          "src/lobmm/metrics.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/metrics.py",
+            "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+          },
+          "src/lobmm/orders.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/orders.py",
+            "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+          },
+          "src/lobmm/portfolio.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/portfolio.py",
+            "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+          },
+          "src/lobmm/py.typed": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/py.typed",
+            "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+          },
+          "src/lobmm/queue_model.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/queue_model.py",
+            "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+          },
+          "src/lobmm/report.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/report.py",
+            "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+          },
+          "src/lobmm/risk.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/risk.py",
+            "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+          },
+          "src/lobmm/scheduler.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/scheduler.py",
+            "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+          },
+          "src/lobmm/strategies/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/__init__.py",
+            "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+          },
+          "src/lobmm/strategies/base.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/base.py",
+            "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+          },
+          "src/lobmm/strategies/fixed_spread.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/fixed_spread.py",
+            "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+          },
+          "src/lobmm/strategies/inventory_aware.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/inventory_aware.py",
+            "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+          },
+          "src/lobmm/strategies/microprice.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/microprice.py",
+            "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+          },
+          "src/lobmm/strategy_runtime.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategy_runtime.py",
+            "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+          },
+          "src/lobmm/synthetic.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/synthetic.py",
+            "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+          },
+          "src/lobmm/types.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/types.py",
+            "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+          },
+          "src/lobmm/validation.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/validation.py",
+            "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+          }
+        },
+        "pytest_exit_code": 0,
+        "imports_after_execution": {
+          "src/lobmm/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/__init__.py",
+            "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+          },
+          "src/lobmm/backtest.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/backtest.py",
+            "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+          },
+          "src/lobmm/benchmark.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/benchmark.py",
+            "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+          },
+          "src/lobmm/book.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/book.py",
+            "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+          },
+          "src/lobmm/case_study.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/case_study.py",
+            "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+          },
+          "src/lobmm/channels.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/channels.py",
+            "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+          },
+          "src/lobmm/cli.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/cli.py",
+            "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+          },
+          "src/lobmm/config.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/config.py",
+            "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+          },
+          "src/lobmm/data/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/__init__.py",
+            "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+          },
+          "src/lobmm/data/_adapter_utils.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/_adapter_utils.py",
+            "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+          },
+          "src/lobmm/data/adapters.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/adapters.py",
+            "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+          },
+          "src/lobmm/data/fingerprint.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/fingerprint.py",
+            "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+          },
+          "src/lobmm/data/loaders.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/loaders.py",
+            "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+          },
+          "src/lobmm/data/lobster.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/lobster.py",
+            "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+          },
+          "src/lobmm/data/manifest.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/manifest.py",
+            "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+          },
+          "src/lobmm/data/schema.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/schema.py",
+            "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+          },
+          "src/lobmm/data/tardis.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/tardis.py",
+            "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+          },
+          "src/lobmm/enums.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/enums.py",
+            "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+          },
+          "src/lobmm/events.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/events.py",
+            "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+          },
+          "src/lobmm/exchange.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/exchange.py",
+            "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+          },
+          "src/lobmm/experiments.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/experiments.py",
+            "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+          },
+          "src/lobmm/metrics.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/metrics.py",
+            "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+          },
+          "src/lobmm/orders.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/orders.py",
+            "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+          },
+          "src/lobmm/portfolio.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/portfolio.py",
+            "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+          },
+          "src/lobmm/py.typed": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/py.typed",
+            "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+          },
+          "src/lobmm/queue_model.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/queue_model.py",
+            "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+          },
+          "src/lobmm/report.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/report.py",
+            "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+          },
+          "src/lobmm/risk.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/risk.py",
+            "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+          },
+          "src/lobmm/scheduler.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/scheduler.py",
+            "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+          },
+          "src/lobmm/strategies/__init__.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/__init__.py",
+            "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+          },
+          "src/lobmm/strategies/base.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/base.py",
+            "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+          },
+          "src/lobmm/strategies/fixed_spread.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/fixed_spread.py",
+            "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+          },
+          "src/lobmm/strategies/inventory_aware.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/inventory_aware.py",
+            "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+          },
+          "src/lobmm/strategies/microprice.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategies/microprice.py",
+            "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+          },
+          "src/lobmm/strategy_runtime.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/strategy_runtime.py",
+            "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+          },
+          "src/lobmm/synthetic.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/synthetic.py",
+            "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+          },
+          "src/lobmm/types.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/types.py",
+            "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+          },
+          "src/lobmm/validation.py": {
+            "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/validation.py",
+            "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+          }
+        },
+        "frozen_pins_after_execution": {
+          "docs/evidence/canonical-fidelity-20261113/contract.json": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730",
+          "docs/evidence/canonical-fidelity-20261113/fixtures.json": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7",
+          "docs/evidence/canonical-fidelity-20261113/design-review.json": "605e3690d18a082784246719be711f3e3fc05de7e05bc7f64882b6e962bfb6e1",
+          "tests/unit/test_canonical_fidelity_independent.py": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855",
+          "tools/reproduce_canonical_fidelity.py": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+        },
+        "environment_after": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+          "dependencies": {
+            "pytest": "9.2.0",
+            "polars": "2.1.0",
+            "pyarrow": "26.0.0",
+            "pydantic": "2.14.2",
+            "PyYAML": "6.0.3",
+            "numpy": "2.5.4",
+            "matplotlib": "3.11.2",
+            "typer": "0.27.3"
+          },
+          "integer_string_guard": 4300,
+          "assertions_enabled": true
+        },
+        "counts": {
+          "collected": 2,
+          "passed": 2,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      },
+      "observed_summary": {
+        "case_ledger": [
+          {
+            "case": "mapping_fractional_timestamp_ns",
+            "route": "mapping",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "timestamp_ns",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "row 1: invalid canonical event: timestamp_ns: must be an exact integer",
+              "stage": "event_from_mapping"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "mapping_fractional_sequence_number",
+            "route": "mapping",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "sequence_number",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "row 1: invalid canonical event: sequence_number: must be an exact integer",
+              "stage": "event_from_mapping"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "mapping_fractional_price_ticks",
+            "route": "mapping",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "price_ticks",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "row 1: invalid canonical event: price_ticks: must be an exact integer",
+              "stage": "event_from_mapping"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "mapping_fractional_quantity",
+            "route": "mapping",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "row 1: invalid canonical event: quantity: must be an exact integer",
+              "stage": "event_from_mapping"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "mapping_fractional_side",
+            "route": "mapping",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "side",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "row 1: invalid canonical event: side: must be an exact integer",
+              "stage": "event_from_mapping"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_fractional_timestamp_ns",
+            "route": "frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "timestamp_ns",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot cast canonical event columns: timestamp_ns: must be an exact integer",
+              "stage": "frame_to_events"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_fractional_sequence_number",
+            "route": "frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "sequence_number",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot cast canonical event columns: sequence_number: must be an exact integer",
+              "stage": "frame_to_events"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_fractional_price_ticks",
+            "route": "frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "price_ticks",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot cast canonical event columns: price_ticks: must be an exact integer",
+              "stage": "frame_to_events"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_fractional_quantity",
+            "route": "frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot cast canonical event columns: quantity: must be an exact integer",
+              "stage": "frame_to_events"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_fractional_side",
+            "route": "frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "side",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot cast canonical event columns: side: must be an exact integer",
+              "stage": "frame_to_events"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "read_csv_fractional_quantity",
+            "route": "read_csv",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataLoadError",
+              "module": "lobmm.data.loaders",
+              "message": "cannot load canonical CSV /workspace/lob-market-maker-canonical-fix/experiments/canonical-fidelity-20261113/study-final/candidate-evidence/cases/read_csv_fractional_quantity/input.csv: quantity: must be an exact integer",
+              "stage": "read_csv"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "read_parquet_fractional_quantity",
+            "route": "read_parquet",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataLoadError",
+              "module": "lobmm.data.loaders",
+              "message": "cannot load canonical Parquet /workspace/lob-market-maker-canonical-fix/experiments/canonical-fidelity-20261113/study-final/candidate-evidence/cases/read_parquet_fractional_quantity/input.parquet: cannot cast canonical event columns: quantity: must be an exact integer",
+              "stage": "read_parquet"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "write_csv_fractional_quantity",
+            "route": "write_csv",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataLoadError",
+              "module": "lobmm.data.loaders",
+              "message": "cannot write canonical CSV /workspace/lob-market-maker-canonical-fix/experiments/canonical-fidelity-20261113/study-final/candidate-evidence/cases/write_csv_fractional_quantity/written.csv: cannot cast canonical event columns: quantity: must be an exact integer",
+              "stage": "write_csv"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": false,
+            "failed_checks": []
+          },
+          {
+            "case": "write_parquet_fractional_quantity",
+            "route": "write_parquet",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataLoadError",
+              "module": "lobmm.data.loaders",
+              "message": "cannot write canonical Parquet /workspace/lob-market-maker-canonical-fix/experiments/canonical-fidelity-20261113/study-final/candidate-evidence/cases/write_parquet_fractional_quantity/written.parquet: cannot cast canonical event columns: quantity: must be an exact integer",
+              "stage": "write_parquet"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": false,
+            "failed_checks": []
+          },
+          {
+            "case": "csv_mixed_epoch_fraction",
+            "route": "read_csv",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "timestamp_ns",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataLoadError",
+              "module": "lobmm.data.loaders",
+              "message": "cannot load canonical CSV /workspace/lob-market-maker-canonical-fix/experiments/canonical-fidelity-20261113/study-final/candidate-evidence/cases/csv_mixed_epoch_fraction/input.csv: timestamp_ns: must be an exact integer",
+              "stage": "read_csv"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "csv_long_fraction",
+            "route": "read_csv",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataLoadError",
+              "module": "lobmm.data.loaders",
+              "message": "cannot load canonical CSV /workspace/lob-market-maker-canonical-fix/experiments/canonical-fidelity-20261113/study-final/candidate-evidence/cases/csv_long_fraction/input.csv: quantity: must be an exact integer",
+              "stage": "read_csv"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "mapping_integral_float",
+            "route": "mapping",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "event_type": "RESET",
+                  "price_ticks": 0,
+                  "quantity": 0,
+                  "sequence_number": 0,
+                  "side": null,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "SNAPSHOT",
+                  "price_ticks": 100,
+                  "quantity": 10,
+                  "sequence_number": 1,
+                  "side": 1,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "SNAPSHOT",
+                  "price_ticks": 102,
+                  "quantity": 12,
+                  "sequence_number": 2,
+                  "side": -1,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "ADD",
+                  "price_ticks": 99,
+                  "quantity": 8,
+                  "sequence_number": 3,
+                  "side": 1,
+                  "timestamp_ns": 1
+                },
+                {
+                  "event_type": "CANCEL",
+                  "price_ticks": 102,
+                  "quantity": 2,
+                  "sequence_number": 4,
+                  "side": -1,
+                  "timestamp_ns": 2
+                },
+                {
+                  "event_type": "TRADE",
+                  "price_ticks": 100,
+                  "quantity": 4,
+                  "sequence_number": 5,
+                  "side": 1,
+                  "timestamp_ns": 3
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_integral_float",
+            "route": "frame",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 0,
+                  "event_type": "RESET",
+                  "side": null,
+                  "price_ticks": 0,
+                  "quantity": 0
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 1,
+                  "event_type": "SNAPSHOT",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 10
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 2,
+                  "event_type": "SNAPSHOT",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 12
+                },
+                {
+                  "timestamp_ns": 1,
+                  "sequence_number": 3,
+                  "event_type": "ADD",
+                  "side": 1,
+                  "price_ticks": 99,
+                  "quantity": 8
+                },
+                {
+                  "timestamp_ns": 2,
+                  "sequence_number": 4,
+                  "event_type": "CANCEL",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 2
+                },
+                {
+                  "timestamp_ns": 3,
+                  "sequence_number": 5,
+                  "event_type": "TRADE",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 4
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "csv_integer_epoch",
+            "route": "read_csv",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "timestamp_ns": 1700000000000000001,
+                  "sequence_number": 0,
+                  "event_type": "RESET",
+                  "side": null,
+                  "price_ticks": 0,
+                  "quantity": 0
+                },
+                {
+                  "timestamp_ns": 1700000000000000002,
+                  "sequence_number": 1,
+                  "event_type": "SNAPSHOT",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 10
+                },
+                {
+                  "timestamp_ns": 1700000000000000003,
+                  "sequence_number": 2,
+                  "event_type": "SNAPSHOT",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 12
+                },
+                {
+                  "timestamp_ns": 1700000000000000004,
+                  "sequence_number": 3,
+                  "event_type": "ADD",
+                  "side": 1,
+                  "price_ticks": 99,
+                  "quantity": 8
+                },
+                {
+                  "timestamp_ns": 1700000000000000005,
+                  "sequence_number": 4,
+                  "event_type": "CANCEL",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 2
+                },
+                {
+                  "timestamp_ns": 1700000000000000006,
+                  "sequence_number": 5,
+                  "event_type": "TRADE",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 4
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 1700000000000000001,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 1700000000000000002,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 1700000000000000003,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1700000000000000004,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 1700000000000000005,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 1700000000000000006,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "csv_integral_decimal",
+            "route": "read_csv",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 0,
+                  "event_type": "RESET",
+                  "side": null,
+                  "price_ticks": 0,
+                  "quantity": 0
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 1,
+                  "event_type": "SNAPSHOT",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 10
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 2,
+                  "event_type": "SNAPSHOT",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 12
+                },
+                {
+                  "timestamp_ns": 1,
+                  "sequence_number": 3,
+                  "event_type": "ADD",
+                  "side": 1,
+                  "price_ticks": 99,
+                  "quantity": 8
+                },
+                {
+                  "timestamp_ns": 2,
+                  "sequence_number": 4,
+                  "event_type": "CANCEL",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 2
+                },
+                {
+                  "timestamp_ns": 3,
+                  "sequence_number": 5,
+                  "event_type": "TRADE",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 4
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "parquet_integer",
+            "route": "read_parquet",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 0,
+                  "event_type": "RESET",
+                  "side": null,
+                  "price_ticks": 0,
+                  "quantity": 0
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 1,
+                  "event_type": "SNAPSHOT",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 10
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 2,
+                  "event_type": "SNAPSHOT",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 12
+                },
+                {
+                  "timestamp_ns": 1,
+                  "sequence_number": 3,
+                  "event_type": "ADD",
+                  "side": 1,
+                  "price_ticks": 99,
+                  "quantity": 8
+                },
+                {
+                  "timestamp_ns": 2,
+                  "sequence_number": 4,
+                  "event_type": "CANCEL",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 2
+                },
+                {
+                  "timestamp_ns": 3,
+                  "sequence_number": 5,
+                  "event_type": "TRADE",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 4
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_integer_strings",
+            "route": "frame",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 0,
+                  "event_type": "RESET",
+                  "side": null,
+                  "price_ticks": 0,
+                  "quantity": 0
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 1,
+                  "event_type": "SNAPSHOT",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 10
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 2,
+                  "event_type": "SNAPSHOT",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 12
+                },
+                {
+                  "timestamp_ns": 1,
+                  "sequence_number": 3,
+                  "event_type": "ADD",
+                  "side": 1,
+                  "price_ticks": 99,
+                  "quantity": 8
+                },
+                {
+                  "timestamp_ns": 2,
+                  "sequence_number": 4,
+                  "event_type": "CANCEL",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 2
+                },
+                {
+                  "timestamp_ns": 3,
+                  "sequence_number": 5,
+                  "event_type": "TRADE",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 4
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "mapping_integer_strings",
+            "route": "mapping",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "event_type": "RESET",
+                  "price_ticks": 0,
+                  "quantity": 0,
+                  "sequence_number": 0,
+                  "side": null,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "SNAPSHOT",
+                  "price_ticks": 100,
+                  "quantity": 10,
+                  "sequence_number": 1,
+                  "side": 1,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "SNAPSHOT",
+                  "price_ticks": 102,
+                  "quantity": 12,
+                  "sequence_number": 2,
+                  "side": -1,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "ADD",
+                  "price_ticks": 99,
+                  "quantity": 8,
+                  "sequence_number": 3,
+                  "side": 1,
+                  "timestamp_ns": 1
+                },
+                {
+                  "event_type": "CANCEL",
+                  "price_ticks": 102,
+                  "quantity": 2,
+                  "sequence_number": 4,
+                  "side": -1,
+                  "timestamp_ns": 2
+                },
+                {
+                  "event_type": "TRADE",
+                  "price_ticks": 100,
+                  "quantity": 4,
+                  "sequence_number": 5,
+                  "side": 1,
+                  "timestamp_ns": 3
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_int64_bound",
+            "route": "frame",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "timestamp_ns": 9223372036854775802,
+                  "sequence_number": 0,
+                  "event_type": "RESET",
+                  "side": null,
+                  "price_ticks": 0,
+                  "quantity": 0
+                },
+                {
+                  "timestamp_ns": 9223372036854775803,
+                  "sequence_number": 1,
+                  "event_type": "SNAPSHOT",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 10
+                },
+                {
+                  "timestamp_ns": 9223372036854775804,
+                  "sequence_number": 2,
+                  "event_type": "SNAPSHOT",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 12
+                },
+                {
+                  "timestamp_ns": 9223372036854775805,
+                  "sequence_number": 3,
+                  "event_type": "ADD",
+                  "side": 1,
+                  "price_ticks": 99,
+                  "quantity": 8
+                },
+                {
+                  "timestamp_ns": 9223372036854775806,
+                  "sequence_number": 4,
+                  "event_type": "CANCEL",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 2
+                },
+                {
+                  "timestamp_ns": 9223372036854775807,
+                  "sequence_number": 5,
+                  "event_type": "TRADE",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 4
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 9223372036854775802,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 9223372036854775803,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 9223372036854775804,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 9223372036854775805,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 9223372036854775806,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 9223372036854775807,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_fractional_decimal",
+            "route": "frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot cast canonical event columns: quantity: must be an exact integer",
+              "stage": "frame_to_events"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "mapping_fractional_decimal",
+            "route": "mapping",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "row 1: invalid canonical event: quantity: must be an exact integer",
+              "stage": "event_from_mapping"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_nonfinite",
+            "route": "frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonfinite",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot cast canonical event columns: quantity: must be a finite integer",
+              "stage": "frame_to_events"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_out_of_range",
+            "route": "frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "outside target integer range",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot cast canonical event columns: conversion from `u64` to `i64` failed in column 'quantity' for 1 out of 6 values: [9223372036854775808]\n\nThis error occurred in the following expression:\n\tcol(\"quantity\").strict_cast(Int64)\n",
+              "stage": "frame_to_events"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "reset_null_side",
+            "route": "frame",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 0,
+                  "event_type": "RESET",
+                  "side": null,
+                  "price_ticks": 0,
+                  "quantity": 0
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 1,
+                  "event_type": "SNAPSHOT",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 10
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 2,
+                  "event_type": "SNAPSHOT",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 12
+                },
+                {
+                  "timestamp_ns": 1,
+                  "sequence_number": 3,
+                  "event_type": "ADD",
+                  "side": 1,
+                  "price_ticks": 99,
+                  "quantity": 8
+                },
+                {
+                  "timestamp_ns": 2,
+                  "sequence_number": 4,
+                  "event_type": "CANCEL",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 2
+                },
+                {
+                  "timestamp_ns": 3,
+                  "sequence_number": 5,
+                  "event_type": "TRADE",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 4
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "events_fractional_quantity",
+            "route": "events_to_frame",
+            "expected": {
+              "status": "reject",
+              "rows": null,
+              "rejection_field": "quantity",
+              "rejection_row": 1,
+              "reason": "nonintegral",
+              "dictionary_reconstruction": null
+            },
+            "status": "rejected",
+            "actual_rows": null,
+            "actual_error": {
+              "type": "DataSchemaError",
+              "module": "lobmm.data.schema",
+              "message": "cannot encode canonical market events: quantity: must be an exact integer",
+              "stage": "events_to_frame"
+            },
+            "strict_valid": false,
+            "boundary_returned": false,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "events_mixed_epoch",
+            "route": "events_to_frame",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "event_type": "RESET",
+                  "price_ticks": 0,
+                  "quantity": 0,
+                  "sequence_number": 0,
+                  "side": null,
+                  "timestamp_ns": 1700000000000000001
+                },
+                {
+                  "event_type": "SNAPSHOT",
+                  "price_ticks": 100,
+                  "quantity": 10,
+                  "sequence_number": 1,
+                  "side": 1,
+                  "timestamp_ns": 1700000000000000256
+                },
+                {
+                  "event_type": "SNAPSHOT",
+                  "price_ticks": 102,
+                  "quantity": 12,
+                  "sequence_number": 2,
+                  "side": -1,
+                  "timestamp_ns": 1700000000000000513
+                },
+                {
+                  "event_type": "ADD",
+                  "price_ticks": 99,
+                  "quantity": 8,
+                  "sequence_number": 3,
+                  "side": 1,
+                  "timestamp_ns": 1700000000000000770
+                },
+                {
+                  "event_type": "CANCEL",
+                  "price_ticks": 102,
+                  "quantity": 2,
+                  "sequence_number": 4,
+                  "side": -1,
+                  "timestamp_ns": 1700000000000001027
+                },
+                {
+                  "event_type": "TRADE",
+                  "price_ticks": 100,
+                  "quantity": 4,
+                  "sequence_number": 5,
+                  "side": 1,
+                  "timestamp_ns": 1700000000000001284
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 1700000000000000001,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 1700000000000000256,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 1700000000000000513,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1700000000000000770,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 1700000000000001027,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 1700000000000001284,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "mapping_integral_decimal",
+            "route": "mapping",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "event_type": "RESET",
+                  "price_ticks": 0,
+                  "quantity": 0,
+                  "sequence_number": 0,
+                  "side": null,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "SNAPSHOT",
+                  "price_ticks": 100,
+                  "quantity": 10,
+                  "sequence_number": 1,
+                  "side": 1,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "SNAPSHOT",
+                  "price_ticks": 102,
+                  "quantity": 12,
+                  "sequence_number": 2,
+                  "side": -1,
+                  "timestamp_ns": 0
+                },
+                {
+                  "event_type": "ADD",
+                  "price_ticks": 99,
+                  "quantity": 8,
+                  "sequence_number": 3,
+                  "side": 1,
+                  "timestamp_ns": 1
+                },
+                {
+                  "event_type": "CANCEL",
+                  "price_ticks": 102,
+                  "quantity": 2,
+                  "sequence_number": 4,
+                  "side": -1,
+                  "timestamp_ns": 2
+                },
+                {
+                  "event_type": "TRADE",
+                  "price_ticks": 100,
+                  "quantity": 4,
+                  "sequence_number": 5,
+                  "side": 1,
+                  "timestamp_ns": 3
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          },
+          {
+            "case": "frame_integral_decimal",
+            "route": "frame",
+            "expected": {
+              "status": "admit",
+              "rows": [
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 0,
+                  "event_type": "RESET",
+                  "side": null,
+                  "price_ticks": 0,
+                  "quantity": 0
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 1,
+                  "event_type": "SNAPSHOT",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 10
+                },
+                {
+                  "timestamp_ns": 0,
+                  "sequence_number": 2,
+                  "event_type": "SNAPSHOT",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 12
+                },
+                {
+                  "timestamp_ns": 1,
+                  "sequence_number": 3,
+                  "event_type": "ADD",
+                  "side": 1,
+                  "price_ticks": 99,
+                  "quantity": 8
+                },
+                {
+                  "timestamp_ns": 2,
+                  "sequence_number": 4,
+                  "event_type": "CANCEL",
+                  "side": -1,
+                  "price_ticks": 102,
+                  "quantity": 2
+                },
+                {
+                  "timestamp_ns": 3,
+                  "sequence_number": 5,
+                  "event_type": "TRADE",
+                  "side": 1,
+                  "price_ticks": 100,
+                  "quantity": 4
+                }
+              ],
+              "rejection_field": null,
+              "rejection_row": null,
+              "reason": null,
+              "dictionary_reconstruction": {
+                "valid": true,
+                "event_count": 6,
+                "trace": [
+                  {
+                    "sequence_number": 0,
+                    "bids": [],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 1,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": []
+                  },
+                  {
+                    "sequence_number": 2,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 3,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        12
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 4,
+                    "bids": [
+                      [
+                        100,
+                        10
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  },
+                  {
+                    "sequence_number": 5,
+                    "bids": [
+                      [
+                        100,
+                        6
+                      ],
+                      [
+                        99,
+                        8
+                      ]
+                    ],
+                    "asks": [
+                      [
+                        102,
+                        10
+                      ]
+                    ]
+                  }
+                ],
+                "final_book": {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              }
+            },
+            "status": "admitted",
+            "actual_rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "actual_error": null,
+            "strict_valid": true,
+            "boundary_returned": true,
+            "writer_output_exists": null,
+            "failed_checks": []
+          }
+        ],
+        "normal_control": {
+          "status": "admitted",
+          "rows": [
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 0,
+              "event_type": "RESET",
+              "side": null,
+              "price_ticks": 0,
+              "quantity": 0
+            },
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 1,
+              "event_type": "SNAPSHOT",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 10
+            },
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 2,
+              "event_type": "SNAPSHOT",
+              "side": -1,
+              "price_ticks": 102,
+              "quantity": 12
+            },
+            {
+              "timestamp_ns": 1,
+              "sequence_number": 3,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 8
+            },
+            {
+              "timestamp_ns": 2,
+              "sequence_number": 4,
+              "event_type": "CANCEL",
+              "side": -1,
+              "price_ticks": 102,
+              "quantity": 2
+            },
+            {
+              "timestamp_ns": 3,
+              "sequence_number": 5,
+              "event_type": "TRADE",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 4
+            }
+          ],
+          "output_files": {
+            "csv": {
+              "path": "normal/canonical.csv",
+              "sha256": "5b8ade5bfd795008a0f6a19594e38f938babf55ca04834159b6248fa9578a9af"
+            },
+            "parquet": {
+              "path": "normal/written.parquet",
+              "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+            }
+          },
+          "record_sha256": "01d7e989ff3cd523c2c2d17a44e682f21a65998b2867cc0c0bbee54507026cb9"
+        }
+      },
+      "criteria": {
+        "observation_count": 33,
+        "declared_cases": [
+          "mapping_fractional_timestamp_ns",
+          "mapping_fractional_sequence_number",
+          "mapping_fractional_price_ticks",
+          "mapping_fractional_quantity",
+          "mapping_fractional_side",
+          "frame_fractional_timestamp_ns",
+          "frame_fractional_sequence_number",
+          "frame_fractional_price_ticks",
+          "frame_fractional_quantity",
+          "frame_fractional_side",
+          "read_csv_fractional_quantity",
+          "read_parquet_fractional_quantity",
+          "write_csv_fractional_quantity",
+          "write_parquet_fractional_quantity",
+          "csv_mixed_epoch_fraction",
+          "csv_long_fraction",
+          "mapping_integral_float",
+          "frame_integral_float",
+          "csv_integer_epoch",
+          "csv_integral_decimal",
+          "parquet_integer",
+          "frame_integer_strings",
+          "mapping_integer_strings",
+          "frame_int64_bound",
+          "frame_fractional_decimal",
+          "mapping_fractional_decimal",
+          "frame_nonfinite",
+          "frame_out_of_range",
+          "reset_null_side",
+          "events_fractional_quantity",
+          "events_mixed_epoch",
+          "mapping_integral_decimal",
+          "frame_integral_decimal"
+        ],
+        "declared_nodes": [
+          "tests/unit/test_canonical_fidelity_independent.py::test_frozen_canonical_corpus_records_every_case_before_asserting",
+          "tests/unit/test_canonical_fidelity_independent.py::test_existing_six_event_control_preserves_canonical_contract"
+        ],
+        "primary_gate_passed": true,
+        "normal_control": {
+          "case_id": "normal_six_event_control",
+          "result": {
+            "rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "schema": [
+              [
+                "timestamp_ns",
+                "Int64"
+              ],
+              [
+                "sequence_number",
+                "Int64"
+              ],
+              [
+                "event_type",
+                "String"
+              ],
+              [
+                "side",
+                "Int8"
+              ],
+              [
+                "price_ticks",
+                "Int64"
+              ],
+              [
+                "quantity",
+                "Int64"
+              ]
+            ],
+            "parquet_path": "normal/canonical.parquet",
+            "parquet_sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+            "event_stream_sha256": "f08667fb71f228e84a6ed2060b99872c926507becf39efdd3fa71793cf3b65f4",
+            "validation": {
+              "valid": true,
+              "mode": "strict",
+              "reconstructed_book": true,
+              "required_nonempty": true,
+              "issue_count": 0,
+              "event_count": 6,
+              "event_stream_sha256": "f08667fb71f228e84a6ed2060b99872c926507becf39efdd3fa71793cf3b65f4",
+              "diagnostics": {},
+              "issues": [],
+              "final_book": {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "best_bid_ticks": 100,
+                "best_ask_ticks": 102,
+                "best_bid_quantity": 6,
+                "best_ask_quantity": 10,
+                "midpoint_ticks": 101.0,
+                "microprice_ticks": 100.75,
+                "imbalance": -0.25,
+                "bids": [
+                  [
+                    100,
+                    6
+                  ],
+                  [
+                    99,
+                    8
+                  ]
+                ],
+                "asks": [
+                  [
+                    102,
+                    10
+                  ]
+                ]
+              }
+            },
+            "dictionary_reconstruction": {
+              "valid": true,
+              "event_count": 6,
+              "trace": [
+                {
+                  "sequence_number": 0,
+                  "bids": [],
+                  "asks": []
+                },
+                {
+                  "sequence_number": 1,
+                  "bids": [
+                    [
+                      100,
+                      10
+                    ]
+                  ],
+                  "asks": []
+                },
+                {
+                  "sequence_number": 2,
+                  "bids": [
+                    [
+                      100,
+                      10
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      12
+                    ]
+                  ]
+                },
+                {
+                  "sequence_number": 3,
+                  "bids": [
+                    [
+                      100,
+                      10
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      12
+                    ]
+                  ]
+                },
+                {
+                  "sequence_number": 4,
+                  "bids": [
+                    [
+                      100,
+                      10
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                },
+                {
+                  "sequence_number": 5,
+                  "bids": [
+                    [
+                      100,
+                      6
+                    ],
+                    [
+                      99,
+                      8
+                    ]
+                  ],
+                  "asks": [
+                    [
+                      102,
+                      10
+                    ]
+                  ]
+                }
+              ],
+              "final_book": {
+                "sequence_number": 5,
+                "bids": [
+                  [
+                    100,
+                    6
+                  ],
+                  [
+                    99,
+                    8
+                  ]
+                ],
+                "asks": [
+                  [
+                    102,
+                    10
+                  ]
+                ]
+              }
+            },
+            "validation_error": null,
+            "dictionary_error": null
+          },
+          "error": null,
+          "infrastructure_error": null,
+          "context_before": {
+            "precision": 28,
+            "rounding": "ROUND_HALF_EVEN",
+            "Emin": -999999,
+            "Emax": 999999,
+            "capitals": 1,
+            "clamp": 0,
+            "traps": {
+              "InvalidOperation": true,
+              "FloatOperation": false,
+              "DivisionByZero": true,
+              "Overflow": true,
+              "Underflow": false,
+              "Subnormal": false,
+              "Inexact": false,
+              "Rounded": false,
+              "Clamped": false
+            },
+            "flags": {
+              "InvalidOperation": false,
+              "FloatOperation": false,
+              "DivisionByZero": false,
+              "Overflow": false,
+              "Underflow": false,
+              "Subnormal": false,
+              "Inexact": false,
+              "Rounded": false,
+              "Clamped": false
+            }
+          },
+          "guard_before": 4300,
+          "output_files": {
+            "csv": {
+              "path": "normal/canonical.csv",
+              "sha256": "5b8ade5bfd795008a0f6a19594e38f938babf55ca04834159b6248fa9578a9af"
+            },
+            "parquet": {
+              "path": "normal/written.parquet",
+              "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+            }
+          },
+          "raw_input": {
+            "rows": [
+              {
+                "event_type": "RESET",
+                "price_ticks": 0,
+                "quantity": 0,
+                "sequence_number": 0,
+                "side": null,
+                "timestamp_ns": 0
+              },
+              {
+                "event_type": "SNAPSHOT",
+                "price_ticks": 100,
+                "quantity": 10,
+                "sequence_number": 1,
+                "side": 1,
+                "timestamp_ns": 0
+              },
+              {
+                "event_type": "SNAPSHOT",
+                "price_ticks": 102,
+                "quantity": 12,
+                "sequence_number": 2,
+                "side": -1,
+                "timestamp_ns": 0
+              },
+              {
+                "event_type": "ADD",
+                "price_ticks": 99,
+                "quantity": 8,
+                "sequence_number": 3,
+                "side": 1,
+                "timestamp_ns": 1
+              },
+              {
+                "event_type": "CANCEL",
+                "price_ticks": 102,
+                "quantity": 2,
+                "sequence_number": 4,
+                "side": -1,
+                "timestamp_ns": 2
+              },
+              {
+                "event_type": "TRADE",
+                "price_ticks": 100,
+                "quantity": 4,
+                "sequence_number": 5,
+                "side": 1,
+                "timestamp_ns": 3
+              }
+            ],
+            "types": [
+              {
+                "event_type": "str",
+                "price_ticks": "int",
+                "quantity": "int",
+                "sequence_number": "int",
+                "side": "NoneType",
+                "timestamp_ns": "int"
+              },
+              {
+                "event_type": "str",
+                "price_ticks": "int",
+                "quantity": "int",
+                "sequence_number": "int",
+                "side": "int",
+                "timestamp_ns": "int"
+              },
+              {
+                "event_type": "str",
+                "price_ticks": "int",
+                "quantity": "int",
+                "sequence_number": "int",
+                "side": "int",
+                "timestamp_ns": "int"
+              },
+              {
+                "event_type": "str",
+                "price_ticks": "int",
+                "quantity": "int",
+                "sequence_number": "int",
+                "side": "int",
+                "timestamp_ns": "int"
+              },
+              {
+                "event_type": "str",
+                "price_ticks": "int",
+                "quantity": "int",
+                "sequence_number": "int",
+                "side": "int",
+                "timestamp_ns": "int"
+              },
+              {
+                "event_type": "str",
+                "price_ticks": "int",
+                "quantity": "int",
+                "sequence_number": "int",
+                "side": "int",
+                "timestamp_ns": "int"
+              }
+            ],
+            "schema": [
+              [
+                "timestamp_ns",
+                "Int64"
+              ],
+              [
+                "sequence_number",
+                "Int64"
+              ],
+              [
+                "event_type",
+                "String"
+              ],
+              [
+                "side",
+                "Int8"
+              ],
+              [
+                "price_ticks",
+                "Int64"
+              ],
+              [
+                "quantity",
+                "Int64"
+              ]
+            ],
+            "float_details": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          "raw_input_after": {
+            "rows": [
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 0,
+                "event_type": "RESET",
+                "side": null,
+                "price_ticks": 0,
+                "quantity": 0
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 1,
+                "event_type": "SNAPSHOT",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 10
+              },
+              {
+                "timestamp_ns": 0,
+                "sequence_number": 2,
+                "event_type": "SNAPSHOT",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 12
+              },
+              {
+                "timestamp_ns": 1,
+                "sequence_number": 3,
+                "event_type": "ADD",
+                "side": 1,
+                "price_ticks": 99,
+                "quantity": 8
+              },
+              {
+                "timestamp_ns": 2,
+                "sequence_number": 4,
+                "event_type": "CANCEL",
+                "side": -1,
+                "price_ticks": 102,
+                "quantity": 2
+              },
+              {
+                "timestamp_ns": 3,
+                "sequence_number": 5,
+                "event_type": "TRADE",
+                "side": 1,
+                "price_ticks": 100,
+                "quantity": 4
+              }
+            ],
+            "types": [
+              {
+                "timestamp_ns": "int",
+                "sequence_number": "int",
+                "event_type": "str",
+                "side": "NoneType",
+                "price_ticks": "int",
+                "quantity": "int"
+              },
+              {
+                "timestamp_ns": "int",
+                "sequence_number": "int",
+                "event_type": "str",
+                "side": "int",
+                "price_ticks": "int",
+                "quantity": "int"
+              },
+              {
+                "timestamp_ns": "int",
+                "sequence_number": "int",
+                "event_type": "str",
+                "side": "int",
+                "price_ticks": "int",
+                "quantity": "int"
+              },
+              {
+                "timestamp_ns": "int",
+                "sequence_number": "int",
+                "event_type": "str",
+                "side": "int",
+                "price_ticks": "int",
+                "quantity": "int"
+              },
+              {
+                "timestamp_ns": "int",
+                "sequence_number": "int",
+                "event_type": "str",
+                "side": "int",
+                "price_ticks": "int",
+                "quantity": "int"
+              },
+              {
+                "timestamp_ns": "int",
+                "sequence_number": "int",
+                "event_type": "str",
+                "side": "int",
+                "price_ticks": "int",
+                "quantity": "int"
+              }
+            ],
+            "schema": [
+              [
+                "timestamp_ns",
+                "Int64"
+              ],
+              [
+                "sequence_number",
+                "Int64"
+              ],
+              [
+                "event_type",
+                "String"
+              ],
+              [
+                "side",
+                "Int8"
+              ],
+              [
+                "price_ticks",
+                "Int64"
+              ],
+              [
+                "quantity",
+                "Int64"
+              ]
+            ],
+            "float_details": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          "expected": {
+            "status": "admit",
+            "rows": [
+              {
+                "event_type": "RESET",
+                "price_ticks": 0,
+                "quantity": 0,
+                "sequence_number": 0,
+                "side": null,
+                "timestamp_ns": 0
+              },
+              {
+                "event_type": "SNAPSHOT",
+                "price_ticks": 100,
+                "quantity": 10,
+                "sequence_number": 1,
+                "side": 1,
+                "timestamp_ns": 0
+              },
+              {
+                "event_type": "SNAPSHOT",
+                "price_ticks": 102,
+                "quantity": 12,
+                "sequence_number": 2,
+                "side": -1,
+                "timestamp_ns": 0
+              },
+              {
+                "event_type": "ADD",
+                "price_ticks": 99,
+                "quantity": 8,
+                "sequence_number": 3,
+                "side": 1,
+                "timestamp_ns": 1
+              },
+              {
+                "event_type": "CANCEL",
+                "price_ticks": 102,
+                "quantity": 2,
+                "sequence_number": 4,
+                "side": -1,
+                "timestamp_ns": 2
+              },
+              {
+                "event_type": "TRADE",
+                "price_ticks": 100,
+                "quantity": 4,
+                "sequence_number": 5,
+                "side": 1,
+                "timestamp_ns": 3
+              }
+            ],
+            "rejection_field": null,
+            "rejection_row": null,
+            "reason": null
+          },
+          "strict_valid": true,
+          "checks": {
+            "oracle_match": true,
+            "row_count": true,
+            "input_unchanged": true,
+            "context_preserved": true,
+            "guard_preserved": true
+          },
+          "status": "admitted",
+          "context_after": {
+            "precision": 28,
+            "rounding": "ROUND_HALF_EVEN",
+            "Emin": -999999,
+            "Emax": 999999,
+            "capitals": 1,
+            "clamp": 0,
+            "traps": {
+              "InvalidOperation": true,
+              "FloatOperation": false,
+              "DivisionByZero": true,
+              "Overflow": true,
+              "Underflow": false,
+              "Subnormal": false,
+              "Inexact": false,
+              "Rounded": false,
+              "Clamped": false
+            },
+            "flags": {
+              "InvalidOperation": false,
+              "FloatOperation": false,
+              "DivisionByZero": false,
+              "Overflow": false,
+              "Underflow": false,
+              "Subnormal": false,
+              "Inexact": false,
+              "Rounded": false,
+              "Clamped": false
+            }
+          },
+          "guard_after": 4300
+        }
+      }
+    }
+  ],
+  "criterion_passed": true,
+  "scope": "Owned synthetic canonical-boundary correctness and one exposed six-event control, no economic/data/performance result.",
+  "reused_baseline_evidence": {
+    "directory": "/workspace/lob-market-maker-canonical-fix/experiments/canonical-fidelity-20261113/baseline",
+    "report_sha256": "5787d56ee6cedab9db2327553d599cc5df019f470e757e78feae7a0acb5eb66d"
+  },
+  "evidence_manifest": {
+    "candidate-evidence/cases/csv_integer_epoch/canonical.parquet": {
+      "sha256": "99b6432799923bcb563d7b6cedc76a349b94814c4412f70a4a919efcb860e669",
+      "bytes": 2488
+    },
+    "candidate-evidence/cases/csv_integer_epoch/input.csv": {
+      "sha256": "fcef11146048101079aab5add315c1bbd76a3b02fd7c4f4613f22e44892b397b",
+      "bytes": 287
+    },
+    "candidate-evidence/cases/csv_integral_decimal/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/csv_integral_decimal/input.csv": {
+      "sha256": "d9bb65102b3f517b3089ce36a30dfcfe5b0f2e0c85cbda3933597b29a95db6d1",
+      "bytes": 194
+    },
+    "candidate-evidence/cases/csv_long_fraction/input.csv": {
+      "sha256": "33a28bb8832953bbed3e830f15929b52a3d3ff382ed7dbbe9e5e08700a5b0cd2",
+      "bytes": 209
+    },
+    "candidate-evidence/cases/csv_mixed_epoch_fraction/input.csv": {
+      "sha256": "c78b6a5ebd5428b1af1287a7d91ae33adced89597abfaf2d34b611a4042394bb",
+      "bytes": 289
+    },
+    "candidate-evidence/cases/events_mixed_epoch/canonical.parquet": {
+      "sha256": "56d58422eae60316f997c925b5e4924163d27c8b736e0b043b7938cc1ced8e05",
+      "bytes": 2492
+    },
+    "candidate-evidence/cases/frame_fractional_decimal/input.parquet": {
+      "sha256": "406c229ccb02a223f4df8bb88e29fb03f95efd12723c5fe5c0841b7137038d86",
+      "bytes": 2534
+    },
+    "candidate-evidence/cases/frame_fractional_price_ticks/input.parquet": {
+      "sha256": "bcfae3f39e08ca9369983383df7870bcb610d966386f9bd1af2c8343fa45fc0c",
+      "bytes": 2449
+    },
+    "candidate-evidence/cases/frame_fractional_quantity/input.parquet": {
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9",
+      "bytes": 2441
+    },
+    "candidate-evidence/cases/frame_fractional_sequence_number/input.parquet": {
+      "sha256": "45a8319ffa8be66dcd7bf3951df1134a62edf84333edafb58edc44a45f349721",
+      "bytes": 2442
+    },
+    "candidate-evidence/cases/frame_fractional_side/input.parquet": {
+      "sha256": "55ed89d441b25c4026fb8d4c0c0a25887cebfb453c714efc6ec83528290243dc",
+      "bytes": 2483
+    },
+    "candidate-evidence/cases/frame_fractional_timestamp_ns/input.parquet": {
+      "sha256": "0f6ad03c3b34caf65c157c17c6cf856f700f8ad0b2a6de3bf321a706250b3f90",
+      "bytes": 2446
+    },
+    "candidate-evidence/cases/frame_int64_bound/canonical.parquet": {
+      "sha256": "5ae8459713a2857daf2126d4431ad9fc183c2d42ed5f7d34c529288c00734a7c",
+      "bytes": 2490
+    },
+    "candidate-evidence/cases/frame_int64_bound/input.parquet": {
+      "sha256": "5ae8459713a2857daf2126d4431ad9fc183c2d42ed5f7d34c529288c00734a7c",
+      "bytes": 2490
+    },
+    "candidate-evidence/cases/frame_integer_strings/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/frame_integer_strings/input.parquet": {
+      "sha256": "ee2766cd8170586ecc85b036ce29ff5f7665ff8705fed8d226c4d17ad6cb5354",
+      "bytes": 2210
+    },
+    "candidate-evidence/cases/frame_integral_decimal/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/frame_integral_decimal/input.parquet": {
+      "sha256": "ee247a1ec349193699ef96af3a1cca9e870777544d717539c37b02ec7fbcbe01",
+      "bytes": 2745
+    },
+    "candidate-evidence/cases/frame_integral_float/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/frame_integral_float/input.parquet": {
+      "sha256": "0fbf0c4dca5439ad31a90ef7a390a7155454e15498ceaeb74f954876b7a45aca",
+      "bytes": 2316
+    },
+    "candidate-evidence/cases/frame_nonfinite/input.parquet": {
+      "sha256": "11002d4f8ac0435540861cfd042a946b48c54ac9d72fb5d87dbabfb76415ca9f",
+      "bytes": 2443
+    },
+    "candidate-evidence/cases/frame_out_of_range/input.parquet": {
+      "sha256": "d38a6885c5ec0422106424b750e412e9d892e20fbc22604090dcc789f32a7c12",
+      "bytes": 2493
+    },
+    "candidate-evidence/cases/mapping_integer_strings/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/mapping_integral_decimal/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/mapping_integral_float/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/parquet_integer/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/parquet_integer/input.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/read_csv_fractional_quantity/input.csv": {
+      "sha256": "dd6664d2dfa92d4ef56400d3a0d686e053acefbefec35c5873c693c530147aa4",
+      "bytes": 181
+    },
+    "candidate-evidence/cases/read_parquet_fractional_quantity/input.parquet": {
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9",
+      "bytes": 2441
+    },
+    "candidate-evidence/cases/reset_null_side/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/reset_null_side/input.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/cases/write_csv_fractional_quantity/input.parquet": {
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9",
+      "bytes": 2441
+    },
+    "candidate-evidence/cases/write_parquet_fractional_quantity/input.parquet": {
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9",
+      "bytes": 2441
+    },
+    "candidate-evidence/corpus.json": {
+      "sha256": "dcb5cdaa70290eaf2c6c80dcbcc1bb37eadfb682e5b93162e034d23cb1b7316b",
+      "bytes": 495304
+    },
+    "candidate-evidence/normal/canonical.csv": {
+      "sha256": "5b8ade5bfd795008a0f6a19594e38f938babf55ca04834159b6248fa9578a9af",
+      "bytes": 179
+    },
+    "candidate-evidence/normal/canonical.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/normal/written.parquet": {
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "bytes": 2478
+    },
+    "candidate-evidence/normal-control.json": {
+      "sha256": "c86216586b7419f730dea3ee735a597b518c19dad5011518605e49cb124001bc",
+      "bytes": 15517
+    },
+    "candidate-source-pins.json": {
+      "sha256": "55e6fcd3f1482c92c66488d797a1f950db9816b7d75928803ad351ec939c85b0",
+      "bytes": 3716
+    },
+    "candidate.json": {
+      "sha256": "c0e14401fed66c8bf8c6060d00d77cb6183677ffea886de42666a5fa60f83331",
+      "bytes": 27892
+    },
+    "candidate.log": {
+      "sha256": "1de7af18a082aed8ed2db28a900eee55720e6fca28b21af9e1bac8ef498046d9",
+      "bytes": 98
+    },
+    "candidate.xml": {
+      "sha256": "67abe93ddee1051043c66f6e77f2f5a1cd9cfb77015aa8ef794adcacff4628ff",
+      "bytes": 556
+    },
+    "environment.json": {
+      "sha256": "8e28e4837851b4ffa24b47d01d09d4e2638e6705caa4a8cc1da2ae7bd9ce56ad",
+      "bytes": 483
+    },
+    "frozen/docs/evidence/canonical-fidelity-20261113/contract.json": {
+      "sha256": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730",
+      "bytes": 9376
+    },
+    "frozen/docs/evidence/canonical-fidelity-20261113/design-review.json": {
+      "sha256": "605e3690d18a082784246719be711f3e3fc05de7e05bc7f64882b6e962bfb6e1",
+      "bytes": 1153
+    },
+    "frozen/docs/evidence/canonical-fidelity-20261113/fixtures.json": {
+      "sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7",
+      "bytes": 8376
+    },
+    "frozen/tests/unit/test_canonical_fidelity_independent.py": {
+      "sha256": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855",
+      "bytes": 29887
+    },
+    "frozen/tools/reproduce_canonical_fidelity.py": {
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453",
+      "bytes": 29802
+    },
+    "reproducer.py": {
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453",
+      "bytes": 29802
+    },
+    "sources/candidate/frozen/docs/evidence/canonical-fidelity-20261113/contract.json": {
+      "sha256": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730",
+      "bytes": 9376
+    },
+    "sources/candidate/frozen/docs/evidence/canonical-fidelity-20261113/design-review.json": {
+      "sha256": "605e3690d18a082784246719be711f3e3fc05de7e05bc7f64882b6e962bfb6e1",
+      "bytes": 1153
+    },
+    "sources/candidate/frozen/docs/evidence/canonical-fidelity-20261113/fixtures.json": {
+      "sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7",
+      "bytes": 8376
+    },
+    "sources/candidate/frozen/tests/unit/test_canonical_fidelity_independent.py": {
+      "sha256": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855",
+      "bytes": 29887
+    },
+    "sources/candidate/frozen/tools/reproduce_canonical_fidelity.py": {
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453",
+      "bytes": 29802
+    },
+    "sources/candidate/src/lobmm/__init__.py": {
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+      "bytes": 164
+    },
+    "sources/candidate/src/lobmm/backtest.py": {
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+      "bytes": 35768
+    },
+    "sources/candidate/src/lobmm/benchmark.py": {
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+      "bytes": 10082
+    },
+    "sources/candidate/src/lobmm/book.py": {
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+      "bytes": 12658
+    },
+    "sources/candidate/src/lobmm/case_study.py": {
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+      "bytes": 19324
+    },
+    "sources/candidate/src/lobmm/channels.py": {
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+      "bytes": 5274
+    },
+    "sources/candidate/src/lobmm/cli.py": {
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+      "bytes": 22297
+    },
+    "sources/candidate/src/lobmm/config.py": {
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+      "bytes": 12286
+    },
+    "sources/candidate/src/lobmm/data/__init__.py": {
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+      "bytes": 1786
+    },
+    "sources/candidate/src/lobmm/data/_adapter_utils.py": {
+      "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229",
+      "bytes": 5955
+    },
+    "sources/candidate/src/lobmm/data/adapters.py": {
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+      "bytes": 1367
+    },
+    "sources/candidate/src/lobmm/data/fingerprint.py": {
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+      "bytes": 1079
+    },
+    "sources/candidate/src/lobmm/data/loaders.py": {
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+      "bytes": 5765
+    },
+    "sources/candidate/src/lobmm/data/lobster.py": {
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8",
+      "bytes": 21121
+    },
+    "sources/candidate/src/lobmm/data/manifest.py": {
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+      "bytes": 3983
+    },
+    "sources/candidate/src/lobmm/data/schema.py": {
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+      "bytes": 7692
+    },
+    "sources/candidate/src/lobmm/data/tardis.py": {
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+      "bytes": 21020
+    },
+    "sources/candidate/src/lobmm/enums.py": {
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+      "bytes": 2472
+    },
+    "sources/candidate/src/lobmm/events.py": {
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+      "bytes": 3006
+    },
+    "sources/candidate/src/lobmm/exchange.py": {
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+      "bytes": 16502
+    },
+    "sources/candidate/src/lobmm/experiments.py": {
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+      "bytes": 18529
+    },
+    "sources/candidate/src/lobmm/metrics.py": {
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+      "bytes": 14898
+    },
+    "sources/candidate/src/lobmm/orders.py": {
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+      "bytes": 17176
+    },
+    "sources/candidate/src/lobmm/portfolio.py": {
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3",
+      "bytes": 18850
+    },
+    "sources/candidate/src/lobmm/py.typed": {
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    "sources/candidate/src/lobmm/queue_model.py": {
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+      "bytes": 20413
+    },
+    "sources/candidate/src/lobmm/report.py": {
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+      "bytes": 35627
+    },
+    "sources/candidate/src/lobmm/risk.py": {
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38",
+      "bytes": 23906
+    },
+    "sources/candidate/src/lobmm/scheduler.py": {
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+      "bytes": 8559
+    },
+    "sources/candidate/src/lobmm/strategies/__init__.py": {
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+      "bytes": 1008
+    },
+    "sources/candidate/src/lobmm/strategies/base.py": {
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+      "bytes": 21607
+    },
+    "sources/candidate/src/lobmm/strategies/fixed_spread.py": {
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d",
+      "bytes": 918
+    },
+    "sources/candidate/src/lobmm/strategies/inventory_aware.py": {
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897",
+      "bytes": 1205
+    },
+    "sources/candidate/src/lobmm/strategies/microprice.py": {
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c",
+      "bytes": 1659
+    },
+    "sources/candidate/src/lobmm/strategy_runtime.py": {
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+      "bytes": 3433
+    },
+    "sources/candidate/src/lobmm/synthetic.py": {
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+      "bytes": 14929
+    },
+    "sources/candidate/src/lobmm/types.py": {
+      "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a",
+      "bytes": 1507
+    },
+    "sources/candidate/src/lobmm/validation.py": {
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735",
+      "bytes": 7386
+    }
+  }
+}

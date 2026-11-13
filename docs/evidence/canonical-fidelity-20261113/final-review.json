@@ -1,0 +1,101 @@
+{
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "date": "2026-11-13",
+  "final_publication_review": {
+    "csvs": 13,
+    "initial_source_reconstruction_label_correct": true,
+    "local_old_refs_unchanged": true,
+    "no_reruns_or_edits": true,
+    "no_suspect_secrets_or_private_vendor_payloads": true,
+    "original_logs": 4,
+    "parquets": 82,
+    "publication_entries": 139,
+    "raw_files": 222,
+    "remote_verification_by": "Root authorized GitHub connector reads",
+    "report_links": 8,
+    "reviewer": "publication_integrity",
+    "source_harness_unchanged": true,
+    "verbatim_copies": 124,
+    "verdict": "GO"
+  },
+  "limitations": [
+    "Synthetic default-setting canonical correctness, no real-data admission/rights or economics/fill calibration.",
+    "Ordinary integer-only CSV, NaN and range controls were already correct on main.",
+    "Already rounded Float64 source digits cannot be recovered; direct typed streams bypassing schema and unsupported custom/temporal inputs remain outside scope.",
+    "Additional ingestion validation work is not benchmarked; no throughput claim.",
+    "Remote ZIP/Parquet bytes will not be independently downloaded/audited; terminal CI/log/metadata verification separate."
+  ],
+  "local_checks": {
+    "actual_suite_imports": 37,
+    "coverage_branch_aware_percent": 90.62,
+    "exitstatus": 0,
+    "junit_errors_failures_skips": 0,
+    "mypy_sources": 37,
+    "ruff_files": 82,
+    "tests_passed": 252
+  },
+  "measured_commit": "6348303f041229d20d46d5bdc66165ba03e88040",
+  "narrative_quality_workflow_review": {
+    "coverage": "Report semantics/source scope/repair history, actual252nodeJUnit/90.62coverage/exit0/import37pins/Ruff82/mypy37, all11unchangedpositiveParquetpairs, normalhashes and frozen actual-head workflow",
+    "no_reruns_or_edits": true,
+    "reviewer": "independent_feasibility",
+    "verdict": "GO"
+  },
+  "publication_inventory": {
+    "csv_files": 13,
+    "curated_copies": 124,
+    "parquet_files": 82,
+    "raw_files": 222
+  },
+  "results": {
+    "actual_case_file_reference_hashes": {
+      "baseline": 57,
+      "candidate": 36
+    },
+    "actual_csvs_audited": 13,
+    "actual_parquets_audited": 82,
+    "baseline_correct_positive": 11,
+    "baseline_correct_reject": 2,
+    "baseline_false_admissions": 19,
+    "baseline_positive_timestamp_mismatch": 1,
+    "candidate_domain_reject": 21,
+    "candidate_exact_admit": 12,
+    "candidate_mismatch": 0,
+    "frozen_to_raw_cells_per_source": 1188,
+    "input_context_guard_changes": 0,
+    "normal_full_record_csv_and_parquet_bytes_identical": true,
+    "normal_rows": 6,
+    "observations_per_source": 33,
+    "previously_correct_positive_parquets_unchanged": 11,
+    "raw_manifests": {
+      "baseline": 114,
+      "candidate": 93
+    },
+    "source_paths": 38,
+    "unchanged_other_source_paths": 36
+  },
+  "reviewers": {
+    "data_execution_audit": "Controller/workflow author; no numerical execution.",
+    "growth_reproducer": "Independent test/provider author; no numerical execution.",
+    "independent_feasibility": "Independent design/provider/controller, baseline and candidate actual numerical/artifact/provenance GO; no production/test/controller authorship.",
+    "performance_reproducer": "Production source author; static checks only.",
+    "publication_integrity": "Independent physical/scalar/provenance audit of both complete retained sources; no production/test/controller authorship.",
+    "source_adversary": "Independent source review; found and closed premeasurement side coercion gap; no author role or numerical work."
+  },
+  "root_record_of_independent_reviews": true,
+  "trial_accounting": {
+    "baseline_reused_without_rerun": true,
+    "baseline_workers": 1,
+    "candidate_workers": 1,
+    "initial_source": "Explicit hash-verified reconstruction of initial schema via sole reverse textual edit, matching original recorded hash; static-review files retain this distinction.",
+    "premeasurement_static_repairs": 1,
+    "preoutcome_amendment": "Two wholeDecimal positives added before baseline; final33 corpus immutable thereafter.",
+    "raw_side_repair": "Static review only; no new runtime witness or corpus expansion.",
+    "record_limits": "Retained records cannot logically rule out unrecorded execution.",
+    "remaining_repairs": 0,
+    "result_driven_repairs": 0,
+    "source_designs": 1,
+    "verification_repetitions": "Ordinary full suite and remote archived-source CI prescribed separately."
+  },
+  "verdict": "GO for source, actual local results/artifacts, narrative/quality/workflow and publication curation; exact-head remote CI remains separate gate"
+}

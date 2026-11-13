@@ -1,0 +1,21 @@
+{
+  "checks": "Author Ruff/strict mypy/diff checks pass; reviewer made no imports/probes/tests/conversions/edits.",
+  "date": "2026-11-13",
+  "numerical_candidate_workers_to_date": 0,
+  "reviewer": "source_adversary",
+  "root_record_of_independent_review": true,
+  "scope": "Only schema.py and loaders.py; exact original scalar comparison, target bounds where required, compatible mapping/frame string policies, native typed frame paths, original event attributes before inference, exact CSV text/numeric parser and file rejection before writing. No context/guard/tolerance changes.",
+  "source_sha256": {
+    "src/lobmm/data/loaders.py": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+    "src/lobmm/data/schema.py": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+  },
+  "static_repair": {
+    "initial_exact_bytes": "Original hash-verified bytes retained at experiments/canonical-fidelity-20261113/static-review/initial-schema.py.txt; reconstructed by sole reverse textual edit and checked against original reviewer pin.",
+    "initial_schema_sha256": "e3a771a7063b15a59084149a7593d00f3c6097e80850e6d5e2f20af08488de65",
+    "reason": "Unchanged event.as_dict int(side) could preempt exact guard on RESET raw fractional side. Independent STATIC finding, no new runtime witness or corpus change.",
+    "remaining": 0,
+    "solution": "Read original attributes directly, then validate all integer fields before constructing DataFrame.",
+    "used": 1
+  },
+  "verdict": "GO before first candidate numerical execution"
+}

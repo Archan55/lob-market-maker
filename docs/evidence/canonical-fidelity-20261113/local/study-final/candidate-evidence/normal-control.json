@@ -1,0 +1,671 @@
+{
+  "observation": {
+    "case_id": "normal_six_event_control",
+    "result": {
+      "rows": [
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 0,
+          "event_type": "RESET",
+          "side": null,
+          "price_ticks": 0,
+          "quantity": 0
+        },
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 100,
+          "quantity": 10
+        },
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 2,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 102,
+          "quantity": 12
+        },
+        {
+          "timestamp_ns": 1,
+          "sequence_number": 3,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 8
+        },
+        {
+          "timestamp_ns": 2,
+          "sequence_number": 4,
+          "event_type": "CANCEL",
+          "side": -1,
+          "price_ticks": 102,
+          "quantity": 2
+        },
+        {
+          "timestamp_ns": 3,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 100,
+          "quantity": 4
+        }
+      ],
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "sequence_number",
+          "Int64"
+        ],
+        [
+          "event_type",
+          "String"
+        ],
+        [
+          "side",
+          "Int8"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "quantity",
+          "Int64"
+        ]
+      ],
+      "parquet_path": "normal/canonical.parquet",
+      "parquet_sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e",
+      "event_stream_sha256": "f08667fb71f228e84a6ed2060b99872c926507becf39efdd3fa71793cf3b65f4",
+      "validation": {
+        "valid": true,
+        "mode": "strict",
+        "reconstructed_book": true,
+        "required_nonempty": true,
+        "issue_count": 0,
+        "event_count": 6,
+        "event_stream_sha256": "f08667fb71f228e84a6ed2060b99872c926507becf39efdd3fa71793cf3b65f4",
+        "diagnostics": {},
+        "issues": [],
+        "final_book": {
+          "timestamp_ns": 3,
+          "sequence_number": 5,
+          "best_bid_ticks": 100,
+          "best_ask_ticks": 102,
+          "best_bid_quantity": 6,
+          "best_ask_quantity": 10,
+          "midpoint_ticks": 101.0,
+          "microprice_ticks": 100.75,
+          "imbalance": -0.25,
+          "bids": [
+            [
+              100,
+              6
+            ],
+            [
+              99,
+              8
+            ]
+          ],
+          "asks": [
+            [
+              102,
+              10
+            ]
+          ]
+        }
+      },
+      "dictionary_reconstruction": {
+        "valid": true,
+        "event_count": 6,
+        "trace": [
+          {
+            "sequence_number": 0,
+            "bids": [],
+            "asks": []
+          },
+          {
+            "sequence_number": 1,
+            "bids": [
+              [
+                100,
+                10
+              ]
+            ],
+            "asks": []
+          },
+          {
+            "sequence_number": 2,
+            "bids": [
+              [
+                100,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                102,
+                12
+              ]
+            ]
+          },
+          {
+            "sequence_number": 3,
+            "bids": [
+              [
+                100,
+                10
+              ],
+              [
+                99,
+                8
+              ]
+            ],
+            "asks": [
+              [
+                102,
+                12
+              ]
+            ]
+          },
+          {
+            "sequence_number": 4,
+            "bids": [
+              [
+                100,
+                10
+              ],
+              [
+                99,
+                8
+              ]
+            ],
+            "asks": [
+              [
+                102,
+                10
+              ]
+            ]
+          },
+          {
+            "sequence_number": 5,
+            "bids": [
+              [
+                100,
+                6
+              ],
+              [
+                99,
+                8
+              ]
+            ],
+            "asks": [
+              [
+                102,
+                10
+              ]
+            ]
+          }
+        ],
+        "final_book": {
+          "sequence_number": 5,
+          "bids": [
+            [
+              100,
+              6
+            ],
+            [
+              99,
+              8
+            ]
+          ],
+          "asks": [
+            [
+              102,
+              10
+            ]
+          ]
+        }
+      },
+      "validation_error": null,
+      "dictionary_error": null
+    },
+    "error": null,
+    "infrastructure_error": null,
+    "context_before": {
+      "precision": 28,
+      "rounding": "ROUND_HALF_EVEN",
+      "Emin": -999999,
+      "Emax": 999999,
+      "capitals": 1,
+      "clamp": 0,
+      "traps": {
+        "InvalidOperation": true,
+        "FloatOperation": false,
+        "DivisionByZero": true,
+        "Overflow": true,
+        "Underflow": false,
+        "Subnormal": false,
+        "Inexact": false,
+        "Rounded": false,
+        "Clamped": false
+      },
+      "flags": {
+        "InvalidOperation": false,
+        "FloatOperation": false,
+        "DivisionByZero": false,
+        "Overflow": false,
+        "Underflow": false,
+        "Subnormal": false,
+        "Inexact": false,
+        "Rounded": false,
+        "Clamped": false
+      }
+    },
+    "guard_before": 4300,
+    "output_files": {
+      "csv": {
+        "path": "normal/canonical.csv",
+        "sha256": "5b8ade5bfd795008a0f6a19594e38f938babf55ca04834159b6248fa9578a9af"
+      },
+      "parquet": {
+        "path": "normal/written.parquet",
+        "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+      }
+    },
+    "raw_input": {
+      "rows": [
+        {
+          "event_type": "RESET",
+          "price_ticks": 0,
+          "quantity": 0,
+          "sequence_number": 0,
+          "side": null,
+          "timestamp_ns": 0
+        },
+        {
+          "event_type": "SNAPSHOT",
+          "price_ticks": 100,
+          "quantity": 10,
+          "sequence_number": 1,
+          "side": 1,
+          "timestamp_ns": 0
+        },
+        {
+          "event_type": "SNAPSHOT",
+          "price_ticks": 102,
+          "quantity": 12,
+          "sequence_number": 2,
+          "side": -1,
+          "timestamp_ns": 0
+        },
+        {
+          "event_type": "ADD",
+          "price_ticks": 99,
+          "quantity": 8,
+          "sequence_number": 3,
+          "side": 1,
+          "timestamp_ns": 1
+        },
+        {
+          "event_type": "CANCEL",
+          "price_ticks": 102,
+          "quantity": 2,
+          "sequence_number": 4,
+          "side": -1,
+          "timestamp_ns": 2
+        },
+        {
+          "event_type": "TRADE",
+          "price_ticks": 100,
+          "quantity": 4,
+          "sequence_number": 5,
+          "side": 1,
+          "timestamp_ns": 3
+        }
+      ],
+      "types": [
+        {
+          "event_type": "str",
+          "price_ticks": "int",
+          "quantity": "int",
+          "sequence_number": "int",
+          "side": "NoneType",
+          "timestamp_ns": "int"
+        },
+        {
+          "event_type": "str",
+          "price_ticks": "int",
+          "quantity": "int",
+          "sequence_number": "int",
+          "side": "int",
+          "timestamp_ns": "int"
+        },
+        {
+          "event_type": "str",
+          "price_ticks": "int",
+          "quantity": "int",
+          "sequence_number": "int",
+          "side": "int",
+          "timestamp_ns": "int"
+        },
+        {
+          "event_type": "str",
+          "price_ticks": "int",
+          "quantity": "int",
+          "sequence_number": "int",
+          "side": "int",
+          "timestamp_ns": "int"
+        },
+        {
+          "event_type": "str",
+          "price_ticks": "int",
+          "quantity": "int",
+          "sequence_number": "int",
+          "side": "int",
+          "timestamp_ns": "int"
+        },
+        {
+          "event_type": "str",
+          "price_ticks": "int",
+          "quantity": "int",
+          "sequence_number": "int",
+          "side": "int",
+          "timestamp_ns": "int"
+        }
+      ],
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "sequence_number",
+          "Int64"
+        ],
+        [
+          "event_type",
+          "String"
+        ],
+        [
+          "side",
+          "Int8"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "quantity",
+          "Int64"
+        ]
+      ],
+      "float_details": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    "raw_input_after": {
+      "rows": [
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 0,
+          "event_type": "RESET",
+          "side": null,
+          "price_ticks": 0,
+          "quantity": 0
+        },
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 100,
+          "quantity": 10
+        },
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 2,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 102,
+          "quantity": 12
+        },
+        {
+          "timestamp_ns": 1,
+          "sequence_number": 3,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 8
+        },
+        {
+          "timestamp_ns": 2,
+          "sequence_number": 4,
+          "event_type": "CANCEL",
+          "side": -1,
+          "price_ticks": 102,
+          "quantity": 2
+        },
+        {
+          "timestamp_ns": 3,
+          "sequence_number": 5,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 100,
+          "quantity": 4
+        }
+      ],
+      "types": [
+        {
+          "timestamp_ns": "int",
+          "sequence_number": "int",
+          "event_type": "str",
+          "side": "NoneType",
+          "price_ticks": "int",
+          "quantity": "int"
+        },
+        {
+          "timestamp_ns": "int",
+          "sequence_number": "int",
+          "event_type": "str",
+          "side": "int",
+          "price_ticks": "int",
+          "quantity": "int"
+        },
+        {
+          "timestamp_ns": "int",
+          "sequence_number": "int",
+          "event_type": "str",
+          "side": "int",
+          "price_ticks": "int",
+          "quantity": "int"
+        },
+        {
+          "timestamp_ns": "int",
+          "sequence_number": "int",
+          "event_type": "str",
+          "side": "int",
+          "price_ticks": "int",
+          "quantity": "int"
+        },
+        {
+          "timestamp_ns": "int",
+          "sequence_number": "int",
+          "event_type": "str",
+          "side": "int",
+          "price_ticks": "int",
+          "quantity": "int"
+        },
+        {
+          "timestamp_ns": "int",
+          "sequence_number": "int",
+          "event_type": "str",
+          "side": "int",
+          "price_ticks": "int",
+          "quantity": "int"
+        }
+      ],
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "sequence_number",
+          "Int64"
+        ],
+        [
+          "event_type",
+          "String"
+        ],
+        [
+          "side",
+          "Int8"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "quantity",
+          "Int64"
+        ]
+      ],
+      "float_details": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    "expected": {
+      "status": "admit",
+      "rows": [
+        {
+          "event_type": "RESET",
+          "price_ticks": 0,
+          "quantity": 0,
+          "sequence_number": 0,
+          "side": null,
+          "timestamp_ns": 0
+        },
+        {
+          "event_type": "SNAPSHOT",
+          "price_ticks": 100,
+          "quantity": 10,
+          "sequence_number": 1,
+          "side": 1,
+          "timestamp_ns": 0
+        },
+        {
+          "event_type": "SNAPSHOT",
+          "price_ticks": 102,
+          "quantity": 12,
+          "sequence_number": 2,
+          "side": -1,
+          "timestamp_ns": 0
+        },
+        {
+          "event_type": "ADD",
+          "price_ticks": 99,
+          "quantity": 8,
+          "sequence_number": 3,
+          "side": 1,
+          "timestamp_ns": 1
+        },
+        {
+          "event_type": "CANCEL",
+          "price_ticks": 102,
+          "quantity": 2,
+          "sequence_number": 4,
+          "side": -1,
+          "timestamp_ns": 2
+        },
+        {
+          "event_type": "TRADE",
+          "price_ticks": 100,
+          "quantity": 4,
+          "sequence_number": 5,
+          "side": 1,
+          "timestamp_ns": 3
+        }
+      ],
+      "rejection_field": null,
+      "rejection_row": null,
+      "reason": null
+    },
+    "strict_valid": true,
+    "checks": {
+      "oracle_match": true,
+      "row_count": true,
+      "input_unchanged": true,
+      "context_preserved": true,
+      "guard_preserved": true
+    },
+    "status": "admitted",
+    "context_after": {
+      "precision": 28,
+      "rounding": "ROUND_HALF_EVEN",
+      "Emin": -999999,
+      "Emax": 999999,
+      "capitals": 1,
+      "clamp": 0,
+      "traps": {
+        "InvalidOperation": true,
+        "FloatOperation": false,
+        "DivisionByZero": true,
+        "Overflow": true,
+        "Underflow": false,
+        "Subnormal": false,
+        "Inexact": false,
+        "Rounded": false,
+        "Clamped": false
+      },
+      "flags": {
+        "InvalidOperation": false,
+        "FloatOperation": false,
+        "DivisionByZero": false,
+        "Overflow": false,
+        "Underflow": false,
+        "Subnormal": false,
+        "Inexact": false,
+        "Rounded": false,
+        "Clamped": false
+      }
+    },
+    "guard_after": 4300
+  },
+  "complete": true,
+  "provenance": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "test_path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/tests/unit/test_canonical_fidelity_independent.py",
+    "test_sha256": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855",
+    "fixtures_sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7",
+    "contract_sha256": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730",
+    "sources": {
+      "data/schema": {
+        "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/schema.py",
+        "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+      },
+      "data/loaders": {
+        "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/data/loaders.py",
+        "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+      },
+      "validation": {
+        "path": "/tmp/lob-canonical-fidelity-8sbih596/candidate/src/lobmm/validation.py",
+        "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+      }
+    }
+  }
+}

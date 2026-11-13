@@ -1,0 +1,12 @@
+{
+  "candidate_numeric_workers_before_repair": 0,
+  "final_schema_sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+  "finding": "Independent static source review found event.as_dict int(side) could truncate a RESET raw fractional side before guard. No runtime probe or new case used.",
+  "initial_schema_sha256": "e3a771a7063b15a59084149a7593d00f3c6097e80850e6d5e2f20af08488de65",
+  "initial_source_reconstruction": "Exact original bytes reconstructed from reviewed final raw-attribute block using the sole reverse textual edit; hash matches initial author and reviewer pin. No application execution.",
+  "loaders_sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+  "phase": "Before first candidate numerical execution",
+  "remaining_repair_budget": 0,
+  "repair": "Use original typed event attributes before integer guard and before DataFrame inference, within frozen schema-only scope.",
+  "repairs_used": 1
+}

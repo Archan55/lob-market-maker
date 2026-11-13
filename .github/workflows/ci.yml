@@ -9,6 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Record executed source
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/canonical-fidelity-ci
+          git rev-parse HEAD | tee experiments/canonical-fidelity-ci/checkout.txt
+          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -22,6 +33,27 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
-        run: python -m pytest --cov=lobmm --cov-report=term-missing
+        run: python -m pytest --cov=lobmm --cov-report=term-missing --junitxml=experiments/canonical-fidelity-ci/full-suite.xml
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Archived main and exact-head canonical fidelity verification
+        run: |
+          python tools/reproduce_canonical_fidelity.py --stage verify \
+            --candidate "$(git rev-parse HEAD)" \
+            --output experiments/canonical-fidelity-ci/verify
+      - name: Retain original synthetic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-fidelity-${{ steps.source.outputs.head_sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            experiments/canonical-fidelity-ci/
+            runs/ci-smoke/
+            docs/evidence/canonical-fidelity-20261113/
+            docs/CANONICAL_INTEGER_FIDELITY.md
+            tools/reproduce_canonical_fidelity.py
+            tests/unit/test_canonical_fidelity_independent.py
+            src/lobmm/data/schema.py
+            src/lobmm/data/loaders.py

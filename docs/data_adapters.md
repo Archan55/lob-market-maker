@@ -16,6 +16,24 @@ Official format references:
 - [LOBSTER output structure](https://data.lobsterdata.com/info/DataStructure.php)
 - [LOBSTER sample-file page](https://data.lobsterdata.com/info/DataSamples.php)
 
+## Canonical integer boundaries
+
+Normalized timestamps, sequence numbers, ticks and quantities use Int64; side
+uses nullable Int8. Mapping and frame conversion reject fractional numeric
+values before narrowing. Exact whole float/Decimal values remain supported.
+Raw event attributes are normalized before DataFrame inference can promote
+mixed integer/float rows. Values already rounded in a supplied float frame
+cannot be recovered.
+
+Canonical CSV reading preserves original numeric text. Native integer tokens
+stay on strict casts; finite, exactly integral decimal/exponent tokens are
+parsed within the target bounds without an intermediate float. Frame/mapping
+string grammar remains distinct. These rules concern canonical normalization;
+vendor preprocessing and data-use rights require their own validation.
+
+See the [bounded study and reproduction](CANONICAL_INTEGER_FIDELITY.md) for the
+false-admission witnesses, positive controls, source scope and limitations.
+
 ## Tardis
 
 ```python
