@@ -1,0 +1,333 @@
+{
+  "base_rows": [
+    {
+      "event_type": "RESET",
+      "price_ticks": 0,
+      "quantity": 0,
+      "sequence_number": 0,
+      "side": null,
+      "timestamp_ns": 0
+    },
+    {
+      "event_type": "SNAPSHOT",
+      "price_ticks": 100,
+      "quantity": 10,
+      "sequence_number": 1,
+      "side": 1,
+      "timestamp_ns": 0
+    },
+    {
+      "event_type": "SNAPSHOT",
+      "price_ticks": 102,
+      "quantity": 12,
+      "sequence_number": 2,
+      "side": -1,
+      "timestamp_ns": 0
+    },
+    {
+      "event_type": "ADD",
+      "price_ticks": 99,
+      "quantity": 8,
+      "sequence_number": 3,
+      "side": 1,
+      "timestamp_ns": 1
+    },
+    {
+      "event_type": "CANCEL",
+      "price_ticks": 102,
+      "quantity": 2,
+      "sequence_number": 4,
+      "side": -1,
+      "timestamp_ns": 2
+    },
+    {
+      "event_type": "TRADE",
+      "price_ticks": 100,
+      "quantity": 4,
+      "sequence_number": 5,
+      "side": 1,
+      "timestamp_ns": 3
+    }
+  ],
+  "cases": [
+    {
+      "expect": "reject",
+      "field": "timestamp_ns",
+      "id": "mapping_fractional_timestamp_ns",
+      "kind": "fractional_float",
+      "route": "mapping",
+      "row": 1,
+      "value": "0.5"
+    },
+    {
+      "expect": "reject",
+      "field": "sequence_number",
+      "id": "mapping_fractional_sequence_number",
+      "kind": "fractional_float",
+      "route": "mapping",
+      "row": 1,
+      "value": "1.5"
+    },
+    {
+      "expect": "reject",
+      "field": "price_ticks",
+      "id": "mapping_fractional_price_ticks",
+      "kind": "fractional_float",
+      "route": "mapping",
+      "row": 1,
+      "value": "100.5"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "mapping_fractional_quantity",
+      "kind": "fractional_float",
+      "route": "mapping",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "reject",
+      "field": "side",
+      "id": "mapping_fractional_side",
+      "kind": "fractional_float",
+      "route": "mapping",
+      "row": 1,
+      "value": "1.5"
+    },
+    {
+      "expect": "reject",
+      "field": "timestamp_ns",
+      "id": "frame_fractional_timestamp_ns",
+      "kind": "fractional_float",
+      "route": "frame",
+      "row": 1,
+      "value": "0.5"
+    },
+    {
+      "expect": "reject",
+      "field": "sequence_number",
+      "id": "frame_fractional_sequence_number",
+      "kind": "fractional_float",
+      "route": "frame",
+      "row": 1,
+      "value": "1.5"
+    },
+    {
+      "expect": "reject",
+      "field": "price_ticks",
+      "id": "frame_fractional_price_ticks",
+      "kind": "fractional_float",
+      "route": "frame",
+      "row": 1,
+      "value": "100.5"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "frame_fractional_quantity",
+      "kind": "fractional_float",
+      "route": "frame",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "reject",
+      "field": "side",
+      "id": "frame_fractional_side",
+      "kind": "fractional_float",
+      "route": "frame",
+      "row": 1,
+      "value": "1.5"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "read_csv_fractional_quantity",
+      "kind": "fractional_float",
+      "route": "read_csv",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "read_parquet_fractional_quantity",
+      "kind": "fractional_float",
+      "route": "read_parquet",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "write_csv_fractional_quantity",
+      "kind": "fractional_float",
+      "route": "write_csv",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "write_parquet_fractional_quantity",
+      "kind": "fractional_float",
+      "route": "write_parquet",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "reject",
+      "id": "csv_mixed_epoch_fraction",
+      "kind": "mixed_epoch_fraction",
+      "route": "read_csv",
+      "timestamps": [
+        "1700000000000000001",
+        "1700000000000000002.5",
+        "1700000000000000003",
+        "1700000000000000004",
+        "1700000000000000005",
+        "1700000000000000006"
+      ]
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "csv_long_fraction",
+      "kind": "fractional_text",
+      "route": "read_csv",
+      "row": 1,
+      "value": "10.00000000000000000000000000001"
+    },
+    {
+      "expect": "admit",
+      "id": "mapping_integral_float",
+      "kind": "integral_float",
+      "route": "mapping"
+    },
+    {
+      "expect": "admit",
+      "id": "frame_integral_float",
+      "kind": "integral_float",
+      "route": "frame"
+    },
+    {
+      "expect": "admit",
+      "id": "csv_integer_epoch",
+      "kind": "integer_epoch",
+      "route": "read_csv"
+    },
+    {
+      "expect": "admit",
+      "id": "csv_integral_decimal",
+      "kind": "integral_decimal_text",
+      "route": "read_csv"
+    },
+    {
+      "expect": "admit",
+      "id": "parquet_integer",
+      "kind": "ordinary",
+      "route": "read_parquet"
+    },
+    {
+      "expect": "admit",
+      "id": "frame_integer_strings",
+      "kind": "integer_strings",
+      "route": "frame"
+    },
+    {
+      "expect": "admit",
+      "id": "mapping_integer_strings",
+      "kind": "integer_strings",
+      "route": "mapping"
+    },
+    {
+      "expect": "admit",
+      "id": "frame_int64_bound",
+      "kind": "int64_bound",
+      "route": "frame"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "frame_fractional_decimal",
+      "kind": "fractional_decimal",
+      "route": "frame",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "mapping_fractional_decimal",
+      "kind": "fractional_decimal",
+      "route": "mapping",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "frame_nonfinite",
+      "kind": "nonfinite",
+      "route": "frame",
+      "row": 1,
+      "value": "NaN"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "frame_out_of_range",
+      "kind": "out_of_range",
+      "route": "frame",
+      "row": 1,
+      "value": "9223372036854775808"
+    },
+    {
+      "expect": "admit",
+      "id": "reset_null_side",
+      "kind": "ordinary",
+      "route": "frame"
+    },
+    {
+      "expect": "reject",
+      "field": "quantity",
+      "id": "events_fractional_quantity",
+      "kind": "fractional_float",
+      "route": "events_to_frame",
+      "row": 1,
+      "value": "10.5"
+    },
+    {
+      "expect": "admit",
+      "id": "events_mixed_epoch",
+      "kind": "mixed_integral_epoch",
+      "route": "events_to_frame",
+      "timestamps": [
+        1700000000000000001,
+        "float:1700000000000000256",
+        1700000000000000513,
+        1700000000000000770,
+        1700000000000001027,
+        1700000000000001284
+      ]
+    }
+  ],
+  "integer_fields": [
+    "timestamp_ns",
+    "sequence_number",
+    "price_ticks",
+    "quantity",
+    "side"
+  ],
+  "normal_control": "same six existing exposed test_validation.valid_events rows; output CSV/Parquet, rows/schema, book and fingerprint must match; no fresh holdout",
+  "special_controls": {
+    "fractional_decimal_dtype": "Decimal quantity column exact10.5 atrow1; other values exactlybase",
+    "fractional_frame_dtype": "Float64 for only selected column; base reset side remains null",
+    "int64_bound": "timestamps2**63-6 through2**63-1",
+    "integer_epoch": "timestamps1700000000000000001 through1700000000000000006",
+    "integer_strings": "all nonnull integer fields str(basevalue)",
+    "integral_decimal_text": "CSV timestamp tokens0.0,0e0,0.00,1e0,2.0,3.000; other integer fields ordinary integer tokens",
+    "integral_float": "all nonnull integer fields float(basevalue)"
+  }
+}
