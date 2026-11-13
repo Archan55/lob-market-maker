@@ -1,0 +1,16 @@
+{
+  "amendment_history": "Original protocolc89b877; wholeDecimal positive compatibility amendmentebf6acf before numerical outcomes and before source candidate. Final33=21reject12admit.",
+  "controller_review": "Complete isolated38-source/archive/import/frozen pins, one pytestworker per source,120scap,nooverwrite/partial evidence, both primary quantity10+strictvalid, candidate33/fullcontext/input/file/oracle/writerabsence,normalCSV/Pq/fullrecord comparison, baseline rehash/reuse, actual-headCI quality/smoke/two archivedsources and14dayartifact. No execution.",
+  "date": "2026-11-13",
+  "execution": "No new numerical probes, oracle evaluations, conversions, test collection or tests have run. Static author syntax/lint/stdlib-help only.",
+  "pins": {
+    ".github/workflows/ci.yml": "f1a3353379a25a5872d88784ddc7beae736946582ea762f3e0c5a1ce8a10880a",
+    "tests/unit/test_canonical_fidelity_independent.py": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855",
+    "tools/reproduce_canonical_fidelity.py": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+  },
+  "provider_review": "Entire provider reviewed; exact lexical/Fraction/integer-ratio oracle, pre-inference typed-event evidence, explicit input dtypes, staged domain errors, all33 beforeassert, actual outputs before strict validation, normal6; no imports/execution/edits.",
+  "reviewer": "independent_feasibility",
+  "root_record_of_independent_review": true,
+  "source_candidate": "Not yet implemented. Both production files unchanged at main baseline.",
+  "verdict": "GO before first numerical baseline"
+}
