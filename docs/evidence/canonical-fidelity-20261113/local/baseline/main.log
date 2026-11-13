@@ -1,0 +1,39 @@
+F.                                                                       [100%]
+=================================== FAILURES ===================================
+_______ test_frozen_canonical_corpus_records_every_case_before_asserting _______
+tests/unit/test_canonical_fidelity_independent.py:836: in test_frozen_canonical_corpus_records_every_case_before_asserting
+    assert not failed, failed
+E   AssertionError: [{'case_id': 'mapping_fractional_timestamp_ns', 'status': 'admitted', 'error': None, 'infrastructure_error': None, ......ase_id': 'frame_fractional_timestamp_ns', 'status': 'admitted', 'error': None, 'infrastructure_error': None, ...}, ...]
+E   assert not [{'case_id': 'mapping_fractional_timestamp_ns', 'status': 'admitted', 'error': None, 'infrastructure_error': None, ......ase_id': 'frame_fractional_timestamp_ns', 'status': 'admitted', 'error': None, 'infrastructure_error': None, ...}, ...]
+=========================== short test summary info ============================
+FAILED tests/unit/test_canonical_fidelity_independent.py::test_frozen_canonical_corpus_records_every_case_before_asserting
+1 failed, 1 passed in 0.77s
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories

@@ -1,0 +1,1021 @@
+{
+  "excluded": "Python bytecode caches only",
+  "files": {
+    "baseline-command.log": {
+      "bytes": 55053,
+      "sha256": "a3ae565f0c624db6a6244d7fe1f4210adf562563e655b0bddc8884d6129aec28"
+    },
+    "baseline/environment.json": {
+      "bytes": 483,
+      "sha256": "8e28e4837851b4ffa24b47d01d09d4e2638e6705caa4a8cc1da2ae7bd9ce56ad"
+    },
+    "baseline/frozen/docs/evidence/canonical-fidelity-20261113/contract.json": {
+      "bytes": 9376,
+      "sha256": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730"
+    },
+    "baseline/frozen/docs/evidence/canonical-fidelity-20261113/design-review.json": {
+      "bytes": 1153,
+      "sha256": "605e3690d18a082784246719be711f3e3fc05de7e05bc7f64882b6e962bfb6e1"
+    },
+    "baseline/frozen/docs/evidence/canonical-fidelity-20261113/fixtures.json": {
+      "bytes": 8376,
+      "sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7"
+    },
+    "baseline/frozen/tests/unit/test_canonical_fidelity_independent.py": {
+      "bytes": 29887,
+      "sha256": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855"
+    },
+    "baseline/frozen/tools/reproduce_canonical_fidelity.py": {
+      "bytes": 29802,
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+    },
+    "baseline/main-evidence/cases/csv_integer_epoch/canonical.parquet": {
+      "bytes": 2488,
+      "sha256": "99b6432799923bcb563d7b6cedc76a349b94814c4412f70a4a919efcb860e669"
+    },
+    "baseline/main-evidence/cases/csv_integer_epoch/input.csv": {
+      "bytes": 287,
+      "sha256": "fcef11146048101079aab5add315c1bbd76a3b02fd7c4f4613f22e44892b397b"
+    },
+    "baseline/main-evidence/cases/csv_integral_decimal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/csv_integral_decimal/input.csv": {
+      "bytes": 194,
+      "sha256": "d9bb65102b3f517b3089ce36a30dfcfe5b0f2e0c85cbda3933597b29a95db6d1"
+    },
+    "baseline/main-evidence/cases/csv_long_fraction/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/csv_long_fraction/input.csv": {
+      "bytes": 209,
+      "sha256": "33a28bb8832953bbed3e830f15929b52a3d3ff382ed7dbbe9e5e08700a5b0cd2"
+    },
+    "baseline/main-evidence/cases/csv_mixed_epoch_fraction/canonical.parquet": {
+      "bytes": 2463,
+      "sha256": "5fe13af6ef694c04057c31e7b17fbe2e2958bc86e66ca9fca3f55b56443875fa"
+    },
+    "baseline/main-evidence/cases/csv_mixed_epoch_fraction/input.csv": {
+      "bytes": 289,
+      "sha256": "c78b6a5ebd5428b1af1287a7d91ae33adced89597abfaf2d34b611a4042394bb"
+    },
+    "baseline/main-evidence/cases/events_fractional_quantity/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/events_mixed_epoch/canonical.parquet": {
+      "bytes": 2488,
+      "sha256": "6c401eee1f31cf16fd26d8738be5ac59dc54ce5db9be10d3f8931cd5acc57c3d"
+    },
+    "baseline/main-evidence/cases/frame_fractional_decimal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_fractional_decimal/input.parquet": {
+      "bytes": 2534,
+      "sha256": "406c229ccb02a223f4df8bb88e29fb03f95efd12723c5fe5c0841b7137038d86"
+    },
+    "baseline/main-evidence/cases/frame_fractional_price_ticks/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_fractional_price_ticks/input.parquet": {
+      "bytes": 2449,
+      "sha256": "bcfae3f39e08ca9369983383df7870bcb610d966386f9bd1af2c8343fa45fc0c"
+    },
+    "baseline/main-evidence/cases/frame_fractional_quantity/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_fractional_quantity/input.parquet": {
+      "bytes": 2441,
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9"
+    },
+    "baseline/main-evidence/cases/frame_fractional_sequence_number/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_fractional_sequence_number/input.parquet": {
+      "bytes": 2442,
+      "sha256": "45a8319ffa8be66dcd7bf3951df1134a62edf84333edafb58edc44a45f349721"
+    },
+    "baseline/main-evidence/cases/frame_fractional_side/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_fractional_side/input.parquet": {
+      "bytes": 2483,
+      "sha256": "55ed89d441b25c4026fb8d4c0c0a25887cebfb453c714efc6ec83528290243dc"
+    },
+    "baseline/main-evidence/cases/frame_fractional_timestamp_ns/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_fractional_timestamp_ns/input.parquet": {
+      "bytes": 2446,
+      "sha256": "0f6ad03c3b34caf65c157c17c6cf856f700f8ad0b2a6de3bf321a706250b3f90"
+    },
+    "baseline/main-evidence/cases/frame_int64_bound/canonical.parquet": {
+      "bytes": 2490,
+      "sha256": "5ae8459713a2857daf2126d4431ad9fc183c2d42ed5f7d34c529288c00734a7c"
+    },
+    "baseline/main-evidence/cases/frame_int64_bound/input.parquet": {
+      "bytes": 2490,
+      "sha256": "5ae8459713a2857daf2126d4431ad9fc183c2d42ed5f7d34c529288c00734a7c"
+    },
+    "baseline/main-evidence/cases/frame_integer_strings/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_integer_strings/input.parquet": {
+      "bytes": 2210,
+      "sha256": "ee2766cd8170586ecc85b036ce29ff5f7665ff8705fed8d226c4d17ad6cb5354"
+    },
+    "baseline/main-evidence/cases/frame_integral_decimal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_integral_decimal/input.parquet": {
+      "bytes": 2745,
+      "sha256": "ee247a1ec349193699ef96af3a1cca9e870777544d717539c37b02ec7fbcbe01"
+    },
+    "baseline/main-evidence/cases/frame_integral_float/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/frame_integral_float/input.parquet": {
+      "bytes": 2316,
+      "sha256": "0fbf0c4dca5439ad31a90ef7a390a7155454e15498ceaeb74f954876b7a45aca"
+    },
+    "baseline/main-evidence/cases/frame_nonfinite/input.parquet": {
+      "bytes": 2443,
+      "sha256": "11002d4f8ac0435540861cfd042a946b48c54ac9d72fb5d87dbabfb76415ca9f"
+    },
+    "baseline/main-evidence/cases/frame_out_of_range/input.parquet": {
+      "bytes": 2493,
+      "sha256": "d38a6885c5ec0422106424b750e412e9d892e20fbc22604090dcc789f32a7c12"
+    },
+    "baseline/main-evidence/cases/mapping_fractional_decimal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/mapping_fractional_price_ticks/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/mapping_fractional_quantity/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/mapping_fractional_sequence_number/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/mapping_fractional_side/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/mapping_fractional_timestamp_ns/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/mapping_integer_strings/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/mapping_integral_decimal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/mapping_integral_float/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/parquet_integer/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/parquet_integer/input.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/read_csv_fractional_quantity/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/read_csv_fractional_quantity/input.csv": {
+      "bytes": 181,
+      "sha256": "dd6664d2dfa92d4ef56400d3a0d686e053acefbefec35c5873c693c530147aa4"
+    },
+    "baseline/main-evidence/cases/read_parquet_fractional_quantity/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/read_parquet_fractional_quantity/input.parquet": {
+      "bytes": 2441,
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9"
+    },
+    "baseline/main-evidence/cases/reset_null_side/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/reset_null_side/input.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/write_csv_fractional_quantity/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/write_csv_fractional_quantity/input.parquet": {
+      "bytes": 2441,
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9"
+    },
+    "baseline/main-evidence/cases/write_csv_fractional_quantity/written.csv": {
+      "bytes": 179,
+      "sha256": "5b8ade5bfd795008a0f6a19594e38f938babf55ca04834159b6248fa9578a9af"
+    },
+    "baseline/main-evidence/cases/write_parquet_fractional_quantity/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/cases/write_parquet_fractional_quantity/input.parquet": {
+      "bytes": 2441,
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9"
+    },
+    "baseline/main-evidence/cases/write_parquet_fractional_quantity/written.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/corpus.json": {
+      "bytes": 596983,
+      "sha256": "3a4efe483494316632bfe5e0d370d96eb599c407c1e48efd7fd39a5a0a5f3e0d"
+    },
+    "baseline/main-evidence/normal-control.json": {
+      "bytes": 15497,
+      "sha256": "0c6c1f2ab972c5632afff8b92d032ea6966f2894f038127aa77576d2f64e3d45"
+    },
+    "baseline/main-evidence/normal/canonical.csv": {
+      "bytes": 179,
+      "sha256": "5b8ade5bfd795008a0f6a19594e38f938babf55ca04834159b6248fa9578a9af"
+    },
+    "baseline/main-evidence/normal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-evidence/normal/written.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "baseline/main-source-pins.json": {
+      "bytes": 3716,
+      "sha256": "a80db64f7751732cea30993dc5ecbe4cd2c9b56895fd27eceb9a15f73cead5b4"
+    },
+    "baseline/main.json": {
+      "bytes": 28682,
+      "sha256": "30fc338e090139900d2d4df50132f885a9d0b8c94b7e7a7242ecdd81334ef102"
+    },
+    "baseline/main.log": {
+      "bytes": 2536,
+      "sha256": "93e9a12ad298f7741f7da1eddb045d6315b5fa80ac6ee6d8b6adccfa73d1973f"
+    },
+    "baseline/main.xml": {
+      "bytes": 1568,
+      "sha256": "f722bcb2fd76f525f418e1bcb7429cc116f8e1e5eff9daeacd6d98641205056f"
+    },
+    "baseline/report.json": {
+      "bytes": 203975,
+      "sha256": "5787d56ee6cedab9db2327553d599cc5df019f470e757e78feae7a0acb5eb66d"
+    },
+    "baseline/reproducer.py": {
+      "bytes": 29802,
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+    },
+    "baseline/sources/main/frozen/docs/evidence/canonical-fidelity-20261113/contract.json": {
+      "bytes": 9376,
+      "sha256": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730"
+    },
+    "baseline/sources/main/frozen/docs/evidence/canonical-fidelity-20261113/design-review.json": {
+      "bytes": 1153,
+      "sha256": "605e3690d18a082784246719be711f3e3fc05de7e05bc7f64882b6e962bfb6e1"
+    },
+    "baseline/sources/main/frozen/docs/evidence/canonical-fidelity-20261113/fixtures.json": {
+      "bytes": 8376,
+      "sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7"
+    },
+    "baseline/sources/main/frozen/tests/unit/test_canonical_fidelity_independent.py": {
+      "bytes": 29887,
+      "sha256": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855"
+    },
+    "baseline/sources/main/frozen/tools/reproduce_canonical_fidelity.py": {
+      "bytes": 29802,
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+    },
+    "baseline/sources/main/src/lobmm/__init__.py": {
+      "bytes": 164,
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "baseline/sources/main/src/lobmm/backtest.py": {
+      "bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "baseline/sources/main/src/lobmm/benchmark.py": {
+      "bytes": 10082,
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    "baseline/sources/main/src/lobmm/book.py": {
+      "bytes": 12658,
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "baseline/sources/main/src/lobmm/case_study.py": {
+      "bytes": 19324,
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    "baseline/sources/main/src/lobmm/channels.py": {
+      "bytes": 5274,
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "baseline/sources/main/src/lobmm/cli.py": {
+      "bytes": 22297,
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    "baseline/sources/main/src/lobmm/config.py": {
+      "bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "baseline/sources/main/src/lobmm/data/__init__.py": {
+      "bytes": 1786,
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "baseline/sources/main/src/lobmm/data/_adapter_utils.py": {
+      "bytes": 5955,
+      "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+    },
+    "baseline/sources/main/src/lobmm/data/adapters.py": {
+      "bytes": 1367,
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "baseline/sources/main/src/lobmm/data/fingerprint.py": {
+      "bytes": 1079,
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "baseline/sources/main/src/lobmm/data/loaders.py": {
+      "bytes": 3935,
+      "sha256": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a"
+    },
+    "baseline/sources/main/src/lobmm/data/lobster.py": {
+      "bytes": 21121,
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "baseline/sources/main/src/lobmm/data/manifest.py": {
+      "bytes": 3983,
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "baseline/sources/main/src/lobmm/data/schema.py": {
+      "bytes": 4830,
+      "sha256": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9"
+    },
+    "baseline/sources/main/src/lobmm/data/tardis.py": {
+      "bytes": 21020,
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "baseline/sources/main/src/lobmm/enums.py": {
+      "bytes": 2472,
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "baseline/sources/main/src/lobmm/events.py": {
+      "bytes": 3006,
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "baseline/sources/main/src/lobmm/exchange.py": {
+      "bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "baseline/sources/main/src/lobmm/experiments.py": {
+      "bytes": 18529,
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    "baseline/sources/main/src/lobmm/metrics.py": {
+      "bytes": 14898,
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    "baseline/sources/main/src/lobmm/orders.py": {
+      "bytes": 17176,
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "baseline/sources/main/src/lobmm/portfolio.py": {
+      "bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "baseline/sources/main/src/lobmm/py.typed": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "baseline/sources/main/src/lobmm/queue_model.py": {
+      "bytes": 20413,
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "baseline/sources/main/src/lobmm/report.py": {
+      "bytes": 35627,
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    "baseline/sources/main/src/lobmm/risk.py": {
+      "bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "baseline/sources/main/src/lobmm/scheduler.py": {
+      "bytes": 8559,
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "baseline/sources/main/src/lobmm/strategies/__init__.py": {
+      "bytes": 1008,
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "baseline/sources/main/src/lobmm/strategies/base.py": {
+      "bytes": 21607,
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "baseline/sources/main/src/lobmm/strategies/fixed_spread.py": {
+      "bytes": 918,
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    "baseline/sources/main/src/lobmm/strategies/inventory_aware.py": {
+      "bytes": 1205,
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    "baseline/sources/main/src/lobmm/strategies/microprice.py": {
+      "bytes": 1659,
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    "baseline/sources/main/src/lobmm/strategy_runtime.py": {
+      "bytes": 3433,
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "baseline/sources/main/src/lobmm/synthetic.py": {
+      "bytes": 14929,
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    "baseline/sources/main/src/lobmm/types.py": {
+      "bytes": 1507,
+      "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+    },
+    "baseline/sources/main/src/lobmm/validation.py": {
+      "bytes": 7386,
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    },
+    "full-suite/canonical_import_identity.py": {
+      "bytes": 808,
+      "sha256": "fe636b5e6da7de7d82e74b701f4f75ca7d718e5d4430b8ace6caebdf5fd7659b"
+    },
+    "full-suite/imports.json": {
+      "bytes": 7496,
+      "sha256": "e991c72810ebbcc9d28757822eb949c067d7fde2ad339cd875a15e3cd9489fca"
+    },
+    "full-suite/result.txt": {
+      "bytes": 6924,
+      "sha256": "e771740353dc27acedca6537560bfd7f926630537fa9e95616374a1d1d01dafa"
+    },
+    "full-suite/result.xml": {
+      "bytes": 34904,
+      "sha256": "9bbe00fea4d0b9668d5877eebc0b98d03b3f1f606a135d4db8f63b34a43f846f"
+    },
+    "quality/git-diff-check.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "quality/mypy.txt": {
+      "bytes": 44,
+      "sha256": "34df9cf38736563d4bb02e64b66effac851acb546ad0a3c3761547e25bbe3570"
+    },
+    "quality/ruff-check.txt": {
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "quality/ruff-format.txt": {
+      "bytes": 27,
+      "sha256": "c0b753c0bfc7a70fc1f8c69d5afa1907a2fb41437df923ecb7ecac4d78676a19"
+    },
+    "static-review/initial-loaders.py.txt": {
+      "bytes": 5765,
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+    },
+    "static-review/initial-schema.py.txt": {
+      "bytes": 7355,
+      "sha256": "e3a771a7063b15a59084149a7593d00f3c6097e80850e6d5e2f20af08488de65"
+    },
+    "static-review/repair-history.json": {
+      "bytes": 967,
+      "sha256": "da818277dd32325732220c84bf438e96ab416d35fb8d341f3bf76500b5d75441"
+    },
+    "study-command.log": {
+      "bytes": 50679,
+      "sha256": "ada571c25fbf2f9c8be3408e496e31529a9649a15b147900393ed21646c3316c"
+    },
+    "study-final/candidate-evidence/cases/csv_integer_epoch/canonical.parquet": {
+      "bytes": 2488,
+      "sha256": "99b6432799923bcb563d7b6cedc76a349b94814c4412f70a4a919efcb860e669"
+    },
+    "study-final/candidate-evidence/cases/csv_integer_epoch/input.csv": {
+      "bytes": 287,
+      "sha256": "fcef11146048101079aab5add315c1bbd76a3b02fd7c4f4613f22e44892b397b"
+    },
+    "study-final/candidate-evidence/cases/csv_integral_decimal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/csv_integral_decimal/input.csv": {
+      "bytes": 194,
+      "sha256": "d9bb65102b3f517b3089ce36a30dfcfe5b0f2e0c85cbda3933597b29a95db6d1"
+    },
+    "study-final/candidate-evidence/cases/csv_long_fraction/input.csv": {
+      "bytes": 209,
+      "sha256": "33a28bb8832953bbed3e830f15929b52a3d3ff382ed7dbbe9e5e08700a5b0cd2"
+    },
+    "study-final/candidate-evidence/cases/csv_mixed_epoch_fraction/input.csv": {
+      "bytes": 289,
+      "sha256": "c78b6a5ebd5428b1af1287a7d91ae33adced89597abfaf2d34b611a4042394bb"
+    },
+    "study-final/candidate-evidence/cases/events_mixed_epoch/canonical.parquet": {
+      "bytes": 2492,
+      "sha256": "56d58422eae60316f997c925b5e4924163d27c8b736e0b043b7938cc1ced8e05"
+    },
+    "study-final/candidate-evidence/cases/frame_fractional_decimal/input.parquet": {
+      "bytes": 2534,
+      "sha256": "406c229ccb02a223f4df8bb88e29fb03f95efd12723c5fe5c0841b7137038d86"
+    },
+    "study-final/candidate-evidence/cases/frame_fractional_price_ticks/input.parquet": {
+      "bytes": 2449,
+      "sha256": "bcfae3f39e08ca9369983383df7870bcb610d966386f9bd1af2c8343fa45fc0c"
+    },
+    "study-final/candidate-evidence/cases/frame_fractional_quantity/input.parquet": {
+      "bytes": 2441,
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9"
+    },
+    "study-final/candidate-evidence/cases/frame_fractional_sequence_number/input.parquet": {
+      "bytes": 2442,
+      "sha256": "45a8319ffa8be66dcd7bf3951df1134a62edf84333edafb58edc44a45f349721"
+    },
+    "study-final/candidate-evidence/cases/frame_fractional_side/input.parquet": {
+      "bytes": 2483,
+      "sha256": "55ed89d441b25c4026fb8d4c0c0a25887cebfb453c714efc6ec83528290243dc"
+    },
+    "study-final/candidate-evidence/cases/frame_fractional_timestamp_ns/input.parquet": {
+      "bytes": 2446,
+      "sha256": "0f6ad03c3b34caf65c157c17c6cf856f700f8ad0b2a6de3bf321a706250b3f90"
+    },
+    "study-final/candidate-evidence/cases/frame_int64_bound/canonical.parquet": {
+      "bytes": 2490,
+      "sha256": "5ae8459713a2857daf2126d4431ad9fc183c2d42ed5f7d34c529288c00734a7c"
+    },
+    "study-final/candidate-evidence/cases/frame_int64_bound/input.parquet": {
+      "bytes": 2490,
+      "sha256": "5ae8459713a2857daf2126d4431ad9fc183c2d42ed5f7d34c529288c00734a7c"
+    },
+    "study-final/candidate-evidence/cases/frame_integer_strings/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/frame_integer_strings/input.parquet": {
+      "bytes": 2210,
+      "sha256": "ee2766cd8170586ecc85b036ce29ff5f7665ff8705fed8d226c4d17ad6cb5354"
+    },
+    "study-final/candidate-evidence/cases/frame_integral_decimal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/frame_integral_decimal/input.parquet": {
+      "bytes": 2745,
+      "sha256": "ee247a1ec349193699ef96af3a1cca9e870777544d717539c37b02ec7fbcbe01"
+    },
+    "study-final/candidate-evidence/cases/frame_integral_float/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/frame_integral_float/input.parquet": {
+      "bytes": 2316,
+      "sha256": "0fbf0c4dca5439ad31a90ef7a390a7155454e15498ceaeb74f954876b7a45aca"
+    },
+    "study-final/candidate-evidence/cases/frame_nonfinite/input.parquet": {
+      "bytes": 2443,
+      "sha256": "11002d4f8ac0435540861cfd042a946b48c54ac9d72fb5d87dbabfb76415ca9f"
+    },
+    "study-final/candidate-evidence/cases/frame_out_of_range/input.parquet": {
+      "bytes": 2493,
+      "sha256": "d38a6885c5ec0422106424b750e412e9d892e20fbc22604090dcc789f32a7c12"
+    },
+    "study-final/candidate-evidence/cases/mapping_integer_strings/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/mapping_integral_decimal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/mapping_integral_float/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/parquet_integer/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/parquet_integer/input.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/read_csv_fractional_quantity/input.csv": {
+      "bytes": 181,
+      "sha256": "dd6664d2dfa92d4ef56400d3a0d686e053acefbefec35c5873c693c530147aa4"
+    },
+    "study-final/candidate-evidence/cases/read_parquet_fractional_quantity/input.parquet": {
+      "bytes": 2441,
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9"
+    },
+    "study-final/candidate-evidence/cases/reset_null_side/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/reset_null_side/input.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/cases/write_csv_fractional_quantity/input.parquet": {
+      "bytes": 2441,
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9"
+    },
+    "study-final/candidate-evidence/cases/write_parquet_fractional_quantity/input.parquet": {
+      "bytes": 2441,
+      "sha256": "0904a210c02adaecb55d6753cf8994bb1a2f873a5a3e4fa4b5a91665a01f7ea9"
+    },
+    "study-final/candidate-evidence/corpus.json": {
+      "bytes": 495304,
+      "sha256": "dcb5cdaa70290eaf2c6c80dcbcc1bb37eadfb682e5b93162e034d23cb1b7316b"
+    },
+    "study-final/candidate-evidence/normal-control.json": {
+      "bytes": 15517,
+      "sha256": "c86216586b7419f730dea3ee735a597b518c19dad5011518605e49cb124001bc"
+    },
+    "study-final/candidate-evidence/normal/canonical.csv": {
+      "bytes": 179,
+      "sha256": "5b8ade5bfd795008a0f6a19594e38f938babf55ca04834159b6248fa9578a9af"
+    },
+    "study-final/candidate-evidence/normal/canonical.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-evidence/normal/written.parquet": {
+      "bytes": 2478,
+      "sha256": "53b6254a9115379a609f6cdc84794e0f6716265d6cc18b344e4010a19189b88e"
+    },
+    "study-final/candidate-source-pins.json": {
+      "bytes": 3716,
+      "sha256": "55e6fcd3f1482c92c66488d797a1f950db9816b7d75928803ad351ec939c85b0"
+    },
+    "study-final/candidate.json": {
+      "bytes": 27892,
+      "sha256": "c0e14401fed66c8bf8c6060d00d77cb6183677ffea886de42666a5fa60f83331"
+    },
+    "study-final/candidate.log": {
+      "bytes": 98,
+      "sha256": "1de7af18a082aed8ed2db28a900eee55720e6fca28b21af9e1bac8ef498046d9"
+    },
+    "study-final/candidate.xml": {
+      "bytes": 556,
+      "sha256": "67abe93ddee1051043c66f6e77f2f5a1cd9cfb77015aa8ef794adcacff4628ff"
+    },
+    "study-final/environment.json": {
+      "bytes": 483,
+      "sha256": "8e28e4837851b4ffa24b47d01d09d4e2638e6705caa4a8cc1da2ae7bd9ce56ad"
+    },
+    "study-final/frozen/docs/evidence/canonical-fidelity-20261113/contract.json": {
+      "bytes": 9376,
+      "sha256": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730"
+    },
+    "study-final/frozen/docs/evidence/canonical-fidelity-20261113/design-review.json": {
+      "bytes": 1153,
+      "sha256": "605e3690d18a082784246719be711f3e3fc05de7e05bc7f64882b6e962bfb6e1"
+    },
+    "study-final/frozen/docs/evidence/canonical-fidelity-20261113/fixtures.json": {
+      "bytes": 8376,
+      "sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7"
+    },
+    "study-final/frozen/tests/unit/test_canonical_fidelity_independent.py": {
+      "bytes": 29887,
+      "sha256": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855"
+    },
+    "study-final/frozen/tools/reproduce_canonical_fidelity.py": {
+      "bytes": 29802,
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+    },
+    "study-final/report.json": {
+      "bytes": 180955,
+      "sha256": "06cc436a4ebb0dfcc3cfdc1714d2d31936519dd9317ec8e811f78f699f74b1eb"
+    },
+    "study-final/reproducer.py": {
+      "bytes": 29802,
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+    },
+    "study-final/sources/candidate/frozen/docs/evidence/canonical-fidelity-20261113/contract.json": {
+      "bytes": 9376,
+      "sha256": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730"
+    },
+    "study-final/sources/candidate/frozen/docs/evidence/canonical-fidelity-20261113/design-review.json": {
+      "bytes": 1153,
+      "sha256": "605e3690d18a082784246719be711f3e3fc05de7e05bc7f64882b6e962bfb6e1"
+    },
+    "study-final/sources/candidate/frozen/docs/evidence/canonical-fidelity-20261113/fixtures.json": {
+      "bytes": 8376,
+      "sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7"
+    },
+    "study-final/sources/candidate/frozen/tests/unit/test_canonical_fidelity_independent.py": {
+      "bytes": 29887,
+      "sha256": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855"
+    },
+    "study-final/sources/candidate/frozen/tools/reproduce_canonical_fidelity.py": {
+      "bytes": 29802,
+      "sha256": "615bb5f078a76a5e486439c09c647a7db5719d63045636556fe1d258d5b64453"
+    },
+    "study-final/sources/candidate/src/lobmm/__init__.py": {
+      "bytes": 164,
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "study-final/sources/candidate/src/lobmm/backtest.py": {
+      "bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "study-final/sources/candidate/src/lobmm/benchmark.py": {
+      "bytes": 10082,
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    "study-final/sources/candidate/src/lobmm/book.py": {
+      "bytes": 12658,
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "study-final/sources/candidate/src/lobmm/case_study.py": {
+      "bytes": 19324,
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    "study-final/sources/candidate/src/lobmm/channels.py": {
+      "bytes": 5274,
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "study-final/sources/candidate/src/lobmm/cli.py": {
+      "bytes": 22297,
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    "study-final/sources/candidate/src/lobmm/config.py": {
+      "bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "study-final/sources/candidate/src/lobmm/data/__init__.py": {
+      "bytes": 1786,
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "study-final/sources/candidate/src/lobmm/data/_adapter_utils.py": {
+      "bytes": 5955,
+      "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+    },
+    "study-final/sources/candidate/src/lobmm/data/adapters.py": {
+      "bytes": 1367,
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "study-final/sources/candidate/src/lobmm/data/fingerprint.py": {
+      "bytes": 1079,
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "study-final/sources/candidate/src/lobmm/data/loaders.py": {
+      "bytes": 5765,
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+    },
+    "study-final/sources/candidate/src/lobmm/data/lobster.py": {
+      "bytes": 21121,
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "study-final/sources/candidate/src/lobmm/data/manifest.py": {
+      "bytes": 3983,
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "study-final/sources/candidate/src/lobmm/data/schema.py": {
+      "bytes": 7692,
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+    },
+    "study-final/sources/candidate/src/lobmm/data/tardis.py": {
+      "bytes": 21020,
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "study-final/sources/candidate/src/lobmm/enums.py": {
+      "bytes": 2472,
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "study-final/sources/candidate/src/lobmm/events.py": {
+      "bytes": 3006,
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "study-final/sources/candidate/src/lobmm/exchange.py": {
+      "bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "study-final/sources/candidate/src/lobmm/experiments.py": {
+      "bytes": 18529,
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    "study-final/sources/candidate/src/lobmm/metrics.py": {
+      "bytes": 14898,
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    "study-final/sources/candidate/src/lobmm/orders.py": {
+      "bytes": 17176,
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "study-final/sources/candidate/src/lobmm/portfolio.py": {
+      "bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "study-final/sources/candidate/src/lobmm/py.typed": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "study-final/sources/candidate/src/lobmm/queue_model.py": {
+      "bytes": 20413,
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "study-final/sources/candidate/src/lobmm/report.py": {
+      "bytes": 35627,
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    "study-final/sources/candidate/src/lobmm/risk.py": {
+      "bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "study-final/sources/candidate/src/lobmm/scheduler.py": {
+      "bytes": 8559,
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "study-final/sources/candidate/src/lobmm/strategies/__init__.py": {
+      "bytes": 1008,
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "study-final/sources/candidate/src/lobmm/strategies/base.py": {
+      "bytes": 21607,
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "study-final/sources/candidate/src/lobmm/strategies/fixed_spread.py": {
+      "bytes": 918,
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    "study-final/sources/candidate/src/lobmm/strategies/inventory_aware.py": {
+      "bytes": 1205,
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    "study-final/sources/candidate/src/lobmm/strategies/microprice.py": {
+      "bytes": 1659,
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    "study-final/sources/candidate/src/lobmm/strategy_runtime.py": {
+      "bytes": 3433,
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "study-final/sources/candidate/src/lobmm/synthetic.py": {
+      "bytes": 14929,
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    "study-final/sources/candidate/src/lobmm/types.py": {
+      "bytes": 1507,
+      "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+    },
+    "study-final/sources/candidate/src/lobmm/validation.py": {
+      "bytes": 7386,
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    }
+  },
+  "raw_root": "/workspace/lob-market-maker-canonical-fix/experiments/canonical-fidelity-20261113",
+  "redundant_source_frozen_controller_copies": "Retained in cloud; complete hashes above, source/frozen content pinned in Git. Initial unmeasured schema is separately labeled hash-verified reconstruction, not an original file copy.",
+  "verbatim_publication_copy_map": {
+    "baseline-command.log": "docs/evidence/canonical-fidelity-20261113/local/baseline-command.log",
+    "baseline/environment.json": "docs/evidence/canonical-fidelity-20261113/local/baseline/environment.json",
+    "baseline/main-evidence/cases/csv_integer_epoch/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/csv_integer_epoch/canonical.parquet",
+    "baseline/main-evidence/cases/csv_integer_epoch/input.csv": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/csv_integer_epoch/input.csv",
+    "baseline/main-evidence/cases/csv_integral_decimal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/csv_integral_decimal/canonical.parquet",
+    "baseline/main-evidence/cases/csv_integral_decimal/input.csv": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/csv_integral_decimal/input.csv",
+    "baseline/main-evidence/cases/csv_long_fraction/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/csv_long_fraction/canonical.parquet",
+    "baseline/main-evidence/cases/csv_long_fraction/input.csv": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/csv_long_fraction/input.csv",
+    "baseline/main-evidence/cases/csv_mixed_epoch_fraction/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/csv_mixed_epoch_fraction/canonical.parquet",
+    "baseline/main-evidence/cases/csv_mixed_epoch_fraction/input.csv": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/csv_mixed_epoch_fraction/input.csv",
+    "baseline/main-evidence/cases/events_fractional_quantity/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/events_fractional_quantity/canonical.parquet",
+    "baseline/main-evidence/cases/events_mixed_epoch/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/events_mixed_epoch/canonical.parquet",
+    "baseline/main-evidence/cases/frame_fractional_decimal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_decimal/canonical.parquet",
+    "baseline/main-evidence/cases/frame_fractional_decimal/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_decimal/input.parquet",
+    "baseline/main-evidence/cases/frame_fractional_price_ticks/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_price_ticks/canonical.parquet",
+    "baseline/main-evidence/cases/frame_fractional_price_ticks/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_price_ticks/input.parquet",
+    "baseline/main-evidence/cases/frame_fractional_quantity/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_quantity/canonical.parquet",
+    "baseline/main-evidence/cases/frame_fractional_quantity/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_quantity/input.parquet",
+    "baseline/main-evidence/cases/frame_fractional_sequence_number/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_sequence_number/canonical.parquet",
+    "baseline/main-evidence/cases/frame_fractional_sequence_number/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_sequence_number/input.parquet",
+    "baseline/main-evidence/cases/frame_fractional_side/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_side/canonical.parquet",
+    "baseline/main-evidence/cases/frame_fractional_side/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_side/input.parquet",
+    "baseline/main-evidence/cases/frame_fractional_timestamp_ns/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_timestamp_ns/canonical.parquet",
+    "baseline/main-evidence/cases/frame_fractional_timestamp_ns/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_fractional_timestamp_ns/input.parquet",
+    "baseline/main-evidence/cases/frame_int64_bound/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_int64_bound/canonical.parquet",
+    "baseline/main-evidence/cases/frame_int64_bound/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_int64_bound/input.parquet",
+    "baseline/main-evidence/cases/frame_integer_strings/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_integer_strings/canonical.parquet",
+    "baseline/main-evidence/cases/frame_integer_strings/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_integer_strings/input.parquet",
+    "baseline/main-evidence/cases/frame_integral_decimal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_integral_decimal/canonical.parquet",
+    "baseline/main-evidence/cases/frame_integral_decimal/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_integral_decimal/input.parquet",
+    "baseline/main-evidence/cases/frame_integral_float/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_integral_float/canonical.parquet",
+    "baseline/main-evidence/cases/frame_integral_float/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_integral_float/input.parquet",
+    "baseline/main-evidence/cases/frame_nonfinite/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_nonfinite/input.parquet",
+    "baseline/main-evidence/cases/frame_out_of_range/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/frame_out_of_range/input.parquet",
+    "baseline/main-evidence/cases/mapping_fractional_decimal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_fractional_decimal/canonical.parquet",
+    "baseline/main-evidence/cases/mapping_fractional_price_ticks/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_fractional_price_ticks/canonical.parquet",
+    "baseline/main-evidence/cases/mapping_fractional_quantity/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_fractional_quantity/canonical.parquet",
+    "baseline/main-evidence/cases/mapping_fractional_sequence_number/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_fractional_sequence_number/canonical.parquet",
+    "baseline/main-evidence/cases/mapping_fractional_side/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_fractional_side/canonical.parquet",
+    "baseline/main-evidence/cases/mapping_fractional_timestamp_ns/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_fractional_timestamp_ns/canonical.parquet",
+    "baseline/main-evidence/cases/mapping_integer_strings/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_integer_strings/canonical.parquet",
+    "baseline/main-evidence/cases/mapping_integral_decimal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_integral_decimal/canonical.parquet",
+    "baseline/main-evidence/cases/mapping_integral_float/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/mapping_integral_float/canonical.parquet",
+    "baseline/main-evidence/cases/parquet_integer/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/parquet_integer/canonical.parquet",
+    "baseline/main-evidence/cases/parquet_integer/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/parquet_integer/input.parquet",
+    "baseline/main-evidence/cases/read_csv_fractional_quantity/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/read_csv_fractional_quantity/canonical.parquet",
+    "baseline/main-evidence/cases/read_csv_fractional_quantity/input.csv": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/read_csv_fractional_quantity/input.csv",
+    "baseline/main-evidence/cases/read_parquet_fractional_quantity/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/read_parquet_fractional_quantity/canonical.parquet",
+    "baseline/main-evidence/cases/read_parquet_fractional_quantity/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/read_parquet_fractional_quantity/input.parquet",
+    "baseline/main-evidence/cases/reset_null_side/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/reset_null_side/canonical.parquet",
+    "baseline/main-evidence/cases/reset_null_side/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/reset_null_side/input.parquet",
+    "baseline/main-evidence/cases/write_csv_fractional_quantity/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/write_csv_fractional_quantity/canonical.parquet",
+    "baseline/main-evidence/cases/write_csv_fractional_quantity/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/write_csv_fractional_quantity/input.parquet",
+    "baseline/main-evidence/cases/write_csv_fractional_quantity/written.csv": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/write_csv_fractional_quantity/written.csv",
+    "baseline/main-evidence/cases/write_parquet_fractional_quantity/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/write_parquet_fractional_quantity/canonical.parquet",
+    "baseline/main-evidence/cases/write_parquet_fractional_quantity/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/write_parquet_fractional_quantity/input.parquet",
+    "baseline/main-evidence/cases/write_parquet_fractional_quantity/written.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/cases/write_parquet_fractional_quantity/written.parquet",
+    "baseline/main-evidence/corpus.json": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/corpus.json",
+    "baseline/main-evidence/normal-control.json": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/normal-control.json",
+    "baseline/main-evidence/normal/canonical.csv": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/normal/canonical.csv",
+    "baseline/main-evidence/normal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/normal/canonical.parquet",
+    "baseline/main-evidence/normal/written.parquet": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-evidence/normal/written.parquet",
+    "baseline/main-source-pins.json": "docs/evidence/canonical-fidelity-20261113/local/baseline/main-source-pins.json",
+    "baseline/main.json": "docs/evidence/canonical-fidelity-20261113/local/baseline/main.json",
+    "baseline/main.log": "docs/evidence/canonical-fidelity-20261113/local/baseline/main.log",
+    "baseline/main.xml": "docs/evidence/canonical-fidelity-20261113/local/baseline/main.xml",
+    "baseline/report.json": "docs/evidence/canonical-fidelity-20261113/local/baseline/report.json",
+    "full-suite/canonical_import_identity.py": "docs/evidence/canonical-fidelity-20261113/local/full-suite/canonical_import_identity.py.txt",
+    "full-suite/imports.json": "docs/evidence/canonical-fidelity-20261113/local/full-suite/imports.json",
+    "full-suite/result.txt": "docs/evidence/canonical-fidelity-20261113/local/full-suite/result.txt",
+    "full-suite/result.xml": "docs/evidence/canonical-fidelity-20261113/local/full-suite/result.xml",
+    "quality/git-diff-check.txt": "docs/evidence/canonical-fidelity-20261113/local/quality/git-diff-check.txt",
+    "quality/mypy.txt": "docs/evidence/canonical-fidelity-20261113/local/quality/mypy.txt",
+    "quality/ruff-check.txt": "docs/evidence/canonical-fidelity-20261113/local/quality/ruff-check.txt",
+    "quality/ruff-format.txt": "docs/evidence/canonical-fidelity-20261113/local/quality/ruff-format.txt",
+    "static-review/initial-loaders.py.txt": "docs/evidence/canonical-fidelity-20261113/local/static-review/initial-loaders.py.txt",
+    "static-review/initial-schema.py.txt": "docs/evidence/canonical-fidelity-20261113/local/static-review/initial-schema.py.txt",
+    "static-review/repair-history.json": "docs/evidence/canonical-fidelity-20261113/local/static-review/repair-history.json",
+    "study-command.log": "docs/evidence/canonical-fidelity-20261113/local/study-command.log",
+    "study-final/candidate-evidence/cases/csv_integer_epoch/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/csv_integer_epoch/canonical.parquet",
+    "study-final/candidate-evidence/cases/csv_integer_epoch/input.csv": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/csv_integer_epoch/input.csv",
+    "study-final/candidate-evidence/cases/csv_integral_decimal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/csv_integral_decimal/canonical.parquet",
+    "study-final/candidate-evidence/cases/csv_integral_decimal/input.csv": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/csv_integral_decimal/input.csv",
+    "study-final/candidate-evidence/cases/csv_long_fraction/input.csv": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/csv_long_fraction/input.csv",
+    "study-final/candidate-evidence/cases/csv_mixed_epoch_fraction/input.csv": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/csv_mixed_epoch_fraction/input.csv",
+    "study-final/candidate-evidence/cases/events_mixed_epoch/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/events_mixed_epoch/canonical.parquet",
+    "study-final/candidate-evidence/cases/frame_fractional_decimal/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_fractional_decimal/input.parquet",
+    "study-final/candidate-evidence/cases/frame_fractional_price_ticks/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_fractional_price_ticks/input.parquet",
+    "study-final/candidate-evidence/cases/frame_fractional_quantity/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_fractional_quantity/input.parquet",
+    "study-final/candidate-evidence/cases/frame_fractional_sequence_number/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_fractional_sequence_number/input.parquet",
+    "study-final/candidate-evidence/cases/frame_fractional_side/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_fractional_side/input.parquet",
+    "study-final/candidate-evidence/cases/frame_fractional_timestamp_ns/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_fractional_timestamp_ns/input.parquet",
+    "study-final/candidate-evidence/cases/frame_int64_bound/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_int64_bound/canonical.parquet",
+    "study-final/candidate-evidence/cases/frame_int64_bound/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_int64_bound/input.parquet",
+    "study-final/candidate-evidence/cases/frame_integer_strings/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_integer_strings/canonical.parquet",
+    "study-final/candidate-evidence/cases/frame_integer_strings/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_integer_strings/input.parquet",
+    "study-final/candidate-evidence/cases/frame_integral_decimal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_integral_decimal/canonical.parquet",
+    "study-final/candidate-evidence/cases/frame_integral_decimal/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_integral_decimal/input.parquet",
+    "study-final/candidate-evidence/cases/frame_integral_float/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_integral_float/canonical.parquet",
+    "study-final/candidate-evidence/cases/frame_integral_float/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_integral_float/input.parquet",
+    "study-final/candidate-evidence/cases/frame_nonfinite/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_nonfinite/input.parquet",
+    "study-final/candidate-evidence/cases/frame_out_of_range/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/frame_out_of_range/input.parquet",
+    "study-final/candidate-evidence/cases/mapping_integer_strings/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/mapping_integer_strings/canonical.parquet",
+    "study-final/candidate-evidence/cases/mapping_integral_decimal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/mapping_integral_decimal/canonical.parquet",
+    "study-final/candidate-evidence/cases/mapping_integral_float/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/mapping_integral_float/canonical.parquet",
+    "study-final/candidate-evidence/cases/parquet_integer/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/parquet_integer/canonical.parquet",
+    "study-final/candidate-evidence/cases/parquet_integer/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/parquet_integer/input.parquet",
+    "study-final/candidate-evidence/cases/read_csv_fractional_quantity/input.csv": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/read_csv_fractional_quantity/input.csv",
+    "study-final/candidate-evidence/cases/read_parquet_fractional_quantity/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/read_parquet_fractional_quantity/input.parquet",
+    "study-final/candidate-evidence/cases/reset_null_side/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/reset_null_side/canonical.parquet",
+    "study-final/candidate-evidence/cases/reset_null_side/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/reset_null_side/input.parquet",
+    "study-final/candidate-evidence/cases/write_csv_fractional_quantity/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/write_csv_fractional_quantity/input.parquet",
+    "study-final/candidate-evidence/cases/write_parquet_fractional_quantity/input.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/cases/write_parquet_fractional_quantity/input.parquet",
+    "study-final/candidate-evidence/corpus.json": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/corpus.json",
+    "study-final/candidate-evidence/normal-control.json": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/normal-control.json",
+    "study-final/candidate-evidence/normal/canonical.csv": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/normal/canonical.csv",
+    "study-final/candidate-evidence/normal/canonical.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/normal/canonical.parquet",
+    "study-final/candidate-evidence/normal/written.parquet": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-evidence/normal/written.parquet",
+    "study-final/candidate-source-pins.json": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate-source-pins.json",
+    "study-final/candidate.json": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate.json",
+    "study-final/candidate.log": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate.log",
+    "study-final/candidate.xml": "docs/evidence/canonical-fidelity-20261113/local/study-final/candidate.xml",
+    "study-final/environment.json": "docs/evidence/canonical-fidelity-20261113/local/study-final/environment.json",
+    "study-final/report.json": "docs/evidence/canonical-fidelity-20261113/local/study-final/report.json"
+  }
+}

@@ -1,0 +1,19 @@
+import hashlib
+import json
+import os
+import sys
+from pathlib import Path
+
+
+def pytest_sessionfinish(session, exitstatus):
+    root = Path.cwd().resolve()
+    modules = {}
+    for name, module in sorted(sys.modules.items()):
+        path = getattr(module, "__file__", None)
+        if path and (name == "lobmm" or name.startswith("lobmm.")):
+            file = Path(path).resolve()
+            if not file.is_relative_to(root / "src"):
+                raise RuntimeError("foreign suite module: " + name)
+            modules[name] = {"path": str(file), "sha256": hashlib.sha256(file.read_bytes()).hexdigest()}
+    target = Path(os.environ["LOB_CANONICAL_SUITE_IMPORTS"])
+    target.write_text(json.dumps({"exitstatus": int(exitstatus), "root": str(root), "modules": modules}, indent=2, sort_keys=True) + "\n")

@@ -1,0 +1,7 @@
+timestamp_ns,sequence_number,event_type,side,price_ticks,quantity
+0.0,0,RESET,,0,0
+0e0,1,SNAPSHOT,1,100,10
+0.00,2,SNAPSHOT,-1,102,12
+1e0,3,ADD,1,99,8
+2.0,4,CANCEL,-1,102,2
+3.000,5,TRADE,1,100,4
