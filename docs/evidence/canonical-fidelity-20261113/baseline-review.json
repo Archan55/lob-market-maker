@@ -1,0 +1,44 @@
+{
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "baseline_report_sha256": "5787d56ee6cedab9db2327553d599cc5df019f470e757e78feae7a0acb5eb66d",
+  "candidate": "Single planned schema/loaders correction authorized after mandatory primary gate; candidate not yet measured.",
+  "date": "2026-11-13",
+  "harness_commit": "33bc189a701fb52e285081929c295d768e01b1e8",
+  "independent_coverage": "All raw provided input/oracle values, exact float ratio/hex, complete frame/schema/errors, independent dictionary/strict certificate/fingerprint, all actual Parquet/CSV bytes, writer files, normal record, source/import/archive/frozen pins and worker/JUnit. No production imports, reruns, writes or extra scenarios.",
+  "negative_findings": "Ordinary integer-only epoch CSV and Int64 boundary controls already exact. NaN and UInt64 overflow already correctly rejected. No valid integer-only CSV corruption claimed.",
+  "results": {
+    "actual_csvs": 7,
+    "actual_parquets": 51,
+    "admitted": 31,
+    "context_or_guard_changes": 0,
+    "correct_existing_rejects": 2,
+    "false_admissions": 19,
+    "normal_rows": 6,
+    "observations": 33,
+    "oracle_mismatches": 20,
+    "positive_mixed_epoch_fidelity_failures": 1,
+    "primary_quantities": "10.5 becomes10 in both mapping/frame, strict-valid",
+    "pytest": {
+      "collected": 2,
+      "errors": 0,
+      "failed": 1,
+      "passed": 1,
+      "skips": 0
+    },
+    "raw_file_manifest_entries": 114,
+    "source_paths": 38
+  },
+  "reviewer": "independent_feasibility",
+  "root_record_of_independent_review": true,
+  "second_independent_physical_audit": {
+    "coverage": "Exact source literals/types/float ratio/hex, all actual files, canonical rows/schema/dictionary/fingerprints, normal bytes,114manifest entries,38source/import/archive/frozen pins and ancestry",
+    "csvs": 7,
+    "file_reference_hashes": 57,
+    "frozen_to_raw_cells": 1188,
+    "no_reruns_edits_or_remote_actions": true,
+    "parquets": 51,
+    "reviewer": "publication_integrity",
+    "verdict": "GO"
+  },
+  "verdict": "GO"
+}
