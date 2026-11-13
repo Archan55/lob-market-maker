@@ -1,9 +1,9 @@
 {
   "base_branch": "main",
   "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
-  "baseline_gate": "One archivedmainworker records all31cases andnormalcontrol withoutinfrastructureerror/collectionerror/skip. Bothprimarymapping+frameqtymustactuallyadmitquantity10/strictvalidbook. Stop ifeitherprimaryisnotreproduced; noalternativecaseorcriterionselection.",
+  "baseline_gate": "One archivedmainworker records all33cases andnormalcontrol withoutinfrastructureerror/collectionerror/skip. Bothprimarymapping+frameqtymustactuallyadmitquantity10/strictvalidbook. Stop ifeitherprimaryisnotreproduced; noalternativecaseorcriterionselection.",
   "budget": "One baselineworker once; one candidateworker once reusing/rehashedevidence;120s each. Atmostone independentlyjustified correctnessrepair withunchangedinputs/gates, alltrials retained. No performance/candidate search. Fullordinarysuite and remoteCI separateverification. Stop atunresolvedprimary/oracle/provenance/quality orbudgetfailure.",
-  "candidate_gate": "Same frozen31cases:21negativesdomainreject beforecanonicaloutput;10positivesexactoracleintegers; unchanged inputframes/mappings/files, rejectedwritersleave no canonicalfile. NormalactualCSV/Parquetbytes plusfullrows/schema/strictbook/fingerprint matchrehashedbaseline. Allsourcepaths exceptschema/loaders unchanged. Ruff/strictmypy/fullsuite>=90%coverage; independent source+actual-artifact review; final remotehead/exact-headterminalCI.",
+  "candidate_gate": "Same frozen33cases:21negativesdomainreject beforecanonicaloutput;12positivesexactoracleintegers; unchanged inputframes/mappings/files, rejectedwritersleave no canonicalfile. NormalactualCSV/Parquetbytes plusfullrows/schema/strictbook/fingerprint matchrehashedbaseline. Allsourcepaths exceptschema/loaders unchanged. Ruff/strictmypy/fullsuite>=90%coverage; independent source+actual-artifact review; final remotehead/exact-headterminalCI.",
   "candidate_scope": [
     "Only src/lobmm/data/schema.py and src/lobmm/data/loaders.py among production sources. Do not edit events.py, vendor adapters, PR9kernel or other PRs.",
     "Guard numeric casts for exact integrality/target representability; preserve all originally accepted exact integer/whole-float controls and RESET-nullside.",
@@ -14,14 +14,15 @@
   ],
   "date": "2026-11-13",
   "error_policy": "Domain DataSchemaError for mapping/frame, DataLoadError for file load/write; validators maywrap StreamValidationError. Rejection field identifiable, exact library-specific numeric message text not frozen. No arbitrary new scalar-string acceptance in directmapping/frame.",
-  "fixtures_sha256": "1c4d8062a646d8ed599678d36c098ae93209a0d22cc3eec2cc54723a42ff5f38",
+  "fixtures_sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7",
   "hypotheses": [
     "At default settings primary mapping_fractional_quantity and frame_fractional_quantity are admitted asquantity10 with strict-valid reconstructed six-eventstreams although exactsource10.5 requires rejection.",
     "CSVlongfraction and mixedepochtimestamp are invalid-source rejection probes; do not claim valid integer-only CSVcorruption.",
-    "Candidate rejects all21fixednegatives, admits all10fixedpositives exactly and preserves normalcontrol bytes/rows/schema/fingerprint/book."
+    "Candidate rejects all21fixednegatives, admits all12fixedpositives exactly and preserves normalcontrol bytes/rows/schema/fingerprint/book."
   ],
   "independence": "Preregisterbeforeanynumericalprobe/testcollection/execution/neworacleoutcome; test/provider/controller authorseparatefromproductionsource; thirdparty challengesdesign/source/actualartifacts. Root executesworkers alone. No author secretlyrunsprobes.",
   "limits": "Originalsyntheticcanonicalcorrectness only, not economic advantage, calibratedexecution, realdata rights/admission or PR3performance resolution. Databento ownedelsewhere, no dataacquisition. PriorNov2/4candidates remainclosed; no priorperiodsfresh. No desktop/merge/deploy/trade/paid/access/security/deniedretry.",
+  "preoutcome_amendment": "Independentdesignreview identified promisedwholeDecimalcompatibility lackedpositivecases. Beforeanynumericaltest/probe/collection/conversion/sourcecandidate, addtwointegralDecimalpositives. Total33=21reject12admit. Samequestion/sourcebudget/gates; nooutcomebasedselection. This isfinalprebaselinecorpus.",
   "question": "Do canonical schema/mapping/file boundaries reject fractional integer fields before lossy normalization, and can exact source fidelity be enforced without changing ordinary valid output?",
   "representation_policy": {
     "CSV": "Readoriginal numeric textbeforeinference; exactwholedecimal/exponent forms acceptedifintargetInt64/Int8bounds; fractional/nonfinite/outofrange reject. Originalintegerdigits preserved.",

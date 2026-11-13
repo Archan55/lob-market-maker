@@ -311,6 +311,18 @@
         1700000000000001027,
         1700000000000001284
       ]
+    },
+    {
+      "expect": "admit",
+      "id": "mapping_integral_decimal",
+      "kind": "integral_decimal",
+      "route": "mapping"
+    },
+    {
+      "expect": "admit",
+      "id": "frame_integral_decimal",
+      "kind": "integral_decimal",
+      "route": "frame"
     }
   ],
   "integer_fields": [
@@ -327,6 +339,7 @@
     "int64_bound": "timestamps2**63-6 through2**63-1",
     "integer_epoch": "timestamps1700000000000000001 through1700000000000000006",
     "integer_strings": "all nonnull integer fields str(basevalue)",
+    "integral_decimal": "all nonnull integer fields Decimal(str(basevalue)) with scale1 where represented in frame; RESET side staysnull",
     "integral_decimal_text": "CSV timestamp tokens0.0,0e0,0.00,1e0,2.0,3.000; other integer fields ordinary integer tokens",
     "integral_float": "all nonnull integer fields float(basevalue)"
   }
