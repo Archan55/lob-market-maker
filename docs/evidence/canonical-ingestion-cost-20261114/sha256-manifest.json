@@ -1,0 +1,1137 @@
+{
+  "files": {
+    ".github/workflows/ci.yml": {
+      "bytes": 4592,
+      "sha256": "524cd765a89ace384c5fae79b38b476447bf0d761e9e41c69c30d8466e5df34f"
+    },
+    "docs/CANONICAL_INGESTION_COST.md": {
+      "bytes": 14828,
+      "sha256": "66166f9881b270a663ecb0e071f6dff01906aebee29e6534a2e895812146302c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/contract.json": {
+      "bytes": 42268,
+      "sha256": "51f5ee22d2fa868dfa0f8e136be6404c3ea1ae44b5e30dc72ea990820137c05c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/design-review.json": {
+      "bytes": 856,
+      "sha256": "3b3ba613ce782a747c85e86181d44129d11bb07b3701d8caf8b3f9caf98ed033"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/final-review.json": {
+      "bytes": 9974,
+      "sha256": "0c80d4c957597940ba54d3d58a94fd3af9da9056d8317a3d3480164dd6576183"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/full-suite/cost_import_identity.py.txt": {
+      "bytes": 783,
+      "sha256": "c0fb2cd0ffb4bda29f1959689b2348afca6ba46b5a5d3795026ec1c0105ee299"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/full-suite/imports.json": {
+      "bytes": 7534,
+      "sha256": "295209ac3b89f0520eda68987ace3d651086f2ee81da5c82bcb0c67cc6d40810"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/full-suite/result.txt": {
+      "bytes": 6932,
+      "sha256": "dd1d14d56e224fa5ea125e6785847139288d43edef10f00ae6d5f4b657d0892f"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/full-suite/result.xml": {
+      "bytes": 34904,
+      "sha256": "71d736ec1745cc1c3416010767bcf03c4f7e18bfd9a1dc9e15079d40919421cb"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/quality/git-diff-check.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/quality/mypy.txt": {
+      "bytes": 44,
+      "sha256": "34df9cf38736563d4bb02e64b66effac851acb546ad0a3c3761547e25bbe3570"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/quality/ruff-check.txt": {
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/quality/ruff-format.txt": {
+      "bytes": 27,
+      "sha256": "0e8875b6c474ca3639d7a7112ea95c546141b46dca674c9c33d3e55821b32afe"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run-command.log": {
+      "bytes": 16639,
+      "sha256": "6d9ae5afba31f8678e9fc0fe7a801d01118d4d959401fb1c4fdbae2b928dc2e5"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/harness/docs/evidence/canonical-ingestion-cost-20261114/contract.json": {
+      "bytes": 42268,
+      "sha256": "51f5ee22d2fa868dfa0f8e136be6404c3ea1ae44b5e30dc72ea990820137c05c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/harness/docs/evidence/canonical-ingestion-cost-20261114/design-review.json": {
+      "bytes": 856,
+      "sha256": "3b3ba613ce782a747c85e86181d44129d11bb07b3701d8caf8b3f9caf98ed033"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/harness/docs/evidence/canonical-ingestion-cost-20261114/workload.json": {
+      "bytes": 1191,
+      "sha256": "03e89610811f5cb663265d9dc1a1bf5ad951d2f8fb72576aac48737059b392a6"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/harness/tools/benchmark_canonical_ingestion.py": {
+      "bytes": 38655,
+      "sha256": "08238142fcd4d75d1078cfb4fa46c19883c00a8ba5faf8a2fdae030647edcb66"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/harness/tools/canonical_ingestion_oracle.py": {
+      "bytes": 20557,
+      "sha256": "c092a60b659154b8ea44d4d092d5ac59ab2a734dc622cfde4e90bc3b7716948d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/input_manifest.json": {
+      "bytes": 6780,
+      "sha256": "5555861c9b50021132370562b6cb02fda71377b475275252efab4d06a61be5e0"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/inputs/canonical.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/inputs/decimal.csv": {
+      "bytes": 4397450,
+      "sha256": "686ff36bbf1680b671a1d866947ff992ac4311b9da7f2a376e7155e9003ffc5c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/inputs/integer.csv": {
+      "bytes": 3397490,
+      "sha256": "0e1e45fc93abba04254923396c6471522f5ed2e67510012fce7dee6d59c449a8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/inputs/normalized-config.json": {
+      "bytes": 2412,
+      "sha256": "b93d3286c43603f0a9eefadd94eeed0f388b238d057f01b94d4cc947abc9cdf8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/manifest.json": {
+      "bytes": 37281,
+      "sha256": "db904007fe54326223ff42e13b6f26b6938a6c2a20d2008746fc83220d7564ba"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/preparation/process.json": {
+      "bytes": 684,
+      "sha256": "f1b38414151a32998be065a5628fd09db82743139b1b650bbea18c06f0b224de"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/preparation/result.json": {
+      "bytes": 22943,
+      "sha256": "11cbe5f84eb5a6163924c447dcf1570b425bdd973b5f932613d823d7d18ab523"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/preparation/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/001/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/001/process.json": {
+      "bytes": 700,
+      "sha256": "c98005b9621f9a6b2a924b65e5dec83feb24ffbecb007dfb551fe89fb8b1f0ba"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/001/result.json": {
+      "bytes": 26802,
+      "sha256": "d1fe5342b64eadb7e180688b2d4bc8bd4e5f72b5f06513b6c149e507b4cbc6e0"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/001/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/002/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/002/process.json": {
+      "bytes": 700,
+      "sha256": "04517f8a9278255e06b82bac399a6365604da754a0b6f444f4e154cc93811397"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/002/result.json": {
+      "bytes": 26813,
+      "sha256": "38c543eda5311a2d9cb9ca87ddc415aef097c696c3c4bbccdff828afad464261"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/002/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/003/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/003/process.json": {
+      "bytes": 700,
+      "sha256": "5a915768f7d0ac7887cdd5e78c3ed80ba9dbb4dfb49c369110f732a8452a2216"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/003/result.json": {
+      "bytes": 32730,
+      "sha256": "d80aac18d9ac30f7634581f5032e099256a11647028a3fe4fb4a37edb7908976"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/003/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/004/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/004/process.json": {
+      "bytes": 700,
+      "sha256": "74144485ae982a408f3c7d0a2c51531df0b99bf304e7c010c313298cc189c9da"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/004/result.json": {
+      "bytes": 32733,
+      "sha256": "64bd05a10611ee7b570b48d8f2b83cdbce0bb77efb8497a6c75ab16ee3178eb7"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/004/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/005/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/005/process.json": {
+      "bytes": 700,
+      "sha256": "e0af81115b9dacb1de5f7937e30b7fadfc4c2698cbf6339d9ce13ffab737432d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/005/result.json": {
+      "bytes": 26810,
+      "sha256": "8f05cb6c1d042a6a137dc3ecdc7134c33b4319c2a06833241caeec36180ab56f"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/005/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/006/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/006/process.json": {
+      "bytes": 700,
+      "sha256": "d26653cc95fac280532b6d1bdbba3caeb44057fc2559fe2cfa8212086c2d563c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/006/result.json": {
+      "bytes": 26804,
+      "sha256": "51081c0e12ba621fbf41f7d05dffdccdc7c1d549a7c579ce77b5b2013c771720"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/006/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/007/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/007/process.json": {
+      "bytes": 700,
+      "sha256": "0cd44e99fdcc218fb23abe92f17630605f67dbcd58871dca4518e710b5e84a7e"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/007/result.json": {
+      "bytes": 26814,
+      "sha256": "fa983cea1c71f2978e1600ff3f7366404c5810a66c3db8da839434b76236396b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/007/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/008/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/008/process.json": {
+      "bytes": 700,
+      "sha256": "92b9cb03876399d60086e66044afd7287d80e74176919da7589ef92bc50b4a9d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/008/result.json": {
+      "bytes": 26814,
+      "sha256": "bb39fb5389dfa78df27b25d1bbe15fb4dbb5d365a29a32bd40041c9735e23cc5"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/008/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/009/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/009/process.json": {
+      "bytes": 700,
+      "sha256": "928db6694434d71f306b2e07e23840c39db068de840b85ee2cf71a135cbaef76"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/009/result.json": {
+      "bytes": 32733,
+      "sha256": "c7a55b45dbeea48a5f4dbb1d343b051dbf2759296005fa35422a37e27b958608"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/009/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/010/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/010/process.json": {
+      "bytes": 701,
+      "sha256": "d529cbd4374a1bebbe2c9ca4171a428c2dd2615decf5911f16b623f96e6450d8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/010/result.json": {
+      "bytes": 32734,
+      "sha256": "9063fb93f7515eaf8ecc62957fc015c308190e285c0edb54946b1d5c8ca75076"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/010/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/011/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/011/process.json": {
+      "bytes": 701,
+      "sha256": "e78c5dcbbb7920f5ef8878cd2805f13637d54968bbe2311080230fb49badcf22"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/011/result.json": {
+      "bytes": 26816,
+      "sha256": "6898fad0d301e5d9f1c8a7396e8b92c3e26609f15aee4f2cabf68a235998c744"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/011/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/012/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/012/process.json": {
+      "bytes": 701,
+      "sha256": "24d3d50d45cb28d0fd431f08c124c489a14517357843a2a0bbf899e2d8e8c217"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/012/result.json": {
+      "bytes": 26813,
+      "sha256": "de6d58d3c855a1fc13720d972b8b35f6ae6e76b9763f2875e7c3aef74d547cf0"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/012/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/013/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/013/process.json": {
+      "bytes": 701,
+      "sha256": "b7477c4072b0fa5d18b0d63b1959bd3c3fc2bc5c66688b0dad6e504cbeb126fc"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/013/result.json": {
+      "bytes": 26814,
+      "sha256": "729dc6e4f51a4fa16fe5f8492505b82fd1560edb74bd5027c41871c685149fcf"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/013/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/014/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/014/process.json": {
+      "bytes": 701,
+      "sha256": "cfbda906f1b2168c11eb001cfafa86c8a60afb6ef92f1effebc48777b82f4222"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/014/result.json": {
+      "bytes": 26816,
+      "sha256": "8373c4ab65cff55bbffa5af560788d9315d741cc8b9750ec257d488509257d08"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/014/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/015/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/015/process.json": {
+      "bytes": 701,
+      "sha256": "42255fa253a1ff49d950cfc6ac566cf9e6366bde2787ade0b2c9d1dc2b92ce39"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/015/result.json": {
+      "bytes": 26812,
+      "sha256": "43ddf2d478da806a91b9a0bebfbaf39e21b83db124b157ccdd875b044420c2cd"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/015/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/016/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/016/process.json": {
+      "bytes": 701,
+      "sha256": "b66a1fcbadb79b52b60b3477d6aa5cfacb0573d2e11f0b03b249e2f200d9787a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/016/result.json": {
+      "bytes": 26811,
+      "sha256": "61a910385bfd98a61a98e1c2686d6e5aee81bf968d1972d317abfdf04e24c92d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/016/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/017/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/017/process.json": {
+      "bytes": 701,
+      "sha256": "a20ba02e140d14e4b92f002f49bdced7dc4e28f3234e0032bea6395824957c40"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/017/result.json": {
+      "bytes": 26812,
+      "sha256": "1811a1a0c360d4b734450f708c897720958cb2f2ed8ab6913c01550e250148a3"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/017/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/018/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/018/process.json": {
+      "bytes": 701,
+      "sha256": "734a77eead8d1824bba80445909e4a1143e4079aee1d7bdfad12040003db895c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/018/result.json": {
+      "bytes": 26814,
+      "sha256": "5523c8a94b4ba433a87c41c136046c9c48e8f0427123a8667ffe2e024d981dd7"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/018/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/019/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/019/process.json": {
+      "bytes": 701,
+      "sha256": "941d8509e5cf3e311c74a233608873bc96fe290c30d11559e715d1181ae85c0a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/019/result.json": {
+      "bytes": 26815,
+      "sha256": "d074d9aa6d862150bb34e6afb4a11923e74b5cab271a3703b7c2334fe2c0d1d8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/019/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/020/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/020/process.json": {
+      "bytes": 701,
+      "sha256": "b0e71e3e9490e4249109e992114d3c1e48674f8bdc3b29eaba56adabc8d66780"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/020/result.json": {
+      "bytes": 26815,
+      "sha256": "1d985aa183c445fef662e93bf5fae38d5a2a7d9aedd5689bdf59581da9b07bf1"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/020/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/021/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/021/process.json": {
+      "bytes": 701,
+      "sha256": "d5a7c85f00ad81a4ac824b54bd31d7aaee333a2fbce4208b3ef174928d0e7ae0"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/021/result.json": {
+      "bytes": 26804,
+      "sha256": "3a3d0566533e91af1e058de586ae3e2b05e8ce0ca6e61b7bf8bc47b521e1442c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/021/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/022/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/022/process.json": {
+      "bytes": 701,
+      "sha256": "8af743e026948487284b1e40887b69124a7a7af9a445a25388921ba752a8b15d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/022/result.json": {
+      "bytes": 26809,
+      "sha256": "91dcf510e292308fdde67c024b1452d5b38d4c9aff144a6cecc3883c0d9e2926"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/022/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/023/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/023/process.json": {
+      "bytes": 701,
+      "sha256": "d80b9a5596d46245b66baca7c35394f1b4f5c0aeabe1103efae3831557e54d84"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/023/result.json": {
+      "bytes": 32734,
+      "sha256": "9f2ea9339aa72381ea6fc794bb3ff8cd51ec972407f31687012991278a82a148"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/023/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/024/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/024/process.json": {
+      "bytes": 701,
+      "sha256": "448e078b58a571ba58e152238c2eafd0c60f6d84e92577a47e5b22ebfa0f16ae"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/024/result.json": {
+      "bytes": 32738,
+      "sha256": "6d98ab2c90ae8978eeb93fcd8b3bdf2a942cc8dc3e1da3133ae944a0e2c7ef5e"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/024/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/025/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/025/process.json": {
+      "bytes": 701,
+      "sha256": "cd77a5c971ba6043cfa47fca7358c0a9b6253c21fdb7def6f19937102e90cb91"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/025/result.json": {
+      "bytes": 26819,
+      "sha256": "4c96874f738f62ac781370356e3f98727f2d71c9e25fd60691aa1fde5c251b52"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/025/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/026/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/026/process.json": {
+      "bytes": 701,
+      "sha256": "3c43195cc9504de6b97f96cb38ae1903d6b6fcbd452c1fa7c4cd183a120de0cb"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/026/result.json": {
+      "bytes": 26812,
+      "sha256": "8358f15e061a51b22fa20ccfefb3a6c3b0301705da0c035d73fab7b1f6f19d26"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/026/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/027/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/027/process.json": {
+      "bytes": 701,
+      "sha256": "ffc996a823b09ce708701816b25869bbd23230e60c0d76b097dc45dd37f62515"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/027/result.json": {
+      "bytes": 26812,
+      "sha256": "f08efb7fc9a2c6583bee8382bd91e377b48c84fa0f207e025b1f8f5ad42af5a4"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/027/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/028/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/028/process.json": {
+      "bytes": 701,
+      "sha256": "2bd5bd747d5b93be8bcf14817a741374d6670aaf1056395c884ac9cc10e1a198"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/028/result.json": {
+      "bytes": 26804,
+      "sha256": "9cf78fa37711ba344d8deb63d9d485d4d47f64ede35c7b48574f021412210601"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/028/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/029/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/029/process.json": {
+      "bytes": 701,
+      "sha256": "6d807dead7f5d27c616e16cd7f6d552495a3a5d3b9dc71501bb59a74ddc651d2"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/029/result.json": {
+      "bytes": 32727,
+      "sha256": "b5c2cbe8311db2d8659b8d53ce594e42191554a786c2163ed5156c95c1386861"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/029/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/030/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/030/process.json": {
+      "bytes": 701,
+      "sha256": "d6c3b144c0adb9d79707eda933ada098df090511514c8132ee67ae5f9f618d04"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/030/result.json": {
+      "bytes": 32725,
+      "sha256": "4bf9b25e4e3ec7f89c73363ea487de974250d9b81ed41bd294788d4b0b52d3ef"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/030/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/031/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/031/process.json": {
+      "bytes": 701,
+      "sha256": "f0beb97e3ded9bdbea1e939c9974f12cd81f705d563abf56b1c0b2dd66e377b0"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/031/result.json": {
+      "bytes": 26812,
+      "sha256": "8c184ccee13cb7651bb21b53a3c9b6547b5576e4e461fd0fb04f58534f952663"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/031/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/032/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/032/process.json": {
+      "bytes": 701,
+      "sha256": "04b4e454c3b973e6982a66c7da045512814f032f977de4740a340e7d34c32781"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/032/result.json": {
+      "bytes": 26814,
+      "sha256": "91585ef973ff513c48842d4ed5eb51cf66558632ef94db44f69ea68c02e1f3e8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/032/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/033/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/033/process.json": {
+      "bytes": 701,
+      "sha256": "080303d3b5f9dd8121e4a14b7f7098a5a2abc679d3a5832ead2fc15e37766c0c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/033/result.json": {
+      "bytes": 26808,
+      "sha256": "723051b3122557f402709cb084d5d84f76d6c40b43edc85924d5ed9d143f8f7a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/033/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/034/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/034/process.json": {
+      "bytes": 701,
+      "sha256": "496468a96b8ed5417b6845f5b9e8a9e25a2aa74c7cf8f024cfe654106f7995d1"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/034/result.json": {
+      "bytes": 26811,
+      "sha256": "8bac7b32655dd8357189ecf3393fe4c0cf1c7b291fd2716d15c15608ce1a6fc5"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/034/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/035/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/035/process.json": {
+      "bytes": 701,
+      "sha256": "814834d820c97fc960c68ff7c84bbe161e366ad313b07cea1ae79ffd981e016d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/035/result.json": {
+      "bytes": 32733,
+      "sha256": "6f99e4dac192b7a43cd4735274095684c28be3c2fb1d31703be65ca566e55ada"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/035/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/036/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/036/process.json": {
+      "bytes": 701,
+      "sha256": "01bc7a87eeff03005ed93084c58063db05b8d5a45fc1c25ab90b9251b5f2205e"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/036/result.json": {
+      "bytes": 32735,
+      "sha256": "24066309883f39dd3b5ebaf1817c1df755783633626de93e966d9638094ada51"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/036/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/037/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/037/process.json": {
+      "bytes": 701,
+      "sha256": "30fc7eabb7ab061e4704ed03826871f58be87fcf11cb38646d8f75e67d3a85d1"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/037/result.json": {
+      "bytes": 26816,
+      "sha256": "e68225e62e514247a9be900360b1f6f375b44c7ca61f53ac38eaa431ef3b775b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/037/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/038/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/038/process.json": {
+      "bytes": 701,
+      "sha256": "50a2a7469f3d3d51b261e5fe8111a09ebc832d1eb1d3aa25489fa5d092cc5e13"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/038/result.json": {
+      "bytes": 26811,
+      "sha256": "861aded2767f907c589319d35a7cb5631b54f0b7a96d5d1e2f6429a382fa2cf3"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/038/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/039/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/039/process.json": {
+      "bytes": 701,
+      "sha256": "3c3c888bbebc7c517902417e657b51e7aace1217487c67ff45094a4b1ee16f4a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/039/result.json": {
+      "bytes": 26812,
+      "sha256": "918b12108cc1a30614d5834482248aa5d0acd64a02a9fbc495a4f7e277fc09d6"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/039/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/040/actual.parquet": {
+      "bytes": 687276,
+      "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/040/process.json": {
+      "bytes": 701,
+      "sha256": "73b7f1f44e4a9fb44267d86dc812c211e30bf2874d8914e5d3595bf4f58b9688"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/040/result.json": {
+      "bytes": 26818,
+      "sha256": "aae81a9aeca4d30fa1234c533a3a06abb1e050bb97404ff8a0c1da74666afff2"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/samples/040/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main.tar": {
+      "bytes": 460800,
+      "sha256": "8798573cdc0229eed158150a774fe281030d2c877bb01f9d09d256d715233846"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/configs/benchmark.yaml": {
+      "bytes": 597,
+      "sha256": "5b800e6d72340c1821ff749e2c8765e94ee48ada0d5f78aff2218ee5134eb880"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/pyproject.toml": {
+      "bytes": 2087,
+      "sha256": "85c7ba0b453a8fd71166c9011a83169cfe4f11e784e87ff272b9ffeacdd87296"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/__init__.py": {
+      "bytes": 164,
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/backtest.py": {
+      "bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/benchmark.py": {
+      "bytes": 10082,
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/book.py": {
+      "bytes": 12658,
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/case_study.py": {
+      "bytes": 19324,
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/channels.py": {
+      "bytes": 5274,
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/cli.py": {
+      "bytes": 22297,
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/config.py": {
+      "bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/__init__.py": {
+      "bytes": 1786,
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/_adapter_utils.py": {
+      "bytes": 5955,
+      "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/adapters.py": {
+      "bytes": 1367,
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/fingerprint.py": {
+      "bytes": 1079,
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/loaders.py": {
+      "bytes": 3935,
+      "sha256": "8127e81727347e69aae8d92f2b8f0757a11f7c5e6b9af2537270978a11fa629a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/lobster.py": {
+      "bytes": 21121,
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/manifest.py": {
+      "bytes": 3983,
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/schema.py": {
+      "bytes": 4830,
+      "sha256": "ba681f7d78a3fd70c14ecb311b1703c64c6542c0127250189ed229b079b3c2c9"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/data/tardis.py": {
+      "bytes": 21020,
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/enums.py": {
+      "bytes": 2472,
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/events.py": {
+      "bytes": 3006,
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/exchange.py": {
+      "bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/experiments.py": {
+      "bytes": 18529,
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/metrics.py": {
+      "bytes": 14898,
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/orders.py": {
+      "bytes": 17176,
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/portfolio.py": {
+      "bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/py.typed": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/queue_model.py": {
+      "bytes": 20413,
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/report.py": {
+      "bytes": 35627,
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/risk.py": {
+      "bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/scheduler.py": {
+      "bytes": 8559,
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/strategies/__init__.py": {
+      "bytes": 1008,
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/strategies/base.py": {
+      "bytes": 21607,
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/strategies/fixed_spread.py": {
+      "bytes": 918,
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/strategies/inventory_aware.py": {
+      "bytes": 1205,
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/strategies/microprice.py": {
+      "bytes": 1659,
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/strategy_runtime.py": {
+      "bytes": 3433,
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/synthetic.py": {
+      "bytes": 14929,
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/types.py": {
+      "bytes": 1507,
+      "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/main/src/lobmm/validation.py": {
+      "bytes": 7386,
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11.tar": {
+      "bytes": 460800,
+      "sha256": "905370477a58bb81b19e8e9909514d529b09c5247d2c948d4b378ddfe87e853d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/configs/benchmark.yaml": {
+      "bytes": 597,
+      "sha256": "5b800e6d72340c1821ff749e2c8765e94ee48ada0d5f78aff2218ee5134eb880"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/pyproject.toml": {
+      "bytes": 2087,
+      "sha256": "85c7ba0b453a8fd71166c9011a83169cfe4f11e784e87ff272b9ffeacdd87296"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/__init__.py": {
+      "bytes": 164,
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/backtest.py": {
+      "bytes": 35768,
+      "sha256": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/benchmark.py": {
+      "bytes": 10082,
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/book.py": {
+      "bytes": 12658,
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/case_study.py": {
+      "bytes": 19324,
+      "sha256": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/channels.py": {
+      "bytes": 5274,
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/cli.py": {
+      "bytes": 22297,
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/config.py": {
+      "bytes": 12286,
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/__init__.py": {
+      "bytes": 1786,
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/_adapter_utils.py": {
+      "bytes": 5955,
+      "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/adapters.py": {
+      "bytes": 1367,
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/fingerprint.py": {
+      "bytes": 1079,
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/loaders.py": {
+      "bytes": 5765,
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/lobster.py": {
+      "bytes": 21121,
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/manifest.py": {
+      "bytes": 3983,
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/schema.py": {
+      "bytes": 7692,
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/data/tardis.py": {
+      "bytes": 21020,
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/enums.py": {
+      "bytes": 2472,
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/events.py": {
+      "bytes": 3006,
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/exchange.py": {
+      "bytes": 16502,
+      "sha256": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/experiments.py": {
+      "bytes": 18529,
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/metrics.py": {
+      "bytes": 14898,
+      "sha256": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/orders.py": {
+      "bytes": 17176,
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/portfolio.py": {
+      "bytes": 18850,
+      "sha256": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/py.typed": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/queue_model.py": {
+      "bytes": 20413,
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/report.py": {
+      "bytes": 35627,
+      "sha256": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/risk.py": {
+      "bytes": 23906,
+      "sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/scheduler.py": {
+      "bytes": 8559,
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/strategies/__init__.py": {
+      "bytes": 1008,
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/strategies/base.py": {
+      "bytes": 21607,
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/strategies/fixed_spread.py": {
+      "bytes": 918,
+      "sha256": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/strategies/inventory_aware.py": {
+      "bytes": 1205,
+      "sha256": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/strategies/microprice.py": {
+      "bytes": 1659,
+      "sha256": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/strategy_runtime.py": {
+      "bytes": 3433,
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/synthetic.py": {
+      "bytes": 14929,
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/types.py": {
+      "bytes": 1507,
+      "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/sources/pr11/src/lobmm/validation.py": {
+      "bytes": 7386,
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/run/summary.json": {
+      "bytes": 16639,
+      "sha256": "6d9ae5afba31f8678e9fc0fe7a801d01118d4d959401fb1c4fdbae2b928dc2e5"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/local/verify-local.log": {
+      "bytes": 26857,
+      "sha256": "5f3eb903ffce6d597c1f4e49aab5a58705f0eed3c262768c242d3804069c358b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/preexecution-review.json": {
+      "bytes": 1610,
+      "sha256": "b40437d5a3a50c48519f3b34dbf9973989f94f981955810ee4ba0bbfcde292bf"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/ci-repair-review.json": {
+      "bytes": 3908,
+      "sha256": "1c53ff85cff85f2015f78e808010939c58f8a72d0aefe61f99833f03f82b98ca"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/clean-tracked-tree.log": {
+      "bytes": 26857,
+      "sha256": "5f3eb903ffce6d597c1f4e49aab5a58705f0eed3c262768c242d3804069c358b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/first-ci-job.log": {
+      "bytes": 169551,
+      "sha256": "bed92d7d76577524228953847abf3fe6aea5ecdd7a4d3de983a0f4f63ace8e7d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/first-ci-metadata.json": {
+      "bytes": 5347,
+      "sha256": "ba0b903e46bb8753705ec014a56b98b1d31a374dfc35035a43c1b8e4a083df35"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/layout-diagnostic.json": {
+      "bytes": 1068,
+      "sha256": "85edf14ae61e4daf9e131a0f2f3db2b9ff929aeacd782b7b974a78a057c18bf1"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/with-install-metadata.log": {
+      "bytes": 1110,
+      "sha256": "aae5ab277ead126f9f514950c41866d43fb8271bc9c646bc3eb5044e34c45613"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/workload.json": {
+      "bytes": 1191,
+      "sha256": "03e89610811f5cb663265d9dc1a1bf5ad951d2f8fb72576aac48737059b392a6"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/workspace-manifest.json": {
+      "bytes": 75828,
+      "sha256": "ccbd47ac771de6647f39067fe603d7247d318df09db807044b5aaf8f0b2ec48a"
+    },
+    "tools/benchmark_canonical_ingestion.py": {
+      "bytes": 38655,
+      "sha256": "08238142fcd4d75d1078cfb4fa46c19883c00a8ba5faf8a2fdae030647edcb66"
+    },
+    "tools/canonical_ingestion_oracle.py": {
+      "bytes": 20557,
+      "sha256": "c092a60b659154b8ea44d4d092d5ac59ab2a734dc622cfde4e90bc3b7716948d"
+    }
+  },
+  "scope": "November14 ingestion-cost publication including disclosed publication-only CI layout repair; originalPR11 manifest remains historical"
+}

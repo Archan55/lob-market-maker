@@ -1,0 +1,797 @@
+{
+  "operation": "parquet_load_events",
+  "pair": 2,
+  "role": "pr11",
+  "sample": 15,
+  "status": "complete",
+  "started_utc": "2026-11-14T14:41:43.919626+00:00",
+  "harness_pins": {
+    "docs/evidence/canonical-ingestion-cost-20261114/contract.json": "51f5ee22d2fa868dfa0f8e136be6404c3ea1ae44b5e30dc72ea990820137c05c",
+    "docs/evidence/canonical-ingestion-cost-20261114/workload.json": "03e89610811f5cb663265d9dc1a1bf5ad951d2f8fb72576aac48737059b392a6",
+    "docs/evidence/canonical-ingestion-cost-20261114/design-review.json": "3b3ba613ce782a747c85e86181d44129d11bb07b3701d8caf8b3f9caf98ed033",
+    "tools/benchmark_canonical_ingestion.py": "08238142fcd4d75d1078cfb4fa46c19883c00a8ba5faf8a2fdae030647edcb66",
+    "tools/canonical_ingestion_oracle.py": "c092a60b659154b8ea44d4d092d5ac59ab2a734dc622cfde4e90bc3b7716948d"
+  },
+  "source_revision": "38a17f09746903938fa76b1d42268c8a75c7d3f6",
+  "source_sha256": {
+    "src/lobmm/__init__.py": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+    "src/lobmm/backtest.py": "b678f2afa43cdf9b0b5562366cf7ae9c6fd900b2dfc84a5e2ad50cb3b4f1bd6b",
+    "src/lobmm/benchmark.py": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+    "src/lobmm/book.py": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+    "src/lobmm/case_study.py": "e7a9fd55f9bde16cf4c27ecdda9ce9fd9a087d65a3421c92831e438989db7aa2",
+    "src/lobmm/channels.py": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+    "src/lobmm/cli.py": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+    "src/lobmm/config.py": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+    "src/lobmm/data/__init__.py": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+    "src/lobmm/data/_adapter_utils.py": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229",
+    "src/lobmm/data/adapters.py": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+    "src/lobmm/data/fingerprint.py": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+    "src/lobmm/data/loaders.py": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+    "src/lobmm/data/lobster.py": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8",
+    "src/lobmm/data/manifest.py": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+    "src/lobmm/data/schema.py": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+    "src/lobmm/data/tardis.py": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+    "src/lobmm/enums.py": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+    "src/lobmm/events.py": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+    "src/lobmm/exchange.py": "2449a88f4c62a68540f66ed55c4b58564e22d67dfb29c1f7e868f7b8c794a985",
+    "src/lobmm/experiments.py": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+    "src/lobmm/metrics.py": "d031f753904d6ac366b948ff01af6dfd512e2888bccda318cc2356f3b708e3db",
+    "src/lobmm/orders.py": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+    "src/lobmm/portfolio.py": "973a9ecacd960a01b4a75a6b7d993c76fd5865ac21c186a5ee09aa2495cec1d3",
+    "src/lobmm/py.typed": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "src/lobmm/queue_model.py": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+    "src/lobmm/report.py": "3142003240bc1c6b0bce4df2e42ef4952ea2f4912334efb31ef96337f1abf259",
+    "src/lobmm/risk.py": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38",
+    "src/lobmm/scheduler.py": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+    "src/lobmm/strategies/__init__.py": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+    "src/lobmm/strategies/base.py": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+    "src/lobmm/strategies/fixed_spread.py": "7e0fe8a3700ab9ab3170006b510d3e4081c3e6efada643650140584b513d119d",
+    "src/lobmm/strategies/inventory_aware.py": "2fab45af3e6cfce87f9c03e47daeb8b5dbd40cb3b80c425cae3519933ac69897",
+    "src/lobmm/strategies/microprice.py": "77cfac293d568da9ad51c2b5de5134c0eed4813cee2c8eff8762822ec69ed22c",
+    "src/lobmm/strategy_runtime.py": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+    "src/lobmm/synthetic.py": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+    "src/lobmm/types.py": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a",
+    "src/lobmm/validation.py": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+  },
+  "archive_sha256": "905370477a58bb81b19e8e9909514d529b09c5247d2c948d4b378ddfe87e853d",
+  "observed_source_directory": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11",
+  "environment_before": {
+    "sampling_point": "after source selection; before input setup and warmup",
+    "utc": "2026-11-14T14:41:43.932283+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "cpu_count": 5,
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "load_average": [
+      0.95458984375,
+      0.4697265625,
+      0.18408203125
+    ],
+    "process_threads": 1,
+    "dependencies": {
+      "polars": "2.1.0",
+      "pyarrow": "26.0.0",
+      "numpy": "2.5.4",
+      "pydantic": "2.14.2",
+      "PyYAML": "6.0.3"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "POLARS_MAX_THREADS": null,
+      "PYTHONHASHSEED": null
+    },
+    "gc_enabled": true,
+    "gc_thresholds": [
+      700,
+      10,
+      10
+    ],
+    "gc_counts": [
+      549,
+      0,
+      3
+    ],
+    "integer_string_guard": 4300,
+    "trace_hook": false,
+    "profile_hook": false,
+    "tracemalloc_active": false,
+    "whole_worker_peak_rss_raw": 19940,
+    "rss_units": "KiB",
+    "rss_scope": "Whole-worker high-water including imports, setup, warmup and postprocessing before this sampling point; not incremental timed-operation memory",
+    "assertions_enabled": true
+  },
+  "input_manifest_sha256": "5555861c9b50021132370562b6cb02fda71377b475275252efab4d06a61be5e0",
+  "input_manifest_before": "fec4196ee8fa574b8df3611f8404e0692f981e6fc14f3aace5cb2dba58c7bf34",
+  "public_function": "lobmm.data.loaders.load_events",
+  "imports_before": {
+    "lobmm": {
+      "relative_path": "src/lobmm/__init__.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "lobmm.config": {
+      "relative_path": "src/lobmm/config.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "lobmm.data": {
+      "relative_path": "src/lobmm/data/__init__.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "lobmm.data._adapter_utils": {
+      "relative_path": "src/lobmm/data/_adapter_utils.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/_adapter_utils.py",
+      "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+    },
+    "lobmm.data.adapters": {
+      "relative_path": "src/lobmm/data/adapters.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "lobmm.data.fingerprint": {
+      "relative_path": "src/lobmm/data/fingerprint.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "lobmm.data.loaders": {
+      "relative_path": "src/lobmm/data/loaders.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/loaders.py",
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+    },
+    "lobmm.data.lobster": {
+      "relative_path": "src/lobmm/data/lobster.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/lobster.py",
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "lobmm.data.manifest": {
+      "relative_path": "src/lobmm/data/manifest.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "lobmm.data.schema": {
+      "relative_path": "src/lobmm/data/schema.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/schema.py",
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+    },
+    "lobmm.data.tardis": {
+      "relative_path": "src/lobmm/data/tardis.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "lobmm.enums": {
+      "relative_path": "src/lobmm/enums.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "lobmm.events": {
+      "relative_path": "src/lobmm/events.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "lobmm.types": {
+      "relative_path": "src/lobmm/types.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/types.py",
+      "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+    }
+  },
+  "stage": "single public timed call",
+  "warmup_audit": {
+    "row_count": 100000,
+    "event_stream_sha256": "926a386b9e7848f323c8d384100c8e393c6d1337916f9132d248fdd6dc28c94c",
+    "rows_sha256": "5e20f8402c4baf1b92db1521603ff6ed24595c3fed88552dfc00773cb37eeb53",
+    "field_types": {
+      "timestamp_ns": {
+        "builtins.int": 100000
+      },
+      "sequence_number": {
+        "builtins.int": 100000
+      },
+      "event_type": {
+        "builtins.str": 100000
+      },
+      "side": {
+        "builtins.NoneType": 20,
+        "builtins.int": 99980
+      },
+      "price_ticks": {
+        "builtins.int": 100000
+      },
+      "quantity": {
+        "builtins.int": 100000
+      }
+    },
+    "schema": [
+      [
+        "timestamp_ns",
+        "Int64"
+      ],
+      [
+        "sequence_number",
+        "Int64"
+      ],
+      [
+        "event_type",
+        "String"
+      ],
+      [
+        "side",
+        "Int8"
+      ],
+      [
+        "price_ticks",
+        "Int64"
+      ],
+      [
+        "quantity",
+        "Int64"
+      ]
+    ],
+    "event_type_counts": {
+      "ADD": 47674,
+      "CANCEL": 26373,
+      "RESET": 20,
+      "SNAPSHOT": 200,
+      "TRADE": 25733
+    },
+    "book": {
+      "valid": true,
+      "reconstructed_book": true,
+      "event_count": 100000,
+      "final_bids": [
+        [
+          9668,
+          7
+        ],
+        [
+          9667,
+          102
+        ],
+        [
+          9666,
+          27
+        ],
+        [
+          9665,
+          39
+        ],
+        [
+          9664,
+          129
+        ],
+        [
+          9663,
+          134
+        ]
+      ],
+      "final_asks": [
+        [
+          9669,
+          20
+        ],
+        [
+          9670,
+          123
+        ],
+        [
+          9674,
+          35
+        ],
+        [
+          9677,
+          66
+        ],
+        [
+          9683,
+          6
+        ],
+        [
+          9684,
+          118
+        ],
+        [
+          9685,
+          42
+        ],
+        [
+          9686,
+          23
+        ],
+        [
+          9688,
+          23
+        ],
+        [
+          9689,
+          45
+        ],
+        [
+          9695,
+          2
+        ],
+        [
+          9697,
+          26
+        ],
+        [
+          9701,
+          55
+        ],
+        [
+          9706,
+          51
+        ],
+        [
+          9707,
+          6
+        ],
+        [
+          9710,
+          130
+        ],
+        [
+          9711,
+          114
+        ],
+        [
+          9718,
+          104
+        ],
+        [
+          9737,
+          121
+        ],
+        [
+          9749,
+          81
+        ]
+      ]
+    },
+    "checks": {
+      "native_integer_types": true,
+      "safe_integer_bound": true,
+      "target_bounds": true,
+      "reset_null_side": true,
+      "ordered_stream": true,
+      "strict_dictionary_reconstruction": true,
+      "full_rows_equal": true
+    },
+    "representation": "events",
+    "original_field_types": {
+      "timestamp_ns": {
+        "builtins.int": 100000
+      },
+      "sequence_number": {
+        "builtins.int": 100000
+      },
+      "event_type": {
+        "lobmm.enums.EventType": 100000
+      },
+      "side": {
+        "builtins.NoneType": 20,
+        "lobmm.enums.Side": 99980
+      },
+      "price_ticks": {
+        "builtins.int": 100000
+      },
+      "quantity": {
+        "builtins.int": 100000
+      }
+    }
+  },
+  "environment_before_call": {
+    "sampling_point": "after warmup release; before final gc.collect and clocks",
+    "utc": "2026-11-14T14:41:49.652258+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "cpu_count": 5,
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "load_average": [
+      0.95849609375,
+      0.47900390625,
+      0.1884765625
+    ],
+    "process_threads": 30,
+    "dependencies": {
+      "polars": "2.1.0",
+      "pyarrow": "26.0.0",
+      "numpy": "2.5.4",
+      "pydantic": "2.14.2",
+      "PyYAML": "6.0.3"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "POLARS_MAX_THREADS": null,
+      "PYTHONHASHSEED": null
+    },
+    "gc_enabled": true,
+    "gc_thresholds": [
+      700,
+      10,
+      10
+    ],
+    "gc_counts": [
+      308,
+      3,
+      0
+    ],
+    "integer_string_guard": 4300,
+    "trace_hook": false,
+    "profile_hook": false,
+    "tracemalloc_active": false,
+    "whole_worker_peak_rss_raw": 287420,
+    "rss_units": "KiB",
+    "rss_scope": "Whole-worker high-water including imports, setup, warmup and postprocessing before this sampling point; not incremental timed-operation memory",
+    "assertions_enabled": true
+  },
+  "wall_ns": 454822475,
+  "cpu_ns": 453239928,
+  "timed_audit": {
+    "row_count": 100000,
+    "event_stream_sha256": "926a386b9e7848f323c8d384100c8e393c6d1337916f9132d248fdd6dc28c94c",
+    "rows_sha256": "5e20f8402c4baf1b92db1521603ff6ed24595c3fed88552dfc00773cb37eeb53",
+    "field_types": {
+      "timestamp_ns": {
+        "builtins.int": 100000
+      },
+      "sequence_number": {
+        "builtins.int": 100000
+      },
+      "event_type": {
+        "builtins.str": 100000
+      },
+      "side": {
+        "builtins.NoneType": 20,
+        "builtins.int": 99980
+      },
+      "price_ticks": {
+        "builtins.int": 100000
+      },
+      "quantity": {
+        "builtins.int": 100000
+      }
+    },
+    "schema": [
+      [
+        "timestamp_ns",
+        "Int64"
+      ],
+      [
+        "sequence_number",
+        "Int64"
+      ],
+      [
+        "event_type",
+        "String"
+      ],
+      [
+        "side",
+        "Int8"
+      ],
+      [
+        "price_ticks",
+        "Int64"
+      ],
+      [
+        "quantity",
+        "Int64"
+      ]
+    ],
+    "event_type_counts": {
+      "ADD": 47674,
+      "CANCEL": 26373,
+      "RESET": 20,
+      "SNAPSHOT": 200,
+      "TRADE": 25733
+    },
+    "book": {
+      "valid": true,
+      "reconstructed_book": true,
+      "event_count": 100000,
+      "final_bids": [
+        [
+          9668,
+          7
+        ],
+        [
+          9667,
+          102
+        ],
+        [
+          9666,
+          27
+        ],
+        [
+          9665,
+          39
+        ],
+        [
+          9664,
+          129
+        ],
+        [
+          9663,
+          134
+        ]
+      ],
+      "final_asks": [
+        [
+          9669,
+          20
+        ],
+        [
+          9670,
+          123
+        ],
+        [
+          9674,
+          35
+        ],
+        [
+          9677,
+          66
+        ],
+        [
+          9683,
+          6
+        ],
+        [
+          9684,
+          118
+        ],
+        [
+          9685,
+          42
+        ],
+        [
+          9686,
+          23
+        ],
+        [
+          9688,
+          23
+        ],
+        [
+          9689,
+          45
+        ],
+        [
+          9695,
+          2
+        ],
+        [
+          9697,
+          26
+        ],
+        [
+          9701,
+          55
+        ],
+        [
+          9706,
+          51
+        ],
+        [
+          9707,
+          6
+        ],
+        [
+          9710,
+          130
+        ],
+        [
+          9711,
+          114
+        ],
+        [
+          9718,
+          104
+        ],
+        [
+          9737,
+          121
+        ],
+        [
+          9749,
+          81
+        ]
+      ]
+    },
+    "checks": {
+      "native_integer_types": true,
+      "safe_integer_bound": true,
+      "target_bounds": true,
+      "reset_null_side": true,
+      "ordered_stream": true,
+      "strict_dictionary_reconstruction": true,
+      "full_rows_equal": true
+    },
+    "representation": "events",
+    "original_field_types": {
+      "timestamp_ns": {
+        "builtins.int": 100000
+      },
+      "sequence_number": {
+        "builtins.int": 100000
+      },
+      "event_type": {
+        "lobmm.enums.EventType": 100000
+      },
+      "side": {
+        "builtins.NoneType": 20,
+        "lobmm.enums.Side": 99980
+      },
+      "price_ticks": {
+        "builtins.int": 100000
+      },
+      "quantity": {
+        "builtins.int": 100000
+      }
+    },
+    "parquet_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/samples/015/actual.parquet",
+    "parquet_sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9",
+    "serialization": "Independent PyArrow audit of actual returned values outside timing; public function did not write this file"
+  },
+  "actual_output": {
+    "path": "samples/015/actual.parquet",
+    "sha256": "bf740b83a4c9047a433e0da7ff2e47a830bf2c21b686c6a0512ce003e7f2a3a9"
+  },
+  "input_manifest_after": "fec4196ee8fa574b8df3611f8404e0692f981e6fc14f3aace5cb2dba58c7bf34",
+  "imports_after": {
+    "lobmm": {
+      "relative_path": "src/lobmm/__init__.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "lobmm.config": {
+      "relative_path": "src/lobmm/config.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "lobmm.data": {
+      "relative_path": "src/lobmm/data/__init__.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "lobmm.data._adapter_utils": {
+      "relative_path": "src/lobmm/data/_adapter_utils.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/_adapter_utils.py",
+      "sha256": "74a56a60d8e11d27e8b80f6e0c028521563a1de78525a779de0b23e0afac4229"
+    },
+    "lobmm.data.adapters": {
+      "relative_path": "src/lobmm/data/adapters.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "lobmm.data.fingerprint": {
+      "relative_path": "src/lobmm/data/fingerprint.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "lobmm.data.loaders": {
+      "relative_path": "src/lobmm/data/loaders.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/loaders.py",
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+    },
+    "lobmm.data.lobster": {
+      "relative_path": "src/lobmm/data/lobster.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/lobster.py",
+      "sha256": "af3df8c9632c503a1a6e90b056730a08e2180049d5b1b32a2c203bce1059bdc8"
+    },
+    "lobmm.data.manifest": {
+      "relative_path": "src/lobmm/data/manifest.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "lobmm.data.schema": {
+      "relative_path": "src/lobmm/data/schema.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/schema.py",
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+    },
+    "lobmm.data.tardis": {
+      "relative_path": "src/lobmm/data/tardis.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "lobmm.enums": {
+      "relative_path": "src/lobmm/enums.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "lobmm.events": {
+      "relative_path": "src/lobmm/events.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "lobmm.types": {
+      "relative_path": "src/lobmm/types.py",
+      "observed_absolute_path": "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/sources/pr11/src/lobmm/types.py",
+      "sha256": "8e6cf6a1e10d48194895b694ca1e1cb4992e8d5edc1555798f4da7460132a62a"
+    }
+  },
+  "environment_after": {
+    "sampling_point": "after result row/type/book audit and Parquet serialization; before final result JSON",
+    "utc": "2026-11-14T14:41:55.469995+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "cpu_count": 5,
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "load_average": [
+      0.96533203125,
+      0.49658203125,
+      0.197265625
+    ],
+    "process_threads": 30,
+    "dependencies": {
+      "polars": "2.1.0",
+      "pyarrow": "26.0.0",
+      "numpy": "2.5.4",
+      "pydantic": "2.14.2",
+      "PyYAML": "6.0.3"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "POLARS_MAX_THREADS": null,
+      "PYTHONHASHSEED": null
+    },
+    "gc_enabled": true,
+    "gc_thresholds": [
+      700,
+      10,
+      10
+    ],
+    "gc_counts": [
+      5,
+      10,
+      25
+    ],
+    "integer_string_guard": 4300,
+    "trace_hook": false,
+    "profile_hook": false,
+    "tracemalloc_active": false,
+    "whole_worker_peak_rss_raw": 391952,
+    "rss_units": "KiB",
+    "rss_scope": "Whole-worker high-water including imports, setup, warmup and postprocessing before this sampling point; not incremental timed-operation memory",
+    "assertions_enabled": true
+  },
+  "finished_utc": "2026-11-14T14:41:55.470086+00:00"
+}

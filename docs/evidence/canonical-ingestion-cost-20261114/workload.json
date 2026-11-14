@@ -1,0 +1,18 @@
+{
+  "config": "configs/benchmark.yaml",
+  "config_sha256": "5b800e6d72340c1821ff749e2c8765e94ee48ada0d5f78aff2218ee5134eb880",
+  "decimal_csv": "Same rows/values, every nonnull integer field encoded str(integer)+.0, including side; event_type unchanged. Finite integral compatibility sensitivity, not recommendedformat/marketdataset.",
+  "event_count": 100000,
+  "exposure": "configs/benchmark.yaml seed7 and earlier synthetic history are exposed engineering inputs; no fresh market holdout or realistic tape claim.",
+  "files": [
+    "canonical.parquet",
+    "integer.csv",
+    "decimal.csv"
+  ],
+  "input_generation": "Generate ONCE from archived main via load_config(configs/benchmark.yaml),generate_synthetic_events(config), unchanged seed/config. No input/profile/op outcomes before preregistration.",
+  "integer_csv": "Original exact canonical integer tokens with RESET side null.",
+  "interval_ns": 1000000,
+  "mandatory_checks": "Exactly100000rows, all source integer fields abs(value)<2**53 and targetInt64/Int8; all files decode to exactsamecanonicalrows/order/schema/fingerprint/strictdictionarybook. Stop if false, do not adjust input.",
+  "seed": 7,
+  "start_timestamp_ns": 0
+}

@@ -41,6 +41,41 @@ jobs:
           python tools/reproduce_canonical_fidelity.py --stage verify \
             --candidate "$(git rev-parse HEAD)" \
             --output experiments/canonical-fidelity-ci/verify
+      - name: Verify retained canonical ingestion measurements without timing
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/canonical-ingestion-cost-ci
+          ingestion_head="$(git rev-parse HEAD)"
+          printf '%s\n' "$ingestion_head" | tee experiments/canonical-ingestion-cost-ci/checkout.txt
+          python - <<'PY' | tee experiments/canonical-ingestion-cost-ci/installed-source-inventory.json
+          import hashlib
+          import json
+          import sys
+          from pathlib import Path
+
+          files = sorted(
+              path for path in Path("src").rglob("*")
+              if path.is_file() and "__pycache__" not in path.parts
+          )
+          print(json.dumps({
+              "python_executable": sys.executable,
+              "python_version": sys.version,
+              "source_inventory": [path.as_posix() for path in files],
+              "lobmm_package_sha256": {
+                  path.as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+                  for path in files if path.is_relative_to(Path("src/lobmm"))
+              },
+          }, indent=2))
+          PY
+          ingestion_snapshot="$(mktemp -d "${RUNNER_TEMP}/canonical-ingestion-verify.XXXXXX")"
+          git archive --format=tar --output="$ingestion_snapshot/head.tar" "$ingestion_head"
+          sha256sum "$ingestion_snapshot/head.tar" | tee experiments/canonical-ingestion-cost-ci/verification-archive.sha256
+          mkdir "$ingestion_snapshot/source"
+          tar -xf "$ingestion_snapshot/head.tar" -C "$ingestion_snapshot/source"
+          python "$ingestion_snapshot/source/tools/benchmark_canonical_ingestion.py" \
+            --verify-evidence "$ingestion_snapshot/source/docs/evidence/canonical-ingestion-cost-20261114/local/run" \
+            2>&1 | tee experiments/canonical-ingestion-cost-ci/evidence-verification.log
       - name: Retain original synthetic evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -57,3 +92,16 @@ jobs:
             tests/unit/test_canonical_fidelity_independent.py
             src/lobmm/data/schema.py
             src/lobmm/data/loaders.py
+      - name: Retain canonical ingestion cost evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-ingestion-cost-${{ steps.source.outputs.head_sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            experiments/canonical-ingestion-cost-ci/
+            docs/evidence/canonical-ingestion-cost-20261114/
+            docs/CANONICAL_INGESTION_COST.md
+            tools/benchmark_canonical_ingestion.py
+            tools/canonical_ingestion_oracle.py

@@ -1,0 +1,270 @@
+{
+  "date": "2026-11-14",
+  "harness_commit": "6f5f7f52d96d470ba775fc5066e75da3fc762164",
+  "local_checks": {
+    "coverage_branch_aware_percent": 90.62,
+    "diff_check": true,
+    "mypy_sources": 37,
+    "ordinary_actual_imports": 37,
+    "ordinary_exitstatus": 0,
+    "ordinary_tests": 252,
+    "read_only_evidence_verification_exit": 0,
+    "relocated_curated_evidence_verification_exit": 0,
+    "relocated_verification_log": "Saved outside frozen run inventory at experiments/canonical-ingestion-cost-publication-20261114/verify-curated.log; read-only, no new samples.",
+    "ruff_files": 88,
+    "verification_after_timing_only": true
+  },
+  "measurement": {
+    "no_profile_reason": "Primary failsmaterialtrigger andlowband; secondarymaterialflags cannotauthorizeprofiling.",
+    "operations": {
+      "decimal_csv_load_events": {
+        "classification": "material_cost",
+        "low_overhead": false,
+        "material_cost": true,
+        "maximum_delta_ns": 638003797,
+        "maximum_ratio": {
+          "denominator": 78165485,
+          "numerator": 236466439
+        },
+        "median_delta_ns": 633203816,
+        "median_ratio": {
+          "denominator": 328961618,
+          "numerator": 966965415
+        },
+        "minimum_delta_ns": 575323605,
+        "minimum_ratio": {
+          "denominator": 22136321,
+          "numerator": 60491228
+        },
+        "wall_ns": {
+          "main": {
+            "maximum": 332044815,
+            "median": 325364377,
+            "minimum": 312661940
+          },
+          "pr11": {
+            "maximum": 966965415,
+            "median": 945865756,
+            "minimum": 907368420
+          }
+        }
+      },
+      "integer_csv_load_events": {
+        "classification": "indeterminate",
+        "low_overhead": false,
+        "material_cost": false,
+        "maximum_delta_ns": 129054279,
+        "maximum_ratio": {
+          "denominator": 317428372,
+          "numerator": 446482651
+        },
+        "median_delta_ns": 104278151,
+        "median_ratio": {
+          "denominator": 62457371,
+          "numerator": 83223743
+        },
+        "minimum_delta_ns": 101578854,
+        "minimum_ratio": {
+          "denominator": 162514604,
+          "numerator": 213304031
+        },
+        "wall_ns": {
+          "main": {
+            "maximum": 325542710,
+            "median": 317428372,
+            "minimum": 312286855
+          },
+          "pr11": {
+            "maximum": 446482651,
+            "median": 426608062,
+            "minimum": 416118715
+          }
+        }
+      },
+      "parquet_load_events": {
+        "classification": "indeterminate",
+        "low_overhead": false,
+        "material_cost": false,
+        "maximum_delta_ns": 131097287,
+        "maximum_ratio": {
+          "denominator": 323725188,
+          "numerator": 454822475
+        },
+        "median_delta_ns": 100391875,
+        "median_ratio": {
+          "denominator": 309195883,
+          "numerator": 409587758
+        },
+        "minimum_delta_ns": 60443269,
+        "minimum_ratio": {
+          "denominator": 351615860,
+          "numerator": 412059129
+        },
+        "wall_ns": {
+          "main": {
+            "maximum": 351615860,
+            "median": 323725188,
+            "minimum": 309195883
+          },
+          "pr11": {
+            "maximum": 454822475,
+            "median": 412059129,
+            "minimum": 408932247
+          }
+        }
+      },
+      "typed_events_to_frame": {
+        "classification": "material_cost",
+        "low_overhead": false,
+        "material_cost": true,
+        "maximum_delta_ns": 269910247,
+        "maximum_ratio": {
+          "denominator": 62833027,
+          "numerator": 332743274
+        },
+        "median_delta_ns": 246928832,
+        "median_ratio": {
+          "denominator": 61640935,
+          "numerator": 280074831
+        },
+        "minimum_delta_ns": 218433896,
+        "minimum_ratio": {
+          "denominator": 4374779,
+          "numerator": 19807831
+        },
+        "wall_ns": {
+          "main": {
+            "maximum": 69996464,
+            "median": 63520279,
+            "minimum": 61640935
+          },
+          "pr11": {
+            "maximum": 332743274,
+            "median": 316925296,
+            "minimum": 280074831
+          }
+        }
+      }
+    },
+    "paired_arithmetic": "Median of5 exact within-pair Fractions/deltas, not ratio/difference of marginal medians.",
+    "physical_files": {
+      "csvs": 2,
+      "parquets": 41,
+      "row_instances_decoded": 4300000,
+      "run_manifest_entries": 256
+    },
+    "primary_classification": "indeterminate",
+    "primary_material_cost": false,
+    "primary_operation": "parquet_load_events",
+    "profile_allowed": false,
+    "runtime_limits": "Warmcache one100kexposedsyntheticstream/host; wholeworkerRSS361908\u2013403132KiB includingaudits; no incremental memory/throughput/venue/fullbacktest/scaling/statistical/economic claim.",
+    "source_proof": {
+      "actual_imports_per_normal_worker": 14,
+      "actual_imports_preparation": 17,
+      "import_snapshots": 82,
+      "protected_old_files": 137,
+      "source_paths_per_role": 38
+    }
+  },
+  "narrative_quality_workflow_review": {
+    "coverage": "All report figures/paired arithmetic/source history/primary stop and limits; actual252pass/90.62coverage/JUnit0/import37/exitstatus0/Ruff88/mypy37/diff artifacts; costCIonlysaved-evidence verification, inherited correctness separate",
+    "no_operations_or_timing_reruns": true,
+    "reviewer": "independent_feasibility",
+    "verdict": "GO"
+  },
+  "production_changed_relative_pr11": false,
+  "publication_ci_layout_repair": {
+    "controlled_clean_archive_verification_exit": 0,
+    "first_ci_head": "ce101a15d1ffd649c33cbcf03f9058b69b3f299d",
+    "first_ci_run": 43608388240,
+    "first_ci_status": "failed saved-evidence source inventory; ordinary checks and inherited correctness passed",
+    "new_original_diagnostic_copies": 5,
+    "new_workflow_sha256": "524cd765a89ace384c5fae79b38b476447bf0d761e9e41c69c30d8466e5df34f",
+    "next_ci": "Pending exact new head after wrapper-only repair; no new cost samples permitted.",
+    "publication_entries_after_repair": 283,
+    "review": "publication/ci-repair-review.json",
+    "reviewers": {
+      "independent_feasibility": "Actual524workflow and report/disclosure/controlledlogs GO; unchanged gates and timingstudy.",
+      "publication_integrity": "All283entries,267oldcopies+5newverbatimcopies/repairreview, source/tools/run/protected files unchanged; links/privacy/clean diagnostic summary/hash GO."
+    },
+    "timing_retries": 0,
+    "unchanged_benchmark_and_helper": true,
+    "unchanged_run_manifest_and_samples": true
+  },
+  "publication_integrity_review": {
+    "csvs": 2,
+    "ignored_source_paths": 82,
+    "no_operations_rerun_or_edits": true,
+    "no_suspect_secrets_private_vendor_payloads_or_symlinks": true,
+    "original_logs": 43,
+    "parquets": 41,
+    "protected_historical_files": 137,
+    "publication_entries": 277,
+    "raw_and_verbatim_files": 267,
+    "recorded_references": 3022,
+    "report_links": 7,
+    "reviewer": "publication_integrity",
+    "run_files": 257,
+    "source_current_pr11_unchanged": true,
+    "verdict": "GO"
+  },
+  "publication_inventory": {
+    "csvs": 2,
+    "parquets": 41,
+    "raw_files": 267,
+    "verbatim_copies": 267
+  },
+  "remaining_gates": [
+    "Final committedindex/manifest/source readback",
+    "New draftPR exactremotehead andterminalCI; saved costrecomputation only/no new benchmark samples"
+  ],
+  "reviewers": {
+    "data_execution_audit": "Workflow author; separate independent static timer/source/runtime and stored-record exact arithmetic/provenance audit. Role disclosed; no measurements or operations.",
+    "growth_reproducer": "Independent input/oracle helper author, static checks only.",
+    "independent_feasibility": "Non-author design/helper/controller/timer and full actual numerical/physical/provenance GO, with separate structural subreview. No app operations/reruns/edits.",
+    "performance_reproducer": "Controller author, static checks only.",
+    "publication_integrity": "Non-author independent physical/scalar/math/Git/import/cap/profile-policy GO; all41Pq+2CSV/4.3Mrowinstances/20pairs and256filehashes. No app/helper operations or writes.",
+    "source_adversary": "Independent source/callpath prerequisite review, no measurements."
+  },
+  "root_record_of_independent_reviews": true,
+  "timed_source_revisions": {
+    "main": {
+      "archive": "sources/main.tar",
+      "archive_scope": [
+        "src",
+        "configs/benchmark.yaml",
+        "pyproject.toml"
+      ],
+      "archive_sha256": "8798573cdc0229eed158150a774fe281030d2c877bb01f9d09d256d715233846",
+      "directory": "sources/main",
+      "revision": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f"
+    },
+    "pr11": {
+      "archive": "sources/pr11.tar",
+      "archive_scope": [
+        "src",
+        "configs/benchmark.yaml",
+        "pyproject.toml"
+      ],
+      "archive_sha256": "905370477a58bb81b19e8e9909514d529b09c5247d2c948d4b378ddfe87e853d",
+      "directory": "sources/pr11",
+      "revision": "38a17f09746903938fa76b1d42268c8a75c7d3f6"
+    }
+  },
+  "trial_accounting": {
+    "all_scheduled_records_retained": true,
+    "input_generations": 1,
+    "no_root_or_delegate_audits_during_normal_timing": true,
+    "normal_stage_elapsed_ns": 515838345017,
+    "normal_workers": 40,
+    "operations": 4,
+    "pairs_per_operation": 5,
+    "preparation_elapsed_ns": 8049609569,
+    "primary_substitution": false,
+    "profiles": 0,
+    "record_limit": "Retained records do not logically exclude unrecorded runs or unrelated host activity.",
+    "retries_resamples_or_dropped_records": 0,
+    "source_optimizations": 0
+  },
+  "verdict": "GO for measurement/arithmetic/source/input/output/provenance, narrative/quality/workflow and publication curation; final committed source/manifest and exact-head remote CI remain separate gates"
+}

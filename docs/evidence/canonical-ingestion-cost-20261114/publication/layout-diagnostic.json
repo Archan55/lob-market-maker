@@ -1,0 +1,24 @@
+{
+  "archive_sha256": "47204d9e0bee6337f52a119c88fd5f4d4ca0aee7a452c6bab2a38ede3731f952",
+  "cases": [
+    {
+      "case": "with-install-metadata",
+      "exit": 1,
+      "extra_outside_src_lobmm": true,
+      "log": "experiments/canonical-ingestion-cost-publication-20261114/with-install-metadata.log",
+      "log_sha256": "aae5ab277ead126f9f514950c41866d43fb8271bc9c646bc3eb5044e34c45613"
+    },
+    {
+      "case": "clean-tracked-tree",
+      "exit": 0,
+      "extra_outside_src_lobmm": false,
+      "log": "experiments/canonical-ingestion-cost-publication-20261114/clean-tracked-tree.log",
+      "log_sha256": "5f3eb903ffce6d597c1f4e49aab5a58705f0eed3c262768c242d3804069c358b"
+    }
+  ],
+  "clean_verified_summary_unchanged": true,
+  "controller_sha256": "08238142fcd4d75d1078cfb4fa46c19883c00a8ba5faf8a2fdae030647edcb66",
+  "head": "ce101a15d1ffd649c33cbcf03f9058b69b3f299d",
+  "purpose": "Controlled read-only saved-evidence verifier layout check; no generation/application operation/timing sample.",
+  "temporary_parent": "/tmp/lob-ingestion-layout-vh1hrf_s"
+}

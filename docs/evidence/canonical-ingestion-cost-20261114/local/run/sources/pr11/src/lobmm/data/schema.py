@@ -1,0 +1,216 @@
+"""Canonical Polars schema and conversions for Level 2 market events."""
+
+from __future__ import annotations
+
+from collections.abc import Iterable, Mapping
+from decimal import Decimal
+from math import isfinite
+from typing import Any
+
+import polars as pl
+
+from lobmm.enums import EventType, Side
+from lobmm.events import EventValidationError, MarketEvent
+
+TIMESTAMP_COLUMN = "timestamp_ns"
+SEQUENCE_COLUMN = "sequence_number"
+EVENT_TYPE_COLUMN = "event_type"
+SIDE_COLUMN = "side"
+PRICE_COLUMN = "price_ticks"
+QUANTITY_COLUMN = "quantity"
+
+CANONICAL_COLUMNS: tuple[str, ...] = (
+    TIMESTAMP_COLUMN,
+    SEQUENCE_COLUMN,
+    EVENT_TYPE_COLUMN,
+    SIDE_COLUMN,
+    PRICE_COLUMN,
+    QUANTITY_COLUMN,
+)
+
+# ``side`` is nullable because RESET has no resting-book side. Event types are
+# stored as strings so Parquet files remain self-describing outside Python.
+CANONICAL_SCHEMA: dict[str, type[pl.DataType]] = {
+    TIMESTAMP_COLUMN: pl.Int64,
+    SEQUENCE_COLUMN: pl.Int64,
+    EVENT_TYPE_COLUMN: pl.String,
+    SIDE_COLUMN: pl.Int8,
+    PRICE_COLUMN: pl.Int64,
+    QUANTITY_COLUMN: pl.Int64,
+}
+
+_INTEGER_BOUNDS: dict[str, tuple[int, int]] = {
+    column: (-128, 127) if column == SIDE_COLUMN else (-(2**63), 2**63 - 1)
+    for column in CANONICAL_COLUMNS
+    if column != EVENT_TYPE_COLUMN
+}
+
+
+class DataSchemaError(ValueError):
+    """Raised when tabular data cannot satisfy the canonical event schema."""
+
+
+def _exact_integer(
+    value: Any,
+    *,
+    field: str,
+    bounds: tuple[int, int] | None = None,
+) -> int:
+    """Keep integer-string grammar while rejecting lossy numeric conversion."""
+
+    try:
+        if isinstance(value, Decimal):
+            finite = value.is_finite()
+        elif isinstance(value, float):
+            finite = isfinite(value)
+        else:
+            finite = True
+        if not finite:
+            raise ValueError("must be a finite integer")
+        # Compare original scalars against integer bounds before constructing a
+        # possibly enormous integer from a compact Decimal exponent.
+        if (
+            bounds is not None
+            and isinstance(value, (int, float, Decimal))
+            and (value < bounds[0] or value > bounds[1])
+        ):
+            raise ValueError(f"is outside integer range {bounds}")
+        result = int(value)
+        if not isinstance(value, (str, bytes, bytearray)) and value != result:
+            raise ValueError("must be an exact integer")
+        if bounds is not None and not bounds[0] <= result <= bounds[1]:
+            raise ValueError(f"is outside integer range {bounds}")
+        return result
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise DataSchemaError(f"{field}: {exc}") from exc
+
+
+def empty_event_frame() -> pl.DataFrame:
+    """Return an empty frame with the exact canonical schema."""
+
+    return pl.DataFrame(schema=CANONICAL_SCHEMA)
+
+
+def events_to_frame(events: Iterable[MarketEvent]) -> pl.DataFrame:
+    """Materialize typed events as a canonical Polars frame."""
+
+    try:
+        rows = []
+        for event in events:
+            row: dict[str, int | str | None] = {
+                TIMESTAMP_COLUMN: event.timestamp_ns,
+                SEQUENCE_COLUMN: event.sequence_number,
+                EVENT_TYPE_COLUMN: event.event_type.value,
+                SIDE_COLUMN: event.side,
+                PRICE_COLUMN: event.price_ticks,
+                QUANTITY_COLUMN: event.quantity,
+            }
+            # Validate each provided scalar before mixed numeric rows can be
+            # promoted to floating point by DataFrame inference.
+            for column, bounds in _INTEGER_BOUNDS.items():
+                if row[column] is not None:
+                    row[column] = _exact_integer(
+                        row[column], field=column, bounds=bounds
+                    )
+            rows.append(row)
+        if not rows:
+            return empty_event_frame()
+        return pl.DataFrame(rows, schema=CANONICAL_SCHEMA)
+    except (pl.exceptions.PolarsError, TypeError, ValueError) as exc:
+        raise DataSchemaError(f"cannot encode canonical market events: {exc}") from exc
+
+
+def coerce_canonical_frame(
+    frame: pl.DataFrame,
+    *,
+    allow_extra_columns: bool = False,
+) -> pl.DataFrame:
+    """Select and strictly cast canonical columns.
+
+    Casting is intentionally strict: lossy casts (for example, a fractional
+    quantity) and unparseable enum encodings fail at the ingestion boundary.
+    Semantic checks are performed by :func:`frame_to_events` and the stream
+    validator.
+    """
+
+    columns = set(frame.columns)
+    expected = set(CANONICAL_COLUMNS)
+    missing = expected - columns
+    extra = columns - expected
+    if missing:
+        raise DataSchemaError(
+            "missing canonical column(s): " + ", ".join(sorted(missing))
+        )
+    if extra and not allow_extra_columns:
+        raise DataSchemaError("unexpected column(s): " + ", ".join(sorted(extra)))
+    try:
+        for column, bounds in _INTEGER_BOUNDS.items():
+            series = frame[column]
+            # Native Integer/Bool/Null and String columns retain Polars' strict
+            # cast path and grammar; only numeric narrowing needs this guard.
+            if series.dtype.is_float() or series.dtype.is_decimal():
+                for value in series:
+                    if value is not None:
+                        _exact_integer(value, field=column, bounds=bounds)
+        return frame.select(
+            pl.col(column).cast(dtype, strict=True).alias(column)
+            for column, dtype in CANONICAL_SCHEMA.items()
+        )
+    except (pl.exceptions.PolarsError, TypeError, ValueError) as exc:
+        raise DataSchemaError(f"cannot cast canonical event columns: {exc}") from exc
+
+
+def event_from_mapping(
+    row: Mapping[str, Any],
+    *,
+    row_index: int | None = None,
+) -> MarketEvent:
+    """Parse one canonical row into a validated :class:`MarketEvent`."""
+
+    location = f"row {row_index}" if row_index is not None else "event row"
+    try:
+        raw_event_type = row[EVENT_TYPE_COLUMN]
+        event_type = (
+            raw_event_type
+            if isinstance(raw_event_type, EventType)
+            else EventType(str(raw_event_type))
+        )
+        raw_side = row[SIDE_COLUMN]
+        side = (
+            None
+            if raw_side is None
+            else raw_side
+            if isinstance(raw_side, Side)
+            else Side(_exact_integer(raw_side, field=SIDE_COLUMN))
+        )
+        return MarketEvent(
+            timestamp_ns=_exact_integer(row[TIMESTAMP_COLUMN], field=TIMESTAMP_COLUMN),
+            sequence_number=_exact_integer(row[SEQUENCE_COLUMN], field=SEQUENCE_COLUMN),
+            event_type=event_type,
+            side=side,
+            price_ticks=_exact_integer(row[PRICE_COLUMN], field=PRICE_COLUMN),
+            quantity=_exact_integer(row[QUANTITY_COLUMN], field=QUANTITY_COLUMN),
+        )
+    except KeyError as exc:
+        raise DataSchemaError(f"{location}: missing field {exc.args[0]!r}") from exc
+    except (EventValidationError, TypeError, ValueError) as exc:
+        raise DataSchemaError(f"{location}: invalid canonical event: {exc}") from exc
+
+
+def frame_to_events(
+    frame: pl.DataFrame,
+    *,
+    allow_extra_columns: bool = False,
+) -> list[MarketEvent]:
+    """Convert a canonical Polars frame to validated typed events."""
+
+    canonical = coerce_canonical_frame(frame, allow_extra_columns=allow_extra_columns)
+    return [
+        event_from_mapping(row, row_index=index)
+        for index, row in enumerate(canonical.iter_rows(named=True))
+    ]
+
+
+# Friendly aliases used at reporting and integration boundaries.
+to_frame = events_to_frame
+to_events = frame_to_events
