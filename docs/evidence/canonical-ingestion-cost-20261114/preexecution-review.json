@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-14",
+  "measurements_before_this_record": 0,
+  "phase": "Before first input generation/application probe/measurement",
+  "pins": {
+    ".github/workflows/ci.yml": "c55afb2a8ae29c0dabc0a1c2c4b0404f0d7bbd8ef5bd7795d6b0d15de57d9109",
+    "tools/benchmark_canonical_ingestion.py": "08238142fcd4d75d1078cfb4fa46c19883c00a8ba5faf8a2fdae030647edcb66",
+    "tools/canonical_ingestion_oracle.py": "c092a60b659154b8ea44d4d092d5ac59ab2a734dc622cfde4e90bc3b7716948d"
+  },
+  "reviewers": {
+    "data_execution_audit": "Independenttimer/source/runtime/evidence reviewGO plusworkflowauthorrole disclosed; no appimports/probes/timings.",
+    "growth_reproducer": "Independentoracleauthor, staticRuff/compileonly.",
+    "independent_feasibility": "Entirecontract/helper/controller/workflow independentlyreviewed;timeronlypubliccall, route-specifictypes, all40source/input/outputproofsbeforeclassification/profile, exactFractionrules, historical137policy, bounds andreadonlyCI sound. No appimports/probes/timings/edits.",
+    "performance_reproducer": "Controllerauthor, staticRuff/compile/help only.",
+    "source_adversary": "Independentstatic code/callpathreview identified bounded ingestion prerequisite distinctfromclosedreplay/Portfolio work; no measurements."
+  },
+  "root_record_of_independent_review": true,
+  "source_current": "All38PR11productionpaths and137historicalprotectedfiles checked unchanged.",
+  "trial_policy": "One --run only,40normalworkers/noresampling; optionaloneposttimingprofile onlyprimarytrigger. No sourceoptimization today; allagentsidle duringtiming.",
+  "verdict": "GO"
+}

@@ -41,6 +41,15 @@ jobs:
           python tools/reproduce_canonical_fidelity.py --stage verify \
             --candidate "$(git rev-parse HEAD)" \
             --output experiments/canonical-fidelity-ci/verify
+      - name: Verify retained canonical ingestion measurements without timing
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/canonical-ingestion-cost-ci
+          git rev-parse HEAD | tee experiments/canonical-ingestion-cost-ci/checkout.txt
+          python tools/benchmark_canonical_ingestion.py \
+            --verify-evidence docs/evidence/canonical-ingestion-cost-20261114/local/run \
+            2>&1 | tee experiments/canonical-ingestion-cost-ci/evidence-verification.log
       - name: Retain original synthetic evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -57,3 +66,16 @@ jobs:
             tests/unit/test_canonical_fidelity_independent.py
             src/lobmm/data/schema.py
             src/lobmm/data/loaders.py
+      - name: Retain canonical ingestion cost evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-ingestion-cost-${{ steps.source.outputs.head_sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            experiments/canonical-ingestion-cost-ci/
+            docs/evidence/canonical-ingestion-cost-20261114/
+            docs/CANONICAL_INGESTION_COST.md
+            tools/benchmark_canonical_ingestion.py
+            tools/canonical_ingestion_oracle.py
