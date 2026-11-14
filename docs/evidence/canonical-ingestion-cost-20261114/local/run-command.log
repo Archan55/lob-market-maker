@@ -1,0 +1,708 @@
+{
+  "sample_count": 40,
+  "pair_count_per_operation": 5,
+  "operations": {
+    "decimal_csv_load_events": {
+      "pairs": [
+        {
+          "pair": 1,
+          "main_sample": 7,
+          "pr11_sample": 8,
+          "main_wall_ns": 312661940,
+          "pr11_wall_ns": 945865756,
+          "ratio": {
+            "numerator": 236466439,
+            "denominator": 78165485
+          },
+          "delta_ns": 633203816
+        },
+        {
+          "pair": 2,
+          "main_sample": 14,
+          "pr11_sample": 13,
+          "main_wall_ns": 325364377,
+          "pr11_wall_ns": 924402162,
+          "ratio": {
+            "numerator": 924402162,
+            "denominator": 325364377
+          },
+          "delta_ns": 599037785
+        },
+        {
+          "pair": 3,
+          "main_sample": 19,
+          "pr11_sample": 20,
+          "main_wall_ns": 316139923,
+          "pr11_wall_ns": 951402809,
+          "ratio": {
+            "numerator": 951402809,
+            "denominator": 316139923
+          },
+          "delta_ns": 635262886
+        },
+        {
+          "pair": 4,
+          "main_sample": 26,
+          "pr11_sample": 25,
+          "main_wall_ns": 328961618,
+          "pr11_wall_ns": 966965415,
+          "ratio": {
+            "numerator": 966965415,
+            "denominator": 328961618
+          },
+          "delta_ns": 638003797
+        },
+        {
+          "pair": 5,
+          "main_sample": 39,
+          "pr11_sample": 40,
+          "main_wall_ns": 332044815,
+          "pr11_wall_ns": 907368420,
+          "ratio": {
+            "numerator": 60491228,
+            "denominator": 22136321
+          },
+          "delta_ns": 575323605
+        }
+      ],
+      "median_ratio": {
+        "numerator": 966965415,
+        "denominator": 328961618
+      },
+      "minimum_ratio": {
+        "numerator": 60491228,
+        "denominator": 22136321
+      },
+      "maximum_ratio": {
+        "numerator": 236466439,
+        "denominator": 78165485
+      },
+      "median_delta_ns": 633203816,
+      "minimum_delta_ns": 575323605,
+      "maximum_delta_ns": 638003797,
+      "wall_ns": {
+        "main": {
+          "minimum": 312661940,
+          "median": 325364377,
+          "maximum": 332044815
+        },
+        "pr11": {
+          "minimum": 907368420,
+          "median": 945865756,
+          "maximum": 966965415
+        }
+      },
+      "material_cost": true,
+      "low_overhead": false,
+      "classification": "material_cost"
+    },
+    "integer_csv_load_events": {
+      "pairs": [
+        {
+          "pair": 1,
+          "main_sample": 5,
+          "pr11_sample": 6,
+          "main_wall_ns": 313595566,
+          "pr11_wall_ns": 421503174,
+          "ratio": {
+            "numerator": 210751587,
+            "denominator": 156797783
+          },
+          "delta_ns": 107907608
+        },
+        {
+          "pair": 2,
+          "main_sample": 12,
+          "pr11_sample": 11,
+          "main_wall_ns": 317428372,
+          "pr11_wall_ns": 446482651,
+          "ratio": {
+            "numerator": 446482651,
+            "denominator": 317428372
+          },
+          "delta_ns": 129054279
+        },
+        {
+          "pair": 3,
+          "main_sample": 17,
+          "pr11_sample": 18,
+          "main_wall_ns": 325542710,
+          "pr11_wall_ns": 429820861,
+          "ratio": {
+            "numerator": 429820861,
+            "denominator": 325542710
+          },
+          "delta_ns": 104278151
+        },
+        {
+          "pair": 4,
+          "main_sample": 32,
+          "pr11_sample": 31,
+          "main_wall_ns": 325029208,
+          "pr11_wall_ns": 426608062,
+          "ratio": {
+            "numerator": 213304031,
+            "denominator": 162514604
+          },
+          "delta_ns": 101578854
+        },
+        {
+          "pair": 5,
+          "main_sample": 37,
+          "pr11_sample": 38,
+          "main_wall_ns": 312286855,
+          "pr11_wall_ns": 416118715,
+          "ratio": {
+            "numerator": 83223743,
+            "denominator": 62457371
+          },
+          "delta_ns": 103831860
+        }
+      ],
+      "median_ratio": {
+        "numerator": 83223743,
+        "denominator": 62457371
+      },
+      "minimum_ratio": {
+        "numerator": 213304031,
+        "denominator": 162514604
+      },
+      "maximum_ratio": {
+        "numerator": 446482651,
+        "denominator": 317428372
+      },
+      "median_delta_ns": 104278151,
+      "minimum_delta_ns": 101578854,
+      "maximum_delta_ns": 129054279,
+      "wall_ns": {
+        "main": {
+          "minimum": 312286855,
+          "median": 317428372,
+          "maximum": 325542710
+        },
+        "pr11": {
+          "minimum": 416118715,
+          "median": 426608062,
+          "maximum": 446482651
+        }
+      },
+      "material_cost": false,
+      "low_overhead": false,
+      "classification": "indeterminate"
+    },
+    "parquet_load_events": {
+      "pairs": [
+        {
+          "pair": 1,
+          "main_sample": 1,
+          "pr11_sample": 2,
+          "main_wall_ns": 309195883,
+          "pr11_wall_ns": 409587758,
+          "ratio": {
+            "numerator": 409587758,
+            "denominator": 309195883
+          },
+          "delta_ns": 100391875
+        },
+        {
+          "pair": 2,
+          "main_sample": 16,
+          "pr11_sample": 15,
+          "main_wall_ns": 323725188,
+          "pr11_wall_ns": 454822475,
+          "ratio": {
+            "numerator": 454822475,
+            "denominator": 323725188
+          },
+          "delta_ns": 131097287
+        },
+        {
+          "pair": 3,
+          "main_sample": 21,
+          "pr11_sample": 22,
+          "main_wall_ns": 324703309,
+          "pr11_wall_ns": 408932247,
+          "ratio": {
+            "numerator": 408932247,
+            "denominator": 324703309
+          },
+          "delta_ns": 84228938
+        },
+        {
+          "pair": 4,
+          "main_sample": 28,
+          "pr11_sample": 27,
+          "main_wall_ns": 310568375,
+          "pr11_wall_ns": 435255159,
+          "ratio": {
+            "numerator": 435255159,
+            "denominator": 310568375
+          },
+          "delta_ns": 124686784
+        },
+        {
+          "pair": 5,
+          "main_sample": 33,
+          "pr11_sample": 34,
+          "main_wall_ns": 351615860,
+          "pr11_wall_ns": 412059129,
+          "ratio": {
+            "numerator": 412059129,
+            "denominator": 351615860
+          },
+          "delta_ns": 60443269
+        }
+      ],
+      "median_ratio": {
+        "numerator": 409587758,
+        "denominator": 309195883
+      },
+      "minimum_ratio": {
+        "numerator": 412059129,
+        "denominator": 351615860
+      },
+      "maximum_ratio": {
+        "numerator": 454822475,
+        "denominator": 323725188
+      },
+      "median_delta_ns": 100391875,
+      "minimum_delta_ns": 60443269,
+      "maximum_delta_ns": 131097287,
+      "wall_ns": {
+        "main": {
+          "minimum": 309195883,
+          "median": 323725188,
+          "maximum": 351615860
+        },
+        "pr11": {
+          "minimum": 408932247,
+          "median": 412059129,
+          "maximum": 454822475
+        }
+      },
+      "material_cost": false,
+      "low_overhead": false,
+      "classification": "indeterminate"
+    },
+    "typed_events_to_frame": {
+      "pairs": [
+        {
+          "pair": 1,
+          "main_sample": 3,
+          "pr11_sample": 4,
+          "main_wall_ns": 61640935,
+          "pr11_wall_ns": 280074831,
+          "ratio": {
+            "numerator": 280074831,
+            "denominator": 61640935
+          },
+          "delta_ns": 218433896
+        },
+        {
+          "pair": 2,
+          "main_sample": 10,
+          "pr11_sample": 9,
+          "main_wall_ns": 64339217,
+          "pr11_wall_ns": 292207678,
+          "ratio": {
+            "numerator": 292207678,
+            "denominator": 64339217
+          },
+          "delta_ns": 227868461
+        },
+        {
+          "pair": 3,
+          "main_sample": 23,
+          "pr11_sample": 24,
+          "main_wall_ns": 69996464,
+          "pr11_wall_ns": 316925296,
+          "ratio": {
+            "numerator": 19807831,
+            "denominator": 4374779
+          },
+          "delta_ns": 246928832
+        },
+        {
+          "pair": 4,
+          "main_sample": 30,
+          "pr11_sample": 29,
+          "main_wall_ns": 62833027,
+          "pr11_wall_ns": 332743274,
+          "ratio": {
+            "numerator": 332743274,
+            "denominator": 62833027
+          },
+          "delta_ns": 269910247
+        },
+        {
+          "pair": 5,
+          "main_sample": 35,
+          "pr11_sample": 36,
+          "main_wall_ns": 63520279,
+          "pr11_wall_ns": 318989031,
+          "ratio": {
+            "numerator": 318989031,
+            "denominator": 63520279
+          },
+          "delta_ns": 255468752
+        }
+      ],
+      "median_ratio": {
+        "numerator": 280074831,
+        "denominator": 61640935
+      },
+      "minimum_ratio": {
+        "numerator": 19807831,
+        "denominator": 4374779
+      },
+      "maximum_ratio": {
+        "numerator": 332743274,
+        "denominator": 62833027
+      },
+      "median_delta_ns": 246928832,
+      "minimum_delta_ns": 218433896,
+      "maximum_delta_ns": 269910247,
+      "wall_ns": {
+        "main": {
+          "minimum": 61640935,
+          "median": 63520279,
+          "maximum": 69996464
+        },
+        "pr11": {
+          "minimum": 280074831,
+          "median": 316925296,
+          "maximum": 332743274
+        }
+      },
+      "material_cost": true,
+      "low_overhead": false,
+      "classification": "material_cost"
+    }
+  },
+  "primary_operation": "parquet_load_events",
+  "primary_material_cost": false,
+  "primary_classification": "indeterminate",
+  "profile_allowed": false,
+  "raw_samples": [
+    {
+      "sample": 1,
+      "pair": 1,
+      "role": "main",
+      "operation": "parquet_load_events",
+      "wall_ns": 309195883,
+      "cpu_ns": 308912631
+    },
+    {
+      "sample": 2,
+      "pair": 1,
+      "role": "pr11",
+      "operation": "parquet_load_events",
+      "wall_ns": 409587758,
+      "cpu_ns": 409959297
+    },
+    {
+      "sample": 3,
+      "pair": 1,
+      "role": "main",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 61640935,
+      "cpu_ns": 61718952
+    },
+    {
+      "sample": 4,
+      "pair": 1,
+      "role": "pr11",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 280074831,
+      "cpu_ns": 280363323
+    },
+    {
+      "sample": 5,
+      "pair": 1,
+      "role": "main",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 313595566,
+      "cpu_ns": 316572570
+    },
+    {
+      "sample": 6,
+      "pair": 1,
+      "role": "pr11",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 421503174,
+      "cpu_ns": 426270856
+    },
+    {
+      "sample": 7,
+      "pair": 1,
+      "role": "main",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 312661940,
+      "cpu_ns": 328679834
+    },
+    {
+      "sample": 8,
+      "pair": 1,
+      "role": "pr11",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 945865756,
+      "cpu_ns": 954987661
+    },
+    {
+      "sample": 9,
+      "pair": 2,
+      "role": "pr11",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 292207678,
+      "cpu_ns": 292482515
+    },
+    {
+      "sample": 10,
+      "pair": 2,
+      "role": "main",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 64339217,
+      "cpu_ns": 64412949
+    },
+    {
+      "sample": 11,
+      "pair": 2,
+      "role": "pr11",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 446482651,
+      "cpu_ns": 451081280
+    },
+    {
+      "sample": 12,
+      "pair": 2,
+      "role": "main",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 317428372,
+      "cpu_ns": 317937306
+    },
+    {
+      "sample": 13,
+      "pair": 2,
+      "role": "pr11",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 924402162,
+      "cpu_ns": 933128245
+    },
+    {
+      "sample": 14,
+      "pair": 2,
+      "role": "main",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 325364377,
+      "cpu_ns": 343717245
+    },
+    {
+      "sample": 15,
+      "pair": 2,
+      "role": "pr11",
+      "operation": "parquet_load_events",
+      "wall_ns": 454822475,
+      "cpu_ns": 453239928
+    },
+    {
+      "sample": 16,
+      "pair": 2,
+      "role": "main",
+      "operation": "parquet_load_events",
+      "wall_ns": 323725188,
+      "cpu_ns": 324023877
+    },
+    {
+      "sample": 17,
+      "pair": 3,
+      "role": "main",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 325542710,
+      "cpu_ns": 326544560
+    },
+    {
+      "sample": 18,
+      "pair": 3,
+      "role": "pr11",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 429820861,
+      "cpu_ns": 434759125
+    },
+    {
+      "sample": 19,
+      "pair": 3,
+      "role": "main",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 316139923,
+      "cpu_ns": 328251922
+    },
+    {
+      "sample": 20,
+      "pair": 3,
+      "role": "pr11",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 951402809,
+      "cpu_ns": 961634274
+    },
+    {
+      "sample": 21,
+      "pair": 3,
+      "role": "main",
+      "operation": "parquet_load_events",
+      "wall_ns": 324703309,
+      "cpu_ns": 325024742
+    },
+    {
+      "sample": 22,
+      "pair": 3,
+      "role": "pr11",
+      "operation": "parquet_load_events",
+      "wall_ns": 408932247,
+      "cpu_ns": 408859511
+    },
+    {
+      "sample": 23,
+      "pair": 3,
+      "role": "main",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 69996464,
+      "cpu_ns": 70088832
+    },
+    {
+      "sample": 24,
+      "pair": 3,
+      "role": "pr11",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 316925296,
+      "cpu_ns": 317240998
+    },
+    {
+      "sample": 25,
+      "pair": 4,
+      "role": "pr11",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 966965415,
+      "cpu_ns": 976825741
+    },
+    {
+      "sample": 26,
+      "pair": 4,
+      "role": "main",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 328961618,
+      "cpu_ns": 338868455
+    },
+    {
+      "sample": 27,
+      "pair": 4,
+      "role": "pr11",
+      "operation": "parquet_load_events",
+      "wall_ns": 435255159,
+      "cpu_ns": 434533952
+    },
+    {
+      "sample": 28,
+      "pair": 4,
+      "role": "main",
+      "operation": "parquet_load_events",
+      "wall_ns": 310568375,
+      "cpu_ns": 310843404
+    },
+    {
+      "sample": 29,
+      "pair": 4,
+      "role": "pr11",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 332743274,
+      "cpu_ns": 332975413
+    },
+    {
+      "sample": 30,
+      "pair": 4,
+      "role": "main",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 62833027,
+      "cpu_ns": 62799168
+    },
+    {
+      "sample": 31,
+      "pair": 4,
+      "role": "pr11",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 426608062,
+      "cpu_ns": 432159599
+    },
+    {
+      "sample": 32,
+      "pair": 4,
+      "role": "main",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 325029208,
+      "cpu_ns": 328091413
+    },
+    {
+      "sample": 33,
+      "pair": 5,
+      "role": "main",
+      "operation": "parquet_load_events",
+      "wall_ns": 351615860,
+      "cpu_ns": 350888270
+    },
+    {
+      "sample": 34,
+      "pair": 5,
+      "role": "pr11",
+      "operation": "parquet_load_events",
+      "wall_ns": 412059129,
+      "cpu_ns": 411859697
+    },
+    {
+      "sample": 35,
+      "pair": 5,
+      "role": "main",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 63520279,
+      "cpu_ns": 63588993
+    },
+    {
+      "sample": 36,
+      "pair": 5,
+      "role": "pr11",
+      "operation": "typed_events_to_frame",
+      "wall_ns": 318989031,
+      "cpu_ns": 319197635
+    },
+    {
+      "sample": 37,
+      "pair": 5,
+      "role": "main",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 312286855,
+      "cpu_ns": 316449918
+    },
+    {
+      "sample": 38,
+      "pair": 5,
+      "role": "pr11",
+      "operation": "integer_csv_load_events",
+      "wall_ns": 416118715,
+      "cpu_ns": 418745512
+    },
+    {
+      "sample": 39,
+      "pair": 5,
+      "role": "main",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 332044815,
+      "cpu_ns": 335642427
+    },
+    {
+      "sample": 40,
+      "pair": 5,
+      "role": "pr11",
+      "operation": "decimal_csv_load_events",
+      "wall_ns": 907368420,
+      "cpu_ns": 917912167
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+synthetic:
+  event_count: 100000
+  start_timestamp_ns: 0
+  interval_ns: 1000000
+  start_price_ticks: 10000
+  levels: 5
+  base_quantity: 100
+  regime_length: 5000
+  reset_interval: 10000
+data:
+  input_path: null
+  book_depth: 5
+  provenance:
+    source_type: synthetic
+    provider: lobmm deterministic synthetic generator
+    venue: SIMULATED
+    symbol: SYNTH
+    dataset_id: lobmm-synthetic-benchmark-v1
+    session_start: null
+    session_end: null
+    checksum_sha256: null
+    license_notes: Generated locally by lobmm; not historical market data.
+random_seed: 7
+output:
+  write_plots: false

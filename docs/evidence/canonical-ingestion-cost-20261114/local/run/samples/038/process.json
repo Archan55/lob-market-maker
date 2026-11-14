@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "-I",
+    "-B",
+    "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run/harness/tools/benchmark_canonical_ingestion.py",
+    "--_worker",
+    "sample",
+    "--_evidence",
+    "/workspace/lob-market-maker-ingestion-cost/experiments/canonical-ingestion-cost-20261114/run",
+    "--_sample",
+    "38"
+  ],
+  "started_utc": "2026-11-14T14:46:23.107644+00:00",
+  "cap_seconds": 120,
+  "returncode": 0,
+  "elapsed_ns": 11502997955,
+  "finished_utc": "2026-11-14T14:46:34.610654+00:00",
+  "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
