@@ -173,6 +173,24 @@
     "verdict": "GO"
   },
   "production_changed_relative_pr11": false,
+  "publication_ci_layout_repair": {
+    "controlled_clean_archive_verification_exit": 0,
+    "first_ci_head": "ce101a15d1ffd649c33cbcf03f9058b69b3f299d",
+    "first_ci_run": 43608388240,
+    "first_ci_status": "failed saved-evidence source inventory; ordinary checks and inherited correctness passed",
+    "new_original_diagnostic_copies": 5,
+    "new_workflow_sha256": "524cd765a89ace384c5fae79b38b476447bf0d761e9e41c69c30d8466e5df34f",
+    "next_ci": "Pending exact new head after wrapper-only repair; no new cost samples permitted.",
+    "publication_entries_after_repair": 283,
+    "review": "publication/ci-repair-review.json",
+    "reviewers": {
+      "independent_feasibility": "Actual524workflow and report/disclosure/controlledlogs GO; unchanged gates and timingstudy.",
+      "publication_integrity": "All283entries,267oldcopies+5newverbatimcopies/repairreview, source/tools/run/protected files unchanged; links/privacy/clean diagnostic summary/hash GO."
+    },
+    "timing_retries": 0,
+    "unchanged_benchmark_and_helper": true,
+    "unchanged_run_manifest_and_samples": true
+  },
   "publication_integrity_review": {
     "csvs": 2,
     "ignored_source_paths": 82,

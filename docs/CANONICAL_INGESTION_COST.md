@@ -179,6 +179,9 @@ the same command with
 `--output experiments/canonical-ingestion-cost-20261114/run`. Hardware timings
 will vary on another run; the complete sources/configuration, physical files,
 hashes and environment distinguish input drift from runtime variation.
+Use dependencies installed separately from the benchmark checkout: its strict
+source inventory expects a clean tracked tree, rather than editable-install
+metadata mixed beneath `src`.
 
 The saved measurements can be verified without new application operations or
 timings:
@@ -207,6 +210,25 @@ repeats the inherited frozen canonical-fidelity verification, and verifies the
 saved cost evidence/arithmetic. **CI does not rerun this ingestion-timing experiment.** Terminal
 head/run/artifact verification will be recorded in the draft PR body. Remote
 metadata or automated checks do not imply an independent ZIP download/audit.
+
+### Publication verification layout correction
+
+The first publication CI at `ce101a15d1ffd649c33cbcf03f9058b69b3f299d`
+passed ordinary quality/smoke and inherited canonical correctness, but saved-cost
+verification stopped at `source inventory drift`. The frozen validator scans
+all files beneath `src`; editable installation can add ignored `*.egg-info`
+metadata outside the application package. Exact surplus filenames were not
+logged in that attempt, so this cause is inferred pending the repaired CI's
+inventory diagnostic.
+
+A controlled local check using the unchanged verifier reproduces the failure
+with a diagnostic metadata marker. A separate clean archive of the exact same
+HEAD verifies all saved records and arithmetic successfully. The CI-only fix
+logs the installed inventory and hashes, archives the recorded HEAD, and runs
+the unchanged verifier from that clean tracked tree. It does not remove metadata,
+loosen a source gate, change the benchmark/helper, generate inputs or create new
+timing samples. Initial failed CI and both diagnostic outcomes are retained in
+the [publication repair record](evidence/canonical-ingestion-cost-20261114/publication/ci-repair-review.json).
 
 ## Practical next decision
 

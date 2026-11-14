@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/tmp/lob-ingestion-layout-vh1hrf_s/with-install-metadata/tools/benchmark_canonical_ingestion.py", line 986, in main
+    result = verify_evidence(args.verify_evidence.resolve())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/lob-ingestion-layout-vh1hrf_s/with-install-metadata/tools/benchmark_canonical_ingestion.py", line 925, in verify_evidence
+    records = validate_records(output, manifest, contract, include_profile=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/lob-ingestion-layout-vh1hrf_s/with-install-metadata/tools/benchmark_canonical_ingestion.py", line 743, in validate_records
+    source_pins(ROOT, contract["source_sha256"]["pr11"])
+  File "/tmp/lob-ingestion-layout-vh1hrf_s/with-install-metadata/tools/benchmark_canonical_ingestion.py", line 113, in source_pins
+    require(
+  File "/tmp/lob-ingestion-layout-vh1hrf_s/with-install-metadata/tools/benchmark_canonical_ingestion.py", line 95, in require
+    raise RuntimeError(message)
+RuntimeError: source inventory drift

@@ -1,0 +1,61 @@
+{
+  "controlled_local_check": {
+    "dirty_error": "source inventory drift",
+    "dirty_synthetic_marker_exit": 1,
+    "fresh_clean_exact_HEAD_archive_exit": 0,
+    "no_generation_application_operations_or_new_timing_samples": true,
+    "note": "Separate full Git archives; controlled marker is a diagnostic, not claimed as original CI filesystem.",
+    "same_frozen_verifier": "08238142fcd4d75d1078cfb4fa46c19883c00a8ba5faf8a2fdae030647edcb66",
+    "saved_summary_unchanged": true,
+    "saved_workers_verified": 40
+  },
+  "first_ci": {
+    "cause_status": "Editable install can add src/*.egg-info outside src/lobmm. Exact CI surplus filenames were not logged in first attempt, so attribution remains inferred until repaired inventory log.",
+    "head": "ce101a15d1ffd649c33cbcf03f9058b69b3f299d",
+    "job": 132487845415,
+    "outcome": "Quality/smoke/inherited33case verification passed; saved-cost verification failed before record arithmetic at source_pins(ROOT): source inventory drift.",
+    "run": 43608388240
+  },
+  "phase": "Publication-only CI layout repair after completed measurements",
+  "remaining_gate": "Repaired exact-head terminal CI and inventory diagnosis still require verification.",
+  "repair": {
+    "method": "Log installed worktree src inventory and application hashes; create full archive of recorded HEAD and hash it; extract fresh temporary tracked tree; run unchanged frozen saved-evidence verifier there; keep stdout in uploaded original workspace log. No deletion, whitelist loosening or gate changes.",
+    "normal_measurements_rerun": 0,
+    "original_workflow_sha256": "c55afb2a8ae29c0dabc0a1c2c4b0404f0d7bbd8ef5bd7795d6b0d15de57d9109",
+    "profile_rerun": 0,
+    "repaired_workflow_sha256": "524cd765a89ace384c5fae79b38b476447bf0d761e9e41c69c30d8466e5df34f",
+    "scope": ".github/workflows/ci.yml only, plus disclosure/evidence",
+    "source_and_helper_unchanged": true
+  },
+  "root_record_of_independent_reviews": {
+    "data_execution_audit": "Workflow author; static YAML/embeddedPython/bashsyntax/diff checks pass, no workflow or application operation executed by author.",
+    "independent_feasibility": "Actual workflow524cd765 static GO; exactHEAD/fulltrackedarchive preserves all38source,137protected/frozen/allrawrecord gates. Verify path uses no Git/app/timing operations. No edits/reruns."
+  },
+  "verbatim_publication_copies": {
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/clean-tracked-tree.log": {
+      "bytes": 26857,
+      "sha256": "5f3eb903ffce6d597c1f4e49aab5a58705f0eed3c262768c242d3804069c358b",
+      "source": "experiments/canonical-ingestion-cost-publication-20261114/clean-tracked-tree.log"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/first-ci-job.log": {
+      "bytes": 169551,
+      "sha256": "bed92d7d76577524228953847abf3fe6aea5ecdd7a4d3de983a0f4f63ace8e7d",
+      "source": "experiments/canonical-ingestion-cost-publication-20261114/failed-job-132487845415.log"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/first-ci-metadata.json": {
+      "bytes": 5347,
+      "sha256": "ba0b903e46bb8753705ec014a56b98b1d31a374dfc35035a43c1b8e4a083df35",
+      "source": "experiments/canonical-ingestion-cost-publication-20261114/failed-ci-metadata.json"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/layout-diagnostic.json": {
+      "bytes": 1068,
+      "sha256": "85edf14ae61e4daf9e131a0f2f3db2b9ff929aeacd782b7b974a78a057c18bf1",
+      "source": "experiments/canonical-ingestion-cost-publication-20261114/layout-diagnostic.json"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/with-install-metadata.log": {
+      "bytes": 1110,
+      "sha256": "aae5ab277ead126f9f514950c41866d43fb8271bc9c646bc3eb5044e34c45613",
+      "source": "experiments/canonical-ingestion-cost-publication-20261114/with-install-metadata.log"
+    }
+  }
+}

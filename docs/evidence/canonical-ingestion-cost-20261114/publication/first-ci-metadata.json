@@ -1,0 +1,165 @@
+{
+  "head": "ce101a15d1ffd649c33cbcf03f9058b69b3f299d",
+  "run": 43608388240,
+  "job": {
+    "jobs": [
+      {
+        "id": 132487845415,
+        "name": "quality",
+        "status": "completed",
+        "conclusion": "failure",
+        "run_id": 43608388240,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Record executed source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Ruff lint",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Ruff format",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Type check",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Tests and coverage",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Deterministic integration backtest",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Archived main and exact-head canonical fidelity verification",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          },
+          {
+            "name": "Verify retained canonical ingestion measurements without timing",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 12
+          },
+          {
+            "name": "Retain original synthetic evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "Retain canonical ingestion cost evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 27
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 28
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 29
+          }
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "artifacts": [
+      {
+        "id": 14119377511,
+        "name": "canonical-ingestion-cost-ce101a15d1ffd649c33cbcf03f9058b69b3f299d",
+        "size_in_bytes": 26316458,
+        "url": "https://api.github.com/repos/Archan55/lob-market-maker/actions/artifacts/14119377511",
+        "archive_download_url": "https://api.github.com/repos/Archan55/lob-market-maker/actions/artifacts/14119377511/zip",
+        "expired": false,
+        "created_at": "2026-11-14T15:08:00Z",
+        "expires_at": "2026-11-28T15:07:57Z",
+        "updated_at": "2026-11-14T15:08:00Z",
+        "digest": "sha256:c56e68e64ec26f460ac97556d77ccd7a4a88685a61b59bd86c071656c0e69f27",
+        "workflow_run": {
+          "id": 43608388240,
+          "repository_id": 1314414795,
+          "head_repository_id": 1314414795,
+          "head_branch": "research/canonical-ingestion-cost",
+          "head_sha": "ce101a15d1ffd649c33cbcf03f9058b69b3f299d"
+        }
+      },
+      {
+        "id": 14118988254,
+        "name": "canonical-fidelity-ce101a15d1ffd649c33cbcf03f9058b69b3f299d",
+        "size_in_bytes": 817102,
+        "url": "https://api.github.com/repos/Archan55/lob-market-maker/actions/artifacts/14118988254",
+        "archive_download_url": "https://api.github.com/repos/Archan55/lob-market-maker/actions/artifacts/14118988254/zip",
+        "expired": false,
+        "created_at": "2026-11-14T15:07:56Z",
+        "expires_at": "2026-11-28T15:07:55Z",
+        "updated_at": "2026-11-14T15:07:56Z",
+        "digest": "sha256:7922a9d8b0948880b52bb2476f83c5d906092628bc970c9d67243afcf2fdd190",
+        "workflow_run": {
+          "id": 43608388240,
+          "repository_id": 1314414795,
+          "head_repository_id": 1314414795,
+          "head_branch": "research/canonical-ingestion-cost",
+          "head_sha": "ce101a15d1ffd649c33cbcf03f9058b69b3f299d"
+        }
+      }
+    ]
+  },
+  "outcome": "First publication CI: ordinary quality/smoke/inherited correctness passed; retained-cost source inventory check failed. No new benchmark run.",
+  "log_utf8_bytes": 169551,
+  "log_utf16_units": 169549
+}

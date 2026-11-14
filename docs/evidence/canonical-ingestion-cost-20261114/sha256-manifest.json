@@ -1,12 +1,12 @@
 {
   "files": {
     ".github/workflows/ci.yml": {
-      "bytes": 3216,
-      "sha256": "c55afb2a8ae29c0dabc0a1c2c4b0404f0d7bbd8ef5bd7795d6b0d15de57d9109"
+      "bytes": 4592,
+      "sha256": "524cd765a89ace384c5fae79b38b476447bf0d761e9e41c69c30d8466e5df34f"
     },
     "docs/CANONICAL_INGESTION_COST.md": {
-      "bytes": 13452,
-      "sha256": "235dd1e3f90d8ab4f4f2b1bac8577f0768e7d11fc8ac3926b5a31caf16478e6d"
+      "bytes": 14828,
+      "sha256": "66166f9881b270a663ecb0e071f6dff01906aebee29e6534a2e895812146302c"
     },
     "docs/evidence/canonical-ingestion-cost-20261114/contract.json": {
       "bytes": 42268,
@@ -17,8 +17,8 @@
       "sha256": "3b3ba613ce782a747c85e86181d44129d11bb07b3701d8caf8b3f9caf98ed033"
     },
     "docs/evidence/canonical-ingestion-cost-20261114/final-review.json": {
-      "bytes": 8881,
-      "sha256": "009031b32bfd45f6d54df92a5cf120eae72accbf2f53b9b45668b670ed97c173"
+      "bytes": 9974,
+      "sha256": "0c80d4c957597940ba54d3d58a94fd3af9da9056d8317a3d3480164dd6576183"
     },
     "docs/evidence/canonical-ingestion-cost-20261114/local/full-suite/cost_import_identity.py.txt": {
       "bytes": 783,
@@ -1092,6 +1092,30 @@
       "bytes": 1610,
       "sha256": "b40437d5a3a50c48519f3b34dbf9973989f94f981955810ee4ba0bbfcde292bf"
     },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/ci-repair-review.json": {
+      "bytes": 3908,
+      "sha256": "1c53ff85cff85f2015f78e808010939c58f8a72d0aefe61f99833f03f82b98ca"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/clean-tracked-tree.log": {
+      "bytes": 26857,
+      "sha256": "5f3eb903ffce6d597c1f4e49aab5a58705f0eed3c262768c242d3804069c358b"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/first-ci-job.log": {
+      "bytes": 169551,
+      "sha256": "bed92d7d76577524228953847abf3fe6aea5ecdd7a4d3de983a0f4f63ace8e7d"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/first-ci-metadata.json": {
+      "bytes": 5347,
+      "sha256": "ba0b903e46bb8753705ec014a56b98b1d31a374dfc35035a43c1b8e4a083df35"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/layout-diagnostic.json": {
+      "bytes": 1068,
+      "sha256": "85edf14ae61e4daf9e131a0f2f3db2b9ff929aeacd782b7b974a78a057c18bf1"
+    },
+    "docs/evidence/canonical-ingestion-cost-20261114/publication/with-install-metadata.log": {
+      "bytes": 1110,
+      "sha256": "aae5ab277ead126f9f514950c41866d43fb8271bc9c646bc3eb5044e34c45613"
+    },
     "docs/evidence/canonical-ingestion-cost-20261114/workload.json": {
       "bytes": 1191,
       "sha256": "03e89610811f5cb663265d9dc1a1bf5ad951d2f8fb72576aac48737059b392a6"
@@ -1109,5 +1133,5 @@
       "sha256": "c092a60b659154b8ea44d4d092d5ac59ab2a734dc622cfde4e90bc3b7716948d"
     }
   },
-  "scope": "November14 ingestion-cost publication: preservedoriginalPR11manifest ishistorical at38a; thismanifestcoversnewliveworkflow/tools/report/ownsyntheticevidence"
+  "scope": "November14 ingestion-cost publication including disclosed publication-only CI layout repair; originalPR11 manifest remains historical"
 }
