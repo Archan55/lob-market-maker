@@ -5,7 +5,19 @@ from __future__ import annotations
 from collections import deque
 from collections.abc import Iterable
 from dataclasses import dataclass
-from decimal import Decimal
+from decimal import (
+    MAX_EMAX,
+    MAX_PREC,
+    MIN_EMIN,
+    Clamped,
+    Decimal,
+    DecimalException,
+    Inexact,
+    InvalidOperation,
+    Overflow,
+    Rounded,
+    localcontext,
+)
 
 from lobmm.config import RiskConfig
 from lobmm.enums import RiskReason, SessionEndPolicy, Side
@@ -21,6 +33,62 @@ def _decimal(value: DecimalLike) -> Decimal:
     if isinstance(value, Decimal):
         return value
     return Decimal(str(value))
+
+
+def _finite_observation_value(value: DecimalLike, name: str) -> Decimal:
+    """Parse continuous-risk inputs without changing the caller's flags."""
+
+    if isinstance(value, Decimal):
+        result = value
+    else:
+        try:
+            with localcontext() as context:
+                context.clear_flags()
+                context.traps[InvalidOperation] = True
+                result = _decimal(value)
+        except DecimalException as exc:
+            raise RiskError(f"{name} must be a finite decimal") from exc
+    if not result.is_finite():
+        raise RiskError(f"{name} must be a finite decimal")
+    return result
+
+
+def _exact_drawdown(high: Decimal, pnl: Decimal) -> Decimal:
+    """Subtract finite values exactly, retaining their finer decimal quantum.
+
+    Aligning the two coefficients needs at most their largest aligned digit
+    count plus one carry digit. The isolated context also admits the original
+    quantum at its Etiny boundary. No ambient rounding, trap or exponent limit
+    participates in the decision or leaks into the caller's context.
+    """
+
+    high_tuple, pnl_tuple = high.as_tuple(), pnl.as_tuple()
+    high_exponent, pnl_exponent = high_tuple.exponent, pnl_tuple.exponent
+    if not isinstance(high_exponent, int) or not isinstance(pnl_exponent, int):
+        raise RiskError("drawdown requires finite decimal operands")
+    exponent = min(high_exponent, pnl_exponent)
+    high_digits = (
+        len(high_tuple.digits) + high_exponent - exponent if not high.is_zero() else 1
+    )
+    pnl_digits = (
+        len(pnl_tuple.digits) + pnl_exponent - exponent if not pnl.is_zero() else 1
+    )
+    precision = max(high_digits + 1, pnl_digits + 1, MIN_EMIN - exponent + 1)
+    if precision > MAX_PREC:
+        raise RiskError("exact drawdown exceeds Decimal representation limits")
+    try:
+        with localcontext() as context:
+            context.prec = precision
+            context.Emin = MIN_EMIN
+            context.Emax = MAX_EMAX
+            context.clamp = 0
+            context.clear_flags()
+            context.clear_traps()
+            for signal in (InvalidOperation, Overflow, Inexact, Rounded, Clamped):
+                context.traps[signal] = True
+            return high - pnl
+    except DecimalException as exc:
+        raise RiskError("cannot represent exact drawdown") from exc
 
 
 def _is_side(value: object) -> bool:
@@ -362,30 +430,44 @@ class RiskManager:
         return self.evaluate(request, context)
 
     def observe_pnl(self, net_pnl: DecimalLike, *, timestamp_ns: int) -> RiskDecision:
-        """Update continuous loss/drawdown state and activate the kill switch."""
+        """Apply exact inclusive thresholds, then commit continuous-risk state."""
 
         if timestamp_ns < 0:
             raise RiskError("timestamp_ns must be nonnegative")
-        pnl = _decimal(net_pnl)
-        self.high_watermark = max(self.high_watermark, pnl)
-        if pnl <= -self.config.max_loss:
-            return self.activate_kill_switch(
+        pnl = _finite_observation_value(net_pnl, "net_pnl")
+        high = _finite_observation_value(self.high_watermark, "high_watermark")
+        max_loss = _finite_observation_value(self.config.max_loss, "max_loss")
+        max_drawdown = _finite_observation_value(
+            self.config.max_drawdown, "max_drawdown"
+        )
+        if max_loss <= 0 or max_drawdown <= 0:
+            raise RiskError("risk loss and drawdown limits must be positive")
+        high = max(high, pnl)
+        loss_threshold = max_loss.copy_negate()
+        if pnl <= loss_threshold:
+            decision = self.activate_kill_switch(
                 timestamp_ns=timestamp_ns,
                 reason=RiskReason.MAX_LOSS,
                 detail="net P&L breached maximum loss",
                 observed_value=pnl,
-                limit_value=-self.config.max_loss,
+                limit_value=loss_threshold,
             )
-        drawdown = self.high_watermark - pnl
-        if drawdown >= self.config.max_drawdown:
-            return self.activate_kill_switch(
-                timestamp_ns=timestamp_ns,
-                reason=RiskReason.MAX_DRAWDOWN,
-                detail="net P&L breached maximum drawdown",
-                observed_value=drawdown,
-                limit_value=self.config.max_drawdown,
-            )
-        return RiskDecision(approved=True, detail="continuous P&L checks passed")
+        else:
+            drawdown = _exact_drawdown(high, pnl)
+            if drawdown >= max_drawdown:
+                decision = self.activate_kill_switch(
+                    timestamp_ns=timestamp_ns,
+                    reason=RiskReason.MAX_DRAWDOWN,
+                    detail="net P&L breached maximum drawdown",
+                    observed_value=drawdown,
+                    limit_value=max_drawdown,
+                )
+            else:
+                decision = RiskDecision(
+                    approved=True, detail="continuous P&L checks passed"
+                )
+        self.high_watermark = high
+        return decision
 
     def activate_kill_switch(
         self,
@@ -402,24 +484,26 @@ class RiskManager:
             raise RiskError("timestamp_ns must be nonnegative")
         if not isinstance(reason, RiskReason):
             raise RiskError("reason must be a RiskReason")
+        event = None
         if not self.kill_switch_active:
-            self.kill_switch_active = True
-            self.kill_reason = reason
-            self.events.append(
-                RiskEvent(
-                    timestamp_ns=timestamp_ns,
-                    reason=reason,
-                    detail=detail,
-                    observed_value=observed_value,
-                    limit_value=limit_value,
-                )
+            event = RiskEvent(
+                timestamp_ns=timestamp_ns,
+                reason=reason,
+                detail=detail,
+                observed_value=observed_value,
+                limit_value=limit_value,
             )
-        return RiskDecision(
+        decision = RiskDecision(
             approved=False,
-            reason=self.kill_reason,
+            reason=self.kill_reason if self.kill_switch_active else reason,
             detail=detail,
             cancel_open_orders=True,
         )
+        if event is not None:
+            self.events.append(event)
+            self.kill_switch_active = True
+            self.kill_reason = reason
+        return decision
 
     def stale_quote_ids(
         self, *, timestamp_ns: int, open_orders: Iterable[OpenOrderExposure]

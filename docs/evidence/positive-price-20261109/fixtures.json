@@ -1,0 +1,313 @@
+{
+  "phase": "Static purpose-built inputs fixed before any new strategy numerical evaluation",
+  "policies": [
+    "fixed_spread",
+    "inventory_aware",
+    "microprice"
+  ],
+  "post_only_modes": [
+    true,
+    false
+  ],
+  "default_strategy_source": "Pinnedmain StrategyConfig defaults except name and explicit percase overrides; finite params, empty observed volatility history.",
+  "pure_cases": {
+    "flat_low": {
+      "bid": 1,
+      "ask": 2,
+      "inventory": 0,
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    },
+    "positive_floor": {
+      "bid": 1,
+      "ask": 3,
+      "inventory": 0,
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    },
+    "ordinary_flat": {
+      "bid": 99,
+      "ask": 101,
+      "inventory": 0,
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    },
+    "low_long_half": {
+      "bid": 1,
+      "ask": 2,
+      "inventory": 50,
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    },
+    "low_short_half": {
+      "bid": 1,
+      "ask": 2,
+      "inventory": -50,
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    },
+    "low_long_cap": {
+      "bid": 1,
+      "ask": 2,
+      "inventory": 100,
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    },
+    "low_short_cap": {
+      "bid": 1,
+      "ask": 2,
+      "inventory": -100,
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    },
+    "nonpositive_ask": {
+      "bid": 1,
+      "ask": 2,
+      "inventory": 100,
+      "strategy_overrides": {
+        "inventory_penalty_ticks": 4.0
+      },
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    },
+    "minimum_half_spread": {
+      "bid": 1,
+      "ask": 2,
+      "inventory": 0,
+      "strategy_overrides": {
+        "base_half_spread_ticks": 0.5,
+        "minimum_half_spread_ticks": 0.5
+      },
+      "bid_quantity": 10,
+      "ask_quantity": 10,
+      "max_abs_inventory": 100,
+      "timestamp_ns": 0,
+      "sequence_number": 1
+    }
+  },
+  "managed_case": {
+    "initial_book": {
+      "bid": 1,
+      "ask": 3,
+      "bid_quantity": 10,
+      "ask_quantity": 10
+    },
+    "low_book": {
+      "bid": 1,
+      "ask": 2,
+      "bid_quantity": 10,
+      "ask_quantity": 10
+    },
+    "config_overrides": {
+      "minimum_quote_lifetime_ns": 1000,
+      "refresh_interval_ns": 1000,
+      "stale_after_ns": 2000
+    },
+    "post_only_modes": [
+      true,
+      false
+    ],
+    "max_abs_inventory": 100,
+    "initial_decision_ns": 0,
+    "accepted_exchange_ns": 1,
+    "accepted_notification_ns": 2,
+    "low_decision_ns": 3,
+    "repeat_decision_ns": 4,
+    "expected": "Publicinitialdecide sendsBID1/ASK3; acknowledgeboth andrecordsent. Atlowview onlyASK3 targetsurvives; onecancel oforiginalBID ignoringminlifetime, ASK3unchanged; repeateddecide nopendingduplicate. Existingreasonrisk_side_suppression retained, notrisk-manager/cancelcompletionproof."
+  },
+  "low_engine_tape": [
+    [
+      0,
+      0,
+      "RESET",
+      null,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      "SNAPSHOT",
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      2,
+      "SNAPSHOT",
+      -1,
+      3,
+      1
+    ],
+    [
+      0,
+      3,
+      "SNAPSHOT",
+      -1,
+      4,
+      1
+    ],
+    [
+      10,
+      4,
+      "ADD",
+      -1,
+      2,
+      1
+    ],
+    [
+      20,
+      5,
+      "ADD",
+      -1,
+      3,
+      1
+    ],
+    [
+      30,
+      6,
+      "TRADE",
+      -1,
+      2,
+      1
+    ],
+    [
+      40,
+      7,
+      "TRADE",
+      -1,
+      3,
+      2
+    ],
+    [
+      50,
+      8,
+      "ADD",
+      1,
+      1,
+      1
+    ]
+  ],
+  "low_engine_config_overrides": {
+    "instrument": {
+      "symbol": "SYNTH-PRICE",
+      "tick_size": "1",
+      "lot_size": 1,
+      "currency": "MODEL"
+    },
+    "data": {
+      "input_path": null,
+      "validation_mode": "strict",
+      "book_depth": 5,
+      "provenance": {
+        "source_type": "synthetic",
+        "provider": "lobmm hand-constructed positive-price witness",
+        "venue": "SIMULATED",
+        "symbol": "SYNTH-PRICE",
+        "dataset_id": "lobmm-positive-price-v1",
+        "session_start": null,
+        "session_end": null,
+        "checksum_sha256": null,
+        "license_notes": "Original locally constructed fictional mechanics tape; not historical or licensed market data."
+      }
+    },
+    "latency": {
+      "market_data_ns": 0,
+      "order_entry_ns": 0,
+      "cancellation_ns": 0,
+      "fill_report_ns": 0,
+      "market_data_jitter_ns": 0,
+      "order_entry_jitter_ns": 0,
+      "cancellation_jitter_ns": 0,
+      "fill_report_jitter_ns": 0
+    },
+    "exchange": {
+      "validation_mode": "strict",
+      "rest_unfilled_marketable_quantity": true,
+      "cancel_orders_on_reset": true
+    },
+    "queue_model": {
+      "cancellation_allocation": "back_of_queue",
+      "price_through_fills": true
+    },
+    "fees": {
+      "maker_fee_per_unit": "0",
+      "maker_rebate_per_unit": "0",
+      "taker_fee_per_unit": "0",
+      "proportional_fee_rate": "0"
+    },
+    "strategy": {
+      "strategy_id": "positive-price",
+      "order_size": 1,
+      "base_half_spread_ticks": 1.0,
+      "minimum_half_spread_ticks": 1.0,
+      "inventory_penalty_ticks": 0.0,
+      "imbalance_coefficient_ticks": 0.0,
+      "volatility_multiplier": 0.0,
+      "refresh_interval_ns": 1000,
+      "minimum_quote_lifetime_ns": 1000,
+      "stale_after_ns": 2000,
+      "post_only": true
+    },
+    "risk": {
+      "max_abs_inventory": 10,
+      "max_order_size": 10,
+      "max_total_open_quantity": 20,
+      "max_open_orders": 4,
+      "max_loss": "1000",
+      "max_drawdown": "1000",
+      "max_quote_age_ns": 1000,
+      "minimum_spread_ticks": 1,
+      "max_volatility_ticks": null,
+      "max_messages_per_second": null,
+      "prohibit_new_quotes_last_ns": 0
+    },
+    "backtest": {
+      "warmup_events": 0,
+      "timer_interval_ns": 100,
+      "session_end_policy": "mark",
+      "track_memory": false,
+      "mark_price": "midpoint"
+    },
+    "output": {
+      "write_plots": false
+    },
+    "random_seed": 7
+  },
+  "low_engine_config_base": "Pinnedmain AppConfig defaults with these recursive overrides and eachpolicyname; record complete resolvedconfig beforeexecution. No other overrides.",
+  "low_engine_expected": {
+    "main": "Strictinputvalidation succeeds; initialBID1/ASK3areaccepted, then at decisiontimestamp10 latestobservedBBO1/2 producesroundedBID0/ASK3 and DesiredQuote ValueError before cancel/dispatch. Retain puredelegatingobservations and exactexception type/message, not a completedrun.",
+    "candidate": "ValidfirstBID1/ASK3 accepted; at10 firstBIDtarget omitted and onecancelthroughcurrentmanager despite minlife; ASK3retainedwithoutreplacement until at40 one makerASK3fillquantity1. No BIDfill, terminalinventory-1; all desired/submittedpricespositive, no kill. FirstBID cancellation observed within this zero-delaytape only.",
+    "queue_oracle": "AtASK3 initialexternal1 thenown1 thenlaterexternal1 at20. TradeASK2at30 cannotreachASK3. ExactASK3trade2at40 consumes external1+own1, preserving one-ownfill budget. HistoricalASK3displayeddepth2 makestradevalidstrict. ASK4keepsbooktwosided.",
+    "microprice_limit": "Zeroadditional inventory/imbalance/volatilitycoefficients do not remove fairmicroprice. At30 ASK3depth2/BIDdepth1 cankeepmicropricebid0 whileFixedSpreadreenterspositivebid. No cross-policyaction-count/reentry-time equality gate; all actualactions retained."
+  },
+  "normal_wiring": {
+    "base_config": "configs/ci.yaml at pinnedmain",
+    "changes": "Only strategy.name chosen from threepolicies; plotsdisabled/track_memoryFalse alreadyCIdefaults. Seed7/event_count300 unchanged; all8table/config/event/nonclock legacyartifact comparisons WITHINpolicy main/candidate, notcrosspolicy ranking."
+  }
+}

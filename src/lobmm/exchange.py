@@ -31,6 +31,7 @@ from lobmm.orders import (
     OrderRegistry,
     UnknownOrder,
 )
+from lobmm.portfolio import calculate_fill_costs
 from lobmm.queue_model import QueueModel, QueueUpdate
 
 type OrderRejector = Callable[[NewOrderRequest, tuple[ExchangeOrder, ...]], str | None]
@@ -446,16 +447,14 @@ class Exchange:
         price_ticks: int,
         liquidity_role: LiquidityRole,
     ) -> tuple[Decimal, Decimal]:
-        notional = (
-            Decimal(price_ticks) * self.instrument_config.tick_size * Decimal(quantity)
+        costs = calculate_fill_costs(
+            self.fee_config,
+            role=liquidity_role,
+            quantity=quantity,
+            price_ticks=price_ticks,
+            tick_value=self.instrument_config.tick_size,
         )
-        proportional = notional * self.fee_config.proportional_fee_rate
-        if liquidity_role is LiquidityRole.MAKER:
-            fee = self.fee_config.maker_fee_per_unit * Decimal(quantity) + proportional
-            rebate = self.fee_config.maker_rebate_per_unit * Decimal(quantity)
-            return fee, rebate
-        fee = self.fee_config.taker_fee_per_unit * Decimal(quantity) + proportional
-        return fee, Decimal("0")
+        return costs.fee, costs.rebate
 
     def _refresh_queue_positions(
         self,

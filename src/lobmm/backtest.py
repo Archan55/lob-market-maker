@@ -674,6 +674,8 @@ def run_backtest(
     dataset_provenance = config.data.provenance.artifact()
     stream_hash = event_stream_sha256(selected)
     diagnostics: dict[str, Any] = {
+        "session_start_timestamp_ns": start_ns,
+        "session_end_timestamp_ns": end_ns,
         "events_processed": len(selected),
         "scheduler_events_processed": scheduler.processed_count,
         "wall_clock_seconds": wall_seconds,

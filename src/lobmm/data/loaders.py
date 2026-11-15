@@ -2,13 +2,18 @@
 
 from __future__ import annotations
 
+import re
 from collections.abc import Iterable
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 import polars as pl
 
 from lobmm.data.schema import (
+    _INTEGER_BOUNDS,
+    CANONICAL_SCHEMA,
     DataSchemaError,
+    _exact_integer,
     coerce_canonical_frame,
     events_to_frame,
     frame_to_events,
@@ -18,6 +23,47 @@ from lobmm.events import MarketEvent
 
 class DataLoadError(ValueError):
     """Raised when a market-data file cannot be read or written safely."""
+
+
+_DECIMAL_TOKEN = re.compile(
+    r"[+-]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?"
+)
+
+
+def _csv_integer_columns(frame: pl.DataFrame) -> pl.DataFrame:
+    """Parse original integer-field text without a floating-point intermediate."""
+
+    columns = []
+    for column, bounds in _INTEGER_BOUNDS.items():
+        if column not in frame.columns:
+            continue
+        series = frame[column]
+        target = CANONICAL_SCHEMA[column]
+        try:
+            # Ordinary integer tokens stay on the native strict-cast path.
+            parsed = series.cast(target, strict=True)
+        except pl.exceptions.PolarsError:
+            values: list[int | None] = []
+            for token in series:
+                if token is None:
+                    values.append(None)
+                    continue
+                if _DECIMAL_TOKEN.fullmatch(token) is None:
+                    raise DataSchemaError(
+                        f"{column}: invalid integer numeric text"
+                    ) from None
+                try:
+                    value = Decimal(token)
+                except InvalidOperation as exc:
+                    raise DataSchemaError(
+                        f"{column}: invalid integer numeric text"
+                    ) from exc
+                # Bounds precede int(), so compact huge exponents do not cause
+                # enormous integer allocation. Equality checks the exact text.
+                values.append(_exact_integer(value, field=column, bounds=bounds))
+            parsed = pl.Series(column, values, dtype=target)
+        columns.append(parsed)
+    return frame.with_columns(columns)
 
 
 def read_csv(
@@ -31,8 +77,10 @@ def read_csv(
     try:
         frame = pl.read_csv(
             input_path,
+            infer_schema=False,
             null_values=["", "null", "NULL", "None"],
         )
+        frame = _csv_integer_columns(frame)
         return coerce_canonical_frame(frame, allow_extra_columns=allow_extra_columns)
     except (OSError, pl.exceptions.PolarsError, DataSchemaError) as exc:
         raise DataLoadError(f"cannot load canonical CSV {input_path}: {exc}") from exc

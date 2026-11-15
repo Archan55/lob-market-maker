@@ -110,8 +110,10 @@ def test_near_limit_metric_uses_configured_fraction() -> None:
     half = build_metrics(**common, near_limit_fraction=0.5)
     high = build_metrics(**common, near_limit_fraction=0.8)
 
-    assert half["inventory"]["time_near_limits_fraction"] == 1.0
-    assert high["inventory"]["time_near_limits_fraction"] == 0.5
+    assert half["inventory"]["observations_near_limits_fraction"] == 1.0
+    assert high["inventory"]["observations_near_limits_fraction"] == 0.5
+    assert half["inventory"]["time_near_limits_fraction"] is None
+    assert high["inventory"]["time_near_limits_fraction"] is None
 
 
 def test_aggregate_by_excludes_missing_values() -> None:

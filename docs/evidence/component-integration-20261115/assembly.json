@@ -1,0 +1,206 @@
+{
+  "baseline_risk_sha256": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38",
+  "changed_production_paths": [
+    "src/lobmm/backtest.py",
+    "src/lobmm/case_study.py",
+    "src/lobmm/data/_adapter_utils.py",
+    "src/lobmm/data/loaders.py",
+    "src/lobmm/data/lobster.py",
+    "src/lobmm/data/schema.py",
+    "src/lobmm/exchange.py",
+    "src/lobmm/metrics.py",
+    "src/lobmm/portfolio.py",
+    "src/lobmm/report.py",
+    "src/lobmm/risk.py",
+    "src/lobmm/strategies/fixed_spread.py",
+    "src/lobmm/strategies/inventory_aware.py",
+    "src/lobmm/strategies/microprice.py",
+    "src/lobmm/types.py"
+  ],
+  "complete": true,
+  "copied_dependencies": [
+    {
+      "head": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+      "path": "tests/integration/test_exact_portfolio_backtest.py",
+      "sha256": "c146b47b6b7c68643d9b733cb90776995a5b35dfc5aadebc62125bdebcfd6b17"
+    },
+    {
+      "head": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+      "path": "tests/unit/test_portfolio_decimal_growth_independent.py",
+      "sha256": "84f49ec867b9f71c5882500654355adc0d64bfd6d32590c7c3299e5b84567430"
+    },
+    {
+      "head": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+      "path": "tests/unit/test_portfolio_exact_independent.py",
+      "sha256": "fea37b29e4e6510bc363eb023cf1dd16507b31f5e4093c631e6cc1d9fd44bbcb"
+    },
+    {
+      "head": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+      "path": "tests/unit/test_portfolio_negative_tolerance_independent.py",
+      "sha256": "70740c677c248260541391ae80509a4b251dfb7c82dd7f7e876f8f051be109c8"
+    },
+    {
+      "head": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+      "path": "tests/unit/test_portfolio_presentation_guard_independent.py",
+      "sha256": "809cb6917a3ac5a1bc4b2d8d60a83dfabe75430e7ff2e9e3388bdb127b0487a6"
+    },
+    {
+      "head": "f5a86c5d18dc9d63634fdea95bbb60db3c5f8eec",
+      "path": "tests/unit/test_risk_exact_thresholds_independent.py",
+      "sha256": "1467bd43ad1e9822d26c89b7a52aea5280878cf6e40f19b74e123109ac8306bc"
+    },
+    {
+      "head": "22ef318adb1292e6a4f76535a73bae854ed5cca8",
+      "path": "tests/unit/test_inventory_duration_independent.py",
+      "sha256": "a85759c5139734098259502e554c342acc5ebe7038df66bbd5e5e18f943fc252"
+    },
+    {
+      "head": "22ef318adb1292e6a4f76535a73bae854ed5cca8",
+      "path": "tests/unit/test_metrics.py",
+      "sha256": "c44c39c3709f9a4587b5ade6c82dd6580d5b9e603826961e54431f22ff1dba4d"
+    },
+    {
+      "head": "c4f3611b650faca290d0946b98620604c5d9cfd6",
+      "path": "tests/unit/test_same_time_report_order_independent.py",
+      "sha256": "adab87cdf49969106ca8d745615000feb7779c001211014238a92aee29606915"
+    },
+    {
+      "head": "79aec058363a04a8ed6b6f6bdbe200d6e9679d13",
+      "path": "tests/unit/test_markout_aggregation_independent.py",
+      "sha256": "f25de34f65497fef3df68306f81206737e520421b43804faa268a6a02b9eca29"
+    },
+    {
+      "head": "79aec058363a04a8ed6b6f6bdbe200d6e9679d13",
+      "path": "tests/unit/test_markout_quantity_precision_independent.py",
+      "sha256": "c695fa3fa8c1e22d045c02b21e2b32aa3d7cba371535a9544f86884f0c50625a"
+    },
+    {
+      "head": "79aec058363a04a8ed6b6f6bdbe200d6e9679d13",
+      "path": "docs/evidence/markout-aggregation-20261108/fixtures.json",
+      "sha256": "06999812efaab9357948bf3dd1de463f3dc2166b6d4786115f9d578a9446c5a5"
+    },
+    {
+      "head": "1884d4c2e778d00797fbd97fed5b09ba113ed55e",
+      "path": "tests/unit/test_positive_price_quotes_independent.py",
+      "sha256": "40cc751b121c0c23668f6cfd2c42dbf2962a8e210e21634e4734cb8f8614d4c1"
+    },
+    {
+      "head": "1884d4c2e778d00797fbd97fed5b09ba113ed55e",
+      "path": "docs/evidence/positive-price-20261109/fixtures.json",
+      "sha256": "96c30af69e182c3218c9f892ac5276f773b3a10393adf0782441869470cf727c"
+    },
+    {
+      "head": "253abee735c02d7805e2a4377c12626742108d84",
+      "path": "tests/unit/test_exact_ingress_independent.py",
+      "sha256": "ca2d76e7336206af5dff46e935621c7ede5211757baee47dce25ebbcd168a8e7"
+    },
+    {
+      "head": "253abee735c02d7805e2a4377c12626742108d84",
+      "path": "docs/evidence/exact-ingress-20261111/fixtures.json",
+      "sha256": "dbc8f57942b24a94a9fd67816d0e9d350c12cdfe35f40e35b2e5d1c545962144"
+    },
+    {
+      "head": "253abee735c02d7805e2a4377c12626742108d84",
+      "path": "docs/evidence/exact-ingress-20261111/contract.json",
+      "sha256": "f28639e107b711ea9c289a22701a1e03275c729049d79b2afafe1f525276d71b"
+    },
+    {
+      "head": "a105e73cf608c1ff24cdead3dd3c50ee18d8916e",
+      "path": "tests/unit/test_lobster_fidelity_independent.py",
+      "sha256": "a29f7842ff5565f7a9f80b46544333208684a251fc192cbd19c756dad6e76906"
+    },
+    {
+      "head": "a105e73cf608c1ff24cdead3dd3c50ee18d8916e",
+      "path": "docs/evidence/lobster-fidelity-20261112/fixtures.json",
+      "sha256": "1987016a419c065535b2ac5590305e1966328c39e495feda8eb487dbf2dbf670"
+    },
+    {
+      "head": "a105e73cf608c1ff24cdead3dd3c50ee18d8916e",
+      "path": "docs/evidence/lobster-fidelity-20261112/contract.json",
+      "sha256": "513f9b2be85b582c020e575b32dded6df123f10d0aaeee4e51d7aceed755de8b"
+    },
+    {
+      "head": "38a17f09746903938fa76b1d42268c8a75c7d3f6",
+      "path": "tests/unit/test_canonical_fidelity_independent.py",
+      "sha256": "9c07f5cce83d632ac5d648a31ef38d5a2fba5b107f032b3d5032ecb5ac130855"
+    },
+    {
+      "head": "38a17f09746903938fa76b1d42268c8a75c7d3f6",
+      "path": "docs/evidence/canonical-fidelity-20261113/fixtures.json",
+      "sha256": "bbd59beaae6feb0cac0d0cf965ace94b055b113b984d8e505a008f00bbe9a3e7"
+    },
+    {
+      "head": "38a17f09746903938fa76b1d42268c8a75c7d3f6",
+      "path": "docs/evidence/canonical-fidelity-20261113/contract.json",
+      "sha256": "0deb4423843996239e62f09342e88bce9a09176700ab9e0056aff192c5ad1730"
+    }
+  ],
+  "design_commit": "cc42192",
+  "main": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "patches": [
+    {
+      "applied": true,
+      "base": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "head": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+      "patch_sha256": "1f7adeef31852585ad53643ec155dfe3d3f1e4be535fea49b7f9e5311b112b8c",
+      "pr": 3
+    },
+    {
+      "applied": true,
+      "base": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "head": "f5a86c5d18dc9d63634fdea95bbb60db3c5f8eec",
+      "patch_sha256": "a4c142bd7110e1e803eb6546900a0ee96f1a148c7057eb76aea93a8a7d4f6197",
+      "pr": 4
+    },
+    {
+      "applied": true,
+      "base": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "head": "22ef318adb1292e6a4f76535a73bae854ed5cca8",
+      "patch_sha256": "e0d826d9cc3d4bcdb6f68c0ed9a66f51e1e69ae0d6e1b7554ae9dc36f3c68c5b",
+      "pr": 5
+    },
+    {
+      "applied": true,
+      "base": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "head": "c4f3611b650faca290d0946b98620604c5d9cfd6",
+      "patch_sha256": "492b86d217d6aa0c51e55ed6c87fc4e4c9e3800e93fa3817abb411bac2746e18",
+      "pr": 6
+    },
+    {
+      "applied": true,
+      "base": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "head": "79aec058363a04a8ed6b6f6bdbe200d6e9679d13",
+      "patch_sha256": "402674657c36f2e95bf1bb40d38675298bb59673bfe83fa34ba4915ecd7054b6",
+      "pr": 7
+    },
+    {
+      "applied": true,
+      "base": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "head": "1884d4c2e778d00797fbd97fed5b09ba113ed55e",
+      "patch_sha256": "d97cf3d99e5d578ecac0429283c0e629379fe6cf816362c33772cdfef3c81bb6",
+      "pr": 8
+    },
+    {
+      "applied": true,
+      "base": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "head": "253abee735c02d7805e2a4377c12626742108d84",
+      "patch_sha256": "4dd84c4753e78cbda0e8b1b403db2fc67e639b4f89ebbc38dde3b6300a48bdb3",
+      "pr": 9
+    },
+    {
+      "applied": true,
+      "base": "253abee735c02d7805e2a4377c12626742108d84",
+      "head": "a105e73cf608c1ff24cdead3dd3c50ee18d8916e",
+      "patch_sha256": "a7ea10aa838d711abfd4be724f011e99d9a24836f26766675504d95175fc107a",
+      "pr": 10
+    },
+    {
+      "applied": true,
+      "base": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+      "head": "38a17f09746903938fa76b1d42268c8a75c7d3f6",
+      "patch_sha256": "cd80ec1c75a95d9b6c46a7a83cd45ffa0a56e3c344cc729a839c8f484173eef4",
+      "pr": 11
+    }
+  ],
+  "source_file_count_per_role": 38
+}
