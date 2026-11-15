@@ -118,6 +118,13 @@ Require a post-fill allow-new comparison at 20 (strictly before 40): the common
 session cutoff at 40 is not evidence of risk-driven suppression. This clarification
 comes from independent static design review before outcomes.
 
+Observation completeness, also fixed by static review before outcomes: require
+risk-call timestamps `[0,0,10,10,20,20,20,30,30,40,40]` in order (market marks,
+timer snapshots and the fill at 20), linkage to the original snapshot objects,
+and six ordered mark/fill projections. Retain an atomic trace prefix on each
+observer entry so a killed worker cannot erase all earlier observations; an
+unfinished entry is labeled in flight rather than claimed as completed.
+
 Supporting checks on these same artifacts: preserve integer event order through
 canonical frame/Parquet roundtrip; derive elapsed inventory exposure over [0,40)
 and per-horizon quantity coverage independently. One unit is held over [20,40),
