@@ -114,6 +114,10 @@ protection from already accepted orders. C0 mismatches must be recorded, not
 silently filtered. If the primary predicted differential is absent, report that
 negative finding rather than substitute a witness.
 
+Require a post-fill allow-new comparison at20 (strictly before40): the common
+session cutoff at40 is not evidence of risk-driven suppression. This clarification
+comes from independent static design review before outcomes.
+
 Supporting checks on these same artifacts: preserve integer event order through
 canonical frame/Parquet roundtrip; derive elapsed inventory exposure over [0,40)
 and per-horizon quantity coverage independently. One unit is held over [20,40),
