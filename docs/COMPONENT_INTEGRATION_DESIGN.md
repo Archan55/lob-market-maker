@@ -95,8 +95,8 @@ because its subtraction rounds the exact gap up to1; both sources must kill the
 inclusive-loss case and keep the ordinary case enabled. This is a prediction,
 not a result. No fee, tape, context, source or criterion selection after outcomes.
 
-Each primary worker has a120second wall timeout and the six-attempt stage has
-a900second cap. Each output destination must not exist; do not overwrite or
+Each primary worker has a 120 second wall timeout and the six-attempt stage has
+a 900 second cap. Each output destination must not exist; do not overwrite or
 automatically retry any failed worker. Infrastructure failures stop this stage.
 
 ## Evaluation and stopping
@@ -107,6 +107,8 @@ must agree at every call. Preserve caller context for each C1 risk call (not a
 whole-engine context claim). Check that the loss kill requests cancellation of
 the already accepted remaining ASK, reaches the exchange after the fixed5ns
 channel delay, and suppresses new quotes at later engine decisions. Do not demand
+exactly one total cancel: the continuous-risk path and strategy suppression may
+both send the same ASK cancel; retain both and their terminal responses. Do not demand
 no post-kill fills, improved cancellation liveness, rollback across components or
 protection from already accepted orders. C0 mismatches must be recorded, not
 silently filtered. If the primary predicted differential is absent, report that
