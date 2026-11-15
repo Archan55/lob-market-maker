@@ -7,8 +7,9 @@ mechanics are exposed; these synthetic cases are not market data or holdouts.
 ## Question and decision
 
 Can the independent PR3–11 fixes form a compatible research-system candidate,
-and does the actual engine hand exact portfolio P&L to the exact risk checks
-before serialization, with correct boundary decisions and downstream actions?
+and does the actual engine hand the original exact portfolio P&L to the exact
+risk checks despite creating float artifact rows first, with correct boundary
+decisions and downstream actions?
 This is a bounded integration result, not a new component defect, execution
 calibration, performance measurement, economic advantage or merge recommendation.
 
@@ -94,6 +95,10 @@ because its subtraction rounds the exact gap up to1; both sources must kill the
 inclusive-loss case and keep the ordinary case enabled. This is a prediction,
 not a result. No fee, tape, context, source or criterion selection after outcomes.
 
+Each primary worker has a120second wall timeout and the six-attempt stage has
+a900second cap. Each output destination must not exist; do not overwrite or
+automatically retry any failed worker. Infrastructure failures stop this stage.
+
 ## Evaluation and stopping
 
 Require exact fill identity and every in-memory net-P&L handoff to match the
@@ -131,3 +136,10 @@ original code/synthetic evidence in a new draft PR. No merge, deploy, trade,
 paid service, data acquisition, private/licensed E1 material, security/access
 change, denied retry or desktop execution. Performance/output growth and passive
 fill calibration remain open limitations even if composition passes.
+
+Preexecution clarification: the independent design review confirmed the fixed
+tape/fee/source comparison and requested explicit wall caps/no-overwrite above.
+Static inspection also clarified append_snapshot serializes a float row before
+observe_pnl receives the original immutable Decimal; exact ingress capture,
+rather than chronological risk-before-serialization, is the contract. Neither
+clarification changes inputs, source candidate, risk criteria or sample budget.
