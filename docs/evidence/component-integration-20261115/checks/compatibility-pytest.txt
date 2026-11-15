@@ -1,0 +1,93 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.2.0, pluggy-1.7.0
+rootdir: /workspace/lob-market-maker-integration
+configfile: pyproject.toml
+plugins: cov-7.1.0, hypothesis-6.170.14
+collected 591 items
+
+tests/integration/test_backtest.py ..                                    [  0%]
+tests/integration/test_backtest_edges.py ...............                 [  2%]
+tests/integration/test_cli_ingestion.py ..                               [  3%]
+tests/integration/test_exact_portfolio_backtest.py ....                  [  3%]
+tests/integration/test_golden_path.py .                                  [  4%]
+tests/integration/test_no_lookahead.py ...                               [  4%]
+tests/property/test_book_properties.py ...                               [  5%]
+tests/unit/test_additional_coverage.py ......................            [  8%]
+tests/unit/test_benchmark.py .....                                       [  9%]
+tests/unit/test_book.py ............                                     [ 11%]
+tests/unit/test_canonical_fidelity_independent.py ..                     [ 12%]
+tests/unit/test_case_study.py ......                                     [ 13%]
+tests/unit/test_cli.py ..                                                [ 13%]
+tests/unit/test_data_adapters.py ............                            [ 15%]
+tests/unit/test_dataset_manifest.py ...                                  [ 15%]
+tests/unit/test_events_types_config.py .........................         [ 20%]
+tests/unit/test_exact_ingress_independent.py ........                    [ 21%]
+tests/unit/test_exchange.py ......                                       [ 22%]
+tests/unit/test_experiments.py ..........                                [ 24%]
+tests/unit/test_inventory_duration_independent.py ...................... [ 27%]
+..................                                                       [ 30%]
+tests/unit/test_lobster_fidelity_independent.py ....                     [ 31%]
+tests/unit/test_markout_aggregation_independent.py ..................... [ 35%]
+......................                                                   [ 38%]
+tests/unit/test_markout_quantity_precision_independent.py .              [ 39%]
+tests/unit/test_metrics.py .....                                         [ 39%]
+tests/unit/test_orders.py ....                                           [ 40%]
+tests/unit/test_portfolio.py ................................            [ 46%]
+tests/unit/test_portfolio_decimal_growth_independent.py ................ [ 48%]
+                                                                         [ 48%]
+tests/unit/test_portfolio_exact_independent.py ......................... [ 52%]
+........                                                                 [ 54%]
+tests/unit/test_portfolio_negative_tolerance_independent.py ....         [ 54%]
+tests/unit/test_portfolio_presentation_guard_independent.py ..           [ 55%]
+tests/unit/test_positive_price_quotes_independent.py ................... [ 58%]
+.............................................                            [ 66%]
+tests/unit/test_queue_model.py .......                                   [ 67%]
+tests/unit/test_quote_rejection_backoff.py ....                          [ 68%]
+tests/unit/test_report.py .........                                      [ 69%]
+tests/unit/test_risk.py ..............................                   [ 74%]
+tests/unit/test_risk_exact_thresholds_independent.py ................... [ 77%]
+........................................................................ [ 90%]
+......................                                                   [ 93%]
+tests/unit/test_same_time_report_order_independent.py .......            [ 94%]
+tests/unit/test_scheduler.py .....                                       [ 95%]
+tests/unit/test_strategies.py ......                                     [ 96%]
+tests/unit/test_strategy_runtime.py ...                                  [ 97%]
+tests/unit/test_synthetic.py ......                                      [ 98%]
+tests/unit/test_validation.py ..........                                 [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.14-final-0 _______________
+
+Name                               Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------------------
+src/lobmm/backtest.py                338     17    124     11    94%   127, 155, 256-258, 286, 357-366, 482, 528, 536-537, 544, 599-603, 621->634, 636
+src/lobmm/benchmark.py               152      1     34      3    98%   229->236, 264, 278->284
+src/lobmm/book.py                    227      3     76      3    98%   83, 96, 265
+src/lobmm/case_study.py              208     20     84     17    87%   85, 92, 103, 125, 134, 236-237, 241, 249, 257, 266, 283, 288, 295, 298, 392, 428, 462->470, 498, 518-519
+src/lobmm/channels.py                 78     12     18      7    80%   44, 46, 53, 86, 97, 101, 110, 112, 118, 153, 167, 181
+src/lobmm/cli.py                     174     25     24      8    83%   116, 126, 145-146, 194, 199, 225-226, 283-284, 319-323, 339-340, 380-381, 393-394, 432-433, 613->624, 625->633, 650-651
+src/lobmm/config.py                  221      2     42      2    98%   76, 99
+src/lobmm/data/_adapter_utils.py      78     14     26      8    79%   40-41, 55, 58-59, 63, 81, 86, 120, 137, 151-152, 154, 187
+src/lobmm/data/loaders.py             85      6     16      3    91%   39, 49-50, 52, 57-58
+src/lobmm/data/lobster.py            265     26     94     20    87%   71, 85-86, 94, 112, 153, 177->182, 194-196, 228, 233, 239, 249, 276, 331, 335, 375, 394->399, 414, 433-434, 452-453, 464, 623, 628-629
+src/lobmm/data/manifest.py            52      7     18      7    80%   33, 58, 60, 64, 66, 68, 119
+src/lobmm/data/schema.py              89      2     32      2    97%   77, 82
+src/lobmm/data/tardis.py             258     19     90     20    89%   124, 128, 154, 224, 234, 274, 289, 346, 364, 388, 426, 447, 462, 478, 542, 546->538, 561, 563, 575, 586
+src/lobmm/exchange.py                172     20     66     18    84%   107, 112, 129, 149, 175, 180, 192, 219-220, 264, 268, 322, 369, 371, 375, 377, 394, 398, 402, 429
+src/lobmm/experiments.py             183     13     50     12    89%   58, 64, 66, 70, 134, 181, 183, 211, 213, 227, 418->426, 500, 522-523
+src/lobmm/metrics.py                 240      4     92      4    98%   200, 205, 234, 347
+src/lobmm/orders.py                  260     31     76     30    82%   47, 49, 51, 55, 57, 59, 64, 82, 84, 111, 144, 146, 148, 152, 154, 156, 157->159, 175, 180, 203, 205, 207, 209, 211, 303, 305, 335-336, 365, 396, 398, 402
+src/lobmm/portfolio.py               345      8    126      5    97%   251-252, 535, 584, 596, 605, 608, 657
+src/lobmm/queue_model.py             302     23    122     27    88%   138, 140, 142, 144, 178, 193->184, 222, 239, 255, 262, 264, 293, 299, 314, 332->342, 353, 356, 357->359, 381, 395->400, 408, 433, 454, 543, 558, 568, 580
+src/lobmm/report.py                  520     49    178     28    88%   108-113, 120-125, 147, 150-151, 162-163, 165, 167, 221, 223, 228, 230, 246-256, 279->281, 391, 395->380, 519->533, 526, 530->520, 591->586, 611, 626, 659, 663->661, 771, 788, 838-839, 931, 954-955, 983, 994, 998, 1008
+src/lobmm/risk.py                    334      4    140      3    99%   68, 78, 90-91, 216->227
+src/lobmm/scheduler.py               120     31     46     10    67%   39, 75, 87, 93-97, 104, 107, 125, 127, 144-152, 155, 184-188, 196, 201-203, 209, 212, 234, 236, 241
+src/lobmm/strategies/base.py         323     25    136     22    89%   179, 195, 198, 201, 210, 212, 214, 228, 230, 234, 237, 239, 253, 255, 257, 426, 457, 462-468, 476, 516, 534->exit, 548
+src/lobmm/synthetic.py               221     11     66      8    93%   250, 252, 274, 282, 346-347, 361, 363-364, 383-384
+src/lobmm/types.py                    68      5     30      5    90%   18, 49, 76, 88, 92
+------------------------------------------------------------------------------
+TOTAL                               5690    378   1870    283    91%
+
+12 files skipped due to complete coverage.
+Required test coverage of 90.0% reached. Total coverage: 90.86%
+============================= 591 passed in 33.70s =============================

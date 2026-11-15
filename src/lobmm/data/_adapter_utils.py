@@ -9,7 +9,7 @@ import polars as pl
 
 from lobmm.enums import EventType, Side
 from lobmm.events import MarketEvent
-from lobmm.types import price_to_ticks
+from lobmm.types import _decimal_components, _exact_scaled_integer, price_to_ticks
 
 type TableSource = pl.DataFrame | str | Path
 
@@ -105,14 +105,17 @@ def scaled_quantity(
         raise MarketDataAdapterError(
             f"{field}={parsed} must be {qualifier} at row {row_index}"
         )
-    scaled = parsed * multiplier
-    integral = scaled.to_integral_value()
-    if scaled != integral:
+    # Public adapters have already validated the finite-positive multiplier.
+    unit_coefficient, unit_exponent = _decimal_components(multiplier)
+    coefficient, exponent = _decimal_components(parsed)
+    result = _exact_scaled_integer(
+        coefficient * unit_coefficient, 1, exponent + unit_exponent
+    )
+    if result is None:
         raise MarketDataAdapterError(
             f"{field}={parsed} cannot be represented exactly with "
             f"quantity_multiplier={multiplier} at row {row_index}"
         )
-    result = int(integral)
     if result == 0 and parsed > 0:
         raise MarketDataAdapterError(
             f"{field}={parsed} rounds to zero after scaling at row {row_index}"

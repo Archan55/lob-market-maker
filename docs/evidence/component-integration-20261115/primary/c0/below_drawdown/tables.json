@@ -1,0 +1,1103 @@
+{
+  "orders": [
+    {
+      "transition_id": "T000000000001",
+      "order_id": "O000000000001",
+      "previous_status": null,
+      "new_status": "pending_arrival",
+      "timestamp_ns": 0,
+      "remaining_quantity": 1,
+      "reason": "created",
+      "client_order_id": "market-maker-000000000001",
+      "strategy_id": "market-maker",
+      "side": 1,
+      "price_ticks": 100,
+      "original_quantity": 1,
+      "cumulative_filled_quantity": 1,
+      "creation_timestamp_ns": 0,
+      "send_timestamp_ns": 0,
+      "exchange_arrival_timestamp_ns": 0,
+      "average_fill_price_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "queue_ahead_estimate": 0,
+      "external_behind_estimate": 1
+    },
+    {
+      "transition_id": "T000000000002",
+      "order_id": "O000000000001",
+      "previous_status": "pending_arrival",
+      "new_status": "live",
+      "timestamp_ns": 0,
+      "remaining_quantity": 1,
+      "reason": "accepted",
+      "client_order_id": "market-maker-000000000001",
+      "strategy_id": "market-maker",
+      "side": 1,
+      "price_ticks": 100,
+      "original_quantity": 1,
+      "cumulative_filled_quantity": 1,
+      "creation_timestamp_ns": 0,
+      "send_timestamp_ns": 0,
+      "exchange_arrival_timestamp_ns": 0,
+      "average_fill_price_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "queue_ahead_estimate": 0,
+      "external_behind_estimate": 1
+    },
+    {
+      "transition_id": "T000000000003",
+      "order_id": "O000000000002",
+      "previous_status": null,
+      "new_status": "pending_arrival",
+      "timestamp_ns": 0,
+      "remaining_quantity": 1,
+      "reason": "created",
+      "client_order_id": "market-maker-000000000002",
+      "strategy_id": "market-maker",
+      "side": -1,
+      "price_ticks": 102,
+      "original_quantity": 1,
+      "cumulative_filled_quantity": 0,
+      "creation_timestamp_ns": 0,
+      "send_timestamp_ns": 0,
+      "exchange_arrival_timestamp_ns": 0,
+      "average_fill_price_ticks": null,
+      "queue_ahead_estimate": 0,
+      "external_behind_estimate": 0
+    },
+    {
+      "transition_id": "T000000000004",
+      "order_id": "O000000000002",
+      "previous_status": "pending_arrival",
+      "new_status": "live",
+      "timestamp_ns": 0,
+      "remaining_quantity": 1,
+      "reason": "accepted",
+      "client_order_id": "market-maker-000000000002",
+      "strategy_id": "market-maker",
+      "side": -1,
+      "price_ticks": 102,
+      "original_quantity": 1,
+      "cumulative_filled_quantity": 0,
+      "creation_timestamp_ns": 0,
+      "send_timestamp_ns": 0,
+      "exchange_arrival_timestamp_ns": 0,
+      "average_fill_price_ticks": null,
+      "queue_ahead_estimate": 0,
+      "external_behind_estimate": 0
+    },
+    {
+      "transition_id": "T000000000005",
+      "order_id": "O000000000001",
+      "previous_status": "live",
+      "new_status": "filled",
+      "timestamp_ns": 20,
+      "remaining_quantity": 0,
+      "reason": "fill",
+      "client_order_id": "market-maker-000000000001",
+      "strategy_id": "market-maker",
+      "side": 1,
+      "price_ticks": 100,
+      "original_quantity": 1,
+      "cumulative_filled_quantity": 1,
+      "creation_timestamp_ns": 0,
+      "send_timestamp_ns": 0,
+      "exchange_arrival_timestamp_ns": 0,
+      "average_fill_price_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "queue_ahead_estimate": 0,
+      "external_behind_estimate": 1
+    },
+    {
+      "transition_id": "T000000000006",
+      "order_id": "O000000000002",
+      "previous_status": "live",
+      "new_status": "cancelled",
+      "timestamp_ns": 25,
+      "remaining_quantity": 1,
+      "reason": "cancel_arrived",
+      "client_order_id": "market-maker-000000000002",
+      "strategy_id": "market-maker",
+      "side": -1,
+      "price_ticks": 102,
+      "original_quantity": 1,
+      "cumulative_filled_quantity": 0,
+      "creation_timestamp_ns": 0,
+      "send_timestamp_ns": 0,
+      "exchange_arrival_timestamp_ns": 0,
+      "average_fill_price_ticks": null,
+      "queue_ahead_estimate": 0,
+      "external_behind_estimate": 0
+    }
+  ],
+  "fills": [
+    {
+      "fill_id": "F000000000001",
+      "order_id": "O000000000001",
+      "client_order_id": "market-maker-000000000001",
+      "strategy_id": "market-maker",
+      "side": 1,
+      "quantity": 1,
+      "price_ticks": 100,
+      "liquidity_role": "maker",
+      "exchange_fill_timestamp_ns": 20,
+      "fee": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "rebate": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "decision_timestamp_ns": 0,
+      "send_timestamp_ns": 0,
+      "exchange_arrival_timestamp_ns": 0,
+      "strategy_notification_timestamp_ns": 20,
+      "queue_ahead_estimate": 0
+    }
+  ],
+  "inventory": [
+    {
+      "timestamp_ns": 0,
+      "inventory": 0,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 10,
+      "inventory": 0,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 20,
+      "inventory": 1,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 20,
+      "inventory": 1,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 30,
+      "inventory": 1,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 40,
+      "inventory": 1,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      }
+    }
+  ],
+  "pnl": [
+    {
+      "timestamp_ns": 0,
+      "currency": "USD",
+      "tick_value": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "mark_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "inventory": 0,
+      "average_cost_ticks": null,
+      "trade_cash_ticks": 0,
+      "trade_cash": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "cash": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "realized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "realized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "fees": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "rebates": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "net_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "turnover_ticks": 0,
+      "turnover": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "buy_volume": 0,
+      "sell_volume": 0,
+      "fill_count": 0,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 10,
+      "currency": "USD",
+      "tick_value": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "mark_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9200000000000p+6",
+        "bits": "4059200000000000"
+      },
+      "inventory": 0,
+      "average_cost_ticks": null,
+      "trade_cash_ticks": 0,
+      "trade_cash": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "cash": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "realized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "realized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "fees": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "rebates": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "net_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "turnover_ticks": 0,
+      "turnover": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "buy_volume": 0,
+      "sell_volume": 0,
+      "fill_count": 0,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 20,
+      "currency": "USD",
+      "tick_value": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "mark_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "inventory": 1,
+      "average_cost_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "trade_cash_ticks": -100,
+      "trade_cash": {
+        "type": "builtins.float",
+        "hex": "-0x1.9000000000000p+6",
+        "bits": "c059000000000000"
+      },
+      "cash": {
+        "type": "builtins.float",
+        "hex": "-0x1.9400000000000p+6",
+        "bits": "c059400000000000"
+      },
+      "realized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "realized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "fees": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "rebates": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "net_pnl": {
+        "type": "builtins.float",
+        "hex": "-0x1.0000000000000p+0",
+        "bits": "bff0000000000000"
+      },
+      "turnover_ticks": 100,
+      "turnover": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "buy_volume": 1,
+      "sell_volume": 0,
+      "fill_count": 1,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 20,
+      "currency": "USD",
+      "tick_value": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "mark_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "inventory": 1,
+      "average_cost_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "trade_cash_ticks": -100,
+      "trade_cash": {
+        "type": "builtins.float",
+        "hex": "-0x1.9000000000000p+6",
+        "bits": "c059000000000000"
+      },
+      "cash": {
+        "type": "builtins.float",
+        "hex": "-0x1.9400000000000p+6",
+        "bits": "c059400000000000"
+      },
+      "realized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "realized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "fees": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "rebates": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "net_pnl": {
+        "type": "builtins.float",
+        "hex": "-0x1.0000000000000p+0",
+        "bits": "bff0000000000000"
+      },
+      "turnover_ticks": 100,
+      "turnover": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "buy_volume": 1,
+      "sell_volume": 0,
+      "fill_count": 1,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 30,
+      "currency": "USD",
+      "tick_value": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "mark_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "inventory": 1,
+      "average_cost_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "trade_cash_ticks": -100,
+      "trade_cash": {
+        "type": "builtins.float",
+        "hex": "-0x1.9000000000000p+6",
+        "bits": "c059000000000000"
+      },
+      "cash": {
+        "type": "builtins.float",
+        "hex": "-0x1.9400000000000p+6",
+        "bits": "c059400000000000"
+      },
+      "realized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "realized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "fees": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "rebates": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "net_pnl": {
+        "type": "builtins.float",
+        "hex": "-0x1.0000000000000p+0",
+        "bits": "bff0000000000000"
+      },
+      "turnover_ticks": 100,
+      "turnover": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "buy_volume": 1,
+      "sell_volume": 0,
+      "fill_count": 1,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      }
+    },
+    {
+      "timestamp_ns": 40,
+      "currency": "USD",
+      "tick_value": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "mark_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "inventory": 1,
+      "average_cost_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "trade_cash_ticks": -100,
+      "trade_cash": {
+        "type": "builtins.float",
+        "hex": "-0x1.9000000000000p+6",
+        "bits": "c059000000000000"
+      },
+      "cash": {
+        "type": "builtins.float",
+        "hex": "-0x1.9400000000000p+6",
+        "bits": "c059400000000000"
+      },
+      "realized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "realized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "unrealized_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "gross_pnl": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "fees": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "rebates": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "net_pnl": {
+        "type": "builtins.float",
+        "hex": "-0x1.0000000000000p+0",
+        "bits": "bff0000000000000"
+      },
+      "turnover_ticks": 100,
+      "turnover": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "buy_volume": 1,
+      "sell_volume": 0,
+      "fill_count": 1,
+      "current_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "peak_gross_exposure": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      }
+    }
+  ],
+  "quotes": [
+    {
+      "timestamp_ns": 0,
+      "observed_sequence": 1,
+      "side": 1,
+      "action": "submit",
+      "client_order_id": "market-maker-000000000001",
+      "order_id": null,
+      "price_ticks": 100,
+      "quantity": 1,
+      "reason": "desired_quote"
+    },
+    {
+      "timestamp_ns": 0,
+      "observed_sequence": 1,
+      "side": -1,
+      "action": "submit",
+      "client_order_id": "market-maker-000000000002",
+      "order_id": null,
+      "price_ticks": 102,
+      "quantity": 1,
+      "reason": "desired_quote"
+    },
+    {
+      "timestamp_ns": 20,
+      "observed_sequence": 3,
+      "side": -1,
+      "action": "cancel",
+      "client_order_id": "market-maker-000000000002",
+      "order_id": "O000000000002",
+      "price_ticks": 102,
+      "quantity": 1,
+      "reason": "quotes_suppressed"
+    }
+  ],
+  "risk_events": [
+    {
+      "timestamp_ns": 20,
+      "reason": "max_drawdown",
+      "detail": "net P&L breached maximum drawdown",
+      "order_id": null,
+      "observed_value": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      },
+      "limit_value": {
+        "type": "builtins.float",
+        "hex": "0x1.0000000000000p+0",
+        "bits": "3ff0000000000000"
+      }
+    }
+  ],
+  "market": [
+    {
+      "timestamp_ns": 0,
+      "sequence_number": 0,
+      "event_type": "SNAPSHOT",
+      "side": 1,
+      "price_ticks": 99,
+      "quantity": 1,
+      "best_bid_ticks": 99,
+      "best_ask_ticks": null,
+      "best_bid_quantity": 1,
+      "best_ask_quantity": 0,
+      "midpoint_ticks": null,
+      "microprice_ticks": null,
+      "imbalance": null,
+      "spread_ticks": null,
+      "spread_regime": "tight",
+      "liquidity_regime": "thin",
+      "volatility_regime": "low"
+    },
+    {
+      "timestamp_ns": 0,
+      "sequence_number": 1,
+      "event_type": "SNAPSHOT",
+      "side": -1,
+      "price_ticks": 101,
+      "quantity": 1,
+      "best_bid_ticks": 99,
+      "best_ask_ticks": 101,
+      "best_bid_quantity": 1,
+      "best_ask_quantity": 1,
+      "midpoint_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "microprice_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "imbalance": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "spread_ticks": 2,
+      "spread_regime": "wide",
+      "liquidity_regime": "deep",
+      "volatility_regime": "low"
+    },
+    {
+      "timestamp_ns": 10,
+      "sequence_number": 2,
+      "event_type": "ADD",
+      "side": 1,
+      "price_ticks": 100,
+      "quantity": 1,
+      "best_bid_ticks": 100,
+      "best_ask_ticks": 101,
+      "best_bid_quantity": 1,
+      "best_ask_quantity": 1,
+      "midpoint_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9200000000000p+6",
+        "bits": "4059200000000000"
+      },
+      "microprice_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9200000000000p+6",
+        "bits": "4059200000000000"
+      },
+      "imbalance": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "spread_ticks": 1,
+      "spread_regime": "tight",
+      "liquidity_regime": "deep",
+      "volatility_regime": "high"
+    },
+    {
+      "timestamp_ns": 20,
+      "sequence_number": 3,
+      "event_type": "TRADE",
+      "side": 1,
+      "price_ticks": 100,
+      "quantity": 1,
+      "best_bid_ticks": 99,
+      "best_ask_ticks": 101,
+      "best_bid_quantity": 1,
+      "best_ask_quantity": 1,
+      "midpoint_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "microprice_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "imbalance": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "spread_ticks": 2,
+      "spread_regime": "wide",
+      "liquidity_regime": "deep",
+      "volatility_regime": "high"
+    },
+    {
+      "timestamp_ns": 30,
+      "sequence_number": 4,
+      "event_type": "ADD",
+      "side": -1,
+      "price_ticks": 103,
+      "quantity": 1,
+      "best_bid_ticks": 99,
+      "best_ask_ticks": 101,
+      "best_bid_quantity": 1,
+      "best_ask_quantity": 1,
+      "midpoint_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "microprice_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "imbalance": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "spread_ticks": 2,
+      "spread_regime": "wide",
+      "liquidity_regime": "deep",
+      "volatility_regime": "low"
+    },
+    {
+      "timestamp_ns": 40,
+      "sequence_number": 5,
+      "event_type": "ADD",
+      "side": -1,
+      "price_ticks": 103,
+      "quantity": 1,
+      "best_bid_ticks": 99,
+      "best_ask_ticks": 101,
+      "best_bid_quantity": 1,
+      "best_ask_quantity": 1,
+      "midpoint_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "microprice_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "imbalance": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "spread_ticks": 2,
+      "spread_regime": "wide",
+      "liquidity_regime": "deep",
+      "volatility_regime": "low"
+    }
+  ],
+  "markouts": [
+    {
+      "fill_id": "F000000000001",
+      "side": 1,
+      "fill_timestamp_ns": 20,
+      "fill_price_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "horizon_ns": 5,
+      "target_timestamp_ns": 25,
+      "future_timestamp_ns": 30,
+      "future_midpoint_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "markout_ticks": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "markout_value": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "markout_bps": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "asof_convention": "first_true_midpoint_at_or_after_horizon"
+    },
+    {
+      "fill_id": "F000000000001",
+      "side": 1,
+      "fill_timestamp_ns": 20,
+      "fill_price_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "horizon_ns": 30,
+      "target_timestamp_ns": 50,
+      "future_timestamp_ns": null,
+      "future_midpoint_ticks": null,
+      "markout_ticks": null,
+      "markout_value": null,
+      "markout_bps": null,
+      "asof_convention": "first_true_midpoint_at_or_after_horizon"
+    }
+  ]
+}

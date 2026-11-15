@@ -1,0 +1,24 @@
+{
+  "dataset_provenance": {
+    "checksum_sha256": null,
+    "dataset_id": "lobmm-synthetic-v1",
+    "license_notes": "Generated locally by lobmm; not licensed or historical market data.",
+    "provider": "lobmm deterministic synthetic generator",
+    "session_end": null,
+    "session_start": null,
+    "source_type": "synthetic",
+    "symbol": "SYNTH",
+    "synthetic_demonstration": true,
+    "venue": "SIMULATED"
+  },
+  "disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+  "end_inventory": 1,
+  "event_count": 6,
+  "event_stream_sha256": "6f553cf7ee54cfc56d16e6d90c088f62ce1bc4da99e4530432b33bf14dd72cd1",
+  "fill_count": 1,
+  "net_pnl": -1.0,
+  "run_name": "engine",
+  "strategy": "fixed_spread",
+  "symbol": "SYNTH",
+  "synthetic_demonstration": true
+}

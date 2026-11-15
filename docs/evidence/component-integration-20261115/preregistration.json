@@ -1,0 +1,120 @@
+{
+  "baseline": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "budget": {
+    "automatic_retries": 0,
+    "fixed_cases": 3,
+    "per_worker_seconds": 120,
+    "primary_engine_attempts": 6,
+    "source_variants": 2,
+    "stage_seconds": 900
+  },
+  "clarified_design_commit": "19f6f4f2fed0175846b19234e8b45f22414a5775",
+  "created_utc": "2026-11-15T15:04:39.126454+00:00",
+  "harness_commit": "6646284d4b65267a0088e48a3731696f4c3ba36a",
+  "literal_inputs": {
+    "CASES": [
+      [
+        "below_drawdown",
+        "0.99999999999999999999999999999",
+        "100",
+        "1"
+      ],
+      [
+        "inclusive_loss",
+        "1",
+        "1",
+        "100"
+      ],
+      [
+        "ordinary",
+        "0.01",
+        "100",
+        "100"
+      ]
+    ],
+    "COLUMNS": [
+      "timestamp_ns",
+      "sequence_number",
+      "event_type",
+      "side",
+      "price_ticks",
+      "quantity"
+    ],
+    "EVENTS": [
+      [
+        0,
+        0,
+        "SNAPSHOT",
+        1,
+        99,
+        1
+      ],
+      [
+        0,
+        1,
+        "SNAPSHOT",
+        -1,
+        101,
+        1
+      ],
+      [
+        10,
+        2,
+        "ADD",
+        1,
+        100,
+        1
+      ],
+      [
+        20,
+        3,
+        "TRADE",
+        1,
+        100,
+        1
+      ],
+      [
+        30,
+        4,
+        "ADD",
+        -1,
+        103,
+        1
+      ],
+      [
+        40,
+        5,
+        "ADD",
+        -1,
+        103,
+        1
+      ]
+    ]
+  },
+  "not_admitted": [
+    "economic advantage",
+    "passive fill calibration",
+    "cancellation liveness improvement",
+    "cross-component rollback",
+    "performance improvement",
+    "bounded exact-output growth",
+    "fresh holdout claim"
+  ],
+  "original_design_commit": "cc421926bd66455039424c08829374a01975e7b2",
+  "phase": "sealed before primary engine execution; exposed inherited compatibility checks already completed",
+  "review": {
+    "design": "independent_feasibility and source_adversary GO before outcomes",
+    "runner": "source_adversary and growth_reproducer GO on the exact sealed runner/test hashes",
+    "source_and_dependency_bytes": "publication_integrity GO"
+  },
+  "sha256": {
+    "docs/COMPONENT_INTEGRATION_DESIGN.md": "58613a87d91c65157d85b2acb3b1fc4f0145fb833d3eefbba3bf2dce16fbc136",
+    "docs/evidence/component-integration-20261115/assembly.json": "a5f99066880dba1269da39268aaa9e8a6b3927a61632cd23569cbc389f563df4",
+    "docs/evidence/component-integration-20261115/risk-main.py": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38",
+    "docs/evidence/component-integration-20261115/source-manifests.json": "29479b8b6cf27aa7d1e327c32ab6a6763da61893037cced8096074065125954a",
+    "src/lobmm/config.py": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+    "tests/integration/test_component_integration.py": "0575170428b39cee28689ab05f6146615f77205ded7255b2a9a9174cd506bdcc",
+    "tools/check_component_integration.py": "c4819c6a1208fcacafc4b52d543674b9df4f184d2dfd42e098ba357b5d17aeac"
+  },
+  "source_assembly_commit": "f5e9f5425900ee0a9e081eb6dba24d926bd7e490"
+}

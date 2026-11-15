@@ -1,0 +1,79 @@
+[
+  {
+    "module": "lobmm.scheduler",
+    "qualname": "DeterministicScheduler.run",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/scheduler.py",
+    "line": 224,
+    "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+  },
+  {
+    "module": "lobmm.risk",
+    "qualname": "RiskManager.observe_pnl",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/risk.py",
+    "line": 432,
+    "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413"
+  },
+  {
+    "module": "lobmm.portfolio",
+    "qualname": "Portfolio.record_fill",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/portfolio.py",
+    "line": 349,
+    "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35"
+  },
+  {
+    "module": "lobmm.portfolio",
+    "qualname": "Portfolio.mark_to_market",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/portfolio.py",
+    "line": 488,
+    "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35"
+  },
+  {
+    "module": "lobmm.portfolio",
+    "qualname": "Portfolio.snapshot",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/portfolio.py",
+    "line": 521,
+    "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35"
+  },
+  {
+    "module": "lobmm.backtest",
+    "qualname": "_dataclass_row",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/backtest.py",
+    "line": 854,
+    "sha256": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77"
+  },
+  {
+    "module": "lobmm.strategy_runtime",
+    "qualname": "StrategyRuntime.decide",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategy_runtime.py",
+    "line": 76,
+    "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+  },
+  {
+    "module": "lobmm.exchange",
+    "qualname": "Exchange.handle_market_event",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/exchange.py",
+    "line": 91,
+    "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e"
+  },
+  {
+    "module": "lobmm.exchange",
+    "qualname": "Exchange.handle_command",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/exchange.py",
+    "line": 166,
+    "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e"
+  },
+  {
+    "module": "lobmm.exchange",
+    "qualname": "Exchange.expire_order",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/exchange.py",
+    "line": 182,
+    "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e"
+  },
+  {
+    "module": "lobmm.channels",
+    "qualname": "OrderedChannel.send",
+    "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/channels.py",
+    "line": 103,
+    "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+  }
+]

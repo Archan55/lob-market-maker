@@ -1,0 +1,478 @@
+{
+  "cases": [
+    {
+      "classification": "valid_integer_price_ns_grid",
+      "error_reason": null,
+      "expected": "admit",
+      "id": "price_pair",
+      "levels": 1,
+      "messages": [
+        [
+          "0",
+          "1",
+          "1001",
+          "2",
+          "1000100",
+          "1"
+        ],
+        [
+          "0",
+          "4",
+          "1001",
+          "1",
+          "1000100",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010300",
+          "2",
+          "1000100",
+          "2"
+        ],
+        [
+          "1010300",
+          "2",
+          "1000100",
+          "1"
+        ]
+      ]
+    },
+    {
+      "classification": "valid_integer_price_ns_grid",
+      "error_reason": null,
+      "expected": "admit",
+      "id": "time_pair",
+      "levels": 1,
+      "messages": [
+        [
+          "34200.000000001",
+          "1",
+          "1001",
+          "2",
+          "1000000",
+          "1"
+        ],
+        [
+          "34200.000000009",
+          "4",
+          "1001",
+          "1",
+          "1000000",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "2"
+        ],
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "1"
+        ]
+      ]
+    },
+    {
+      "classification": "valid_integer_price_ns_grid",
+      "error_reason": null,
+      "expected": "admit",
+      "id": "combined_pair",
+      "levels": 1,
+      "messages": [
+        [
+          "34200.000000001",
+          "1",
+          "1001",
+          "2",
+          "1000100",
+          "1"
+        ],
+        [
+          "34200.000000009",
+          "4",
+          "1001",
+          "1",
+          "1000100",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010300",
+          "2",
+          "1000100",
+          "2"
+        ],
+        [
+          "1010300",
+          "2",
+          "1000100",
+          "1"
+        ]
+      ]
+    },
+    {
+      "classification": "negative_configured_tick",
+      "error_reason": "bid_price/not aligned/row 0",
+      "expected": "reject",
+      "id": "book_off_tick",
+      "levels": 1,
+      "messages": [
+        [
+          "0",
+          "1",
+          "1001",
+          "2",
+          "1000101",
+          "1"
+        ],
+        [
+          "0",
+          "4",
+          "1001",
+          "1",
+          "1000101",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010300",
+          "2",
+          "1000101",
+          "2"
+        ],
+        [
+          "1010300",
+          "2",
+          "1000101",
+          "1"
+        ]
+      ]
+    },
+    {
+      "classification": "negative_configured_tick",
+      "error_reason": "price/not aligned/row 0",
+      "expected": "reject",
+      "id": "message_off_tick_outside_window",
+      "levels": 1,
+      "messages": [
+        [
+          "0",
+          "1",
+          "1001",
+          "1",
+          "990001",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010300",
+          "2",
+          "1000100",
+          "2"
+        ]
+      ]
+    },
+    {
+      "classification": "negative_resolution",
+      "error_reason": "time/finer than one nanosecond/row 0",
+      "expected": "reject",
+      "id": "subns_short",
+      "levels": 1,
+      "messages": [
+        [
+          "34200.0000000001",
+          "1",
+          "1001",
+          "2",
+          "1000000",
+          "1"
+        ],
+        [
+          "34200.000000009",
+          "4",
+          "1001",
+          "1",
+          "1000000",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "2"
+        ],
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "1"
+        ]
+      ]
+    },
+    {
+      "classification": "negative_resolution",
+      "error_reason": "time/finer than one nanosecond/row 0",
+      "expected": "reject",
+      "id": "subns_long",
+      "levels": 1,
+      "messages": [
+        [
+          "34200.00000000000000000000000000001",
+          "1",
+          "1001",
+          "2",
+          "1000000",
+          "1"
+        ],
+        [
+          "34200.000000009",
+          "4",
+          "1001",
+          "1",
+          "1000000",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "2"
+        ],
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "1"
+        ]
+      ]
+    },
+    {
+      "classification": "negative_source_order",
+      "error_reason": "time regressed/row 1",
+      "expected": "reject",
+      "id": "regressing_ns",
+      "levels": 1,
+      "messages": [
+        [
+          "34200.000000009",
+          "1",
+          "1001",
+          "2",
+          "1000000",
+          "1"
+        ],
+        [
+          "34200.000000001",
+          "4",
+          "1001",
+          "1",
+          "1000000",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "2"
+        ],
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "1"
+        ]
+      ]
+    },
+    {
+      "classification": "valid_zero_size_sentinel_control",
+      "error_reason": null,
+      "expected": "admit",
+      "id": "zero_dummy_levels",
+      "levels": 2,
+      "messages": [
+        [
+          "0",
+          "1",
+          "1001",
+          "2",
+          "1000100",
+          "1"
+        ],
+        [
+          "0",
+          "4",
+          "1001",
+          "1",
+          "1000100",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010300",
+          "2",
+          "1000100",
+          "2",
+          "9999999999",
+          "0",
+          "-9999999999",
+          "0"
+        ],
+        [
+          "1010300",
+          "2",
+          "1000100",
+          "1",
+          "9999999999",
+          "0",
+          "-9999999999",
+          "0"
+        ]
+      ]
+    },
+    {
+      "classification": "negative_time_bounds",
+      "error_reason": "time/[0, 86400)/row 0",
+      "expected": "reject",
+      "id": "day_end",
+      "levels": 1,
+      "messages": [
+        [
+          "86400",
+          "1",
+          "1001",
+          "2",
+          "1000000",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "2"
+        ]
+      ]
+    },
+    {
+      "classification": "negative_time_bounds",
+      "error_reason": "time/[0, 86400)/row 0",
+      "expected": "reject",
+      "id": "negative_time",
+      "levels": 1,
+      "messages": [
+        [
+          "-1",
+          "1",
+          "1001",
+          "2",
+          "1000000",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "2"
+        ]
+      ]
+    },
+    {
+      "classification": "valid_boundary_control",
+      "error_reason": null,
+      "expected": "admit",
+      "id": "zero_time",
+      "levels": 1,
+      "messages": [
+        [
+          "0",
+          "1",
+          "1001",
+          "2",
+          "1000000",
+          "1"
+        ]
+      ],
+      "orderbook": [
+        [
+          "1010000",
+          "2",
+          "1000000",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "configuration": {
+    "lobster_price_scale": "10000",
+    "quantity_multiplier": "1",
+    "tick_size": "0.01",
+    "timezone": "UTC",
+    "trading_date": "2024-01-02"
+  },
+  "context_setup": "Inside localcontext set fixed precision/rounding, Emin=-999999,Emax=999999,capitals=1,clamp=0; clear flags then preset FloatOperation=True; only Inexact/Rounded traps vary as listed. Capture all context settings/traps/flags and outer state/guard.",
+  "counts": {
+    "cases_per_profile": 12,
+    "profiles": 3,
+    "public_observations_per_source": 36
+  },
+  "normal_control": {
+    "levels": 2,
+    "lobster_price_scale": "10000",
+    "messages": "tests/fixtures/adapters/lobster_message.csv",
+    "orderbook": "tests/fixtures/adapters/lobster_orderbook.csv",
+    "profile": "default28",
+    "quantity_multiplier": "1",
+    "tick_size": "0.01",
+    "timezone": "America/New_York",
+    "trading_date": "2024-01-02"
+  },
+  "oracle_rules": [
+    "Independently parse original finite numeric strings to exact integer/rational numbers; time offset seconds*1e9 must be integral and source times nondecreasing within [0,86400).",
+    "Compute raw_price/(scale*tick) as a single exact rational expression; reject off-grid configured prices, never round an intermediate display price.",
+    "Use independent integer datetime epoch arithmetic, never float timestamp or production converter/calendar helper.",
+    "Initial visible message is validated but represented by RESET then BID/ASK SNAPSHOT only. Two-row valid cases then emit exactly one BID TRADE of quantity1 at the original raw bid; independently reconstruct post-message book.",
+    "Zero-size dummy levels skip their prices; negative dummy price is not active liquidity. Message-only negative case is an initial submission below the visible bid: an unseen lower-level addition can leave the one-level paired snapshot unchanged, but its off-configured-tick raw price must still be rejected.",
+    "Require exact canonical rows including event type, time/sequence/side/price/quantity, helper boundary raw strings, strict dictionary reconstruction/certificate, causal_trade_events=1 and no window reconciliation in two-row positive cases. A book-only price fix that leaves message conversion rounded must fail (it can turn a TRADE into reconciliation CANCEL)."
+  ],
+  "profiles": [
+    {
+      "id": "default28",
+      "precision": 28,
+      "rounding": "ROUND_HALF_EVEN",
+      "trap_inexact_rounded": false
+    },
+    {
+      "id": "reduced3",
+      "precision": 3,
+      "rounding": "ROUND_HALF_EVEN",
+      "trap_inexact_rounded": false
+    },
+    {
+      "id": "reduced3_trapped",
+      "precision": 3,
+      "rounding": "ROUND_HALF_EVEN",
+      "trap_inexact_rounded": true
+    }
+  ],
+  "provenance": "Wholly original hand-authored fictional LOBSTER-format pairs, not vendor-derived market data. Integer raw prices/sizes and standard price scale. Positive source pairs use nanosecond-grid times; finer-time/tick/order/bounds cases are explicitly negative controls.",
+  "version": 1
+}

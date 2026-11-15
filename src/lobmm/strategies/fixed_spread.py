@@ -20,8 +20,8 @@ class FixedSpreadStrategy(MarketMakingStrategy):
             view.midpoint_ticks, self.config.base_half_spread_ticks
         )
         quotes: list[DesiredQuote] = []
-        if known_inventory < max_abs_inventory:
+        if known_inventory < max_abs_inventory and bid > 0:
             quotes.append(DesiredQuote(Side.BID, bid, self.config.order_size))
-        if known_inventory > -max_abs_inventory:
+        if known_inventory > -max_abs_inventory and ask > 0:
             quotes.append(DesiredQuote(Side.ASK, ask, self.config.order_size))
         return tuple(quotes)

@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "compatibility": {
+      "classification": "exposed inherited compatibility checks; no primary integration case",
+      "command": "PYTHONPATH=$PWD/src python -m pytest --cov=lobmm --cov-report=term-missing [all Git-tracked tests at 0f909da]",
+      "coverage_percent": 90.86,
+      "exit_code": 0,
+      "log": "compatibility-pytest.txt",
+      "tests": 591
+    },
+    "mypy": {
+      "command": "PYTHONPATH=$PWD/src python -m mypy src/lobmm",
+      "exit_code": 0,
+      "source_files": 37
+    },
+    "ruff": {
+      "command": "python -m ruff check .; python -m ruff format --check .",
+      "exit_code": 0,
+      "formatted_files": 97,
+      "initial_failure": "RUF043 in unchanged pinned PR5 test_inventory_duration_independent.py line332; added a per-file style-only exception preserving original regression bytes"
+    },
+    "smoke": {
+      "classification": "existing synthetic demonstration, not economic evidence",
+      "command": "PYTHONPATH=$PWD/src python -m lobmm.cli backtest --config configs/ci.yaml --run-name component-ci-smoke",
+      "directory": "runs/component-ci-smoke",
+      "events": 300,
+      "exit_code": 0,
+      "log": "smoke.txt"
+    }
+  },
+  "clarified_design_commit": "0f909da5d8aa1ada25744098a55eda36466225c7",
+  "log_sha256": {
+    "compatibility-pytest.txt": "8c50aaafdfde227a47e7a8e74a883b5d7bc75c67a6f8e0927bfab0b8ce391f0f",
+    "smoke.txt": "716c129a0c9c252f2326600e73060c88dad8431fd36a420c6b3eea462e7d8cf4"
+  },
+  "python": "3.12.14",
+  "source_assembly_commit": "f5e9f5425900ee0a9e081eb6dba24d926bd7e490",
+  "versions": {
+    "hypothesis": "6.170.14",
+    "matplotlib": "3.11.2",
+    "mypy": "2.4.1",
+    "numpy": "2.5.4",
+    "polars": "2.1.0",
+    "pyarrow": "26.0.0",
+    "pydantic": "2.14.2",
+    "pytest": "9.2.0",
+    "pytest-cov": "7.1.0",
+    "ruff": "0.17.3"
+  }
+}

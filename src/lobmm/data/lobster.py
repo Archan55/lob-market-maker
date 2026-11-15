@@ -23,15 +23,14 @@ from lobmm.data._adapter_utils import (
     read_csv_source,
     require_positive_decimal,
     scaled_quantity,
-    ticks_from_price,
 )
 from lobmm.data.adapters import BaseL2DataAdapter
 from lobmm.enums import EventType, Side
+from lobmm.types import _decimal_components, _exact_scaled_integer
 
 _MESSAGE_COLUMN_COUNT = 6
 _ORDERBOOK_COLUMNS_PER_LEVEL = 4
 _SECONDS_PER_DAY = Decimal(86_400)
-_NS_PER_SECOND = Decimal(1_000_000_000)
 
 
 @dataclass(frozen=True, slots=True)
@@ -255,14 +254,46 @@ class LobsterCSVAdapter(BaseL2DataAdapter[LobsterData]):
             raise MarketDataAdapterError(
                 f"time={seconds} must be in [0, 86400) at row {row_index}"
             )
-        offset_ns = seconds * _NS_PER_SECOND
-        integral = offset_ns.to_integral_value()
-        if offset_ns != integral:
+        coefficient, exponent = _decimal_components(seconds)
+        offset_ns = _exact_scaled_integer(coefficient, 1, exponent + 9)
+        if offset_ns is None:
             raise MarketDataAdapterError(
                 f"time={seconds} has precision finer than one nanosecond "
                 f"at row {row_index}"
             )
-        return self._midnight_epoch_ns + int(integral)
+        return self._midnight_epoch_ns + offset_ns
+
+    def _price_ticks(
+        self,
+        raw_price: Decimal,
+        *,
+        field: str,
+        row_index: int,
+    ) -> int:
+        """Compose vendor scaling and tick conversion without rounded intermediates."""
+
+        if raw_price <= 0:
+            raise MarketDataAdapterError(
+                f"{field}={raw_price}/{self.lobster_price_scale} must be positive "
+                f"at row {row_index}"
+            )
+        numerator, raw_exponent = _decimal_components(raw_price)
+        scale_coefficient, scale_exponent = _decimal_components(
+            self.lobster_price_scale
+        )
+        tick_coefficient, tick_exponent = _decimal_components(self.tick_size)
+        price_ticks = _exact_scaled_integer(
+            numerator,
+            scale_coefficient * tick_coefficient,
+            raw_exponent - scale_exponent - tick_exponent,
+        )
+        if price_ticks is None:
+            raise MarketDataAdapterError(
+                f"{field} at row {row_index}: price "
+                f"{raw_price}/{self.lobster_price_scale} "
+                f"is not aligned to tick size {self.tick_size}"
+            )
+        return price_ticks
 
     def _book_state(
         self,
@@ -335,9 +366,8 @@ class LobsterCSVAdapter(BaseL2DataAdapter[LobsterData]):
             field=f"{side.name.lower()}_price",
             row_index=row_index,
         )
-        price_ticks = ticks_from_price(
-            raw_price / self.lobster_price_scale,
-            tick_size=self.tick_size,
+        price_ticks = self._price_ticks(
+            raw_price,
             field=f"{side.name.lower()}_price",
             row_index=row_index,
         )
@@ -455,9 +485,8 @@ class LobsterCSVAdapter(BaseL2DataAdapter[LobsterData]):
             field="price",
             row_index=row_index,
         )
-        price_ticks = ticks_from_price(
-            raw_price / self.lobster_price_scale,
-            tick_size=self.tick_size,
+        price_ticks = self._price_ticks(
+            raw_price,
             field="price",
             row_index=row_index,
         )
