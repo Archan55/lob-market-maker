@@ -61,6 +61,8 @@ ignore = ["E501"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**/*.py" = ["S101"]
+# Preserve the pinned PR5 regression bytes under newer Ruff regex-style checks.
+"tests/unit/test_inventory_duration_independent.py" = ["RUF043"]
 
 [tool.mypy]
 python_version = "3.12"

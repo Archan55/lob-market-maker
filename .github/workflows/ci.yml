@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -22,6 +24,42 @@ jobs:
       - name: Type check
         run: python -m mypy src/lobmm
       - name: Tests and coverage
+        env:
+          LOB_COMPONENT_INTEGRATION_EVIDENCE_DIR: experiments/component-integration-ci
         run: python -m pytest --cov=lobmm --cov-report=term-missing
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Record executed source identity
+        if: always()
+        run: |
+          mkdir -p experiments
+          python - <<'PY'
+          import hashlib
+          import json
+          import platform
+          import subprocess
+          from pathlib import Path
+          import lobmm
+          result = {
+              "executed_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+              "python": platform.python_version(),
+              "package_origin": str(Path(lobmm.__file__).resolve()),
+              "source_sha256": {
+                  str(path): hashlib.sha256(path.read_bytes()).hexdigest()
+                  for path in sorted(Path("src/lobmm").rglob("*"))
+                  if path.is_file() and "__pycache__" not in path.parts
+              },
+          }
+          Path("experiments/component-integration-ci-provenance.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+          print(json.dumps(result, indent=2, sort_keys=True))
+          PY
+      - name: Retain synthetic integration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: component-integration-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            experiments/component-integration-ci/
+            experiments/component-integration-ci-provenance.json
+          if-no-files-found: error
+          retention-days: 14
