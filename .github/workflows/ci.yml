@@ -60,6 +60,7 @@ jobs:
           name: component-integration-${{ github.event.pull_request.head.sha || github.sha }}
           path: |
             experiments/component-integration-ci/
+            experiments/component-integration-ci-test-controller.*.log
             experiments/component-integration-ci-provenance.json
           if-no-files-found: error
           retention-days: 14
