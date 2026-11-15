@@ -1,0 +1,110 @@
+{
+  "case": "below_drawdown",
+  "events": [
+    {
+      "timestamp_ns": 0,
+      "sequence_number": 0,
+      "event_type": "SNAPSHOT",
+      "side": 1,
+      "price_ticks": 99,
+      "quantity": 1
+    },
+    {
+      "timestamp_ns": 0,
+      "sequence_number": 1,
+      "event_type": "SNAPSHOT",
+      "side": -1,
+      "price_ticks": 101,
+      "quantity": 1
+    },
+    {
+      "timestamp_ns": 10,
+      "sequence_number": 2,
+      "event_type": "ADD",
+      "side": 1,
+      "price_ticks": 100,
+      "quantity": 1
+    },
+    {
+      "timestamp_ns": 20,
+      "sequence_number": 3,
+      "event_type": "TRADE",
+      "side": 1,
+      "price_ticks": 100,
+      "quantity": 1
+    },
+    {
+      "timestamp_ns": 30,
+      "sequence_number": 4,
+      "event_type": "ADD",
+      "side": -1,
+      "price_ticks": 103,
+      "quantity": 1
+    },
+    {
+      "timestamp_ns": 40,
+      "sequence_number": 5,
+      "event_type": "ADD",
+      "side": -1,
+      "price_ticks": 103,
+      "quantity": 1
+    }
+  ],
+  "config_overrides": {
+    "instrument": {
+      "tick_size": "1"
+    },
+    "latency": {
+      "market_data_ns": 0,
+      "order_entry_ns": 0,
+      "cancellation_ns": 5,
+      "fill_report_ns": 0,
+      "market_data_jitter_ns": 0,
+      "order_entry_jitter_ns": 0,
+      "cancellation_jitter_ns": 0,
+      "fill_report_jitter_ns": 0
+    },
+    "fees": {
+      "maker_fee_per_unit": "0.99999999999999999999999999999",
+      "maker_rebate_per_unit": "0",
+      "taker_fee_per_unit": "0",
+      "proportional_fee_rate": "0"
+    },
+    "strategy": {
+      "order_size": 1,
+      "minimum_quote_lifetime_ns": 0,
+      "refresh_interval_ns": 1000,
+      "stale_after_ns": 1000
+    },
+    "risk": {
+      "max_abs_inventory": 2,
+      "max_order_size": 1,
+      "max_total_open_quantity": 4,
+      "max_open_orders": 4,
+      "max_loss": "100",
+      "max_drawdown": "1",
+      "max_quote_age_ns": 1000,
+      "minimum_spread_ticks": 1,
+      "max_messages_per_second": null,
+      "max_volatility_ticks": null,
+      "prohibit_new_quotes_last_ns": 0
+    },
+    "backtest": {
+      "warmup_events": 0,
+      "timer_interval_ns": 10,
+      "mark_price": "midpoint",
+      "session_end_policy": "mark",
+      "track_memory": false
+    },
+    "metrics": {
+      "markout_horizons_ns": [
+        5,
+        30
+      ],
+      "near_limit_fraction": 0.5
+    },
+    "output": {
+      "write_plots": false
+    }
+  }
+}

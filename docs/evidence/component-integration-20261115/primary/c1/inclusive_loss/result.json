@@ -1,0 +1,1619 @@
+{
+  "source": "C1",
+  "case": "inclusive_loss",
+  "status": "complete",
+  "started_utc": "2026-11-15T15:04:51.019910+00:00",
+  "source_root": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1",
+  "source_sha256": {
+    "src/lobmm/__init__.py": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+    "src/lobmm/backtest.py": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+    "src/lobmm/benchmark.py": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+    "src/lobmm/book.py": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+    "src/lobmm/case_study.py": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+    "src/lobmm/channels.py": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+    "src/lobmm/cli.py": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+    "src/lobmm/config.py": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+    "src/lobmm/data/__init__.py": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+    "src/lobmm/data/_adapter_utils.py": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172",
+    "src/lobmm/data/adapters.py": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+    "src/lobmm/data/fingerprint.py": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+    "src/lobmm/data/loaders.py": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+    "src/lobmm/data/lobster.py": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5",
+    "src/lobmm/data/manifest.py": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+    "src/lobmm/data/schema.py": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+    "src/lobmm/data/tardis.py": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+    "src/lobmm/enums.py": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+    "src/lobmm/events.py": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+    "src/lobmm/exchange.py": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e",
+    "src/lobmm/experiments.py": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+    "src/lobmm/metrics.py": "4091dbedd3779aac776e27e8e5a12a42fd6a122e7307f3693b32e4021998c22a",
+    "src/lobmm/orders.py": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+    "src/lobmm/portfolio.py": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35",
+    "src/lobmm/py.typed": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "src/lobmm/queue_model.py": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+    "src/lobmm/report.py": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+    "src/lobmm/risk.py": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+    "src/lobmm/scheduler.py": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+    "src/lobmm/strategies/__init__.py": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+    "src/lobmm/strategies/base.py": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+    "src/lobmm/strategies/fixed_spread.py": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c",
+    "src/lobmm/strategies/inventory_aware.py": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972",
+    "src/lobmm/strategies/microprice.py": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa",
+    "src/lobmm/strategy_runtime.py": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+    "src/lobmm/synthetic.py": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+    "src/lobmm/types.py": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b",
+    "src/lobmm/validation.py": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+  },
+  "frozen_pins": {
+    "/workspace/lob-market-maker-integration/tools/check_component_integration.py": "c4819c6a1208fcacafc4b52d543674b9df4f184d2dfd42e098ba357b5d17aeac",
+    "/workspace/lob-market-maker-integration/tests/integration/test_component_integration.py": "0575170428b39cee28689ab05f6146615f77205ded7255b2a9a9174cd506bdcc",
+    "/workspace/lob-market-maker-integration/docs/COMPONENT_INTEGRATION_DESIGN.md": "58613a87d91c65157d85b2acb3b1fc4f0145fb833d3eefbba3bf2dce16fbc136",
+    "/workspace/lob-market-maker-integration/docs/evidence/component-integration-20261115/source-manifests.json": "29479b8b6cf27aa7d1e327c32ab6a6763da61893037cced8096074065125954a",
+    "/workspace/lob-market-maker-integration/docs/evidence/component-integration-20261115/risk-main.py": "c0de65fba7e48fe26110b7ab05cb367bc7afe3a67d81c3be220cd63a8985ec38"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "imports_before": {
+    "lobmm": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/__init__.py",
+      "relative_path": "src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "lobmm.backtest": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/backtest.py",
+      "relative_path": "src/lobmm/backtest.py",
+      "sha256": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77"
+    },
+    "lobmm.book": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/book.py",
+      "relative_path": "src/lobmm/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "lobmm.channels": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/channels.py",
+      "relative_path": "src/lobmm/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "lobmm.config": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/config.py",
+      "relative_path": "src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "lobmm.data": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/__init__.py",
+      "relative_path": "src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "lobmm.data._adapter_utils": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/_adapter_utils.py",
+      "relative_path": "src/lobmm/data/_adapter_utils.py",
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+    },
+    "lobmm.data.adapters": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/adapters.py",
+      "relative_path": "src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "lobmm.data.fingerprint": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/fingerprint.py",
+      "relative_path": "src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "lobmm.data.loaders": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/loaders.py",
+      "relative_path": "src/lobmm/data/loaders.py",
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+    },
+    "lobmm.data.lobster": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/lobster.py",
+      "relative_path": "src/lobmm/data/lobster.py",
+      "sha256": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5"
+    },
+    "lobmm.data.manifest": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/manifest.py",
+      "relative_path": "src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "lobmm.data.schema": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/schema.py",
+      "relative_path": "src/lobmm/data/schema.py",
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+    },
+    "lobmm.data.tardis": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/tardis.py",
+      "relative_path": "src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "lobmm.enums": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/enums.py",
+      "relative_path": "src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "lobmm.events": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/events.py",
+      "relative_path": "src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "lobmm.exchange": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/exchange.py",
+      "relative_path": "src/lobmm/exchange.py",
+      "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e"
+    },
+    "lobmm.metrics": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/metrics.py",
+      "relative_path": "src/lobmm/metrics.py",
+      "sha256": "4091dbedd3779aac776e27e8e5a12a42fd6a122e7307f3693b32e4021998c22a"
+    },
+    "lobmm.orders": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/orders.py",
+      "relative_path": "src/lobmm/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "lobmm.portfolio": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/portfolio.py",
+      "relative_path": "src/lobmm/portfolio.py",
+      "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35"
+    },
+    "lobmm.queue_model": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/queue_model.py",
+      "relative_path": "src/lobmm/queue_model.py",
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "lobmm.risk": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/risk.py",
+      "relative_path": "src/lobmm/risk.py",
+      "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413"
+    },
+    "lobmm.scheduler": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/scheduler.py",
+      "relative_path": "src/lobmm/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "lobmm.strategies": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/__init__.py",
+      "relative_path": "src/lobmm/strategies/__init__.py",
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "lobmm.strategies.base": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/base.py",
+      "relative_path": "src/lobmm/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "lobmm.strategies.fixed_spread": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/fixed_spread.py",
+      "relative_path": "src/lobmm/strategies/fixed_spread.py",
+      "sha256": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c"
+    },
+    "lobmm.strategies.inventory_aware": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/inventory_aware.py",
+      "relative_path": "src/lobmm/strategies/inventory_aware.py",
+      "sha256": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972"
+    },
+    "lobmm.strategies.microprice": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/microprice.py",
+      "relative_path": "src/lobmm/strategies/microprice.py",
+      "sha256": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa"
+    },
+    "lobmm.strategy_runtime": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategy_runtime.py",
+      "relative_path": "src/lobmm/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "lobmm.types": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/types.py",
+      "relative_path": "src/lobmm/types.py",
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+    },
+    "lobmm.validation": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/validation.py",
+      "relative_path": "src/lobmm/validation.py",
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    }
+  },
+  "case_start_context": {
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "Emin": -999999,
+    "Emax": 999999,
+    "capitals": 1,
+    "clamp": 0,
+    "traps": {
+      "InvalidOperation": true,
+      "FloatOperation": false,
+      "DivisionByZero": true,
+      "Overflow": true,
+      "Underflow": false,
+      "Subnormal": false,
+      "Inexact": false,
+      "Rounded": false,
+      "Clamped": false
+    },
+    "flags": {
+      "InvalidOperation": false,
+      "FloatOperation": false,
+      "DivisionByZero": false,
+      "Overflow": false,
+      "Underflow": false,
+      "Subnormal": false,
+      "Inexact": false,
+      "Rounded": false,
+      "Clamped": false
+    },
+    "integer_string_guard": 4300
+  },
+  "canonical_roundtrip": {
+    "original_rows": [
+      {
+        "timestamp_ns": 0,
+        "sequence_number": 0,
+        "event_type": "SNAPSHOT",
+        "side": 1,
+        "price_ticks": 99,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "event_type": "SNAPSHOT",
+        "side": -1,
+        "price_ticks": 101,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 10,
+        "sequence_number": 2,
+        "event_type": "ADD",
+        "side": 1,
+        "price_ticks": 100,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 20,
+        "sequence_number": 3,
+        "event_type": "TRADE",
+        "side": 1,
+        "price_ticks": 100,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 30,
+        "sequence_number": 4,
+        "event_type": "ADD",
+        "side": -1,
+        "price_ticks": 103,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 40,
+        "sequence_number": 5,
+        "event_type": "ADD",
+        "side": -1,
+        "price_ticks": 103,
+        "quantity": 1
+      }
+    ],
+    "roundtrip_rows": [
+      {
+        "timestamp_ns": 0,
+        "sequence_number": 0,
+        "event_type": "SNAPSHOT",
+        "side": 1,
+        "price_ticks": 99,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 0,
+        "sequence_number": 1,
+        "event_type": "SNAPSHOT",
+        "side": -1,
+        "price_ticks": 101,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 10,
+        "sequence_number": 2,
+        "event_type": "ADD",
+        "side": 1,
+        "price_ticks": 100,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 20,
+        "sequence_number": 3,
+        "event_type": "TRADE",
+        "side": 1,
+        "price_ticks": 100,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 30,
+        "sequence_number": 4,
+        "event_type": "ADD",
+        "side": -1,
+        "price_ticks": 103,
+        "quantity": 1
+      },
+      {
+        "timestamp_ns": 40,
+        "sequence_number": 5,
+        "event_type": "ADD",
+        "side": -1,
+        "price_ticks": 103,
+        "quantity": 1
+      }
+    ],
+    "schema": [
+      [
+        "timestamp_ns",
+        "Int64"
+      ],
+      [
+        "sequence_number",
+        "Int64"
+      ],
+      [
+        "event_type",
+        "String"
+      ],
+      [
+        "side",
+        "Int8"
+      ],
+      [
+        "price_ticks",
+        "Int64"
+      ],
+      [
+        "quantity",
+        "Int64"
+      ]
+    ],
+    "input_parquet_sha256": "e6e21de36387513c6dc8d8f09266995c30bb9e0806598e99971c36795f9ef276"
+  },
+  "validation": {
+    "type": "lobmm.validation.ValidationResult",
+    "event_count": 6,
+    "issues": [],
+    "diagnostics": {},
+    "final_book": {
+      "type": "lobmm.events.BookView",
+      "timestamp_ns": 40,
+      "sequence_number": 5,
+      "best_bid_ticks": 99,
+      "best_ask_ticks": 101,
+      "best_bid_quantity": 1,
+      "best_ask_quantity": 1,
+      "midpoint_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "microprice_ticks": {
+        "type": "builtins.float",
+        "hex": "0x1.9000000000000p+6",
+        "bits": "4059000000000000"
+      },
+      "imbalance": {
+        "type": "builtins.float",
+        "hex": "0x0.0p+0",
+        "bits": "0000000000000000"
+      },
+      "bids": [
+        [
+          99,
+          1
+        ]
+      ],
+      "asks": [
+        [
+          101,
+          1
+        ],
+        [
+          103,
+          2
+        ]
+      ]
+    },
+    "event_stream_sha256": "6f553cf7ee54cfc56d16e6d90c088f62ce1bc4da99e4530432b33bf14dd72cd1",
+    "mode": {
+      "enum": "lobmm.enums.ValidationMode",
+      "value": "strict"
+    },
+    "reconstructed_book": true,
+    "required_nonempty": true
+  },
+  "config": {
+    "instrument": {
+      "symbol": "SYNTH",
+      "currency": "USD",
+      "tick_size": "1",
+      "lot_size": 1
+    },
+    "data": {
+      "input_path": null,
+      "validation_mode": "strict",
+      "book_depth": 5,
+      "provenance": {
+        "source_type": "synthetic",
+        "provider": "lobmm deterministic synthetic generator",
+        "venue": "SIMULATED",
+        "symbol": "SYNTH",
+        "dataset_id": "lobmm-synthetic-v1",
+        "session_start": null,
+        "session_end": null,
+        "checksum_sha256": null,
+        "license_notes": "Generated locally by lobmm; not licensed or historical market data."
+      }
+    },
+    "synthetic": {
+      "event_count": 2000,
+      "start_timestamp_ns": 0,
+      "interval_ns": 1000000,
+      "start_price_ticks": 10000,
+      "levels": 5,
+      "base_quantity": 100,
+      "regime_length": 250,
+      "reset_interval": 400
+    },
+    "latency": {
+      "market_data_ns": 0,
+      "order_entry_ns": 0,
+      "cancellation_ns": 5,
+      "fill_report_ns": 0,
+      "market_data_jitter_ns": 0,
+      "order_entry_jitter_ns": 0,
+      "cancellation_jitter_ns": 0,
+      "fill_report_jitter_ns": 0
+    },
+    "exchange": {
+      "validation_mode": "lenient",
+      "rest_unfilled_marketable_quantity": true,
+      "cancel_orders_on_reset": true
+    },
+    "queue_model": {
+      "cancellation_allocation": "back_of_queue",
+      "price_through_fills": true
+    },
+    "fees": {
+      "maker_fee_per_unit": "1",
+      "maker_rebate_per_unit": "0",
+      "taker_fee_per_unit": "0",
+      "proportional_fee_rate": "0"
+    },
+    "strategy": {
+      "name": "fixed_spread",
+      "strategy_id": "market-maker",
+      "order_size": 1,
+      "base_half_spread_ticks": 1.0,
+      "minimum_half_spread_ticks": 1.0,
+      "inventory_penalty_ticks": 2.0,
+      "imbalance_coefficient_ticks": 1.0,
+      "volatility_multiplier": 1.0,
+      "volatility_window": 50,
+      "refresh_interval_ns": 1000,
+      "minimum_quote_lifetime_ns": 0,
+      "stale_after_ns": 1000,
+      "price_change_threshold_ticks": 1,
+      "quantity_change_threshold": 1,
+      "rejection_cooldown_ns": 50000000,
+      "rejection_backoff_multiplier": 2.0,
+      "rejection_max_cooldown_ns": 1000000000,
+      "message_rate_cooldown_ns": 1000000000,
+      "post_only": true
+    },
+    "risk": {
+      "max_abs_inventory": 2,
+      "max_order_size": 1,
+      "max_total_open_quantity": 4,
+      "max_open_orders": 4,
+      "max_loss": "1",
+      "max_drawdown": "100",
+      "max_quote_age_ns": 1000,
+      "minimum_spread_ticks": 1,
+      "max_volatility_ticks": null,
+      "max_messages_per_second": null,
+      "prohibit_new_quotes_last_ns": 0
+    },
+    "backtest": {
+      "warmup_events": 0,
+      "start_timestamp_ns": null,
+      "end_timestamp_ns": null,
+      "event_limit": null,
+      "timer_interval_ns": 10,
+      "mark_price": "midpoint",
+      "session_end_policy": "mark",
+      "track_memory": false
+    },
+    "metrics": {
+      "markout_horizons_ns": [
+        5,
+        30
+      ],
+      "near_limit_fraction": 0.5
+    },
+    "output": {
+      "runs_directory": "runs",
+      "write_plots": false
+    },
+    "random_seed": 7
+  },
+  "case_finish_context": {
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "Emin": -999999,
+    "Emax": 999999,
+    "capitals": 1,
+    "clamp": 0,
+    "traps": {
+      "InvalidOperation": true,
+      "FloatOperation": false,
+      "DivisionByZero": true,
+      "Overflow": true,
+      "Underflow": false,
+      "Subnormal": false,
+      "Inexact": false,
+      "Rounded": false,
+      "Clamped": false
+    },
+    "flags": {
+      "InvalidOperation": false,
+      "FloatOperation": false,
+      "DivisionByZero": false,
+      "Overflow": false,
+      "Underflow": false,
+      "Subnormal": false,
+      "Inexact": false,
+      "Rounded": false,
+      "Clamped": false
+    },
+    "integer_string_guard": 4300
+  },
+  "artifacts": {
+    "orders": {
+      "path": "engine/orders.parquet",
+      "sha256": "a4b7ddbb4853406251b771275d9eac456a5447e469a494cd7d58cf4c9cd86179",
+      "rows": 6,
+      "schema": [
+        [
+          "transition_id",
+          "String"
+        ],
+        [
+          "order_id",
+          "String"
+        ],
+        [
+          "previous_status",
+          "String"
+        ],
+        [
+          "new_status",
+          "String"
+        ],
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "remaining_quantity",
+          "Int64"
+        ],
+        [
+          "reason",
+          "String"
+        ],
+        [
+          "client_order_id",
+          "String"
+        ],
+        [
+          "strategy_id",
+          "String"
+        ],
+        [
+          "side",
+          "Int64"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "original_quantity",
+          "Int64"
+        ],
+        [
+          "cumulative_filled_quantity",
+          "Int64"
+        ],
+        [
+          "creation_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "send_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "exchange_arrival_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "average_fill_price_ticks",
+          "Float64"
+        ],
+        [
+          "queue_ahead_estimate",
+          "Int64"
+        ],
+        [
+          "external_behind_estimate",
+          "Int64"
+        ]
+      ]
+    },
+    "fills": {
+      "path": "engine/fills.parquet",
+      "sha256": "edb6d3001bb748074547789fd1f34b244720d2cddcb9d6456d96d34de69ae66e",
+      "rows": 1,
+      "schema": [
+        [
+          "fill_id",
+          "String"
+        ],
+        [
+          "order_id",
+          "String"
+        ],
+        [
+          "client_order_id",
+          "String"
+        ],
+        [
+          "strategy_id",
+          "String"
+        ],
+        [
+          "side",
+          "Int64"
+        ],
+        [
+          "quantity",
+          "Int64"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "liquidity_role",
+          "String"
+        ],
+        [
+          "exchange_fill_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "fee",
+          "Float64"
+        ],
+        [
+          "rebate",
+          "Float64"
+        ],
+        [
+          "decision_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "send_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "exchange_arrival_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "strategy_notification_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "queue_ahead_estimate",
+          "Int64"
+        ]
+      ]
+    },
+    "inventory": {
+      "path": "engine/inventory.parquet",
+      "sha256": "918743984fe55e333c7be51ea440e2ef9306c2bc62200a8617f0d3c723c52a4d",
+      "rows": 6,
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "inventory",
+          "Int64"
+        ],
+        [
+          "current_gross_exposure",
+          "Float64"
+        ],
+        [
+          "peak_gross_exposure",
+          "Float64"
+        ]
+      ]
+    },
+    "pnl": {
+      "path": "engine/pnl.parquet",
+      "sha256": "b0cc634af2a3e44714a09367f4aa2acd5373c426cf175db737ff66c4d22a11b1",
+      "rows": 6,
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "currency",
+          "String"
+        ],
+        [
+          "tick_value",
+          "Float64"
+        ],
+        [
+          "mark_ticks",
+          "Float64"
+        ],
+        [
+          "inventory",
+          "Int64"
+        ],
+        [
+          "average_cost_ticks",
+          "Float64"
+        ],
+        [
+          "trade_cash_ticks",
+          "Int64"
+        ],
+        [
+          "trade_cash",
+          "Float64"
+        ],
+        [
+          "cash",
+          "Float64"
+        ],
+        [
+          "realized_pnl_ticks",
+          "Float64"
+        ],
+        [
+          "unrealized_pnl_ticks",
+          "Float64"
+        ],
+        [
+          "gross_pnl_ticks",
+          "Float64"
+        ],
+        [
+          "realized_pnl",
+          "Float64"
+        ],
+        [
+          "unrealized_pnl",
+          "Float64"
+        ],
+        [
+          "gross_pnl",
+          "Float64"
+        ],
+        [
+          "fees",
+          "Float64"
+        ],
+        [
+          "rebates",
+          "Float64"
+        ],
+        [
+          "net_pnl",
+          "Float64"
+        ],
+        [
+          "turnover_ticks",
+          "Int64"
+        ],
+        [
+          "turnover",
+          "Float64"
+        ],
+        [
+          "buy_volume",
+          "Int64"
+        ],
+        [
+          "sell_volume",
+          "Int64"
+        ],
+        [
+          "fill_count",
+          "Int64"
+        ],
+        [
+          "current_gross_exposure",
+          "Float64"
+        ],
+        [
+          "peak_gross_exposure",
+          "Float64"
+        ]
+      ]
+    },
+    "quotes": {
+      "path": "engine/quotes.parquet",
+      "sha256": "7c640b28e56229e1072e29939de251867406c901e90f4819592da492fc4e015c",
+      "rows": 3,
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "observed_sequence",
+          "Int64"
+        ],
+        [
+          "side",
+          "Int64"
+        ],
+        [
+          "action",
+          "String"
+        ],
+        [
+          "client_order_id",
+          "String"
+        ],
+        [
+          "order_id",
+          "String"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "quantity",
+          "Int64"
+        ],
+        [
+          "reason",
+          "String"
+        ]
+      ]
+    },
+    "risk_events": {
+      "path": "engine/risk_events.parquet",
+      "sha256": "f0a01d2fc0ec53d5fb14bddafeb2f9418a0baa6bc75a42ca2bc667a93ded5ddd",
+      "rows": 1,
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "reason",
+          "String"
+        ],
+        [
+          "detail",
+          "String"
+        ],
+        [
+          "order_id",
+          "Null"
+        ],
+        [
+          "observed_value",
+          "Float64"
+        ],
+        [
+          "limit_value",
+          "Float64"
+        ]
+      ]
+    },
+    "market": {
+      "path": "engine/market.parquet",
+      "sha256": "af336bec1be04634381ce85a9fca511389407ffd28041ae204c59420d276af9e",
+      "rows": 6,
+      "schema": [
+        [
+          "timestamp_ns",
+          "Int64"
+        ],
+        [
+          "sequence_number",
+          "Int64"
+        ],
+        [
+          "event_type",
+          "String"
+        ],
+        [
+          "side",
+          "Int64"
+        ],
+        [
+          "price_ticks",
+          "Int64"
+        ],
+        [
+          "quantity",
+          "Int64"
+        ],
+        [
+          "best_bid_ticks",
+          "Int64"
+        ],
+        [
+          "best_ask_ticks",
+          "Int64"
+        ],
+        [
+          "best_bid_quantity",
+          "Int64"
+        ],
+        [
+          "best_ask_quantity",
+          "Int64"
+        ],
+        [
+          "midpoint_ticks",
+          "Float64"
+        ],
+        [
+          "microprice_ticks",
+          "Float64"
+        ],
+        [
+          "imbalance",
+          "Float64"
+        ],
+        [
+          "spread_ticks",
+          "Int64"
+        ],
+        [
+          "spread_regime",
+          "String"
+        ],
+        [
+          "liquidity_regime",
+          "String"
+        ],
+        [
+          "volatility_regime",
+          "String"
+        ]
+      ]
+    },
+    "markouts": {
+      "path": "engine/markouts.parquet",
+      "sha256": "4994ba250fe127d0202b5d7bd4cc81e8c0c1d2f28a0bedee6382e51464e5eb85",
+      "rows": 2,
+      "schema": [
+        [
+          "fill_id",
+          "String"
+        ],
+        [
+          "side",
+          "Int64"
+        ],
+        [
+          "fill_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "fill_price_ticks",
+          "Float64"
+        ],
+        [
+          "horizon_ns",
+          "Int64"
+        ],
+        [
+          "target_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "future_timestamp_ns",
+          "Int64"
+        ],
+        [
+          "future_midpoint_ticks",
+          "Float64"
+        ],
+        [
+          "markout_ticks",
+          "Float64"
+        ],
+        [
+          "markout_value",
+          "Float64"
+        ],
+        [
+          "markout_bps",
+          "Float64"
+        ],
+        [
+          "asof_convention",
+          "String"
+        ]
+      ]
+    }
+  },
+  "evaluation": {
+    "checks": {
+      "one_expected_maker_fill": true,
+      "exact_literal_exchange_fee": true,
+      "complete_ordered_risk_call_vector": true,
+      "risk_links_latest_original_snapshot": true,
+      "all_exact_risk_handoffs": true,
+      "all_risk_calls_default_precision": true,
+      "exact_zero_high_watermark": true,
+      "all_snapshot_ledgers_exact": true,
+      "six_projection_backed_market_and_fill_calls": true,
+      "float_projections_only": true,
+      "pnl_artifact_matches_projection_order": true,
+      "elapsed_inventory_exposure": true,
+      "horizon_quantity_coverage": true,
+      "two_markout_rows_link_the_only_bid_fill": true,
+      "asof_and_censoring": true,
+      "end_inventory_one": true,
+      "post_fill_runtime_gate_recorded": true,
+      "original_ask_acceptance_identity_and_time": true,
+      "accepted_original_ask_recorded": true,
+      "canonical_roundtrip_exact": true
+    },
+    "ledger": {
+      "market_states": [
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 0,
+          "event_type": "SNAPSHOT",
+          "side": 1,
+          "price_ticks": 99,
+          "quantity": 1,
+          "best_bid": 99,
+          "best_ask": null,
+          "midpoint": null,
+          "historical_quantity_before": 0,
+          "historical_quantity_after": 1
+        },
+        {
+          "timestamp_ns": 0,
+          "sequence_number": 1,
+          "event_type": "SNAPSHOT",
+          "side": -1,
+          "price_ticks": 101,
+          "quantity": 1,
+          "best_bid": 99,
+          "best_ask": 101,
+          "midpoint": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "historical_quantity_before": 0,
+          "historical_quantity_after": 1
+        },
+        {
+          "timestamp_ns": 10,
+          "sequence_number": 2,
+          "event_type": "ADD",
+          "side": 1,
+          "price_ticks": 100,
+          "quantity": 1,
+          "best_bid": 100,
+          "best_ask": 101,
+          "midpoint": {
+            "numerator": 201,
+            "denominator": 2
+          },
+          "historical_quantity_before": 0,
+          "historical_quantity_after": 1
+        },
+        {
+          "timestamp_ns": 20,
+          "sequence_number": 3,
+          "event_type": "TRADE",
+          "side": 1,
+          "price_ticks": 100,
+          "quantity": 1,
+          "best_bid": 99,
+          "best_ask": 101,
+          "midpoint": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "historical_quantity_before": 1,
+          "historical_quantity_after": 0
+        },
+        {
+          "timestamp_ns": 30,
+          "sequence_number": 4,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 103,
+          "quantity": 1,
+          "best_bid": 99,
+          "best_ask": 101,
+          "midpoint": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "historical_quantity_before": 0,
+          "historical_quantity_after": 1
+        },
+        {
+          "timestamp_ns": 40,
+          "sequence_number": 5,
+          "event_type": "ADD",
+          "side": -1,
+          "price_ticks": 103,
+          "quantity": 1,
+          "best_bid": 99,
+          "best_ask": 101,
+          "midpoint": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "historical_quantity_before": 1,
+          "historical_quantity_after": 2
+        }
+      ],
+      "fill": {
+        "side": 1,
+        "quantity": 1,
+        "price_ticks": 100,
+        "exchange_fill_timestamp_ns": 20,
+        "liquidity_role": "maker"
+      },
+      "fee": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "trade_cash": {
+        "numerator": -100,
+        "denominator": 1
+      },
+      "cash_after_fill": {
+        "numerator": -101,
+        "denominator": 1
+      },
+      "inventory_after_fill": 1,
+      "mark_after_fill": {
+        "numerator": 100,
+        "denominator": 1
+      },
+      "net_after_fill": {
+        "numerator": -1,
+        "denominator": 1
+      },
+      "high_watermark": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "max_loss": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "max_drawdown": {
+        "numerator": 100,
+        "denominator": 1
+      },
+      "exposure_start_ns": 20,
+      "exposure_end_ns": 40,
+      "near_limit_duration_ns": 20,
+      "observation_duration_ns": 40,
+      "horizon_5": {
+        "target_timestamp_ns": 25,
+        "future_timestamp_ns": 30,
+        "observed_quantity": 1,
+        "markout_ticks": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      "horizon_30": {
+        "target_timestamp_ns": 50,
+        "future_timestamp_ns": null,
+        "observed_quantity": 0,
+        "markout_ticks": null
+      }
+    },
+    "risk_calls": [
+      {
+        "ordinal": 9,
+        "timestamp_ns": 0,
+        "oracle": {
+          "net_pnl": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "approved": true,
+          "kill_reason": null
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 15,
+        "timestamp_ns": 0,
+        "oracle": {
+          "net_pnl": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "approved": true,
+          "kill_reason": null
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 36,
+        "timestamp_ns": 10,
+        "oracle": {
+          "net_pnl": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "approved": true,
+          "kill_reason": null
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 41,
+        "timestamp_ns": 10,
+        "oracle": {
+          "net_pnl": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "approved": true,
+          "kill_reason": null
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 49,
+        "timestamp_ns": 20,
+        "oracle": {
+          "net_pnl": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "approved": false,
+          "kill_reason": "max_loss"
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 56,
+        "timestamp_ns": 20,
+        "oracle": {
+          "net_pnl": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "approved": false,
+          "kill_reason": "max_loss"
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 62,
+        "timestamp_ns": 20,
+        "oracle": {
+          "net_pnl": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "approved": false,
+          "kill_reason": "max_loss"
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 82,
+        "timestamp_ns": 30,
+        "oracle": {
+          "net_pnl": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "approved": false,
+          "kill_reason": "max_loss"
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 87,
+        "timestamp_ns": 30,
+        "oracle": {
+          "net_pnl": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "approved": false,
+          "kill_reason": "max_loss"
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 96,
+        "timestamp_ns": 40,
+        "oracle": {
+          "net_pnl": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "approved": false,
+          "kill_reason": "max_loss"
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      },
+      {
+        "ordinal": 102,
+        "timestamp_ns": 40,
+        "oracle": {
+          "net_pnl": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "approved": false,
+          "kill_reason": "max_loss"
+        },
+        "exact_net_matches": true,
+        "decision_matches": true,
+        "context_preserved": true,
+        "same_snapshot_decimal": true
+      }
+    ],
+    "risk_oracle_agreement": true,
+    "risk_context_preserved": true,
+    "kill_switch_active": true,
+    "first_kill": {
+      "timestamp_ns": 20,
+      "reason": "max_loss"
+    },
+    "runtime_at20": [
+      {
+        "ordinal": 64,
+        "kind": "runtime_decision",
+        "scheduler_key": [
+          20,
+          0,
+          40,
+          0,
+          25
+        ],
+        "timestamp_ns": 20,
+        "allow_new_quotes": false,
+        "known_inventory": 1,
+        "observed_sequence": 3,
+        "actions": [
+          {
+            "type": "lobmm.orders.CancelRequest",
+            "decision_timestamp_ns": 20,
+            "send_timestamp_ns": 20,
+            "order_id": "O000000000002",
+            "client_order_id": null
+          }
+        ],
+        "delegations": 1
+      }
+    ],
+    "cancelled_original_ask_at25": true,
+    "original_ask_order_id": "O000000000002",
+    "all_later_runtime_gates_suppressed": true,
+    "all_at20_runtime_gates_enabled": false
+  },
+  "imports_after": {
+    "lobmm": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/__init__.py",
+      "relative_path": "src/lobmm/__init__.py",
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f"
+    },
+    "lobmm.backtest": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/backtest.py",
+      "relative_path": "src/lobmm/backtest.py",
+      "sha256": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77"
+    },
+    "lobmm.book": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/book.py",
+      "relative_path": "src/lobmm/book.py",
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a"
+    },
+    "lobmm.channels": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/channels.py",
+      "relative_path": "src/lobmm/channels.py",
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f"
+    },
+    "lobmm.config": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/config.py",
+      "relative_path": "src/lobmm/config.py",
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6"
+    },
+    "lobmm.data": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/__init__.py",
+      "relative_path": "src/lobmm/data/__init__.py",
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8"
+    },
+    "lobmm.data._adapter_utils": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/_adapter_utils.py",
+      "relative_path": "src/lobmm/data/_adapter_utils.py",
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172"
+    },
+    "lobmm.data.adapters": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/adapters.py",
+      "relative_path": "src/lobmm/data/adapters.py",
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212"
+    },
+    "lobmm.data.fingerprint": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/fingerprint.py",
+      "relative_path": "src/lobmm/data/fingerprint.py",
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319"
+    },
+    "lobmm.data.loaders": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/loaders.py",
+      "relative_path": "src/lobmm/data/loaders.py",
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6"
+    },
+    "lobmm.data.lobster": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/lobster.py",
+      "relative_path": "src/lobmm/data/lobster.py",
+      "sha256": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5"
+    },
+    "lobmm.data.manifest": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/manifest.py",
+      "relative_path": "src/lobmm/data/manifest.py",
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de"
+    },
+    "lobmm.data.schema": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/schema.py",
+      "relative_path": "src/lobmm/data/schema.py",
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49"
+    },
+    "lobmm.data.tardis": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/data/tardis.py",
+      "relative_path": "src/lobmm/data/tardis.py",
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e"
+    },
+    "lobmm.enums": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/enums.py",
+      "relative_path": "src/lobmm/enums.py",
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d"
+    },
+    "lobmm.events": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/events.py",
+      "relative_path": "src/lobmm/events.py",
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23"
+    },
+    "lobmm.exchange": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/exchange.py",
+      "relative_path": "src/lobmm/exchange.py",
+      "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e"
+    },
+    "lobmm.metrics": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/metrics.py",
+      "relative_path": "src/lobmm/metrics.py",
+      "sha256": "4091dbedd3779aac776e27e8e5a12a42fd6a122e7307f3693b32e4021998c22a"
+    },
+    "lobmm.orders": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/orders.py",
+      "relative_path": "src/lobmm/orders.py",
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e"
+    },
+    "lobmm.portfolio": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/portfolio.py",
+      "relative_path": "src/lobmm/portfolio.py",
+      "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35"
+    },
+    "lobmm.queue_model": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/queue_model.py",
+      "relative_path": "src/lobmm/queue_model.py",
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2"
+    },
+    "lobmm.risk": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/risk.py",
+      "relative_path": "src/lobmm/risk.py",
+      "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413"
+    },
+    "lobmm.scheduler": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/scheduler.py",
+      "relative_path": "src/lobmm/scheduler.py",
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13"
+    },
+    "lobmm.strategies": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/__init__.py",
+      "relative_path": "src/lobmm/strategies/__init__.py",
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19"
+    },
+    "lobmm.strategies.base": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/base.py",
+      "relative_path": "src/lobmm/strategies/base.py",
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2"
+    },
+    "lobmm.strategies.fixed_spread": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/fixed_spread.py",
+      "relative_path": "src/lobmm/strategies/fixed_spread.py",
+      "sha256": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c"
+    },
+    "lobmm.strategies.inventory_aware": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/inventory_aware.py",
+      "relative_path": "src/lobmm/strategies/inventory_aware.py",
+      "sha256": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972"
+    },
+    "lobmm.strategies.microprice": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategies/microprice.py",
+      "relative_path": "src/lobmm/strategies/microprice.py",
+      "sha256": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa"
+    },
+    "lobmm.strategy_runtime": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/strategy_runtime.py",
+      "relative_path": "src/lobmm/strategy_runtime.py",
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344"
+    },
+    "lobmm.types": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/types.py",
+      "relative_path": "src/lobmm/types.py",
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b"
+    },
+    "lobmm.validation": {
+      "path": "/workspace/lob-market-maker-integration/experiments/component-integration-20261115/primary/sources/c1/src/lobmm/validation.py",
+      "relative_path": "src/lobmm/validation.py",
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+    }
+  },
+  "finished_utc": "2026-11-15T15:04:51.400429+00:00"
+}

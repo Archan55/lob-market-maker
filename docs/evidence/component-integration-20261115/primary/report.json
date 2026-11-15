@@ -1,0 +1,2505 @@
+{
+  "checks": {
+    "six_complete_observations": true,
+    "all_core_mechanics": true,
+    "C0/below_drawdown:kill_control": true,
+    "C0/below_drawdown:first_kill_time_and_reason": true,
+    "C0/below_drawdown:runtime_t20": true,
+    "C0/below_drawdown:accepted_ask_cancel_delay": true,
+    "C0/below_drawdown:negative_risk_control": true,
+    "C1/below_drawdown:exact_risk_and_context": true,
+    "C1/below_drawdown:kill_control": true,
+    "C1/below_drawdown:first_kill_time_and_reason": true,
+    "C1/below_drawdown:runtime_t20": true,
+    "C0/inclusive_loss:kill_control": true,
+    "C0/inclusive_loss:first_kill_time_and_reason": true,
+    "C0/inclusive_loss:runtime_t20": true,
+    "C0/inclusive_loss:accepted_ask_cancel_delay": true,
+    "C0/inclusive_loss:risk_controls": true,
+    "C1/inclusive_loss:exact_risk_and_context": true,
+    "C1/inclusive_loss:kill_control": true,
+    "C1/inclusive_loss:first_kill_time_and_reason": true,
+    "C1/inclusive_loss:runtime_t20": true,
+    "C1/inclusive_loss:accepted_ask_cancel_delay": true,
+    "C0/ordinary:kill_control": true,
+    "C0/ordinary:first_kill_time_and_reason": true,
+    "C0/ordinary:runtime_t20": true,
+    "C0/ordinary:risk_controls": true,
+    "C1/ordinary:exact_risk_and_context": true,
+    "C1/ordinary:kill_control": true,
+    "C1/ordinary:first_kill_time_and_reason": true,
+    "C1/ordinary:runtime_t20": true
+  },
+  "criterion": true,
+  "observations": [
+    {
+      "source": "C0",
+      "case": "below_drawdown",
+      "evaluation": {
+        "checks": {
+          "one_expected_maker_fill": true,
+          "exact_literal_exchange_fee": true,
+          "complete_ordered_risk_call_vector": true,
+          "risk_links_latest_original_snapshot": true,
+          "all_exact_risk_handoffs": true,
+          "all_risk_calls_default_precision": true,
+          "exact_zero_high_watermark": true,
+          "all_snapshot_ledgers_exact": true,
+          "six_projection_backed_market_and_fill_calls": true,
+          "float_projections_only": true,
+          "pnl_artifact_matches_projection_order": true,
+          "elapsed_inventory_exposure": true,
+          "horizon_quantity_coverage": true,
+          "two_markout_rows_link_the_only_bid_fill": true,
+          "asof_and_censoring": true,
+          "end_inventory_one": true,
+          "post_fill_runtime_gate_recorded": true,
+          "original_ask_acceptance_identity_and_time": true,
+          "accepted_original_ask_recorded": true,
+          "canonical_roundtrip_exact": true
+        },
+        "ledger": {
+          "market_states": [
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 0,
+              "event_type": "SNAPSHOT",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": null,
+              "midpoint": null,
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 1,
+              "event_type": "SNAPSHOT",
+              "side": -1,
+              "price_ticks": 101,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 10,
+              "sequence_number": 2,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 100,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 201,
+                "denominator": 2
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 20,
+              "sequence_number": 3,
+              "event_type": "TRADE",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 0
+            },
+            {
+              "timestamp_ns": 30,
+              "sequence_number": 4,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 40,
+              "sequence_number": 5,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 2
+            }
+          ],
+          "fill": {
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 100,
+            "exchange_fill_timestamp_ns": 20,
+            "liquidity_role": "maker"
+          },
+          "fee": {
+            "numerator": 99999999999999999999999999999,
+            "denominator": 100000000000000000000000000000
+          },
+          "trade_cash": {
+            "numerator": -100,
+            "denominator": 1
+          },
+          "cash_after_fill": {
+            "numerator": -10099999999999999999999999999999,
+            "denominator": 100000000000000000000000000000
+          },
+          "inventory_after_fill": 1,
+          "mark_after_fill": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "net_after_fill": {
+            "numerator": -99999999999999999999999999999,
+            "denominator": 100000000000000000000000000000
+          },
+          "high_watermark": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "max_loss": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "max_drawdown": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "exposure_start_ns": 20,
+          "exposure_end_ns": 40,
+          "near_limit_duration_ns": 20,
+          "observation_duration_ns": 40,
+          "horizon_5": {
+            "target_timestamp_ns": 25,
+            "future_timestamp_ns": 30,
+            "observed_quantity": 1,
+            "markout_ticks": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          },
+          "horizon_30": {
+            "target_timestamp_ns": 50,
+            "future_timestamp_ns": null,
+            "observed_quantity": 0,
+            "markout_ticks": null
+          }
+        },
+        "risk_calls": [
+          {
+            "ordinal": 9,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 15,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 36,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 41,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 49,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": false,
+            "context_preserved": false,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 56,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": false,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 62,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": false,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 82,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": false,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 87,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": false,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 96,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": false,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 102,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": false,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          }
+        ],
+        "risk_oracle_agreement": false,
+        "risk_context_preserved": false,
+        "kill_switch_active": true,
+        "first_kill": {
+          "timestamp_ns": 20,
+          "reason": "max_drawdown"
+        },
+        "runtime_at20": [
+          {
+            "ordinal": 64,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              0,
+              40,
+              0,
+              25
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": false,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [
+              {
+                "type": "lobmm.orders.CancelRequest",
+                "decision_timestamp_ns": 20,
+                "send_timestamp_ns": 20,
+                "order_id": "O000000000002",
+                "client_order_id": null
+              }
+            ],
+            "delegations": 1
+          }
+        ],
+        "cancelled_original_ask_at25": true,
+        "original_ask_order_id": "O000000000002",
+        "all_later_runtime_gates_suppressed": true,
+        "all_at20_runtime_gates_enabled": false
+      }
+    },
+    {
+      "source": "C1",
+      "case": "below_drawdown",
+      "evaluation": {
+        "checks": {
+          "one_expected_maker_fill": true,
+          "exact_literal_exchange_fee": true,
+          "complete_ordered_risk_call_vector": true,
+          "risk_links_latest_original_snapshot": true,
+          "all_exact_risk_handoffs": true,
+          "all_risk_calls_default_precision": true,
+          "exact_zero_high_watermark": true,
+          "all_snapshot_ledgers_exact": true,
+          "six_projection_backed_market_and_fill_calls": true,
+          "float_projections_only": true,
+          "pnl_artifact_matches_projection_order": true,
+          "elapsed_inventory_exposure": true,
+          "horizon_quantity_coverage": true,
+          "two_markout_rows_link_the_only_bid_fill": true,
+          "asof_and_censoring": true,
+          "end_inventory_one": true,
+          "post_fill_runtime_gate_recorded": true,
+          "original_ask_acceptance_identity_and_time": true,
+          "accepted_original_ask_recorded": true,
+          "canonical_roundtrip_exact": true
+        },
+        "ledger": {
+          "market_states": [
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 0,
+              "event_type": "SNAPSHOT",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": null,
+              "midpoint": null,
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 1,
+              "event_type": "SNAPSHOT",
+              "side": -1,
+              "price_ticks": 101,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 10,
+              "sequence_number": 2,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 100,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 201,
+                "denominator": 2
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 20,
+              "sequence_number": 3,
+              "event_type": "TRADE",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 0
+            },
+            {
+              "timestamp_ns": 30,
+              "sequence_number": 4,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 40,
+              "sequence_number": 5,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 2
+            }
+          ],
+          "fill": {
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 100,
+            "exchange_fill_timestamp_ns": 20,
+            "liquidity_role": "maker"
+          },
+          "fee": {
+            "numerator": 99999999999999999999999999999,
+            "denominator": 100000000000000000000000000000
+          },
+          "trade_cash": {
+            "numerator": -100,
+            "denominator": 1
+          },
+          "cash_after_fill": {
+            "numerator": -10099999999999999999999999999999,
+            "denominator": 100000000000000000000000000000
+          },
+          "inventory_after_fill": 1,
+          "mark_after_fill": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "net_after_fill": {
+            "numerator": -99999999999999999999999999999,
+            "denominator": 100000000000000000000000000000
+          },
+          "high_watermark": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "max_loss": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "max_drawdown": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "exposure_start_ns": 20,
+          "exposure_end_ns": 40,
+          "near_limit_duration_ns": 20,
+          "observation_duration_ns": 40,
+          "horizon_5": {
+            "target_timestamp_ns": 25,
+            "future_timestamp_ns": 30,
+            "observed_quantity": 1,
+            "markout_ticks": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          },
+          "horizon_30": {
+            "target_timestamp_ns": 50,
+            "future_timestamp_ns": null,
+            "observed_quantity": 0,
+            "markout_ticks": null
+          }
+        },
+        "risk_calls": [
+          {
+            "ordinal": 9,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 15,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 36,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 41,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 49,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 55,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 61,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 77,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 82,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 91,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 103,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -99999999999999999999999999999,
+                "denominator": 100000000000000000000000000000
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          }
+        ],
+        "risk_oracle_agreement": true,
+        "risk_context_preserved": true,
+        "kill_switch_active": false,
+        "first_kill": null,
+        "runtime_at20": [
+          {
+            "ordinal": 63,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              0,
+              40,
+              0,
+              24
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": true,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [
+              {
+                "type": "lobmm.orders.NewOrderRequest",
+                "client_order_id": "market-maker-000000000003",
+                "side": {
+                  "enum": "lobmm.enums.Side",
+                  "value": 1
+                },
+                "price_ticks": 100,
+                "quantity": 1,
+                "strategy_id": "market-maker",
+                "decision_timestamp_ns": 20,
+                "send_timestamp_ns": 20,
+                "post_only": true,
+                "rest_unfilled": true,
+                "expire_timestamp_ns": null
+              }
+            ],
+            "delegations": 1
+          },
+          {
+            "ordinal": 70,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              1,
+              40,
+              0,
+              27
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": true,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [],
+            "delegations": 1
+          }
+        ],
+        "cancelled_original_ask_at25": false,
+        "original_ask_order_id": "O000000000002",
+        "all_later_runtime_gates_suppressed": false,
+        "all_at20_runtime_gates_enabled": true
+      }
+    },
+    {
+      "source": "C0",
+      "case": "inclusive_loss",
+      "evaluation": {
+        "checks": {
+          "one_expected_maker_fill": true,
+          "exact_literal_exchange_fee": true,
+          "complete_ordered_risk_call_vector": true,
+          "risk_links_latest_original_snapshot": true,
+          "all_exact_risk_handoffs": true,
+          "all_risk_calls_default_precision": true,
+          "exact_zero_high_watermark": true,
+          "all_snapshot_ledgers_exact": true,
+          "six_projection_backed_market_and_fill_calls": true,
+          "float_projections_only": true,
+          "pnl_artifact_matches_projection_order": true,
+          "elapsed_inventory_exposure": true,
+          "horizon_quantity_coverage": true,
+          "two_markout_rows_link_the_only_bid_fill": true,
+          "asof_and_censoring": true,
+          "end_inventory_one": true,
+          "post_fill_runtime_gate_recorded": true,
+          "original_ask_acceptance_identity_and_time": true,
+          "accepted_original_ask_recorded": true,
+          "canonical_roundtrip_exact": true
+        },
+        "ledger": {
+          "market_states": [
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 0,
+              "event_type": "SNAPSHOT",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": null,
+              "midpoint": null,
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 1,
+              "event_type": "SNAPSHOT",
+              "side": -1,
+              "price_ticks": 101,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 10,
+              "sequence_number": 2,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 100,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 201,
+                "denominator": 2
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 20,
+              "sequence_number": 3,
+              "event_type": "TRADE",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 0
+            },
+            {
+              "timestamp_ns": 30,
+              "sequence_number": 4,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 40,
+              "sequence_number": 5,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 2
+            }
+          ],
+          "fill": {
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 100,
+            "exchange_fill_timestamp_ns": 20,
+            "liquidity_role": "maker"
+          },
+          "fee": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "trade_cash": {
+            "numerator": -100,
+            "denominator": 1
+          },
+          "cash_after_fill": {
+            "numerator": -101,
+            "denominator": 1
+          },
+          "inventory_after_fill": 1,
+          "mark_after_fill": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "net_after_fill": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "high_watermark": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "max_loss": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "max_drawdown": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "exposure_start_ns": 20,
+          "exposure_end_ns": 40,
+          "near_limit_duration_ns": 20,
+          "observation_duration_ns": 40,
+          "horizon_5": {
+            "target_timestamp_ns": 25,
+            "future_timestamp_ns": 30,
+            "observed_quantity": 1,
+            "markout_ticks": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          },
+          "horizon_30": {
+            "target_timestamp_ns": 50,
+            "future_timestamp_ns": null,
+            "observed_quantity": 0,
+            "markout_ticks": null
+          }
+        },
+        "risk_calls": [
+          {
+            "ordinal": 9,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 15,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 36,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 41,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 49,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 56,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 62,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 82,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 87,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 96,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 102,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          }
+        ],
+        "risk_oracle_agreement": true,
+        "risk_context_preserved": true,
+        "kill_switch_active": true,
+        "first_kill": {
+          "timestamp_ns": 20,
+          "reason": "max_loss"
+        },
+        "runtime_at20": [
+          {
+            "ordinal": 64,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              0,
+              40,
+              0,
+              25
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": false,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [
+              {
+                "type": "lobmm.orders.CancelRequest",
+                "decision_timestamp_ns": 20,
+                "send_timestamp_ns": 20,
+                "order_id": "O000000000002",
+                "client_order_id": null
+              }
+            ],
+            "delegations": 1
+          }
+        ],
+        "cancelled_original_ask_at25": true,
+        "original_ask_order_id": "O000000000002",
+        "all_later_runtime_gates_suppressed": true,
+        "all_at20_runtime_gates_enabled": false
+      }
+    },
+    {
+      "source": "C1",
+      "case": "inclusive_loss",
+      "evaluation": {
+        "checks": {
+          "one_expected_maker_fill": true,
+          "exact_literal_exchange_fee": true,
+          "complete_ordered_risk_call_vector": true,
+          "risk_links_latest_original_snapshot": true,
+          "all_exact_risk_handoffs": true,
+          "all_risk_calls_default_precision": true,
+          "exact_zero_high_watermark": true,
+          "all_snapshot_ledgers_exact": true,
+          "six_projection_backed_market_and_fill_calls": true,
+          "float_projections_only": true,
+          "pnl_artifact_matches_projection_order": true,
+          "elapsed_inventory_exposure": true,
+          "horizon_quantity_coverage": true,
+          "two_markout_rows_link_the_only_bid_fill": true,
+          "asof_and_censoring": true,
+          "end_inventory_one": true,
+          "post_fill_runtime_gate_recorded": true,
+          "original_ask_acceptance_identity_and_time": true,
+          "accepted_original_ask_recorded": true,
+          "canonical_roundtrip_exact": true
+        },
+        "ledger": {
+          "market_states": [
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 0,
+              "event_type": "SNAPSHOT",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": null,
+              "midpoint": null,
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 1,
+              "event_type": "SNAPSHOT",
+              "side": -1,
+              "price_ticks": 101,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 10,
+              "sequence_number": 2,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 100,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 201,
+                "denominator": 2
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 20,
+              "sequence_number": 3,
+              "event_type": "TRADE",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 0
+            },
+            {
+              "timestamp_ns": 30,
+              "sequence_number": 4,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 40,
+              "sequence_number": 5,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 2
+            }
+          ],
+          "fill": {
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 100,
+            "exchange_fill_timestamp_ns": 20,
+            "liquidity_role": "maker"
+          },
+          "fee": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "trade_cash": {
+            "numerator": -100,
+            "denominator": 1
+          },
+          "cash_after_fill": {
+            "numerator": -101,
+            "denominator": 1
+          },
+          "inventory_after_fill": 1,
+          "mark_after_fill": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "net_after_fill": {
+            "numerator": -1,
+            "denominator": 1
+          },
+          "high_watermark": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "max_loss": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "max_drawdown": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "exposure_start_ns": 20,
+          "exposure_end_ns": 40,
+          "near_limit_duration_ns": 20,
+          "observation_duration_ns": 40,
+          "horizon_5": {
+            "target_timestamp_ns": 25,
+            "future_timestamp_ns": 30,
+            "observed_quantity": 1,
+            "markout_ticks": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          },
+          "horizon_30": {
+            "target_timestamp_ns": 50,
+            "future_timestamp_ns": null,
+            "observed_quantity": 0,
+            "markout_ticks": null
+          }
+        },
+        "risk_calls": [
+          {
+            "ordinal": 9,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 15,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 36,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 41,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 49,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 56,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 62,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 82,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 87,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 96,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 102,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 1
+              },
+              "approved": false,
+              "kill_reason": "max_loss"
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          }
+        ],
+        "risk_oracle_agreement": true,
+        "risk_context_preserved": true,
+        "kill_switch_active": true,
+        "first_kill": {
+          "timestamp_ns": 20,
+          "reason": "max_loss"
+        },
+        "runtime_at20": [
+          {
+            "ordinal": 64,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              0,
+              40,
+              0,
+              25
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": false,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [
+              {
+                "type": "lobmm.orders.CancelRequest",
+                "decision_timestamp_ns": 20,
+                "send_timestamp_ns": 20,
+                "order_id": "O000000000002",
+                "client_order_id": null
+              }
+            ],
+            "delegations": 1
+          }
+        ],
+        "cancelled_original_ask_at25": true,
+        "original_ask_order_id": "O000000000002",
+        "all_later_runtime_gates_suppressed": true,
+        "all_at20_runtime_gates_enabled": false
+      }
+    },
+    {
+      "source": "C0",
+      "case": "ordinary",
+      "evaluation": {
+        "checks": {
+          "one_expected_maker_fill": true,
+          "exact_literal_exchange_fee": true,
+          "complete_ordered_risk_call_vector": true,
+          "risk_links_latest_original_snapshot": true,
+          "all_exact_risk_handoffs": true,
+          "all_risk_calls_default_precision": true,
+          "exact_zero_high_watermark": true,
+          "all_snapshot_ledgers_exact": true,
+          "six_projection_backed_market_and_fill_calls": true,
+          "float_projections_only": true,
+          "pnl_artifact_matches_projection_order": true,
+          "elapsed_inventory_exposure": true,
+          "horizon_quantity_coverage": true,
+          "two_markout_rows_link_the_only_bid_fill": true,
+          "asof_and_censoring": true,
+          "end_inventory_one": true,
+          "post_fill_runtime_gate_recorded": true,
+          "original_ask_acceptance_identity_and_time": true,
+          "accepted_original_ask_recorded": true,
+          "canonical_roundtrip_exact": true
+        },
+        "ledger": {
+          "market_states": [
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 0,
+              "event_type": "SNAPSHOT",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": null,
+              "midpoint": null,
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 1,
+              "event_type": "SNAPSHOT",
+              "side": -1,
+              "price_ticks": 101,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 10,
+              "sequence_number": 2,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 100,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 201,
+                "denominator": 2
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 20,
+              "sequence_number": 3,
+              "event_type": "TRADE",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 0
+            },
+            {
+              "timestamp_ns": 30,
+              "sequence_number": 4,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 40,
+              "sequence_number": 5,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 2
+            }
+          ],
+          "fill": {
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 100,
+            "exchange_fill_timestamp_ns": 20,
+            "liquidity_role": "maker"
+          },
+          "fee": {
+            "numerator": 1,
+            "denominator": 100
+          },
+          "trade_cash": {
+            "numerator": -100,
+            "denominator": 1
+          },
+          "cash_after_fill": {
+            "numerator": -10001,
+            "denominator": 100
+          },
+          "inventory_after_fill": 1,
+          "mark_after_fill": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "net_after_fill": {
+            "numerator": -1,
+            "denominator": 100
+          },
+          "high_watermark": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "max_loss": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "max_drawdown": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "exposure_start_ns": 20,
+          "exposure_end_ns": 40,
+          "near_limit_duration_ns": 20,
+          "observation_duration_ns": 40,
+          "horizon_5": {
+            "target_timestamp_ns": 25,
+            "future_timestamp_ns": 30,
+            "observed_quantity": 1,
+            "markout_ticks": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          },
+          "horizon_30": {
+            "target_timestamp_ns": 50,
+            "future_timestamp_ns": null,
+            "observed_quantity": 0,
+            "markout_ticks": null
+          }
+        },
+        "risk_calls": [
+          {
+            "ordinal": 9,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 15,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 36,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 41,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 49,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 55,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 61,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 77,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 82,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 91,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 103,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          }
+        ],
+        "risk_oracle_agreement": true,
+        "risk_context_preserved": true,
+        "kill_switch_active": false,
+        "first_kill": null,
+        "runtime_at20": [
+          {
+            "ordinal": 63,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              0,
+              40,
+              0,
+              24
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": true,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [
+              {
+                "type": "lobmm.orders.NewOrderRequest",
+                "client_order_id": "market-maker-000000000003",
+                "side": {
+                  "enum": "lobmm.enums.Side",
+                  "value": 1
+                },
+                "price_ticks": 100,
+                "quantity": 1,
+                "strategy_id": "market-maker",
+                "decision_timestamp_ns": 20,
+                "send_timestamp_ns": 20,
+                "post_only": true,
+                "rest_unfilled": true,
+                "expire_timestamp_ns": null
+              }
+            ],
+            "delegations": 1
+          },
+          {
+            "ordinal": 70,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              1,
+              40,
+              0,
+              27
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": true,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [],
+            "delegations": 1
+          }
+        ],
+        "cancelled_original_ask_at25": false,
+        "original_ask_order_id": "O000000000002",
+        "all_later_runtime_gates_suppressed": false,
+        "all_at20_runtime_gates_enabled": true
+      }
+    },
+    {
+      "source": "C1",
+      "case": "ordinary",
+      "evaluation": {
+        "checks": {
+          "one_expected_maker_fill": true,
+          "exact_literal_exchange_fee": true,
+          "complete_ordered_risk_call_vector": true,
+          "risk_links_latest_original_snapshot": true,
+          "all_exact_risk_handoffs": true,
+          "all_risk_calls_default_precision": true,
+          "exact_zero_high_watermark": true,
+          "all_snapshot_ledgers_exact": true,
+          "six_projection_backed_market_and_fill_calls": true,
+          "float_projections_only": true,
+          "pnl_artifact_matches_projection_order": true,
+          "elapsed_inventory_exposure": true,
+          "horizon_quantity_coverage": true,
+          "two_markout_rows_link_the_only_bid_fill": true,
+          "asof_and_censoring": true,
+          "end_inventory_one": true,
+          "post_fill_runtime_gate_recorded": true,
+          "original_ask_acceptance_identity_and_time": true,
+          "accepted_original_ask_recorded": true,
+          "canonical_roundtrip_exact": true
+        },
+        "ledger": {
+          "market_states": [
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 0,
+              "event_type": "SNAPSHOT",
+              "side": 1,
+              "price_ticks": 99,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": null,
+              "midpoint": null,
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 0,
+              "sequence_number": 1,
+              "event_type": "SNAPSHOT",
+              "side": -1,
+              "price_ticks": 101,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 10,
+              "sequence_number": 2,
+              "event_type": "ADD",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 100,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 201,
+                "denominator": 2
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 20,
+              "sequence_number": 3,
+              "event_type": "TRADE",
+              "side": 1,
+              "price_ticks": 100,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 0
+            },
+            {
+              "timestamp_ns": 30,
+              "sequence_number": 4,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 0,
+              "historical_quantity_after": 1
+            },
+            {
+              "timestamp_ns": 40,
+              "sequence_number": 5,
+              "event_type": "ADD",
+              "side": -1,
+              "price_ticks": 103,
+              "quantity": 1,
+              "best_bid": 99,
+              "best_ask": 101,
+              "midpoint": {
+                "numerator": 100,
+                "denominator": 1
+              },
+              "historical_quantity_before": 1,
+              "historical_quantity_after": 2
+            }
+          ],
+          "fill": {
+            "side": 1,
+            "quantity": 1,
+            "price_ticks": 100,
+            "exchange_fill_timestamp_ns": 20,
+            "liquidity_role": "maker"
+          },
+          "fee": {
+            "numerator": 1,
+            "denominator": 100
+          },
+          "trade_cash": {
+            "numerator": -100,
+            "denominator": 1
+          },
+          "cash_after_fill": {
+            "numerator": -10001,
+            "denominator": 100
+          },
+          "inventory_after_fill": 1,
+          "mark_after_fill": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "net_after_fill": {
+            "numerator": -1,
+            "denominator": 100
+          },
+          "high_watermark": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "max_loss": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "max_drawdown": {
+            "numerator": 100,
+            "denominator": 1
+          },
+          "exposure_start_ns": 20,
+          "exposure_end_ns": 40,
+          "near_limit_duration_ns": 20,
+          "observation_duration_ns": 40,
+          "horizon_5": {
+            "target_timestamp_ns": 25,
+            "future_timestamp_ns": 30,
+            "observed_quantity": 1,
+            "markout_ticks": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          },
+          "horizon_30": {
+            "target_timestamp_ns": 50,
+            "future_timestamp_ns": null,
+            "observed_quantity": 0,
+            "markout_ticks": null
+          }
+        },
+        "risk_calls": [
+          {
+            "ordinal": 9,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 15,
+            "timestamp_ns": 0,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 36,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 41,
+            "timestamp_ns": 10,
+            "oracle": {
+              "net_pnl": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 49,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 55,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 61,
+            "timestamp_ns": 20,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 77,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 82,
+            "timestamp_ns": 30,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 91,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          },
+          {
+            "ordinal": 103,
+            "timestamp_ns": 40,
+            "oracle": {
+              "net_pnl": {
+                "numerator": -1,
+                "denominator": 100
+              },
+              "approved": true,
+              "kill_reason": null
+            },
+            "exact_net_matches": true,
+            "decision_matches": true,
+            "context_preserved": true,
+            "same_snapshot_decimal": true
+          }
+        ],
+        "risk_oracle_agreement": true,
+        "risk_context_preserved": true,
+        "kill_switch_active": false,
+        "first_kill": null,
+        "runtime_at20": [
+          {
+            "ordinal": 63,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              0,
+              40,
+              0,
+              24
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": true,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [
+              {
+                "type": "lobmm.orders.NewOrderRequest",
+                "client_order_id": "market-maker-000000000003",
+                "side": {
+                  "enum": "lobmm.enums.Side",
+                  "value": 1
+                },
+                "price_ticks": 100,
+                "quantity": 1,
+                "strategy_id": "market-maker",
+                "decision_timestamp_ns": 20,
+                "send_timestamp_ns": 20,
+                "post_only": true,
+                "rest_unfilled": true,
+                "expire_timestamp_ns": null
+              }
+            ],
+            "delegations": 1
+          },
+          {
+            "ordinal": 70,
+            "kind": "runtime_decision",
+            "scheduler_key": [
+              20,
+              1,
+              40,
+              0,
+              27
+            ],
+            "timestamp_ns": 20,
+            "allow_new_quotes": true,
+            "known_inventory": 1,
+            "observed_sequence": 3,
+            "actions": [],
+            "delegations": 1
+          }
+        ],
+        "cancelled_original_ask_at25": false,
+        "original_ask_order_id": "O000000000002",
+        "all_later_runtime_gates_suppressed": false,
+        "all_at20_runtime_gates_enabled": true
+      }
+    }
+  ]
+}
