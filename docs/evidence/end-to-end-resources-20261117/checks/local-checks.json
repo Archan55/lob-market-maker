@@ -1,0 +1,51 @@
+{
+  "application_source": "0866bf13e449cd66e3862454eaaf424a5172c33a",
+  "cli_smoke": {
+    "events": 300,
+    "log": "smoke.txt",
+    "passed": true,
+    "scope": "Existing synthetic correctness check after resource workers, not part of RSS observations"
+  },
+  "full_pytest": {
+    "coverage_percent": 90.86,
+    "log": "full-pytest.txt",
+    "passed": 623
+  },
+  "mypy": {
+    "log": "mypy.txt",
+    "passed": true,
+    "source_files": 37
+  },
+  "new_sizes_or_seeds_after_results": 0,
+  "preflight_pure_tests": {
+    "application_workers": 0,
+    "passed": 31
+  },
+  "primary_resource_workers": 4,
+  "publication_copy": {
+    "byte_identical_to_original": true,
+    "files": 292
+  },
+  "publication_relocation_verifier": {
+    "log": "publication-verification.json",
+    "no_new_resource_workers": true,
+    "passed": true
+  },
+  "resource_retries": 0,
+  "resource_source_seal": "9416af6edb46be6f4bb15be9a5d0d3c799e30cd5",
+  "resource_workers_in_ci": 0,
+  "ruff": {
+    "formatted_files": 257,
+    "logs": [
+      "ruff-check.txt",
+      "ruff-format.txt"
+    ],
+    "passed": true
+  },
+  "saved_verification": {
+    "log": "saved-verification.json",
+    "no_new_resource_workers": true,
+    "passed": true
+  },
+  "warnings": "29 Fontconfig No writable cache directories diagnostics per worker, all retained, no repairs or reruns"
+}
