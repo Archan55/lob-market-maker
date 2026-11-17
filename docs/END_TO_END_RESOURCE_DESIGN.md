@@ -148,6 +148,9 @@ summary contains no timing/memory fields and the fixed run name is identical).
 Use the application's actual plots/ subdirectory for the twelve PNG paths.
 Intervals with no periodic RSS samples are absent/null, not zero; retain every
 interval tied for the largest sampled RSS rather than selecting a favorable tie.
+The headline sampled lifecycle maximum includes labeled startup and the seven
+pipeline intervals, but excludes after_application_complete samples. Keep any
+post-completion samples and their statistics separately as bookkeeping evidence.
 
 Operational caps: 120 seconds per worker, 600 seconds for the four-worker stage,
 1 GiB sampled worker RSS and 512 MiB total attempt-directory logical output.
