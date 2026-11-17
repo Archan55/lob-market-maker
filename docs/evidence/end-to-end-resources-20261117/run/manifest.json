@@ -1,0 +1,1924 @@
+{
+  "status": "complete",
+  "plan_sha256": "ffcfa3bae32b4263c9e6d681b2291ffad69b0732f35e38ff62bf942792ef62b0",
+  "attempts": [
+    {
+      "id": "001",
+      "status": "complete"
+    },
+    {
+      "id": "002",
+      "status": "complete"
+    },
+    {
+      "id": "003",
+      "status": "complete"
+    },
+    {
+      "id": "004",
+      "status": "complete"
+    }
+  ],
+  "controller_excluded_from_worker_rss": true,
+  "worker_stage_started_ns": 2142177764013,
+  "worker_stage_finished_ns": 2213194846899,
+  "worker_stage_elapsed_ns": 71017082886,
+  "original_file_stats": {
+    "attempts/001/boundaries.jsonl": {
+      "sha256": "41b8750d2bc793c57a7d90106eb77801345ba1651f67c27f2afac06cd56a94c7",
+      "logical_bytes": 16701,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/001/cache/fontlist-v3.11.0.json": {
+      "sha256": "380f639fa381aaffb6124b74db9105a2c6121eb1ddfd692f5be061cf4a98b3e7",
+      "logical_bytes": 228759,
+      "allocated_blocks": 448,
+      "allocated_bytes": 229376
+    },
+    "attempts/001/disk-polls.jsonl": {
+      "sha256": "2ce7b5c6a7994d53b2f53fcb9c2c18b2e59b3323a587e89fe2718f8b2479b26e",
+      "logical_bytes": 19364,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/001/engine/resource-study/diagnostics.json": {
+      "sha256": "ffe329e321ab0130ad05c51cd3b668fec204cb1cf29434ea2d58c94559c292fe",
+      "logical_bytes": 1973,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/engine/resource-study/fills.parquet": {
+      "sha256": "7d06fe06c1b1189bcb855ffe349db95d2bda49537a79467f6d6b4d221ef3c0cd",
+      "logical_bytes": 7876,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/001/engine/resource-study/inventory.parquet": {
+      "sha256": "b613d18d28537432cea8553ccd945a344562c005cc5edeb554ed5fa34fcd906e",
+      "logical_bytes": 9020,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/001/engine/resource-study/market.parquet": {
+      "sha256": "0b653b10e4abf901f02f897d4e42e1b4ddd8a936746ebae89273b75f696d1360",
+      "logical_bytes": 38943,
+      "allocated_blocks": 80,
+      "allocated_bytes": 40960
+    },
+    "attempts/001/engine/resource-study/markouts.parquet": {
+      "sha256": "72c0a8a38039221e0b584d7e61dda2a517293af7873e02ab28da6fd1a1262318",
+      "logical_bytes": 6781,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/001/engine/resource-study/metrics.json": {
+      "sha256": "1fbe6f3c665e4e53abbeea12d8fc2ad80658f5d315a001d370e567b6ca6c28ab",
+      "logical_bytes": 7737,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/001/engine/resource-study/orders.parquet": {
+      "sha256": "7242718b5191f7f156ba40658ef408e4942ec42e054bc16e7646b01fb87cc52f",
+      "logical_bytes": 25430,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/001/engine/resource-study/plots/drawdown.png": {
+      "sha256": "525a879c960c405cdbc3d08166278bdf3de28e54673c8353c870baee084e2d68",
+      "logical_bytes": 50826,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/001/engine/resource-study/plots/fill_locations.png": {
+      "sha256": "d8c45af7557b40b4cc22ec4d61b4c82928981992f5905c953c796ee3a039a016",
+      "logical_bytes": 61669,
+      "allocated_blocks": 128,
+      "allocated_bytes": 65536
+    },
+    "attempts/001/engine/resource-study/plots/gross_and_net_pnl.png": {
+      "sha256": "6600b25b49a13c4b05170dff2cd26d44d130d5bf5806ecf87dda3d41763cc2bd",
+      "logical_bytes": 68974,
+      "allocated_blocks": 136,
+      "allocated_bytes": 69632
+    },
+    "attempts/001/engine/resource-study/plots/inventory_histogram.png": {
+      "sha256": "432fb8f0c33c03dd564486a987869315e75d049a34034cdac9483b6e5e4b1347",
+      "logical_bytes": 24285,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/001/engine/resource-study/plots/inventory_over_time.png": {
+      "sha256": "3cafd2ab6ad0e4bbd3c0c76dedefd349be719bbc8eb6e73caa22926077f6db9f",
+      "logical_bytes": 30377,
+      "allocated_blocks": 64,
+      "allocated_bytes": 32768
+    },
+    "attempts/001/engine/resource-study/plots/latency_sensitivity.png": {
+      "sha256": "234725bce77b10cbe83738f440422a980582da075213ed4a357fea40ad9dfa82",
+      "logical_bytes": 16247,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/001/engine/resource-study/plots/markout_by_horizon.png": {
+      "sha256": "d7b457e8427be57f3b15f895ef67b36d4bfc7d689f69efe14ebc376a82f5f39d",
+      "logical_bytes": 23759,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/001/engine/resource-study/plots/markout_distribution.png": {
+      "sha256": "712214beaf410d0006cb803b93110b87e081d741e0155f7f87e8fe9e583df11b",
+      "logical_bytes": 26231,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/001/engine/resource-study/plots/midpoint_and_quotes.png": {
+      "sha256": "04b9c3c9d3b7302500afd0dc0d2595be6afca563e1d1fae3ba49c19f3f1266ca",
+      "logical_bytes": 92222,
+      "allocated_blocks": 184,
+      "allocated_bytes": 94208
+    },
+    "attempts/001/engine/resource-study/plots/pnl_by_market_regime.png": {
+      "sha256": "5d4cd0fe1cb7b13b9b2c1c9824ff994228d2df6085f83a9939f01c80a31a19c0",
+      "logical_bytes": 50181,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/001/engine/resource-study/plots/queue_ahead_distribution.png": {
+      "sha256": "df5c2dbd0d760c8dd78b92c1339f6a774d76dfdb6020f78ae25d8fcaa4002d59",
+      "logical_bytes": 26412,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/001/engine/resource-study/plots/strategy_comparison.png": {
+      "sha256": "25dab96ddc788af1ae8ed84c025c2fba75f15271a9008b1eb925d1f158028f58",
+      "logical_bytes": 19019,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/001/engine/resource-study/pnl.parquet": {
+      "sha256": "12370afb7baa56cf00a2e6774bc26692f7bc3fdf1699c0b11efc0c7f16ec2e13",
+      "logical_bytes": 25820,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/001/engine/resource-study/quotes.parquet": {
+      "sha256": "bd93db4c4f570c7a6331ab107d941c253b780de3c2d2e06aa85d5ffc64b250b9",
+      "logical_bytes": 10746,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/001/engine/resource-study/report_summary.txt": {
+      "sha256": "41cbf9bfd84563f3da5b8d0d2cd5ffd4007bfb43624e82c2813cef2666c01bae",
+      "logical_bytes": 338,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/engine/resource-study/risk_events.parquet": {
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+      "logical_bytes": 506,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/engine/resource-study/run_config.yaml": {
+      "sha256": "9824ee3daa9b6c1447ed98c6342df0a93c0ac335b7ca4f2bfc12e7307417ee9f",
+      "logical_bytes": 2447,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/engine/resource-study/summary.json": {
+      "sha256": "bd98838723cce7a6a45045806bf1c834a73b3ffa4bf993153232ac6dca27b8e1",
+      "logical_bytes": 833,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/input/events.parquet": {
+      "sha256": "944deec5a3ef057e176a627550be687d15de1ba404b56dd3b2dc126b46750349",
+      "logical_bytes": 18711,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/001/process.json": {
+      "sha256": "ecfb57b4a7da16fefc4d56f46636142e2f2f5feba3f109cddb82f42ae1fdd3c6",
+      "logical_bytes": 1064,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/result.json": {
+      "sha256": "828a1a7d3ac79807bc5f600414de03daecfda1b24d8abc86bd792d6125b60ade",
+      "logical_bytes": 50154,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/001/samples.jsonl": {
+      "sha256": "7456567a348bd5da34215ffa8111e6339a55fbcbd531fd9e77aa82804d07a278",
+      "logical_bytes": 507270,
+      "allocated_blocks": 1000,
+      "allocated_bytes": 512000
+    },
+    "attempts/001/source/src/lobmm/__init__.py": {
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+      "logical_bytes": 164,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/backtest.py": {
+      "sha256": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+      "logical_bytes": 35860,
+      "allocated_blocks": 72,
+      "allocated_bytes": 36864
+    },
+    "attempts/001/source/src/lobmm/benchmark.py": {
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+      "logical_bytes": 10082,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/001/source/src/lobmm/book.py": {
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+      "logical_bytes": 12658,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/001/source/src/lobmm/case_study.py": {
+      "sha256": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+      "logical_bytes": 19449,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/001/source/src/lobmm/channels.py": {
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+      "logical_bytes": 5274,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/001/source/src/lobmm/cli.py": {
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+      "logical_bytes": 22297,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/001/source/src/lobmm/config.py": {
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+      "logical_bytes": 12286,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/001/source/src/lobmm/data/__init__.py": {
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+      "logical_bytes": 1786,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/data/_adapter_utils.py": {
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172",
+      "logical_bytes": 6206,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/001/source/src/lobmm/data/adapters.py": {
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+      "logical_bytes": 1367,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/data/fingerprint.py": {
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+      "logical_bytes": 1079,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/data/loaders.py": {
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+      "logical_bytes": 5765,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/001/source/src/lobmm/data/lobster.py": {
+      "sha256": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5",
+      "logical_bytes": 22191,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/001/source/src/lobmm/data/manifest.py": {
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+      "logical_bytes": 3983,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/data/schema.py": {
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+      "logical_bytes": 7692,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/001/source/src/lobmm/data/tardis.py": {
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+      "logical_bytes": 21020,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/001/source/src/lobmm/enums.py": {
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+      "logical_bytes": 2472,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/events.py": {
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+      "logical_bytes": 3006,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/exchange.py": {
+      "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e",
+      "logical_bytes": 16269,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/001/source/src/lobmm/experiments.py": {
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+      "logical_bytes": 18529,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/001/source/src/lobmm/metrics.py": {
+      "sha256": "4091dbedd3779aac776e27e8e5a12a42fd6a122e7307f3693b32e4021998c22a",
+      "logical_bytes": 24960,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/001/source/src/lobmm/orders.py": {
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+      "logical_bytes": 17176,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/001/source/src/lobmm/portfolio.py": {
+      "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35",
+      "logical_bytes": 24748,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/001/source/src/lobmm/py.typed": {
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "logical_bytes": 1,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/queue_model.py": {
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+      "logical_bytes": 20413,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/001/source/src/lobmm/report.py": {
+      "sha256": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+      "logical_bytes": 35929,
+      "allocated_blocks": 72,
+      "allocated_bytes": 36864
+    },
+    "attempts/001/source/src/lobmm/risk.py": {
+      "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+      "logical_bytes": 27098,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/001/source/src/lobmm/scheduler.py": {
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+      "logical_bytes": 8559,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/001/source/src/lobmm/strategies/__init__.py": {
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+      "logical_bytes": 1008,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/strategies/base.py": {
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+      "logical_bytes": 21607,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/001/source/src/lobmm/strategies/fixed_spread.py": {
+      "sha256": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c",
+      "logical_bytes": 942,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/strategies/inventory_aware.py": {
+      "sha256": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972",
+      "logical_bytes": 1229,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/strategies/microprice.py": {
+      "sha256": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa",
+      "logical_bytes": 1683,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/strategy_runtime.py": {
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+      "logical_bytes": 3433,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/synthetic.py": {
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+      "logical_bytes": 14929,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/001/source/src/lobmm/types.py": {
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b",
+      "logical_bytes": 3850,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/001/source/src/lobmm/validation.py": {
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735",
+      "logical_bytes": 7386,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/001/worker.log": {
+      "sha256": "61dc8e2e2e2b95f716435d3ad13173f990b1ff217dd6fbfefba465aac059fd66",
+      "logical_bytes": 1392,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/boundaries.jsonl": {
+      "sha256": "31403434eef2b2818e27762682aef4636272c3b0d0d92e7e590f100216781a79",
+      "logical_bytes": 16727,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/002/cache/fontlist-v3.11.0.json": {
+      "sha256": "488b20d3ab246126fff73c55ac14939062342f13b816300fffbc0c462a6c4a6b",
+      "logical_bytes": 228759,
+      "allocated_blocks": 448,
+      "allocated_bytes": 229376
+    },
+    "attempts/002/disk-polls.jsonl": {
+      "sha256": "553a962c94908da7c2a58b520d15df4411fb96e1ddf9519b8239949d7d5b5738",
+      "logical_bytes": 73679,
+      "allocated_blocks": 144,
+      "allocated_bytes": 73728
+    },
+    "attempts/002/engine/resource-study/diagnostics.json": {
+      "sha256": "6d4ca1d26b1e1e144e9c45d2be7545427fc491e708a0ae9a3900af95dd9a5483",
+      "logical_bytes": 1989,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/engine/resource-study/fills.parquet": {
+      "sha256": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+      "logical_bytes": 26501,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/002/engine/resource-study/inventory.parquet": {
+      "sha256": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba",
+      "logical_bytes": 80167,
+      "allocated_blocks": 160,
+      "allocated_bytes": 81920
+    },
+    "attempts/002/engine/resource-study/market.parquet": {
+      "sha256": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3",
+      "logical_bytes": 281058,
+      "allocated_blocks": 552,
+      "allocated_bytes": 282624
+    },
+    "attempts/002/engine/resource-study/markouts.parquet": {
+      "sha256": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+      "logical_bytes": 56415,
+      "allocated_blocks": 112,
+      "allocated_bytes": 57344
+    },
+    "attempts/002/engine/resource-study/metrics.json": {
+      "sha256": "fca1b8be8b04b5cfa6d93f29cb8a97eb3ee52644446466d30e72777f3ad70a17",
+      "logical_bytes": 7988,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/002/engine/resource-study/orders.parquet": {
+      "sha256": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0",
+      "logical_bytes": 163048,
+      "allocated_blocks": 320,
+      "allocated_bytes": 163840
+    },
+    "attempts/002/engine/resource-study/plots/drawdown.png": {
+      "sha256": "61e51fec2c6010e82b9c590cda3e43fd2299a2e2df305556f80aedf32708150e",
+      "logical_bytes": 45886,
+      "allocated_blocks": 96,
+      "allocated_bytes": 49152
+    },
+    "attempts/002/engine/resource-study/plots/fill_locations.png": {
+      "sha256": "d954ea445d72512e79d97c3f678355bb3e5e8ac2d7af5ef1b70bae944bf15e9e",
+      "logical_bytes": 70558,
+      "allocated_blocks": 144,
+      "allocated_bytes": 73728
+    },
+    "attempts/002/engine/resource-study/plots/gross_and_net_pnl.png": {
+      "sha256": "748a324abcd37b3d8090aa88cb6624026ef357fe4c48a038fa14e340b5199deb",
+      "logical_bytes": 50471,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/002/engine/resource-study/plots/inventory_histogram.png": {
+      "sha256": "990f3d1a476b20ad58cd5aa0987f30082cc27f585a2d8934f61ee579d7186750",
+      "logical_bytes": 23530,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/002/engine/resource-study/plots/inventory_over_time.png": {
+      "sha256": "c57009af72f074c7d003964e472cccd73c9addc70a678a2058d0aad55e200f9d",
+      "logical_bytes": 53628,
+      "allocated_blocks": 112,
+      "allocated_bytes": 57344
+    },
+    "attempts/002/engine/resource-study/plots/latency_sensitivity.png": {
+      "sha256": "234725bce77b10cbe83738f440422a980582da075213ed4a357fea40ad9dfa82",
+      "logical_bytes": 16247,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/002/engine/resource-study/plots/markout_by_horizon.png": {
+      "sha256": "ed18e29eb59658fa83797d40ca0b345986b878f74b939f83509760a61fbda831",
+      "logical_bytes": 22263,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/002/engine/resource-study/plots/markout_distribution.png": {
+      "sha256": "c0a9fe3a650347af119b0803eb69e015a23d2fc089eeea169c6f72f545722f4c",
+      "logical_bytes": 26948,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/002/engine/resource-study/plots/midpoint_and_quotes.png": {
+      "sha256": "ad76d60767af8aabd952b63edbc17b7777eaee954203c4d4bbcce9ab5e44dbe5",
+      "logical_bytes": 75247,
+      "allocated_blocks": 152,
+      "allocated_bytes": 77824
+    },
+    "attempts/002/engine/resource-study/plots/pnl_by_market_regime.png": {
+      "sha256": "b6116455845605cd045d2d75b5bfa6c12ded637a390c25398c876b725b258939",
+      "logical_bytes": 57540,
+      "allocated_blocks": 120,
+      "allocated_bytes": 61440
+    },
+    "attempts/002/engine/resource-study/plots/queue_ahead_distribution.png": {
+      "sha256": "114f2ff9dc28c7eaa0467f265c8bb7b56916f3c8f6d32476570d8110a304edd4",
+      "logical_bytes": 24329,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/002/engine/resource-study/plots/strategy_comparison.png": {
+      "sha256": "25dab96ddc788af1ae8ed84c025c2fba75f15271a9008b1eb925d1f158028f58",
+      "logical_bytes": 19019,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/002/engine/resource-study/pnl.parquet": {
+      "sha256": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178",
+      "logical_bytes": 229239,
+      "allocated_blocks": 448,
+      "allocated_bytes": 229376
+    },
+    "attempts/002/engine/resource-study/quotes.parquet": {
+      "sha256": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b",
+      "logical_bytes": 57476,
+      "allocated_blocks": 120,
+      "allocated_bytes": 61440
+    },
+    "attempts/002/engine/resource-study/report_summary.txt": {
+      "sha256": "436f2983c2073504616c27100a2d0388f0172e7a2dc0fd75886741656e8170cf",
+      "logical_bytes": 342,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/engine/resource-study/risk_events.parquet": {
+      "sha256": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4",
+      "logical_bytes": 3415,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/engine/resource-study/run_config.yaml": {
+      "sha256": "7e82271a7b79cb78962783320d82e5a81f2bd1d903628d4bab47b890f1d9f6a6",
+      "logical_bytes": 2448,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/engine/resource-study/summary.json": {
+      "sha256": "49d66baaaaae88f5787cc91a75edd9fc63fba9ddb8f163dbfd1ab484d9ea4e7f",
+      "logical_bytes": 836,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/input/events.parquet": {
+      "sha256": "9a9e1f24d42277739dd31a398043063867a7e6a561d309ef847d296ebf9e5f0e",
+      "logical_bytes": 143246,
+      "allocated_blocks": 280,
+      "allocated_bytes": 143360
+    },
+    "attempts/002/process.json": {
+      "sha256": "ba5ce6d817887d26bc8a3b9e9b7f96117e93f0f0a60d21d58add3c7afda783b4",
+      "logical_bytes": 1065,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/result.json": {
+      "sha256": "95ee5ca791d274525636bf686d67cba7823f815fdd4a325d893a06e3a1fa206e",
+      "logical_bytes": 50185,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/002/samples.jsonl": {
+      "sha256": "0246c545fbd4d929be46bc7eab854ad6a91a58ab29b1e19cf416917e52c4f370",
+      "logical_bytes": 2103808,
+      "allocated_blocks": 4120,
+      "allocated_bytes": 2109440
+    },
+    "attempts/002/source/src/lobmm/__init__.py": {
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+      "logical_bytes": 164,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/backtest.py": {
+      "sha256": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+      "logical_bytes": 35860,
+      "allocated_blocks": 72,
+      "allocated_bytes": 36864
+    },
+    "attempts/002/source/src/lobmm/benchmark.py": {
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+      "logical_bytes": 10082,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/002/source/src/lobmm/book.py": {
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+      "logical_bytes": 12658,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/002/source/src/lobmm/case_study.py": {
+      "sha256": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+      "logical_bytes": 19449,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/002/source/src/lobmm/channels.py": {
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+      "logical_bytes": 5274,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/002/source/src/lobmm/cli.py": {
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+      "logical_bytes": 22297,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/002/source/src/lobmm/config.py": {
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+      "logical_bytes": 12286,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/002/source/src/lobmm/data/__init__.py": {
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+      "logical_bytes": 1786,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/data/_adapter_utils.py": {
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172",
+      "logical_bytes": 6206,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/002/source/src/lobmm/data/adapters.py": {
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+      "logical_bytes": 1367,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/data/fingerprint.py": {
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+      "logical_bytes": 1079,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/data/loaders.py": {
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+      "logical_bytes": 5765,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/002/source/src/lobmm/data/lobster.py": {
+      "sha256": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5",
+      "logical_bytes": 22191,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/002/source/src/lobmm/data/manifest.py": {
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+      "logical_bytes": 3983,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/data/schema.py": {
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+      "logical_bytes": 7692,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/002/source/src/lobmm/data/tardis.py": {
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+      "logical_bytes": 21020,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/002/source/src/lobmm/enums.py": {
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+      "logical_bytes": 2472,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/events.py": {
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+      "logical_bytes": 3006,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/exchange.py": {
+      "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e",
+      "logical_bytes": 16269,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/002/source/src/lobmm/experiments.py": {
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+      "logical_bytes": 18529,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/002/source/src/lobmm/metrics.py": {
+      "sha256": "4091dbedd3779aac776e27e8e5a12a42fd6a122e7307f3693b32e4021998c22a",
+      "logical_bytes": 24960,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/002/source/src/lobmm/orders.py": {
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+      "logical_bytes": 17176,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/002/source/src/lobmm/portfolio.py": {
+      "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35",
+      "logical_bytes": 24748,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/002/source/src/lobmm/py.typed": {
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "logical_bytes": 1,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/queue_model.py": {
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+      "logical_bytes": 20413,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/002/source/src/lobmm/report.py": {
+      "sha256": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+      "logical_bytes": 35929,
+      "allocated_blocks": 72,
+      "allocated_bytes": 36864
+    },
+    "attempts/002/source/src/lobmm/risk.py": {
+      "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+      "logical_bytes": 27098,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/002/source/src/lobmm/scheduler.py": {
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+      "logical_bytes": 8559,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/002/source/src/lobmm/strategies/__init__.py": {
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+      "logical_bytes": 1008,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/strategies/base.py": {
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+      "logical_bytes": 21607,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/002/source/src/lobmm/strategies/fixed_spread.py": {
+      "sha256": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c",
+      "logical_bytes": 942,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/strategies/inventory_aware.py": {
+      "sha256": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972",
+      "logical_bytes": 1229,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/strategies/microprice.py": {
+      "sha256": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa",
+      "logical_bytes": 1683,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/strategy_runtime.py": {
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+      "logical_bytes": 3433,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/synthetic.py": {
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+      "logical_bytes": 14929,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/002/source/src/lobmm/types.py": {
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b",
+      "logical_bytes": 3850,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/002/source/src/lobmm/validation.py": {
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735",
+      "logical_bytes": 7386,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/002/worker.log": {
+      "sha256": "61dc8e2e2e2b95f716435d3ad13173f990b1ff217dd6fbfefba465aac059fd66",
+      "logical_bytes": 1392,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/boundaries.jsonl": {
+      "sha256": "a13e6d1e49b405b1b34c7987c63d36762c4c4616262508914ca6d50763e7325e",
+      "logical_bytes": 16727,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/003/cache/fontlist-v3.11.0.json": {
+      "sha256": "20017abbad0d64cc8033bddeee9e166a92bc6807ba297308139314bc9fd6285f",
+      "logical_bytes": 228759,
+      "allocated_blocks": 448,
+      "allocated_bytes": 229376
+    },
+    "attempts/003/disk-polls.jsonl": {
+      "sha256": "7f22054b5895676ed79eb42acea73599f75be877db55034aebdefde4b79d0b56",
+      "logical_bytes": 78525,
+      "allocated_blocks": 160,
+      "allocated_bytes": 81920
+    },
+    "attempts/003/engine/resource-study/diagnostics.json": {
+      "sha256": "63307623f58a723a7f26d058cc9012856d264602ca8cc1cd3bd2c5d83f2b407f",
+      "logical_bytes": 1991,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/engine/resource-study/fills.parquet": {
+      "sha256": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd",
+      "logical_bytes": 26501,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/003/engine/resource-study/inventory.parquet": {
+      "sha256": "3a14d619965960632aed2fcd3784592d71724310ec9dc1d47048ef0358266dba",
+      "logical_bytes": 80167,
+      "allocated_blocks": 160,
+      "allocated_bytes": 81920
+    },
+    "attempts/003/engine/resource-study/market.parquet": {
+      "sha256": "f2e864f17b651c954710a45f325d82c5ec4cc54a7b3c641cbe908557cbf857c3",
+      "logical_bytes": 281058,
+      "allocated_blocks": 552,
+      "allocated_bytes": 282624
+    },
+    "attempts/003/engine/resource-study/markouts.parquet": {
+      "sha256": "9ecb193934cbb731a5f8c288b88e1ec4bf27962400d93839f7194b06cb28f5b8",
+      "logical_bytes": 56415,
+      "allocated_blocks": 112,
+      "allocated_bytes": 57344
+    },
+    "attempts/003/engine/resource-study/metrics.json": {
+      "sha256": "165f27bc25e00eaded1d54b7c04d4801f759564f10cf094da84b5db89bd08cd3",
+      "logical_bytes": 7990,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/003/engine/resource-study/orders.parquet": {
+      "sha256": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0",
+      "logical_bytes": 163048,
+      "allocated_blocks": 320,
+      "allocated_bytes": 163840
+    },
+    "attempts/003/engine/resource-study/plots/drawdown.png": {
+      "sha256": "61e51fec2c6010e82b9c590cda3e43fd2299a2e2df305556f80aedf32708150e",
+      "logical_bytes": 45886,
+      "allocated_blocks": 96,
+      "allocated_bytes": 49152
+    },
+    "attempts/003/engine/resource-study/plots/fill_locations.png": {
+      "sha256": "d954ea445d72512e79d97c3f678355bb3e5e8ac2d7af5ef1b70bae944bf15e9e",
+      "logical_bytes": 70558,
+      "allocated_blocks": 144,
+      "allocated_bytes": 73728
+    },
+    "attempts/003/engine/resource-study/plots/gross_and_net_pnl.png": {
+      "sha256": "748a324abcd37b3d8090aa88cb6624026ef357fe4c48a038fa14e340b5199deb",
+      "logical_bytes": 50471,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/003/engine/resource-study/plots/inventory_histogram.png": {
+      "sha256": "990f3d1a476b20ad58cd5aa0987f30082cc27f585a2d8934f61ee579d7186750",
+      "logical_bytes": 23530,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/003/engine/resource-study/plots/inventory_over_time.png": {
+      "sha256": "c57009af72f074c7d003964e472cccd73c9addc70a678a2058d0aad55e200f9d",
+      "logical_bytes": 53628,
+      "allocated_blocks": 112,
+      "allocated_bytes": 57344
+    },
+    "attempts/003/engine/resource-study/plots/latency_sensitivity.png": {
+      "sha256": "234725bce77b10cbe83738f440422a980582da075213ed4a357fea40ad9dfa82",
+      "logical_bytes": 16247,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/003/engine/resource-study/plots/markout_by_horizon.png": {
+      "sha256": "ed18e29eb59658fa83797d40ca0b345986b878f74b939f83509760a61fbda831",
+      "logical_bytes": 22263,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/003/engine/resource-study/plots/markout_distribution.png": {
+      "sha256": "c0a9fe3a650347af119b0803eb69e015a23d2fc089eeea169c6f72f545722f4c",
+      "logical_bytes": 26948,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/003/engine/resource-study/plots/midpoint_and_quotes.png": {
+      "sha256": "ad76d60767af8aabd952b63edbc17b7777eaee954203c4d4bbcce9ab5e44dbe5",
+      "logical_bytes": 75247,
+      "allocated_blocks": 152,
+      "allocated_bytes": 77824
+    },
+    "attempts/003/engine/resource-study/plots/pnl_by_market_regime.png": {
+      "sha256": "b6116455845605cd045d2d75b5bfa6c12ded637a390c25398c876b725b258939",
+      "logical_bytes": 57540,
+      "allocated_blocks": 120,
+      "allocated_bytes": 61440
+    },
+    "attempts/003/engine/resource-study/plots/queue_ahead_distribution.png": {
+      "sha256": "114f2ff9dc28c7eaa0467f265c8bb7b56916f3c8f6d32476570d8110a304edd4",
+      "logical_bytes": 24329,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/003/engine/resource-study/plots/strategy_comparison.png": {
+      "sha256": "25dab96ddc788af1ae8ed84c025c2fba75f15271a9008b1eb925d1f158028f58",
+      "logical_bytes": 19019,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/003/engine/resource-study/pnl.parquet": {
+      "sha256": "e8add5b650091dbe679431ba686db1789e1ed69de9809851a48b5a7a21a49178",
+      "logical_bytes": 229239,
+      "allocated_blocks": 448,
+      "allocated_bytes": 229376
+    },
+    "attempts/003/engine/resource-study/quotes.parquet": {
+      "sha256": "02095bbfd4829e19e526a1dd12f362abe72a0926d490d61d5265b82ee618894b",
+      "logical_bytes": 57476,
+      "allocated_blocks": 120,
+      "allocated_bytes": 61440
+    },
+    "attempts/003/engine/resource-study/report_summary.txt": {
+      "sha256": "436f2983c2073504616c27100a2d0388f0172e7a2dc0fd75886741656e8170cf",
+      "logical_bytes": 342,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/engine/resource-study/risk_events.parquet": {
+      "sha256": "e13fbf3c421efa2aaa68d8b10625fdcba7bfa571e9574f3b3c00c0dc670a3bb4",
+      "logical_bytes": 3415,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/engine/resource-study/run_config.yaml": {
+      "sha256": "7e82271a7b79cb78962783320d82e5a81f2bd1d903628d4bab47b890f1d9f6a6",
+      "logical_bytes": 2448,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/engine/resource-study/summary.json": {
+      "sha256": "49d66baaaaae88f5787cc91a75edd9fc63fba9ddb8f163dbfd1ab484d9ea4e7f",
+      "logical_bytes": 836,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/input/events.parquet": {
+      "sha256": "9a9e1f24d42277739dd31a398043063867a7e6a561d309ef847d296ebf9e5f0e",
+      "logical_bytes": 143246,
+      "allocated_blocks": 280,
+      "allocated_bytes": 143360
+    },
+    "attempts/003/process.json": {
+      "sha256": "cf38291b8c50f5efc6523b894418c140a8c2bfa9a0fe6692546c6902a286fd7c",
+      "logical_bytes": 1065,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/result.json": {
+      "sha256": "f7a4370de15018f27d2d7b1aaf228102b180e333dff150182b4f9ec5c8755fa8",
+      "logical_bytes": 50185,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/003/samples.jsonl": {
+      "sha256": "ad14f36d0b5b20e8028cbd05aafe88caef5d6c647f5d805ca7c7611798afe663",
+      "logical_bytes": 2242458,
+      "allocated_blocks": 4392,
+      "allocated_bytes": 2248704
+    },
+    "attempts/003/source/src/lobmm/__init__.py": {
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+      "logical_bytes": 164,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/backtest.py": {
+      "sha256": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+      "logical_bytes": 35860,
+      "allocated_blocks": 72,
+      "allocated_bytes": 36864
+    },
+    "attempts/003/source/src/lobmm/benchmark.py": {
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+      "logical_bytes": 10082,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/003/source/src/lobmm/book.py": {
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+      "logical_bytes": 12658,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/003/source/src/lobmm/case_study.py": {
+      "sha256": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+      "logical_bytes": 19449,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/003/source/src/lobmm/channels.py": {
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+      "logical_bytes": 5274,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/003/source/src/lobmm/cli.py": {
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+      "logical_bytes": 22297,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/003/source/src/lobmm/config.py": {
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+      "logical_bytes": 12286,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/003/source/src/lobmm/data/__init__.py": {
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+      "logical_bytes": 1786,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/data/_adapter_utils.py": {
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172",
+      "logical_bytes": 6206,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/003/source/src/lobmm/data/adapters.py": {
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+      "logical_bytes": 1367,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/data/fingerprint.py": {
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+      "logical_bytes": 1079,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/data/loaders.py": {
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+      "logical_bytes": 5765,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/003/source/src/lobmm/data/lobster.py": {
+      "sha256": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5",
+      "logical_bytes": 22191,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/003/source/src/lobmm/data/manifest.py": {
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+      "logical_bytes": 3983,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/data/schema.py": {
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+      "logical_bytes": 7692,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/003/source/src/lobmm/data/tardis.py": {
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+      "logical_bytes": 21020,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/003/source/src/lobmm/enums.py": {
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+      "logical_bytes": 2472,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/events.py": {
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+      "logical_bytes": 3006,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/exchange.py": {
+      "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e",
+      "logical_bytes": 16269,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/003/source/src/lobmm/experiments.py": {
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+      "logical_bytes": 18529,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/003/source/src/lobmm/metrics.py": {
+      "sha256": "4091dbedd3779aac776e27e8e5a12a42fd6a122e7307f3693b32e4021998c22a",
+      "logical_bytes": 24960,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/003/source/src/lobmm/orders.py": {
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+      "logical_bytes": 17176,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/003/source/src/lobmm/portfolio.py": {
+      "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35",
+      "logical_bytes": 24748,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/003/source/src/lobmm/py.typed": {
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "logical_bytes": 1,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/queue_model.py": {
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+      "logical_bytes": 20413,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/003/source/src/lobmm/report.py": {
+      "sha256": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+      "logical_bytes": 35929,
+      "allocated_blocks": 72,
+      "allocated_bytes": 36864
+    },
+    "attempts/003/source/src/lobmm/risk.py": {
+      "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+      "logical_bytes": 27098,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/003/source/src/lobmm/scheduler.py": {
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+      "logical_bytes": 8559,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/003/source/src/lobmm/strategies/__init__.py": {
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+      "logical_bytes": 1008,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/strategies/base.py": {
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+      "logical_bytes": 21607,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/003/source/src/lobmm/strategies/fixed_spread.py": {
+      "sha256": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c",
+      "logical_bytes": 942,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/strategies/inventory_aware.py": {
+      "sha256": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972",
+      "logical_bytes": 1229,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/strategies/microprice.py": {
+      "sha256": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa",
+      "logical_bytes": 1683,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/strategy_runtime.py": {
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+      "logical_bytes": 3433,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/synthetic.py": {
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+      "logical_bytes": 14929,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/003/source/src/lobmm/types.py": {
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b",
+      "logical_bytes": 3850,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/003/source/src/lobmm/validation.py": {
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735",
+      "logical_bytes": 7386,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/003/worker.log": {
+      "sha256": "61dc8e2e2e2b95f716435d3ad13173f990b1ff217dd6fbfefba465aac059fd66",
+      "logical_bytes": 1392,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/boundaries.jsonl": {
+      "sha256": "69e82d1fae5c16e7fa794383d3bbc22ece6a18ee6278ae8c39e62b1fdc9feba9",
+      "logical_bytes": 16693,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/004/cache/fontlist-v3.11.0.json": {
+      "sha256": "b40e7a52f2dca432197df54c6a3c42c5753f4a34d29be41179a346811318f9a5",
+      "logical_bytes": 228759,
+      "allocated_blocks": 448,
+      "allocated_bytes": 229376
+    },
+    "attempts/004/disk-polls.jsonl": {
+      "sha256": "acec96277f44669e4a182543c46df127542463f126efcf815d73e25f994afd13",
+      "logical_bytes": 16098,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/004/engine/resource-study/diagnostics.json": {
+      "sha256": "46844863b4e2052621c23627db67a649b5bcc859e9a62a321982f7db00f77bde",
+      "logical_bytes": 1974,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/engine/resource-study/fills.parquet": {
+      "sha256": "7d06fe06c1b1189bcb855ffe349db95d2bda49537a79467f6d6b4d221ef3c0cd",
+      "logical_bytes": 7876,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/004/engine/resource-study/inventory.parquet": {
+      "sha256": "b613d18d28537432cea8553ccd945a344562c005cc5edeb554ed5fa34fcd906e",
+      "logical_bytes": 9020,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/004/engine/resource-study/market.parquet": {
+      "sha256": "0b653b10e4abf901f02f897d4e42e1b4ddd8a936746ebae89273b75f696d1360",
+      "logical_bytes": 38943,
+      "allocated_blocks": 80,
+      "allocated_bytes": 40960
+    },
+    "attempts/004/engine/resource-study/markouts.parquet": {
+      "sha256": "72c0a8a38039221e0b584d7e61dda2a517293af7873e02ab28da6fd1a1262318",
+      "logical_bytes": 6781,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/004/engine/resource-study/metrics.json": {
+      "sha256": "6bd3a1421e5d65a2b578098430ea3822a43e1f535f04e8ee6a2f8d93375a72c8",
+      "logical_bytes": 7738,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/004/engine/resource-study/orders.parquet": {
+      "sha256": "7242718b5191f7f156ba40658ef408e4942ec42e054bc16e7646b01fb87cc52f",
+      "logical_bytes": 25430,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/004/engine/resource-study/plots/drawdown.png": {
+      "sha256": "525a879c960c405cdbc3d08166278bdf3de28e54673c8353c870baee084e2d68",
+      "logical_bytes": 50826,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/004/engine/resource-study/plots/fill_locations.png": {
+      "sha256": "d8c45af7557b40b4cc22ec4d61b4c82928981992f5905c953c796ee3a039a016",
+      "logical_bytes": 61669,
+      "allocated_blocks": 128,
+      "allocated_bytes": 65536
+    },
+    "attempts/004/engine/resource-study/plots/gross_and_net_pnl.png": {
+      "sha256": "6600b25b49a13c4b05170dff2cd26d44d130d5bf5806ecf87dda3d41763cc2bd",
+      "logical_bytes": 68974,
+      "allocated_blocks": 136,
+      "allocated_bytes": 69632
+    },
+    "attempts/004/engine/resource-study/plots/inventory_histogram.png": {
+      "sha256": "432fb8f0c33c03dd564486a987869315e75d049a34034cdac9483b6e5e4b1347",
+      "logical_bytes": 24285,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/004/engine/resource-study/plots/inventory_over_time.png": {
+      "sha256": "3cafd2ab6ad0e4bbd3c0c76dedefd349be719bbc8eb6e73caa22926077f6db9f",
+      "logical_bytes": 30377,
+      "allocated_blocks": 64,
+      "allocated_bytes": 32768
+    },
+    "attempts/004/engine/resource-study/plots/latency_sensitivity.png": {
+      "sha256": "234725bce77b10cbe83738f440422a980582da075213ed4a357fea40ad9dfa82",
+      "logical_bytes": 16247,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/004/engine/resource-study/plots/markout_by_horizon.png": {
+      "sha256": "d7b457e8427be57f3b15f895ef67b36d4bfc7d689f69efe14ebc376a82f5f39d",
+      "logical_bytes": 23759,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/004/engine/resource-study/plots/markout_distribution.png": {
+      "sha256": "712214beaf410d0006cb803b93110b87e081d741e0155f7f87e8fe9e583df11b",
+      "logical_bytes": 26231,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/004/engine/resource-study/plots/midpoint_and_quotes.png": {
+      "sha256": "04b9c3c9d3b7302500afd0dc0d2595be6afca563e1d1fae3ba49c19f3f1266ca",
+      "logical_bytes": 92222,
+      "allocated_blocks": 184,
+      "allocated_bytes": 94208
+    },
+    "attempts/004/engine/resource-study/plots/pnl_by_market_regime.png": {
+      "sha256": "5d4cd0fe1cb7b13b9b2c1c9824ff994228d2df6085f83a9939f01c80a31a19c0",
+      "logical_bytes": 50181,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/004/engine/resource-study/plots/queue_ahead_distribution.png": {
+      "sha256": "df5c2dbd0d760c8dd78b92c1339f6a774d76dfdb6020f78ae25d8fcaa4002d59",
+      "logical_bytes": 26412,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/004/engine/resource-study/plots/strategy_comparison.png": {
+      "sha256": "25dab96ddc788af1ae8ed84c025c2fba75f15271a9008b1eb925d1f158028f58",
+      "logical_bytes": 19019,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/004/engine/resource-study/pnl.parquet": {
+      "sha256": "12370afb7baa56cf00a2e6774bc26692f7bc3fdf1699c0b11efc0c7f16ec2e13",
+      "logical_bytes": 25820,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/004/engine/resource-study/quotes.parquet": {
+      "sha256": "bd93db4c4f570c7a6331ab107d941c253b780de3c2d2e06aa85d5ffc64b250b9",
+      "logical_bytes": 10746,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/004/engine/resource-study/report_summary.txt": {
+      "sha256": "41cbf9bfd84563f3da5b8d0d2cd5ffd4007bfb43624e82c2813cef2666c01bae",
+      "logical_bytes": 338,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/engine/resource-study/risk_events.parquet": {
+      "sha256": "015e732e05e6db7ebf874a7156ff3d4782f835199ce99ed37a4c6b7eab24446e",
+      "logical_bytes": 506,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/engine/resource-study/run_config.yaml": {
+      "sha256": "9824ee3daa9b6c1447ed98c6342df0a93c0ac335b7ca4f2bfc12e7307417ee9f",
+      "logical_bytes": 2447,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/engine/resource-study/summary.json": {
+      "sha256": "bd98838723cce7a6a45045806bf1c834a73b3ffa4bf993153232ac6dca27b8e1",
+      "logical_bytes": 833,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/input/events.parquet": {
+      "sha256": "944deec5a3ef057e176a627550be687d15de1ba404b56dd3b2dc126b46750349",
+      "logical_bytes": 18711,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/004/process.json": {
+      "sha256": "c506502af58b14541a53075f0e53481b59ad5b989c12171b0fc30571ec3c8cc3",
+      "logical_bytes": 1064,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/result.json": {
+      "sha256": "96dcb5f64bc8fd013595eab85c1ba75672e3476b57086a314af78eca907fe648",
+      "logical_bytes": 50146,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "attempts/004/samples.jsonl": {
+      "sha256": "38502534893c840ce202bc19ac983bd25ff541be39c4ec626bb56c4f4f6dd519",
+      "logical_bytes": 425054,
+      "allocated_blocks": 840,
+      "allocated_bytes": 430080
+    },
+    "attempts/004/source/src/lobmm/__init__.py": {
+      "sha256": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+      "logical_bytes": 164,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/backtest.py": {
+      "sha256": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+      "logical_bytes": 35860,
+      "allocated_blocks": 72,
+      "allocated_bytes": 36864
+    },
+    "attempts/004/source/src/lobmm/benchmark.py": {
+      "sha256": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+      "logical_bytes": 10082,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/004/source/src/lobmm/book.py": {
+      "sha256": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+      "logical_bytes": 12658,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/004/source/src/lobmm/case_study.py": {
+      "sha256": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+      "logical_bytes": 19449,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/004/source/src/lobmm/channels.py": {
+      "sha256": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+      "logical_bytes": 5274,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/004/source/src/lobmm/cli.py": {
+      "sha256": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+      "logical_bytes": 22297,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/004/source/src/lobmm/config.py": {
+      "sha256": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+      "logical_bytes": 12286,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/004/source/src/lobmm/data/__init__.py": {
+      "sha256": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+      "logical_bytes": 1786,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/data/_adapter_utils.py": {
+      "sha256": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172",
+      "logical_bytes": 6206,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/004/source/src/lobmm/data/adapters.py": {
+      "sha256": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+      "logical_bytes": 1367,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/data/fingerprint.py": {
+      "sha256": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+      "logical_bytes": 1079,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/data/loaders.py": {
+      "sha256": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+      "logical_bytes": 5765,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/004/source/src/lobmm/data/lobster.py": {
+      "sha256": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5",
+      "logical_bytes": 22191,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/004/source/src/lobmm/data/manifest.py": {
+      "sha256": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+      "logical_bytes": 3983,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/data/schema.py": {
+      "sha256": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+      "logical_bytes": 7692,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/004/source/src/lobmm/data/tardis.py": {
+      "sha256": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+      "logical_bytes": 21020,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/004/source/src/lobmm/enums.py": {
+      "sha256": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+      "logical_bytes": 2472,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/events.py": {
+      "sha256": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+      "logical_bytes": 3006,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/exchange.py": {
+      "sha256": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e",
+      "logical_bytes": 16269,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/004/source/src/lobmm/experiments.py": {
+      "sha256": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+      "logical_bytes": 18529,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/004/source/src/lobmm/metrics.py": {
+      "sha256": "4091dbedd3779aac776e27e8e5a12a42fd6a122e7307f3693b32e4021998c22a",
+      "logical_bytes": 24960,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/004/source/src/lobmm/orders.py": {
+      "sha256": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+      "logical_bytes": 17176,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/004/source/src/lobmm/portfolio.py": {
+      "sha256": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35",
+      "logical_bytes": 24748,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/004/source/src/lobmm/py.typed": {
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "logical_bytes": 1,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/queue_model.py": {
+      "sha256": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+      "logical_bytes": 20413,
+      "allocated_blocks": 40,
+      "allocated_bytes": 20480
+    },
+    "attempts/004/source/src/lobmm/report.py": {
+      "sha256": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+      "logical_bytes": 35929,
+      "allocated_blocks": 72,
+      "allocated_bytes": 36864
+    },
+    "attempts/004/source/src/lobmm/risk.py": {
+      "sha256": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+      "logical_bytes": 27098,
+      "allocated_blocks": 56,
+      "allocated_bytes": 28672
+    },
+    "attempts/004/source/src/lobmm/scheduler.py": {
+      "sha256": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+      "logical_bytes": 8559,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "attempts/004/source/src/lobmm/strategies/__init__.py": {
+      "sha256": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+      "logical_bytes": 1008,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/strategies/base.py": {
+      "sha256": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+      "logical_bytes": 21607,
+      "allocated_blocks": 48,
+      "allocated_bytes": 24576
+    },
+    "attempts/004/source/src/lobmm/strategies/fixed_spread.py": {
+      "sha256": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c",
+      "logical_bytes": 942,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/strategies/inventory_aware.py": {
+      "sha256": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972",
+      "logical_bytes": 1229,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/strategies/microprice.py": {
+      "sha256": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa",
+      "logical_bytes": 1683,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/strategy_runtime.py": {
+      "sha256": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+      "logical_bytes": 3433,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/synthetic.py": {
+      "sha256": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+      "logical_bytes": 14929,
+      "allocated_blocks": 32,
+      "allocated_bytes": 16384
+    },
+    "attempts/004/source/src/lobmm/types.py": {
+      "sha256": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b",
+      "logical_bytes": 3850,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "attempts/004/source/src/lobmm/validation.py": {
+      "sha256": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735",
+      "logical_bytes": 7386,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "attempts/004/worker.log": {
+      "sha256": "61dc8e2e2e2b95f716435d3ad13173f990b1ff217dd6fbfefba465aac059fd66",
+      "logical_bytes": 1392,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "harness/configs/benchmark.yaml": {
+      "sha256": "5b800e6d72340c1821ff749e2c8765e94ee48ada0d5f78aff2218ee5134eb880",
+      "logical_bytes": 597,
+      "allocated_blocks": 8,
+      "allocated_bytes": 4096
+    },
+    "harness/docs/END_TO_END_RESOURCE_DESIGN.md": {
+      "sha256": "b540cbe1d5b4af41a02615b239d44136296309ff3cad9755018b46268dd5a116",
+      "logical_bytes": 12070,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "harness/docs/evidence/component-integration-20261115/source-manifests.json": {
+      "sha256": "29479b8b6cf27aa7d1e327c32ab6a6763da61893037cced8096074065125954a",
+      "logical_bytes": 7609,
+      "allocated_blocks": 16,
+      "allocated_bytes": 8192
+    },
+    "harness/tests/unit/test_resource_characterization.py": {
+      "sha256": "edd67d8c6a4ce5c251c52a8f27c9bc316c8b130d718b5e212e39371858b3630c",
+      "logical_bytes": 9348,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "harness/tools/characterize_end_to_end_resources.py": {
+      "sha256": "2b67807c11a75862175cd8b7cc719eaecbb3f512191f2a2187763e048db8b4c0",
+      "logical_bytes": 50117,
+      "allocated_blocks": 104,
+      "allocated_bytes": 53248
+    },
+    "plan.json": {
+      "sha256": "ffcfa3bae32b4263c9e6d681b2291ffad69b0732f35e38ff62bf942792ef62b0",
+      "logical_bytes": 9718,
+      "allocated_blocks": 24,
+      "allocated_bytes": 12288
+    },
+    "report.json": {
+      "sha256": "2789d4eb9829ee3baf81ba5c4f8d05d9c4b1157d0c10b0d7901111730d1e398c",
+      "logical_bytes": 217246,
+      "allocated_blocks": 432,
+      "allocated_bytes": 221184
+    }
+  },
+  "original_file_totals": {
+    "001": {
+      "bookkeeping": {
+        "files": 44,
+        "logical_bytes": 1040331,
+        "allocated_bytes": 1138688
+      },
+      "cache": {
+        "files": 1,
+        "logical_bytes": 228759,
+        "allocated_bytes": 229376
+      },
+      "engine_json_yaml": {
+        "files": 4,
+        "logical_bytes": 12990,
+        "allocated_bytes": 20480
+      },
+      "engine_parquet": {
+        "files": 8,
+        "logical_bytes": 125122,
+        "allocated_bytes": 143360
+      },
+      "plot_png": {
+        "files": 12,
+        "logical_bytes": 490202,
+        "allocated_bytes": 512000
+      },
+      "report_summary": {
+        "files": 1,
+        "logical_bytes": 338,
+        "allocated_bytes": 4096
+      },
+      "input_snapshot": {
+        "files": 1,
+        "logical_bytes": 18711,
+        "allocated_bytes": 20480
+      }
+    },
+    "002": {
+      "bookkeeping": {
+        "files": 44,
+        "logical_bytes": 2691242,
+        "allocated_bytes": 2789376
+      },
+      "cache": {
+        "files": 1,
+        "logical_bytes": 228759,
+        "allocated_bytes": 229376
+      },
+      "engine_json_yaml": {
+        "files": 4,
+        "logical_bytes": 13261,
+        "allocated_bytes": 20480
+      },
+      "engine_parquet": {
+        "files": 8,
+        "logical_bytes": 897319,
+        "allocated_bytes": 909312
+      },
+      "plot_png": {
+        "files": 12,
+        "logical_bytes": 485666,
+        "allocated_bytes": 512000
+      },
+      "report_summary": {
+        "files": 1,
+        "logical_bytes": 342,
+        "allocated_bytes": 4096
+      },
+      "input_snapshot": {
+        "files": 1,
+        "logical_bytes": 143246,
+        "allocated_bytes": 143360
+      }
+    },
+    "003": {
+      "bookkeeping": {
+        "files": 44,
+        "logical_bytes": 2834738,
+        "allocated_bytes": 2936832
+      },
+      "cache": {
+        "files": 1,
+        "logical_bytes": 228759,
+        "allocated_bytes": 229376
+      },
+      "engine_json_yaml": {
+        "files": 4,
+        "logical_bytes": 13265,
+        "allocated_bytes": 20480
+      },
+      "engine_parquet": {
+        "files": 8,
+        "logical_bytes": 897319,
+        "allocated_bytes": 909312
+      },
+      "plot_png": {
+        "files": 12,
+        "logical_bytes": 485666,
+        "allocated_bytes": 512000
+      },
+      "report_summary": {
+        "files": 1,
+        "logical_bytes": 342,
+        "allocated_bytes": 4096
+      },
+      "input_snapshot": {
+        "files": 1,
+        "logical_bytes": 143246,
+        "allocated_bytes": 143360
+      }
+    },
+    "004": {
+      "bookkeeping": {
+        "files": 44,
+        "logical_bytes": 954833,
+        "allocated_bytes": 1052672
+      },
+      "cache": {
+        "files": 1,
+        "logical_bytes": 228759,
+        "allocated_bytes": 229376
+      },
+      "engine_json_yaml": {
+        "files": 4,
+        "logical_bytes": 12992,
+        "allocated_bytes": 20480
+      },
+      "engine_parquet": {
+        "files": 8,
+        "logical_bytes": 125122,
+        "allocated_bytes": 143360
+      },
+      "plot_png": {
+        "files": 12,
+        "logical_bytes": 490202,
+        "allocated_bytes": 512000
+      },
+      "report_summary": {
+        "files": 1,
+        "logical_bytes": 338,
+        "allocated_bytes": 4096
+      },
+      "input_snapshot": {
+        "files": 1,
+        "logical_bytes": 18711,
+        "allocated_bytes": 20480
+      }
+    }
+  }
+}

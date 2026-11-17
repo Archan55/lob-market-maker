@@ -29,6 +29,12 @@ jobs:
         run: python -m pytest --cov=lobmm --cov-report=term-missing
       - name: Deterministic integration backtest
         run: python -m lobmm.cli backtest --config configs/ci.yaml --run-name ci-smoke
+      - name: Verify saved lifecycle resource evidence (no new measurements)
+        run: |
+          mkdir -p experiments
+          python -I -B tools/characterize_end_to_end_resources.py \
+            --verify-evidence docs/evidence/end-to-end-resources-20261117/run \
+            > experiments/lifecycle-resource-verification.json
       - name: Record executed source identity
         if: always()
         run: |
@@ -62,5 +68,15 @@ jobs:
             experiments/component-integration-ci/
             experiments/component-integration-ci-test-controller.*.log
             experiments/component-integration-ci-provenance.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Retain verified lifecycle resource records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lifecycle-resources-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            docs/evidence/end-to-end-resources-20261117/run/
+            experiments/lifecycle-resource-verification.json
           if-no-files-found: error
           retention-days: 14

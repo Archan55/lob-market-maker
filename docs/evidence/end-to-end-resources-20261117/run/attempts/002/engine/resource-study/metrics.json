@@ -1,0 +1,204 @@
+{
+  "attribution": {
+    "adverse_selection_markout": null,
+    "adverse_selection_markout_note": "Unidentified: pooled forward markouts do not isolate adverse selection or form an additive P&L decomposition. legacy_pooled_markout_proxy retains the former numeric expression for compatibility only; use the separate per-horizon observed-quantity diagnostics.",
+    "fees": -0.0,
+    "inventory_mark_to_market": 32.944999999999936,
+    "legacy_pooled_markout_proxy": 66.71074090311268,
+    "note": "Attribution is an analytical approximation; inventory mark-to-market is the reconciliation residual.",
+    "rebates": 1.504,
+    "reconciliation_residual": 0.0,
+    "spread_capture": 54.41500000000007
+  },
+  "engineering": {
+    "events_per_second": 868.14153110806,
+    "events_processed": 20000,
+    "peak_memory_bytes": 42982665,
+    "scheduler_events_processed": 80651,
+    "wall_clock_seconds": 23.037718256000062
+  },
+  "execution_quality": {
+    "effective_spread_ticks": 1.4705128205128206,
+    "markout_aggregation_note": "Quantity-weighted summaries are separate gross observed fill-to-future-midpoint diagnostics for each horizon, with both supplied per-unit outcomes finite. They include entry spread, are not net P&L, and do not isolate adverse drift. Missing quantity is not extrapolated; no observations gives null amounts/means. Coverage can differ by horizon. Legacy horizon means are event-row means; legacy side means pool horizon rows, including duplicate requests.",
+    "markout_summary_by_horizon_ns": {
+      "100000000": {
+        "all": {
+          "missing_fill_events": 0,
+          "missing_quantity": 0,
+          "observed_fill_events": 780,
+          "observed_markout_value": 77.195,
+          "observed_quantity": 7520,
+          "quantity_coverage": 1.0,
+          "quantity_weighted_markout_ticks": 1.026529255319149,
+          "quantity_weighted_markout_value": 0.01026529255319149,
+          "total_fill_events": 780,
+          "total_fill_quantity": 7520
+        },
+        "ask": {
+          "missing_fill_events": 0,
+          "missing_quantity": 0,
+          "observed_fill_events": 393,
+          "observed_markout_value": -38.14,
+          "observed_quantity": 3808,
+          "quantity_coverage": 1.0,
+          "quantity_weighted_markout_ticks": -1.0015756302521008,
+          "quantity_weighted_markout_value": -0.010015756302521009,
+          "total_fill_events": 393,
+          "total_fill_quantity": 3808
+        },
+        "bid": {
+          "missing_fill_events": 0,
+          "missing_quantity": 0,
+          "observed_fill_events": 387,
+          "observed_markout_value": 115.33500000000001,
+          "observed_quantity": 3712,
+          "quantity_coverage": 1.0,
+          "quantity_weighted_markout_ticks": 3.1070851293103448,
+          "quantity_weighted_markout_value": 0.031070851293103448,
+          "total_fill_events": 387,
+          "total_fill_quantity": 3712
+        }
+      },
+      "1000000000": {
+        "all": {
+          "missing_fill_events": 4,
+          "missing_quantity": 40,
+          "observed_fill_events": 776,
+          "observed_markout_value": 259.365,
+          "observed_quantity": 7480,
+          "quantity_coverage": 0.9946808510638298,
+          "quantity_weighted_markout_ticks": 3.467446524064171,
+          "quantity_weighted_markout_value": 0.034674465240641716,
+          "total_fill_events": 780,
+          "total_fill_quantity": 7520
+        },
+        "ask": {
+          "missing_fill_events": 2,
+          "missing_quantity": 20,
+          "observed_fill_events": 391,
+          "observed_markout_value": 195.44,
+          "observed_quantity": 3788,
+          "quantity_coverage": 0.9947478991596639,
+          "quantity_weighted_markout_ticks": 5.159450897571277,
+          "quantity_weighted_markout_value": 0.05159450897571278,
+          "total_fill_events": 393,
+          "total_fill_quantity": 3808
+        },
+        "bid": {
+          "missing_fill_events": 2,
+          "missing_quantity": 20,
+          "observed_fill_events": 385,
+          "observed_markout_value": 63.92500000000001,
+          "observed_quantity": 3692,
+          "quantity_coverage": 0.9946120689655172,
+          "quantity_weighted_markout_ticks": 1.7314463705308776,
+          "quantity_weighted_markout_value": 0.01731446370530878,
+          "total_fill_events": 387,
+          "total_fill_quantity": 3712
+        }
+      },
+      "5000000000": {
+        "all": {
+          "missing_fill_events": 55,
+          "missing_quantity": 494,
+          "observed_fill_events": 725,
+          "observed_markout_value": 101.87500000000001,
+          "observed_quantity": 7026,
+          "quantity_coverage": 0.9343085106382979,
+          "quantity_weighted_markout_ticks": 1.449971534301167,
+          "quantity_weighted_markout_value": 0.014499715343011673,
+          "total_fill_events": 780,
+          "total_fill_quantity": 7520
+        },
+        "ask": {
+          "missing_fill_events": 27,
+          "missing_quantity": 248,
+          "observed_fill_events": 366,
+          "observed_markout_value": 699.715,
+          "observed_quantity": 3560,
+          "quantity_coverage": 0.9348739495798319,
+          "quantity_weighted_markout_ticks": 19.654915730337077,
+          "quantity_weighted_markout_value": 0.1965491573033708,
+          "total_fill_events": 393,
+          "total_fill_quantity": 3808
+        },
+        "bid": {
+          "missing_fill_events": 28,
+          "missing_quantity": 246,
+          "observed_fill_events": 359,
+          "observed_markout_value": -597.84,
+          "observed_quantity": 3466,
+          "quantity_coverage": 0.9337284482758621,
+          "quantity_weighted_markout_ticks": -17.24870167339873,
+          "quantity_weighted_markout_value": -0.1724870167339873,
+          "total_fill_events": 387,
+          "total_fill_quantity": 3712
+        }
+      }
+    },
+    "markout_ticks_by_horizon_ns": {
+      "100000000": 0.7826923076923077,
+      "1000000000": 3.0367268041237114,
+      "5000000000": -1.3013793103448277
+    },
+    "markout_ticks_by_side": {
+      "ask": 6.529565217391304,
+      "bid": -4.850132625994695
+    },
+    "realized_spread_ticks": 0.7352564102564103
+  },
+  "inventory": {
+    "end_of_session": -96,
+    "maximum_long": 100,
+    "maximum_short": -100,
+    "mean": -15.233824378971693,
+    "mean_absolute": 65.92398420951281,
+    "near_limit_duration_ns": 9920000000,
+    "observation_duration_ns": 19959000000,
+    "observations_near_limits_fraction": 0.4904679376083189,
+    "standard_deviation": 70.8535167883451,
+    "time_near_limits_fraction": 0.4970188887218799,
+    "time_window_end_ns": 19959000000,
+    "time_window_start_ns": 0
+  },
+  "market_conditions": {
+    "average_displayed_top_depth": 105.1461,
+    "average_market_spread_ticks": 2.583033213285314
+  },
+  "pnl": {
+    "annualized_sharpe": null,
+    "fees": 0.0,
+    "gross_pnl": 87.36,
+    "maximum_drawdown": 274.4416,
+    "net_pnl": 88.864,
+    "pnl_per_fill": 0.11392820512820513,
+    "pnl_per_traded_unit": 0.011817021276595745,
+    "pnl_per_unit_turnover": 0.00011729413785904832,
+    "realized_pnl": 98.45571998924397,
+    "rebates": 1.504,
+    "sharpe_note": "Omitted: event-time demonstration samples do not support a defensible annualization.",
+    "unrealized_pnl": -11.095719989243976
+  },
+  "research_disclaimer": "Historical/synthetic simulation results are not evidence of future or real-world profitability.",
+  "risk": {
+    "event_count": 120,
+    "kill_switch_active": false
+  },
+  "trading_activity": {
+    "buy_volume": 3712,
+    "cancel_to_fill_ratio": 3.0653846153846156,
+    "cancelled_orders": 2391,
+    "completed_fills": 728,
+    "fill_events": 780,
+    "fill_rate": 0.2318471337579618,
+    "maker_volume": 7520,
+    "order_to_fill_ratio": 4.0256410256410255,
+    "partial_fills": 52,
+    "quote_messages": 5651,
+    "rejected_orders": 16,
+    "sell_volume": 3808,
+    "submitted_orders": 3140,
+    "taker_volume": 0,
+    "turnover": 757616.72
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "-I",
+    "-B",
+    "/workspace/lob-market-maker-resource-study/experiments/end-to-end-resources-20261117/run/harness/tools/characterize_end_to_end_resources.py",
+    "--worker",
+    "--plan",
+    "/workspace/lob-market-maker-resource-study/experiments/end-to-end-resources-20261117/run/plan.json",
+    "--attempt-id",
+    "002",
+    "--source-root",
+    "/workspace/lob-market-maker-resource-study/experiments/end-to-end-resources-20261117/run/attempts/002/source",
+    "--output",
+    "/workspace/lob-market-maker-resource-study/experiments/end-to-end-resources-20261117/run/attempts/002"
+  ],
+  "started_ns": 2149154786843,
+  "sample_period_ns": 20000000,
+  "disk_poll_period_ns": 200000000,
+  "children_scope": "Direct children observed through /proc/PID/task/PID/children; transients may be missed; RSS is never summed",
+  "pid": 2107,
+  "status": "complete",
+  "returncode": 0,
+  "finished_ns": 2177390454695,
+  "elapsed_ns": 28235667852,
+  "terminal_cap_reason": null
+}
