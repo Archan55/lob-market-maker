@@ -146,6 +146,8 @@ identity requirement is imposed on the plots.
 
 Operational caps: 120 seconds per worker, 600 seconds for the four-worker stage,
 1 GiB sampled worker RSS and 512 MiB total attempt-directory logical output.
+Caps fire on strictly greater values; equality remains within the experiment
+budget. Use binary GiB/MiB and monotonic elapsed time, not calendar time.
 These are chosen experiment/censoring limits, not SLOs, hard containment or proven
 maximum capacity; polling can overshoot. Stop on the first cap, timeout, execution,
 source/import/fingerprint/stage/behavior/artifact error. Retain complete observed
