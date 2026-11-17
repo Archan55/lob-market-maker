@@ -101,6 +101,9 @@ OS cumulative HWM is not reset and is not a per-stage allocation estimate.
 The final headline HWM is through application completion, not interpreter teardown
 or a process-exit peak. Full file hashing/decoding/audits run only after all four
 workers finish, never concurrently with a measured worker.
+This excludes deep artifact audits. Minimal source-pin validation needed for
+isolation is bootstrap/provenance work and must be labeled as observer overhead;
+do not move artifact decoding into that exception.
 
 The external controller samples the worker's /proc/PID/status every 20 ms, with
 actual monotonic timestamps and stage assignment performed from boundary times.
@@ -117,6 +120,10 @@ JSON/YAML; eight engine Parquets; twelve plot PNGs and report_summary; cache; an
 instrumentation/source bookkeeping separately. These are retained file sizes,
 not cumulative writes, peak temporary disk, exclusive device usage or write
 amplification. Poll total attempt-directory logical bytes every 200 ms for caps.
+Saved allocated-block observations belong to this original filesystem. CI may
+recompute their grouped totals from saved per-file records, but must not require
+a different checkout's allocation blocks to be identical. Hashes and logical
+file sizes must still match the physical saved data.
 
 ## Correctness, audit and stopping
 
