@@ -1,0 +1,10 @@
+{
+  "environment_id": "ccarenv_b64_Y2NhcmVudl80NzUyNDVmMDE3YTg4MTkxYWRhMTUwMDQ1NWE3ZTVjYw",
+  "provider": "retained managed cloud",
+  "environment_status": "running, current, connected, failure null",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cgroup_memory_max_bytes": "17179869184",
+  "cgroup_cpu_max_quota_period": "400000 100000",
+  "scope": "Static environment/configuration metadata, not an application resource measurement; no access/security settings changed"
+}
