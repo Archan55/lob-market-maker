@@ -143,6 +143,11 @@ events_per_second,peak_memory_bytes}. Compare every other field in those JSON
 documents, summary.json and run_config.yaml exactly within each size. PNG names
 must match report.REQUIRED_PLOT_FILENAMES, all must decode, and no pixel/byte
 identity requirement is imposed on the plots.
+Within-size report_summary.txt bytes must agree exactly as well (the original
+summary contains no timing/memory fields and the fixed run name is identical).
+Use the application's actual plots/ subdirectory for the twelve PNG paths.
+Intervals with no periodic RSS samples are absent/null, not zero; retain every
+interval tied for the largest sampled RSS rather than selecting a favorable tie.
 
 Operational caps: 120 seconds per worker, 600 seconds for the four-worker stage,
 1 GiB sampled worker RSS and 512 MiB total attempt-directory logical output.
