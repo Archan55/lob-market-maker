@@ -93,6 +93,9 @@ At each boundary, durably record monotonic timestamp, current /proc/self/status
 VmRSS, VmHWM and resource.getrusage(RUSAGE_SELF).ru_maxrss, with raw units and bytes.
 On this Linux host the latter fields use KiB; record platform/page-size facts.
 OS cumulative HWM is not reset and is not a per-stage allocation estimate.
+The final headline HWM is through application completion, not interpreter teardown
+or a process-exit peak. Full file hashing/decoding/audits run only after all four
+workers finish, never concurrently with a measured worker.
 
 The external controller samples the worker's /proc/PID/status every 20 ms, with
 actual monotonic timestamps and stage assignment performed from boundary times.
