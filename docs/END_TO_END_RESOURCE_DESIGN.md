@@ -24,6 +24,11 @@ There is no magnitude, capacity or optimization eligibility gate. The original
 scheduler-only tracemalloc scalar is a scope comparator, not the same quantity
 as RSS; do not subtract the two to estimate native allocations.
 
+The primary counter is resource.getrusage(RUSAGE_SELF).ru_maxrss converted from
+Linux KiB to bytes: compare application_complete strictly greater than
+scheduler_return. Equality is a negative per-run result. Report VmHWM separately
+if it differs; do not select whichever counter gives a favorable answer.
+
 ## Frozen source, inputs and process budget
 
 Application source: PR13 `0866bf13e449cd66e3862454eaaf424a5172c33a`, all 38
