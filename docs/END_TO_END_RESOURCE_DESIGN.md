@@ -124,6 +124,11 @@ Saved allocated-block observations belong to this original filesystem. CI may
 recompute their grouped totals from saved per-file records, but must not require
 a different checkout's allocation blocks to be identical. Hashes and logical
 file sizes must still match the physical saved data.
+Intermediate grouped stat walks are non-atomic recorded observations: a temporary
+file that vanishes during traversal may be omitted. Only final stable per-file
+records support independent reconstruction of all grouped totals; do not claim
+early cache/bookkeeping/temp totals were reconstructed from final files. Stable
+retained product classes can be checked against their final physical files.
 
 ## Correctness, audit and stopping
 
