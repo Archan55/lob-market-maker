@@ -50,6 +50,13 @@ direct-generation research workflow with a retained input snapshot, not a file
 loading benchmark. The temporary frame used by the normal writer is not retained
 by instrumentation. No additional load/copy of all events or public snapshots.
 
+The writer is data.loaders.write_parquet(events, path), not the helper that
+regenerates synthetic events. Before/after source proof and OS raw counters are
+retained; do not require ru_maxrss and VmHWM to be bit-identical because they are
+separate probes/accounting observations. Process startup before the first worker
+checkpoint remains in full-process HWM and external sampling; label any such
+samples explicitly rather than silently discarding them.
+
 Use the original run_backtest(generate_plots=True) lifetime. Do not call report
 generation after engine locals have been freed. Each worker uses the same fixed
 run name in its own fresh directory. Set only a task-local per-worker MPLCONFIGDIR
@@ -114,6 +121,13 @@ differences. Require exactly twelve expected nonempty valid PNGs and the report
 summary, without demanding pixel identity across different workloads. Independent
 auditors decode the actual Parquets/PNGs and recompute byte totals after resource
 capture; their memory must not become the application's reported peak.
+
+Exact normalization exclusions: diagnostics.{wall_clock_seconds,
+events_per_second,peak_memory_bytes} and metrics.engineering.{wall_clock_seconds,
+events_per_second,peak_memory_bytes}. Compare every other field in those JSON
+documents, summary.json and run_config.yaml exactly within each size. PNG names
+must match report.REQUIRED_PLOT_FILENAMES, all must decode, and no pixel/byte
+identity requirement is imposed on the plots.
 
 Operational caps: 120 seconds per worker, 600 seconds for the four-worker stage,
 1 GiB sampled worker RSS and 512 MiB total attempt-directory logical output.
