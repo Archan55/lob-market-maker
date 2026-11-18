@@ -65,7 +65,8 @@ Do not copy production signed-cost-basis recurrence or sum rounded fill costs.
 
 PnL.fill_count must be builtin integer, monotone, start at zero, advance only by
 zero/one, cover every prefix 0..N and finish at the total fill count. The first
-row of prefix k has the kth fill's timestamp. Consume fills in retained order,
+row of prefix k has the kth fill's timestamp for k >= 1; prefix zero retains its
+recorded market timestamp. Consume fills in retained order,
 never timestamp-bisect or sort same-time rows. Integer inventory/cash/volumes and
 prefix counters must agree on every row, including repeated timestamps/counts.
 
@@ -75,6 +76,9 @@ positive for open inventory (zero allowed only flat). Within these bounds the
 saved binary64 mark can identify the original midpoint tick value. This is a
 conditional mark input, not a proof that the correct book/causal mark was chosen.
 If admission fails, stop and report the residual limitation; do not replace data.
+Negative marks and negative zero are inadmissible even while flat for these fixed
+midpoint cohorts. Positive zero is allowed only flat. No claim of missing-row
+detection or complete market observation cadence follows from this subset.
 
 ## Field and presentation contract
 
@@ -86,6 +90,17 @@ maximum over retained mark/fill snapshots. In this fixed engine path timer
 snapshots reuse the last mark and inventory; no additional hidden exposure change
 is inferred. Inventory-table rows must match corresponding timestamp/inventory/
 current/peak exposure projections and original order.
+
+Require the exact 25-column PnL Snapshot schema, not merely whichever fields happen
+to be present. Int64: timestamp_ns, inventory, trade_cash_ticks, turnover_ticks,
+buy_volume, sell_volume, fill_count. String (Arrow string or large_string): currency.
+Float64: tick_value, mark_ticks, average_cost_ticks, trade_cash, cash,
+realized_pnl_ticks, unrealized_pnl_ticks, gross_pnl_ticks, realized_pnl,
+unrealized_pnl, gross_pnl, fees, rebates, net_pnl, turnover,
+current_gross_exposure, peak_gross_exposure. Only average_cost_ticks is nullable,
+and only when flat. Inventory requires timestamp_ns/inventory Int64 and
+current_gross_exposure/peak_gross_exposure Float64, without missing columns.
+No net_pnl_ticks field is implied. Preserve integer/float types without coercion.
 
 For exact rational values with denominators containing only factors 2 and 5,
 project the exact finite value to binary64. For repeating values, first round to
@@ -112,6 +127,8 @@ One pass over the two fixed cohorts in order 001 then 002, with no engine runs.
 Caps per cohort: 100,000 PnL rows, 20,000 fills, 65,536-bit rational numerator/
 denominator, 180 s wall time; total audit 600 s; generated evidence 128 MiB.
 Caps are routine bounded experiment limits, not performance/capacity goals.
+The 600-second total is cumulative across the initial pass and any permitted
+repair/reanalysis; a future explicitly labeled reproduction has its own budget.
 Persist row-level expected/observed hashes and every mismatch, or a completed
 prefix if a cap/error stops processing. Refuse existing output paths. Stop after
 this pass; no automatic retry, new size/seed, selected favorable field or changed
