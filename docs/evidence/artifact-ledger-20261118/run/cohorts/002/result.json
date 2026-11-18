@@ -1,0 +1,74 @@
+{
+  "cohort": "002",
+  "status": "complete",
+  "config_literals": {
+    "tick": "0.01",
+    "currency": "USD",
+    "maker_fee": "0",
+    "maker_rebate": "0.0002",
+    "taker_fee": "0.0003",
+    "proportional": "0"
+  },
+  "source_fields": [
+    "timestamp_ns",
+    "currency",
+    "tick_value",
+    "mark_ticks",
+    "inventory",
+    "average_cost_ticks",
+    "trade_cash_ticks",
+    "trade_cash",
+    "cash",
+    "realized_pnl_ticks",
+    "unrealized_pnl_ticks",
+    "gross_pnl_ticks",
+    "realized_pnl",
+    "unrealized_pnl",
+    "gross_pnl",
+    "fees",
+    "rebates",
+    "net_pnl",
+    "turnover_ticks",
+    "turnover",
+    "buy_volume",
+    "sell_volume",
+    "fill_count",
+    "current_gross_exposure",
+    "peak_gross_exposure"
+  ],
+  "row_count": 20772,
+  "fill_count": 780,
+  "mismatch_count": 0,
+  "completed_prefix": 780,
+  "ledger_coverage": {
+    "role_maker": 780,
+    "opening": 2,
+    "flat_close": 1,
+    "same_side_accumulation": 382,
+    "partial_close": 378,
+    "reversal": 17
+  },
+  "snapshot_coverage": {
+    "flat_snapshot": 213,
+    "short_snapshot": 11386,
+    "long_snapshot": 9173
+  },
+  "repeating_field_rows": {
+    "average_cost_ticks": 19728,
+    "realized_pnl_ticks": 19005,
+    "unrealized_pnl_ticks": 19005,
+    "realized_pnl": 19005,
+    "unrealized_pnl": 19005
+  },
+  "projected_cell_coverage": {
+    "snapshot_finite_decimal": 257163,
+    "snapshot_null_average": 213,
+    "inventory_finite_decimal": 41544,
+    "fill_cost_finite_decimal": 1560,
+    "snapshot_repeating": 95748
+  },
+  "max_numerator_bits": 154,
+  "max_denominator_bits": 147,
+  "all_projections_match": true,
+  "assumption": "Recorded midpoint marks and fresh default 28-digit HALF_EVEN presentation; no retrospective context or causal-mark proof"
+}

@@ -1,0 +1,7 @@
+{
+  "long_partial_close": true,
+  "ties_even": true,
+  "repeating": true,
+  "positive_zero": true,
+  "flat_none": true
+}
