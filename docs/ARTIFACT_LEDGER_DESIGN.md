@@ -82,9 +82,9 @@ detection or complete market observation cadence follows from this subset.
 
 ## Field and presentation contract
 
-Check every available PortfolioSnapshot field: timestamp/currency/tick, inventory,
+Check every mandatory PortfolioSnapshot field: timestamp/currency/tick, inventory,
 average cost, integer trade cash/turnover/volumes/counts, cash, costs, realized,
-unrealized, gross and net in ticks/currency, current and peak gross exposure.
+unrealized and gross in ticks/currency, net in currency, and current/peak exposure.
 Derive current exposure from exact inventory/mark/tick and peak as the running
 maximum over retained mark/fill snapshots. In this fixed engine path timer
 snapshots reuse the last mark and inventory; no additional hidden exposure change
