@@ -35,6 +35,17 @@ jobs:
           python -I -B tools/characterize_end_to_end_resources.py \
             --verify-evidence docs/evidence/end-to-end-resources-20261117/run \
             > experiments/lifecycle-resource-verification.json
+      - name: Verify retained accounting audit records (integrity only)
+        run: |
+          python -I -B tools/reconcile_artifact_ledger.py \
+            --verify-evidence docs/evidence/artifact-ledger-20261118/run \
+            > experiments/artifact-ledger-verification.json
+      - name: Reproduce conditional accounting reconciliation (no simulation)
+        run: |
+          python -I -B tools/reconcile_artifact_ledger.py --run \
+            --plan docs/evidence/artifact-ledger-20261118/plan.json \
+            --output experiments/artifact-ledger-ci \
+            > experiments/artifact-ledger-ci-controller.log
       - name: Record executed source identity
         if: always()
         run: |
@@ -78,5 +89,17 @@ jobs:
           path: |
             docs/evidence/end-to-end-resources-20261117/run/
             experiments/lifecycle-resource-verification.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Retain conditional accounting reconciliation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact-ledger-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            docs/evidence/artifact-ledger-20261118/
+            experiments/artifact-ledger-ci/
+            experiments/artifact-ledger-ci-controller.log
+            experiments/artifact-ledger-verification.json
           if-no-files-found: error
           retention-days: 14

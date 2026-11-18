@@ -1,0 +1,90 @@
+{
+  "status": "complete",
+  "cohort": "001",
+  "plan_sha256": "11ca9a5fb462336980b4d785d12894ad3689b8cb397ec9ea00dde3688d326437",
+  "no_application_imports": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "dependencies": {
+      "pyarrow": "26.0.0",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "result": {
+    "cohort": "001",
+    "status": "complete",
+    "config_literals": {
+      "tick": "0.01",
+      "currency": "USD",
+      "maker_fee": "0",
+      "maker_rebate": "0.0002",
+      "taker_fee": "0.0003",
+      "proportional": "0"
+    },
+    "source_fields": [
+      "timestamp_ns",
+      "currency",
+      "tick_value",
+      "mark_ticks",
+      "inventory",
+      "average_cost_ticks",
+      "trade_cash_ticks",
+      "trade_cash",
+      "cash",
+      "realized_pnl_ticks",
+      "unrealized_pnl_ticks",
+      "gross_pnl_ticks",
+      "realized_pnl",
+      "unrealized_pnl",
+      "gross_pnl",
+      "fees",
+      "rebates",
+      "net_pnl",
+      "turnover_ticks",
+      "turnover",
+      "buy_volume",
+      "sell_volume",
+      "fill_count",
+      "current_gross_exposure",
+      "peak_gross_exposure"
+    ],
+    "row_count": 2024,
+    "fill_count": 26,
+    "mismatch_count": 0,
+    "completed_prefix": 24,
+    "ledger_coverage": {
+      "role_maker": 26,
+      "opening": 2,
+      "flat_close": 1,
+      "same_side_accumulation": 11,
+      "partial_close": 11,
+      "reversal": 1
+    },
+    "snapshot_coverage": {
+      "flat_snapshot": 213,
+      "short_snapshot": 702,
+      "long_snapshot": 1109
+    },
+    "repeating_field_rows": {
+      "average_cost_ticks": 1714,
+      "realized_pnl_ticks": 1321,
+      "unrealized_pnl_ticks": 1321,
+      "realized_pnl": 1321,
+      "unrealized_pnl": 1321
+    },
+    "projected_cell_coverage": {
+      "snapshot_finite_decimal": 27197,
+      "snapshot_null_average": 213,
+      "inventory_finite_decimal": 4048,
+      "fill_cost_finite_decimal": 52,
+      "snapshot_repeating": 6998
+    },
+    "max_numerator_bits": 26,
+    "max_denominator_bits": 20,
+    "all_projections_match": true,
+    "assumption": "Recorded midpoint marks and fresh default 28-digit HALF_EVEN presentation; no retrospective context or causal-mark proof"
+  },
+  "no_application_imports_after": true
+}

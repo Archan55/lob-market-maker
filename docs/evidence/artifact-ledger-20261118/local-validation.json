@@ -1,0 +1,70 @@
+{
+  "auditor_repairs_or_retries": 0,
+  "checks": [
+    {
+      "command": "python -I -B -m pytest tests/unit/test_artifact_ledger.py -q",
+      "exit_code": 0,
+      "log": "preflight.log",
+      "result": "36 passed in 0.19s"
+    },
+    {
+      "command": "python -m ruff check .",
+      "exit_code": 0,
+      "result": "All checks passed"
+    },
+    {
+      "command": "python -m ruff format --check .",
+      "exit_code": 0,
+      "result": "266 files already formatted"
+    },
+    {
+      "command": "python -m mypy src/lobmm",
+      "exit_code": 0,
+      "result": "Success: no issues found in 37 source files"
+    },
+    {
+      "command": "python -m pytest --cov=lobmm --cov-report=term-missing",
+      "environment": {
+        "LOB_COMPONENT_INTEGRATION_EVIDENCE_DIR": "experiments/component-integration-nov18",
+        "PYTHONPATH": "/workspace/lob-market-maker-ledger-audit/src"
+      },
+      "exit_code": 0,
+      "log": "validation/pytest.log",
+      "result": "659 passed in 43.97s; application coverage90.86%"
+    },
+    {
+      "command": "python -m lobmm.cli backtest --config configs/ci.yaml --run-name artifact-ledger-smoke",
+      "environment": {
+        "PYTHONPATH": "/workspace/lob-market-maker-ledger-audit/src"
+      },
+      "exit_code": 0,
+      "log": "validation/smoke.log",
+      "result": "300 synthetic events; standard regression smoke, not a study trial"
+    },
+    {
+      "command": "python -I -B tools/characterize_end_to_end_resources.py --verify-evidence docs/evidence/end-to-end-resources-20261117/run",
+      "exit_code": 0,
+      "log": "validation/inherited-evidence-verification.json",
+      "result": "Saved PR14 resource evidence verification only; no resource workers rerun"
+    },
+    {
+      "command": "python -I -B tools/reconcile_artifact_ledger.py --verify-evidence docs/evidence/artifact-ledger-20261118/run",
+      "exit_code": 0,
+      "log": "integrity-verification.json",
+      "result": "Integrity/input/hash/counter check only; no arithmetic replay"
+    }
+  ],
+  "ci_arithmetic_reproduction": "Not yet run locally; workflow explicitly reproduces the same two exposed cohorts",
+  "independently_authored_reference_runs": 1,
+  "limits": "Software/synthetic verification only. No economic evidence or newly measured resource capacity.",
+  "posthoc_additional_cohorts": 0,
+  "pre_reconciliation_plan_commit": "ebb31cd02c97c297d9239a720eda5312c7cb45cf",
+  "primary_arithmetic_runs": 1,
+  "primary_cohorts_per_run": [
+    "001",
+    "002"
+  ],
+  "python": "3.12.14",
+  "source_matches_frozen_38_files": true,
+  "source_proof": "local-source-proof.json"
+}

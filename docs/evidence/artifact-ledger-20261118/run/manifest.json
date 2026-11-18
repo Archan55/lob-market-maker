@@ -1,0 +1,82 @@
+{
+  "status": "complete",
+  "plan_sha256": "11ca9a5fb462336980b4d785d12894ad3689b8cb397ec9ea00dde3688d326437",
+  "attempts": [
+    {
+      "cohort": "001",
+      "command": [
+        "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+        "-I",
+        "-B",
+        "/workspace/lob-market-maker-ledger-audit/docs/evidence/artifact-ledger-20261118/run/harness/tools/reconcile_artifact_ledger.py",
+        "--worker",
+        "--plan",
+        "/workspace/lob-market-maker-ledger-audit/docs/evidence/artifact-ledger-20261118/run/plan.json",
+        "--input-root",
+        "/workspace/lob-market-maker-ledger-audit",
+        "--cohort",
+        "001",
+        "--output",
+        "/workspace/lob-market-maker-ledger-audit/docs/evidence/artifact-ledger-20261118/run/cohorts/001"
+      ],
+      "started_ns": 2106583534811,
+      "cap_seconds": 180,
+      "returncode": 0,
+      "status": "complete",
+      "finished_ns": 2107604337816,
+      "elapsed_ns": 1020803005
+    },
+    {
+      "cohort": "002",
+      "command": [
+        "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+        "-I",
+        "-B",
+        "/workspace/lob-market-maker-ledger-audit/docs/evidence/artifact-ledger-20261118/run/harness/tools/reconcile_artifact_ledger.py",
+        "--worker",
+        "--plan",
+        "/workspace/lob-market-maker-ledger-audit/docs/evidence/artifact-ledger-20261118/run/plan.json",
+        "--input-root",
+        "/workspace/lob-market-maker-ledger-audit",
+        "--cohort",
+        "002",
+        "--output",
+        "/workspace/lob-market-maker-ledger-audit/docs/evidence/artifact-ledger-20261118/run/cohorts/002"
+      ],
+      "started_ns": 2107605936912,
+      "cap_seconds": 180,
+      "returncode": 0,
+      "status": "complete",
+      "finished_ns": 2117550877538,
+      "elapsed_ns": 9944940626
+    }
+  ],
+  "prior_evidence": null,
+  "prior_elapsed_ns": 0,
+  "repair_index": 0,
+  "stage_started_ns": 2106570756872,
+  "cohort_pass_finished_ns": 2117553721104,
+  "files": {
+    "001.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "002.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cohorts/001/fills.jsonl": "a3f27546d66ef9ece1802331548a9a97e25584800155ba724cbc467be5066187",
+    "cohorts/001/mismatches.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cohorts/001/result.json": "4f81443457c003dd506f85c983ea8ad5fd55055e1fa558b32647bac111f742d3",
+    "cohorts/001/rows.jsonl": "ffb2eaa7a4e6bb6a3cee521a621e01e9d3eee5d2c1213bc6c1b534eda2cde1f4",
+    "cohorts/001/worker.json": "1e732f9d959d19a4cf2c539d82e19a433b0821f234af3643f944a6636aaecd47",
+    "cohorts/002/fills.jsonl": "4454c62d47ec198e83989cc8811811186908b8f84db76d2edc3c647c3f320652",
+    "cohorts/002/mismatches.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cohorts/002/result.json": "e7413b00d9bc6845cdcd743ab5c56064fdc2e75bb58d0a7a70d081cb11360a89",
+    "cohorts/002/rows.jsonl": "0d9c63beb95e29a19ffa0bf897d44b4b91915b1861adbbf803bd4cb176d45792",
+    "cohorts/002/worker.json": "4cdf9666b01222cf858881ddcab22a953a7877feff095c4a2ef4ac96d7fef284",
+    "harness/docs/ARTIFACT_LEDGER_DESIGN.md": "6c2e6d5b630c2e2005a351f185da16b8cbd9b86820fb19072277da806b39493c",
+    "harness/tests/unit/test_artifact_ledger.py": "caf70887b14a29af9f5da78d9f015f1ffdde4d0c088aef042b54e84429fdcfc1",
+    "harness/tools/reconcile_artifact_ledger.py": "5501e5654e7478de9dc6ec1c0eb23abcd399e2d29fa41e0ad7a12da70fdc3f9d",
+    "plan.json": "11ca9a5fb462336980b4d785d12894ad3689b8cb397ec9ea00dde3688d326437",
+    "preflight.json": "7a5bfbebd2318e1e95dc9e699632674976a4af962993dc3f17ee0a91cea9fc1e",
+    "report.json": "3bbc834a625bc61462f82ee9c39cd2728c4dc8b32b86594a73517b95f96afdc2"
+  },
+  "stage_finished_ns": 2117564353200,
+  "elapsed_ns": 10993596328,
+  "cumulative_elapsed_ns": 10993596328
+}
