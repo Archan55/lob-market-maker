@@ -69,9 +69,10 @@ Record the original exchange validation mode unchanged: independent strict tape
 reconstruction does not imply the original exchange was configured STRICT.
 Post-only maker activity and MARK termination do not consume its external book.
 
-Require unique nonempty fill IDs and transition IDs, and one consistent immutable
-identity per nonempty order ID across its repeated transition rows. Preserve
-original retained row order.
+Require unique nonempty fill IDs and transition IDs, a nonempty order ID on every
+registry transition and fill, and one consistent immutable identity per order ID
+across its repeated transition rows. Preserve original retained row order. The
+pinned producer emits registry rows only; do not silently skip blank-ID rows.
 All selected fills must be makers with positive integer price/quantity and a
 valid side. Every fill timestamp must have exactly ONE canonical input EVENT,
 which must be a matching-side TRADE. Missing, multiple, other-type, wrong-side
