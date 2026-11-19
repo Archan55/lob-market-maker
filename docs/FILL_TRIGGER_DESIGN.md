@@ -131,8 +131,9 @@ imports or network acquisition. Caps per cohort: 100,000 input rows, 100,000 ord
 transitions, 20,000 fills and 120 seconds. Total controller lifetime 300 seconds;
 generated evidence 64 MiB. These are modest experiment caps, not capacity targets.
 Refuse existing output paths. Preserve per-fill classifications, per-event budget
-records, all invariant failures and complete or stopped-prefix status, frozen
+records, every encountered failure and complete or stopped-prefix status, frozen
 source/plan and exact runtime/source hashes. No automatic retry.
+After a stop, unprocessed suffixes are explicitly untested, not silently accepted.
 
 Freeze fixed hand controls before the first pass: both-side exact/through/worse
 relations; ambiguous timestamp rejection; exact shared-budget violation; through
