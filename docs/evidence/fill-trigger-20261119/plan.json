@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "original_metadata": {
+    "docs/evidence/end-to-end-resources-20261117/run/manifest.json": "a0022001dd042444b7f7500c55404bd14c744478e16829fa2ccab86d6fcdeda4",
+    "docs/evidence/end-to-end-resources-20261117/run/plan.json": "ffcfa3bae32b4263c9e6d681b2291ffad69b0732f35e38ff62bf942792ef62b0"
+  },
+  "source_revision": "0866bf13e449cd66e3862454eaaf424a5172c33a",
+  "source_sha256": {
+    "src/lobmm/__init__.py": "079b03125406d6ff84b10707444af6cf21bb94a8ac1df472dd2e26138b57589f",
+    "src/lobmm/backtest.py": "f77f54ba4792992ccdbeae9c9d51288544ef254477b57a37eaa80dd668425a77",
+    "src/lobmm/benchmark.py": "05f0cb719797aa60986b9ff9fa66ca66c17b257ae2d3a15be51e3d8d06f70d2b",
+    "src/lobmm/book.py": "322fa3f7cceeff0bcbaba47553c8099401cd52183844d523470afb482c9e592a",
+    "src/lobmm/case_study.py": "4509c470708ac4a3ab61690b8a14b81228f294c0a3187b680bbbe95eaf6463c4",
+    "src/lobmm/channels.py": "82957e4109e0d432658570211f8ebd13daecf012490cf80edce9e1a8bfede06f",
+    "src/lobmm/cli.py": "33d15868a4e547ad7f53605ec7f2b388ebffa983df2dceec43ff1cf08d95931a",
+    "src/lobmm/config.py": "a51ceae4399d8cffe650edb49e5bf94d8bfce23d9537c6ccacc9441d5942bce6",
+    "src/lobmm/data/__init__.py": "a23bb9f9ae2cfa2cf1a6b40df5b1882ebab9967a7d3068a06175d65acc8065f8",
+    "src/lobmm/data/_adapter_utils.py": "e27af63e0ea40367922ec49eaf690d66eb83cd62fc748be297116c7347161172",
+    "src/lobmm/data/adapters.py": "2ce60a215b3afd66f90d4884050157a755b33f1e16f11cf02fc25e333d8bc212",
+    "src/lobmm/data/fingerprint.py": "9eee26c60d15067f44f00559d02c1745812655d9c6e25f06c5641e95037e5319",
+    "src/lobmm/data/loaders.py": "d516e15e3aebfbb402444687b716cfd2eb88d3052ea80bc03bfff2fe946449f6",
+    "src/lobmm/data/lobster.py": "145922912df0c4c4826ff45d48918cbfdc05d9c03a94d499bf40528c79202ce5",
+    "src/lobmm/data/manifest.py": "1fc8a6af882830b67fbf433244d0554b0031d739d5a5131c4bbdbef06e1431de",
+    "src/lobmm/data/schema.py": "c4dab3177ca329791bf4fe5e3c0413babaacc49237bda6dc5cec83c8c5dc2a49",
+    "src/lobmm/data/tardis.py": "6b7fd0df8e8cc6eb7fbfbd7ed16e5dd8e094a45778cdac5de008b710a4129b4e",
+    "src/lobmm/enums.py": "28fa7e58b239fcfcd16177cd83bf9601944d358390c7802b22e02378bc992e9d",
+    "src/lobmm/events.py": "d4bbd6958568eb2087f1cdb8072bbf247fe6ed4d9aa6f274c0c47b10f8a34e23",
+    "src/lobmm/exchange.py": "073871bcc8999fff8f8cdd5e78fd06c9a94cbd2403632f4efbc08257cb1e296e",
+    "src/lobmm/experiments.py": "a8e96bff95901482a0d3851ff80143eeb991884e0d7d538c6e372366a61f9a15",
+    "src/lobmm/metrics.py": "4091dbedd3779aac776e27e8e5a12a42fd6a122e7307f3693b32e4021998c22a",
+    "src/lobmm/orders.py": "4a371e7cd674be8ffb1cd764b4be68022555ef68041272e7e49c1bd7e12f788e",
+    "src/lobmm/portfolio.py": "153cc262e8c498f416515c8251c233aedbd9cdb0c7ea5de501dd887b78f0fe35",
+    "src/lobmm/py.typed": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "src/lobmm/queue_model.py": "265781a97cdf4ed01bf2326b8c024e49df19e6d463da1c1543b78ea9df6521f2",
+    "src/lobmm/report.py": "53f7b22ea40fe26996b86753af084fdf6126d89e3758a4002298ea2a21fd0ba4",
+    "src/lobmm/risk.py": "e1c629a3129fef5b3854ee5c64f50246ee40df1d28f310822cb3b1aba609d413",
+    "src/lobmm/scheduler.py": "57aa413b8ee04794753ee1961d17a5c45942a0d1963400e38baf999dba6f4d13",
+    "src/lobmm/strategies/__init__.py": "1f08d491fba40f505bba9dd19c8e1efd700b937af1ac88a3358831f55d08aa19",
+    "src/lobmm/strategies/base.py": "212cce6b6f52fb8df6a09a57f8fa08038ea5b15d865ad1e0afc267cef6e1fbc2",
+    "src/lobmm/strategies/fixed_spread.py": "e79c4a946bc60065dff9f7adf1d386deeea3e772d67f4b4ac6cc84ed8e8be72c",
+    "src/lobmm/strategies/inventory_aware.py": "ffab8e34ccf75f48b0f278efe6c16fd1e85fb81bc8044a53b2e248075874d972",
+    "src/lobmm/strategies/microprice.py": "9f62d11eb33c91f535be76db90653dfd7632d4ce141e50ae1c2a799747f7a4aa",
+    "src/lobmm/strategy_runtime.py": "4893d1b0eac38c3c72fed437a4cf8384e5f3ec8bcef037bcf1aab99f6718d344",
+    "src/lobmm/synthetic.py": "5a1b867ad69c833834084c96cc5d1c542d11d1f5a150802849956795e1e01d69",
+    "src/lobmm/types.py": "a44d251f36eb56bac4944f2d8155c923516d5920ed9b5a36e946caa0c063235b",
+    "src/lobmm/validation.py": "a96279d5ffd362f4a3e66c8aeca8c15696bce4fd0b0d56e6839753eafbf02735"
+  },
+  "cohorts": [
+    {
+      "id": "001",
+      "files": {
+        "input": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/001/input/events.parquet",
+          "sha256": "944deec5a3ef057e176a627550be687d15de1ba404b56dd3b2dc126b46750349"
+        },
+        "orders": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/001/engine/resource-study/orders.parquet",
+          "sha256": "7242718b5191f7f156ba40658ef408e4942ec42e054bc16e7646b01fb87cc52f"
+        },
+        "fills": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/001/engine/resource-study/fills.parquet",
+          "sha256": "7d06fe06c1b1189bcb855ffe349db95d2bda49537a79467f6d6b4d221ef3c0cd"
+        },
+        "config": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/001/engine/resource-study/run_config.yaml",
+          "sha256": "9824ee3daa9b6c1447ed98c6342df0a93c0ac335b7ca4f2bfc12e7307417ee9f"
+        },
+        "result": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/001/result.json",
+          "sha256": "828a1a7d3ac79807bc5f600414de03daecfda1b24d8abc86bd792d6125b60ade"
+        }
+      },
+      "event_stream_sha256": "d244194a0c50ab06913b4c6bdabc6e6fa70c673bb627d0f2b77609b2f7f128db"
+    },
+    {
+      "id": "002",
+      "files": {
+        "input": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/002/input/events.parquet",
+          "sha256": "9a9e1f24d42277739dd31a398043063867a7e6a561d309ef847d296ebf9e5f0e"
+        },
+        "orders": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/002/engine/resource-study/orders.parquet",
+          "sha256": "543799c1fe47309315f0c5c68620a0ec791f8ec361b2d820fcd362cfa8e291d0"
+        },
+        "fills": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/002/engine/resource-study/fills.parquet",
+          "sha256": "13e7ee1bbb2b11e0a8d3ae393ab17d25439faebef24d0e653c83378e6bb0e9bd"
+        },
+        "config": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/002/engine/resource-study/run_config.yaml",
+          "sha256": "7e82271a7b79cb78962783320d82e5a81f2bd1d903628d4bab47b890f1d9f6a6"
+        },
+        "result": {
+          "path": "docs/evidence/end-to-end-resources-20261117/run/attempts/002/result.json",
+          "sha256": "95ee5ca791d274525636bf686d67cba7823f815fdd4a325d893a06e3a1fa206e"
+        }
+      },
+      "event_stream_sha256": "8a845f3b206876f8f0769d9e051d7016436355c605297f4d14fda6df2cc04237"
+    }
+  ],
+  "limits": {
+    "input_rows": 100000,
+    "order_rows": 100000,
+    "fills": 20000,
+    "worker_seconds": 120,
+    "controller_seconds": 300,
+    "evidence_bytes": 67108864
+  },
+  "pins": {
+    "tools/audit_fill_triggers.py": "89a117f26d2df65264d5adc866d81c8042dd167f9c30617573bfb36e1c22393d",
+    "tests/unit/test_fill_triggers.py": "eb508c64aa26a3792c9e4f55b25a46ca8486e2b09084bbefea1e7826413a5520",
+    "docs/FILL_TRIGGER_DESIGN.md": "108e928b2e7a87e038e547e6f9665b45fb37222c8cf762ce1c6840135b79467d"
+  }
+}
