@@ -65,6 +65,9 @@ timestamps, strictly increasing global sequence, positive nonreset price/size,
 valid resting side and an uncrossed book after each event. No lenient clamping
 or imputation. Recompute the original event fingerprint. This justifies using
 raw trade quantity as its applied external quantity in these fixed records.
+Record the original exchange validation mode unchanged: independent strict tape
+reconstruction does not imply the original exchange was configured STRICT.
+Post-only maker activity and MARK termination do not consume its external book.
 
 Require unique nonempty fill IDs and transition IDs, and one consistent immutable
 identity per nonempty order ID across its repeated transition rows. Preserve
