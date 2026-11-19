@@ -66,7 +66,9 @@ valid resting side and an uncrossed book after each event. No lenient clamping
 or imputation. Recompute the original event fingerprint. This justifies using
 raw trade quantity as its applied external quantity in these fixed records.
 
-Require unique nonempty fill/order/transition IDs and original retained order.
+Require unique nonempty fill IDs and transition IDs, and one consistent immutable
+identity per nonempty order ID across its repeated transition rows. Preserve
+original retained row order.
 All selected fills must be makers with positive integer price/quantity and a
 valid side. Every fill timestamp must have exactly ONE canonical input EVENT,
 which must be a matching-side TRADE. Missing, multiple, other-type, wrong-side
