@@ -1,0 +1,74 @@
+{
+  "status": "complete",
+  "stage": "evidence finalization",
+  "started_ns": 1569694186826,
+  "plan_sha256": "93792cdcc0451fcf404520d25736f2873e79c2df133c6381cd095efaa4178b1c",
+  "attempts": [
+    {
+      "cohort": "001",
+      "command": [
+        "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+        "-I",
+        "-B",
+        "/workspace/lob-market-maker-fill-provenance/docs/evidence/fill-trigger-20261119/run/harness/tools/audit_fill_triggers.py",
+        "--worker",
+        "--plan",
+        "/workspace/lob-market-maker-fill-provenance/docs/evidence/fill-trigger-20261119/run/plan.json",
+        "--input-root",
+        "/workspace/lob-market-maker-fill-provenance",
+        "--cohort",
+        "001",
+        "--output",
+        "/workspace/lob-market-maker-fill-provenance/docs/evidence/fill-trigger-20261119/run/cohorts/001"
+      ],
+      "started_ns": 1569704725204,
+      "cap_seconds": 120,
+      "status": "complete",
+      "returncode": 0,
+      "finished_ns": 1570126299413
+    },
+    {
+      "cohort": "002",
+      "command": [
+        "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+        "-I",
+        "-B",
+        "/workspace/lob-market-maker-fill-provenance/docs/evidence/fill-trigger-20261119/run/harness/tools/audit_fill_triggers.py",
+        "--worker",
+        "--plan",
+        "/workspace/lob-market-maker-fill-provenance/docs/evidence/fill-trigger-20261119/run/plan.json",
+        "--input-root",
+        "/workspace/lob-market-maker-fill-provenance",
+        "--cohort",
+        "002",
+        "--output",
+        "/workspace/lob-market-maker-fill-provenance/docs/evidence/fill-trigger-20261119/run/cohorts/002"
+      ],
+      "started_ns": 1570127747311,
+      "cap_seconds": 120,
+      "status": "complete",
+      "returncode": 0,
+      "finished_ns": 1572702189921
+    }
+  ],
+  "analyzer_sha256": "89a117f26d2df65264d5adc866d81c8042dd167f9c30617573bfb36e1c22393d",
+  "files": {
+    "001.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "002.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cohorts/001/event.jsonl": "6e43d18a79044246581f092b40d5fe8a9b831fb3cf2b098233c866e59f93ec34",
+    "cohorts/001/failure.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cohorts/001/fill.jsonl": "86e0747d569416e2719219a96881cadb0650d3feae65c577c666844b07435606",
+    "cohorts/001/result.json": "0825b3ac1678f3bdeba0b305a25a72d7a3f38f2af59f5e0f67f8a207271e3bcd",
+    "cohorts/002/event.jsonl": "4fc360a33aee768683a569c350743ac451d5aaf35ec44fad86820d150cfb7c9a",
+    "cohorts/002/failure.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cohorts/002/fill.jsonl": "ea94b2b8bd76da37a34438b88f8a0d2fd2b7c23d0d15e36fffec58b67004fea5",
+    "cohorts/002/result.json": "44a0e361b9b98a140509497a3b6c886f0c01a55f688f5212f31e40cddc24889a",
+    "harness/docs/FILL_TRIGGER_DESIGN.md": "108e928b2e7a87e038e547e6f9665b45fb37222c8cf762ce1c6840135b79467d",
+    "harness/tests/unit/test_fill_triggers.py": "eb508c64aa26a3792c9e4f55b25a46ca8486e2b09084bbefea1e7826413a5520",
+    "harness/tools/audit_fill_triggers.py": "89a117f26d2df65264d5adc866d81c8042dd167f9c30617573bfb36e1c22393d",
+    "plan.json": "93792cdcc0451fcf404520d25736f2873e79c2df133c6381cd095efaa4178b1c",
+    "report.json": "3280ac4e1f2f0a502e0c30839cab743e363f6b7234083008c6180ba55dc28856"
+  },
+  "finished_ns": 1572706568831,
+  "elapsed_ns": 3012382005
+}

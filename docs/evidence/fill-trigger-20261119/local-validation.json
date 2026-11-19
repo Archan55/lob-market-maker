@@ -1,0 +1,64 @@
+{
+  "all_38_source_files_match_frozen_C1": true,
+  "checks": [
+    {
+      "command": "python -I -B -m pytest tests/unit/test_fill_triggers.py -q",
+      "exit_code": 0,
+      "log": "preflight.log",
+      "result": "31 passed in 0.20s"
+    },
+    {
+      "command": "python -m ruff check .",
+      "exit_code": 0,
+      "log": "validation/ruff.log"
+    },
+    {
+      "command": "python -m ruff format --check .",
+      "exit_code": 0,
+      "log": "validation/format.log"
+    },
+    {
+      "command": "python -m mypy src/lobmm",
+      "exit_code": 0,
+      "log": "validation/mypy.log",
+      "result": "37 source files"
+    },
+    {
+      "command": "python -m pytest --cov=lobmm --cov-report=term-missing",
+      "environment": {
+        "LOB_COMPONENT_INTEGRATION_EVIDENCE_DIR": "experiments/component-integration-nov19",
+        "PYTHONPATH": "/workspace/lob-market-maker-fill-provenance/src"
+      },
+      "exit_code": 0,
+      "log": "validation/pytest.log",
+      "result": "690 passed in 49.36s; application coverage 90.86%"
+    },
+    {
+      "command": "python -m lobmm.cli backtest --config configs/ci.yaml --run-name fill-trigger-smoke",
+      "environment": {
+        "PYTHONPATH": "/workspace/lob-market-maker-fill-provenance/src"
+      },
+      "exit_code": 0,
+      "log": "validation/smoke.log",
+      "result": "300 synthetic events; software smoke only, not a study trial"
+    },
+    {
+      "command": "python -I -B tools/audit_fill_triggers.py --verify-evidence docs/evidence/fill-trigger-20261119/run",
+      "exit_code": 0,
+      "log": "integrity-verification.json",
+      "result": "Saved-record/input/hash/counter integrity only; no classification replay"
+    }
+  ],
+  "cohorts_per_pass": [
+    "001",
+    "002"
+  ],
+  "independently_authored_reference_passes": 1,
+  "not_run_locally": "No separate old PR14 resource or PR15 ledger arithmetic reproduction today; inherited CI includes its unchanged verification steps. Remote exact-head CI is pending at local seal.",
+  "primary_analysis_passes": 1,
+  "primary_failures": 0,
+  "python": "3.12.14",
+  "retries_repairs_or_alternative_cohorts": 0,
+  "scope": "Exposed synthetic model attribution only. Standard tests/smoke and explicit CI repetitions are verification, not new market observations.",
+  "source_proof": "local-source-proof.json"
+}

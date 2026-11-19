@@ -1,0 +1,133 @@
+{
+  "cohort": "001",
+  "status": "complete",
+  "plan_sha256": "93792cdcc0451fcf404520d25736f2873e79c2df133c6381cd095efaa4178b1c",
+  "processed_prefix": {
+    "classified_fills": 26,
+    "event_records": 26,
+    "encountered_failures": 0
+  },
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "dependencies": {
+      "pyarrow": "26.0.0",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "no_application_imports_before": true,
+  "admitted_table_sizes": {
+    "input": 2000,
+    "orders": 1162,
+    "fills": 26
+  },
+  "stage": "independent tape, transition and fill attribution pass",
+  "config_context": {
+    "tick_literal": "0.01",
+    "currency": "USD",
+    "fees": {
+      "maker_fee_per_unit": "0",
+      "maker_rebate_per_unit": "0.0002",
+      "taker_fee_per_unit": "0.0003",
+      "proportional_fee_rate": "0"
+    },
+    "exchange_validation_mode": "lenient",
+    "data_validation_mode": "strict",
+    "independent_tape_proof": "Strict integer depth reconstruction; not a claim the original exchange mode was STRICT"
+  },
+  "summary": {
+    "total": {
+      "fill_count": 26,
+      "order_count": 26,
+      "trigger_event_count": 26,
+      "quantity": 245,
+      "tick_notional": 2447982,
+      "currency_notional": {
+        "numerator": 1223991,
+        "denominator": 50
+      }
+    },
+    "classes": {
+      "exact_price": {
+        "fill_count": 11,
+        "order_count": 11,
+        "trigger_event_count": 11,
+        "quantity": 95,
+        "tick_notional": 949192,
+        "currency_notional": {
+          "numerator": 237298,
+          "denominator": 25
+        },
+        "fill_share": {
+          "numerator": 11,
+          "denominator": 26
+        },
+        "quantity_share": {
+          "numerator": 19,
+          "denominator": 49
+        },
+        "tick_notional_share": {
+          "numerator": 474596,
+          "denominator": 1223991
+        },
+        "order_coverage": {
+          "numerator": 11,
+          "denominator": 26
+        },
+        "trigger_event_coverage": {
+          "numerator": 11,
+          "denominator": 26
+        }
+      },
+      "price_through": {
+        "fill_count": 15,
+        "order_count": 15,
+        "trigger_event_count": 15,
+        "quantity": 150,
+        "tick_notional": 1498790,
+        "currency_notional": {
+          "numerator": 149879,
+          "denominator": 10
+        },
+        "fill_share": {
+          "numerator": 15,
+          "denominator": 26
+        },
+        "quantity_share": {
+          "numerator": 30,
+          "denominator": 49
+        },
+        "tick_notional_share": {
+          "numerator": 749395,
+          "denominator": 1223991
+        },
+        "order_coverage": {
+          "numerator": 15,
+          "denominator": 26
+        },
+        "trigger_event_coverage": {
+          "numerator": 15,
+          "denominator": 26
+        }
+      }
+    },
+    "order_set_overlap": 0,
+    "trigger_set_overlap": 0,
+    "through_distance_ticks": {
+      "minimum": 1,
+      "maximum": 4,
+      "unit_weighted_mean": {
+        "numerator": 8,
+        "denominator": 5
+      }
+    },
+    "order_catalog_count": 388,
+    "set_scope": "Within this cohort only; class order/event sets may overlap. Exact-price fills are not calibrated venue executions."
+  },
+  "event_stream_sha256": "d244194a0c50ab06913b4c6bdabc6e6fa70c673bb627d0f2b77609b2f7f128db",
+  "classified_fills": 26,
+  "associated_events": 26,
+  "untested_suffix": null,
+  "no_application_imports": true
+}

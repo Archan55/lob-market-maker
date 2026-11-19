@@ -46,6 +46,17 @@ jobs:
             --plan docs/evidence/artifact-ledger-20261118/plan.json \
             --output experiments/artifact-ledger-ci \
             > experiments/artifact-ledger-ci-controller.log
+      - name: Verify retained fill-trigger records (integrity only)
+        run: |
+          python -I -B tools/audit_fill_triggers.py \
+            --verify-evidence docs/evidence/fill-trigger-20261119/run \
+            > experiments/fill-trigger-verification.json
+      - name: Reproduce fill-trigger attribution (no simulation)
+        run: |
+          python -I -B tools/audit_fill_triggers.py --run \
+            --plan docs/evidence/fill-trigger-20261119/plan.json \
+            --output experiments/fill-trigger-ci \
+            > experiments/fill-trigger-ci-controller.log
       - name: Record executed source identity
         if: always()
         run: |
@@ -101,5 +112,17 @@ jobs:
             experiments/artifact-ledger-ci/
             experiments/artifact-ledger-ci-controller.log
             experiments/artifact-ledger-verification.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Retain fill-trigger attribution evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fill-trigger-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            docs/evidence/fill-trigger-20261119/
+            experiments/fill-trigger-ci/
+            experiments/fill-trigger-ci-controller.log
+            experiments/fill-trigger-verification.json
           if-no-files-found: error
           retention-days: 14
