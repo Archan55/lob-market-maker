@@ -1,0 +1,230 @@
+{
+  "actual_worlds_sha256": "c9ad51446b64773be76fcc736582e189ffad67fe8f370efb666a6c12ee19ca94",
+  "all_criteria_passed": true,
+  "case_id": "worse_price_sell",
+  "criteria": {
+    "baseline_matches_manual": true,
+    "counterfactual_matches_manual": true,
+    "hybrid_error_identity": true,
+    "hybrid_matches_manual": true,
+    "input_unchanged": true,
+    "paired_incoming_identity": true
+  },
+  "expected_sha256": "c9ad51446b64773be76fcc736582e189ffad67fe8f370efb666a6c12ee19ca94",
+  "mirrored": false,
+  "paired_incoming": [
+    {
+      "baseline_external": 11,
+      "baseline_unfilled": 0,
+      "counterfactual_external": 8,
+      "counterfactual_own": 3,
+      "counterfactual_unfilled": 0,
+      "external_displacement": 3,
+      "hybrid_budget_error": 3,
+      "hybrid_equals_displacement": true,
+      "incoming_id": "M1",
+      "paired_identity": true,
+      "requested_quantity": 11,
+      "unfilled_reduction": 0
+    }
+  ],
+  "prior_exposed_control": false,
+  "recipe_id": "worse_price",
+  "worlds": {
+    "baseline": {
+      "final_remaining_by_id": {
+        "E1": 0,
+        "E2": 0,
+        "E3": 0
+      },
+      "totals": {
+        "external_quantity": 11,
+        "own_quantity": 0,
+        "requested_quantity": 11,
+        "unfilled_quantity": 0
+      },
+      "trace": [
+        {
+          "event_id": "A_E1",
+          "external_quantity": 0,
+          "fills": [],
+          "kind": "activate",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 6
+          },
+          "unfilled": null
+        },
+        {
+          "event_id": "A_E2",
+          "external_quantity": 0,
+          "fills": [],
+          "kind": "activate",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 6,
+            "E2": 2
+          },
+          "unfilled": null
+        },
+        {
+          "event_id": "A_E3",
+          "external_quantity": 0,
+          "fills": [],
+          "kind": "activate",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 6,
+            "E2": 2,
+            "E3": 3
+          },
+          "unfilled": null
+        },
+        {
+          "event_id": "A_O1",
+          "external_quantity": 0,
+          "fills": [],
+          "kind": "activate",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 6,
+            "E2": 2,
+            "E3": 3
+          },
+          "unfilled": null
+        },
+        {
+          "event_id": "M1",
+          "external_quantity": 11,
+          "fills": [
+            {
+              "order_id": "E1",
+              "owner": "external",
+              "price_ticks": 101,
+              "quantity": 6
+            },
+            {
+              "order_id": "E2",
+              "owner": "external",
+              "price_ticks": 100,
+              "quantity": 2
+            },
+            {
+              "order_id": "E3",
+              "owner": "external",
+              "price_ticks": 99,
+              "quantity": 3
+            }
+          ],
+          "kind": "incoming",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 0,
+            "E2": 0,
+            "E3": 0
+          },
+          "unfilled": 0
+        }
+      ]
+    },
+    "counterfactual": {
+      "final_remaining_by_id": {
+        "E1": 0,
+        "E2": 0,
+        "E3": 3,
+        "O1": 2
+      },
+      "totals": {
+        "external_quantity": 8,
+        "own_quantity": 3,
+        "requested_quantity": 11,
+        "unfilled_quantity": 0
+      },
+      "trace": [
+        {
+          "event_id": "A_E1",
+          "external_quantity": 0,
+          "fills": [],
+          "kind": "activate",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 6
+          },
+          "unfilled": null
+        },
+        {
+          "event_id": "A_E2",
+          "external_quantity": 0,
+          "fills": [],
+          "kind": "activate",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 6,
+            "E2": 2
+          },
+          "unfilled": null
+        },
+        {
+          "event_id": "A_E3",
+          "external_quantity": 0,
+          "fills": [],
+          "kind": "activate",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 6,
+            "E2": 2,
+            "E3": 3
+          },
+          "unfilled": null
+        },
+        {
+          "event_id": "A_O1",
+          "external_quantity": 0,
+          "fills": [],
+          "kind": "activate",
+          "own_quantity": 0,
+          "remaining_by_id": {
+            "E1": 6,
+            "E2": 2,
+            "E3": 3,
+            "O1": 5
+          },
+          "unfilled": null
+        },
+        {
+          "event_id": "M1",
+          "external_quantity": 8,
+          "fills": [
+            {
+              "order_id": "E1",
+              "owner": "external",
+              "price_ticks": 101,
+              "quantity": 6
+            },
+            {
+              "order_id": "E2",
+              "owner": "external",
+              "price_ticks": 100,
+              "quantity": 2
+            },
+            {
+              "order_id": "O1",
+              "owner": "own",
+              "price_ticks": 100,
+              "quantity": 3
+            }
+          ],
+          "kind": "incoming",
+          "own_quantity": 3,
+          "remaining_by_id": {
+            "E1": 0,
+            "E2": 0,
+            "E3": 3,
+            "O1": 2
+          },
+          "unfilled": 0
+        }
+      ]
+    }
+  }
+}

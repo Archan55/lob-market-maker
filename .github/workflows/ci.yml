@@ -57,6 +57,17 @@ jobs:
             --plan docs/evidence/fill-trigger-20261119/plan.json \
             --output experiments/fill-trigger-ci \
             > experiments/fill-trigger-ci-controller.log
+      - name: Verify conserved incoming-order replay records (integrity only)
+        run: |
+          python -I -B tools/replay_incoming_orders.py \
+            --verify-evidence docs/evidence/incoming-order-20261120/run \
+            > experiments/incoming-order-verification.json
+      - name: Reproduce fixed incoming-order family (research matcher only)
+        run: |
+          python -I -B tools/replay_incoming_orders.py --run \
+            --plan docs/evidence/incoming-order-20261120/plan.json \
+            --output experiments/incoming-order-ci \
+            > experiments/incoming-order-ci-controller.log
       - name: Record executed source identity
         if: always()
         run: |
@@ -124,5 +135,17 @@ jobs:
             experiments/fill-trigger-ci/
             experiments/fill-trigger-ci-controller.log
             experiments/fill-trigger-verification.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Retain conserved incoming-order replay evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: incoming-order-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            docs/evidence/incoming-order-20261120/
+            experiments/incoming-order-ci/
+            experiments/incoming-order-ci-controller.log
+            experiments/incoming-order-verification.json
           if-no-files-found: error
           retention-days: 14

@@ -1,0 +1,68 @@
+{
+  "all_38_production_files_match_C1": true,
+  "checks": [
+    {
+      "command": "python -I -B -m pytest tests/unit/test_incoming_replay.py -q",
+      "exit_code": 0,
+      "exposure": "Fixed software controls overlap known/declared behaviors and precede full family; not holdouts",
+      "log": "preflight.log",
+      "result": "37 passed in 0.22s"
+    },
+    {
+      "command": "python -m ruff check .",
+      "exit_code": 0,
+      "log": "validation/ruff.log"
+    },
+    {
+      "command": "python -m ruff format --check .",
+      "exit_code": 0,
+      "log": "validation/format.log"
+    },
+    {
+      "command": "python -m mypy src/lobmm",
+      "exit_code": 0,
+      "log": "validation/mypy.log",
+      "result": "37 source modules"
+    },
+    {
+      "command": "python -m pytest --cov=lobmm --cov-report=term-missing",
+      "environment": {
+        "LOB_COMPONENT_INTEGRATION_EVIDENCE_DIR": "experiments/component-integration-nov20",
+        "PYTHONPATH": "/workspace/lob-market-maker-incoming-replay/src"
+      },
+      "exit_code": 0,
+      "log": "validation/pytest.log",
+      "result": "727 passed in 44.97s; application coverage 90.86%"
+    },
+    {
+      "command": "python -m lobmm.cli backtest --config configs/ci.yaml --run-name incoming-replay-smoke",
+      "environment": {
+        "PYTHONPATH": "/workspace/lob-market-maker-incoming-replay/src"
+      },
+      "exit_code": 0,
+      "log": "validation/smoke.log",
+      "result": "Standard 300-event synthetic smoke; separate software verification"
+    },
+    {
+      "command": "python -I -B tools/replay_incoming_orders.py --verify-evidence docs/evidence/incoming-order-20261120/run",
+      "exit_code": 0,
+      "log": "integrity-verification.json",
+      "result": "Saved hashes/counters only; no matching replay"
+    }
+  ],
+  "incoming_walks": 80,
+  "independently_authored_token_reference_passes": 1,
+  "not_run_here": "No old resource or optimizer study rerun. Remote exact-head CI pending local seal; inherited CI has unchanged prior verification/reconciliation steps.",
+  "paired_incoming_rows": 40,
+  "paired_scenarios": 36,
+  "plan_sealed_before_any_matching_commit": "a487e18b9ab5efc5b4aa12676697eefb4cb7ac5b",
+  "preflight_notes": "Manual fixture construction and list-format normalization occurred before matching; regenerated fixture bytes were identical. No matcher used to generate oracle. Static B023 binding correction preceded source seal.",
+  "primary_family_passes": 1,
+  "prior_exposed_control_scenarios": 4,
+  "python": "3.12.14",
+  "retries_repairs_or_added_cases": 0,
+  "scope": "Constructed fully displayed, complete known base-quantity IOC mechanics with fixed future flow; no production replacement, admitted market data, cost/P&L or calibrated execution claim.",
+  "source_proof": "local-source-proof.json",
+  "unexpected_primary_failures": 0,
+  "world_paths": 72
+}

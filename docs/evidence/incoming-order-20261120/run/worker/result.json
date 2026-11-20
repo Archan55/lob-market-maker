@@ -1,0 +1,183 @@
+{
+  "completed_case_ids": [
+    "known11_sell",
+    "known11_buy",
+    "known8_sell",
+    "known8_buy",
+    "boundary6_sell",
+    "boundary6_buy",
+    "mixed12_sell",
+    "mixed12_buy",
+    "exhausted17_sell",
+    "exhausted17_buy",
+    "better_price_sell",
+    "better_price_buy",
+    "worse_price_sell",
+    "worse_price_buy",
+    "split_time_sell",
+    "split_time_buy",
+    "two_own_sell",
+    "two_own_buy",
+    "partial_carry_sell",
+    "partial_carry_buy",
+    "displaced_carry_sell",
+    "displaced_carry_buy",
+    "late_activation_sell",
+    "late_activation_buy",
+    "eligible_limit_sell",
+    "eligible_limit_buy",
+    "excluded_limit_sell",
+    "excluded_limit_buy",
+    "shallow6_sell",
+    "shallow6_buy",
+    "shallow11_sell",
+    "shallow11_buy",
+    "tie_before_sell",
+    "tie_before_buy",
+    "tie_after_sell",
+    "tie_after_buy"
+  ],
+  "current_case_id": null,
+  "failed_case_ids": [],
+  "no_application_imports_after": true,
+  "no_application_imports_before": true,
+  "plan_sha256": "6a12d18cf6ad84aaa83dadc25d0c67fae15c3f9b30e30d84679999efed4434f1",
+  "processed_incoming_rows": 40,
+  "runtime": {
+    "executable": "/workspace/lob-market-maker-accounting-fix/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "stage": "complete",
+  "status": "complete",
+  "summary": {
+    "all_criteria_passed": true,
+    "case_result_sha256": {
+      "better_price_buy": "657ab9cb8a7e89a80857323e040f4d751e314afa0b66ab9ebe64c617f17b2426",
+      "better_price_sell": "1e5849e15c152c4254fd7c19718d8d66e0cebdd32520d813ceb306433d90851f",
+      "boundary6_buy": "ed170029cf61942de2fd0227467e13eb62b9589d4a7f8551ca37e425ea2c9a80",
+      "boundary6_sell": "4143e8d82b4187494fb8e7097c4e830a669b1236473da5251c03399230cdda1b",
+      "displaced_carry_buy": "85ca8d8dd3bc6b490572bfaa84e2703be441b0778c4fa28295e3b3f0dc8129b1",
+      "displaced_carry_sell": "b0e896d59758c4d51eba169c10ce4544f02eaae1d94b33fb6d13eb6f1e13bf4e",
+      "eligible_limit_buy": "1031074276569cc5fbb77ce2d84d544be3ee5a6289edf4054fa77a9a7407bae2",
+      "eligible_limit_sell": "88e3b2f34134358b7b4a776c758a704b8198a811ed4fa0d1e1e51e330ff06db3",
+      "excluded_limit_buy": "17f05ae4898bb70eb03e66510a3de9335b31798c67674ff8ad89a4ebd38b01bf",
+      "excluded_limit_sell": "f20f14bf4c89eff90d7266b64394466111c9c8d29e3a9dca8c2affb80641a0a1",
+      "exhausted17_buy": "8d908cb2196fa97466a208d4e9da04628a0e782f277fdfccd8a55dda32a3afa9",
+      "exhausted17_sell": "4f7553b51dcc414a0b850958573921b5c5761d9c10fda4ffcf6046b60a2650ce",
+      "known11_buy": "a45c0cfda87c5f672937b3521275efb3cc6094e3aeb7c4acf9de89064774d27e",
+      "known11_sell": "56ace2315fdba559979ec17329b6b84520ef7d4a7b1a9f6bc0fd32a7ea4131a8",
+      "known8_buy": "3f68698d463d54b4dbfc624d687a913e1f3047f7051864693d4e33d86ad03a72",
+      "known8_sell": "e541c43d994ebd52dfbe04561b0ea71ca5d8998ad93613f5fe015390cfef67c4",
+      "late_activation_buy": "f8a97c65ffb2eface52e75c057ba2d831c1553d178538f274814a7aeefecb815",
+      "late_activation_sell": "e849f1b52724759a5d86aa326cabedff3c2288dbf973312d1f8ce1deb42ffb13",
+      "mixed12_buy": "fad32568bc7b00aa039f77b64d85456400dedd786df164fb2a631dcb36b2177f",
+      "mixed12_sell": "fbe4ccf6c0d3afae6d44e79870b174866802cdaf507a655813a7c1fa9b2b05c9",
+      "partial_carry_buy": "d781ac24eac726fd0ff084e8ddc623d90ceeb3fdf54beef471a42cf4fcbbf113",
+      "partial_carry_sell": "353c85e093f9ab9e0f1b5a443eeaed292032a70828935fafa1a70ad2a0cbd041",
+      "shallow11_buy": "5e07f18f58367571a33cb345c75606bb66bd5d24beaf26a7525f4eb9fcba6ad7",
+      "shallow11_sell": "af907a4df21dde8d46ade991fbfbd4405a78d01132ab1a34b205cdb2c19ff082",
+      "shallow6_buy": "517d755d6b6bb5cf85292b156b96bf351a3eff3d09c3f7e60624f177cfd3d47c",
+      "shallow6_sell": "103976a81bdafd96aff182aea386472a6fcb4298ff7d0c5660a97a05f73f2391",
+      "split_time_buy": "cdf4e183d502989333b257d250d9e75cad240be54c75c929b0248aa13484e6b3",
+      "split_time_sell": "2365eec652e06fa54596534b17793fe7d2c1616cebebd76ed077f753634307b6",
+      "tie_after_buy": "313afe725c010ea746e0ec0319053c82a923dadd91d9e1862bc1d9a472b4d31a",
+      "tie_after_sell": "0262c7367b7f2dd41101ad819e66a259b5ff35afc7df353e7518529cd6ea5406",
+      "tie_before_buy": "1c4c004e8978fa244085947270d93ea788c28f38454d84ede24663f956660fe1",
+      "tie_before_sell": "f3497fdc1bf6a6deeb5972a904c1e68f9c893865889361104ce590827e7ab5bb",
+      "two_own_buy": "9f1bf10f07b1dd744c7bc766b2b074a74aa044353a35423560792f4ba925400b",
+      "two_own_sell": "b2940ef8ee9c9c22d56ab113c9653ed3b08dee09384ab798ff38cccb230dc771",
+      "worse_price_buy": "8a9d4428de0800182df81b580bf4f7054ba5256e1c80dcbb00269584c9444902",
+      "worse_price_sell": "39cc8e4ff4d469052665566f4df5de179903852b4ca2e498812defb558c316f0"
+    },
+    "hybrid_error_counts": {
+      "negative": 2,
+      "positive": 24,
+      "zero": 14
+    },
+    "incoming_walk_count": 80,
+    "paired_incoming_count": 40,
+    "prior_exposed_control_scenarios": 4,
+    "scenario_count": 36,
+    "structural_witnesses": {
+      "buy": {
+        "all_passed": true,
+        "displaced_carry_hybrid_errors": [
+          5,
+          -5
+        ],
+        "displaced_carry_terminal_hybrid_error": 0,
+        "late_activation_final_own_remaining": 5,
+        "late_activation_own_filled": 0,
+        "late_activation_terminated_unfilled": 5,
+        "later_counterfactual_external_fills": [
+          [
+            "E2",
+            2
+          ],
+          [
+            "E3",
+            3
+          ]
+        ],
+        "same_aggregate_front_quantities": [
+          6,
+          6
+        ],
+        "same_time_sequence_own_quantities": [
+          2,
+          0
+        ],
+        "shallow_identical_baseline_prints": true,
+        "shallow_own_quantities": [
+          0,
+          5
+        ],
+        "time_placement_own_quantities": [
+          2,
+          4
+        ]
+      },
+      "sell": {
+        "all_passed": true,
+        "displaced_carry_hybrid_errors": [
+          5,
+          -5
+        ],
+        "displaced_carry_terminal_hybrid_error": 0,
+        "late_activation_final_own_remaining": 5,
+        "late_activation_own_filled": 0,
+        "late_activation_terminated_unfilled": 5,
+        "later_counterfactual_external_fills": [
+          [
+            "E2",
+            2
+          ],
+          [
+            "E3",
+            3
+          ]
+        ],
+        "same_aggregate_front_quantities": [
+          6,
+          6
+        ],
+        "same_time_sequence_own_quantities": [
+          2,
+          0
+        ],
+        "shallow_identical_baseline_prints": true,
+        "shallow_own_quantities": [
+          0,
+          5
+        ],
+        "time_placement_own_quantities": [
+          2,
+          4
+        ]
+      }
+    },
+    "world_path_count": 72
+  },
+  "untested_suffix": []
+}
