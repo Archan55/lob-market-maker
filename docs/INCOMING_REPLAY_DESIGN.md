@@ -24,7 +24,7 @@ No old resource, optimizer, PR12 gate or exposed-cohort study is reopened.
 
 ## Synthetic contract
 
-- Prices and quantities are positive integers, lot size1. No monetary outcome,
+- Prices and quantities are positive integers, lot size 1. No monetary outcome,
   fee, rebate, marking, inventory policy or profitability comparison is made.
 - One consumed side of a book is modeled. Resting activations are noncrossing by
   construction; no opposite-side book is modeled. Every maker is fully displayed.
@@ -61,9 +61,9 @@ No Coinbase market data or data-use rights were acquired or admitted.
 
 ## Finite family and manual oracle
 
-The frozen case file contains18 sell/bid recipes and their buy/ask mirrors:
+The frozen case file contains 18 sell/bid recipes and their buy/ask mirrors:
 `price -> 202-price`, including hard limits. Quantities, chronology and expected
-order IDs stay identical. Thus36 paired scenarios,72 world paths and40 incoming
+order IDs stay identical. Thus 36 paired scenarios, 72 world paths and 40 incoming
 events per world (80 matching walks). Mirrors are symmetry controls, not
 independent samples. The construction source preserves every manual vector.
 
@@ -116,7 +116,7 @@ invalid hybrid diagnostic copies baseline external executions and adds CF own
 fills with CF unfilled. Its signed budget error is exactly
 `baseline external - CF external`. Freeze/check that whole vector, not a claim
 that every positive own fill must cause hybrid failure. In displaced_carry the
-errors are+5 then-5: terminal totals can hide per-incoming failure. The hybrid
+errors are +5 then -5: terminal totals can hide per-incoming failure. The hybrid
 is diagnostic mixing of paired outputs, not a third matching world or a claim
 of a production defect. No individual-print cap is proposed.
 
@@ -129,11 +129,12 @@ expected controls, not discoveries or real-market estimates.
 
 ## Budget, trials, stopping and independent review
 
-One primary pass over the exact36 paired scenarios in frozen order. No seeds,
-search, added cases or retuning after outcomes. Maximum64 cases,64 activated
-units/case,8 activations and8 incoming orders/case; actual family stays smaller.
-Run as one isolated `-I -B` research worker,120-second wall cap and16MiB generated
-evidence cap. No application imports or production engine/resource calls.
+One primary pass over the exact 36 paired scenarios in frozen order. No seeds,
+search, added cases or retuning after outcomes. Maximum 64 cases, 64 activated
+units/case, 8 activations and 8 incoming orders/case; actual family stays smaller.
+Run as one isolated `-I -B` research worker with a 120-second wall cap,
+180-second controller cap and 16 MiB generated evidence cap. No application
+imports or production engine/resource calls.
 
 Record full ordered execution/state traces, every criterion and signed hybrid
 error, complete or stopped-prefix status, hashes, runtime and no-app proof.
