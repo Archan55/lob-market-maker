@@ -1,0 +1,269 @@
+{
+  "date": "2026-11-20",
+  "environment": "existing approved lob-market-maker saved cloud",
+  "main_sha": "1ce45d29081b1a16699cd1e31a4fb3b088ca0a2f",
+  "open_issues": [],
+  "prs": [
+    {
+      "number": 1,
+      "head": "research/controlled-queue-cancellation",
+      "head_sha": "d4104b70660976c6d59fe8915a75ac5616bdecd3",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 37785841315,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "head": "research/exposure-session-stress",
+      "head_sha": "a190758c1d60fff0c9526aa4201dc4759d234639",
+      "base": "research/controlled-queue-cancellation",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 39266838558,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "head": "fix/exact-portfolio-cost-basis",
+      "head_sha": "ceccf0c69a3afbc09b07c993b65614ab09fef838",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 41320047985,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "head": "fix/exact-risk-thresholds",
+      "head_sha": "f5a86c5d18dc9d63634fdea95bbb60db3c5f8eec",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 42047275382,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "head": "fix/inventory-duration-metric",
+      "head_sha": "22ef318adb1292e6a4f76535a73bae854ed5cca8",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 42235735905,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "head": "fix/drawdown-audit-order",
+      "head_sha": "c4f3611b650faca290d0946b98620604c5d9cfd6",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 42384212803,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "head": "fix/markout-aggregation",
+      "head_sha": "79aec058363a04a8ed6b6f6bdbe200d6e9679d13",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 42496016633,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "head": "fix/positive-price-quotes",
+      "head_sha": "1884d4c2e778d00797fbd97fed5b09ba113ed55e",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 42647940884,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "head": "fix/exact-ingress-conversion",
+      "head_sha": "253abee735c02d7805e2a4377c12626742108d84",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 43046447686,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "head": "fix/lobster-exact-preprocessing",
+      "head_sha": "a105e73cf608c1ff24cdead3dd3c50ee18d8916e",
+      "base": "fix/exact-ingress-conversion",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 43250653491,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "head": "fix/canonical-integer-fidelity",
+      "head_sha": "38a17f09746903938fa76b1d42268c8a75c7d3f6",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 43449289737,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "head": "research/canonical-ingestion-cost",
+      "head_sha": "834732b3fd5e2e5d9a6a19cfe761bdb9251049c8",
+      "base": "fix/canonical-integer-fidelity",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 43609649107,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "head": "research/component-integration-20261115",
+      "head_sha": "0866bf13e449cd66e3862454eaaf424a5172c33a",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 43729067445,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "head": "research/end-to-end-resources-20261117",
+      "head_sha": "ec7b6e0bce491d508c30a44b737950cda503d597",
+      "base": "research/component-integration-20261115",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 44111763293,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "head": "research/artifact-ledger-reconciliation-20261118",
+      "head_sha": "95dbd73d75ffc95b127d9c21e825e940ce230d0f",
+      "base": "research/end-to-end-resources-20261117",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 44337790683,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "head": "research/fill-trigger-provenance-20261119",
+      "head_sha": "2a96738c080b1a62a32e4306721de703b242477a",
+      "base": "research/artifact-ledger-reconciliation-20261118",
+      "state": "open",
+      "draft": true,
+      "comments": 0,
+      "associated_ci_runs": [
+        {
+          "id": 44549420754,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "instruction_files": "No relevant AGENTS.md or checkout .agents/skills found",
+  "matching_execution_before_this_record": 0,
+  "fixture_construction": "Only literal manual oracle serialization, price mirroring and state subtraction have run; no primary/reference matcher or numerical test ran",
+  "known_exposure": "Q11/Q8 hand witnesses supplied by user are exposed controls; all finite cases are constructed and not market holdouts",
+  "scope": "Standalone synthetic complete incoming-order matching; no production change, old resource/optimizer rerun, acquisition, calibrated execution or economic evidence"
+}
